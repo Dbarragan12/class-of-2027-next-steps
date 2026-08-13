@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Scholarships, writing help, and next steps for Toppenish High School's Class of 2027.">
+  <title>Next Steps | Toppenish High School</title>
+  <style>
+    :root{--crimson:#822336;--ink:#212325;--paper:#f4f4f5;--card:#fff;--muted:#5c5f62;--line:#d0d1d3;--gold:#a04a5c}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}.wrap{max-width:1100px;margin:auto;padding:0 20px}
+    header{background:var(--crimson);color:white;padding:44px 0 0;border-top:7px solid var(--ink)}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;font-weight:700;color:#f1c9d1}h1,h2,h3{line-height:1.08;margin:.2em 0;font-family:ui-rounded,system-ui,sans-serif}h1{font-size:clamp(3rem,8vw,6rem);letter-spacing:-.06em}.lede{max-width:55ch;font-size:1.15rem;color:#fae8eb}
+    nav{margin-top:36px;background:var(--ink);display:flex;gap:20px;flex-wrap:wrap;padding:14px 18px;border-radius:12px 12px 0 0}nav a{color:white;text-decoration:none;font-weight:700}
+    main{padding:42px 0 64px}.notice{border-left:5px solid var(--crimson);background:#fff;padding:17px 20px;border-radius:8px;margin-bottom:30px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.filters button{background:white;border:1px solid var(--line);padding:8px 12px;border-radius:999px;cursor:pointer}.filters button.active{background:var(--crimson);color:white;border-color:var(--crimson)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:16px}.card{background:var(--card);padding:20px;border-radius:12px;border-top:5px solid var(--line);box-shadow:0 3px 18px #0000000b}.card.confirmed{border-top-color:#277455}.card.expected{border-top-color:var(--gold)}.org,.meta{color:var(--muted);font-size:.9rem}.award{color:var(--crimson);font-weight:800;margin:.8em 0}.badge{display:inline-block;padding:4px 8px;font-size:.76rem;font-weight:700;border-radius:5px;background:#f8e9ed;color:var(--crimson)}.badge.confirmed{background:#e4f4ea;color:#17653d}.tags{display:flex;gap:5px;flex-wrap:wrap;margin:14px 0}.tag{background:#ececee;border-radius:99px;padding:3px 7px;font-size:.75rem}.go{display:inline-block;font-weight:800;color:var(--crimson);margin-top:10px}
+    section{scroll-margin-top:20px;margin-top:64px}.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.panel{background:white;border-radius:12px;padding:22px}.panel ul{padding-left:18px;margin-bottom:0}footer{border-top:1px solid var(--line);padding:28px 0 52px;color:var(--muted)}@media(max-width:560px){header{padding-top:28px}main{padding-top:28px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">Toppenish High School · Advisory · Class of 2027</div><h1>Next steps,<br>made clear.</h1><p class="lede">Local scholarships, writing support, and choices after high school—built for our students and checked against official sources.</p><nav><a href="#scholarships">Scholarships & deadlines</a><a href="#writing">Scholarship writing</a><a href="#pathways">School, programs & work</a></nav></div></header>
+<main class="wrap">
+  <section id="scholarships"><div class="eyebrow" style="color:#822336">Scholarships & deadlines</div><h2>Plan ahead without guessing.</h2><div class="notice"><strong>How to read this list:</strong> <em>Confirmed for 2027</em> means the organization has posted the current cycle. <em>Expected — last year's information</em> means it is a real opportunity, but its new deadline is not out yet. We show last year's date only to help you plan—not as a promise.</div><div class="filters" id="filters"></div><p class="meta" id="updated"></p><div class="grid" id="cards" aria-live="polite"></div></section>
+  <section id="writing"><div class="eyebrow" style="color:#822336">Scholarship writing</div><h2>Write once. Adapt many times.</h2><div class="three"><article class="panel"><h3>Your story bank</h3><p>Keep one private document with your activities, jobs, family responsibilities, awards, challenges, and people who shaped you.</p></article><article class="panel"><h3>The 600-word draft</h3><p>Write one honest personal statement about a real moment and what changed because of it. Reuse and reshape it instead of starting from zero.</p></article><article class="panel"><h3>Ask early</h3><p>Ask recommenders in September. Give them a month, your resume/story bank, and the scholarship deadline.</p></article></div></section>
+  <section id="pathways"><div class="eyebrow" style="color:#822336">School, programs & work</div><h2>Pick a direction. The money follows.</h2><div class="three"><article class="panel"><h3>College</h3><ul><li>FAFSA or WASFA is the first step</li><li>Compare aid offers—not sticker prices</li><li>Consider YVC transfer routes</li></ul></article><article class="panel"><h3>Trades & apprenticeships</h3><ul><li>Earn while you learn</li><li>Explore YVC, Perry Tech, and union programs</li><li>Ask whether tools and fees are covered</li></ul></article><article class="panel"><h3>Work & certificates</h3><ul><li>Short credentials can raise your pay quickly</li><li>Look for paid training and internships</li><li>Build a resume from jobs, service, and caregiving too</li></ul></article></div></section>
+</main>
+<footer><div class="wrap"><strong>Verify before applying.</strong> This is an advisory resource, not an official district publication. If something looks wrong, tell your teacher or counselor.</div></footer>
+<script>
+let all=[],active="All";
+const $=s=>document.querySelector(s);
+const fmt=d=>d?new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"}):"";
+function render(){
+ const tags=["All",...new Set(all.flatMap(x=>x.tags||[]))];$("#filters").innerHTML=tags.map(t=>`<button class="${t===active?"active":""}" data-tag="${t}">${t}</button>`).join("");
+ $("#filters").querySelectorAll("button").forEach(b=>b.onclick=()=>{active=b.dataset.tag;render()});
+ const rows=all.filter(x=>active==="All"||x.tags.includes(active));
+ $("#cards").innerHTML=rows.map(x=>{const expected=x.status.startsWith("Expected");return `<article class="card ${expected?"expected":"confirmed"}"><span class="badge ${expected?"":"confirmed"}">${x.status}</span><h3>${x.name}</h3><div class="org">${x.organization}</div><div class="award">${x.award}</div><p>${x.eligibility}</p><p class="meta"><strong>${expected?"Expected window":"Deadline"}:</strong> ${x.deadline?fmt(x.deadline):x.expectedWindow||"See official page"}${x.lastYearDeadline?`<br><strong>Last year's deadline:</strong> ${fmt(x.lastYearDeadline)}`:""}<br><strong>Last checked:</strong> ${fmt(x.lastChecked)}</p><div class="tags">${x.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div><p class="meta">${x.fit}</p><a class="go" href="${x.url}" target="_blank" rel="noopener">Open official page →</a></article>`}).join("")||"<p>No scholarships match that filter yet.</p>";
+}
+fetch("data/scholarships.json").then(r=>r.json()).then(data=>{all=data.scholarships;$("#updated").textContent="Website list last refreshed: "+new Date(data.updatedAt).toLocaleString();render()}).catch(()=>{$("#cards").textContent="The scholarship list could not load. Please refresh."});
+</script>
+</body></html>
