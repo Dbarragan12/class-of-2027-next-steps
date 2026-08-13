@@ -21,11 +21,13 @@ do {
 } while(offset);
 
 const value=(r,key)=>r.fields[fields[key]];
-const scholarships=records.filter(r=>value(r,"visibility")?.name==="Publish").map(r=>({
+const choiceName=value=>typeof value==="string" ? value : value?.name;
+const tagNames=value=>(value||[]).map(tag=>typeof tag==="string" ? tag : tag.name);
+const scholarships=records.filter(r=>choiceName(value(r,"visibility"))==="Publish").map(r=>({
   name:value(r,"scholarship"), organization:value(r,"organization"), award:value(r,"award"),
-  eligibility:value(r,"eligibility"), url:value(r,"url"), status:value(r,"status")?.name,
+  eligibility:value(r,"eligibility"), url:value(r,"url"), status:choiceName(value(r,"status")),
   deadline:value(r,"deadline"), lastYearDeadline:value(r,"lastYearDeadline"), expectedWindow:value(r,"expectedWindow"),
-  tags:(value(r,"tags")||[]).map(t=>t.name), fit:value(r,"fit"), lastChecked:value(r,"lastChecked")||new Date().toISOString().slice(0,10)
+  tags:tagNames(value(r,"tags")), fit:value(r,"fit"), lastChecked:value(r,"lastChecked")||new Date().toISOString().slice(0,10)
 })).filter(x=>x.name&&x.url&&x.status);
 
 await mkdir("data",{recursive:true});
