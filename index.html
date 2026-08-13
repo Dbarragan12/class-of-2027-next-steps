@@ -506,11 +506,8 @@ footer p{margin:0 0 10px}
         <label class="sr" for="q">Search deadlines</label>
         <input id="q" type="search" placeholder="Search — try &ldquo;welding&rdquo;, &ldquo;no essay&rdquo;, &ldquo;orchard&rdquo;, &ldquo;tribal&rdquo;">
         <label class="toggle"><input type="checkbox" id="mineOnly"> My list only</label>
-        <label class="toggle"><input type="checkbox" id="showPast" checked> Show plan-ahead scholarships</label>
         <button class="mini" type="button" id="clearSaved">Clear saved list</button>
       </div>
-      <p class="chiprow-label">What are you looking for</p>
-      <div class="chips" id="chips" role="group" aria-label="Filter by pathway"></div>
       <p class="chiprow-label">Show scholarships for… — tap all that apply</p>
       <div class="chips" id="fitchips" role="group" aria-label="Show scholarships for selected student groups"></div>
       <p style="margin:12px 0 0;color:var(--muted);font-size:13px">Your saved list and writing drafts stay only in this browser. On a shared Chromebook, clear them when you finish.</p>
@@ -522,7 +519,7 @@ footer p{margin:0 0 10px}
     <div class="empty" id="empty" hidden><b>Nothing matches that.</b>Clear the search or turn off a filter.</div>
 
     <div class="note">
-      <p><strong>Trust rule:</strong> the main board publishes only opportunities checked on an official sponsor page with a current deadline or a clearly open/rolling application. Older opportunities stay in the private review queue until their new dates are confirmed.</p>
+      <p><strong>Trust rule:</strong> every scholarship on this board has been checked to make sure a Toppenish High School student can qualify by school and location. Current opportunities use official dates. Recurring plan-ahead opportunities show the previous deadline and clearly warn that the new date may change.</p>
       <p id="data-updated" style="margin-bottom:0"><strong>Last refreshed:</strong> Loading scholarship data…</p>
       <p style="margin:10px 0 0"><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
     </div>
@@ -768,7 +765,7 @@ const PRIORITY_ACTIONS = [
   {priority:6,name:"YVC Foundation Scholarships",org:"Yakima Valley College Foundation",amount:"One application matches students to 150+ scholarships",who:"Current and incoming YVC students, including undocumented students; most awards require at least a 2.0 GPA, a short goals narrative, and one recommendation.",due:null,window:"Plan ahead · applications usually December–February",tags:["money","two"],fit:["local","lowincome","firstgen"],effort:"mid",link:"https://www.yvcc.edu/financial-aid/types-of-aid/",note:"The 2027–28 application is not open yet. Prepare your narrative, transcript, and recommendation now.",lastChecked:"2026-08-13",planning:true,kind:"local"},
   {priority:7,name:"WAEF Scholarships",org:"Washington Apple Education Foundation",amount:"Multiple tree-fruit and vocational awards",who:"Washington seniors with family ties to the tree-fruit industry—or students planning a career that supports it.",due:null,window:"Plan ahead · next cycle expected in fall",tags:["money","four","two","trades"],fit:["local","ag","lowincome"],effort:"high",link:"https://scholarships.waef.org/apply",note:"The last confirmed cycle closed March 2, 2026. The new Class of 2027 date has not been posted.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
   {priority:8,name:"Yakama Nation Higher Education",org:"Yakama Nation Higher Education",amount:"Scholarship/grant support",who:"Yakama Nation students pursuing eligible postsecondary education or training; contact Higher Education to confirm documents and the correct term deadline.",due:null,window:"Plan ahead · verify the 2027–28 cycle",tags:["money","four","two","trades"],fit:["local","tribal"],effort:"mid",link:"https://yakamascholar.smapply.io/",note:"The public portal currently references the 2026–27 cycle. Class of 2027 dates are not confirmed yet.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
-  {priority:9,name:"Heritage University CAMP",org:"Heritage University",amount:"First-year academic, financial, and personal support",who:"Eligible first-year Heritage students from migrant or seasonal farmworker families. Apply to Heritage, then complete the CAMP application and FAFSA.",due:null,window:"Contact CAMP while applying to Heritage",tags:["money","four"],fit:["local","ag","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/college-assistance-migrant-program/",note:"CAMP includes advising, mentoring, college-success support, and help finding financial aid and scholarships.",lastChecked:"2026-08-13",kind:"local"},
+  {priority:9,name:"Heritage University CAMP",org:"Heritage University",amount:"First-year academic, financial, and personal support",who:"U.S. citizens or permanent residents in their first full-time year at Heritage who qualify through Migrant Education, the National Farmworker Jobs Program, or recent migrant/seasonal farm work by the student or immediate family.",due:null,window:"Contact CAMP while applying to Heritage",tags:["money","four"],fit:["local","ag","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/college-assistance-migrant-program/",note:"Toppenish students can qualify. Apply to Heritage, complete FAFSA and the CAMP application, and provide the requested migrant or farmworker eligibility documents.",lastChecked:"2026-08-13",kind:"local"},
   {priority:10,name:"Yakima Federal Award for Academic Excellence",org:"Yakima Federal Savings and Loan",amount:"Last cycle: $2,500",who:"Plan-ahead item for Yakima County seniors in the top 10% of their graduating class; the school may limit nominees.",due:null,window:"Plan ahead · last cycle deadline was April 24, 2026",tags:["money","four","two"],fit:["local","leadership"],effort:"mid",link:"https://www.yakimafed.com/scholarship",note:"The 2027 application is not open yet. Ask the counseling office about the school nomination process.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
   {priority:11,name:"WorkSource Yakima & youth training",org:"WorkSource / People For People",amount:"Free job, training, and work-experience help",who:"Yakima Valley youth and young adults. Services may include career guidance, paid work experience, certification programs, résumé help, and tuition assistance.",due:null,window:"Open year-round",tags:["work","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://www.mypfp.org/services/employment-training/",note:"People For People lists a Toppenish contact at 509-865-3250. Eligibility varies by program.",lastChecked:"2026-08-13",kind:"local"},
   {priority:12,name:"Registered apprenticeships in Washington",org:"Washington Labor & Industries",amount:"Paid training and a nationally recognized credential",who:"Students interested in earning while learning: search by county and occupation, review requirements, and contact programs directly.",due:null,window:"Programs recruit on different schedules",tags:["work","trades"],fit:["local"],effort:"mid",link:"https://www.lni.wa.gov/licensing-permits/apprenticeship/apprenticeship-registration-and-tracking-system",note:"Use the state registry to confirm a program is registered before applying.",lastChecked:"2026-08-13",kind:"local"}
@@ -1067,14 +1064,6 @@ const STEPS = [
    EDIT ABOVE THIS LINE — the machinery starts here
    ================================================================ */
 
-const FILTERS = [
-  {key:"all",    label:"All opportunities"},
-  {key:"open",   label:"Open now"},
-  {key:"stem",   label:"STEM & health"},
-  {key:"trades", label:"Trades"},
-  {key:"arts",   label:"Arts & writing"}
-];
-
 const FITS = [
   {key:"everyone",   label:"Open to most students"},
   {key:"local",      label:"Washington / local"},
@@ -1155,10 +1144,8 @@ function statusOf(item){
   return {cls:"open", n:n, unit:"days left", order:0, days:n};
 }
 
-let activeFilter = "all";
 let activeFits   = new Set();
 let query = "";
-let showPast = true;
 let mineOnly = false;
 
 /* ---------- toast ---------- */
@@ -1188,20 +1175,6 @@ window.addEventListener("hashchange", () => showPanel(location.hash.replace("#",
 
 /* ---------- chips ---------- */
 function buildChips(){
-  const chipBox = document.getElementById("chips");
-  FILTERS.forEach(f => {
-    const b = document.createElement("button");
-    b.className = "chip"; b.type = "button"; b.textContent = f.label;
-    b.setAttribute("aria-pressed", String(f.key === "all"));
-    b.addEventListener("click", () => {
-      activeFilter = f.key;
-      [...chipBox.children].forEach(c => c.setAttribute("aria-pressed","false"));
-      b.setAttribute("aria-pressed","true");
-      render();
-    });
-    chipBox.appendChild(b);
-  });
-
   const fitBox = document.getElementById("fitchips");
   FITS.forEach(f => {
     const b = document.createElement("button");
@@ -1337,14 +1310,10 @@ function render(){
   let items = DEADLINES.filter(it => {
     const id = idOf(it);
     if(mineOnly && !saved[id]) return false;
-    if(activeFilter === "open" && (it.planning || (it.opens && daysUntil(it.opens) > 0))) return false;
-    if(activeFilter !== "all" && activeFilter !== "open" && !(it.tags || []).includes(activeFilter)) return false;
     if(activeFits.size){
       const f = it.fit || [];
       if(![...activeFits].every(k => f.includes(k))) return false;
     }
-    const st = statusOf(it);
-    if((st.cls === "closed" || st.cls === "planning") && !showPast) return false;
     if(query){
       const hay = [it.name, it.org, it.who, it.note, it.amount, it.window, (it.fit||[]).join(" ")].join(" ").toLowerCase();
       if(!hay.includes(query)) return false;
@@ -1761,7 +1730,6 @@ function renderSite(){
 }
 
 document.getElementById("q").addEventListener("input", e => { query = e.target.value.toLowerCase().trim(); render(); });
-document.getElementById("showPast").addEventListener("change", e => { showPast = e.target.checked; render(); });
 document.getElementById("mineOnly").addEventListener("change", e => { mineOnly = e.target.checked; render(); });
 document.getElementById("clearSaved").addEventListener("click", () => {
   if(!Object.keys(saved).length) return toast("Your saved list is already empty.");
