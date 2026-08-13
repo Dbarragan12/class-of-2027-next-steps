@@ -1,0 +1,106 @@
+{
+  "updatedAt": "2026-08-13T00:00:00.000Z",
+  "scholarships": [
+    {
+      "name": "Yakama Nation Higher Education Scholarship",
+      "organization": "Yakama Nation Higher Education & Adult Vocational Training",
+      "award": "Varies by eligible program",
+      "eligibility": "Eligible Yakama Nation tribal members pursuing accredited postsecondary education or vocational training.",
+      "url": "https://yakamascholar.smapply.io/",
+      "status": "Confirmed for 2027",
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedWindow": "Check the official portal for the current cycle deadline",
+      "tags": [
+        "Local / Yakima County",
+        "Washington",
+        "Yakama Nation / Indigenous",
+        "4-year",
+        "Community college",
+        "Trades / apprenticeship"
+      ],
+      "fit": "A local, tribal-run source of scholarship, advising, and career support.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Mollie Davis Scholarship",
+      "organization": "Yakima Rotary Trust / Yakima Valley Community Foundation",
+      "award": "Up to $10,000 a year toward a bachelor's or $4,500 a year toward an associate degree",
+      "eligibility": "Yakima County residents who are U.S. citizens and are seniors, graduates, GED holders, or current college students pursuing a first associate or bachelor's degree full time.",
+      "url": "https://yakimarotarytrust.org/molliedavisscholarship/",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": "2026-02-22",
+      "expectedWindow": "Usually December–February",
+      "tags": [
+        "Local / Yakima County",
+        "4-year",
+        "Community college",
+        "First generation"
+      ],
+      "fit": "One of the strongest awards specifically for Yakima County students.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Sea Mar Farmworker Scholarship",
+      "organization": "Sea Mar Community Health Centers",
+      "award": "Varies",
+      "eligibility": "Washington students who work or have worked in farm labor, or whose parent/legal guardian has; financial need required. Immigration status does not affect eligibility.",
+      "url": "https://www.seamar.org/scholarship-farmworker.html",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": "2026-04-15",
+      "expectedWindow": "Usually January–April",
+      "tags": [
+        "Washington",
+        "Farmworker / agriculture",
+        "Undocumented / DACA-friendly",
+        "4-year",
+        "Community college"
+      ],
+      "fit": "A very meaningful fit for agricultural and farmworker-connected families in the Yakima Valley.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Sí Se Puede Scholarship",
+      "organization": "CAFÉ / Miguel R. Velazquez Migrant Education Foundation",
+      "award": "$2,000 (2026 cycle)",
+      "eligibility": "Washington students connected to agricultural labor or the tree-fruit industry who demonstrate persistence, leadership, and community commitment.",
+      "url": "https://form.jotform.com/261234822100139",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": "2026-07-31",
+      "expectedWindow": "Usually May–July",
+      "tags": [
+        "Washington",
+        "Farmworker / agriculture",
+        "First generation",
+        "Hispanic / Latino",
+        "4-year",
+        "Community college",
+        "Trades / apprenticeship"
+      ],
+      "fit": "Built around Washington's tree-fruit community—one of the most directly relevant opportunities for local students.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Heritage University Dreamers Scholarship",
+      "organization": "Heritage University",
+      "award": "100% tuition coverage for up to five years",
+      "eligibility": "Current, new, and transfer students pursuing their first bachelor's degree who are DACA recipients or undocumented students; minimum 2.75 GPA.",
+      "url": "https://heritage.edu/student-resources/financial-aid/scholarships/",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedWindow": "Check Heritage for the next application window",
+      "tags": [
+        "Local / Yakima County",
+        "Undocumented / DACA-friendly",
+        "4-year",
+        "Hispanic / Latino"
+      ],
+      "fit": "Toppenish-based university support that makes a nearby bachelor's degree possible for many students who cannot use federal aid.",
+      "lastChecked": "2026-08-13"
+    }
+  ]
+}
