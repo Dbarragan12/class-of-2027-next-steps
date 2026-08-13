@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-13T22:38:32.674Z",
-  "publicationRule": "Confirmed official opportunities with a current deadline, or an explicitly open/rolling official application.",
+  "updatedAt": "2026-08-13T22:45:56.475Z",
+  "publicationRule": "Only opportunities verified for Toppenish High School students. Current official opportunities need a current deadline or an open/rolling application; recurring plan-ahead items need an official source, a prior-cycle deadline, and an explicit warning that the next date may change.",
   "scholarships": [
     {
       "name": "Mollie Davis Scholarship",
@@ -136,6 +136,52 @@
         "lowincome"
       ],
       "whyFit": "A high-value full-ride pathway for students with strong academic records and significant financial need. The official application portal currently says the National College Match is open.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Ewing C. Kelly Scholarship",
+      "organization": "Kelly Foundation of Washington",
+      "award": "$3,250 in the 2026 cycle",
+      "eligibility": "Washington high school seniors accepted to, or with an application pending at, an accredited college, community college, or technical college. U.S. citizenship or a green card is required; selection considers citizenship, achievement, activities, and financial need.",
+      "url": "https://kellyfoundationwashington.org/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-07",
+      "expectedWindow": "2027 application is not released yet. The official 2026 application was postmarked by March 7; the next date may change.",
+      "tags": [
+        "Washington",
+        "Two-year",
+        "Four-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish High School students qualify under the statewide Washington eligibility rule.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Albert Lee Wright Jr. Memorial Migrant Scholarship",
+      "organization": "National Association of State Directors of Migrant Education",
+      "award": "At least $3,000 in the 2026 cycle",
+      "eligibility": "Graduating high school seniors eligible for Title I, Part C Migrant Education who plan postsecondary education. The program especially encourages students who have overcome barriers caused by moving for agricultural or fishing work.",
+      "url": "https://www.nasdme.org/al-wright-scholarship",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-11",
+      "expectedWindow": "2027 application is not released yet. The official 2026 deadline was March 11; use that only as a planning estimate.",
+      "tags": [
+        "Farmworker",
+        "Financial need"
+      ],
+      "fit": [
+        "ag",
+        "lowincome"
+      ],
+      "whyFit": "Strong Toppenish fit for students enrolled in Migrant Education who meet the mobility requirement. National program; no excluded local school or region.",
       "lastChecked": "2026-08-13"
     }
   ]
