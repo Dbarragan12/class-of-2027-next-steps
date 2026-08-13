@@ -60,6 +60,73 @@ p{margin:0 0 12px}
 .skip:focus{left:8px;top:8px}
 
 /* ============================================================
+   START HERE — low-friction senior action center
+   ============================================================ */
+.utility{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.utility button,.utility a{
+  border:1px solid rgba(255,255,255,.42);background:rgba(255,255,255,.08);color:#fff;
+  border-radius:999px;padding:7px 11px;text-decoration:none;font:500 11px "DM Mono",monospace;
+  letter-spacing:.06em;cursor:pointer
+}
+.utility button:hover,.utility a:hover{background:#fff;color:var(--crimson)}
+.current-action{
+  margin:26px 0 18px;background:var(--ink);color:#fff;border-radius:14px;padding:24px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center
+}
+.current-action .eyebrow{color:var(--rose-lt)}
+.current-action h3{font-size:clamp(24px,4vw,34px);margin:5px 0 7px}
+.current-action p{color:var(--gray20);max-width:60ch;margin:0}
+.current-action .btn{background:var(--rose-lt);border-color:var(--rose-lt);color:var(--ink);white-space:nowrap}
+.start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 0}
+.start-step{
+  background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:18px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;min-height:190px
+}
+.start-step .stepnum{font:500 11px "DM Mono",monospace;color:var(--crimson);letter-spacing:.12em;text-transform:uppercase}
+.start-step h3{font-size:20px;margin:7px 0 7px}
+.start-step p{font-size:14.5px;color:var(--muted);margin-bottom:14px}
+.start-step button{margin-top:auto;align-self:flex-start}
+.aid-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin-top:18px}
+.decision-card,.grant-card,.plan-card,.help-card,.vocab-card{
+  background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:22px;box-shadow:var(--shadow)
+}
+.decision-card{border-top:5px solid var(--crimson)}
+.decision-card h4,.grant-card h4,.plan-card h4,.help-card h4,.vocab-card h4{font-size:21px;margin-bottom:8px}
+.decision-choice{display:grid;gap:9px;margin:15px 0}
+.decision-choice a{display:block;border:1px solid var(--gray20);border-radius:9px;padding:12px 14px;text-decoration:none;color:var(--ink);font-weight:700}
+.decision-choice a:hover{border-color:var(--crimson);background:var(--sand)}
+.decision-choice small{display:block;color:var(--muted);font-weight:400;margin-top:3px}
+.grant-card{background:var(--sage-bg);border-color:#bdd8c9;border-top:5px solid var(--sage)}
+.grant-big{font:800 clamp(28px,5vw,46px) "Bricolage Grotesque",sans-serif;color:var(--sage);line-height:1;margin:12px 0 8px}
+.plan-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}
+.plan-controls label{font-weight:700;font-size:14px}
+.plan-controls select{width:100%;margin-top:5px;padding:10px;border:1.5px solid var(--gray20);border-radius:7px;background:var(--paper);font:inherit}
+.plan-output{background:var(--sand);border-left:4px solid var(--crimson);padding:15px;border-radius:0 9px 9px 0;margin-top:12px}
+.plan-output ol{margin:8px 0 0;padding-left:21px}.plan-output li{margin-bottom:6px}
+.help-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:15px 0}
+.help-grid div{background:var(--sand);border-radius:8px;padding:11px 12px;font-size:14px;font-weight:700}
+.help-fab{
+  position:fixed;right:18px;bottom:18px;z-index:70;border:0;border-radius:999px;background:var(--crimson);color:#fff;
+  padding:13px 17px;box-shadow:0 8px 25px rgba(0,0,0,.24);font:700 14px "Public Sans",sans-serif;cursor:pointer
+}
+.help-fab:hover{background:var(--crimson-dk)}
+.hidden-curriculum{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
+.hidden-curriculum div{background:#fff;border:1px solid var(--gray20);border-radius:9px;padding:13px 14px;font-size:14.5px}
+.hidden-curriculum strong{display:block;font-family:"Bricolage Grotesque",sans-serif;margin-bottom:3px}
+.vocab{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}
+.vocab div{border-top:1px solid var(--gray20);padding-top:9px;font-size:14px;color:var(--muted)}
+.vocab b{color:var(--ink)}
+.critical-es{border-left:5px solid #d1a93b}
+.cta-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.cta-row a{text-decoration:none}
+@media(max-width:820px){.start-grid{grid-template-columns:repeat(2,1fr)}.aid-grid{grid-template-columns:1fr}}
+@media(max-width:560px){
+  .start-grid,.help-grid,.hidden-curriculum,.vocab,.plan-controls{grid-template-columns:1fr}
+  .current-action{grid-template-columns:1fr;padding:19px}.start-step{min-height:0}
+  .help-fab{right:12px;bottom:12px;padding:11px 14px}
+}
+
+/* ============================================================
    HEADER
    ============================================================ */
 header.top{
@@ -465,8 +532,13 @@ footer p{margin:0 0 10px}
         <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Advisory · Class of 2027</p>
       </div>
     </div>
+    <div class="utility" aria-label="Quick links">
+      <button type="button" data-jump="start">Start here</button>
+      <a href="#familias" data-jump="familias">Español para familias</a>
+      <button type="button" data-jump="help">I need help</button>
+    </div>
     <h1>What's due<br><span class="thin">and what's next.</span></h1>
-    <p class="lede">Deadlines, the writing that wins them, and every road out of here — in one place, counting down.</p>
+    <p class="lede">Deadlines, money, applications, and every path after graduation—in one place.</p>
     <div class="ticker" id="ticker" aria-live="polite">
       <div><span class="n" id="tick-n">—</span></div>
       <div>
@@ -484,20 +556,117 @@ footer p{margin:0 0 10px}
 <nav class="hub" id="hubnav" aria-label="Main sections">
   <div class="wrap">
     <div class="row" role="tablist">
-      <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="true" data-panel="deadlines"><span class="num">01</span> Deadlines &amp; money</button>
-      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">02</span> Writing that wins</button>
-      <button class="tab" role="tab" id="tab-pathways"  aria-controls="panel-pathways"  aria-selected="false" data-panel="pathways"><span class="num">03</span> School, trades &amp; work</button>
-      <button class="tab" role="tab" id="tab-timeline"  aria-controls="panel-timeline"  aria-selected="false" data-panel="timeline"><span class="num">04</span> Senior year month by month</button>
+      <button class="tab" role="tab" id="tab-start" aria-controls="panel-start" aria-selected="true" data-panel="start"><span class="num">01</span> Start here</button>
+      <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="false" data-panel="deadlines"><span class="num">02</span> Money &amp; deadlines</button>
+      <button class="tab" role="tab" id="tab-pathways"  aria-controls="panel-pathways"  aria-selected="false" data-panel="pathways"><span class="num">03</span> Paths after graduation</button>
+      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">04</span> Apply &amp; write</button>
+      <button class="tab" role="tab" id="tab-timeline"  aria-controls="panel-timeline"  aria-selected="false" data-panel="timeline"><span class="num">05</span> My senior year</button>
     </div>
   </div>
 </nav>
 
-<!-- ============ 01 · DEADLINES ============ -->
-<section class="panel" id="panel-deadlines" role="tabpanel" aria-labelledby="tab-deadlines">
+<!-- ============ 01 · START HERE ============ -->
+<section class="panel" id="panel-start" role="tabpanel" aria-labelledby="tab-start">
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 01</p>
-    <h2>Every deadline, counting down.</h2>
-    <p>Start with the five money steps every senior should check. Then use the filters to find verified scholarships that match you.</p>
+    <p class="eyebrow">Class of 2027 · Start here</p>
+    <h2>You do not need the whole plan today.</h2>
+    <p>Do the current task, choose a likely direction, and save three opportunities. If you are unsure, that is a valid starting point.</p>
+  </div>
+  <main class="wrap">
+    <div class="current-action">
+      <div>
+        <p class="eyebrow">Your job this month · August</p>
+        <h3>Pick two paths to explore.</h3>
+        <p>Choose the two that sound most possible—not perfect. Then complete the four-question path finder.</p>
+      </div>
+      <button class="btn" type="button" data-jump="pathways">Takes about 10 minutes →</button>
+    </div>
+
+    <div class="start-grid" aria-label="Six senior starting steps">
+      <article class="start-step"><span class="stepnum">Step 1</span><h3>Pick your likely path</h3><p>Four-year · community college · trade/apprenticeship · military · work · not sure.</p><button class="mini" type="button" data-jump="pathways">Explore paths →</button></article>
+      <article class="start-step"><span class="stepnum">Step 2</span><h3>Prepare for financial aid</h3><p>Use FAFSA or WASFA. The safe decision tool below helps you find the official guidance.</p><button class="mini" type="button" data-scroll="aid-choice">Choose a form →</button></article>
+      <article class="start-step"><span class="stepnum">Step 3</span><h3>Create your accounts</h3><p>Make a personal email you will keep after graduation. Then create only the official accounts you need.</p><button class="mini" type="button" data-jump="deadlines">See money steps →</button></article>
+      <article class="start-step"><span class="stepnum">Step 4</span><h3>Build your senior folder</h3><p>Transcript · jobs and activities · family information · recommendation packet · story bank.</p><button class="mini" type="button" data-jump="writing">Build it →</button></article>
+      <article class="start-step"><span class="stepnum">Step 5</span><h3>Save 3 opportunities</h3><p>Do not search forever. Start with local money and add three realistic opportunities to your list.</p><button class="mini" type="button" data-jump="deadlines">Find three →</button></article>
+      <article class="start-step"><span class="stepnum">Step 6</span><h3>Do this month's task</h3><p>Open the month-by-month guide during advisory and complete the one action at the top.</p><button class="mini" type="button" data-jump="timeline">Open August →</button></article>
+    </div>
+
+    <div class="sect" id="aid-choice">
+      <p class="eyebrow">Financial aid</p>
+      <h3>Do I complete FAFSA or WASFA?</h3>
+      <p class="sub">Do not guess about citizenship or residency rules. Use the official questionnaire or ask a trained adult privately.</p>
+      <div class="aid-grid">
+        <article class="decision-card">
+          <h4>Can you complete FAFSA under its eligibility rules?</h4>
+          <div class="decision-choice">
+            <a href="https://studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens" target="_blank" rel="noopener">Yes, or I think so → FAFSA<small>FAFSA can connect eligible students to federal, Washington, and college aid.</small></a>
+            <a href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">No, I do not know, or I prefer not to → Check WASFA<small>Use WSAC's questionnaire. WASFA applies for Washington state aid, not federal aid.</small></a>
+          </div>
+          <p><strong>Not sure? That is normal. Do not guess.</strong> Ask Mr. Barragan/counseling privately or use a free community workshop.</p>
+          <div class="cta-row"><a class="btn" href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">Official WASFA guidance</a><a class="btn ghost" href="https://yvcc.edu/news/academic-year/2025-2026/financial-aid-workshops-reminder.php" target="_blank" rel="noopener">YVC workshop information</a></div>
+        </article>
+        <article class="grant-card">
+          <p class="eyebrow">Money students often miss</p>
+          <h4>Washington College Grant</h4>
+          <div class="grant-big">Check—even if you think your family earns too much.</div>
+          <p>WA Grant can help pay for college, career training, supplies, living expenses, and approved apprenticeships. You apply through FAFSA or WASFA.</p>
+          <p><strong>Current 2026–27 example:</strong> a family of four can receive some aid up to about $139,500; limits change by year and household size.</p>
+          <a href="https://wsac.wa.gov/wcg-awards" target="_blank" rel="noopener">Check the official income and award chart →</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Private on this device</p>
+      <h3>Build my senior plan.</h3>
+      <p class="sub">No account is required. Your choices stay in this browser; clear them before leaving a shared Chromebook.</p>
+      <article class="plan-card">
+        <div class="plan-controls">
+          <label for="plan-path">What sounds most likely right now?<select id="plan-path"><option value="unsure">I am not sure</option><option value="four">Four-year college</option><option value="two">YVC / community college</option><option value="trades">Trade / apprenticeship</option><option value="military">Military</option><option value="work">Work first</option></select></label>
+          <label for="plan-aid">FAFSA or WASFA?<select id="plan-aid"><option value="unknown">I do not know yet</option><option value="fafsa">FAFSA</option><option value="wasfa">WASFA</option><option value="started">I already started</option></select></label>
+        </div>
+        <button class="btn" id="build-plan" type="button">Build my 3 next steps</button>
+        <div class="plan-output" id="plan-output" aria-live="polite"><strong>Your plan will appear here.</strong><p>Choose what sounds closest, then build your next three actions.</p></div>
+      </article>
+    </div>
+
+    <div class="sect" id="help-center">
+      <p class="eyebrow">Your escape hatch</p>
+      <h3>I need help with this.</h3>
+      <article class="help-card">
+        <h4>You are not expected to solve everything alone.</h4>
+        <div class="help-grid"><div>I do not understand what this means</div><div>I need FAFSA/WASFA help</div><div>I need a transcript</div><div>I need a recommendation</div><div>I do not know what I want after graduation</div><div>My family has questions</div><div>Something on this site is wrong</div><div>I need to talk privately</div></div>
+        <p><strong>Next step:</strong> bring this page to Mr. Barragan or the THS counseling office. For financial-aid help, YVC's community workshops offer free assistance in English and Spanish when sessions are scheduled.</p>
+      </article>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Things seniors do not know they do not know</p>
+      <h3>The hidden curriculum, made visible.</h3>
+      <div class="hidden-curriculum">
+        <div><strong>Scholarships are not the same as financial aid.</strong>FAFSA/WASFA can unlock grants and school aid beyond scholarships.</div>
+        <div><strong>Financial aid does not commit you to a school.</strong>You can apply before deciding where to go.</div>
+        <div><strong>Community college can lead to a bachelor's degree.</strong>Ask about transfer degrees and required courses.</div>
+        <div><strong>Apprenticeships can pay you while you train.</strong>Registered programs combine employment and instruction.</div>
+        <div><strong>Compare remaining cost—not the scholarship headline.</strong>Separate grants from loans and calculate what is still unpaid.</div>
+        <div><strong>Admission is not the final step.</strong>Deposits, orientation, placement, registration, and verification may come next.</div>
+        <div><strong>Never assume you cannot afford a school yet.</strong>Wait for the complete aid offer and ask someone to help read it.</div>
+        <div><strong>Graduation is not the finish line.</strong>Check email all summer and complete every transition task.</div>
+      </div>
+    </div>
+
+    <div class="sect">
+      <details class="acc"><summary>Senior survival vocabulary</summary><div class="acc-body"><div class="vocab"><div><b>FAFSA</b> — Federal financial-aid application.</div><div><b>WASFA</b> — Washington application for eligible students who do not file FAFSA.</div><div><b>Grant</b> — Money you generally do not repay.</div><div><b>Scholarship</b> — Money awarded using stated criteria.</div><div><b>Loan</b> — Money you borrow and repay.</div><div><b>SAI</b> — A number used to help determine aid; it is not your bill.</div><div><b>Priority deadline</b> — Some money may be gone after this date.</div><div><b>Rolling admission</b> — Applications are reviewed over time.</div><div><b>Certificate</b> — Shorter training for a particular field.</div><div><b>Apprenticeship</b> — Paid work plus structured training.</div></div></div></details>
+    </div>
+  </main>
+</section>
+
+<!-- ============ 01 · DEADLINES ============ -->
+<section class="panel" id="panel-deadlines" role="tabpanel" aria-labelledby="tab-deadlines" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 02 · Money &amp; deadlines</p>
+    <h2>Money close to home, then every deadline.</h2>
+    <p>Start with local and Washington opportunities—the best use of your time—then consider national reach scholarships. The board also includes financial aid, training, and apprenticeship steps.</p>
   </div>
 
   <div class="controls">
@@ -524,23 +693,21 @@ footer p{margin:0 0 10px}
       <p style="margin:10px 0 0"><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
     </div>
 
-    <div class="familias">
+    <div class="familias critical-es" id="familias">
       <h3>Para las familias</h3>
-      <p class="en">For parents and guardians — la versión en español</p>
-      <p>Su estudiante necesita su ayuda con tres cosas este año. No necesita hablar inglés ni haber ido a la
-        universidad para ayudar con ninguna de las tres.</p>
+      <p class="en">Acciones importantes para padres y tutores</p>
+      <p>Su estudiante necesita su ayuda con información, fechas y preguntas. No necesita hablar inglés ni haber ido a la universidad para ayudar.</p>
       <ul>
-        <li><strong>El formulario de ayuda financiera (FAFSA o WASFA), en octubre.</strong> Se necesitan sus impuestos
-          de hace dos años. Es gratis. Abre casi todo lo demás en esta página. Si su familia es indocumentada, el
-          formulario correcto es el <strong>WASFA</strong> — es del estado de Washington, no del gobierno federal, y no se
-          comparte con inmigración.</li>
+        <li><strong>FAFSA o WASFA.</strong> Son solicitudes gratuitas de ayuda financiera. No obligan al estudiante a asistir a una universidad. Si no sabe cuál usar, no adivine: use el <a href="https://wsac.wa.gov/wasfa-es" target="_blank" rel="noopener">cuestionario oficial de WASFA</a> o pida ayuda privada en la escuela.</li>
+        <li><strong>Privacidad.</strong> Lea las declaraciones oficiales de privacidad antes de compartir información personal. WASFA solicita ayuda estatal; FAFSA también puede conectar a estudiantes elegibles con ayuda federal.</li>
         <li><strong>Las fechas límite.</strong> La mayoría del dinero se decide entre octubre y marzo del último año.
           Pregúntele a su estudiante una vez al mes: «¿A cuáles solicitaste?»</li>
         <li><strong>Su historia familiar.</strong> Muchas becas de aquí — del valle, de la industria de la fruta, de la
           Nación Yakama, para familias trabajadoras del campo — se otorgan por quién es su familia y de dónde viene.
           Cuéntele esa historia a su estudiante. Es parte de la solicitud.</li>
       </ul>
-      <p style="margin:12px 0 0"><strong>Nunca se paga por solicitar una beca.</strong> Si alguien le pide dinero, es fraude.</p>
+      <p style="margin:12px 0 0"><strong>Nunca se paga por solicitar una beca.</strong> Si alguien le pide dinero o una tarjeta de crédito para solicitarla, cierre la página.</p>
+      <div class="cta-row"><a class="btn" href="https://wsac.wa.gov/wasfa-es" target="_blank" rel="noopener">Guía oficial de WASFA</a><a class="btn ghost" href="https://wsac.wa.gov/wcg-es" target="_blank" rel="noopener">Washington College Grant</a></div>
     </div>
   </main>
 </section>
@@ -548,7 +715,7 @@ footer p{margin:0 0 10px}
 <!-- ============ 02 · WRITING ============ -->
 <section class="panel" id="panel-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 02 · Writing that wins</p>
+    <p class="eyebrow">Section 04 · Apply &amp; write</p>
     <h2>Know which essay you are writing.</h2>
     <p>A college personal statement helps an admission reader understand who you are. A scholarship essay proves why this award fits your plans and what you will do with the opportunity. You may reuse stories, but the job of each essay is different.</p>
   </div>
@@ -658,10 +825,10 @@ footer p{margin:0 0 10px}
 <!-- ============ 03 · PATHWAYS ============ -->
 <section class="panel" id="panel-pathways" role="tabpanel" aria-labelledby="tab-pathways" hidden>
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 03</p>
-    <h2>Five doors. Each one has a different calendar.</h2>
+    <p class="eyebrow">Section 03 · Paths after graduation</p>
+    <h2>Five doors. None is ranked above another.</h2>
     <p>You don't have to know your career. You do need to know which door you're walking through this year, because
-      the deadlines in Section 01 depend on it. None of these five is the smart one — the smart one is the one that
+      the deadlines in Money &amp; deadlines depend on it. None of these five is the smart one — the smart one is the one that
       fits your life.</p>
   </div>
 
@@ -677,8 +844,7 @@ footer p{margin:0 0 10px}
     <div class="sect">
       <p class="eyebrow">The real numbers</p>
       <h3>What each door costs and what it pays</h3>
-      <p class="sub">Rough Washington-state figures for planning, not promises. Wages vary by employer and year;
-        costs assume you qualify for the Washington College Grant, which about half of families here do.</p>
+      <p class="sub">Rough Washington-state figures for planning, not promises. Wages, costs, and aid change. Check Washington College Grant eligibility instead of assuming you do—or do not—qualify.</p>
       <div class="tablewrap" id="cmp-mount"></div>
     </div>
   </main>
@@ -704,7 +870,7 @@ footer p{margin:0 0 10px}
 <!-- ============ 04 · TIMELINE ============ -->
 <section class="panel" id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline" hidden>
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 04</p>
+    <p class="eyebrow">Section 05 · My senior year</p>
     <h2>Senior year, month by month.</h2>
     <p>If you do nothing else on this site, do the thing next to the current month. The whole discipline is ten
       minutes, once a month.</p>
@@ -723,10 +889,12 @@ footer p{margin:0 0 10px}
 <footer>
   <div class="wrap">
     <p id="site-teacher" style="font-weight:600;color:var(--ink)"></p>
-    <p><strong>How this page stays current:</strong> every public scholarship must be verified as open to a Toppenish High School student. School- or region-limited awards are blocked unless Toppenish is explicitly included. Confirmed opportunities appear first; verified recurring opportunities remain under the plan-ahead switch with their prior deadline clearly labeled until new dates are published.</p>
+    <p><strong>How this page stays current:</strong> every public scholarship must be verified as open to a Toppenish High School student. School- or region-limited awards are blocked unless Toppenish is explicitly included. Confirmed opportunities appear first; recurring opportunities show their prior deadline and a clear warning until a new date is published.</p>
     <p>Made for advisory at Toppenish High School. Not an official Toppenish School District publication—verify every date on the sponsor's official page before relying on it.</p>
   </div>
 </footer>
+
+<button class="help-fab" type="button" data-jump="help" aria-label="Open help options">🆘 I need help</button>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -748,21 +916,31 @@ footer p{margin:0 0 10px}
 const SITE = {
   school:  "Toppenish High School",
   line:    "Advisory · Class of 2027",
-  teacher: "",          // e.g. "Questions? See Mr. Barragan in Room 214." Blank hides this line.
+  teacher: "Questions? Bring this page to Mr. Barragan or the THS counseling office.",
   logo:    "",          // Drop the Wildcat PNG next to this file, put the filename here.
   logoAlt: "Toppenish Wildcats"
 };
 
 const DEADLINES = [];
 
+/* Senior deadlines are not only scholarships. Add verified admissions and transition dates here. */
+const SENIOR_DEADLINES = [
+  {priority:20,name:"University of Washington first-year application",org:"University of Washington Admissions",amount:"Admissions deadline",who:"Students applying for first-year summer or autumn admission. Running Start students who have not attended college after high-school graduation apply as first-year students.",due:"2026-11-15",window:"Application opens August 15",tags:["four"],fit:["everyone"],effort:"high",link:"https://admit.washington.edu/apply/first-year/",note:"UW lists November 15 as its first-year application deadline and does not offer early action or early decision.",lastChecked:"2026-08-13",kind:"deadline",needs:"Common App or ApplyWeb application, self-reported coursework, UW writing responses, family information, and fee or fee waiver."},
+  {priority:21,name:"University of Washington financial-aid priority date",org:"University of Washington",amount:"FAFSA/WASFA priority date",who:"Students seeking financial aid at UW should list UW and complete the correct aid application by the university's priority date.",due:"2027-02-28",window:"For summer and autumn applicants",tags:["money","four"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://admit.washington.edu/apply/dates-deadlines/",note:"Admission and financial-aid deadlines are separate. Missing the November admission deadline cannot be fixed by filing aid later.",lastChecked:"2026-08-13",kind:"deadline",needs:"Submitted FAFSA or WASFA with UW listed; respond to any later verification request."},
+  {priority:22,name:"YVC admission, placement & orientation",org:"Yakima Valley College",amount:"College transition steps",who:"Students planning YVC should apply for the correct quarter, send transcripts, complete placement steps, and schedule orientation.",due:null,window:"Dates depend on your starting quarter · verify the current calendar",tags:["two"],fit:["local","everyone"],effort:"mid",link:"https://www.yvcc.edu/registration/important-dates.php",note:"YVC publishes separate application, transcript, placement, orientation, registration, and tuition dates. Being admitted does not finish the process.",lastChecked:"2026-08-13",kind:"deadline",needs:"YVC application, transcripts, placement information, orientation, registration, and a confirmed financial-aid plan."},
+  {priority:23,name:"Perry Tech application timeline",org:"Perry Technical Institute",amount:"Program application and start dates",who:"Students considering Perry Tech should select a program early because requirements and available start dates vary by program.",due:null,window:"Program-specific · start researching now",tags:["trades"],fit:["local","everyone"],effort:"mid",link:"https://www.perrytech.edu/admissions/",note:"Ask admissions for the exact application, assessment, interview, waitlist, and financial-aid timeline for your program.",lastChecked:"2026-08-13",kind:"deadline",needs:"Program choice, application, any required assessment or interview, transcripts, and a financial-aid plan."}
+];
+
 /* Evergreen money steps stay pinned even when the nightly scholarship list changes. */
 const PRIORITY_ACTIONS = [
-  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"U.S. citizens and eligible noncitizens: create your StudentAid.gov account now, then complete the 2027–28 FAFSA when it opens.",due:null,window:"Prepare now · 2027–28 form not open yet",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"This is an application for grants, work-study, and loans—not a scholarship contest.",lastChecked:"2026-08-13",kind:"action"},
-  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or do not file the FAFSA, including many undocumented students: prepare for the 2027–28 WASFA.",due:null,window:"Prepare now · 2027–28 form not open yet",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"Use FAFSA or WASFA—not both. WSAC explains which form is right for you.",lastChecked:"2026-08-13",kind:"action"},
-  {priority:3,name:"Washington College Grant",org:"Washington Student Achievement Council",amount:"Money for college, career training, or approved apprenticeships",who:"Washington residents across a wide range of family incomes. File FAFSA or WASFA to be considered.",due:null,window:"Available through FAFSA or WASFA",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wcg",note:"For 2027–28, use the new FAFSA/WASFA when released; award amounts change each year.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"Students who can complete FAFSA under its eligibility rules should prepare a StudentAid.gov account and complete the 2027–28 form when it opens.",due:null,window:"Prepare now · expected by October 1, 2026",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"This is an application for grants, work-study, and loans—not a scholarship contest. If you are unsure which form to use, do not guess; use WSAC's guidance or ask for help.",lastChecked:"2026-08-13",kind:"action",needs:"StudentAid.gov account; student and contributor information; required financial and identity information."},
+  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or choose not to file FAFSA can use WSAC's official questionnaire to check whether WASFA is the appropriate application.",due:null,window:"Prepare now · 2027–28 form not open yet",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"WASFA applies for state aid only. Read the official privacy statement and ask for private help if any question is unclear.",lastChecked:"2026-08-13",kind:"action",needs:"WSAC account; student and contributor information; residency and financial information requested by the official application."},
+  {priority:3,name:"Washington College Grant",org:"Washington Student Achievement Council",amount:"Money for college, career training, or approved apprenticeships",who:"Washington residents across a wide range of family incomes. Complete FAFSA or WASFA to be considered.",due:null,window:"Available through FAFSA or WASFA",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wcg-awards",note:"Do not assume you earn too much. In the current 2026–27 example, a family of four can receive some aid up to about $139,500; 2027–28 amounts may change.",lastChecked:"2026-08-13",kind:"action",needs:"FAFSA or WASFA plus enrollment in an eligible Washington college, training program, or approved apprenticeship."},
   {priority:4,name:"College Bound Scholarship",org:"Washington Student Achievement Council",amount:"State aid commitment for eligible students",who:"Students enrolled through the College Bound program: check your status and make sure you complete FAFSA or WASFA during senior year.",due:null,window:"Check your status now",tags:["money","four","two","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://wsac.wa.gov/college-bound",note:"Eligible students must meet program requirements and use the award at a participating Washington school.",lastChecked:"2026-08-13",kind:"action"},
   {priority:5,name:"Passport to Careers",org:"Washington Student Achievement Council",amount:"College or apprenticeship aid plus support",who:"Washington students who have experienced foster care or unaccompanied homelessness: review eligibility and tell your counselor or financial-aid office.",due:null,window:"Start eligibility steps now",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/passport-to-careers",note:"Support can cover college, pre-apprenticeship, or apprenticeship costs, including some living and occupational expenses.",lastChecked:"2026-08-13",kind:"action"},
-  {priority:6,name:"YVC Foundation Scholarships",org:"Yakima Valley College Foundation",amount:"One application matches students to 150+ scholarships",who:"Current and incoming YVC students, including undocumented students; most awards require at least a 2.0 GPA, a short goals narrative, and one recommendation.",due:null,window:"Plan ahead · applications usually December–February",tags:["money","two"],fit:["local","lowincome","firstgen"],effort:"mid",link:"https://www.yvcc.edu/financial-aid/types-of-aid/",note:"The 2027–28 application is not open yet. Prepare your narrative, transcript, and recommendation now.",lastChecked:"2026-08-13",planning:true,kind:"local"},
+  {priority:6,name:"YVC Foundation Scholarships",org:"Yakima Valley College Foundation",amount:"One application matches students to many scholarships",who:"Current and incoming YVC students, including undocumented students; one application can match a student with multiple awards.",due:null,window:"Plan ahead · applications normally open December 1 and close at the end of February",tags:["money","two"],fit:["local","lowincome","firstgen"],effort:"mid",link:"https://www.yvcc.edu/financial-aid/types-of-aid/",note:"The 2027–28 application is not open yet. YVC says its 2026–27 application covered more than 150 separate scholarships, with an average award around $4,000.",lastChecked:"2026-08-13",planning:true,kind:"local",needs:"Prepare a transcript, goals narrative, and recommendation; confirm the new cycle's exact checklist."},
+  {priority:6.1,name:"Heritage University scholarships",org:"Heritage University",amount:"Institutional scholarships for incoming students",who:"Students applying to Heritage should complete the university application and review incoming-student scholarships, including current need- and merit-based programs.",due:null,window:"Plan ahead · 2027–28 windows are not posted yet",tags:["money","four"],fit:["local","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/financial-aid/scholarships/",note:"Heritage's current page includes incoming-freshman aid and scholarship applications. The Class of 2027 dates may differ from the prior cycle.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local",needs:"Heritage application; scholarship-specific statement or application; transcript; FAFSA/WASFA or other aid documents when requested."},
+  {priority:6.2,name:"Perry Tech scholarship list",org:"Perry Technical Institute",amount:"Trade-oriented and external scholarships",who:"Students planning technical training can use Perry Tech's maintained scholarship list to find awards by trade, employer, membership, and personal background.",due:null,window:"Multiple deadlines through 2027 · check the live list",tags:["money","trades"],fit:["local","firstgen","lowincome"],effort:"mid",link:"https://www.perrytech.edu/students/finance/scholarships/external/index.html?cid=1",note:"Perry Tech currently lists awards with 2026 and 2027 deadlines. Verify both the scholarship's rules and whether your planned program is eligible.",lastChecked:"2026-08-13",kind:"local",needs:"Requirements vary. Expect proof of enrollment or eligible program, an essay, transcript, and possibly financial information."},
   {priority:7,name:"WAEF Scholarships",org:"Washington Apple Education Foundation",amount:"Multiple tree-fruit and vocational awards",who:"Washington seniors with family ties to the tree-fruit industry—or students planning a career that supports it.",due:null,window:"Plan ahead · next cycle expected in fall",tags:["money","four","two","trades"],fit:["local","ag","lowincome"],effort:"high",link:"https://scholarships.waef.org/apply",note:"The last confirmed cycle closed March 2, 2026. The new Class of 2027 date has not been posted.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
   {priority:8,name:"Yakama Nation Higher Education",org:"Yakama Nation Higher Education",amount:"Scholarship/grant support",who:"Yakama Nation students pursuing eligible postsecondary education or training; contact Higher Education to confirm documents and the correct term deadline.",due:null,window:"Plan ahead · verify the 2027–28 cycle",tags:["money","four","two","trades"],fit:["local","tribal"],effort:"mid",link:"https://yakamascholar.smapply.io/",note:"The public portal currently references the 2026–27 cycle. Class of 2027 dates are not confirmed yet.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
   {priority:9,name:"Heritage University CAMP",org:"Heritage University",amount:"First-year academic, financial, and personal support",who:"U.S. citizens or permanent residents in their first full-time year at Heritage who qualify through Migrant Education, the National Farmworker Jobs Program, or recent migrant/seasonal farm work by the student or immediate family.",due:null,window:"Contact CAMP while applying to Heritage",tags:["money","four"],fit:["local","ag","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/college-assistance-migrant-program/",note:"Toppenish students can qualify. Apply to Heritage, complete FAFSA and the CAMP application, and provide the requested migrant or farmworker eligibility documents.",lastChecked:"2026-08-13",kind:"local"},
@@ -934,10 +1112,10 @@ const FINALCHECK = [
 const PATHWAYS = [
   { key:"four", title:"Four-year university", fast:"4 years · apply Oct–Jan",
     blurb:"A bachelor's degree on a campus. Highest lifetime earnings on average, highest cost, and the longest wait before you're earning.",
-    bullets:["Apply October through January of senior year","FAFSA or WASFA the first week of October","UW, WSU, CWU, EWU, WWU, Heritage","Nearly every big scholarship on this site is for this door"] },
+    bullets:["Apply October through January of senior year","Complete FAFSA or WASFA when the correct form opens","UW, WSU, CWU, EWU, WWU, Heritage","Compare local, state, institutional, and national aid"] },
   { key:"two", title:"Community college", fast:"2 years · apply anytime",
     blurb:"Two years at YVC. Finish a career degree and go to work, or transfer into a bachelor's and pay half of what four years at a university costs.",
-    bullets:["Open enrollment — no admissions gamble","Often fully free with the WA College Grant","A transfer degree lands you the identical diploma","Undocumented students are eligible for YVC aid"] },
+    bullets:["Open enrollment — no admissions gamble","Check WA Grant instead of assuming your cost","A transfer degree can lead to a bachelor's","YVC Foundation welcomes incoming students, including undocumented students"] },
   { key:"trades", title:"Trades & apprenticeships", fast:"1–5 years · you get paid",
     blurb:"You earn a wage from the first week and finish with no tuition debt and a license somebody has to have.",
     bullets:["Perry Tech, YVC, and union apprenticeships","Programs open on their own schedules — check monthly","WSOS Career & Technical Scholarship, 3 cycles a year","Journeyman wages beat a lot of bachelor's degrees"] },
@@ -995,10 +1173,10 @@ const QUIZ = [
 ];
 
 const QUIZ_ADVICE = {
-  four:{ t:"Four-year university", next:["File the FAFSA or WASFA the first week of October — it's the gate for everything.","Apply to two or three schools by mid-November, including one you're confident about.","Go run the 'Money & aid' filter in Section 01. The biggest awards on this page are for this door and most close in the fall."] },
-  two:{ t:"Community college (YVC)", next:["Apply to YVC now — it's open enrollment and takes about twenty minutes.","File the FAFSA or WASFA in October so the WA College Grant can cover it.","Set a reminder for December 1: the YVC Foundation scholarship application opens and one form matches you to 150+ funds."] },
+  four:{ t:"Four-year university", next:["File the FAFSA or WASFA as soon as the correct 2027–28 form opens.","Apply to two or three schools by mid-November, including one you're confident about.","Use Money & deadlines to compare local, Washington, and national opportunities."] },
+  two:{ t:"Community college (YVC)", next:["Apply to YVC and compare transfer degrees with career programs.","Complete FAFSA or WASFA when the correct form opens and ask what WA Grant may cover.","Set a reminder for December 1: the YVC Foundation application normally opens and one form can match you with many awards."] },
   trades:{ t:"Trades & apprenticeships", next:["Look at Perry Tech now — programs fill early and spring applicants often wait a year.","Check the L&I apprenticeship list the first Monday of every month; some windows are two weeks long.","Apply for the WSOS Career & Technical Scholarship — it runs three cycles a year and almost nobody in the trades applies."] },
-  military:{ t:"Military", next:["Take the ASVAB this year even if you're undecided — the score maps to civilian careers too.","Talk to more than one branch's recruiter, and bring a parent or trusted adult.","If you're also considering college, look at ROTC in Section 01 — the boards fill in the fall."] },
+  military:{ t:"Military", next:["Take the ASVAB this year even if you're undecided — the score maps to civilian careers too.","Talk to more than one branch's recruiter, and bring a parent or trusted adult.","If you're also considering college, review ROTC and financial-aid deadlines in Money & deadlines."] },
   work:{ t:"Work & short certificates", next:["Go to WorkSource Yakima. Youth programs there can pay for a certificate that raises your starting wage.","Look at Job Corps if you need housing and training together.","Keep the door open: YVC is open enrollment forever, and the WA College Grant doesn't expire when you graduate."] }
 };
 
@@ -1026,7 +1204,7 @@ const TIMELINE = [
   { m:"Sep", h:"Ask for letters. Send the first big application.",
     p:"Ask two adults in person, this month, with a packet. The Gates Scholarship closes September 15 and Coca-Cola closes September 30 at 2 p.m. our time. Build your theWashBoard.org profile while you're at it." },
   { m:"Oct", h:"The most important month of the year",
-    p:"File the FAFSA or WASFA the first week — most aid is first-come. QuestBridge closes October 1, Horatio Alger late October. Start college applications now, not in November." },
+    p:"Complete the correct 2027–28 FAFSA or WASFA as soon as it is available. QuestBridge closes October 1 and other major applications follow. Start college applications now, not in November." },
   { m:"Nov", h:"Applications close",
     p:"UW is November 15 with no early action. Elks MVS and Jack Kent Cooke close this month. HSF and TheDream.US open. If you're doing ROTC, the boards are filling." },
   { m:"Dec", h:"Two opens and one close",
@@ -1050,8 +1228,8 @@ const STEPS = [
     s:"Not your school account — that gets shut off after graduation, and colleges and scholarship committees will email that address for years. Use your real name in it." },
   { b:"Ask two adults for letters in September",
     s:"A teacher who's seen you work, and one adult who isn't family. Give them a month and a packet, not a week and a text." },
-  { b:"File the FAFSA or WASFA in October",
-    s:"This one form is the gate for almost everything else on this page. You'll need a parent's tax info from two years back; the form pulls it in automatically." },
+  { b:"Complete FAFSA or WASFA when the correct form opens",
+    s:"Financial-aid applications can unlock federal, state, and school aid. Follow the current official instructions; contributor and tax-information requirements can change." },
   { b:"Write one personal statement and reuse it",
     s:"About 600 words on something real that happened and what you did about it. Nearly every application here wants a version of it. Section 02 walks you through it." },
   { b:"Apply for the small local ones too",
@@ -1112,6 +1290,37 @@ let bank    = Store.get("bank", {});
 
 function persistSaved(){ Store.set("saved", saved); }
 
+const SENIOR_PLAN = {
+  unsure:["Complete the four-question path finder and choose two paths to research.","Make a personal email address you will keep after graduation.","Save one local opportunity and ask an adult one question this week."],
+  four:["List two four-year schools and one affordable backup path.","Start your Common App story map and ask for recommendation letters in September.","Prepare to complete FAFSA or WASFA and check each college's priority-aid date."],
+  two:["Start a YVC application and review transfer degrees or career programs.","Prepare for the YVC Foundation application: transcript, narrative, and recommendation.","Complete FAFSA or WASFA and ask YVC what remains after WA Grant."],
+  trades:["Compare Perry Tech, YVC technical programs, and registered apprenticeships.","Write down each program's application, test, interview, and start dates.","Complete FAFSA or WASFA and check WSOS Career & Technical eligibility."],
+  military:["Talk with more than one branch and bring a parent or trusted adult.","Take the ASVAB and ask what each commitment means in writing.","Keep a college/training backup plan and complete financial aid if you may use it."],
+  work:["Build a one-page résumé and choose two adults who can be references.","Contact WorkSource/People For People about jobs, paid experience, and certificate funding.","Choose one credential or education path you may want to return to later."]
+};
+
+function renderSeniorPlan(){
+  const path = document.getElementById("plan-path");
+  const aid = document.getElementById("plan-aid");
+  const out = document.getElementById("plan-output");
+  if(!path || !aid || !out) return;
+  const savedPlan = Store.get("seniorPlan", {path:"unsure",aid:"unknown"});
+  path.value = savedPlan.path || "unsure"; aid.value = savedPlan.aid || "unknown";
+  function build(){
+    const steps = [...(SENIOR_PLAN[path.value] || SENIOR_PLAN.unsure)];
+    if(aid.value === "unknown") steps[1] = "Use the official FAFSA/WASFA guidance or ask for private help—do not guess.";
+    if(aid.value === "fafsa") steps[1] = "Create your StudentAid.gov account and gather contributor information for FAFSA.";
+    if(aid.value === "wasfa") steps[1] = "Use WSAC's official WASFA application and privacy guidance; ask for help if any question is unclear.";
+    if(aid.value === "started") steps[1] = "Check your financial-aid account and email for corrections, verification, or missing documents.";
+    Store.set("seniorPlan",{path:path.value,aid:aid.value,built:true});
+    out.innerHTML = `<strong>Your three next steps</strong><ol>${steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol><div class="cta-row"><button class="mini" type="button" data-plan-jump="timeline">Open this month's guide</button><button class="mini" type="button" data-plan-jump="deadlines">Find money</button></div>`;
+    out.querySelectorAll("[data-plan-jump]").forEach(b=>b.addEventListener("click",()=>jumpTo(b.dataset.planJump)));
+  }
+  document.getElementById("build-plan").addEventListener("click", build);
+  if(savedPlan.built) build();
+  else document.getElementById("build-plan").addEventListener("click",()=>{const x=Store.get("seniorPlan",{});x.built=true;Store.set("seniorPlan",x);},{once:true});
+}
+
 /* ---------- dates ---------- */
 function parseDate(s){ if(!s) return null; const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); }
 function daysUntil(s){ const d = parseDate(s); return d ? Math.round((d - today) / MS_DAY) : null; }
@@ -1158,9 +1367,9 @@ function toast(msg){
 }
 
 /* ---------- tabs ---------- */
-const PANELS = ["deadlines","writing","pathways","timeline"];
+const PANELS = ["start","deadlines","pathways","writing","timeline"];
 function showPanel(name, push){
-  if(!PANELS.includes(name)) name = "deadlines";
+  if(!PANELS.includes(name)) name = "start";
   PANELS.forEach(p => {
     document.getElementById("panel-"+p).hidden = (p !== name);
     document.getElementById("tab-"+p).setAttribute("aria-selected", String(p === name));
@@ -1172,6 +1381,22 @@ document.querySelectorAll(".tab").forEach(b => {
   b.addEventListener("click", () => showPanel(b.dataset.panel, true));
 });
 window.addEventListener("hashchange", () => showPanel(location.hash.replace("#",""), false));
+
+function jumpTo(target){
+  if(target === "help"){
+    showPanel("start", true);
+    requestAnimationFrame(() => document.getElementById("help-center").scrollIntoView({behavior:"smooth",block:"start"}));
+    return;
+  }
+  if(target === "familias"){
+    showPanel("deadlines", true);
+    requestAnimationFrame(() => document.getElementById("familias").scrollIntoView({behavior:"smooth",block:"start"}));
+    return;
+  }
+  showPanel(target, true);
+}
+document.querySelectorAll("[data-jump]").forEach(el => el.addEventListener("click", e => {e.preventDefault();jumpTo(el.dataset.jump);}));
+document.querySelectorAll("[data-scroll]").forEach(el => el.addEventListener("click", () => document.getElementById(el.dataset.scroll).scrollIntoView({behavior:"smooth",block:"start"})));
 
 /* ---------- chips ---------- */
 function buildChips(){
@@ -1266,6 +1491,15 @@ function cardFor(item){
   }).join("");
   const eff = EFFORT[item.effort];
   const effPill = eff ? `<span class="tagpill ${eff.cls}">${eff.label}</span>` : "";
+  const opportunity = item.kind === "action" ? "Essential step"
+    : item.kind === "local" ? "Best bet · close to home"
+    : item.effort === "low" ? "Easy win to try"
+    : ((item.fit||[]).includes("local") ? "Worth a shot" : "Reach · competitive");
+  const prep = item.needs || (item.effort === "high"
+    ? "Plan for essays, a transcript, and possible recommendations—confirm the current checklist first."
+    : item.effort === "mid"
+      ? "Open the official page and list every document before you begin."
+      : "Usually a shorter application; confirm the sponsor's current rules.");
 
   el.innerHTML = `
     <div class="head">
@@ -1276,8 +1510,10 @@ function cardFor(item){
       <div class="days">${bigNumber}</div>
     </div>
     ${item.amount && item.amount !== "—" ? `<div class="amount">${esc(item.amount)}</div>` : ""}
+    <div class="meta"><span class="tagpill fit">${esc(opportunity)}</span></div>
     <div class="who">${esc(item.who)}</div>
     ${item.note ? `<div class="who note">${esc(item.note)}</div>` : ""}
+    <div class="who note"><strong>What you'll need:</strong> ${esc(prep)}</div>
     <div class="meta">${effPill}${fitPills}</div>
     ${item.confirm ? `<div class="flag">past-cycle information — verify the new date</div>` : ""}
     <div class="due">${dueLine}<br>
@@ -1338,20 +1574,21 @@ function render(){
   items.forEach(it => {
     const st = statusOf(it);
     const d  = effDate(it);
-    const key = it.kind === "action" ? "start" : (it.kind === "local" ? "local" : (st.cls === "closed" ? "closed" : (st.cls === "planning" ? "planning" : (d ? monthKey(d) : "rolling"))));
+    const key = it.kind === "action" ? "start" : (it.kind === "local" ? "local" : (it.kind === "deadline" ? "senior" : (st.cls === "closed" ? "closed" : (st.cls === "planning" ? "planning" : (d ? monthKey(d) : "rolling")))));
     if(!groups.has(key)) groups.set(key, []);
     groups.get(key).push(it);
   });
 
   const ordered = [...groups.keys()].sort((a,b) => {
-    const rank = k => k === "start" ? -2 : (k === "local" ? -1 : (k === "rolling" ? 1e7 : (k === "planning" ? 2e7 : (k === "closed" ? 3e7 : k))));
+    const rank = k => k === "start" ? -3 : (k === "local" ? -2 : (k === "senior" ? -1 : (k === "rolling" ? 1e7 : (k === "planning" ? 2e7 : (k === "closed" ? 3e7 : k)))));
     return rank(a) - rank(b);
   });
 
   ordered.forEach(key => {
     const list  = groups.get(key);
-    const label = key === "start" ? "Start here — five money steps every senior should check"
+    const label = key === "start" ? "Essential money steps"
                 : key === "local" ? "Local programs and plan-ahead opportunities"
+                : key === "senior" ? "College, training & transition deadlines"
                 : key === "rolling" ? "Open now — no fixed deadline"
                 : key === "planning" ? "Plan ahead — previous cycle information"
                 : key === "closed"  ? "Closed for this cycle"
@@ -1753,9 +1990,10 @@ function boot(){
   renderPaths();
   renderCompare();
   renderQuiz();
+  renderSeniorPlan();
   renderLocal();
   renderTimeline();
-  showPanel(location.hash.replace("#","") || "deadlines", false);
+  showPanel(location.hash.replace("#","") || "start", false);
 }
 
 function sourceLabel(item){
@@ -1819,7 +2057,7 @@ function mapScholarship(item){
     .then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load")))
     .then(data => {
       const rows = data && Array.isArray(data.scholarships) ? data.scholarships : [];
-      DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...rows.map(mapScholarship));
+      DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES, ...rows.map(mapScholarship));
       const refreshed = document.getElementById("data-updated");
       if(refreshed && data.updatedAt){
         refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
