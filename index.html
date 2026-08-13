@@ -485,7 +485,7 @@ footer p{margin:0 0 10px}
   <div class="wrap">
     <div class="row" role="tablist">
       <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="true" data-panel="deadlines"><span class="num">01</span> Deadlines &amp; money</button>
-      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">02</span> Common App: Writing</button>
+      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">02</span> Writing that wins</button>
       <button class="tab" role="tab" id="tab-pathways"  aria-controls="panel-pathways"  aria-selected="false" data-panel="pathways"><span class="num">03</span> School, trades &amp; work</button>
       <button class="tab" role="tab" id="tab-timeline"  aria-controls="panel-timeline"  aria-selected="false" data-panel="timeline"><span class="num">04</span> Senior year month by month</button>
     </div>
@@ -497,8 +497,7 @@ footer p{margin:0 0 10px}
   <div class="wrap panel-intro">
     <p class="eyebrow">Section 01</p>
     <h2>Every deadline, counting down.</h2>
-    <p>Start with the two filter rows. The second row — <strong>Does this fit me?</strong> — is the one most students skip
-      and the one that finds you money. Tap what's true about you and the list shrinks to awards you can actually win.</p>
+    <p>Start with the five money steps every senior should check. Then use the filters to find verified scholarships that match you.</p>
   </div>
 
   <div class="controls">
@@ -507,12 +506,14 @@ footer p{margin:0 0 10px}
         <label class="sr" for="q">Search deadlines</label>
         <input id="q" type="search" placeholder="Search — try &ldquo;welding&rdquo;, &ldquo;no essay&rdquo;, &ldquo;orchard&rdquo;, &ldquo;tribal&rdquo;">
         <label class="toggle"><input type="checkbox" id="mineOnly"> My list only</label>
-        <label class="toggle"><input type="checkbox" id="showPast"> Show plan-ahead scholarships</label>
+        <label class="toggle"><input type="checkbox" id="showPast" checked> Show plan-ahead scholarships</label>
+        <button class="mini" type="button" id="clearSaved">Clear saved list</button>
       </div>
       <p class="chiprow-label">What are you looking for</p>
       <div class="chips" id="chips" role="group" aria-label="Filter by pathway"></div>
-      <p class="chiprow-label">Does this fit me? — tap all that are true</p>
-      <div class="chips" id="fitchips" role="group" aria-label="Filter by eligibility fit"></div>
+      <p class="chiprow-label">Show scholarships for… — tap all that apply</p>
+      <div class="chips" id="fitchips" role="group" aria-label="Show scholarships for selected student groups"></div>
+      <p style="margin:12px 0 0;color:var(--muted);font-size:13px">Your saved list and writing drafts stay only in this browser. On a shared Chromebook, clear them when you finish.</p>
     </div>
   </div>
 
@@ -521,7 +522,7 @@ footer p{margin:0 0 10px}
     <div class="empty" id="empty" hidden><b>Nothing matches that.</b>Clear the search or turn off a filter.</div>
 
     <div class="note">
-      <p><strong>Dates change. Check before you count on one.</strong> The current list is refreshed from the advisory scholarship tracker. Anything marked <em>plan ahead</em> is a real past-cycle opportunity whose new application or deadline has not been confirmed yet.</p>
+      <p><strong>Trust rule:</strong> the main board publishes only opportunities checked on an official sponsor page with a current deadline or a clearly open/rolling application. Older opportunities stay in the private review queue until their new dates are confirmed.</p>
       <p id="data-updated" style="margin-bottom:0"><strong>Last refreshed:</strong> Loading scholarship data…</p>
       <p style="margin:10px 0 0"><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
     </div>
@@ -550,18 +551,62 @@ footer p{margin:0 0 10px}
 <!-- ============ 02 · WRITING ============ -->
 <section class="panel" id="panel-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 02 · Common App: Writing</p>
-    <h2>Your story, in 650 words or fewer.</h2>
-    <p>The Common App personal statement goes to every Common App college you select. Your job is not to sound impressive. Your job is to make the reader understand something real about how you notice, think, choose, change, or contribute.</p>
+    <p class="eyebrow">Section 02 · Writing that wins</p>
+    <h2>Know which essay you are writing.</h2>
+    <p>A college personal statement helps an admission reader understand who you are. A scholarship essay proves why this award fits your plans and what you will do with the opportunity. You may reuse stories, but the job of each essay is different.</p>
   </div>
 
   <main class="wrap">
-    <div class="note" style="margin-top:30px">
-      <p><strong>The most useful rule:</strong> choose the story before the prompt. A strong essay often fits several prompts; prompt 7 can hold almost any meaningful personal statement.</p>
-      <p style="margin-bottom:0"><strong>2026–27 limit:</strong> 650 words maximum. Aim for a complete essay, usually 500–650 words.</p>
+    <div class="wcards" style="margin-top:30px">
+      <div class="wcard"><div class="kicker">College personal statement</div><h4>Who are you?</h4><p>Usually up to 650 words. Build around a specific scene, choices, reflection, and voice. UW uses the Common App; WSU, CWU, and WWU also accept it. Heritage, YVC, and Perry Tech use their own application paths.</p></div>
+      <div class="wcard"><div class="kicker">Scholarship essay</div><h4>Why you, this money, and now?</h4><p>Often 250–600 words. Answer the exact prompt, show evidence, connect the award to a concrete education or career step, and explain how you will follow through.</p></div>
     </div>
 
     <div class="sect" style="margin-top:34px">
+      <p class="eyebrow">Scholarship writing</p>
+      <h3>Build one strong story bank, then adapt it.</h3>
+      <p class="sub">Collect the details committees actually use: responsibility, work, family, service, action, and a specific next step.</p>
+      <div id="builder-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Decode the prompt</p>
+      <h3>Answer the question behind the question.</h3>
+      <div id="prompts-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Scholarship essay structure</p>
+      <h3>Move from a real moment to a real plan.</h3>
+      <div id="structure-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Make it specific</p>
+      <h3>Replace claims with evidence.</h3>
+      <div id="examples-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Recommendation packet</p>
+      <h3>Help an adult write a specific letter.</h3>
+      <p class="sub">Give your recommender your story bank, activities and jobs, the scholarship description, exact deadline, submission link, and what you hope the letter will show.</p>
+      <div id="recs-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Before you submit</p>
+      <h3>Use the scholarship checklist.</h3>
+      <ul class="check" id="final-check"></ul>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">College personal statement · Common App</p>
+      <h3>Your story, in 650 words or fewer.</h3>
+      <p class="sub">Choose the story before the prompt. A strong essay often fits several prompts; prompt 7 can hold almost any meaningful personal statement.</p>
+    </div>
+
+    <div class="sect">
       <p class="eyebrow">The seven choices</p>
       <h3>Choose a doorway—not a formula.</h3>
       <p class="sub">Open each prompt for a plain-language translation and a question that helps you test whether you have a real story.</p>
@@ -607,7 +652,7 @@ footer p{margin:0 0 10px}
     </div>
 
     <div class="note" style="border-left-color:var(--gray64)">
-      <p><strong>Guides used for this section:</strong> <a href="https://www.collegeessayguy.com/blog/common-app-essay-prompts" target="_blank" rel="noopener">College Essay Guy’s 2026–27 prompt guide</a> and <a href="https://toptieradmissions.com/successful-college-essay-2026-2027/" target="_blank" rel="noopener">Top Tier Admissions on specific topics and authentic voice</a>.</p>
+      <p><strong>Guides used for this section:</strong> <a href="https://www.collegeessayguy.com/blog/common-app-essay-prompts" target="_blank" rel="noopener">College Essay Guy’s 2026–27 prompt guide</a> and <a href="https://toptieradmissions.com/successful-college-essay-2026-2027/" target="_blank" rel="noopener">Top Tier Admissions on specific topics and authentic voice</a>. College application facts were checked against official UW, WSU, CWU, and WWU admissions pages.</p>
       <p style="margin-bottom:0">This page summarizes the guidance in student-friendly language; the linked articles include additional explanations and examples.</p>
     </div>
   </main>
@@ -712,6 +757,22 @@ const SITE = {
 };
 
 const DEADLINES = [];
+
+/* Evergreen money steps stay pinned even when the nightly scholarship list changes. */
+const PRIORITY_ACTIONS = [
+  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"U.S. citizens and eligible noncitizens: create your StudentAid.gov account now, then complete the 2027–28 FAFSA when it opens.",due:null,window:"Prepare now · 2027–28 form not open yet",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"This is an application for grants, work-study, and loans—not a scholarship contest.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or do not file the FAFSA, including many undocumented students: prepare for the 2027–28 WASFA.",due:null,window:"Prepare now · 2027–28 form not open yet",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"Use FAFSA or WASFA—not both. WSAC explains which form is right for you.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:3,name:"Washington College Grant",org:"Washington Student Achievement Council",amount:"Money for college, career training, or approved apprenticeships",who:"Washington residents across a wide range of family incomes. File FAFSA or WASFA to be considered.",due:null,window:"Available through FAFSA or WASFA",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wcg",note:"For 2027–28, use the new FAFSA/WASFA when released; award amounts change each year.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:4,name:"College Bound Scholarship",org:"Washington Student Achievement Council",amount:"State aid commitment for eligible students",who:"Students enrolled through the College Bound program: check your status and make sure you complete FAFSA or WASFA during senior year.",due:null,window:"Check your status now",tags:["money","four","two","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://wsac.wa.gov/college-bound",note:"Eligible students must meet program requirements and use the award at a participating Washington school.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:5,name:"Passport to Careers",org:"Washington Student Achievement Council",amount:"College or apprenticeship aid plus support",who:"Washington students who have experienced foster care or unaccompanied homelessness: review eligibility and tell your counselor or financial-aid office.",due:null,window:"Start eligibility steps now",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/passport-to-careers",note:"Support can cover college, pre-apprenticeship, or apprenticeship costs, including some living and occupational expenses.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:6,name:"YVC Foundation Scholarships",org:"Yakima Valley College Foundation",amount:"One application matches students to 150+ scholarships",who:"Current and incoming YVC students, including undocumented students; most awards require at least a 2.0 GPA, a short goals narrative, and one recommendation.",due:null,window:"Plan ahead · applications usually December–February",tags:["money","two"],fit:["local","lowincome","firstgen"],effort:"mid",link:"https://www.yvcc.edu/financial-aid/types-of-aid/",note:"The 2027–28 application is not open yet. Prepare your narrative, transcript, and recommendation now.",lastChecked:"2026-08-13",planning:true,kind:"local"},
+  {priority:7,name:"WAEF Scholarships",org:"Washington Apple Education Foundation",amount:"Multiple tree-fruit and vocational awards",who:"Washington seniors with family ties to the tree-fruit industry—or students planning a career that supports it.",due:null,window:"Plan ahead · next cycle expected in fall",tags:["money","four","two","trades"],fit:["local","ag","lowincome"],effort:"high",link:"https://scholarships.waef.org/apply",note:"The last confirmed cycle closed March 2, 2026. The new Class of 2027 date has not been posted.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
+  {priority:8,name:"Yakama Nation Higher Education",org:"Yakama Nation Higher Education",amount:"Scholarship/grant support",who:"Yakama Nation students pursuing eligible postsecondary education or training; contact Higher Education to confirm documents and the correct term deadline.",due:null,window:"Plan ahead · verify the 2027–28 cycle",tags:["money","four","two","trades"],fit:["local","tribal"],effort:"mid",link:"https://yakamascholar.smapply.io/",note:"The public portal currently references the 2026–27 cycle. Class of 2027 dates are not confirmed yet.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
+  {priority:9,name:"Heritage University CAMP",org:"Heritage University",amount:"First-year academic, financial, and personal support",who:"Eligible first-year Heritage students from migrant or seasonal farmworker families. Apply to Heritage, then complete the CAMP application and FAFSA.",due:null,window:"Contact CAMP while applying to Heritage",tags:["money","four"],fit:["local","ag","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/college-assistance-migrant-program/",note:"CAMP includes advising, mentoring, college-success support, and help finding financial aid and scholarships.",lastChecked:"2026-08-13",kind:"local"},
+  {priority:10,name:"Yakima Federal Award for Academic Excellence",org:"Yakima Federal Savings and Loan",amount:"Last cycle: $2,500",who:"Plan-ahead item for Yakima County seniors in the top 10% of their graduating class; the school may limit nominees.",due:null,window:"Plan ahead · last cycle deadline was April 24, 2026",tags:["money","four","two"],fit:["local","leadership"],effort:"mid",link:"https://www.yakimafed.com/scholarship",note:"The 2027 application is not open yet. Ask the counseling office about the school nomination process.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
+  {priority:11,name:"WorkSource Yakima & youth training",org:"WorkSource / People For People",amount:"Free job, training, and work-experience help",who:"Yakima Valley youth and young adults. Services may include career guidance, paid work experience, certification programs, résumé help, and tuition assistance.",due:null,window:"Open year-round",tags:["work","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://www.mypfp.org/services/employment-training/",note:"People For People lists a Toppenish contact at 509-865-3250. Eligibility varies by program.",lastChecked:"2026-08-13",kind:"local"},
+  {priority:12,name:"Registered apprenticeships in Washington",org:"Washington Labor & Industries",amount:"Paid training and a nationally recognized credential",who:"Students interested in earning while learning: search by county and occupation, review requirements, and contact programs directly.",due:null,window:"Programs recruit on different schedules",tags:["work","trades"],fit:["local"],effort:"mid",link:"https://www.lni.wa.gov/licensing-permits/apprenticeship/apprenticeship-registration-and-tracking-system",note:"Use the state registry to confirm a program is registered before applying.",lastChecked:"2026-08-13",kind:"local"}
+];
 
 /* ================================================================
    SECTION 02 — THE WRITING CONTENT
@@ -1007,7 +1068,7 @@ const STEPS = [
    ================================================================ */
 
 const FILTERS = [
-  {key:"all",    label:"All current"},
+  {key:"all",    label:"All opportunities"},
   {key:"open",   label:"Open now"},
   {key:"stem",   label:"STEM & health"},
   {key:"trades", label:"Trades"},
@@ -1078,12 +1139,13 @@ function effDate(item){
 }
 
 function statusOf(item){
+  if(item.kind === "action") return {cls:"rolling", n:"Start here", unit:"", order:-2};
   if(item.planning) return {cls:"planning", n:"Plan ahead", unit:"", order:2};
+  if(item.opens && daysUntil(item.opens) > 0){
+    const o = daysUntil(item.opens);
+    return {cls:"soon", n:o, unit:o===1?"day to open":"days to open", order:0, days:o};
+  }
   if(!item.due){
-    if(item.opens && daysUntil(item.opens) > 0){
-      const o = daysUntil(item.opens);
-      return {cls:"soon", n:o, unit:o===1?"day to open":"days to open", order:0, days:o};
-    }
     return {cls:"rolling", n:"Open", unit:"", order:1};
   }
   const n = daysUntil(item.due);
@@ -1096,7 +1158,7 @@ function statusOf(item){
 let activeFilter = "all";
 let activeFits   = new Set();
 let query = "";
-let showPast = false;
+let showPast = true;
 let mineOnly = false;
 
 /* ---------- toast ---------- */
@@ -1247,6 +1309,7 @@ function cardFor(item){
     ${item.confirm ? `<div class="flag">past-cycle information — verify the new date</div>` : ""}
     <div class="due">${dueLine}<br>
       <a class="go" href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page &rarr;</a>
+      ${item.lastChecked ? `<br><small>Official source checked ${esc(fmt(item.lastChecked))}</small>` : ""}
     </div>
     <div class="cardtools">
       <label class="track"><input type="checkbox" ${isSaved ? "checked" : ""} data-save="${id}"> On my list</label>
@@ -1274,11 +1337,11 @@ function render(){
   let items = DEADLINES.filter(it => {
     const id = idOf(it);
     if(mineOnly && !saved[id]) return false;
-    if(activeFilter === "open" && it.planning) return false;
+    if(activeFilter === "open" && (it.planning || (it.opens && daysUntil(it.opens) > 0))) return false;
     if(activeFilter !== "all" && activeFilter !== "open" && !(it.tags || []).includes(activeFilter)) return false;
     if(activeFits.size){
       const f = it.fit || [];
-      if(![...activeFits].some(k => f.includes(k))) return false;
+      if(![...activeFits].every(k => f.includes(k))) return false;
     }
     const st = statusOf(it);
     if((st.cls === "closed" || st.cls === "planning") && !showPast) return false;
@@ -1292,6 +1355,7 @@ function render(){
   document.getElementById("empty").hidden = items.length > 0;
 
   items.sort((a,b) => {
+    if((a.priority || 999) !== (b.priority || 999)) return (a.priority || 999) - (b.priority || 999);
     const sa = statusOf(a), sb = statusOf(b);
     if(sa.order !== sb.order) return sa.order - sb.order;
     const da = effDate(a), db = effDate(b);
@@ -1305,19 +1369,21 @@ function render(){
   items.forEach(it => {
     const st = statusOf(it);
     const d  = effDate(it);
-    const key = st.cls === "closed" ? "closed" : (st.cls === "planning" ? "planning" : (d ? monthKey(d) : "rolling"));
+    const key = it.kind === "action" ? "start" : (it.kind === "local" ? "local" : (st.cls === "closed" ? "closed" : (st.cls === "planning" ? "planning" : (d ? monthKey(d) : "rolling"))));
     if(!groups.has(key)) groups.set(key, []);
     groups.get(key).push(it);
   });
 
   const ordered = [...groups.keys()].sort((a,b) => {
-    const rank = k => k === "rolling" ? 1e7 : (k === "planning" ? 2e7 : (k === "closed" ? 3e7 : k));
+    const rank = k => k === "start" ? -2 : (k === "local" ? -1 : (k === "rolling" ? 1e7 : (k === "planning" ? 2e7 : (k === "closed" ? 3e7 : k))));
     return rank(a) - rank(b);
   });
 
   ordered.forEach(key => {
     const list  = groups.get(key);
-    const label = key === "rolling" ? "Open now — no fixed deadline"
+    const label = key === "start" ? "Start here — five money steps every senior should check"
+                : key === "local" ? "Local programs and plan-ahead opportunities"
+                : key === "rolling" ? "Open now — no fixed deadline"
                 : key === "planning" ? "Plan ahead — previous cycle information"
                 : key === "closed"  ? "Closed for this cycle"
                 : monthLabel(effDate(list[0]));
@@ -1697,6 +1763,11 @@ function renderSite(){
 document.getElementById("q").addEventListener("input", e => { query = e.target.value.toLowerCase().trim(); render(); });
 document.getElementById("showPast").addEventListener("change", e => { showPast = e.target.checked; render(); });
 document.getElementById("mineOnly").addEventListener("change", e => { mineOnly = e.target.checked; render(); });
+document.getElementById("clearSaved").addEventListener("click", () => {
+  if(!Object.keys(saved).length) return toast("Your saved list is already empty.");
+  if(!confirm("Clear every scholarship from your saved list on this browser?")) return;
+  saved = {}; persistSaved(); render(); renderTicker(); toast("Saved list cleared.");
+});
 
 function boot(){
   renderSite();
@@ -1704,6 +1775,12 @@ function boot(){
   renderTicker();
   render();
   renderCommonApp();
+  renderBuilder();
+  renderPrompts();
+  renderStructure();
+  renderExamples();
+  renderRecs();
+  renderChecklist("final-check", FINALCHECK, "final");
   renderChecklist("steps", STEPS, "steps");
   renderPaths();
   renderCompare();
@@ -1724,7 +1801,7 @@ function sourceLabel(item){
 function mapScholarship(item){
   const labels = (item.tags || []).map(String);
   const hay = (labels.join(" ") + " " + item.name + " " + item.eligibility).toLowerCase();
-  const fit = [];
+  const fit = Array.isArray(item.fit) ? [...item.fit] : [];
   const addFit = key => { if(!fit.includes(key)) fit.push(key); };
   if(/open to most|no essay/.test(hay)) addFit("everyone");
   if(/washington|local yakima|yakima county/.test(hay.replace(/\//g, " "))) addFit("local");
@@ -1751,6 +1828,7 @@ function mapScholarship(item){
     org: sourceLabel(item),
     amount: item.award || "See sponsor details",
     who: item.eligibility || "Review the sponsor's current eligibility rules.",
+    opens: planning ? null : (item.opens || null),
     due: planning ? null : (item.deadline || null),
     pastDue: planning ? (item.lastYearDeadline || item.deadline || null) : null,
     window: planning
@@ -1760,7 +1838,8 @@ function mapScholarship(item){
     fit,
     effort: noEssay ? "low" : (highEffort ? "high" : "mid"),
     link: item.url,
-    note: item.fit || "",
+    note: item.whyFit || (typeof item.fit === "string" ? item.fit : ""),
+    lastChecked: item.lastChecked || null,
     planning,
     confirm: planning
   };
@@ -1772,7 +1851,7 @@ function mapScholarship(item){
     .then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load")))
     .then(data => {
       const rows = data && Array.isArray(data.scholarships) ? data.scholarships : [];
-      if(rows.length) DEADLINES.splice(0, DEADLINES.length, ...rows.map(mapScholarship));
+      DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...rows.map(mapScholarship));
       const refreshed = document.getElementById("data-updated");
       if(refreshed && data.updatedAt){
         refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
@@ -1787,4 +1866,3 @@ function mapScholarship(item){
 </script>
 </body>
 </html>
-
