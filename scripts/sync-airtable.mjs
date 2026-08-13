@@ -9,7 +9,8 @@ const fields = {
   scholarship:"fldY9uCXfOyYjRx6Q", organization:"fldkSXRRb56GwWyJc", award:"fldUkjlrlxxdsBcNF",
   eligibility:"fldePW5EAtdOJfN8k", url:"fldRu3WKFfing0IKk", status:"fldyGWeRXeS9FmMrX",
   deadline:"fldIub2983UNbGIjc", opens:"fld9Avz9o2FRS4Ep0", lastYearDeadline:"fld3ty2yW7QtTDQz2", expectedWindow:"fldhDa1ACyZ50EJAF",
-  tags:"fldbK58Tz0AniOr5d", fit:"fldLSu7j3rf3jWWlW", lastChecked:"fldMcMFc60F9gs2p8", visibility:"fldCJjp25wrU7vpaF"
+  tags:"fldbK58Tz0AniOr5d", fit:"fldLSu7j3rf3jWWlW", lastChecked:"fldMcMFc60F9gs2p8", visibility:"fldCJjp25wrU7vpaF",
+  toppenishEligibility:"fldZqDo2gACTCxDZi"
 };
 let offset, records=[];
 do {
@@ -64,17 +65,22 @@ const scholarships=records.map(r=>{
     lastYearDeadline:value(r,"lastYearDeadline")||null, expectedWindow:value(r,"expectedWindow")||null,
     tags, fit:fitKeys(tags,value(r,"eligibility")||"",whyFit), whyFit,
     lastChecked:value(r,"lastChecked")||new Date().toISOString().slice(0,10),
-    visibility:choiceName(value(r,"visibility"))
+    visibility:choiceName(value(r,"visibility")),
+    toppenishEligibility:choiceName(value(r,"toppenishEligibility"))
   };
 }).filter(x=>{
-  const actionable=x.visibility==="Publish"
-    && x.status==="Confirmed for 2027"
+  const approved=x.visibility==="Publish"
+    && x.toppenishEligibility==="Verified eligible"
     && x.name && x.organization && x.url
-    && x.organization!=="Washington GEAR UP archive"
+    && x.organization!=="Washington GEAR UP archive";
+  const current=x.status==="Confirmed for 2027"
     && (x.deadline || /open now|rolling|year-round/i.test(x.expectedWindow||""));
-  if(!actionable && x.visibility==="Publish") rejected.push(x.name||"(unnamed record)");
-  return actionable;
-}).map(({visibility,...x})=>x).sort((a,b)=>{
+  const planAhead=x.status==="Expected — last year's information"
+    && x.lastYearDeadline && x.expectedWindow;
+  const publishable=approved && (current || planAhead);
+  if(!publishable && x.visibility==="Publish") rejected.push(x.name||"(unnamed record)");
+  return publishable;
+}).map(({visibility,toppenishEligibility,...x})=>x).sort((a,b)=>{
   const priority=x=>x.tags.includes("Local") ? 0 : (x.tags.includes("Washington") ? 1 : 2);
   return priority(a)-priority(b) || String(a.deadline||"9999").localeCompare(String(b.deadline||"9999"));
 });
@@ -82,7 +88,7 @@ const scholarships=records.map(r=>{
 await mkdir("data",{recursive:true});
 await writeFile("data/scholarships.json", JSON.stringify({
   updatedAt:new Date().toISOString(),
-  publicationRule:"Confirmed official opportunities with a current deadline, or an explicitly open/rolling official application.",
+  publicationRule:"Only opportunities verified for Toppenish High School students. Current official opportunities need a current deadline or an open/rolling application; recurring plan-ahead items need an official source, a prior-cycle deadline, and an explicit warning that the next date may change.",
   scholarships
 },null,2)+"\n");
 console.log(`Synced ${scholarships.length} actionable scholarship records; held ${rejected.length} published records that failed the public-data contract.`);
