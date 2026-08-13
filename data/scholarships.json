@@ -1,28 +1,7 @@
 {
-  "updatedAt": "2026-08-13T22:30:00.000Z",
+  "updatedAt": "2026-08-13T22:38:32.674Z",
   "publicationRule": "Confirmed official opportunities with a current deadline, or an explicitly open/rolling official application.",
   "scholarships": [
-    {
-      "name": "Yakima Rotary Vocational Scholarship",
-      "organization": "Rotary Club of Yakima",
-      "award": "See official application",
-      "eligibility": "Students entering a post-high-school vocational institution or a two-year terminal vocational program; verify the participating-school list before applying.",
-      "url": "https://www.yakimarotary.org/page/scholarships",
-      "status": "Confirmed for 2027",
-      "opens": null,
-      "deadline": "2026-09-04",
-      "lastYearDeadline": null,
-      "expectedWindow": "Open now",
-      "tags": [
-        "Local",
-        "Trades"
-      ],
-      "fit": [
-        "local"
-      ],
-      "whyFit": "Local vocational award. Official page confirms the 2026 cycle is open and lists the deadline.",
-      "lastChecked": "2026-08-13"
-    },
     {
       "name": "Mollie Davis Scholarship",
       "organization": "Yakima Rotary Trust",
