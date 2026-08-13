@@ -2,7 +2,7 @@ name: Nightly scholarship refresh
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 10 * * *" # 2:15 a.m. PST / 3:15 a.m. PDT
+    - cron: "15 10 * * *" # about 2:15 a.m. Pacific / 3:15 a.m. during daylight saving time
 permissions:
   contents: write
 jobs:
@@ -19,7 +19,7 @@ jobs:
         run: node scripts/sync-airtable.mjs
       - name: Check every official scholarship source
         run: node scripts/check-sources.mjs
-      - name: Commit refreshed student list
+      - name: Commit refreshed student list and review note
         run: |
           git config user.name "Toppenish Scholarship Bot"
           git config user.email "actions@github.com"
