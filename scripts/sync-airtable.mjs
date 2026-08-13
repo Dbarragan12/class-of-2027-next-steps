@@ -8,7 +8,7 @@ if (!token) throw new Error("Missing AIRTABLE_TOKEN GitHub Actions secret.");
 const fields = {
   scholarship:"fldY9uCXfOyYjRx6Q", organization:"fldkSXRRb56GwWyJc", award:"fldUkjlrlxxdsBcNF",
   eligibility:"fldePW5EAtdOJfN8k", url:"fldRu3WKFfing0IKk", status:"fldyGWeRXeS9FmMrX",
-  deadline:"fldIub2983UNbGIjc", lastYearDeadline:"fld3ty2yW7QtTDQz2", expectedWindow:"fldhDa1ACyZ50EJAF",
+  deadline:"fldIub2983UNbGIjc", opens:"fld9Avz9o2FRS4Ep0", lastYearDeadline:"fld3ty2yW7QtTDQz2", expectedWindow:"fldhDa1ACyZ50EJAF",
   tags:"fldbK58Tz0AniOr5d", fit:"fldLSu7j3rf3jWWlW", lastChecked:"fldMcMFc60F9gs2p8", visibility:"fldCJjp25wrU7vpaF"
 };
 let offset, records=[];
@@ -23,13 +23,66 @@ do {
 const value=(r,key)=>r.fields[fields[key]];
 const choiceName=value=>typeof value==="string" ? value : value?.name;
 const tagNames=value=>(value||[]).map(tag=>typeof tag==="string" ? tag : tag.name);
-const scholarships=records.filter(r=>choiceName(value(r,"visibility"))==="Publish").map(r=>({
-  name:value(r,"scholarship"), organization:value(r,"organization"), award:value(r,"award"),
-  eligibility:value(r,"eligibility"), url:value(r,"url"), status:choiceName(value(r,"status")),
-  deadline:value(r,"deadline"), lastYearDeadline:value(r,"lastYearDeadline"), expectedWindow:value(r,"expectedWindow"),
-  tags:tagNames(value(r,"tags")), fit:value(r,"fit"), lastChecked:value(r,"lastChecked")||new Date().toISOString().slice(0,10)
-})).filter(x=>x.name&&x.url&&x.status);
+
+const canonicalTag = new Map([
+  ["Local / Yakima County","Local"], ["Washington","Washington"],
+  ["Farmworker / agriculture","Farmworker"], ["Latino / farmworker","Farmworker"],
+  ["Yakama Nation / Indigenous","Indigenous"], ["Indigenous","Indigenous"],
+  ["Undocumented / DACA-friendly","Undocumented"], ["4-year","Four-year"],
+  ["Community college","Two-year"], ["Trades / apprenticeship","Trades"], ["Trades","Trades"],
+  ["STEM / health","STEM / health"], ["Arts / writing","Arts / writing"],
+  ["Financial need","Financial need"], ["low-income","Financial need"],
+  ["First generation","First generation"], ["Disability","Disability"],
+  ["LGBTQ+","LGBTQ+"], ["Leadership / service","Leadership / service"],
+  ["No essay","No essay"], ["Open to most students","Open to most students"]
+]);
+const normalizeTags=value=>[...new Set(tagNames(value).map(t=>canonicalTag.get(t)).filter(Boolean))];
+const fitKeys=(tags,eligibility,why)=>{
+  const hay=[...tags,eligibility,why].join(" ").toLowerCase();
+  const out=[];
+  const add=k=>{ if(!out.includes(k)) out.push(k); };
+  if(/local|washington/.test(hay)) add("local");
+  if(/farmworker|agriculture|migrant|latino|hispanic/.test(hay)) add("ag");
+  if(/indigenous|yakama|native american|tribal/.test(hay)) add("tribal");
+  if(/financial need|low-income|low income/.test(hay)) add("lowincome");
+  if(/first generation|first-generation/.test(hay)) add("firstgen");
+  if(/disability|disabled/.test(hay)) add("disability");
+  if(/lgbtq/.test(hay)) add("lgbtq");
+  if(/leadership|service/.test(hay)) add("leadership");
+  if(/open to most/.test(hay) || !out.length) add("everyone");
+  return out;
+};
+
+const rejected=[];
+const scholarships=records.map(r=>{
+  const tags=normalizeTags(value(r,"tags"));
+  const whyFit=value(r,"fit")||"";
+  return {
+    name:value(r,"scholarship"), organization:value(r,"organization"), award:value(r,"award"),
+    eligibility:value(r,"eligibility"), url:value(r,"url"), status:choiceName(value(r,"status")),
+    opens:value(r,"opens")||null, deadline:value(r,"deadline")||null,
+    lastYearDeadline:value(r,"lastYearDeadline")||null, expectedWindow:value(r,"expectedWindow")||null,
+    tags, fit:fitKeys(tags,value(r,"eligibility")||"",whyFit), whyFit,
+    lastChecked:value(r,"lastChecked")||new Date().toISOString().slice(0,10),
+    visibility:choiceName(value(r,"visibility"))
+  };
+}).filter(x=>{
+  const actionable=x.visibility==="Publish"
+    && x.status==="Confirmed for 2027"
+    && x.name && x.organization && x.url
+    && x.organization!=="Washington GEAR UP archive"
+    && (x.deadline || /open now|rolling|year-round/i.test(x.expectedWindow||""));
+  if(!actionable && x.visibility==="Publish") rejected.push(x.name||"(unnamed record)");
+  return actionable;
+}).map(({visibility,...x})=>x).sort((a,b)=>{
+  const priority=x=>x.tags.includes("Local") ? 0 : (x.tags.includes("Washington") ? 1 : 2);
+  return priority(a)-priority(b) || String(a.deadline||"9999").localeCompare(String(b.deadline||"9999"));
+});
 
 await mkdir("data",{recursive:true});
-await writeFile("data/scholarships.json", JSON.stringify({updatedAt:new Date().toISOString(),scholarships},null,2)+"\n");
-console.log(`Synced ${scholarships.length} published scholarship records.`);
+await writeFile("data/scholarships.json", JSON.stringify({
+  updatedAt:new Date().toISOString(),
+  publicationRule:"Confirmed official opportunities with a current deadline, or an explicitly open/rolling official application.",
+  scholarships
+},null,2)+"\n");
+console.log(`Synced ${scholarships.length} actionable scholarship records; held ${rejected.length} published records that failed the public-data contract.`);
