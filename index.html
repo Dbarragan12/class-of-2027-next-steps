@@ -485,7 +485,7 @@ footer p{margin:0 0 10px}
   <div class="wrap">
     <div class="row" role="tablist">
       <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="true" data-panel="deadlines"><span class="num">01</span> Deadlines &amp; money</button>
-      <button class="tab" role="tab" id="tab-writing"   aria-controls="panel-writing"   aria-selected="false" data-panel="writing"><span class="num">02</span> How to write it</button>
+      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">02</span> Common App: Writing</button>
       <button class="tab" role="tab" id="tab-pathways"  aria-controls="panel-pathways"  aria-selected="false" data-panel="pathways"><span class="num">03</span> School, trades &amp; work</button>
       <button class="tab" role="tab" id="tab-timeline"  aria-controls="panel-timeline"  aria-selected="false" data-panel="timeline"><span class="num">04</span> Senior year month by month</button>
     </div>
@@ -550,69 +550,65 @@ footer p{margin:0 0 10px}
 <!-- ============ 02 · WRITING ============ -->
 <section class="panel" id="panel-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 02</p>
-    <h2>You write one essay. Then you reuse it all year.</h2>
-    <p>Almost every application on this site wants the same thing in a slightly different package: a true story about
-      something that happened to you, and what you did about it. Write that once, well. Then adapt it. This section
-      takes you from blank page to submitted.</p>
+    <p class="eyebrow">Section 02 · Common App: Writing</p>
+    <h2>Your story, in 650 words or fewer.</h2>
+    <p>The Common App personal statement goes to every Common App college you select. Your job is not to sound impressive. Your job is to make the reader understand something real about how you notice, think, choose, change, or contribute.</p>
   </div>
 
   <main class="wrap">
+    <div class="note" style="margin-top:30px">
+      <p><strong>The most useful rule:</strong> choose the story before the prompt. A strong essay often fits several prompts; prompt 7 can hold almost any meaningful personal statement.</p>
+      <p style="margin-bottom:0"><strong>2026–27 limit:</strong> 650 words maximum. Aim for a complete essay, usually 500–650 words.</p>
+    </div>
 
     <div class="sect" style="margin-top:34px">
-      <p class="eyebrow">Start here</p>
-      <h3>Step one is not writing.</h3>
-      <p class="sub">It's collecting. You cannot write a good scholarship essay out of nothing, and you have more
-        material than you think — you just haven't written it down anywhere. Do this first and everything after it
-        gets easier.</p>
-      <div id="builder-mount"></div>
+      <p class="eyebrow">The seven choices</p>
+      <h3>Choose a doorway—not a formula.</h3>
+      <p class="sub">Open each prompt for a plain-language translation and a question that helps you test whether you have a real story.</p>
+      <div id="common-prompts"></div>
     </div>
 
     <div class="sect">
-      <p class="eyebrow">The shape of it</p>
-      <h3>What a winning 600 words actually looks like</h3>
-      <p class="sub">Scholarship readers go through hundreds of these. Most are read in under two minutes. This
-        structure survives that.</p>
-      <div id="structure-mount"></div>
+      <p class="eyebrow">Find the story first</p>
+      <h3>Specific beats dramatic.</h3>
+      <p class="sub">A small, sharply observed moment can reveal more than a life summary. Use this private story finder to collect scenes, details, and values before drafting.</p>
+      <div id="common-builder"></div>
     </div>
 
     <div class="sect">
-      <p class="eyebrow">Prompt decoder</p>
-      <h3>What they're really asking</h3>
-      <p class="sub">Scholarship prompts are written in committee language. Here's the translation, and what the
-        reader is actually scoring.</p>
-      <div id="prompts-mount"></div>
+      <p class="eyebrow">Pick a structure</p>
+      <h3>One turning point—or several connected moments?</h3>
+      <div class="wcards">
+        <div class="wcard"><div class="kicker">Narrative</div><h4>One experience changes something</h4><p>Use this when one challenge, event, relationship, or realization has a clear before, turning point, action, and after. Spend more space on what you did and understood than on the problem.</p></div>
+        <div class="wcard"><div class="kicker">Montage</div><h4>Several moments share one thread</h4><p>Use this when an object, place, habit, language, responsibility, or question connects multiple snapshots. Each scene should reveal a different side of you while returning to the same thread.</p></div>
+      </div>
     </div>
 
     <div class="sect">
-      <p class="eyebrow">Line by line</p>
-      <h3>The same sentence, weak and strong</h3>
-      <p class="sub">Nobody improves from being told to "be specific." Here is what specific looks like.</p>
-      <div id="examples-mount"></div>
+      <p class="eyebrow">Draft here</p>
+      <h3>Write in your own voice.</h3>
+      <p class="sub">Sound like the thoughtful version of yourself—not a thesaurus. Use concrete nouns, exact actions, and details only you would know.</p>
+      <div class="builder">
+        <label for="common-draft" style="display:block;font-weight:700;margin-bottom:8px">Your Common App draft</label>
+        <textarea id="common-draft" rows="15" placeholder="Start inside a real moment: where are you, what are you doing, and what detail would only you notice?"></textarea>
+        <div class="brow"><button class="btn ghost" type="button" id="common-copy">Copy draft</button><span class="counter" id="common-wc"><b>0</b> / 650 words</span></div>
+      </div>
     </div>
 
     <div class="sect">
-      <p class="eyebrow">Other people's writing</p>
-      <h3>Recommendation letters</h3>
-      <p class="sub">A letter is only as good as what you hand the person writing it. Ask early, ask in person,
-        and give them something to work from.</p>
-      <div id="recs-mount"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Before you hit submit</p>
-      <h3>The last-pass checklist</h3>
-      <p class="sub">Every one of these has cost a real student a real award.</p>
-      <ul class="check" id="finalcheck"></ul>
+      <p class="eyebrow">Revision test</p>
+      <h3>Make the essay reveal a person.</h3>
+      <ul class="check" id="common-check"></ul>
     </div>
 
     <div class="note">
-      <p style="margin-bottom:0"><strong>On using AI to write this.</strong> You are going to be tempted, and a
-        committee that reads 4,000 essays can tell — AI writes smooth, general, and forgettable, which is exactly what
-        loses. Here's the honest line: use it to <em>interview yourself</em> ("ask me questions about this memory until
-        I've said something I haven't said before"), to check grammar, and to tell you which paragraph is boring. Do not
-        use it to generate the story or the sentences. The one thing you have that no other applicant has is what
-        actually happened to you, in your own words. Don't trade that away for smoother prose.</p>
+      <p><strong>Ask for feedback this way:</strong> “What three words describe me after reading this? Where did you feel closest to me? Where did the essay become general or confusing?” Keep feedback that helps the essay sound more like you.</p>
+      <p style="margin-bottom:0"><strong>AI boundary:</strong> use AI to ask you follow-up questions, find vague sentences, or check grammar. Do not let it invent the experience or replace your phrasing. Authentic voice is one of the two biggest things that makes an essay stand out.</p>
+    </div>
+
+    <div class="note" style="border-left-color:var(--gray64)">
+      <p><strong>Guides used for this section:</strong> <a href="https://www.collegeessayguy.com/blog/common-app-essay-prompts" target="_blank" rel="noopener">College Essay Guy’s 2026–27 prompt guide</a> and <a href="https://toptieradmissions.com/successful-college-essay-2026-2027/" target="_blank" rel="noopener">Top Tier Admissions on specific topics and authentic voice</a>.</p>
+      <p style="margin-bottom:0">This page summarizes the guidance in student-friendly language; the linked articles include additional explanations and examples.</p>
     </div>
   </main>
 </section>
@@ -1625,6 +1621,63 @@ function renderTimeline(){
   });
 }
 
+
+const COMMON_PROMPTS = [
+  {n:1,t:"Background, identity, interest, or talent",p:"Share a part of your identity or experience without which your application would feel incomplete.",d:"Best when the essay shows how this part of you shapes your choices, relationships, curiosity, or contribution—not merely what the label is.",q:"What scene would prove this matters to you?"},
+  {n:2,t:"Challenge, setback, or failure",p:"Describe an obstacle, its effect on you, and what you learned.",d:"Keep the difficulty in proportion. The center of the essay is your response, changing thinking, and present-day behavior—not a long account of what went wrong.",q:"What did you do next that shows growth?"},
+  {n:3,t:"Questioning a belief or idea",p:"Reflect on a time you challenged an idea and what happened.",d:"Show your mind working. The reader should see what made you reconsider, how you tested your thinking, and whether you became more certain, more nuanced, or more open.",q:"What did you believe before and after?"},
+  {n:4,t:"Unexpected gratitude",p:"Explain something someone did for you and how your gratitude affected or motivated you.",d:"The other person may begin the story, but you remain the subject. Show what their act changed in your attention, choices, relationships, or service to others.",q:"How did gratitude turn into action?"},
+  {n:5,t:"Accomplishment, event, or realization",p:"Discuss something that sparked personal growth or a new understanding.",d:"The accomplishment does not need to be an award. A quiet realization can work if you show the before, the moment of change, and evidence that you now act differently.",q:"What can you do or understand now that you could not before?"},
+  {n:6,t:"A captivating topic, idea, or concept",p:"Describe something that makes you lose track of time and how you learn more about it.",d:"Use your curiosity to reveal your character. Include how you pursue questions, make connections, build or test ideas, and share that curiosity with others.",q:"What do you actually do when nobody assigns the learning?"},
+  {n:7,t:"A topic of your choice",p:"Submit an essay on any topic—including one written for another prompt.",d:"Use this when your strongest story does not fit neatly elsewhere. It still needs a focused thread, specific detail, reflection, and a clear picture of who you are.",q:"After reading, what should a college understand about you?"}
+];
+
+const COMMON_STORY_FIELDS = [
+  {id:"scene",label:"A moment you can replay like a short movie",hint:"Where were you? What were your hands doing? What sound, smell, object, or sentence do you remember?",lead:"SCENE"},
+  {id:"tension",label:"What made that moment matter",hint:"A choice, question, responsibility, mistake, contradiction, relationship, or change—not necessarily trauma.",lead:"TENSION"},
+  {id:"action",label:"What you actually did",hint:"List decisions and actions. Replace “I learned perseverance” with the behavior that proves it.",lead:"ACTION"},
+  {id:"values",label:"What this reveals that you value",hint:"Choose distinct values such as curiosity, responsibility, humor, fairness, care, independence, belonging, or craftsmanship.",lead:"VALUES"},
+  {id:"change",label:"What is different now",hint:"Show a present-day habit, relationship, question, contribution, or way of thinking that grew from the experience.",lead:"CHANGE"},
+  {id:"details",label:"Three details only you could write",hint:"Names of tools, foods, routes, phrases, routines, textures, family jobs, small mistakes, or observations.",lead:"ONLY-ME DETAILS"}
+];
+
+const COMMON_CHECK = [
+  {b:"A reader can name three qualities about me",s:"The qualities are shown through scenes and choices, not announced as adjectives."},
+  {b:"The topic is specific enough",s:"This could not be copied onto another student's essay by changing only the name and hometown."},
+  {b:"There is reflection throughout",s:"The essay includes several moments that answer “so what?” and lets the reader see your thinking change."},
+  {b:"I spend more space on response and growth than setup",s:"The challenge or background is context; your actions, insight, and present self are the center."},
+  {b:"The opening earns attention without trying too hard",s:"It begins with movement, tension, an image, or a precise observation—not a dictionary definition or universal claim."},
+  {b:"The ending adds meaning",s:"It moves the idea forward and leaves a clear final impression rather than repeating the introduction."},
+  {b:"It sounds like me when read aloud",s:"Remove inflated vocabulary, generic inspiration language, and sentences you would never say."},
+  {b:"It stays at 650 words or fewer",s:"Every paragraph earns its space, and facts already obvious elsewhere in the application are not repeated."},
+  {b:"Someone checked accuracy and mechanics",s:"Names, dates, grammar, punctuation, and spelling are correct."},
+  {b:"I chose the prompt after finding the story",s:"The finished essay answers one prompt clearly; prompt 7 is acceptable if it fits best."}
+];
+
+function renderCommonApp(){
+  const prompts = document.getElementById("common-prompts");
+  prompts.innerHTML = COMMON_PROMPTS.map((x,i) => `<details class="acc"${i===0?" open":""}><summary><span>${x.n}. ${esc(x.t)}</span></summary><div class="acc-body"><p><strong>The prompt:</strong> ${esc(x.p)}</p><div class="decode"><strong>What makes it work:</strong> ${esc(x.d)}</div><p style="margin-bottom:0;color:var(--crimson);font-weight:600">Story test: ${esc(x.q)}</p></div></details>`).join("");
+
+  const mount = document.getElementById("common-builder");
+  const story = Store.get("commonStory", {});
+  mount.innerHTML = `<div class="builder"><p style="color:var(--muted);font-size:15.5px">Answer in fragments. These notes stay on this device.</p>${COMMON_STORY_FIELDS.map(f=>`<div class="bfield"><label for="ca-${f.id}">${esc(f.label)}</label><div class="hint">${esc(f.hint)}</div><textarea id="ca-${f.id}" data-ca="${f.id}" rows="2"></textarea></div>`).join("")}<p class="eyebrow" style="margin:18px 0 8px">Your story map</p><div class="bout" id="ca-out"></div><div class="brow"><button class="btn" type="button" id="ca-copy-map">Copy story map</button><button class="btn ghost" type="button" id="ca-clear-map">Clear</button></div></div>`;
+  const out = mount.querySelector("#ca-out");
+  function buildMap(){const lines=COMMON_STORY_FIELDS.map(f=>story[f.id]&&story[f.id].trim()?f.lead+"\n"+story[f.id].trim():"").filter(Boolean);out.textContent=lines.length?"MY COMMON APP STORY MAP\n\n"+lines.join("\n\n"):"";}
+  mount.querySelectorAll("[data-ca]").forEach(ta=>{ta.value=story[ta.dataset.ca]||"";ta.addEventListener("input",()=>{story[ta.dataset.ca]=ta.value;Store.set("commonStory",story);buildMap();});});
+  mount.querySelector("#ca-copy-map").addEventListener("click",()=>out.textContent?copyText(out.textContent):toast("Fill in at least one box first."));
+  mount.querySelector("#ca-clear-map").addEventListener("click",()=>{if(!confirm("Erase your Common App story map?"))return;COMMON_STORY_FIELDS.forEach(f=>delete story[f.id]);Store.set("commonStory",story);mount.querySelectorAll("[data-ca]").forEach(t=>t.value="");buildMap();});
+  buildMap();
+
+  const draft = document.getElementById("common-draft");
+  const wc = document.getElementById("common-wc");
+  draft.value = Store.get("commonDraft", "");
+  function count(){const n=draft.value.trim()?draft.value.trim().split(/\s+/).length:0;wc.innerHTML=`<b>${n}</b> / 650 words`;wc.className="counter"+(n>650?" over":(n>=500?" good":""));}
+  draft.addEventListener("input",()=>{Store.set("commonDraft",draft.value);count();});
+  document.getElementById("common-copy").addEventListener("click",()=>draft.value.trim()?copyText(draft.value):toast("Nothing to copy yet."));
+  count();
+  renderChecklist("common-check", COMMON_CHECK, "common");
+}
+
 /* ================================================================
    BOOT
    ================================================================ */
@@ -1650,12 +1703,7 @@ function boot(){
   buildChips();
   renderTicker();
   render();
-  renderBuilder();
-  renderStructure();
-  renderPrompts();
-  renderExamples();
-  renderRecs();
-  renderChecklist("finalcheck", FINALCHECK, "final");
+  renderCommonApp();
   renderChecklist("steps", STEPS, "steps");
   renderPaths();
   renderCompare();
@@ -1739,3 +1787,4 @@ function mapScholarship(item){
 </script>
 </body>
 </html>
+
