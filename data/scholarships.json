@@ -1,6 +1,79 @@
 {
-  "updatedAt": "2026-08-13T00:00:00.000Z",
+  "updatedAt": "2026-08-13T20:58:27.000Z",
   "scholarships": [
+    {
+      "name": "Coca-Cola Scholars Program Scholarship",
+      "organization": "Coca-Cola Scholars Foundation",
+      "award": "$20,000",
+      "eligibility": "Current Class of 2027 seniors who plan to attend an accredited U.S. college, have a 3.0+ GPA, and meet federal-aid citizenship/residency categories. Strong leadership and service record expected.",
+      "url": "https://www.coca-colascholarsfoundation.org/apply/",
+      "status": "Confirmed for 2027",
+      "deadline": "2026-09-30",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; closes 5 p.m. Eastern / 2 p.m. Pacific",
+      "tags": [
+        "Washington",
+        "4-year"
+      ],
+      "fit": "Major national scholarship for students with real leadership, service, work, or school-community impact. The first stage does not require an essay, transcript, or recommendations.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "QuestBridge National College Match",
+      "organization": "QuestBridge",
+      "award": "Full four-year scholarships at participating partner colleges",
+      "eligibility": "High-achieving high school seniors from low-income households; strong academics and financial need.",
+      "url": "https://apply.questbridge.org/portal/apply",
+      "status": "Confirmed for 2027",
+      "deadline": "2026-10-01",
+      "lastYearDeadline": null,
+      "expectedWindow": "",
+      "tags": [
+        "low-income",
+        "high-achieving",
+        "full-ride",
+        "college-match"
+      ],
+      "fit": "A high-value full-ride pathway for students with strong academic records and significant financial need. The official application portal currently says the National College Match is open.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Elks Most Valuable Student Scholarship",
+      "organization": "Elks National Foundation",
+      "award": "500 four-year awards; $4,000 to $30,000 total",
+      "eligibility": "Current high-school seniors who are U.S. citizens and will enroll full time in a four-year undergraduate program. No Elks family connection is required. Selection uses academics, leadership, and financial need.",
+      "url": "https://www.elks.org/scholars/scholarships/mvs.cfm",
+      "status": "Confirmed for 2027",
+      "deadline": "2026-11-12",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now",
+      "tags": [
+        "Washington",
+        "4-year",
+        "First generation"
+      ],
+      "fit": "A substantial national scholarship with local, district, state, and national stages. It is worth applying even without an Elks connection.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "BigFuture Scholarship: Start Your Scholarship List (Class of 2027)",
+      "organization": "College Board BigFuture",
+      "award": "Monthly drawings for $500 and $40,000",
+      "eligibility": "Class of 2027 students in the U.S. with a College Board account who plan to pursue an associate or bachelor's degree. Save three scholarships in the BigFuture Scholarship Search to earn drawing entries. No essay, GPA, or test score required.",
+      "url": "https://bigfuture.collegeboard.org/scholarships/bigfuture-scholarships-start-your-scholarship-list-class-of-2027",
+      "status": "Confirmed for 2027",
+      "deadline": "2026-11-30",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now",
+      "tags": [
+        "Washington",
+        "4-year",
+        "Community college",
+        "No essay"
+      ],
+      "fit": "A fast, low-barrier starting step. Students from families earning under $60,000 can qualify for double entries.",
+      "lastChecked": "2026-08-13"
+    },
     {
       "name": "Yakama Nation Higher Education Scholarship",
       "organization": "Yakama Nation Higher Education & Adult Vocational Training",
@@ -23,22 +96,22 @@
       "lastChecked": "2026-08-13"
     },
     {
-      "name": "Mollie Davis Scholarship",
-      "organization": "Yakima Rotary Trust / Yakima Valley Community Foundation",
-      "award": "Up to $10,000 a year toward a bachelor's or $4,500 a year toward an associate degree",
-      "eligibility": "Yakima County residents who are U.S. citizens and are seniors, graduates, GED holders, or current college students pursuing a first associate or bachelor's degree full time.",
-      "url": "https://yakimarotarytrust.org/molliedavisscholarship/",
+      "name": "Jack Kent Cooke College Scholarship Program",
+      "organization": "Jack Kent Cooke Foundation",
+      "award": "Up to $55,000 per year for undergraduate study",
+      "eligibility": "High-achieving students with financial need; generally GPA 3.5+ and household income up to $95,000.",
+      "url": "https://www.jkcf.org/our-scholarships/college-scholarship-program/",
       "status": "Expected — last year's information",
-      "deadline": null,
-      "lastYearDeadline": "2026-02-22",
-      "expectedWindow": "Usually December–February",
+      "deadline": "2026-11-11",
+      "lastYearDeadline": null,
+      "expectedWindow": "Expected to open August 19, 2026",
       "tags": [
-        "Local / Yakima County",
-        "4-year",
-        "Community college",
-        "First generation"
+        "low-income",
+        "high-achieving",
+        "full-ride",
+        "opens-soon"
       ],
-      "fit": "One of the strongest awards specifically for Yakima County students.",
+      "fit": "Not open yet as of August 13. The foundation has published the upcoming opening and deadline, so students can prepare early without being told it is currently available.",
       "lastChecked": "2026-08-13"
     },
     {
@@ -59,6 +132,81 @@
         "Community college"
       ],
       "fit": "A very meaningful fit for agricultural and farmworker-connected families in the Yakima Valley.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Taco Bell Foundation Live Más Scholarship",
+      "organization": "Taco Bell Foundation",
+      "award": "$5,000, $10,000, or $25,000 (latest cycle)",
+      "eligibility": "U.S. residents ages 16-26 who are on track to enroll in, or are enrolled in, an accredited two-year, four-year, vocational, technical, or trade program. Applicants share a video or short essay about their passion; no GPA requirement.",
+      "url": "https://tacobellfoundation.org/live-mas-scholarship2/",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": "2026-01-06",
+      "expectedWindow": "Usually opens in October and closes in early January",
+      "tags": [
+        "Washington",
+        "4-year",
+        "Community college",
+        "Trades / apprenticeship"
+      ],
+      "fit": "A strong option for creative students and students with a real goal or passion, including students whose grades are not their strongest selling point.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Point Foundation Flagship Scholarship",
+      "organization": "Point Foundation",
+      "award": "Need-based award, renewable up to four years",
+      "eligibility": "LGBTQ+ and ally students who are at least high-school seniors, have a 3.3+ GPA, and plan full-time enrollment at an accredited nonprofit college or university. Point also has separate community-college and access programs.",
+      "url": "https://pointfoundation.org/scholarships/flagship",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedWindow": "Flagship usually opens in September and closes in early December",
+      "tags": [
+        "Washington",
+        "4-year",
+        "First generation"
+      ],
+      "fit": "A respected national program that provides funding, leadership support, and a strong community for LGBTQ+ and ally students.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "American Red Cross Leaders Save Lives Scholarship Program",
+      "organization": "American Red Cross",
+      "award": "$1,000-$2,500 scholarship drawing, plus gift cards and service hours",
+      "eligibility": "Students who organize an eligible Red Cross blood drive during the summer or winter program period and collect at least 25 pints. Scholarship drawing amount depends on the drive total.",
+      "url": "https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedWindow": "Summer: Memorial Day-Labor Day; Winter: December 15-January 15",
+      "tags": [
+        "Washington",
+        "4-year",
+        "Community college",
+        "Trades / apprenticeship"
+      ],
+      "fit": "Good for students who want service hours, leadership experience, and a scholarship opportunity they can build with friends or a school group.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Heritage University Dreamers Scholarship",
+      "organization": "Heritage University",
+      "award": "100% tuition coverage for up to five years",
+      "eligibility": "Current, new, and transfer students pursuing their first bachelor's degree who are DACA recipients or undocumented students; minimum 2.75 GPA.",
+      "url": "https://heritage.edu/student-resources/financial-aid/scholarships/",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedWindow": "Check Heritage for the next application window",
+      "tags": [
+        "Local / Yakima County",
+        "Undocumented / DACA-friendly",
+        "4-year",
+        "Hispanic / Latino"
+      ],
+      "fit": "Toppenish-based university support that makes a nearby bachelor's degree possible for many students who cannot use federal aid.",
       "lastChecked": "2026-08-13"
     },
     {
@@ -84,22 +232,22 @@
       "lastChecked": "2026-08-13"
     },
     {
-      "name": "Heritage University Dreamers Scholarship",
-      "organization": "Heritage University",
-      "award": "100% tuition coverage for up to five years",
-      "eligibility": "Current, new, and transfer students pursuing their first bachelor's degree who are DACA recipients or undocumented students; minimum 2.75 GPA.",
-      "url": "https://heritage.edu/student-resources/financial-aid/scholarships/",
+      "name": "Mollie Davis Scholarship",
+      "organization": "Yakima Rotary Trust / Yakima Valley Community Foundation",
+      "award": "Up to $10,000 a year toward a bachelor's or $4,500 a year toward an associate degree",
+      "eligibility": "Yakima County residents who are U.S. citizens and are seniors, graduates, GED holders, or current college students pursuing a first associate or bachelor's degree full time.",
+      "url": "https://yakimarotarytrust.org/molliedavisscholarship/",
       "status": "Expected — last year's information",
       "deadline": null,
-      "lastYearDeadline": null,
-      "expectedWindow": "Check Heritage for the next application window",
+      "lastYearDeadline": "2026-02-22",
+      "expectedWindow": "Usually December–February",
       "tags": [
         "Local / Yakima County",
-        "Undocumented / DACA-friendly",
         "4-year",
-        "Hispanic / Latino"
+        "Community college",
+        "First generation"
       ],
-      "fit": "Toppenish-based university support that makes a nearby bachelor's degree possible for many students who cannot use federal aid.",
+      "fit": "One of the strongest awards specifically for Yakima County students; the site will show last year's date until the new cycle is confirmed.",
       "lastChecked": "2026-08-13"
     }
   ]
