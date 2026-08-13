@@ -1,37 +1,1741 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Scholarships, writing help, and next steps for Toppenish High School's Class of 2027.">
-  <title>Next Steps | Toppenish High School</title>
-  <style>
-    :root{--crimson:#822336;--ink:#212325;--paper:#f4f4f5;--card:#fff;--muted:#5c5f62;--line:#d0d1d3;--gold:#a04a5c}
-    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}.wrap{max-width:1100px;margin:auto;padding:0 20px}
-    header{background:var(--crimson);color:white;padding:44px 0 0;border-top:7px solid var(--ink)}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;font-weight:700;color:#f1c9d1}h1,h2,h3{line-height:1.08;margin:.2em 0;font-family:ui-rounded,system-ui,sans-serif}h1{font-size:clamp(3rem,8vw,6rem);letter-spacing:-.06em}.lede{max-width:55ch;font-size:1.15rem;color:#fae8eb}
-    nav{margin-top:36px;background:var(--ink);display:flex;gap:20px;flex-wrap:wrap;padding:14px 18px;border-radius:12px 12px 0 0}nav a{color:white;text-decoration:none;font-weight:700}
-    main{padding:42px 0 64px}.notice{border-left:5px solid var(--crimson);background:#fff;padding:17px 20px;border-radius:8px;margin-bottom:30px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.filters button{background:white;border:1px solid var(--line);padding:8px 12px;border-radius:999px;cursor:pointer}.filters button.active{background:var(--crimson);color:white;border-color:var(--crimson)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:16px}.card{background:var(--card);padding:20px;border-radius:12px;border-top:5px solid var(--line);box-shadow:0 3px 18px #0000000b}.card.confirmed{border-top-color:#277455}.card.expected{border-top-color:var(--gold)}.org,.meta{color:var(--muted);font-size:.9rem}.award{color:var(--crimson);font-weight:800;margin:.8em 0}.badge{display:inline-block;padding:4px 8px;font-size:.76rem;font-weight:700;border-radius:5px;background:#f8e9ed;color:var(--crimson)}.badge.confirmed{background:#e4f4ea;color:#17653d}.tags{display:flex;gap:5px;flex-wrap:wrap;margin:14px 0}.tag{background:#ececee;border-radius:99px;padding:3px 7px;font-size:.75rem}.go{display:inline-block;font-weight:800;color:var(--crimson);margin-top:10px}
-    section{scroll-margin-top:20px;margin-top:64px}.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.panel{background:white;border-radius:12px;padding:22px}.panel ul{padding-left:18px;margin-bottom:0}footer{border-top:1px solid var(--line);padding:28px 0 52px;color:var(--muted)}@media(max-width:560px){header{padding-top:28px}main{padding-top:28px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next Steps — Toppenish High School Advisory</title>
+<meta name="description" content="Scholarship deadlines, application writing, and after-high-school pathways for Toppenish High School seniors.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PALETTE — Toppenish School District, orchard rows at dusk
+   ============================================================ */
+:root{
+  --crimson:   #822336;
+  --gray64:    #787a7c;
+  --gray37:    #acaeb0;
+  --gray20:    #d0d1d3;
+
+  --crimson-dk:#5f1927;
+  --rose:      #a04a5c;
+  --rose-lt:   #f0a6b2;
+  --ink:       #212325;
+  --ink-2:     #34373a;
+  --paper:     #f4f4f5;
+  --card:      #ffffff;
+  --muted:     #5c5f62;
+  --sand:      #faf6f2;
+  --sage:      #2f6b52;      /* "this works" — strong examples */
+  --sage-bg:   #eef5f1;
+  --warn-bg:   #fbf1f3;
+
+  --shadow: 0 1px 0 var(--gray20), 0 2px 14px rgba(33,35,37,.06);
+  --wrap: 1120px;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:17px; line-height:1.55;
+}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque","Public Sans",sans-serif; font-weight:800; line-height:1.05; margin:0}
+a{color:var(--crimson)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:3px solid var(--crimson); outline-offset:2px; border-radius:2px}
+p{margin:0 0 12px}
+
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+.eyebrow{
+  font-family:"DM Mono",ui-monospace,monospace; font-size:12px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0;
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:10px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header.top{
+  background:var(--crimson); color:#fff;
+  position:relative; overflow:hidden; border-top:7px solid var(--ink);
+}
+header.top .inner{padding:28px 20px 0}
+header.top::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 46px);
+}
+header.top .wrap{position:relative; z-index:1}
+header.top .eyebrow{color:#e6c3cb}
+.lockup{display:flex; align-items:center; gap:13px; margin-bottom:14px}
+.badge{
+  flex:0 0 auto; width:48px; height:48px; background:#fff; color:var(--crimson);
+  display:grid; place-items:center; border-radius:5px; overflow:hidden;
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:19px; letter-spacing:-.03em;
+}
+.badge img{width:100%; height:100%; object-fit:contain; display:block}
+header.top .school{font-weight:600; font-size:15px; color:#fff; line-height:1.25}
+h1{
+  font-size:clamp(40px,9vw,78px); letter-spacing:-.035em; margin:.14em 0 .1em;
+  font-variation-settings:"opsz" 96;
+}
+h1 .thin{font-weight:400; color:#e2b6bf}
+.lede{max-width:46ch; color:#f0dade; margin:0 0 22px}
+
+.ticker{
+  background:var(--ink); color:var(--paper); border-radius:10px 10px 0 0;
+  padding:15px 20px; display:flex; gap:16px; align-items:center; flex-wrap:wrap;
+}
+.ticker .n{
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:38px;
+  line-height:1; color:var(--rose-lt); letter-spacing:-.03em;
+}
+.ticker .lbl{font-family:"DM Mono",monospace; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--gray37)}
+.ticker .what{font-weight:600; font-size:16.5px; line-height:1.3}
+.ticker a{color:#fff}
+.ticker .mine{margin-left:auto; text-align:right}
+.ticker .mine b{font-family:"Bricolage Grotesque",sans-serif; font-size:26px; display:block; line-height:1; color:#fff}
+
+/* ============================================================
+   SECTION NAV
+   ============================================================ */
+nav.hub{
+  position:sticky; top:0; z-index:40; background:var(--ink); border-bottom:1px solid #000;
+}
+nav.hub .row{display:flex; gap:0; overflow-x:auto; scrollbar-width:none}
+nav.hub .row::-webkit-scrollbar{display:none}
+.tab{
+  appearance:none; border:0; background:transparent; cursor:pointer; white-space:nowrap;
+  color:var(--gray37); font-family:"Public Sans",sans-serif; font-weight:600; font-size:15px;
+  padding:15px 18px 13px; border-bottom:3px solid transparent; display:flex; align-items:center; gap:9px;
+}
+.tab .num{font-family:"DM Mono",monospace; font-size:11px; color:var(--gray64); letter-spacing:.08em}
+.tab:hover{color:#fff}
+.tab[aria-selected="true"]{color:#fff; border-bottom-color:var(--rose-lt)}
+.tab[aria-selected="true"] .num{color:var(--rose-lt)}
+@media (max-width:600px){ .tab{padding:13px 13px 11px; font-size:14px} .tab .num{display:none} }
+
+.panel[hidden]{display:none}
+.panel-intro{padding:34px 0 4px; border-bottom:1px solid var(--gray20); margin-bottom:6px}
+.panel-intro h2{font-size:clamp(26px,5vw,40px); letter-spacing:-.03em; margin:6px 0 8px}
+.panel-intro p{max-width:62ch; color:var(--muted); font-size:16.5px}
+
+/* ============================================================
+   CONTROLS (deadline board)
+   ============================================================ */
+.controls{
+  position:sticky; top:51px; z-index:30; background:var(--paper);
+  border-bottom:1px solid var(--gray20); padding:11px 0 9px; margin-bottom:4px;
+}
+@media (max-width:600px){ .controls{top:46px} }
+.controls .row{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+#q{
+  flex:1 1 240px; min-width:0; font:inherit; font-size:16px; padding:10px 13px;
+  border:1.5px solid var(--gray20); border-radius:7px; background:var(--card); color:var(--ink);
+}
+#q::placeholder{color:#9a9d9f}
+.chips{display:flex; gap:7px; overflow-x:auto; padding:8px 0 4px; -webkit-overflow-scrolling:touch; scrollbar-width:thin}
+.chip{
+  font-family:"DM Mono",monospace; font-size:12.5px; letter-spacing:.04em;
+  white-space:nowrap; padding:7px 12px; border-radius:999px; cursor:pointer;
+  border:1.5px solid var(--gray20); background:transparent; color:var(--muted);
+}
+.chip:hover{border-color:var(--crimson); color:var(--crimson)}
+.chip[aria-pressed="true"]{background:var(--crimson); border-color:var(--crimson); color:#fff}
+.chip.fit[aria-pressed="true"]{background:var(--ink); border-color:var(--ink)}
+.chiprow-label{
+  font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gray64); padding-top:9px; margin:0;
+}
+.toggle{font-family:"DM Mono",monospace; font-size:12.5px; color:var(--muted); display:flex; align-items:center; gap:7px; cursor:pointer; white-space:nowrap}
+.toggle input{accent-color:var(--crimson); width:16px; height:16px}
+.btn{
+  font-family:"DM Mono",monospace; font-size:12.5px; letter-spacing:.04em; cursor:pointer;
+  padding:9px 14px; border-radius:7px; border:1.5px solid var(--ink); background:var(--ink); color:#fff;
+}
+.btn:hover{background:var(--crimson); border-color:var(--crimson)}
+.btn.ghost{background:transparent; color:var(--ink)}
+.btn.ghost:hover{background:var(--ink); color:#fff}
+
+/* ============================================================
+   MONTH GROUPS + CARDS
+   ============================================================ */
+main{padding:0 0 10px}
+.month{display:flex; align-items:center; gap:14px; margin:34px 0 14px}
+.month h3{font-size:14px; font-family:"DM Mono",monospace; font-weight:500; letter-spacing:.18em; text-transform:uppercase}
+.month .line{flex:1; height:1px; background:var(--gray20)}
+.month .count{font-family:"DM Mono",monospace; font-size:12px; color:var(--muted)}
+
+.grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+
+.card{
+  background:var(--card); border-radius:12px; padding:17px 17px 15px;
+  box-shadow:var(--shadow); border-left:5px solid var(--gray20);
+  display:flex; flex-direction:column; gap:9px; position:relative;
+}
+.card.urgent{border-left-color:var(--crimson)}
+.card.soon  {border-left-color:var(--rose)}
+.card.open  {border-left-color:var(--gray64)}
+.card.rolling{border-left-color:var(--gray37)}
+.card.closed{border-left-color:var(--gray20); background:#fafafa}
+.card.closed .name,.card.closed .days{opacity:.55}
+.card.planning{border-left-color:var(--rose); background:#fffafb}
+.card.planning .days b{font-size:17px; color:var(--rose); padding-top:8px}
+.card.done{background:var(--sage-bg); border-left-color:var(--sage)}
+.card.done .name{text-decoration:line-through; text-decoration-thickness:2px; opacity:.7}
+
+.card .head{display:flex; justify-content:space-between; gap:14px; align-items:flex-start}
+.name{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:19.5px; letter-spacing:-.015em; line-height:1.12}
+.org{font-family:"DM Mono",monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:5px}
+
+.days{text-align:right; flex:0 0 auto; line-height:1}
+.days b{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:33px; letter-spacing:-.04em; display:block}
+.days small{font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.urgent .days b{color:var(--crimson)}
+.soon   .days b{color:var(--rose)}
+.open   .days b{color:var(--gray64)}
+.rolling .days b{font-size:18px; color:var(--gray64); padding-top:8px}
+.closed .days b{font-size:18px; color:var(--gray37); padding-top:8px}
+
+.amount{font-weight:700; color:var(--crimson); font-size:16.5px}
+.who{color:var(--muted); font-size:15.5px}
+.who.note{font-size:14.5px}
+.due{font-family:"DM Mono",monospace; font-size:12.5px; border-top:1px solid var(--gray20); padding-top:10px; margin-top:auto}
+.due .warn{color:var(--crimson)}
+.card .go{
+  display:inline-block; margin-top:5px; font-weight:600; text-decoration:none;
+  border-bottom:2px solid var(--crimson); padding-bottom:1px; font-family:"Public Sans",sans-serif; font-size:15px;
+}
+.card .go:hover{border-bottom-color:var(--ink)}
+.flag{
+  font-family:"DM Mono",monospace; font-size:11px; color:var(--rose);
+  border:1px solid #e3c8ce; background:var(--warn-bg); border-radius:5px; padding:4px 8px; align-self:flex-start;
+}
+
+/* effort + fit metadata */
+.meta{display:flex; flex-wrap:wrap; gap:6px}
+.tagpill{
+  font-family:"DM Mono",monospace; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+  border:1px solid var(--gray20); border-radius:999px; padding:3px 9px; color:var(--muted); background:#fff;
+}
+.tagpill.fit{border-color:var(--ink); color:var(--ink); background:#f1f1f2; font-weight:500}
+.tagpill.eff-low{border-color:#bcd9c9; background:var(--sage-bg); color:var(--sage)}
+.tagpill.eff-mid{border-color:var(--gray37); color:var(--gray64)}
+.tagpill.eff-high{border-color:#e3c8ce; background:var(--warn-bg); color:var(--rose)}
+
+.cardtools{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:2px}
+.mini{
+  font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.04em; cursor:pointer;
+  padding:5px 9px; border-radius:6px; border:1px solid var(--gray20); background:#fff; color:var(--muted);
+}
+.mini:hover{border-color:var(--ink); color:var(--ink)}
+.track{display:flex; align-items:center; gap:6px; font-family:"DM Mono",monospace; font-size:11px; color:var(--muted); cursor:pointer}
+.track input{accent-color:var(--sage); width:15px; height:15px}
+
+.empty{padding:50px 0; text-align:center; color:var(--muted)}
+.empty b{display:block; font-family:"Bricolage Grotesque",sans-serif; font-size:22px; color:var(--ink); margin-bottom:6px}
+
+/* ============================================================
+   SHARED BLOCKS
+   ============================================================ */
+.note{
+  background:#fff; border:1px solid var(--gray20); border-left:5px solid var(--crimson); border-radius:10px;
+  padding:16px 18px; margin:30px 0 0; font-size:15.5px;
+}
+.note strong{font-family:"Bricolage Grotesque",sans-serif}
+.note p:last-child{margin-bottom:0}
+
+.band{background:var(--ink); color:var(--paper); margin-top:48px; padding:48px 0}
+.band h2,.band h3{color:#fff}
+.band .eyebrow{color:var(--gray37)}
+.band p{color:var(--gray20)}
+.band a{color:var(--rose-lt)}
+
+.sect{margin:52px 0 0}
+.sect > .eyebrow{margin-bottom:6px}
+.sect > h3{font-size:clamp(23px,4vw,32px); letter-spacing:-.028em; margin-bottom:10px}
+.sect > p.sub{max-width:64ch; color:var(--muted); font-size:16.5px}
+
+/* ============================================================
+   WRITING SECTION
+   ============================================================ */
+.wcards{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); margin-top:20px}
+.wcard{background:var(--card); border-radius:12px; padding:20px; box-shadow:var(--shadow); border-top:4px solid var(--crimson)}
+.wcard h4{font-size:18px; margin-bottom:8px; letter-spacing:-.01em}
+.wcard p{color:var(--muted); font-size:15.5px; margin:0 0 8px}
+.wcard ul{margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:15px}
+.wcard li{margin-bottom:6px}
+.wcard .kicker{font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--crimson); margin-bottom:7px}
+
+details.acc{
+  background:var(--card); border:1px solid var(--gray20); border-radius:10px;
+  margin-bottom:10px; overflow:hidden;
+}
+details.acc[open]{border-color:var(--gray37); box-shadow:var(--shadow)}
+details.acc > summary{
+  cursor:pointer; padding:15px 18px; font-weight:700; font-size:16.5px; list-style:none;
+  display:flex; justify-content:space-between; gap:14px; align-items:center;
+  font-family:"Bricolage Grotesque",sans-serif; letter-spacing:-.01em;
+}
+details.acc > summary::-webkit-details-marker{display:none}
+details.acc > summary::after{content:"+"; font-family:"DM Mono",monospace; font-weight:400; font-size:20px; color:var(--crimson); flex:0 0 auto}
+details.acc[open] > summary::after{content:"−"}
+details.acc > summary:hover{background:var(--sand)}
+.acc-body{padding:0 18px 18px; font-size:16px}
+.acc-body p{color:var(--ink)}
+.acc-body ul,.acc-body ol{padding-left:20px; margin:10px 0}
+.acc-body li{margin-bottom:8px}
+.acc-body .decode{
+  font-family:"DM Mono",monospace; font-size:13px; background:var(--sand);
+  border-left:3px solid var(--crimson); padding:11px 14px; border-radius:0 7px 7px 0; margin:10px 0; color:var(--ink-2);
+}
+
+/* before / after */
+.ba{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); margin:14px 0}
+.ba > div{border-radius:10px; padding:15px 16px; font-size:15.5px; line-height:1.5}
+.ba .weak{background:var(--warn-bg); border:1px solid #e8d3d8}
+.ba .strong{background:var(--sage-bg); border:1px solid #cfe3d8}
+.ba .lab{
+  font-family:"DM Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+  display:block; margin-bottom:8px; font-weight:500;
+}
+.ba .weak .lab{color:var(--rose)}
+.ba .strong .lab{color:var(--sage)}
+.ba .why{margin-top:10px; font-size:14px; color:var(--muted); border-top:1px dashed var(--gray37); padding-top:9px}
+
+/* builder */
+.builder{background:var(--card); border:1px solid var(--gray20); border-radius:12px; padding:22px; box-shadow:var(--shadow); margin-top:18px}
+.bfield{margin-bottom:16px}
+.bfield label{display:block; font-weight:700; font-size:15.5px; margin-bottom:3px}
+.bfield .hint{font-size:14px; color:var(--muted); margin-bottom:7px}
+.bfield textarea,.bfield input[type=text]{
+  width:100%; font:inherit; font-size:15.5px; padding:10px 12px; border:1.5px solid var(--gray20);
+  border-radius:7px; background:var(--paper); color:var(--ink); resize:vertical; line-height:1.45;
+}
+.bfield textarea{min-height:66px}
+.bout{
+  background:var(--ink); color:var(--paper); border-radius:10px; padding:18px 20px; margin-top:6px;
+  font-family:"Public Sans",sans-serif; font-size:15.5px; white-space:pre-wrap; line-height:1.55; min-height:60px;
+}
+.bout:empty::before{content:"Fill in a few boxes above and your sheet builds itself here."; color:var(--gray37); font-style:italic}
+.brow{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:12px}
+.counter{font-family:"DM Mono",monospace; font-size:12px; color:var(--muted); margin-left:auto}
+.counter b{color:var(--ink)}
+.counter.over b{color:var(--crimson)}
+.counter.good b{color:var(--sage)}
+
+/* checklist */
+.check{list-style:none; padding:0; margin:16px 0 0}
+.check li{
+  display:flex; gap:11px; align-items:flex-start; background:var(--card); border:1px solid var(--gray20);
+  border-radius:9px; padding:12px 14px; margin-bottom:8px; font-size:15.5px;
+}
+.check input{accent-color:var(--sage); width:18px; height:18px; margin-top:2px; flex:0 0 auto}
+.check li label{cursor:pointer}
+.check li b{display:block; font-family:"Bricolage Grotesque",sans-serif; font-size:16px}
+.check li span{display:block; color:var(--muted); font-size:14.5px; margin-top:2px}
+
+/* ============================================================
+   PATHWAYS
+   ============================================================ */
+.paths{display:grid; gap:2px; margin-top:26px; background:#3a3c3e; border-radius:12px; overflow:hidden;
+       grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.path{background:var(--ink); padding:22px 20px}
+.path h4{font-size:19px; margin-bottom:8px; color:#fff}
+.path h4::after{content:""; display:block; width:26px; height:3px; background:var(--rose-lt); margin-top:8px}
+.path .fast{font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--gray37); margin:0 0 9px}
+.path p{color:var(--gray20); font-size:15.5px; margin:0 0 10px}
+.path ul{margin:0; padding-left:17px; color:var(--gray20); font-size:14.5px}
+.path li{margin-bottom:5px}
+
+.tablewrap{overflow-x:auto; margin-top:20px; border:1px solid var(--gray20); border-radius:11px; background:var(--card)}
+table.cmp{border-collapse:collapse; width:100%; min-width:660px; font-size:15px}
+table.cmp th,table.cmp td{text-align:left; padding:13px 15px; border-bottom:1px solid var(--gray20); vertical-align:top}
+table.cmp thead th{
+  background:var(--ink); color:#fff; font-family:"DM Mono",monospace; font-weight:500;
+  font-size:11px; letter-spacing:.11em; text-transform:uppercase; position:sticky; top:0;
+}
+table.cmp tbody th{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:16px; width:22%}
+table.cmp tbody tr:nth-child(even){background:var(--sand)}
+table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:0}
+table.cmp .fig{font-family:"DM Mono",monospace; font-size:14px; color:var(--crimson); font-weight:500}
+
+/* decision helper */
+.quiz{background:var(--card); border:1px solid var(--gray20); border-radius:12px; padding:22px; box-shadow:var(--shadow); margin-top:18px}
+.qblock{margin-bottom:18px}
+.qblock p.q{font-weight:700; margin:0 0 9px; font-size:16px}
+.opts{display:flex; gap:8px; flex-wrap:wrap}
+.opt{
+  font-size:14.5px; cursor:pointer; padding:8px 13px; border-radius:8px;
+  border:1.5px solid var(--gray20); background:var(--paper); color:var(--ink); font-family:inherit;
+}
+.opt:hover{border-color:var(--crimson)}
+.opt[aria-pressed="true"]{background:var(--crimson); border-color:var(--crimson); color:#fff}
+.qresult{background:var(--sand); border-left:4px solid var(--crimson); border-radius:0 9px 9px 0; padding:15px 17px; margin-top:6px; font-size:15.5px}
+.qresult h4{font-size:17px; margin-bottom:6px}
+.qresult ol{margin:8px 0 0; padding-left:20px}
+.qresult li{margin-bottom:6px}
+
+/* timeline */
+.tl{margin:22px 0 0; padding:0; list-style:none}
+.tl li{
+  position:relative; padding:0 0 20px 62px; border-left:2px solid var(--gray20); margin-left:18px;
+}
+.tl li::before{
+  content:attr(data-m); position:absolute; left:-26px; top:-2px;
+  width:52px; height:28px; border-radius:6px; background:var(--crimson); color:#fff;
+  font-family:"DM Mono",monospace; font-size:10.5px; letter-spacing:.06em; display:grid; place-items:center; text-transform:uppercase;
+}
+.tl li.now::before{background:var(--ink)}
+.tl li.now{border-left-color:var(--crimson)}
+.tl li:last-child{border-left-color:transparent}
+.tl h4{font-size:17.5px; margin-bottom:3px}
+.tl p{margin:0; color:var(--muted); font-size:15.5px}
+.tl .nowtag{
+  font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--ink); color:#fff; border-radius:4px; padding:2px 7px; margin-left:8px; vertical-align:2px;
+}
+
+/* familias */
+.familias{background:var(--sand); border:1px solid #e6dcd2; border-radius:12px; padding:22px 24px; margin-top:26px}
+.familias h3{font-size:22px; margin-bottom:4px}
+.familias .en{font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:12px}
+.familias ul{padding-left:19px; margin:10px 0 0}
+.familias li{margin-bottom:8px; font-size:15.5px}
+
+footer{margin-top:52px; border-top:1px solid var(--gray20); padding:26px 0 60px; color:var(--muted); font-size:14.5px}
+footer code{font-family:"DM Mono",monospace; font-size:13px; background:#fff; border:1px solid var(--gray20); padding:1px 5px; border-radius:4px}
+footer p{margin:0 0 10px}
+
+.toast{
+  position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(20px);
+  background:var(--ink); color:#fff; padding:12px 20px; border-radius:9px; font-size:15px;
+  box-shadow:0 8px 30px rgba(0,0,0,.25); opacity:0; pointer-events:none; transition:.22s ease; z-index:90;
+}
+.toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .ticker{border-radius:10px; padding:14px 16px}
+  .ticker .mine{margin-left:0; text-align:left; width:100%; border-top:1px solid #3a3c3e; padding-top:10px}
+  .grid{grid-template-columns:1fr}
+  .days b{font-size:27px}
+  #q{flex:1 1 100%}
+  .builder,.quiz{padding:17px}
+  .tl li{padding-left:22px; margin-left:14px}
+  .tl li::before{position:static; display:inline-grid; margin-bottom:7px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .card{transition:transform .16s ease, box-shadow .16s ease}
+  .card:hover{transform:translateY(-2px); box-shadow:0 1px 0 var(--gray20),0 8px 22px rgba(22,33,28,.09)}
+}
+@media print{
+  nav.hub,.controls,.ticker,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
+  .panel[hidden]{display:block !important}
+  body{background:#fff; font-size:10.5pt}
+  header.top{background:#fff; color:#000; border-top:3px solid #000}
+  header.top .eyebrow,.lede{color:#444}
+  h1{font-size:26pt}
+  .band{background:#fff; color:#000; padding:16px 0; border-top:2px solid #000}
+  .band h2,.band h3,.band h4{color:#000}
+  .band p,.path p,.path ul{color:#333}
+  .path{background:#fff; border:1px solid #ccc}
+  .paths{background:#fff; gap:8px}
+  .card,details.acc{break-inside:avoid; box-shadow:none; border:1px solid #ccc}
+  details.acc > summary::after{display:none}
+  .acc-body{display:block !important}
+}
+</style>
 </head>
 <body>
-<header><div class="wrap"><div class="eyebrow">Toppenish High School · Advisory · Class of 2027</div><h1>Next steps,<br>made clear.</h1><p class="lede">Local scholarships, writing support, and choices after high school—built for our students and checked against official sources.</p><nav><a href="#scholarships">Scholarships & deadlines</a><a href="#writing">Scholarship writing</a><a href="#pathways">School, programs & work</a></nav></div></header>
-<main class="wrap">
-  <section id="scholarships"><div class="eyebrow" style="color:#822336">Scholarships & deadlines</div><h2>Plan ahead without guessing.</h2><div class="notice"><strong>How to read this list:</strong> <em>Confirmed for 2027</em> means the organization has posted the current cycle. <em>Expected — last year's information</em> means it is a real opportunity, but its new deadline is not out yet. We show last year's date only to help you plan—not as a promise.</div><div class="filters" id="filters"></div><p class="meta" id="updated"></p><div class="grid" id="cards" aria-live="polite"></div></section>
-  <section id="writing"><div class="eyebrow" style="color:#822336">Scholarship writing</div><h2>Write once. Adapt many times.</h2><div class="three"><article class="panel"><h3>Your story bank</h3><p>Keep one private document with your activities, jobs, family responsibilities, awards, challenges, and people who shaped you.</p></article><article class="panel"><h3>The 600-word draft</h3><p>Write one honest personal statement about a real moment and what changed because of it. Reuse and reshape it instead of starting from zero.</p></article><article class="panel"><h3>Ask early</h3><p>Ask recommenders in September. Give them a month, your resume/story bank, and the scholarship deadline.</p></article></div></section>
-  <section id="pathways"><div class="eyebrow" style="color:#822336">School, programs & work</div><h2>Pick a direction. The money follows.</h2><div class="three"><article class="panel"><h3>College</h3><ul><li>FAFSA or WASFA is the first step</li><li>Compare aid offers—not sticker prices</li><li>Consider YVC transfer routes</li></ul></article><article class="panel"><h3>Trades & apprenticeships</h3><ul><li>Earn while you learn</li><li>Explore YVC, Perry Tech, and union programs</li><li>Ask whether tools and fees are covered</li></ul></article><article class="panel"><h3>Work & certificates</h3><ul><li>Short credentials can raise your pay quickly</li><li>Look for paid training and internships</li><li>Build a resume from jobs, service, and caregiving too</li></ul></article></div></section>
-</main>
-<footer><div class="wrap"><strong>Verify before applying.</strong> This is an advisory resource, not an official district publication. If something looks wrong, tell your teacher or counselor.</div></footer>
+<a class="skip" href="#hubnav">Skip to the main sections</a>
+
+<header class="top">
+  <div class="wrap inner">
+    <div class="lockup">
+      <div class="badge" id="site-badge">TH</div>
+      <div>
+        <div class="school" id="site-school">Toppenish High School</div>
+        <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Advisory · Class of 2027</p>
+      </div>
+    </div>
+    <h1>What's due<br><span class="thin">and what's next.</span></h1>
+    <p class="lede">Deadlines, the writing that wins them, and every road out of here — in one place, counting down.</p>
+    <div class="ticker" id="ticker" aria-live="polite">
+      <div><span class="n" id="tick-n">—</span></div>
+      <div>
+        <div class="lbl">Next deadline</div>
+        <div class="what" id="tick-what">Loading…</div>
+      </div>
+      <div class="mine">
+        <div class="lbl">Your list</div>
+        <b id="tick-mine">0 saved</b>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="hub" id="hubnav" aria-label="Main sections">
+  <div class="wrap">
+    <div class="row" role="tablist">
+      <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="true" data-panel="deadlines"><span class="num">01</span> Deadlines &amp; money</button>
+      <button class="tab" role="tab" id="tab-writing"   aria-controls="panel-writing"   aria-selected="false" data-panel="writing"><span class="num">02</span> How to write it</button>
+      <button class="tab" role="tab" id="tab-pathways"  aria-controls="panel-pathways"  aria-selected="false" data-panel="pathways"><span class="num">03</span> School, trades &amp; work</button>
+      <button class="tab" role="tab" id="tab-timeline"  aria-controls="panel-timeline"  aria-selected="false" data-panel="timeline"><span class="num">04</span> Senior year month by month</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ 01 · DEADLINES ============ -->
+<section class="panel" id="panel-deadlines" role="tabpanel" aria-labelledby="tab-deadlines">
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 01</p>
+    <h2>Every deadline, counting down.</h2>
+    <p>Start with the two filter rows. The second row — <strong>Does this fit me?</strong> — is the one most students skip
+      and the one that finds you money. Tap what's true about you and the list shrinks to awards you can actually win.</p>
+  </div>
+
+  <div class="controls">
+    <div class="wrap">
+      <div class="row">
+        <label class="sr" for="q">Search deadlines</label>
+        <input id="q" type="search" placeholder="Search — try &ldquo;welding&rdquo;, &ldquo;no essay&rdquo;, &ldquo;orchard&rdquo;, &ldquo;tribal&rdquo;">
+        <label class="toggle"><input type="checkbox" id="mineOnly"> My list only</label>
+        <label class="toggle"><input type="checkbox" id="showPast"> Show plan-ahead scholarships</label>
+      </div>
+      <p class="chiprow-label">What are you looking for</p>
+      <div class="chips" id="chips" role="group" aria-label="Filter by pathway"></div>
+      <p class="chiprow-label">Does this fit me? — tap all that are true</p>
+      <div class="chips" id="fitchips" role="group" aria-label="Filter by eligibility fit"></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div id="results"></div>
+    <div class="empty" id="empty" hidden><b>Nothing matches that.</b>Clear the search or turn off a filter.</div>
+
+    <div class="note">
+      <p><strong>Dates change. Check before you count on one.</strong> The current list is refreshed from the advisory scholarship tracker. Anything marked <em>plan ahead</em> is a real past-cycle opportunity whose new application or deadline has not been confirmed yet.</p>
+      <p id="data-updated" style="margin-bottom:0"><strong>Last refreshed:</strong> Loading scholarship data…</p>
+      <p style="margin:10px 0 0"><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
+    </div>
+
+    <div class="familias">
+      <h3>Para las familias</h3>
+      <p class="en">For parents and guardians — la versión en español</p>
+      <p>Su estudiante necesita su ayuda con tres cosas este año. No necesita hablar inglés ni haber ido a la
+        universidad para ayudar con ninguna de las tres.</p>
+      <ul>
+        <li><strong>El formulario de ayuda financiera (FAFSA o WASFA), en octubre.</strong> Se necesitan sus impuestos
+          de hace dos años. Es gratis. Abre casi todo lo demás en esta página. Si su familia es indocumentada, el
+          formulario correcto es el <strong>WASFA</strong> — es del estado de Washington, no del gobierno federal, y no se
+          comparte con inmigración.</li>
+        <li><strong>Las fechas límite.</strong> La mayoría del dinero se decide entre octubre y marzo del último año.
+          Pregúntele a su estudiante una vez al mes: «¿A cuáles solicitaste?»</li>
+        <li><strong>Su historia familiar.</strong> Muchas becas de aquí — del valle, de la industria de la fruta, de la
+          Nación Yakama, para familias trabajadoras del campo — se otorgan por quién es su familia y de dónde viene.
+          Cuéntele esa historia a su estudiante. Es parte de la solicitud.</li>
+      </ul>
+      <p style="margin:12px 0 0"><strong>Nunca se paga por solicitar una beca.</strong> Si alguien le pide dinero, es fraude.</p>
+    </div>
+  </main>
+</section>
+
+<!-- ============ 02 · WRITING ============ -->
+<section class="panel" id="panel-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 02</p>
+    <h2>You write one essay. Then you reuse it all year.</h2>
+    <p>Almost every application on this site wants the same thing in a slightly different package: a true story about
+      something that happened to you, and what you did about it. Write that once, well. Then adapt it. This section
+      takes you from blank page to submitted.</p>
+  </div>
+
+  <main class="wrap">
+
+    <div class="sect" style="margin-top:34px">
+      <p class="eyebrow">Start here</p>
+      <h3>Step one is not writing.</h3>
+      <p class="sub">It's collecting. You cannot write a good scholarship essay out of nothing, and you have more
+        material than you think — you just haven't written it down anywhere. Do this first and everything after it
+        gets easier.</p>
+      <div id="builder-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">The shape of it</p>
+      <h3>What a winning 600 words actually looks like</h3>
+      <p class="sub">Scholarship readers go through hundreds of these. Most are read in under two minutes. This
+        structure survives that.</p>
+      <div id="structure-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Prompt decoder</p>
+      <h3>What they're really asking</h3>
+      <p class="sub">Scholarship prompts are written in committee language. Here's the translation, and what the
+        reader is actually scoring.</p>
+      <div id="prompts-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Line by line</p>
+      <h3>The same sentence, weak and strong</h3>
+      <p class="sub">Nobody improves from being told to "be specific." Here is what specific looks like.</p>
+      <div id="examples-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Other people's writing</p>
+      <h3>Recommendation letters</h3>
+      <p class="sub">A letter is only as good as what you hand the person writing it. Ask early, ask in person,
+        and give them something to work from.</p>
+      <div id="recs-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Before you hit submit</p>
+      <h3>The last-pass checklist</h3>
+      <p class="sub">Every one of these has cost a real student a real award.</p>
+      <ul class="check" id="finalcheck"></ul>
+    </div>
+
+    <div class="note">
+      <p style="margin-bottom:0"><strong>On using AI to write this.</strong> You are going to be tempted, and a
+        committee that reads 4,000 essays can tell — AI writes smooth, general, and forgettable, which is exactly what
+        loses. Here's the honest line: use it to <em>interview yourself</em> ("ask me questions about this memory until
+        I've said something I haven't said before"), to check grammar, and to tell you which paragraph is boring. Do not
+        use it to generate the story or the sentences. The one thing you have that no other applicant has is what
+        actually happened to you, in your own words. Don't trade that away for smoother prose.</p>
+    </div>
+  </main>
+</section>
+
+<!-- ============ 03 · PATHWAYS ============ -->
+<section class="panel" id="panel-pathways" role="tabpanel" aria-labelledby="tab-pathways" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 03</p>
+    <h2>Five doors. Each one has a different calendar.</h2>
+    <p>You don't have to know your career. You do need to know which door you're walking through this year, because
+      the deadlines in Section 01 depend on it. None of these five is the smart one — the smart one is the one that
+      fits your life.</p>
+  </div>
+
+  <main class="wrap">
+    <div class="sect" style="margin-top:30px">
+      <p class="eyebrow">Not sure yet?</p>
+      <h3>Answer four questions.</h3>
+      <p class="sub">This isn't a personality quiz and it won't tell you who you are. It just narrows five doors down
+        to the two worth researching first.</p>
+      <div class="quiz" id="quiz"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">The real numbers</p>
+      <h3>What each door costs and what it pays</h3>
+      <p class="sub">Rough Washington-state figures for planning, not promises. Wages vary by employer and year;
+        costs assume you qualify for the Washington College Grant, which about half of families here do.</p>
+      <div class="tablewrap" id="cmp-mount"></div>
+    </div>
+  </main>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">The five doors</p>
+      <h2 style="font-size:clamp(26px,5vw,38px); letter-spacing:-.03em; margin-bottom:8px">Pick a direction. The money follows.</h2>
+      <p style="max-width:56ch">Each card lists what to do <em>this year</em>, not eventually.</p>
+      <div class="paths" id="paths"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="sect">
+      <p class="eyebrow">Within an hour of Toppenish</p>
+      <h3>The places you can actually get to</h3>
+      <div class="wcards" id="local-mount"></div>
+    </div>
+  </main>
+</section>
+
+<!-- ============ 04 · TIMELINE ============ -->
+<section class="panel" id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 04</p>
+    <h2>Senior year, month by month.</h2>
+    <p>If you do nothing else on this site, do the thing next to the current month. The whole discipline is ten
+      minutes, once a month.</p>
+  </div>
+  <main class="wrap">
+    <ol class="tl" id="timeline"></ol>
+
+    <div class="sect">
+      <p class="eyebrow">Do these no matter which door you pick</p>
+      <h3>The short list</h3>
+      <ul class="check" id="steps"></ul>
+    </div>
+  </main>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p id="site-teacher" style="font-weight:600;color:var(--ink)"></p>
+    <p><strong>How this page stays current:</strong> the scholarship board reads from the advisory tracker. Confirmed opportunities appear first; past-cycle opportunities remain available under the plan-ahead switch until their new dates are published.</p>
+    <p>Made for advisory at Toppenish High School. Not an official Toppenish School District publication—verify every date on the sponsor's official page before relying on it.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-let all=[],active="All";
-const $=s=>document.querySelector(s);
-const fmt=d=>d?new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"}):"";
-function render(){
- const tags=["All",...new Set(all.flatMap(x=>x.tags||[]))];$("#filters").innerHTML=tags.map(t=>`<button class="${t===active?"active":""}" data-tag="${t}">${t}</button>`).join("");
- $("#filters").querySelectorAll("button").forEach(b=>b.onclick=()=>{active=b.dataset.tag;render()});
- const rows=all.filter(x=>active==="All"||x.tags.includes(active));
- $("#cards").innerHTML=rows.map(x=>{const expected=x.status.startsWith("Expected");return `<article class="card ${expected?"expected":"confirmed"}"><span class="badge ${expected?"":"confirmed"}">${x.status}</span><h3>${x.name}</h3><div class="org">${x.organization}</div><div class="award">${x.award}</div><p>${x.eligibility}</p><p class="meta"><strong>${expected?"Expected window":"Deadline"}:</strong> ${x.deadline?fmt(x.deadline):x.expectedWindow||"See official page"}${x.lastYearDeadline?`<br><strong>Last year's deadline:</strong> ${fmt(x.lastYearDeadline)}`:""}<br><strong>Last checked:</strong> ${fmt(x.lastChecked)}</p><div class="tags">${x.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div><p class="meta">${x.fit}</p><a class="go" href="${x.url}" target="_blank" rel="noopener">Open official page →</a></article>`}).join("")||"<p>No scholarships match that filter yet.</p>";
+/* ================================================================
+   EDIT BELOW THIS LINE
+   ----------------------------------------------------------------
+   due:     "YYYY-MM-DD"  or  null if there's no fixed date
+   opens:   "YYYY-MM-DD"  (optional) — shows an "opens soon" countdown
+   window:  short text used when due is null   (e.g. "Rolling")
+   tags:    any of: money, four, two, trades, military, work
+   fit:     any of: everyone, local, ag, tribal, undoc, migrant,
+                    firstgen, lowincome, stem, noessay
+   effort:  "low" | "mid" | "high"
+   confirm: true  → shows the "confirm this date" flag
+   ================================================================ */
+
+/* ---------- YOUR INFO — edit these three lines ---------- */
+const SITE = {
+  school:  "Toppenish High School",
+  line:    "Advisory · Class of 2027",
+  teacher: "",          // e.g. "Questions? See Mr. Barragan in Room 214." Blank hides this line.
+  logo:    "",          // Drop the Wildcat PNG next to this file, put the filename here.
+  logoAlt: "Toppenish Wildcats"
+};
+
+const DEADLINES = [];
+
+/* ================================================================
+   SECTION 02 — THE WRITING CONTENT
+   ================================================================ */
+
+/* The story-bank builder. Each field becomes a block in the output. */
+const BANK = [
+  { id:"hard",
+    label:"A time something got hard and you didn't quit",
+    hint:"School, home, work, a sport, a sibling, an injury, a move. Don't explain why it was hard — say what you actually did on the hardest day.",
+    lead:"WHEN IT GOT HARD" },
+  { id:"carry",
+    label:"What you carry that nobody assigned you",
+    hint:"Watching younger siblings. Translating at the doctor's office or the bank. Weekend shifts. Driving someone to work. Cooking dinner. This counts, and most students leave it off.",
+    lead:"WHAT I CARRY" },
+  { id:"good",
+    label:"Something you're good at that nobody grades",
+    hint:"Fixing engines, editing videos, calming a room down, keeping a team together, budgeting your family's groceries, sewing, welding, teaching a little cousin to read.",
+    lead:"WHAT I'M GOOD AT" },
+  { id:"place",
+    label:"A place or a person you're responsible to",
+    hint:"Be specific enough that a stranger could find it — a street, a field, a shop, a church, a classroom, a name and what they mean.",
+    lead:"WHO AND WHERE I'M FROM" },
+  { id:"number",
+    label:"One real number about your life",
+    hint:"Hours a week you work. Years you've played. People you cook for. Miles to your job. Age you started. Numbers make a reader stop skimming.",
+    lead:"THE NUMBER" },
+  { id:"next",
+    label:"What you want to be doing in five years",
+    hint:"You're allowed to be unsure. \"I want to be licensed and working within an hour of home\" is a stronger answer than a career title you don't mean.",
+    lead:"WHERE THIS GOES" },
+  { id:"proud",
+    label:"Activities, jobs, and things you've been part of",
+    hint:"List everything, including the stuff that ended. Grade level, and roughly how many hours a week. Your recommenders need this more than you do.",
+    lead:"ACTIVITIES, WORK, SERVICE" }
+];
+
+/* The essay skeleton */
+const STRUCTURE = [
+  { move:"Open inside a moment",  words:"100–150 words",
+    what:"Start in the middle of something happening, on a specific day, in a specific place. No throat-clearing, no dictionary definitions, no \"ever since I was young.\"",
+    test:"Could a reader draw the scene? If not, you're summarizing, not writing." },
+  { move:"Name what was at stake", words:"80–120 words",
+    what:"Now you're allowed to explain. What could have gone wrong? What did it cost you or the people around you? Keep it factual — the facts do the emotional work by themselves.",
+    test:"Have you told the reader what you stood to lose?" },
+  { move:"Show what you did",      words:"150–200 words",
+    what:"The heart of it. Verbs, not adjectives. Decisions you made, things you tried, what failed first. This is the paragraph the committee is actually scoring.",
+    test:"Count your verbs. If the paragraph is mostly feelings, rewrite it as actions." },
+  { move:"Say what changed",       words:"100–150 words",
+    what:"Not the lesson a movie would give you. The specific, smaller, truer thing you understand now that you didn't before — even if it's unfinished.",
+    test:"Would this sentence be true for any other applicant? Then it's too general." },
+  { move:"Point it forward",       words:"80–100 words",
+    what:"Connect it to what you're going to do next and what the money makes possible. One or two sentences. Do not restate the whole essay.",
+    test:"Does the last line land, or does it trail off into \"and that's why I want to succeed\"?" }
+];
+
+/* Prompt decoder */
+const PROMPTS = [
+  { q:"\"Describe a challenge or obstacle you have overcome.\"",
+    real:"They are scoring whether you did something, or whether time simply passed.",
+    body:"Everyone writes about the hard thing. Almost nobody writes about the decision they made inside the hard thing. The word they're weighing is <em>overcome</em> — that's an action verb. Spend one paragraph on the obstacle and three on what you did.",
+    dont:"Don't compete on suffering. A reader who has read 400 of these is not moved by how bad it was; they're moved by what you did on a Tuesday when nobody was watching." },
+  { q:"\"Tell us about your leadership experience.\"",
+    real:"They are not asking for a title. They're asking who was better off because you showed up.",
+    body:"You do not need to have been captain, president, or valedictorian. Leadership on a scholarship application means: you saw something that needed doing and you did it, and somebody else benefited. Translating for your parents at an appointment is leadership. Getting a work crew organized is leadership. Keeping your little brother in school is leadership.",
+    dont:"Don't list positions. Pick one and tell what changed because of you." },
+  { q:"\"Why do you deserve this scholarship?\"",
+    real:"They are asking what happens to their money.",
+    body:"Need alone never wins this question, because every applicant has need. Answer it as a return: here is what I will do with a degree or a certificate, here is where I'll do it, and here is the evidence from my life that I finish what I start. Committees fund people they believe will actually graduate.",
+    dont:"Don't say you'd be honored, grateful, or blessed and stop there. Say what you'll build." },
+  { q:"\"Describe your community and your role in it.\"",
+    real:"They are scoring specificity of place. This is the easiest question on the list to win.",
+    body:"Name Toppenish. Name the Yakima Valley. Name the orchard, the packing shed, the church, the field, the road. A reader in Atlanta or Seattle has never been here and will remember the essay that put them somewhere real. Then say what you do in it, in the present tense.",
+    dont:"Don't write \"my community has shaped me into the person I am today.\" That sentence has never won anything." },
+  { q:"\"What are your career goals?\"",
+    real:"They are scoring plausibility, not ambition.",
+    body:"The winning answer is concrete and near-term: the program you're entering, the credential at the end of it, and the first job it qualifies you for. If you know the exact place you want to work, name it. Certainty about the next two years beats a grand vision for the next twenty.",
+    dont:"Don't promise to change the world. Promise the next step, and make the reader believe you'll take it." },
+  { q:"\"Tell us about yourself.\" (or any wide-open prompt)",
+    real:"An open prompt is a trap. It invites a résumé in paragraph form.",
+    body:"Pick one hour of your life and write it. One shift, one drive, one argument, one morning. A reader learns more about you from a single well-told hour than from a summary of eighteen years — and the specific one is the one they'll remember at the end of a long day of reading.",
+    dont:"Don't try to cover everything. Coverage is the enemy of memorable." }
+];
+
+/* Before / after */
+const EXAMPLES = [
+  { title:"Naming the hardship",
+    weak:"My family has been through a lot of struggles, but we always found a way to get through it together. These experiences have made me a stronger and more resilient person.",
+    strong:"In February the transmission went out on my mom's Corolla, and for six weeks I got up at 4:40 to ride to the packing shed with my uncle so she could keep her hours. I did my chemistry homework in his truck with the dome light on.",
+    why:"The first version summarizes a feeling. The second one gives a reader a time, a car, a job, a light in a truck — and it proves resilience without ever using the word." },
+  { title:"Claiming a trait vs. showing it",
+    weak:"I am a very hardworking and dedicated student who always gives 110% in everything I do.",
+    strong:"I have not missed a Saturday shift in two years. I have also never turned in a late lab, though I did once turn one in written on the back of a receipt.",
+    why:"Nobody believes an adjective about yourself. Everybody believes a record. The receipt detail is what makes it real — and slightly funny, which readers remember." },
+  { title:"Writing about where you're from",
+    weak:"I come from a small town where not many people go to college. My community has taught me the value of hard work.",
+    strong:"Toppenish has about nine thousand people, a hospital, and more orchards than stoplights. Almost everyone I know works in fruit at some point — my dad still does, and I did the summer I turned fifteen, which is how I learned I did not want to do it at fifty.",
+    why:"\"Small town\" is invisible. Nine thousand people and more orchards than stoplights is a place a stranger can see. The last clause turns description into motive." },
+  { title:"Explaining what you want to do",
+    weak:"I want to go into the medical field because I have always had a passion for helping people and making a difference in my community.",
+    strong:"I want to be a radiology tech at Astria Toppenish, which is a two-year program at YVC and a job that starts around thirty dollars an hour. I've translated for my grandmother at that hospital since I was eleven and I have watched what happens when nobody in the room speaks Spanish.",
+    why:"The second one names a job, a school, a wage, and the exact experience that produced the goal. It's checkable, which makes a committee trust everything else you wrote." },
+  { title:"The opening line",
+    weak:"Throughout my life, I have faced many obstacles that have shaped me into the person I am today.",
+    strong:"The first time I filled out a government form for my mother I was nine years old and I did not know what \"annual gross income\" meant.",
+    why:"The first sentence is the one that decides whether the rest gets read carefully. Delete every opening line that could sit on top of anyone else's essay." }
+];
+
+/* Recommendation letters */
+const RECS = [
+  { h:"Ask the right person, not the highest grade",
+    p:"The best letter comes from an adult who watched you struggle with something and finish it — not necessarily the class where you got the easy A. A teacher who saw you rewrite a paper four times has more to say than one who saw you ace every quiz. Two letters is standard: one teacher, one adult who isn't family — a boss, a coach, a pastor, a program coordinator." },
+  { h:"Ask in September. Out loud. In person.",
+    p:"Four weeks of notice is the minimum and September is when their calendar is still empty. Ask face-to-face, then send the email the same day so they have it in writing. If someone hesitates or says they're not sure they can write a strong one, thank them and ask someone else — a lukewarm letter is worse than a missing one." },
+  { h:"Hand them a packet, not a request",
+    p:"This is the whole trick, and almost nobody does it. Give your recommender: your story bank from the builder above, your activities and jobs list, the exact scholarship name and what it's for, the deadline and the submission link, and one paragraph on what you'd like them to speak to. You are not being pushy — you are saving them two hours, and specific letters win." },
+  { h:"Then follow up twice",
+    p:"A short reminder one week out, and a thank-you after — handwritten if you can manage it. These same adults will write for you again for jobs, internships, and transfers for the next ten years. Tell them what you won. They genuinely want to know." }
+];
+
+const RECMAIL = `Subject: Recommendation letter request — [your name], Class of 2027
+
+Dear [Mr./Ms. Name],
+
+Thank you for saying yes today. I'm applying for the [scholarship name], which is for
+[one line: who it's for and what it funds]. The deadline is [date] and letters are
+submitted at [link], or emailed to [address].
+
+I've attached my story bank and my activities list. If it's useful, the things I'd most
+like a reader to understand about me are [one or two specific things — e.g. that I kept
+my grades up through the season I was working nights].
+
+I'll send you one short reminder the week before. Thank you again — I know how many of
+these you write.
+
+[Your name]
+[Your phone] · [the email address you'll still have after graduation]`;
+
+const FINALCHECK = [
+  { b:"The scholarship's name is spelled right, everywhere",
+    s:"Reusing an essay is smart. Leaving the last scholarship's name in paragraph three is the most common instant disqualification there is. Search the document for the old name before you send." },
+  { b:"You're under the word limit, not near it",
+    s:"Over the limit gets cut off mid-sentence or thrown out. Aim for about 90% of the maximum." },
+  { b:"You read the whole thing out loud",
+    s:"Not silently. Out loud, to the wall if nobody's around. Every sentence you stumble on is a sentence a reader will stumble on." },
+  { b:"An adult who knows you read it and said it sounds like you",
+    s:"If they say \"this is nice\" instead of \"this sounds like you,\" it isn't done yet." },
+  { b:"You checked the deadline's time zone",
+    s:"Coca-Cola closes 5 p.m. Eastern — that's 2 p.m. here. QuestBridge closes 11:59 p.m. Pacific. Assume the earlier one and submit a day early." },
+  { b:"Your file is named with your name",
+    s:"\"Ramirez_Essay_Gates.pdf\" — not \"essay final FINAL (2).docx.\" Send a PDF unless they ask for something else." },
+  { b:"You ordered your transcript, and it's the right one",
+    s:"The office needs lead time and it's never as fast as you think. Some scholarships want it sealed and mailed; check." },
+  { b:"You saved the confirmation email",
+    s:"Make one folder in your permanent email account called SCHOLARSHIPS and put every confirmation in it. When something goes missing in March, that folder is your proof." }
+];
+
+/* ================================================================
+   SECTION 03 — PATHWAYS
+   ================================================================ */
+
+const PATHWAYS = [
+  { key:"four", title:"Four-year university", fast:"4 years · apply Oct–Jan",
+    blurb:"A bachelor's degree on a campus. Highest lifetime earnings on average, highest cost, and the longest wait before you're earning.",
+    bullets:["Apply October through January of senior year","FAFSA or WASFA the first week of October","UW, WSU, CWU, EWU, WWU, Heritage","Nearly every big scholarship on this site is for this door"] },
+  { key:"two", title:"Community college", fast:"2 years · apply anytime",
+    blurb:"Two years at YVC. Finish a career degree and go to work, or transfer into a bachelor's and pay half of what four years at a university costs.",
+    bullets:["Open enrollment — no admissions gamble","Often fully free with the WA College Grant","A transfer degree lands you the identical diploma","Undocumented students are eligible for YVC aid"] },
+  { key:"trades", title:"Trades & apprenticeships", fast:"1–5 years · you get paid",
+    blurb:"You earn a wage from the first week and finish with no tuition debt and a license somebody has to have.",
+    bullets:["Perry Tech, YVC, and union apprenticeships","Programs open on their own schedules — check monthly","WSOS Career & Technical Scholarship, 3 cycles a year","Journeyman wages beat a lot of bachelor's degrees"] },
+  { key:"military", title:"Military", fast:"4–6 year commitment",
+    blurb:"Enlisted service, ROTC, or a service academy. Training, a paycheck, health care, and the GI Bill for school afterward.",
+    bullets:["Take the ASVAB early — the score maps to civilian jobs too","GI Bill pays for school after you serve","Get every promise written into your contract","Never sign the same day you visit"] },
+  { key:"work", title:"Work & short certificates", fast:"Weeks to months",
+    blurb:"Straight into a job with a credential that raises your ceiling. The door most likely to be underestimated, and the easiest one to walk back through later.",
+    bullets:["WorkSource Yakima can pay for the certificate","CDL, forklift, health care aide, food safety, IT certs","Job Corps if you need housing too","Nothing here closes the other four doors"] }
+];
+
+const COMPARE = {
+  head:["Door","Time to first paycheck","What you'll pay","Typical WA starting pay","Best fit if…"],
+  rows:[
+    ["Four-year university","4+ years",
+     "<span class='fig'>$0–$14k/yr</span> after the WA College Grant and Pell, plus housing",
+     "<span class='fig'>$50k–$70k</span> depending heavily on the major",
+     "You want a career that legally requires a bachelor's — teaching, nursing (BSN), engineering, counseling — or you're chasing a full-ride award."],
+    ["Community college (YVC)","2 years, or work part-time now",
+     "<span class='fig'>Often $0</span> with the WA College Grant",
+     "<span class='fig'>$45k–$75k</span> for nursing, dental hygiene, IT, welding",
+     "You're not certain yet, money is tight, you want to stay home, or your GPA isn't where you want it — YVC resets that."],
+    ["Trades & apprenticeship","Week one",
+     "<span class='fig'>$0 tuition</span> — some tool and dues costs, often covered",
+     "<span class='fig'>$22–$35/hr</span> starting, more at journeyman",
+     "You'd rather be paid to learn than pay to learn, you like working with your hands, and you can pass a drug test and show up early."],
+    ["Military","Basic training",
+     "<span class='fig'>$0</span> — they pay you",
+     "<span class='fig'>Housing, food, health care</span> + GI Bill after",
+     "You want structure and time to decide, or you need a way out of your current situation that comes with a plan attached."],
+    ["Work + certificate","Weeks",
+     "<span class='fig'>$0–$3k</span>, often covered by WorkSource",
+     "<span class='fig'>$18–$28/hr</span> depending on the credential",
+     "You need income now — for your family or yourself. Start here and come back for more school when you're ready. People do this constantly."]
+  ]
+};
+
+const QUIZ = [
+  { q:"How soon do you need to be earning real money?",
+    opts:[ {t:"Right away — my family needs it", s:{work:3,trades:3,military:2,two:1,four:0}},
+           {t:"Within a year or two",            s:{trades:3,two:3,work:2,military:2,four:1}},
+           {t:"I can wait four years",           s:{four:3,two:2,military:1,trades:1,work:0}} ]},
+  { q:"How do you actually like to learn?",
+    opts:[ {t:"Hands on a thing, showing me once", s:{trades:3,work:2,two:2,military:2,four:0}},
+           {t:"Reading, writing, discussing",       s:{four:3,two:2,military:1,trades:0,work:0}},
+           {t:"Honestly, both",                     s:{two:3,trades:2,four:2,military:1,work:1}} ]},
+  { q:"How far from home do you want to be?",
+    opts:[ {t:"Staying in the valley",       s:{two:3,trades:3,work:3,four:1,military:0}},
+           {t:"Somewhere in Washington",     s:{four:3,two:2,trades:2,military:1,work:1}},
+           {t:"As far as I can get",         s:{military:3,four:3,trades:1,two:0,work:0}} ]},
+  { q:"What's your GPA doing right now?",
+    opts:[ {t:"Under 2.5",       s:{work:3,trades:3,two:3,military:2,four:0}},
+           {t:"2.5 to 3.2",      s:{two:3,trades:2,four:2,military:2,work:1}},
+           {t:"3.3 and up",      s:{four:3,two:2,military:2,trades:1,work:0}} ]}
+];
+
+const QUIZ_ADVICE = {
+  four:{ t:"Four-year university", next:["File the FAFSA or WASFA the first week of October — it's the gate for everything.","Apply to two or three schools by mid-November, including one you're confident about.","Go run the 'Money & aid' filter in Section 01. The biggest awards on this page are for this door and most close in the fall."] },
+  two:{ t:"Community college (YVC)", next:["Apply to YVC now — it's open enrollment and takes about twenty minutes.","File the FAFSA or WASFA in October so the WA College Grant can cover it.","Set a reminder for December 1: the YVC Foundation scholarship application opens and one form matches you to 150+ funds."] },
+  trades:{ t:"Trades & apprenticeships", next:["Look at Perry Tech now — programs fill early and spring applicants often wait a year.","Check the L&I apprenticeship list the first Monday of every month; some windows are two weeks long.","Apply for the WSOS Career & Technical Scholarship — it runs three cycles a year and almost nobody in the trades applies."] },
+  military:{ t:"Military", next:["Take the ASVAB this year even if you're undecided — the score maps to civilian careers too.","Talk to more than one branch's recruiter, and bring a parent or trusted adult.","If you're also considering college, look at ROTC in Section 01 — the boards fill in the fall."] },
+  work:{ t:"Work & short certificates", next:["Go to WorkSource Yakima. Youth programs there can pay for a certificate that raises your starting wage.","Look at Job Corps if you need housing and training together.","Keep the door open: YVC is open enrollment forever, and the WA College Grant doesn't expire when you graduate."] }
+};
+
+const LOCAL = [
+  { k:"10 minutes", h:"Heritage University", p:"Toppenish. A four-year degree without leaving town or paying for housing. Built around first-generation, Native, and Latino students, runs a CAMP program, and is a TheDream.US partner college.",
+    l:"https://heritage.edu/admissions/", ltext:"heritage.edu" },
+  { k:"25 minutes", h:"Yakima Valley College", p:"Yakima and Grandview campuses. Transfer degrees, nursing, dental hygiene, welding, IT, ag, criminal justice. Open enrollment, often free with the WA College Grant, and 150+ foundation scholarships open every December 1.",
+    l:"https://yvcc.edu/admissions/", ltext:"yvcc.edu" },
+  { k:"25 minutes", h:"Perry Technical Institute", p:"Yakima. Two-year hands-on programs in electrical, HVAC, machining, instrumentation, industrial maintenance, IT, and medical office. Strong placement, real waitlists — apply in the fall.",
+    l:"https://www.perrytech.edu/admissions/", ltext:"perrytech.edu" },
+  { k:"45 minutes", h:"Central Washington University", p:"Ellensburg. The closest four-year public. Takes a lot of Yakima Valley students and a lot of YVC transfers, and it's a fraction of the cost of living in Seattle.",
+    l:"https://www.cwu.edu/admissions/", ltext:"cwu.edu" },
+  { k:"90 minutes", h:"WSU Tri-Cities", p:"Richland. A full WSU degree close enough to come home on weekends, with strong engineering, ag, and nursing programs and a much smaller campus than Pullman.",
+    l:"https://tricities.wsu.edu/admissions/", ltext:"tricities.wsu.edu" },
+  { k:"In town", h:"WorkSource & apprenticeships", p:"WorkSource Yakima for job placement and certificate funding; L&I's apprenticeship list for paid training in construction, electrical, manufacturing, and ag equipment. Both free, both year-round.",
+    l:"https://lni.wa.gov/licensing-permits/apprenticeship/become-an-apprentice", ltext:"lni.wa.gov" }
+];
+
+/* ================================================================
+   SECTION 04 — TIMELINE
+   ================================================================ */
+const TIMELINE = [
+  { m:"Aug", h:"Set up the two things everything else runs through",
+    p:"Make an email address you'll still have in five years — not your school account, that gets shut off after graduation. Then fill in the story bank in Section 02. Coca-Cola Scholars is already open and closes September 30." },
+  { m:"Sep", h:"Ask for letters. Send the first big application.",
+    p:"Ask two adults in person, this month, with a packet. The Gates Scholarship closes September 15 and Coca-Cola closes September 30 at 2 p.m. our time. Build your theWashBoard.org profile while you're at it." },
+  { m:"Oct", h:"The most important month of the year",
+    p:"File the FAFSA or WASFA the first week — most aid is first-come. QuestBridge closes October 1, Horatio Alger late October. Start college applications now, not in November." },
+  { m:"Nov", h:"Applications close",
+    p:"UW is November 15 with no early action. Elks MVS and Jack Kent Cooke close this month. HSF and TheDream.US open. If you're doing ROTC, the boards are filling." },
+  { m:"Dec", h:"Two opens and one close",
+    p:"Dell Scholars closes December 1 — the same day the YVC Foundation application opens and QuestBridge announces matches. Over winter break, apply to YVC or Perry Tech if you haven't." },
+  { m:"Jan", h:"The local season starts",
+    p:"WSOS opens January 8. WSU's scholarship priority date is January 31. Go ask the counseling office for the local scholarship list again — new ones show up now that weren't there in September." },
+  { m:"Feb", h:"The biggest month for money you can actually win",
+    p:"WSOS closes February 26 and the YVC Foundation closes February 28. HSF and TheDream.US close. Local club applications are open. Apply to four small ones this month." },
+  { m:"Mar", h:"Ag and local deadlines",
+    p:"The Washington Apple Education Foundation closes around March 1 — if anyone in your household works in fruit, do not miss this one. LULAC and most service club deadlines land now too." },
+  { m:"Apr", h:"Award letters arrive. Read them carefully.",
+    p:"Yakima Federal closes late April. Financial aid offers come in — compare the actual out-of-pocket cost, not the sticker price, and count grants separately from loans. Bring the letters to a counselor if they don't make sense." },
+  { m:"May", h:"Commit, and say thank you",
+    p:"May 1 is national decision day for most four-year colleges. American Indian College Fund priority is May 31. Write to every adult who wrote you a letter and tell them what happened — they want to know." },
+  { m:"Jun", h:"Close the loop",
+    p:"College Bound is June 30. Send your final transcript. Sign up for summer bridge or orientation if your school offers one — students who go are far more likely to still be enrolled at Christmas." }
+];
+
+const STEPS = [
+  { b:"Make an email address you'll still have in five years",
+    s:"Not your school account — that gets shut off after graduation, and colleges and scholarship committees will email that address for years. Use your real name in it." },
+  { b:"Ask two adults for letters in September",
+    s:"A teacher who's seen you work, and one adult who isn't family. Give them a month and a packet, not a week and a text." },
+  { b:"File the FAFSA or WASFA in October",
+    s:"This one form is the gate for almost everything else on this page. You'll need a parent's tax info from two years back; the form pulls it in automatically." },
+  { b:"Write one personal statement and reuse it",
+    s:"About 600 words on something real that happened and what you did about it. Nearly every application here wants a version of it. Section 02 walks you through it." },
+  { b:"Apply for the small local ones too",
+    s:"A $1,000 Rotary award with 12 applicants is worth more of your time than a $40,000 national award with 40,000. Do both. Don't skip the local ones." },
+  { b:"Check this page the first Monday of every month",
+    s:"Deadlines move and new things open. Ten minutes a month is the entire discipline." }
+];
+
+/* ================================================================
+   EDIT ABOVE THIS LINE — the machinery starts here
+   ================================================================ */
+
+const FILTERS = [
+  {key:"all",    label:"All current"},
+  {key:"open",   label:"Open now"},
+  {key:"stem",   label:"STEM & health"},
+  {key:"trades", label:"Trades"},
+  {key:"arts",   label:"Arts & writing"}
+];
+
+const FITS = [
+  {key:"everyone",   label:"Open to most students"},
+  {key:"local",      label:"Washington / local"},
+  {key:"ag",         label:"Latino / farmworker"},
+  {key:"tribal",     label:"Indigenous"},
+  {key:"lowincome",  label:"Financial need"},
+  {key:"firstgen",   label:"First generation"},
+  {key:"disability", label:"Disability"},
+  {key:"lgbtq",      label:"LGBTQ+"},
+  {key:"leadership", label:"Leadership / service"}
+];
+
+const EFFORT = {
+  low:  {cls:"eff-low",  label:"quick · under an hour"},
+  mid:  {cls:"eff-mid",  label:"medium · a few hours"},
+  high: {cls:"eff-high", label:"big · essays + letters"}
+};
+
+const MS_DAY = 86400000;
+const today = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+
+/* ---------- tiny persistent store, safe everywhere ---------- */
+const Store = (() => {
+  let mem = {};
+  let ok = false;
+  try { window.localStorage.setItem("__t","1"); window.localStorage.removeItem("__t"); ok = true; } catch(e){ ok = false; }
+  const KEY = "thsNextSteps";
+  function all(){
+    if(!ok) return mem;
+    try { return JSON.parse(window.localStorage.getItem(KEY) || "{}"); } catch(e){ return {}; }
+  }
+  function save(o){
+    if(!ok){ mem = o; return; }
+    try { window.localStorage.setItem(KEY, JSON.stringify(o)); } catch(e){ mem = o; }
+  }
+  return {
+    get(k, dflt){ const v = all()[k]; return v === undefined ? dflt : v; },
+    set(k, v){ const o = all(); o[k] = v; save(o); },
+    supported: ok
+  };
+})();
+
+let saved   = Store.get("saved", {});
+let doneChk = Store.get("checks", {});
+let bank    = Store.get("bank", {});
+
+function persistSaved(){ Store.set("saved", saved); }
+
+/* ---------- dates ---------- */
+function parseDate(s){ if(!s) return null; const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); }
+function daysUntil(s){ const d = parseDate(s); return d ? Math.round((d - today) / MS_DAY) : null; }
+function fmt(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"long", day:"numeric", year:"numeric"}) : ""; }
+function monthKey(s){ const d = parseDate(s); return d ? d.getFullYear()*100 + d.getMonth() : 999999; }
+function monthLabel(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"long", year:"numeric"}) : "No fixed deadline"; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function idOf(item){ return item.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
+
+function effDate(item){
+  if(item.due) return item.due;
+  if(item.opens && daysUntil(item.opens) > 0) return item.opens;
+  return null;
 }
-fetch("data/scholarships.json").then(r=>r.json()).then(data=>{all=data.scholarships;$("#updated").textContent="Website list last refreshed: "+new Date(data.updatedAt).toLocaleString();render()}).catch(()=>{$("#cards").textContent="The scholarship list could not load. Please refresh."});
+
+function statusOf(item){
+  if(item.planning) return {cls:"planning", n:"Plan ahead", unit:"", order:2};
+  if(!item.due){
+    if(item.opens && daysUntil(item.opens) > 0){
+      const o = daysUntil(item.opens);
+      return {cls:"soon", n:o, unit:o===1?"day to open":"days to open", order:0, days:o};
+    }
+    return {cls:"rolling", n:"Open", unit:"", order:1};
+  }
+  const n = daysUntil(item.due);
+  if(n < 0)   return {cls:"closed", n:"Closed", unit:"", order:3, days:n};
+  if(n <= 14) return {cls:"urgent", n:n, unit:n===1?"day left":"days left", order:0, days:n};
+  if(n <= 45) return {cls:"soon",   n:n, unit:"days left", order:0, days:n};
+  return {cls:"open", n:n, unit:"days left", order:0, days:n};
+}
+
+let activeFilter = "all";
+let activeFits   = new Set();
+let query = "";
+let showPast = false;
+let mineOnly = false;
+
+/* ---------- toast ---------- */
+let toastTimer;
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2400);
+}
+
+/* ---------- tabs ---------- */
+const PANELS = ["deadlines","writing","pathways","timeline"];
+function showPanel(name, push){
+  if(!PANELS.includes(name)) name = "deadlines";
+  PANELS.forEach(p => {
+    document.getElementById("panel-"+p).hidden = (p !== name);
+    document.getElementById("tab-"+p).setAttribute("aria-selected", String(p === name));
+  });
+  if(push && window.history && history.replaceState) history.replaceState(null,"","#"+name);
+  window.scrollTo(0,0);
+}
+document.querySelectorAll(".tab").forEach(b => {
+  b.addEventListener("click", () => showPanel(b.dataset.panel, true));
+});
+window.addEventListener("hashchange", () => showPanel(location.hash.replace("#",""), false));
+
+/* ---------- chips ---------- */
+function buildChips(){
+  const chipBox = document.getElementById("chips");
+  FILTERS.forEach(f => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = f.label;
+    b.setAttribute("aria-pressed", String(f.key === "all"));
+    b.addEventListener("click", () => {
+      activeFilter = f.key;
+      [...chipBox.children].forEach(c => c.setAttribute("aria-pressed","false"));
+      b.setAttribute("aria-pressed","true");
+      render();
+    });
+    chipBox.appendChild(b);
+  });
+
+  const fitBox = document.getElementById("fitchips");
+  FITS.forEach(f => {
+    const b = document.createElement("button");
+    b.className = "chip fit"; b.type = "button"; b.textContent = f.label;
+    b.setAttribute("aria-pressed","false");
+    b.addEventListener("click", () => {
+      if(activeFits.has(f.key)){ activeFits.delete(f.key); b.setAttribute("aria-pressed","false"); }
+      else { activeFits.add(f.key); b.setAttribute("aria-pressed","true"); }
+      render();
+    });
+    fitBox.appendChild(b);
+  });
+}
+
+/* ---------- calendar export ---------- */
+function icsFor(item){
+  const d = item.due; if(!d) return null;
+  const stamp = d.replace(/-/g,"");
+  const end = (() => { const x = parseDate(d); x.setDate(x.getDate()+1);
+    return x.getFullYear() + String(x.getMonth()+1).padStart(2,"0") + String(x.getDate()).padStart(2,"0"); })();
+  const wrap = s => String(s).replace(/[\\;,]/g, m => "\\"+m).replace(/\n/g,"\\n");
+  return [
+    "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//THS Advisory//Next Steps//EN","CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    "UID:" + idOf(item) + "@ths-nextsteps",
+    "DTSTAMP:" + stamp + "T090000Z",
+    "DTSTART;VALUE=DATE:" + stamp,
+    "DTEND;VALUE=DATE:" + end,
+    "SUMMARY:" + wrap("DEADLINE: " + item.name),
+    "DESCRIPTION:" + wrap((item.amount && item.amount !== "—" ? item.amount + "\n" : "") + item.who + "\n\n" + item.link),
+    "URL:" + item.link,
+    "BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.name + " closes in one week"),"END:VALARM",
+    "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.name + " closes tomorrow"),"END:VALARM",
+    "END:VEVENT","END:VCALENDAR"
+  ].join("\r\n");
+}
+function download(filename, text, mime){
+  const blob = new Blob([text], {type: mime || "text/plain;charset=utf-8"});
+  const url  = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = filename; document.body.appendChild(a); a.click();
+  document.body.removeChild(a); setTimeout(() => URL.revokeObjectURL(url), 1500);
+}
+function copyText(text){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(() => toast("Copied."), () => fallbackCopy(text));
+  } else fallbackCopy(text);
+}
+function fallbackCopy(text){
+  const ta = document.createElement("textarea");
+  ta.value = text; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.left = "-9999px";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); toast("Copied."); } catch(e){ toast("Select the text and copy it manually."); }
+  document.body.removeChild(ta);
+}
+
+/* ---------- card ---------- */
+function cardFor(item){
+  const st  = statusOf(item);
+  const id  = idOf(item);
+  const el  = document.createElement("article");
+  const isSaved = !!saved[id];
+  el.className = "card " + st.cls + (isSaved ? " done" : "");
+
+  const bigNumber = typeof st.n === "number"
+    ? `<b>${st.n}</b><small>${st.unit}</small>`
+    : `<b>${st.n}</b>`;
+
+  let dueLine;
+  if(item.planning){
+    dueLine = item.pastDue
+      ? `Past deadline <strong>${fmt(item.pastDue)}</strong> — the new date has not been posted`
+      : esc(item.window || "Expected to return — check the official page");
+  } else if(item.due){
+    dueLine = st.cls === "closed"
+      ? `Closed ${fmt(item.due)} — check the site for the next cycle`
+      : `Due <strong>${fmt(item.due)}</strong>`;
+    if(item.window && st.cls !== "closed") dueLine += ` · ${esc(item.window)}`;
+  } else {
+    dueLine = esc(item.window || "No fixed deadline");
+  }
+  if(item.opens && daysUntil(item.opens) > 0){
+    dueLine = `<span class="warn">Opens ${fmt(item.opens)}</span> · ${dueLine}`;
+  }
+
+  const fitPills = (item.fit || []).filter(f => f !== "everyone").map(f => {
+    const meta = FITS.find(x => x.key === f);
+    return meta ? `<span class="tagpill fit">${esc(meta.label)}</span>` : "";
+  }).join("");
+  const eff = EFFORT[item.effort];
+  const effPill = eff ? `<span class="tagpill ${eff.cls}">${eff.label}</span>` : "";
+
+  el.innerHTML = `
+    <div class="head">
+      <div>
+        <h3 class="name">${esc(item.name)}</h3>
+        <div class="org">${esc(item.org)}</div>
+      </div>
+      <div class="days">${bigNumber}</div>
+    </div>
+    ${item.amount && item.amount !== "—" ? `<div class="amount">${esc(item.amount)}</div>` : ""}
+    <div class="who">${esc(item.who)}</div>
+    ${item.note ? `<div class="who note">${esc(item.note)}</div>` : ""}
+    <div class="meta">${effPill}${fitPills}</div>
+    ${item.confirm ? `<div class="flag">past-cycle information — verify the new date</div>` : ""}
+    <div class="due">${dueLine}<br>
+      <a class="go" href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page &rarr;</a>
+    </div>
+    <div class="cardtools">
+      <label class="track"><input type="checkbox" ${isSaved ? "checked" : ""} data-save="${id}"> On my list</label>
+      ${item.due && st.cls !== "closed" ? `<button class="mini" type="button" data-ics="${id}">Add to calendar</button>` : ""}
+    </div>`;
+
+  el.querySelector("[data-save]").addEventListener("change", e => {
+    if(e.target.checked){ saved[id] = true; toast("Added to your list."); }
+    else { delete saved[id]; }
+    persistSaved(); render(); renderTicker();
+  });
+  const icsBtn = el.querySelector("[data-ics]");
+  if(icsBtn) icsBtn.addEventListener("click", () => {
+    download(id + ".ics", icsFor(item), "text/calendar;charset=utf-8");
+    toast("Downloaded — open it to add the reminder.");
+  });
+  return el;
+}
+
+/* ---------- render board ---------- */
+function render(){
+  const out = document.getElementById("results");
+  out.innerHTML = "";
+
+  let items = DEADLINES.filter(it => {
+    const id = idOf(it);
+    if(mineOnly && !saved[id]) return false;
+    if(activeFilter === "open" && it.planning) return false;
+    if(activeFilter !== "all" && activeFilter !== "open" && !(it.tags || []).includes(activeFilter)) return false;
+    if(activeFits.size){
+      const f = it.fit || [];
+      if(![...activeFits].some(k => f.includes(k))) return false;
+    }
+    const st = statusOf(it);
+    if((st.cls === "closed" || st.cls === "planning") && !showPast) return false;
+    if(query){
+      const hay = [it.name, it.org, it.who, it.note, it.amount, it.window, (it.fit||[]).join(" ")].join(" ").toLowerCase();
+      if(!hay.includes(query)) return false;
+    }
+    return true;
+  });
+
+  document.getElementById("empty").hidden = items.length > 0;
+
+  items.sort((a,b) => {
+    const sa = statusOf(a), sb = statusOf(b);
+    if(sa.order !== sb.order) return sa.order - sb.order;
+    const da = effDate(a), db = effDate(b);
+    if(da && db) return parseDate(da) - parseDate(db);
+    if(da) return -1;
+    if(db) return 1;
+    return 0;
+  });
+
+  const groups = new Map();
+  items.forEach(it => {
+    const st = statusOf(it);
+    const d  = effDate(it);
+    const key = st.cls === "closed" ? "closed" : (st.cls === "planning" ? "planning" : (d ? monthKey(d) : "rolling"));
+    if(!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(it);
+  });
+
+  const ordered = [...groups.keys()].sort((a,b) => {
+    const rank = k => k === "rolling" ? 1e7 : (k === "planning" ? 2e7 : (k === "closed" ? 3e7 : k));
+    return rank(a) - rank(b);
+  });
+
+  ordered.forEach(key => {
+    const list  = groups.get(key);
+    const label = key === "rolling" ? "Open now — no fixed deadline"
+                : key === "planning" ? "Plan ahead — previous cycle information"
+                : key === "closed"  ? "Closed for this cycle"
+                : monthLabel(effDate(list[0]));
+    const head = document.createElement("div");
+    head.className = "month";
+    head.innerHTML = `<h3>${label}</h3><span class="line"></span><span class="count">${list.length}</span>`;
+    out.appendChild(head);
+    const grid = document.createElement("div");
+    grid.className = "grid";
+    list.forEach(it => grid.appendChild(cardFor(it)));
+    out.appendChild(grid);
+  });
+}
+
+/* ---------- ticker ---------- */
+function renderTicker(){
+  const upcoming = DEADLINES
+    .filter(it => it.due && daysUntil(it.due) >= 0)
+    .sort((a,b) => parseDate(a.due) - parseDate(b.due))[0];
+  const n = document.getElementById("tick-n");
+  const w = document.getElementById("tick-what");
+  const count = Object.keys(saved).length;
+  document.getElementById("tick-mine").textContent = count === 1 ? "1 saved" : count + " saved";
+
+  if(!upcoming){
+    n.textContent = "—";
+    w.textContent = "Nothing with a fixed date is open right now. Check the rolling list.";
+    return;
+  }
+  const d = daysUntil(upcoming.due);
+  n.textContent = d === 0 ? "TODAY" : d;
+  n.style.fontSize = d === 0 ? "26px" : "";
+  w.innerHTML = `${esc(upcoming.name)} — ${d === 0 ? "due today" : (d === 1 ? "1 day" : d + " days")} · <a href="${esc(upcoming.link)}" target="_blank" rel="noopener">apply</a>`;
+}
+
+/* ================================================================
+   SECTION 02 RENDERERS
+   ================================================================ */
+function renderBuilder(){
+  const mount = document.getElementById("builder-mount");
+  const box = document.createElement("div");
+  box.className = "builder";
+  box.innerHTML = `
+    <p class="eyebrow" style="margin-bottom:12px">Story bank builder</p>
+    <p style="color:var(--muted);font-size:15.5px">Answer in fragments. Nobody reads this but you — and later, the
+      adult writing your recommendation letter. Everything you type stays on this device and is never sent anywhere.</p>
+    ${BANK.map(f => `
+      <div class="bfield">
+        <label for="b-${f.id}">${esc(f.label)}</label>
+        <div class="hint">${esc(f.hint)}</div>
+        <textarea id="b-${f.id}" data-bank="${f.id}" rows="2"></textarea>
+      </div>`).join("")}
+    <p class="eyebrow" style="margin:18px 0 8px">Your sheet</p>
+    <div class="bout" id="bank-out"></div>
+    <div class="brow">
+      <button class="btn" type="button" id="bank-copy">Copy my sheet</button>
+      <button class="btn ghost" type="button" id="bank-dl">Download as a file</button>
+      <button class="btn ghost" type="button" id="bank-clear">Clear</button>
+    </div>`;
+  mount.appendChild(box);
+
+  const out = box.querySelector("#bank-out");
+  function build(){
+    const lines = [];
+    BANK.forEach(f => {
+      const v = (bank[f.id] || "").trim();
+      if(v) lines.push(f.lead + "\n" + v);
+    });
+    out.textContent = lines.length ? "MY STORY BANK\n\n" + lines.join("\n\n") : "";
+  }
+  box.querySelectorAll("[data-bank]").forEach(ta => {
+    ta.value = bank[ta.dataset.bank] || "";
+    ta.addEventListener("input", () => {
+      bank[ta.dataset.bank] = ta.value;
+      Store.set("bank", bank);
+      build();
+    });
+  });
+  box.querySelector("#bank-copy").addEventListener("click", () => {
+    if(!out.textContent) return toast("Fill in at least one box first.");
+    copyText(out.textContent);
+  });
+  box.querySelector("#bank-dl").addEventListener("click", () => {
+    if(!out.textContent) return toast("Fill in at least one box first.");
+    download("my-story-bank.txt", out.textContent);
+    toast("Downloaded.");
+  });
+  box.querySelector("#bank-clear").addEventListener("click", () => {
+    if(!confirm("Erase everything you've typed in the story bank?")) return;
+    bank = {}; Store.set("bank", bank);
+    box.querySelectorAll("[data-bank]").forEach(t => t.value = "");
+    build();
+  });
+  build();
+}
+
+function renderStructure(){
+  const m = document.getElementById("structure-mount");
+  const wrap = document.createElement("div");
+  wrap.innerHTML = STRUCTURE.map((s,i) => `
+    <details class="acc"${i===0?" open":""}>
+      <summary><span>${i+1}. ${esc(s.move)}</span><span class="tagpill" style="margin-left:auto">${esc(s.words)}</span></summary>
+      <div class="acc-body">
+        <p>${s.what}</p>
+        <div class="decode"><strong>Self-test:</strong> ${s.test}</div>
+      </div>
+    </details>`).join("");
+
+  const draft = document.createElement("div");
+  draft.className = "builder";
+  draft.innerHTML = `
+    <p class="eyebrow" style="margin-bottom:10px">Draft space</p>
+    <p style="color:var(--muted);font-size:15.5px">Write it here to see the word count move, then paste it into a
+      real document. This box saves to your device but it is not a backup — keep the real draft in Google Docs.</p>
+    <div class="bfield" style="margin-bottom:8px">
+      <label class="sr" for="draft">Your draft</label>
+      <textarea id="draft" rows="10" placeholder="Open inside a moment. A specific day, a specific place, something happening."></textarea>
+    </div>
+    <div class="brow">
+      <button class="btn ghost" type="button" id="draft-copy">Copy draft</button>
+      <span class="counter" id="wc"><b>0</b> words · aim for 500–600</span>
+    </div>`;
+  wrap.appendChild(draft);
+  m.appendChild(wrap);
+
+  const ta = draft.querySelector("#draft");
+  const wc = draft.querySelector("#wc");
+  ta.value = Store.get("draft","");
+  function count(){
+    const n = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
+    wc.innerHTML = `<b>${n}</b> words · aim for 500–600`;
+    wc.className = "counter" + (n > 650 ? " over" : (n >= 450 ? " good" : ""));
+  }
+  ta.addEventListener("input", () => { Store.set("draft", ta.value); count(); });
+  draft.querySelector("#draft-copy").addEventListener("click", () => {
+    if(!ta.value.trim()) return toast("Nothing to copy yet.");
+    copyText(ta.value);
+  });
+  count();
+}
+
+function renderPrompts(){
+  const m = document.getElementById("prompts-mount");
+  m.innerHTML = PROMPTS.map(p => `
+    <details class="acc">
+      <summary>${esc(p.q)}</summary>
+      <div class="acc-body">
+        <div class="decode"><strong>What they're actually scoring:</strong> ${p.real}</div>
+        <p>${p.body}</p>
+        <p style="color:var(--crimson);font-weight:600;margin-bottom:0">${p.dont}</p>
+      </div>
+    </details>`).join("");
+}
+
+function renderExamples(){
+  const m = document.getElementById("examples-mount");
+  m.innerHTML = EXAMPLES.map((e,i) => `
+    <details class="acc"${i===0?" open":""}>
+      <summary>${esc(e.title)}</summary>
+      <div class="acc-body">
+        <div class="ba">
+          <div class="weak"><span class="lab">Weak</span>${esc(e.weak)}</div>
+          <div class="strong"><span class="lab">Strong</span>${esc(e.strong)}</div>
+        </div>
+        <p style="margin-bottom:0;color:var(--muted);font-size:15px"><strong style="color:var(--ink)">Why:</strong> ${esc(e.why)}</p>
+      </div>
+    </details>`).join("");
+}
+
+function renderRecs(){
+  const m = document.getElementById("recs-mount");
+  const cards = document.createElement("div");
+  cards.className = "wcards";
+  cards.innerHTML = RECS.map((r,i) => `
+    <div class="wcard">
+      <div class="kicker">Step ${i+1}</div>
+      <h4>${esc(r.h)}</h4>
+      <p>${esc(r.p)}</p>
+    </div>`).join("");
+  m.appendChild(cards);
+
+  const mail = document.createElement("div");
+  mail.className = "builder";
+  mail.style.marginTop = "16px";
+  mail.innerHTML = `
+    <p class="eyebrow" style="margin-bottom:10px">The email to send the same day you ask</p>
+    <div class="bout" id="recmail"></div>
+    <div class="brow"><button class="btn" type="button" id="rec-copy">Copy this email</button></div>`;
+  m.appendChild(mail);
+  mail.querySelector("#recmail").textContent = RECMAIL;
+  mail.querySelector("#rec-copy").addEventListener("click", () => copyText(RECMAIL));
+}
+
+function renderChecklist(mountId, list, storeKey){
+  const ul = document.getElementById(mountId);
+  list.forEach((c,i) => {
+    const key = storeKey + "-" + i;
+    const li = document.createElement("li");
+    const on = !!doneChk[key];
+    li.innerHTML = `<input type="checkbox" id="${key}" ${on ? "checked" : ""}>
+      <label for="${key}"><b>${esc(c.b)}</b><span>${esc(c.s)}</span></label>`;
+    li.querySelector("input").addEventListener("change", e => {
+      if(e.target.checked) doneChk[key] = true; else delete doneChk[key];
+      Store.set("checks", doneChk);
+    });
+    ul.appendChild(li);
+  });
+}
+
+/* ================================================================
+   SECTION 03 RENDERERS
+   ================================================================ */
+function renderPaths(){
+  const box = document.getElementById("paths");
+  PATHWAYS.forEach(p => {
+    const d = document.createElement("div");
+    d.className = "path";
+    d.innerHTML = `<h4>${esc(p.title)}</h4><p class="fast">${esc(p.fast)}</p><p>${esc(p.blurb)}</p>
+                   <ul>${p.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>`;
+    box.appendChild(d);
+  });
+}
+
+function renderCompare(){
+  const m = document.getElementById("cmp-mount");
+  m.innerHTML = `<table class="cmp">
+    <thead><tr>${COMPARE.head.map(h => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead>
+    <tbody>${COMPARE.rows.map(r => `<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody>
+  </table>`;
+}
+
+function renderQuiz(){
+  const box = document.getElementById("quiz");
+  const answers = new Array(QUIZ.length).fill(null);
+  box.innerHTML = QUIZ.map((q,qi) => `
+    <div class="qblock">
+      <p class="q">${qi+1}. ${esc(q.q)}</p>
+      <div class="opts" role="group" aria-label="${esc(q.q)}">
+        ${q.opts.map((o,oi) => `<button class="opt" type="button" data-q="${qi}" data-o="${oi}" aria-pressed="false">${esc(o.t)}</button>`).join("")}
+      </div>
+    </div>`).join("") + `<div id="qres"></div>`;
+
+  const res = box.querySelector("#qres");
+  box.querySelectorAll(".opt").forEach(b => {
+    b.addEventListener("click", () => {
+      const qi = +b.dataset.q;
+      box.querySelectorAll(`.opt[data-q="${qi}"]`).forEach(x => x.setAttribute("aria-pressed","false"));
+      b.setAttribute("aria-pressed","true");
+      answers[qi] = +b.dataset.o;
+      score();
+    });
+  });
+
+  function score(){
+    if(answers.some(a => a === null)){
+      res.innerHTML = `<p style="color:var(--muted);font-size:15px;margin:0">Answer all four and two doors will come up here.</p>`;
+      return;
+    }
+    const tot = {four:0,two:0,trades:0,military:0,work:0};
+    answers.forEach((a,qi) => {
+      const s = QUIZ[qi].opts[a].s;
+      Object.keys(s).forEach(k => tot[k] += s[k]);
+    });
+    const top = Object.keys(tot).sort((a,b) => tot[b] - tot[a]).slice(0,2);
+    res.innerHTML = top.map((k,i) => {
+      const a = QUIZ_ADVICE[k];
+      return `<div class="qresult">
+        <p class="eyebrow" style="margin-bottom:4px">${i === 0 ? "Start researching this one" : "And look hard at this one too"}</p>
+        <h4>${esc(a.t)}</h4>
+        <ol>${a.next.map(n => `<li>${esc(n)}</li>`).join("")}</ol>
+      </div>`;
+    }).join("") + `<p style="font-size:14.5px;color:var(--muted);margin:12px 0 0">This is a starting point, not a verdict.
+      Plenty of people here start at YVC and finish at a university, or work two years and come back. None of these doors locks behind you.</p>`;
+  }
+  score();
+}
+
+function renderLocal(){
+  const m = document.getElementById("local-mount");
+  m.innerHTML = LOCAL.map(l => `
+    <div class="wcard">
+      <div class="kicker">${esc(l.k)} away</div>
+      <h4>${esc(l.h)}</h4>
+      <p>${esc(l.p)}</p>
+      <a href="${esc(l.l)}" target="_blank" rel="noopener" style="font-family:'DM Mono',monospace;font-size:13px">${esc(l.ltext)} &rarr;</a>
+    </div>`).join("");
+}
+
+/* ================================================================
+   SECTION 04 RENDERER
+   ================================================================ */
+function renderTimeline(){
+  const ol = document.getElementById("timeline");
+  const nowM = today.toLocaleDateString("en-US",{month:"short"});
+  TIMELINE.forEach(t => {
+    const li = document.createElement("li");
+    li.setAttribute("data-m", t.m);
+    if(t.m === nowM) li.className = "now";
+    li.innerHTML = `<h4>${esc(t.h)}${t.m === nowM ? '<span class="nowtag">this month</span>' : ""}</h4><p>${esc(t.p)}</p>`;
+    ol.appendChild(li);
+  });
+}
+
+/* ================================================================
+   BOOT
+   ================================================================ */
+function renderSite(){
+  document.getElementById("site-school").textContent  = SITE.school;
+  document.getElementById("site-eyebrow").textContent = SITE.line;
+  document.title = "Next Steps — " + SITE.school;
+  if(SITE.logo){
+    const b = document.getElementById("site-badge");
+    b.style.background = "transparent"; b.style.width = "62px"; b.style.height = "62px";
+    b.innerHTML = `<img src="${SITE.logo}" alt="${SITE.logoAlt || ""}">`;
+  }
+  const t = document.getElementById("site-teacher");
+  if(SITE.teacher) t.textContent = SITE.teacher; else t.remove();
+}
+
+document.getElementById("q").addEventListener("input", e => { query = e.target.value.toLowerCase().trim(); render(); });
+document.getElementById("showPast").addEventListener("change", e => { showPast = e.target.checked; render(); });
+document.getElementById("mineOnly").addEventListener("change", e => { mineOnly = e.target.checked; render(); });
+
+function boot(){
+  renderSite();
+  buildChips();
+  renderTicker();
+  render();
+  renderBuilder();
+  renderStructure();
+  renderPrompts();
+  renderExamples();
+  renderRecs();
+  renderChecklist("finalcheck", FINALCHECK, "final");
+  renderChecklist("steps", STEPS, "steps");
+  renderPaths();
+  renderCompare();
+  renderQuiz();
+  renderLocal();
+  renderTimeline();
+  showPanel(location.hash.replace("#","") || "deadlines", false);
+}
+
+function sourceLabel(item){
+  if(item.organization !== "Washington GEAR UP archive") return item.organization || "Scholarship sponsor";
+  try {
+    const host = new URL(item.url).hostname.replace(/^www\./, "").replace(/\.(org|com|net|gov|edu)$/, "");
+    return host.split(/[.-]/).filter(Boolean).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(" ");
+  } catch(e){ return "Scholarship sponsor"; }
+}
+
+function mapScholarship(item){
+  const labels = (item.tags || []).map(String);
+  const hay = (labels.join(" ") + " " + item.name + " " + item.eligibility).toLowerCase();
+  const fit = [];
+  const addFit = key => { if(!fit.includes(key)) fit.push(key); };
+  if(/open to most|no essay/.test(hay)) addFit("everyone");
+  if(/washington|local yakima|yakima county/.test(hay.replace(/\//g, " "))) addFit("local");
+  if(/latino|hispanic|farmworker|farm worker|agriculture|migrant/.test(hay)) addFit("ag");
+  if(/indigenous|yakama|native american|tribal/.test(hay)) addFit("tribal");
+  if(/financial need|low-income|low income|poverty|homeless/.test(hay)) addFit("lowincome");
+  if(/first generation|first-generation/.test(hay)) addFit("firstgen");
+  if(/disability|disabled|blind|deaf/.test(hay)) addFit("disability");
+  if(/lgbtq|queer|gay|lesbian/.test(hay)) addFit("lgbtq");
+  if(/leadership|service|advocacy/.test(hay)) addFit("leadership");
+  if(!fit.length) addFit("everyone");
+
+  const tags = ["money"];
+  if(/stem|health|science|engineering|technology|computer|medical/.test(hay)) tags.push("stem");
+  if(/trade|vocational|technical|apprentice|welding|automotive|construction/.test(hay)) tags.push("trades");
+  if(/arts|writing|essay|poetry|poem|music|dance|theater|photo/.test(hay)) tags.push("arts");
+  if(String(item.status).startsWith("Confirmed")) tags.push("open");
+
+  const planning = !String(item.status).startsWith("Confirmed");
+  const noEssay = /no essay|under an hour|quick/.test(hay);
+  const highEffort = /recommendation|transcript|multiple essays|full four-year|full ride/.test(hay);
+  return {
+    name: item.name,
+    org: sourceLabel(item),
+    amount: item.award || "See sponsor details",
+    who: item.eligibility || "Review the sponsor's current eligibility rules.",
+    due: planning ? null : (item.deadline || null),
+    pastDue: planning ? (item.lastYearDeadline || item.deadline || null) : null,
+    window: planning
+      ? (item.expectedWindow || "Expected to return — check the official page")
+      : (item.expectedWindow || "Open now"),
+    tags,
+    fit,
+    effort: noEssay ? "low" : (highEffort ? "high" : "mid"),
+    link: item.url,
+    note: item.fit || "",
+    planning,
+    confirm: planning
+  };
+}
+
+(function(){
+  if(location.protocol === "file:") return boot();
+  fetch("data/scholarships.json", {cache:"no-store"})
+    .then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load")))
+    .then(data => {
+      const rows = data && Array.isArray(data.scholarships) ? data.scholarships : [];
+      if(rows.length) DEADLINES.splice(0, DEADLINES.length, ...rows.map(mapScholarship));
+      const refreshed = document.getElementById("data-updated");
+      if(refreshed && data.updatedAt){
+        refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
+      }
+    })
+    .catch(() => {
+      const refreshed = document.getElementById("data-updated");
+      if(refreshed) refreshed.innerHTML = "<strong>Scholarship list unavailable.</strong> Refresh the page or try again later.";
+    })
+    .then(boot);
+})();
 </script>
-</body></html>
+</body>
+</html>
