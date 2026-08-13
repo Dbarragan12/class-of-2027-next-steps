@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T22:45:56.475Z",
+  "updatedAt": "2026-08-13T22:56:11.615Z",
   "publicationRule": "Only opportunities verified for Toppenish High School students. Current official opportunities need a current deadline or an open/rolling application; recurring plan-ahead items need an official source, a prior-cycle deadline, and an explicit warning that the next date may change.",
   "scholarships": [
     {
@@ -23,7 +23,7 @@
         "local",
         "lowincome"
       ],
-      "whyFit": "High-priority local scholarship with an official 2027 opening date and deadline already posted.",
+      "whyFit": "Toppenish residents qualify because Toppenish is in Yakima County. This is the countywide Mollie Davis program—not Yakima Rotary's school-limited Academic or Vocational scholarships.",
       "lastChecked": "2026-08-13"
     },
     {
@@ -45,14 +45,14 @@
         "local",
         "leadership"
       ],
-      "whyFit": "Major national scholarship for students with real leadership, service, work, or school-community impact. The first stage does not require an essay, transcript, or recommendations.",
+      "whyFit": "Toppenish High School qualifies geographically because the program accepts students attending high school in any U.S. state. Individual applicants must also meet the listed citizenship/residency, 3.0 GPA, graduation-year, college-plan, and Coca-Cola family-employment rules.",
       "lastChecked": "2026-08-13"
     },
     {
       "name": "Washington State Opportunity Scholarship — Career & Technical",
       "organization": "Washington State Opportunity Scholarship",
       "award": "Up to $1,500 per quarter",
-      "eligibility": "Washington residents pursuing an eligible associate degree, certificate, or apprenticeship in a high-demand trade, STEM, or health-care field.",
+      "eligibility": "Washington residents within the income limit who will earn a high school credential by June, complete FAFSA or WASFA, and pursue an eligible associate degree, certificate, or apprenticeship. Applicants cannot already hold a bachelor's degree or plan to move directly into one after the funded program.",
       "url": "https://waopportunityscholarship.org/applicants/career-technical/",
       "status": "Confirmed for 2027",
       "opens": "2026-09-29",
@@ -67,14 +67,14 @@
       "fit": [
         "local"
       ],
-      "whyFit": "Strong fit for students choosing YVC, a technical college, or an eligible apprenticeship. FAFSA/WASFA is also due by the scholarship deadline.",
+      "whyFit": "Toppenish students qualify geographically as Washington residents; Yakima County also meets the Rural Jobs Initiative county rule. Each student still needs an eligible program and must meet income, financial-aid, and education-plan requirements.",
       "lastChecked": "2026-08-13"
     },
     {
       "name": "Elks Most Valuable Student Scholarship",
       "organization": "Elks National Foundation",
       "award": "500 four-year awards; $4,000 to $30,000 total",
-      "eligibility": "Current high-school seniors who are U.S. citizens and will enroll full time in a four-year undergraduate program. No Elks family connection is required. Selection uses academics, leadership, and financial need.",
+      "eligibility": "Current high school seniors who are U.S. citizens and will enroll full time in an accredited U.S. four-year undergraduate degree program. Permanent resident status alone does not qualify. No Elks family connection is required; judging considers academics, leadership, and financial need.",
       "url": "https://www.elks.org/scholars/scholarships/mvs.cfm",
       "status": "Confirmed for 2027",
       "opens": null,
@@ -92,14 +92,14 @@
         "firstgen",
         "leadership"
       ],
-      "whyFit": "A substantial national scholarship with local, district, state, and national stages. It is worth applying even without an Elks connection.",
+      "whyFit": "Toppenish High School qualifies geographically because this is a national scholarship for U.S. high school seniors. Individual applicants must be U.S. citizens and plan a full-time four-year degree.",
       "lastChecked": "2026-08-13"
     },
     {
       "name": "BigFuture Scholarship: Start Your Scholarship List (Class of 2027)",
       "organization": "College Board BigFuture",
       "award": "Monthly drawings for $500 and $40,000",
-      "eligibility": "Class of 2027 students in the U.S. with a College Board account who plan to pursue an associate or bachelor's degree. Save three scholarships in the BigFuture Scholarship Search to earn drawing entries. No essay, GPA, or test score required.",
+      "eligibility": "U.S. residents in the Class of 2027 attending school in the U.S., a U.S. territory or possession, or a DoDEA school; must have a College Board account and plan to seek an associate or bachelor's degree. Save three scholarships to earn drawing entries. No essay, GPA, or test score required.",
       "url": "https://bigfuture.collegeboard.org/scholarships/bigfuture-scholarships-start-your-scholarship-list-class-of-2027",
       "status": "Confirmed for 2027",
       "opens": null,
@@ -115,15 +115,15 @@
       "fit": [
         "local"
       ],
-      "whyFit": "A fast, low-barrier starting step. Students from families earning under $60,000 can qualify for double entries.",
+      "whyFit": "Toppenish High School qualifies because the drawing accepts Class of 2027 students attending school in the U.S. Students must be U.S. residents and have a College Board account.",
       "lastChecked": "2026-08-13"
     },
     {
       "name": "QuestBridge National College Match",
       "organization": "QuestBridge",
       "award": "Full four-year scholarships at participating partner colleges",
-      "eligibility": "High-achieving high school seniors from low-income households; strong academics and financial need.",
-      "url": "https://apply.questbridge.org/portal/apply",
+      "eligibility": "High-achieving, low-income seniors currently attending high school in the U.S. and planning college the fall after graduation. QuestBridge has no absolute GPA or income cutoff, but finalists typically have very strong academics and substantial financial need.",
+      "url": "https://www.questbridge.org/apply-to-college/programs/national-college-match/apply",
       "status": "Confirmed for 2027",
       "opens": null,
       "deadline": "2026-10-01",
@@ -135,7 +135,7 @@
       "fit": [
         "lowincome"
       ],
-      "whyFit": "A high-value full-ride pathway for students with strong academic records and significant financial need. The official application portal currently says the National College Match is open.",
+      "whyFit": "Toppenish High School qualifies because the National College Match accepts any senior currently attending high school in the U.S. Individual selection remains highly competitive and based on academics, finances, and personal qualities.",
       "lastChecked": "2026-08-13"
     },
     {
@@ -159,7 +159,7 @@
         "local",
         "lowincome"
       ],
-      "whyFit": "Toppenish High School students qualify under the statewide Washington eligibility rule.",
+      "whyFit": "Toppenish High School qualifies because the official application accepts high school seniors throughout Washington. Individual students must also meet the citizenship/green-card and postsecondary-application requirements.",
       "lastChecked": "2026-08-13"
     },
     {
@@ -181,7 +181,7 @@
         "ag",
         "lowincome"
       ],
-      "whyFit": "Strong Toppenish fit for students enrolled in Migrant Education who meet the mobility requirement. National program; no excluded local school or region.",
+      "whyFit": "Toppenish High School is not excluded: this is a national program for all Title I, Part C-eligible graduating seniors. Only Toppenish students who are enrolled in Migrant Education and meet the program's mobility and financial-need requirements should apply.",
       "lastChecked": "2026-08-13"
     }
   ]
