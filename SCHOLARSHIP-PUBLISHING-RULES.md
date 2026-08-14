@@ -21,7 +21,9 @@ Every public scholarship must have all six:
 5. Controlled-vocabulary `tags` and `fit` arrays after normalization.
 6. A `lastChecked` date. Recheck records older than about 60 days before publishing again.
 
-Long-running expected scholarships may use 2025–26 school-year information, or the most recent official cycle available, to help students prepare before the new cycle is released. They must include a prior deadline, sponsor link, eligibility summary, controlled tags, and last-checked date. They must be labeled **Expected - not guaranteed** and warn that the deadline, award, eligibility rules, and even whether the program returns may change.
+Long-running expected scholarships may use 2025–26 school-year information, or the most recent official cycle available, to help students prepare before the new cycle is released. They must include a prior deadline, sponsor link, eligibility summary, controlled tags, and last-checked date. The card should show the expected opening month/year—or the recurring opening date when the sponsor publishes one—and warn that the deadline, award, eligibility rules, and even whether the program returns may change.
+
+Geographic reach is intentionally broad: Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. A narrow opportunity is still publishable when at least one Toppenish student may qualify, but the card must name the qualifying condition plainly (such as a specific program, family employer, tribal affiliation, identity, or life experience). “Broad access” does not mean every student qualifies.
 
 Candidates that fail any gate remain unpublished. Never bulk-import an archive or aggregator.
 
