@@ -337,7 +337,8 @@ main{padding:0 0 10px}
 .card.closed{border-left-color:var(--gray20); background:#fafafa}
 .card.closed .name,.card.closed .days{opacity:.55}
 .card.planning{border-left-color:var(--rose); background:#fffafb}
-.card.planning .days b{font-size:17px; color:var(--rose); padding-top:8px}
+.card.planning .days b{font-size:17px; color:var(--rose); padding-top:8px; line-height:1.05}
+.card.planning .days small{color:var(--rose)}
 .card.done{background:var(--sage-bg); border-left-color:var(--sage)}
 .card.done .name{text-decoration:line-through; text-decoration-thickness:2px; opacity:.7}
 
@@ -648,7 +649,7 @@ footer p{margin:0 0 10px}
         <div>
           <div class="lbl" id="calendar-kicker">Important dates for seniors</div>
           <h2 id="calendar-title">Loading important dates…</h2>
-          <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Expected dates stay out until they are verified.</p>
+          <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Planning dates stay out until the sponsor verifies them.</p>
         </div>
         <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
       </div>
@@ -776,8 +777,8 @@ footer p{margin:0 0 10px}
     <details class="notice-details">
       <summary>How to use this list</summary>
       <div class="notice-body">
-        <p><strong>Open opportunities come first.</strong> After those, expected scholarships are ordered by their estimated opening date based on prior cycles and sponsor history.</p>
-        <p><strong>Expected does not mean guaranteed.</strong> These cards use the most recent school-year information available so students can prepare early. Dates, awards, eligibility, and whether a program returns can change. Always open the sponsor's page before applying.</p>
+        <p><strong>Open opportunities come first.</strong> After those, recurring scholarships show a real planning date: either the sponsor's usual opening date or an estimated month and year based on the most recent cycle. The new cycle is not confirmed until the sponsor releases it.</p>
+        <p><strong>One student is enough.</strong> This list includes opportunities from Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, and national sponsors when at least one Toppenish student may qualify. Read the exact eligibility line because some awards are narrow—for example, a specific program, family job, identity, or life experience.</p>
       </div>
     </details>
     <details class="notice-details">
@@ -810,7 +811,7 @@ footer p{margin:0 0 10px}
     <details class="notice-details" style="margin-top:30px;border-left-color:var(--crimson)">
       <summary>Trust, updates, and scholarship safety</summary>
       <div class="notice-body">
-        <p><strong>Trust rule:</strong> every scholarship on this board has been checked to make sure a Toppenish High School student can qualify by school and location. Confirmed opportunities use current sponsor information. Expected opportunities use the most recent cycle for planning and clearly warn that the new details are not guaranteed.</p>
+        <p><strong>Trust rule:</strong> every scholarship on this board has been checked for a possible Toppenish student fit. Confirmed opportunities use current sponsor information. Planning opportunities use the most recent cycle for preparation and clearly identify dates that still need sponsor confirmation.</p>
         <p id="data-updated"><strong>Last refreshed:</strong> Loading scholarship data…</p>
         <p><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
       </div>
@@ -1517,6 +1518,7 @@ function daysUntil(s){ const d = parseDate(s); return d ? Math.round((d - today)
 function fmt(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"long", day:"numeric", year:"numeric"}) : ""; }
 function monthKey(s){ const d = parseDate(s); return d ? d.getFullYear()*100 + d.getMonth() : 999999; }
 function monthLabel(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"long", year:"numeric"}) : "No fixed deadline"; }
+function monthYearLabel(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"short", year:"numeric"}) : "Check date"; }
 function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function idOf(item){ return item.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
 
@@ -1528,7 +1530,10 @@ function effDate(item){
 
 function statusOf(item){
   if(item.kind === "action") return {cls:"rolling", n:"Start here", unit:"", order:-2};
-  if(item.planning) return {cls:"planning", n:"Expected", unit:"", order:2};
+  if(item.planning){
+    const label = item.openLabel || monthYearLabel(item.opens);
+    return {cls:"planning", n:label, unit:item.openLabel ? "annual opening" : "estimated opening", order:2};
+  }
   if(item.opens && daysUntil(item.opens) > 0){
     const o = daysUntil(item.opens);
     return {cls:"soon", n:o, unit:o===1?"day to open":"days to open", order:0, days:o};
@@ -1613,7 +1618,7 @@ const START_RESPONSES = {
   unsure:{title:"Start with Choose a path.",text:"You do not need a final career answer. Pick two possibilities and let the four-question guide help you compare them.",button:"Choose a path",target:"pathways"},
   money:{title:"Start with Pay for School.",text:"FAFSA and WASFA are free applications. You can ask which one fits before you apply, and you do not have to choose a college first.",button:"Pay for School",target:"deadlines"},
   path:{title:"You are in the right place.",text:"The path finder compares college, YVC, trades, apprenticeships, military, and work without ranking one above the others.",button:"Open the path finder",target:"pathways"},
-  scholarships:{title:"Start with Scholarships.",text:"Open opportunities appear first, followed by expected scholarships ordered by estimated opening date. Save the ones that fit and check the sponsor's page before applying.",button:"Find scholarships",target:"scholarships"},
+  scholarships:{title:"Start with Scholarships.",text:"Open opportunities appear first, followed by planning opportunities ordered by their opening date. Save the ones that fit and check the sponsor's page before applying.",button:"Find scholarships",target:"scholarships"},
   apply:{title:"Start with your application folder.",text:"Open the Apply and Write section for essays, recommendations, transcripts, and a private story builder.",button:"Apply and Write",target:"writing"},
   help:{title:"Questions are a good starting point.",text:"Students and parents can message Mr. Barragan through ParentSquare. You do not have to explain everything perfectly to ask for help.",button:"See help options",target:"help"}
 };
@@ -1706,7 +1711,7 @@ function cardFor(item){
   if(item.planning){
     dueLine = item.pastDue
       ? `Prior-cycle deadline <strong>${fmt(item.pastDue)}</strong> — planning only; the new date is not guaranteed`
-      : esc(item.window || "Expected to return — check the official page");
+      : esc(item.window || "New cycle not released yet — check the official page");
   } else if(item.due){
     dueLine = st.cls === "closed"
       ? `Closed ${fmt(item.due)} — check the site for the next cycle`
@@ -1749,7 +1754,7 @@ function cardFor(item){
     ${item.note ? `<div class="who note">${esc(item.note)}</div>` : ""}
     <div class="who note"><strong>What you'll need:</strong> ${esc(prep)}</div>
     <div class="meta">${effPill}${fitPills}</div>
-    ${item.confirm ? `<div class="flag">expected to return · based on 2025–26 or the most recent official cycle · not guaranteed</div>` : ""}
+    ${item.confirm ? `<div class="flag">planning only · based on 2025–26 or the most recent official cycle · not guaranteed</div>` : ""}
     <div class="due">${dueLine}<br>
       <a class="go" href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page &rarr;</a>
       ${item.lastChecked ? `<br><small>Official source checked ${esc(fmt(item.lastChecked))}</small>` : ""}
@@ -2379,11 +2384,12 @@ function mapScholarship(item){
     org: sourceLabel(item),
     amount: item.award || "See sponsor details",
     who: item.eligibility || "Review the sponsor's current eligibility rules.",
-    opens: planning ? (item.predictedOpen || predictedOpenDate(item)) : (item.opens || null),
+    opens: planning ? (item.expectedOpen || item.predictedOpen || predictedOpenDate(item)) : (item.opens || null),
+    openLabel: planning ? (item.openLabel || null) : null,
     due: planning ? null : (item.deadline || null),
     pastDue: planning ? (item.lastYearDeadline || item.deadline || null) : null,
     window: planning
-      ? (item.expectedWindow || "Expected to return — check the official page")
+      ? (item.expectedWindow || "New cycle not released yet — check the official page")
       : (item.expectedWindow || "Open now"),
     tags,
     fit,
