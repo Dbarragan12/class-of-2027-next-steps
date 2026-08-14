@@ -22,8 +22,9 @@ This project stays on GitHub. Email subscribers and the email automation belong 
 6. In the GitHub repository, add these Actions secrets under **Settings → Secrets and variables → Actions**:
    - `SCHOLARSHIP_UPDATES_WEBHOOK`: the Apps Script web-app URL
    - `SCHOLARSHIP_UPDATES_TOKEN`: the exact same value as `WEBHOOK_TOKEN`
-7. Create a Google Form for opt-in subscriptions. Link its responses to the private Sheet and make sure the subscriber explicitly agrees to receive updates.
-8. Add the Form URL to the public finder only after the district approves the form's sharing and data-retention settings.
+7. Create a Google Form for opt-in subscriptions. Use questions named `Email address`, `Name (optional)`, and `I agree to receive confirmed scholarship updates.` Link its responses to the private Sheet.
+8. Return to Apps Script, select `setupFormTrigger`, and run it once. This copies consenting form responses into the private `Subscribers` tab.
+9. Add the Form URL to the public finder only after the district approves the form's sharing and data-retention settings.
 
 ## Subscriber sheet rules
 
