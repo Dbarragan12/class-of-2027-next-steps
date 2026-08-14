@@ -2,6 +2,9 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 
 const data=JSON.parse(await readFile("data/scholarships.json","utf8"));
+if (!Array.isArray(data.scholarships) || data.scholarships.length === 0) {
+  throw new Error("Refusing to publish an empty scholarship list. Restore or add scholarships manually before running the nightly check.");
+}
 let previous={checks:[]};
 try { previous=JSON.parse(await readFile("data/source-checks.json","utf8")); } catch {}
 const oldByUrl=new Map(previous.checks.map(item=>[item.url,item]));
@@ -27,7 +30,7 @@ for (const item of data.scholarships) {
 }
 
 const note=review.length
-  ? "# Scholarship sources needing review\n\nOne or more official sources changed or could not be verified during the nightly check. Open each official page and update the matching Airtable record before changing its status to **Confirmed for 2027**.\n\n"+review.map(item=>`- [${item.name}](${item.url}) — ${item.reason}; check result: ${item.status}`).join("\n")+"\n"
+  ? "# Scholarship sources needing review\n\nOne or more official sources changed or could not be verified during the nightly check. Open each official page and update the matching record in `data/scholarships.json` before changing its status to **Confirmed for 2027**. The nightly process does not change deadlines or statuses automatically.\n\n"+review.map(item=>`- [${item.name}](${item.url}) — ${item.reason}; check result: ${item.status}`).join("\n")+"\n"
   : "# Scholarship sources needing review\n\nNo changes were detected in tonight's official-source check.\n";
 
 await mkdir("data",{recursive:true});
