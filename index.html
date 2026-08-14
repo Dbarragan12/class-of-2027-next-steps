@@ -88,8 +88,6 @@ p{margin:0 0 12px}
 .welcome-response strong,.welcome-response span{display:block}
 .welcome-response strong{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;margin-bottom:3px}
 .welcome-response span{color:var(--muted);font-size:15px}
-.welcome-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
-.welcome-card.small p:not(.eyebrow){color:var(--muted);font-size:15px}
 .requirements-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:17px}
 .requirement-card{background:#fff;border:1px solid var(--gray20);border-radius:10px;padding:17px;box-shadow:var(--shadow)}
 .requirement-card h4{font-size:19px;margin-bottom:6px}
@@ -138,11 +136,16 @@ p{margin:0 0 12px}
 .cta-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
 .cta-row a{text-decoration:none}
 @media(max-width:820px){.start-grid{grid-template-columns:repeat(2,1fr)}.aid-grid{grid-template-columns:1fr}}
-@media(max-width:700px){.welcome-grid,.requirements-grid{grid-template-columns:1fr}}
+@media(max-width:700px){
+  .requirements-grid{grid-template-columns:1fr}
+  .wildcats-script{width:110px;right:18px;top:22px}
+  .lockup{max-width:calc(100% - 125px)}
+}
 @media(max-width:560px){
   .start-grid,.help-grid,.hidden-curriculum,.vocab,.plan-controls{grid-template-columns:1fr}
   .current-action{grid-template-columns:1fr;padding:19px}.start-step{min-height:0}
   .help-fab{right:12px;bottom:12px;padding:11px 14px}
+  .wildcats-script{display:none}
 }
 
 /* ============================================================
@@ -160,6 +163,8 @@ header.top::after{
 header.top .wrap{position:relative; z-index:1}
 header.top .eyebrow{color:#e6c3cb}
 .lockup{display:flex; align-items:center; gap:13px; margin-bottom:14px}
+.wildcats-script{position:absolute;right:20px;top:24px;width:150px;opacity:.96}
+.wildcats-script img{display:block;width:100%;height:auto}
 .badge{
   flex:0 0 auto; width:48px; height:48px; background:#fff; color:var(--crimson);
   display:grid; place-items:center; border-radius:5px; overflow:hidden;
@@ -609,6 +614,7 @@ footer p{margin:0 0 10px}
         <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Mr. Barragan's Advisory and the Class of 2027</p>
       </div>
     </div>
+    <div class="wildcats-script" aria-hidden="true"><img src="assets/wildcats-script.png" alt=""></div>
     <div class="utility" aria-label="Quick links">
       <button type="button" data-jump="start">Start here</button>
       <a href="#familias" data-jump="familias">Spanish for families · Español</a>
@@ -663,8 +669,8 @@ footer p{margin:0 0 10px}
 <section class="panel" id="panel-start" role="tabpanel" aria-labelledby="tab-start">
   <div class="wrap panel-intro">
     <p class="eyebrow">Class of 2027 · Welcome</p>
-    <h2>What brings you here today?</h2>
-    <p>This is the reception area for Mr. Barragan's Advisory. Pick the answer that feels closest and the site will point you to one useful next step.</p>
+    <h2>Choose your next step.</h2>
+    <p>Pick one option below, or build a private three-step plan.</p>
   </div>
   <main class="wrap">
     <article class="welcome-card">
@@ -679,11 +685,6 @@ footer p{margin:0 0 10px}
       </div>
       <div class="welcome-response" id="start-response" aria-live="polite"><strong>Choose one above.</strong><span>Your answer will give you a short next step—not a giant checklist.</span></div>
     </article>
-
-    <div class="welcome-grid">
-      <article class="welcome-card small"><p class="eyebrow">At a glance</p><h3>Next important senior date</h3><p>The small banner above shows the next confirmed opening or due date. Open it when you want the full calendar.</p><button class="mini" type="button" id="open-calendar-from-start">Open the calendar ↑</button></article>
-      <article class="welcome-card small"><p class="eyebrow">You are not alone</p><h3>Need a person?</h3><p>Bring this page to Mr. Barragan or the THS counseling office. Questions are part of the process.</p><button class="mini" type="button" data-jump="help">See ways to get help →</button></article>
-    </div>
 
     <div class="sect">
       <p class="eyebrow">Private on this device</p>
@@ -702,7 +703,7 @@ footer p{margin:0 0 10px}
     <div class="sect" id="help-center">
       <p class="eyebrow">Your escape hatch</p>
       <h3>Need help with this?</h3>
-      <article class="help-card"><h4>You are not expected to solve everything alone.</h4><p>Bring this page to Mr. Barragan or the THS counseling office. For financial-aid help, ask about free community workshops in English and Spanish.</p></article>
+      <article class="help-card"><h4>You are not expected to solve everything alone.</h4><p>Students and parents: if you need help, please message Mr. Barragan through ParentSquare. Tell me which page or question you are working on, and I will help you figure out the next step.</p></article>
     </div>
   </main>
 </section>
@@ -1007,8 +1008,8 @@ footer p{margin:0 0 10px}
 const SITE = {
   school:  "Toppenish High School",
   line:    "Mr. Barragan's Advisory and the Class of 2027",
-  teacher: "Questions? Bring this page to Mr. Barragan or the THS counseling office.",
-  logo:    "",          // Drop the Wildcat PNG next to this file, put the filename here.
+  teacher: "Questions? Students and parents can message Mr. Barragan through ParentSquare.",
+  logo:    "assets/gradcat.png",
   logoAlt: "Toppenish Wildcats"
 };
 
@@ -1497,7 +1498,7 @@ const START_RESPONSES = {
   money:{title:"Start with Pay for School.",text:"FAFSA and WASFA are free applications. You can ask which one fits before you apply, and you do not have to choose a college first.",button:"Pay for School",target:"deadlines"},
   path:{title:"You are in the right place.",text:"The path finder compares college, YVC, trades, apprenticeships, military, and work without ranking one above the others.",button:"Open the path finder",target:"pathways"},
   apply:{title:"Start with your application folder.",text:"Open the Apply and Write section for essays, recommendations, transcripts, and a private story builder.",button:"Apply and Write",target:"writing"},
-  help:{title:"Questions are a good starting point.",text:"Bring the page to Mr. Barragan or counseling. You do not have to explain everything perfectly to ask for help.",button:"See help options",target:"help"}
+  help:{title:"Questions are a good starting point.",text:"Students and parents can message Mr. Barragan through ParentSquare. You do not have to explain everything perfectly to ask for help.",button:"See help options",target:"help"}
 };
 function initStartReception(){
   const options = document.querySelectorAll("[data-start-intent]");
@@ -1508,12 +1509,6 @@ function initStartReception(){
     response.innerHTML = `<strong>${esc(item.title)}</strong><span>${esc(item.text)}</span><button class="mini" type="button">${esc(item.button)} →</button>`;
     response.querySelector("button").addEventListener("click", () => jumpTo(item.target));
   }));
-  const calendarButton = document.getElementById("open-calendar-from-start");
-  calendarButton.addEventListener("click", () => {
-    const toggle = document.getElementById("calendar-toggle");
-    if(toggle.getAttribute("aria-expanded") !== "true") toggle.click();
-    window.scrollTo({top:0,behavior:"smooth"});
-  });
 }
 
 /* ---------- chips ---------- */
