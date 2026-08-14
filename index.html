@@ -169,6 +169,49 @@ h1 .thin{font-weight:400; color:#e2b6bf}
 .ticker .mine{margin-left:auto; text-align:right}
 .ticker .mine b{font-family:"Bricolage Grotesque",sans-serif; font-size:26px; display:block; line-height:1; color:#fff}
 
+/* Confirmed-deadline calendar in the header */
+.deadline-calendar{
+  background:var(--ink); color:var(--paper); border-radius:10px 10px 0 0;
+  padding:18px 20px 16px;
+}
+.calendar-head{display:flex; justify-content:space-between; gap:18px; align-items:flex-start; margin-bottom:15px}
+.calendar-head h2{font-size:clamp(23px,4vw,32px); color:#fff; margin:3px 0 4px}
+.calendar-head p{font-size:13.5px; color:var(--gray20); margin:0; max-width:58ch}
+.calendar-actions{display:flex; gap:6px; flex:0 0 auto}
+.calendar-actions button,.calendar-footer button{
+  border:1px solid #5b5d60; background:#2d3032; color:#fff; border-radius:6px;
+  padding:7px 10px; font:500 12px "DM Mono",monospace; cursor:pointer
+}
+.calendar-actions button:hover,.calendar-footer button:hover{background:var(--crimson); border-color:var(--rose-lt)}
+.calendar-weekdays,.calendar-grid{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px}
+.calendar-weekdays{margin-bottom:4px}
+.calendar-weekdays span{font:500 10px "DM Mono",monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--gray37); text-align:center}
+.calendar-day,.calendar-blank{min-height:48px; border-radius:6px}
+.calendar-blank{background:transparent}
+.calendar-day{
+  position:relative; border:1px solid #3e4143; background:#272a2c; color:#fff; cursor:pointer;
+  display:flex; align-items:flex-start; justify-content:flex-end; padding:7px; font:600 13px "Public Sans",sans-serif
+}
+.calendar-day:hover{border-color:var(--rose-lt); background:#343638}
+.calendar-day[aria-selected="true"]{outline:2px solid var(--rose-lt); outline-offset:-2px; background:#3a252b}
+.calendar-day.today{border-color:#fff}
+.calendar-day.has-deadline::after{content:""; position:absolute; left:7px; bottom:7px; width:7px; height:7px; border-radius:50%; background:var(--rose-lt)}
+.calendar-day.has-deadline strong{color:var(--rose-lt)}
+.calendar-day.past{opacity:.58}
+.calendar-details{border-top:1px solid #45484a; margin-top:14px; padding-top:12px; min-height:56px}
+.calendar-details.empty{padding:12px 0 0; color:var(--gray37); text-align:left}
+.calendar-details h3{font:500 11px "DM Mono",monospace; letter-spacing:.12em; text-transform:uppercase; color:var(--gray37); margin:0 0 8px}
+.calendar-event{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:3px 14px; padding:7px 0; border-top:1px solid #35383a}
+.calendar-event:first-of-type{border-top:0}
+.calendar-event strong{font-family:"Bricolage Grotesque",sans-serif; font-size:16px; color:#fff}
+.calendar-event span{font-size:12.5px; color:var(--gray20)}
+.calendar-event time{grid-row:span 2; grid-column:2; font:500 11px "DM Mono",monospace; color:var(--rose-lt); text-align:right}
+.calendar-event a{grid-column:1; color:var(--rose-lt); font-size:12.5px; font-weight:600; text-decoration:none}
+.calendar-event a:hover{text-decoration:underline}
+.calendar-footer{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:13px; padding-top:11px; border-top:1px solid #45484a}
+.calendar-footer span{font-size:12px; color:var(--gray37); margin-right:auto}
+.calendar-footer button{font-size:11px; padding:6px 9px}
+
 /* ============================================================
    SECTION NAV
    ============================================================ */
@@ -490,6 +533,15 @@ footer p{margin:0 0 10px}
 @media (max-width:560px){
   body{font-size:16px}
   .ticker{border-radius:10px; padding:14px 16px}
+  .deadline-calendar{border-radius:10px; padding:15px 14px 14px}
+  .calendar-head{display:block}
+  .calendar-actions{margin-top:12px}
+  .calendar-day,.calendar-blank{min-height:40px}
+  .calendar-day{padding:6px;font-size:12px}
+  .calendar-day.has-deadline::after{left:5px;bottom:5px;width:6px;height:6px}
+  .calendar-event{display:block}
+  .calendar-event time{display:block;text-align:left;margin-bottom:2px}
+  .calendar-footer span{width:100%;margin-right:0}
   .ticker .mine{margin-left:0; text-align:left; width:100%; border-top:1px solid #3a3c3e; padding-top:10px}
   .grid{grid-template-columns:1fr}
   .days b{font-size:27px}
@@ -503,7 +555,7 @@ footer p{margin:0 0 10px}
   .card:hover{transform:translateY(-2px); box-shadow:0 1px 0 var(--gray20),0 8px 22px rgba(22,33,28,.09)}
 }
 @media print{
-  nav.hub,.controls,.ticker,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
+  nav.hub,.controls,.ticker,.deadline-calendar,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
   .panel[hidden]{display:block !important}
   body{background:#fff; font-size:10.5pt}
   header.top{background:#fff; color:#000; border-top:3px solid #000}
@@ -539,17 +591,30 @@ footer p{margin:0 0 10px}
     </div>
     <h1>Not sure what comes next?<br><span class="thin">Start here.</span></h1>
     <p class="lede">Simple steps for paying for school or training, choosing a path, applying, and getting through senior year—one step at a time.</p>
-    <div class="ticker" id="ticker" aria-live="polite">
-      <div><span class="n" id="tick-n">—</span></div>
-      <div>
-        <div class="lbl">Next deadline</div>
-        <div class="what" id="tick-what">Loading…</div>
+    <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
+      <div class="calendar-head">
+        <div>
+          <div class="lbl">Confirmed deadline calendar</div>
+          <h2 id="calendar-title">Loading confirmed deadlines…</h2>
+          <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Expected dates stay out until they are verified.</p>
+        </div>
+        <div class="calendar-actions" aria-label="Change calendar month">
+          <button type="button" id="cal-prev" aria-label="Show previous month">←</button>
+          <button type="button" id="cal-today">Today</button>
+          <button type="button" id="cal-next" aria-label="Show next month">→</button>
+        </div>
       </div>
-      <div class="mine">
-        <div class="lbl">Your list</div>
-        <b id="tick-mine">0 saved</b>
+      <div class="calendar-weekdays" aria-hidden="true">
+        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
       </div>
-    </div>
+      <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Confirmed deadlines by month"></div>
+      <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
+      <div class="calendar-footer">
+        <span id="calendar-count">Confirmed deadlines only</span>
+        <button type="button" id="download-confirmed-ics">Download calendar</button>
+        <button type="button" data-jump="deadlines">See all deadlines →</button>
+      </div>
+    </section>
   </div>
 </header>
 
@@ -1270,6 +1335,8 @@ const EFFORT = {
 
 const MS_DAY = 86400000;
 const today = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+let calendarView = new Date(today.getFullYear(), today.getMonth(), 1);
+let calendarSelected = null;
 
 /* ---------- tiny persistent store, safe everywhere ---------- */
 const Store = (() => {
@@ -1423,14 +1490,13 @@ function buildChips(){
 }
 
 /* ---------- calendar export ---------- */
-function icsFor(item){
-  const d = item.due; if(!d) return null;
+function icsEventFor(item){
+  const d = item.due; if(!d) return "";
   const stamp = d.replace(/-/g,"");
   const end = (() => { const x = parseDate(d); x.setDate(x.getDate()+1);
     return x.getFullYear() + String(x.getMonth()+1).padStart(2,"0") + String(x.getDate()).padStart(2,"0"); })();
   const wrap = s => String(s).replace(/[\\;,]/g, m => "\\"+m).replace(/\n/g,"\\n");
   return [
-    "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//THS Advisory//Next Steps//EN","CALSCALE:GREGORIAN",
     "BEGIN:VEVENT",
     "UID:" + idOf(item) + "@ths-nextsteps",
     "DTSTAMP:" + stamp + "T090000Z",
@@ -1441,9 +1507,14 @@ function icsFor(item){
     "URL:" + item.link,
     "BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.name + " closes in one week"),"END:VALARM",
     "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.name + " closes tomorrow"),"END:VALARM",
-    "END:VEVENT","END:VCALENDAR"
+    "END:VEVENT"
   ].join("\r\n");
 }
+function icsForItems(items){
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//THS Advisory//Next Steps//EN","CALSCALE:GREGORIAN",
+    items.map(icsEventFor).filter(Boolean).join("\r\n"),"END:VCALENDAR"].join("\r\n");
+}
+function icsFor(item){ return item && item.due ? icsForItems([item]) : null; }
 function download(filename, text, mime){
   const blob = new Blob([text], {type: mime || "text/plain;charset=utf-8"});
   const url  = URL.createObjectURL(blob);
@@ -1536,7 +1607,7 @@ function cardFor(item){
   el.querySelector("[data-save]").addEventListener("change", e => {
     if(e.target.checked){ saved[id] = true; toast("Added to your list."); }
     else { delete saved[id]; }
-    persistSaved(); render(); renderTicker();
+    persistSaved(); render(); renderCalendar();
   });
   const icsBtn = el.querySelector("[data-ics]");
   if(icsBtn) icsBtn.addEventListener("click", () => {
@@ -1612,25 +1683,94 @@ function render(){
   });
 }
 
-/* ---------- ticker ---------- */
-function renderTicker(){
-  const upcoming = DEADLINES
-    .filter(it => it.due && daysUntil(it.due) >= 0)
-    .sort((a,b) => parseDate(a.due) - parseDate(b.due))[0];
-  const n = document.getElementById("tick-n");
-  const w = document.getElementById("tick-what");
-  const count = Object.keys(saved).length;
-  document.getElementById("tick-mine").textContent = count === 1 ? "1 saved" : count + " saved";
-
-  if(!upcoming){
-    n.textContent = "—";
-    w.textContent = "Nothing with a fixed date is open right now. Check the rolling list.";
+/* ---------- confirmed deadline calendar ---------- */
+function confirmedCalendarItems(){
+  return DEADLINES
+    .filter(it => it.due && !it.planning && parseDate(it.due))
+    .sort((a,b) => parseDate(a.due) - parseDate(b.due) || (a.priority || 999) - (b.priority || 999));
+}
+function dateKey(d){
+  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+}
+function calendarMonthKey(year, month){ return year + "-" + String(month+1).padStart(2,"0"); }
+function renderCalendarDetails(key, byDate){
+  const box = document.getElementById("calendar-details");
+  if(!box) return;
+  const items = key ? (byDate.get(key) || []) : [];
+  box.className = "calendar-details" + (items.length ? "" : " empty");
+  if(!key){
+    box.textContent = "No confirmed deadline is listed in this month. Use the arrows to check another month.";
     return;
   }
-  const d = daysUntil(upcoming.due);
-  n.textContent = d === 0 ? "TODAY" : d;
-  n.style.fontSize = d === 0 ? "26px" : "";
-  w.innerHTML = `${esc(upcoming.name)} — ${d === 0 ? "due today" : (d === 1 ? "1 day" : d + " days")} · <a href="${esc(upcoming.link)}" target="_blank" rel="noopener">apply</a>`;
+  const d = parseDate(key);
+  if(!items.length){
+    box.textContent = "No confirmed deadline on " + fmt(key) + ". Tap a marked day to see what is due.";
+    return;
+  }
+  box.innerHTML = `<h3>Due on ${esc(fmt(key))}</h3>` + items.map(item => `
+    <div class="calendar-event">
+      <time datetime="${esc(item.due)}">Confirmed</time>
+      <strong>${esc(item.name)}</strong>
+      <span>${esc(item.org || "Scholarship or program deadline")}${item.amount ? " · " + esc(item.amount) : ""}</span>
+      <a href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page →</a>
+    </div>`).join("");
+}
+function renderCalendar(){
+  const grid = document.getElementById("calendar-grid");
+  if(!grid) return;
+  const all = confirmedCalendarItems();
+  const byDate = new Map();
+  all.forEach(item => {
+    if(!byDate.has(item.due)) byDate.set(item.due, []);
+    byDate.get(item.due).push(item);
+  });
+  const year = calendarView.getFullYear();
+  const month = calendarView.getMonth();
+  const first = new Date(year, month, 1);
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const viewMonth = calendarMonthKey(year, month);
+  const monthItems = all.filter(item => item.due.startsWith(viewMonth));
+  const monthTitle = first.toLocaleDateString("en-US",{month:"long",year:"numeric"});
+  document.getElementById("calendar-title").textContent = monthTitle;
+  document.getElementById("calendar-summary").textContent = monthItems.length
+    ? `${monthItems.length} confirmed deadline${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
+    : "No confirmed deadlines are listed this month. Use the arrows to check another month.";
+  document.getElementById("calendar-count").textContent = `${all.length} confirmed deadline${all.length === 1 ? "" : "s"} in the full calendar`;
+
+  let selected = calendarSelected;
+  if(!selected || !selected.startsWith(viewMonth)) selected = monthItems[0] ? monthItems[0].due : null;
+  calendarSelected = selected;
+  grid.innerHTML = "";
+  for(let i=0; i<first.getDay(); i++){
+    const blank = document.createElement("span"); blank.className = "calendar-blank"; blank.setAttribute("aria-hidden","true"); grid.appendChild(blank);
+  }
+  for(let day=1; day<=daysInMonth; day++){
+    const current = new Date(year, month, day);
+    const key = dateKey(current);
+    const dayItems = byDate.get(key) || [];
+    const button = document.createElement("button");
+    button.type = "button"; button.className = "calendar-day"; button.setAttribute("role","gridcell");
+    button.setAttribute("aria-selected", String(key === selected));
+    button.setAttribute("aria-label", fmt(key) + (dayItems.length ? `, ${dayItems.length} confirmed deadline${dayItems.length === 1 ? "" : "s"}` : ""));
+    if(key === dateKey(today)) button.classList.add("today");
+    if(dayItems.length){ button.classList.add("has-deadline"); button.title = dayItems.map(item => item.name).join("; "); }
+    if(current < today) button.classList.add("past");
+    button.innerHTML = `<strong>${day}</strong>`;
+    button.addEventListener("click", () => { calendarSelected = key; renderCalendar(); });
+    grid.appendChild(button);
+  }
+  renderCalendarDetails(selected, byDate);
+}
+function initCalendar(){
+  document.getElementById("cal-prev").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()-1); calendarSelected = null; renderCalendar(); });
+  document.getElementById("cal-next").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()+1); calendarSelected = null; renderCalendar(); });
+  document.getElementById("cal-today").addEventListener("click", () => { calendarView = new Date(today.getFullYear(), today.getMonth(), 1); calendarSelected = null; renderCalendar(); });
+  document.getElementById("download-confirmed-ics").addEventListener("click", () => {
+    const items = confirmedCalendarItems();
+    if(!items.length) return toast("There are no confirmed fixed-date deadlines yet.");
+    download("ths-confirmed-deadlines.ics", icsForItems(items), "text/calendar;charset=utf-8");
+    toast("Downloaded — open it to add the confirmed deadlines.");
+  });
 }
 
 /* ================================================================
@@ -1979,13 +2119,14 @@ document.getElementById("mineOnly").addEventListener("change", e => { mineOnly =
 document.getElementById("clearSaved").addEventListener("click", () => {
   if(!Object.keys(saved).length) return toast("Your saved list is already empty.");
   if(!confirm("Clear every scholarship from your saved list on this browser?")) return;
-  saved = {}; persistSaved(); render(); renderTicker(); toast("Saved list cleared.");
+  saved = {}; persistSaved(); render(); renderCalendar(); toast("Saved list cleared.");
 });
 
 function boot(){
   renderSite();
   buildChips();
-  renderTicker();
+  initCalendar();
+  renderCalendar();
   render();
   renderCommonApp();
   renderBuilder();
