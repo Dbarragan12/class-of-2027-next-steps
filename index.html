@@ -1750,7 +1750,7 @@ function renderCalendar(){
       ? `${monthItems.length} confirmed date${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
       : "No confirmed dates are listed this month. Use the arrows to check another month.";
   } else {
-    kicker.textContent = next ? "Next confirmed date" : "Important dates for seniors";
+    kicker.textContent = next ? "Next important senior date" : "Important dates for seniors";
     document.getElementById("calendar-title").textContent = next ? next.name : "No upcoming confirmed dates";
     document.getElementById("calendar-summary").textContent = next
       ? `Due ${fmt(next.due)} · ${next.org || "official sponsor"}`
