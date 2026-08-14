@@ -667,6 +667,10 @@ footer p{margin:0 0 10px}
     <p class="eyebrow">Section 02 · Money &amp; deadlines</p>
     <h2>Money close to home, then every deadline.</h2>
     <p>Start with local and Washington opportunities—the best use of your time—then consider national reach scholarships. The board also includes financial aid, training, and apprenticeship steps.</p>
+    <div class="note" style="margin-top:20px;border-left-color:var(--gold)">
+      <p><strong>Planning notice for the Class of 2027:</strong> this site uses confirmed 2026–27 information when sponsors have released it. It also includes long-running scholarships expected to return, using 2025–26 school-year information—or the most recent official cycle available—to help students prepare early.</p>
+      <p style="margin:0"><strong>Expected does not mean guaranteed.</strong> Deadlines, awards, eligibility, and even whether a program returns can change. An expected card always shows the prior deadline as planning information and links to the sponsor so students can check for this year's update before applying.</p>
+    </div>
     <div class="note" style="margin-top:20px">
       <p style="margin:0"><strong>Why are agriculture and employer scholarships featured?</strong> Agriculture, orchards, vineyards, dairies, food processing, and related companies employ many Toppenish-area families. A student may qualify because of a parent or guardian's job—even when the student plans to study something completely different. Read each card carefully: some awards use the family employment connection, while others require the student to enter an agriculture- or wine-related program.</p>
     </div>
@@ -692,7 +696,7 @@ footer p{margin:0 0 10px}
     <div class="empty" id="empty" hidden><b>Nothing matches that.</b>Clear the search or turn off a filter.</div>
 
     <div class="note">
-      <p><strong>Trust rule:</strong> every scholarship on this board has been checked to make sure a Toppenish High School student can qualify by school and location. Current opportunities use official dates. Recurring plan-ahead opportunities show the previous deadline and clearly warn that the new date may change.</p>
+      <p><strong>Trust rule:</strong> every scholarship on this board has been checked to make sure a Toppenish High School student can qualify by school and location. Confirmed opportunities use current sponsor information. Long-running expected opportunities use 2025–26 or the most recent official cycle only for planning, show the prior deadline, and clearly warn that the new details are not guaranteed.</p>
       <p id="data-updated" style="margin-bottom:0"><strong>Last refreshed:</strong> Loading scholarship data…</p>
       <p style="margin:10px 0 0"><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
     </div>
@@ -1342,7 +1346,7 @@ function effDate(item){
 
 function statusOf(item){
   if(item.kind === "action") return {cls:"rolling", n:"Start here", unit:"", order:-2};
-  if(item.planning) return {cls:"planning", n:"Plan ahead", unit:"", order:2};
+  if(item.planning) return {cls:"planning", n:"Expected", unit:"", order:2};
   if(item.opens && daysUntil(item.opens) > 0){
     const o = daysUntil(item.opens);
     return {cls:"soon", n:o, unit:o===1?"day to open":"days to open", order:0, days:o};
@@ -1475,7 +1479,7 @@ function cardFor(item){
   let dueLine;
   if(item.planning){
     dueLine = item.pastDue
-      ? `Past deadline <strong>${fmt(item.pastDue)}</strong> — the new date has not been posted`
+      ? `Prior-cycle deadline <strong>${fmt(item.pastDue)}</strong> — planning only; the new date is not guaranteed`
       : esc(item.window || "Expected to return — check the official page");
   } else if(item.due){
     dueLine = st.cls === "closed"
@@ -1519,7 +1523,7 @@ function cardFor(item){
     ${item.note ? `<div class="who note">${esc(item.note)}</div>` : ""}
     <div class="who note"><strong>What you'll need:</strong> ${esc(prep)}</div>
     <div class="meta">${effPill}${fitPills}</div>
-    ${item.confirm ? `<div class="flag">past-cycle information — verify the new date</div>` : ""}
+    ${item.confirm ? `<div class="flag">expected to return · based on 2025–26 or the most recent official cycle · not guaranteed</div>` : ""}
     <div class="due">${dueLine}<br>
       <a class="go" href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page &rarr;</a>
       ${item.lastChecked ? `<br><small>Official source checked ${esc(fmt(item.lastChecked))}</small>` : ""}
@@ -1594,7 +1598,7 @@ function render(){
                 : key === "local" ? "Local programs and plan-ahead opportunities"
                 : key === "senior" ? "College, training & transition deadlines"
                 : key === "rolling" ? "Open now — no fixed deadline"
-                : key === "planning" ? "Plan ahead — previous cycle information"
+                : key === "planning" ? "Expected to return — prior-cycle planning information"
                 : key === "closed"  ? "Closed for this cycle"
                 : monthLabel(effDate(list[0]));
     const head = document.createElement("div");
