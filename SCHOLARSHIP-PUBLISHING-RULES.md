@@ -21,13 +21,13 @@ Every public scholarship must have all six:
 5. Controlled-vocabulary `tags` and `fit` arrays after normalization.
 6. A `lastChecked` date. Recheck records older than about 60 days before publishing again.
 
-Recurring plan-ahead scholarships may use the prior-cycle deadline only when the sponsor's official source confirms the program and prior date. They must be labeled as prior-cycle information and warn that the next date may change.
+Long-running expected scholarships may use 2025–26 school-year information, or the most recent official cycle available, to help students prepare before the new cycle is released. They must include a prior deadline, sponsor link, eligibility summary, controlled tags, and last-checked date. They must be labeled **Expected - not guaranteed** and warn that the deadline, award, eligibility rules, and even whether the program returns may change.
 
 Candidates that fail any gate remain unpublished. Never bulk-import an archive or aggregator.
 
 ## Nightly behavior
 
-The nightly workflow may check links, detect source changes, and export approved Airtable records. It must never turn a predicted deadline into a confirmed one or publish an unreviewed candidate automatically.
+The nightly workflow may check links, detect source changes, and export approved Airtable records. It must never turn a prior or predicted deadline into a confirmed one or publish an unreviewed candidate automatically. Expected records remain expected until a person verifies the new cycle.
 
 ## Local employer pattern
 
