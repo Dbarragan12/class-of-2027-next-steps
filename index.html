@@ -1697,11 +1697,14 @@ function confirmedCalendarItems(){
   const events = [];
   DEADLINES.filter(it => !it.planning).forEach(item => {
     if(item.opens && parseDate(item.opens)) events.push({...item, due:item.opens, calendarKind:"opens"});
-    if(item.due && parseDate(item.due)) events.push({...item, calendarKind:"due"});
+    if(item.due && parseDate(item.due)) events.push({...item, calendarKind:item.calendarKind || "due"});
   });
   return events.sort((a,b) => parseDate(a.due) - parseDate(b.due) || (a.priority || 999) - (b.priority || 999));
 }
-function calendarEventLabel(item){ return item.calendarKind === "opens" ? "Applications open" : "Deadline"; }
+function calendarEventLabel(item){
+  return item.calendarKind === "opens" ? "Applications open"
+    : item.calendarKind === "due" ? "Deadline" : "Important date";
+}
 function dateKey(d){
   return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
 }
@@ -2188,6 +2191,31 @@ function sourceLabel(item){
   } catch(e){ return "Scholarship sponsor"; }
 }
 
+function mapSeniorDate(item, updatedAt){
+  const planning = item.dateType === "pattern";
+  const calendarKind = /\bopens?\b/i.test(item.name) ? "opens"
+    : /deadline|deposit|transcript|records|certification/i.test(item.name) ? "due" : "event";
+  return {
+    name: item.name,
+    org: item.category || "Senior year",
+    amount: item.dateType === "priority" ? "Priority date" : "Important senior date",
+    who: item.description || "Important date for the Class of 2027.",
+    due: item.date || null,
+    window: planning ? "Planning reminder · re-confirm before relying on it" : "Confirmed date",
+    tags: ["senior", String(item.category || "").toLowerCase().replace(/[^a-z]+/g,"-")].filter(Boolean),
+    fit: ["everyone"],
+    effort: "low",
+    link: item.url || "",
+    note: item.missedOften ? "Often missed: put this on your personal checklist." : "",
+    lastChecked: updatedAt || null,
+    planning,
+    confirm: planning,
+    calendarKind,
+    kind: "deadline",
+    priority: item.missedOften ? 14 : 30
+  };
+}
+
 function mapScholarship(item){
   const labels = (item.tags || []).map(String);
   const hay = (labels.join(" ") + " " + item.name + " " + item.eligibility).toLowerCase();
@@ -2245,11 +2273,15 @@ function mapScholarship(item){
 
 (function(){
   if(location.protocol === "file:") return boot();
-  fetch("data/scholarships.json", {cache:"no-store"})
-    .then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load")))
-    .then(data => {
+  Promise.all([
+    fetch("data/scholarships.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load"))),
+    fetch("data/senior-dates.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Senior dates did not load")))
+  ])
+    .then(([data, seniorData]) => {
       const rows = data && Array.isArray(data.scholarships) ? data.scholarships : [];
-      DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES, ...rows.map(mapScholarship));
+      const seniorRows = seniorData && Array.isArray(seniorData.events)
+        ? seniorData.events.map(item => mapSeniorDate(item, seniorData.updatedAt)) : [];
+      DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES, ...seniorRows, ...rows.map(mapScholarship));
       const refreshed = document.getElementById("data-updated");
       if(refreshed && data.updatedAt){
         refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
