@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-08-14T00:40:00.000Z",
-  "publicationRule": "Only opportunities verified as geographically available to Toppenish High School students. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
+  "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
   "scholarships": [
     {
       "name": "Mollie Davis Scholarship",
@@ -767,6 +767,89 @@
       ],
       "whyFit": "Worth considering for strong Toppenish speakers and writers. The prior date is for planning and is not guaranteed.",
       "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Jack Kent Cooke College Scholarship Program",
+      "organization": "Jack Kent Cooke Foundation",
+      "award": "Up to $55,000 per year; amount varies by student need and aid",
+      "eligibility": "High-achieving high school seniors with financial need who plan to enroll full time in an accredited four-year undergraduate program. Review the sponsor's current GPA, financial-need, citizenship/residency, and college rules before applying.",
+      "url": "https://www.jkcf.org/our-scholarships/college-scholarship-program/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-08-19",
+      "deadline": "2026-11-11",
+      "lastYearDeadline": null,
+      "expectedWindow": "2026 application period: August 19–November 11",
+      "tags": [
+        "National",
+        "Four-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students qualify geographically because this is a national scholarship. A student still needs the sponsor's high-achievement, financial-need, and college-enrollment qualifications.",
+      "needs": "Application, transcript and course information, financial-aid information, and the sponsor's required writing or supporting materials.",
+      "lastChecked": "2026-08-14"
+    },
+    {
+      "name": "American Indian College Fund Full Circle Scholarship",
+      "organization": "American Indian College Fund",
+      "award": "Multiple scholarship opportunities through one application; awards vary",
+      "eligibility": "Native American or Alaska Native students who can document tribal enrollment or descendancy, have at least a 2.0 GPA, and plan full-time enrollment at a nonprofit accredited college or university.",
+      "url": "https://collegefund.org/students/scholarships/college-students/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-05-31",
+      "expectedOpen": "2027-02-01",
+      "openLabel": "Feb 1",
+      "expectedWindow": "Applications open every February 1; priority review deadline is May 31. Dates and requirements can change.",
+      "tags": [
+        "National",
+        "Indigenous",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "tribal",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students with qualifying Native affiliation can apply nationally, including students planning a nonprofit community college, university, or other eligible program.",
+      "needs": "Online application, transcript, photo, tribal enrollment or descendancy documentation, and three short-answer responses.",
+      "lastChecked": "2026-08-14"
+    },
+    {
+      "name": "Native Forward Scholars Fund",
+      "organization": "Native Forward Scholars Fund",
+      "award": "Multiple awards; amounts vary by program",
+      "eligibility": "Eligible American Indian or Alaska Native students enrolled full time in a degree-seeking program at an accredited U.S. institution who can provide tribal eligibility documentation and meet the current financial-need rules.",
+      "url": "https://www.nativeforward.org/scholarship-faq/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-07-15",
+      "expectedOpen": "2027-05-16",
+      "expectedWindow": "Planning estimate: May 2027 opening based on the annual July 15 document deadline. The Financial Needs Form and Tribal Eligibility Certificate are due July 15 each academic year; confirm the new cycle before applying.",
+      "tags": [
+        "National",
+        "Indigenous",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "tribal",
+        "lowincome"
+      ],
+      "whyFit": "A Toppenish student with qualifying tribal affiliation may be eligible nationwide. The student must verify the current program, enrollment, FAFSA, tribal-documentation, and financial-need requirements.",
+      "needs": "FAFSA, Financial Needs Form, Tribal Eligibility Certificate, enrollment information, transcript, and any program-specific documents.",
+      "lastChecked": "2026-08-14"
     }
   ]
 }
