@@ -67,7 +67,8 @@ main{padding-bottom:42px}
 .prep{font-size:13px;color:var(--muted);background:var(--sand);border-radius:7px;padding:9px 10px}.prep strong{color:var(--ink)}
 .card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:3px}
 .save{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:800;cursor:pointer}.save input{width:17px;height:17px;accent-color:var(--crimson)}
-.sponsor{font-size:13px;font-weight:800;text-decoration:none}.sponsor:hover{text-decoration:underline}
+.card-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.sponsor,.calendar-link{font-size:13px;font-weight:800;text-decoration:none}.sponsor:hover{text-decoration:underline}
+.calendar-link{border:0;background:transparent;color:var(--crimson);padding:0;cursor:pointer}.calendar-link:hover{text-decoration:underline}
 .empty{background:#fff;border:1px solid var(--gray20);border-radius:10px;padding:26px;text-align:center;color:var(--muted)}
 .lower{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
 .lower-card{background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:19px;box-shadow:var(--shadow)}
@@ -112,6 +113,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
         <button class="btn ghost" id="show-saved" type="button">My saved <span id="saved-number">0</span></button>
         <button class="btn ghost" id="copy-saved" type="button">Copy my list</button>
         <button class="btn" id="email-saved" type="button">Email my list</button>
+        <button class="btn ghost" id="calendar-saved" type="button">Calendar for saved</button>
       </div>
       <p class="saved-count"><strong id="result-count">0</strong> opportunities shown · saved scholarships stay on this device</p>
       <p class="filter-label">Show scholarships for… — tap all that apply</p>
@@ -213,22 +215,43 @@ function card(item){
     ${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}
     <div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div>
     ${opening}<div class="why">${due}</div>
-    <div class="card-foot"><label class="save"><input type="checkbox" ${checked?"checked":""}> Save this</label><a class="sponsor" href="${esc(item.url)}" target="_blank" rel="noopener">Open sponsor page ↗</a></div>`;
-  el.querySelector("input").addEventListener("change",e=>{if(e.target.checked){saved[item.id]=true;toast("Saved to your list.")}else{delete saved[item.id];toast("Removed from your list.")}saveState();render()});return el
+    <div class="card-foot"><label class="save"><input type="checkbox" ${checked?"checked":""}> Save this</label><div class="card-actions">${item.deadline&&daysUntil(item.deadline)>=0?`<button class="calendar-link" type="button">Add to calendar</button>`:""}<a class="sponsor" href="${esc(item.url)}" target="_blank" rel="noopener">Open sponsor page ↗</a></div></div>`;
+  el.querySelector("input").addEventListener("change",e=>{if(e.target.checked){saved[item.id]=true;toast("Saved to your list.")}else{delete saved[item.id];toast("Removed from your list.")}saveState();render()});
+  const calendarButton=el.querySelector(".calendar-link");if(calendarButton)calendarButton.addEventListener("click",()=>{download(item.id+"-deadline.ics",icsFor(item),"text/calendar;charset=utf-8");toast("Calendar event downloaded.")});
+  return el
 }
 function render(){
   const items=allItems.filter(itemMatches).sort((a,b)=>{const sa=statusFor(a),sb=statusFor(b);if(sa.rank!==sb.rank)return sa.rank-sb.rank;return String(sa.date).localeCompare(String(sb.date))||a.name.localeCompare(b.name)});
   $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":"Open now first · then opening soon";
 }
 function savedItems(){return allItems.filter(item=>saved[item.id])}
+function deadlineLine(item){
+  if(item.deadline)return "Deadline: "+fmt(item.deadline);
+  if(item.lastYearDeadline)return "Prior-cycle deadline: "+fmt(item.lastYearDeadline)+" (planning only; not the current deadline)";
+  return "Deadline: Check the sponsor page";
+}
 function savedText(){
-  const items=savedItems();const lines=["My saved scholarships",""];items.forEach((x,i)=>{lines.push(`${i+1}. ${x.name}`);lines.push(`Sponsor: ${x.organization||""}`);lines.push(`Eligibility: ${x.eligibility||""}`);lines.push(`Link: ${x.url}`);lines.push("")});return lines.join("\n")
+  const items=savedItems();const lines=["My saved scholarships",""];items.forEach((x,i)=>{lines.push(`${i+1}. ${x.name}`);lines.push(`Sponsor: ${x.organization||""}`);lines.push(deadlineLine(x));if(x.opens&&daysUntil(x.opens)>0)lines.push(`Opening: ${fmt(x.opens)}${x.planning?" (planning estimate)":""}`);lines.push(`Eligibility: ${x.eligibility||""}`);lines.push(`Link: ${x.url}`);lines.push("")});return lines.join("\n")
 }
 function emailSaved(){
   const items=savedItems();if(!items.length){toast("Save at least one scholarship first.");return}
   window.location.href="mailto:?subject="+encodeURIComponent("My saved scholarships")+"&body="+encodeURIComponent(savedText());
 }
 $("copy-saved").addEventListener("click",async()=>{if(!savedItems().length){toast("Save at least one scholarship first.");return}try{await navigator.clipboard.writeText(savedText());toast("Copied — paste it into a message or email.")}catch(e){toast("Copy is unavailable here. Use Email my list instead.")}});
+function icsEscape(value){return String(value||"").replace(/[\\;,]/g,m=>"\\"+m).replace(/\n/g,"\\n")}
+function icsEventFor(item){
+  if(!item.deadline)return "";
+  const start=item.deadline.replace(/-/g,"");const endDate=parseDate(item.deadline);endDate.setDate(endDate.getDate()+1);const end=isoDate(endDate).replace(/-/g,"");
+  return ["BEGIN:VEVENT","UID:"+item.id+"-deadline@student-scholarship-finder","DTSTAMP:"+start+"T090000Z","DTSTART;VALUE=DATE:"+start,"DTEND;VALUE=DATE:"+end,"SUMMARY:SCHOLARSHIP DEADLINE: "+icsEscape(item.name),"DESCRIPTION:"+icsEscape((item.award||"")+"\nDeadline: "+fmt(item.deadline)+"\n"+(item.eligibility||"")+"\n\n"+item.url),"URL:"+item.url,"BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:"+icsEscape(item.name+" deadline in one week"),"END:VALARM","BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:"+icsEscape(item.name+" deadline tomorrow"),"END:VALARM","END:VEVENT"].join("\r\n")
+}
+function icsFor(item){return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Student Scholarship Finder//EN","CALSCALE:GREGORIAN",icsEventFor(item),"END:VCALENDAR"].join("\r\n")}
+function download(filename,text,type){const blob=new Blob([text],{type});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200)}
+function savedCalendar(){
+  const items=savedItems().filter(item=>item.deadline&&daysUntil(item.deadline)>=0);if(!items.length){toast("No saved confirmed deadlines are available yet.");return}
+  const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Student Scholarship Finder//EN","CALSCALE:GREGORIAN",items.map(icsEventFor).join("\r\n"),"END:VCALENDAR"].join("\r\n");
+  download("saved-scholarship-deadlines.ics",ics,"text/calendar;charset=utf-8");toast("Saved deadlines downloaded.")
+}
+$("calendar-saved").addEventListener("click",savedCalendar);
 $("search").addEventListener("input",e=>{query=e.target.value.toLowerCase().trim();render()});
 $("show-saved").addEventListener("click",()=>{showingSaved=!showingSaved;$("show-saved").classList.toggle("active",showingSaved);render()});
 $("email-saved").addEventListener("click",emailSaved);
