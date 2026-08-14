@@ -27,7 +27,7 @@ const tagNames=value=>(value||[]).map(tag=>typeof tag==="string" ? tag : tag.nam
 
 const canonicalTag = new Map([
   ["Local / Yakima County","Local"], ["Washington","Washington"],
-  ["Farmworker / agriculture","Farmworker"], ["Latino / farmworker","Farmworker"],
+  ["Farmworker / agriculture","Farmworker"], ["Latino / farmworker","Farmworker"], ["Hispanic / Latino","Hispanic / Latino"],
   ["Yakama Nation / Indigenous","Indigenous"], ["Indigenous","Indigenous"],
   ["Undocumented / DACA-friendly","Undocumented"], ["4-year","Four-year"],
   ["Community college","Two-year"], ["Trades / apprenticeship","Trades"], ["Trades","Trades"],
@@ -79,7 +79,8 @@ const scholarships=records.map(r=>{
   const current=x.status==="Confirmed for 2027"
     && (x.deadline || /open now|rolling|year-round/i.test(x.expectedWindow||""));
   const planAhead=x.status==="Expected — last year's information"
-    && x.lastYearDeadline && x.expectedWindow;
+    && x.lastYearDeadline && x.expectedWindow
+    && /(not guaranteed|confirm|may change|not been released|planning)/i.test(x.expectedWindow);
   const checkedAt=Date.parse(`${x.lastChecked}T00:00:00Z`);
   const stale=!Number.isFinite(checkedAt) || Date.now()-checkedAt > 60*24*60*60*1000;
   const publishable=approved && !stale && (current || planAhead);
@@ -93,7 +94,7 @@ const scholarships=records.map(r=>{
 await mkdir("data",{recursive:true});
 await writeFile("data/scholarships.json", JSON.stringify({
   updatedAt:new Date().toISOString(),
-  publicationRule:"Only opportunities verified for Toppenish High School students. Current official opportunities need a current deadline or an open/rolling application; recurring plan-ahead items need an official source, a prior-cycle deadline, and an explicit warning that the next date may change.",
+  publicationRule:"Only opportunities verified as geographically available to Toppenish High School students. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed.",
   scholarships
 },null,2)+"\n");
 console.log(`Synced ${scholarships.length} actionable scholarship records; held ${rejected.length} published records that failed the public-data contract.`);
