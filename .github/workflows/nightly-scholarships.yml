@@ -13,12 +13,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Copy approved Airtable scholarships
-        env:
-          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
-        run: node scripts/sync-airtable.mjs
+      - name: Protect the existing manual scholarship list
+        run: node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('data/scholarships.json','utf8')); if(!Array.isArray(d.scholarships)||d.scholarships.length===0) throw new Error('Refusing to run with an empty scholarship list. Add or restore scholarships manually first.'); console.log('Preserving '+d.scholarships.length+' scholarship records.');"
       - name: Check every official scholarship source
         run: node scripts/check-sources.mjs
+      - name: Confirm the list still exists after checking
+        run: node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('data/scholarships.json','utf8')); if(!Array.isArray(d.scholarships)||d.scholarships.length===0) throw new Error('The source check produced an empty scholarship list; nothing will be committed.'); console.log('Keeping '+d.scholarships.length+' scholarship records.');"
       - name: Commit refreshed student list and review note
         run: |
           git config user.name "Toppenish Scholarship Bot"
