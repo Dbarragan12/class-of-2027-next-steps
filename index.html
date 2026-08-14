@@ -639,6 +639,7 @@ footer p{margin:0 0 10px}
     <div class="wildcats-script" aria-hidden="true"><img src="assets/wildcats-script.png" alt=""></div>
     <div class="utility" aria-label="Quick links">
       <button type="button" data-jump="start">Start here</button>
+      <a href="scholarships.html">Scholarship Finder</a>
       <a href="#familias" data-jump="familias">Spanish for families · Español</a>
       <button type="button" data-jump="help">Get help</button>
     </div>
@@ -681,7 +682,7 @@ footer p{margin:0 0 10px}
       <button class="tab" role="tab" id="tab-pathways" aria-controls="panel-pathways" aria-selected="false" data-panel="pathways"><span class="num">02</span> Choose a Path</button>
       <button class="tab" role="tab" id="tab-requirements" aria-controls="panel-requirements" aria-selected="false" data-panel="requirements"><span class="num">03</span> College Requirements</button>
       <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="false" data-panel="deadlines"><span class="num">04</span> Pay for School</button>
-      <button class="tab" role="tab" id="tab-scholarships" aria-controls="panel-scholarships" aria-selected="false" data-panel="scholarships"><span class="num">05</span> Scholarships</button>
+      <a class="tab" id="tab-scholarships" href="scholarships.html"><span class="num">05</span> Scholarships</a>
       <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">06</span> Apply and Write</button>
     </div>
   </div>
@@ -765,74 +766,6 @@ footer p{margin:0 0 10px}
       <article class="requirement-card"><h4>Passport to Careers</h4><p>Foster-care and unaccompanied-homeless-youth support can help with college, training, or apprenticeships.</p><a class="mini" href="https://wsac.wa.gov/passport-to-careers" target="_blank" rel="noopener">Check eligibility →</a></article>
     </div>
     <div class="note"><p style="margin:0"><strong>Important dates:</strong> the calendar at the top includes when FAFSA, WASFA, and other applications open, plus priority dates and deadlines. Scholarships have their own navigator in the next tab.</p></div>
-  </main>
-</section>
-
-<!-- ============ 05 · SCHOLARSHIPS ============ -->
-<section class="panel" id="panel-scholarships" role="tabpanel" aria-labelledby="tab-scholarships" hidden>
-  <div class="wrap panel-intro">
-    <p class="eyebrow">Section 05 · Scholarships</p>
-    <h2>Find scholarships that fit Toppenish students.</h2>
-    <p>Start close to home, use the filters, and read each card's eligibility and “What you'll need” line before you spend time applying.</p>
-    <details class="notice-details">
-      <summary>How to use this list</summary>
-      <div class="notice-body">
-        <p><strong>Open opportunities come first.</strong> After those, recurring scholarships show a real planning date: either the sponsor's usual opening date or an estimated month and year based on the most recent cycle. The new cycle is not confirmed until the sponsor releases it.</p>
-        <p><strong>One student is enough.</strong> This list includes opportunities from Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, and national sponsors when at least one Toppenish student may qualify. Read the exact eligibility line because some awards are narrow—for example, a specific program, family job, identity, or life experience.</p>
-      </div>
-    </details>
-    <details class="notice-details">
-      <summary>Why are agriculture and employer scholarships featured?</summary>
-      <div class="notice-body">
-        <p>Agriculture, orchards, vineyards, dairies, food processing, and related companies employ many Toppenish-area families. A student may qualify because of a parent or guardian's job—even when the student plans to study something completely different. Read each card carefully: some awards use the family employment connection, while others require the student to enter an agriculture- or wine-related program.</p>
-      </div>
-    </details>
-  </div>
-
-  <div class="controls">
-    <div class="wrap">
-      <div class="row">
-        <label class="sr" for="q">Search scholarships</label>
-        <input id="q" type="search" placeholder="Search — try &ldquo;welding&rdquo;, &ldquo;no essay&rdquo;, &ldquo;orchard&rdquo;, &ldquo;tribal&rdquo;">
-        <label class="toggle"><input type="checkbox" id="mineOnly"> My list only</label>
-        <button class="mini" type="button" id="clearSaved">Clear saved list</button>
-      </div>
-      <!-- Design decision: keep one disclosure-safe filter row. Do not restore a second pathway/open-now row unless student testing shows the extra complexity helps. -->
-      <p class="chiprow-label">Show scholarships for… — tap all that apply</p>
-      <div class="chips" id="fitchips" role="group" aria-label="Show scholarships for selected student groups"></div>
-      <p style="margin:12px 0 0;color:var(--muted);font-size:13px">Your saved list and writing drafts stay only in this browser. On a shared Chromebook, clear them when you finish.</p>
-    </div>
-  </div>
-
-  <main class="wrap">
-    <div id="results"></div>
-    <div class="empty" id="empty" hidden><b>Nothing matches that.</b>Clear the search or turn off a filter.</div>
-
-    <details class="notice-details" style="margin-top:30px;border-left-color:var(--crimson)">
-      <summary>Trust, updates, and scholarship safety</summary>
-      <div class="notice-body">
-        <p><strong>Trust rule:</strong> every scholarship on this board has been checked for a possible Toppenish student fit. Confirmed opportunities use current sponsor information. Planning opportunities use the most recent cycle for preparation and clearly identify dates that still need sponsor confirmation.</p>
-        <p id="data-updated"><strong>Last refreshed:</strong> Loading scholarship data…</p>
-        <p><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
-      </div>
-    </details>
-
-    <div class="familias critical-es" id="familias">
-      <h3>Para las familias</h3>
-      <p class="en">Acciones importantes para padres y tutores</p>
-      <p>Su estudiante necesita su ayuda con información, fechas y preguntas. No necesita hablar inglés ni haber ido a la universidad para ayudar.</p>
-      <ul>
-        <li><strong>FAFSA o WASFA.</strong> Son solicitudes gratuitas de ayuda financiera. No obligan al estudiante a asistir a una universidad. Si no sabe cuál usar, no adivine: use el <a href="https://wsac.wa.gov/wasfa-es" target="_blank" rel="noopener">cuestionario oficial de WASFA</a> o pida ayuda privada en la escuela.</li>
-        <li><strong>Privacidad.</strong> Lea las declaraciones oficiales de privacidad antes de compartir información personal. WASFA solicita ayuda estatal; FAFSA también puede conectar a estudiantes elegibles con ayuda federal.</li>
-        <li><strong>Las fechas límite.</strong> La mayoría del dinero se decide entre octubre y marzo del último año.
-          Pregúntele a su estudiante una vez al mes: «¿A cuáles solicitaste?»</li>
-        <li><strong>Su historia familiar.</strong> Muchas becas de aquí — del valle, de la industria de la fruta, de la
-          Nación Yakama, para familias trabajadoras del campo — se otorgan por quién es su familia y de dónde viene.
-          Cuéntele esa historia a su estudiante. Es parte de la solicitud.</li>
-      </ul>
-      <p style="margin:12px 0 0"><strong>Nunca se paga por solicitar una beca.</strong> Si alguien le pide dinero o una tarjeta de crédito para solicitarla, cierre la página.</p>
-      <div class="cta-row"><a class="btn" href="https://wsac.wa.gov/wasfa-es" target="_blank" rel="noopener">Guía oficial de WASFA</a><a class="btn ghost" href="https://wsac.wa.gov/wcg-es" target="_blank" rel="noopener">Washington College Grant</a></div>
-    </div>
   </main>
 </section>
 
@@ -1582,8 +1515,12 @@ function toast(msg){
 }
 
 /* ---------- tabs ---------- */
-const PANELS = ["start","pathways","requirements","deadlines","scholarships","writing"];
+const PANELS = ["start","pathways","requirements","deadlines","writing"];
 function showPanel(name, push){
+  if(name === "scholarships"){
+    window.location.href = "scholarships.html";
+    return;
+  }
   if(!PANELS.includes(name)) name = "start";
   PANELS.forEach(p => {
     document.getElementById("panel-"+p).hidden = (p !== name);
@@ -1592,20 +1529,23 @@ function showPanel(name, push){
   if(push && window.history && history.replaceState) history.replaceState(null,"","#"+name);
   window.scrollTo(0,0);
 }
-document.querySelectorAll(".tab").forEach(b => {
+document.querySelectorAll(".tab[data-panel]").forEach(b => {
   b.addEventListener("click", () => showPanel(b.dataset.panel, true));
 });
 window.addEventListener("hashchange", () => showPanel(location.hash.replace("#",""), false));
 
 function jumpTo(target){
+  if(target === "scholarships"){
+    window.location.href = "scholarships.html";
+    return;
+  }
   if(target === "help"){
     showPanel("start", true);
     requestAnimationFrame(() => document.getElementById("help-center").scrollIntoView({behavior:"smooth",block:"start"}));
     return;
   }
   if(target === "familias"){
-    showPanel("scholarships", true);
-    requestAnimationFrame(() => document.getElementById("familias").scrollIntoView({behavior:"smooth",block:"start"}));
+    window.location.href = "scholarships.html#families";
     return;
   }
   showPanel(target, true);
@@ -2284,21 +2224,11 @@ function renderSite(){
   if(SITE.teacher) t.textContent = SITE.teacher; else t.remove();
 }
 
-document.getElementById("q").addEventListener("input", e => { query = e.target.value.toLowerCase().trim(); render(); });
-document.getElementById("mineOnly").addEventListener("change", e => { mineOnly = e.target.checked; render(); });
-document.getElementById("clearSaved").addEventListener("click", () => {
-  if(!Object.keys(saved).length) return toast("Your saved list is already empty.");
-  if(!confirm("Clear every scholarship from your saved list on this browser?")) return;
-  saved = {}; persistSaved(); render(); renderCalendar(); toast("Saved list cleared.");
-});
-
 function boot(){
   renderSite();
   initStartReception();
-  buildChips();
   initCalendar();
   renderCalendar();
-  render();
   renderCommonApp();
   renderBuilder();
   renderPrompts();
