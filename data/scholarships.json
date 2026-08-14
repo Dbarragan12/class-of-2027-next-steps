@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T22:56:11.615Z",
+  "updatedAt": "2026-08-14T00:21:51.000Z",
   "publicationRule": "Only opportunities verified for Toppenish High School students. Current official opportunities need a current deadline or an open/rolling application; recurring plan-ahead items need an official source, a prior-cycle deadline, and an explicit warning that the next date may change.",
   "scholarships": [
     {
@@ -24,6 +24,156 @@
         "lowincome"
       ],
       "whyFit": "Toppenish residents qualify because Toppenish is in Yakima County. This is the countywide Mollie Davis program—not Yakima Rotary's school-limited Academic or Vocational scholarships.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "YVC Vineyard & Winery Technology Scholarship",
+      "organization": "Yakima Valley College Vineyard & Winery Technology Program",
+      "award": "$500–$2,500",
+      "eligibility": "New or returning part-time or full-time YVC students pursuing a degree or certificate in Vineyard Technology or Winery Technology.",
+      "url": "https://www.yvcc.edu/academics/agriculture/ag-scholarships.php",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now — applications are accepted every quarter.",
+      "tags": [
+        "Local",
+        "Farmworker",
+        "Trades",
+        "Two-year"
+      ],
+      "fit": [
+        "local",
+        "ag"
+      ],
+      "whyFit": "A direct local option for Toppenish students entering YVC's vineyard or winery technology programs; the official page says awards are available every quarter.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Live Your Dream Award",
+      "organization": "Soroptimist International of the Americas",
+      "award": "Local awards vary; recipients can receive up to $16,000 across award levels",
+      "eligibility": "Women who provide the primary financial support for themselves and dependents, are enrolled in or accepted to an undergraduate or vocational program, and do not hold or pursue a graduate degree.",
+      "url": "https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-11-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now — applications are accepted August 1–November 15.",
+      "tags": [
+        "Washington",
+        "Trades",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students are not excluded, but this is only for a student who supports dependents. It should be shared privately with students who may fit.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Horse Heaven Hills Wine Growers Scholarship",
+      "organization": "Washington Wine Industry Foundation",
+      "award": "Two $3,000 awards in the 2026 cycle",
+      "eligibility": "Students with a 3.0+ GPA studying viticulture, enology, wine business, or wine-related hospitality; preference goes to Yakima, Benton, or Klickitat County residents whose parent works in Washington's wine industry.",
+      "url": "https://washingtonwinefoundation.org/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-14",
+      "expectedWindow": "The 2026 application closed April 14; the 2027 date has not been released and may change.",
+      "tags": [
+        "Local",
+        "Farmworker",
+        "Trades",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "local",
+        "ag"
+      ],
+      "whyFit": "Toppenish is in Yakima County, one of the sponsor's preferred counties. The strongest match is a student with a parent employed in Washington's wine industry.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Walter Clore Scholarship",
+      "organization": "Washington Wine Industry Foundation",
+      "award": "Awards start at $1,000",
+      "eligibility": "Students with a 3.0+ GPA studying a wine- or viticulture-related field at a Washington college, university, community college, or technical school.",
+      "url": "https://washingtonwinefoundation.org/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-14",
+      "expectedWindow": "The 2026 application closed April 14; the 2027 date has not been released and may change.",
+      "tags": [
+        "Washington",
+        "Trades",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "local",
+        "ag"
+      ],
+      "whyFit": "Toppenish students can apply if their planned program is wine- or viticulture-related and they meet the sponsor's academic and enrollment rules.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "George & Susan Carter Scholarship",
+      "organization": "Washington Wine Industry Foundation",
+      "award": "$1,000 per year, renewable for up to four years",
+      "eligibility": "Students with a 3.4+ high school GPA pursuing viticulture, enology, or related food-science study; financial need is preferred.",
+      "url": "https://washingtonwinefoundation.org/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-14",
+      "expectedWindow": "The 2026 application closed April 14; the 2027 date has not been released and may change.",
+      "tags": [
+        "Washington",
+        "Farmworker",
+        "Trades",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "ag",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students are geographically eligible when pursuing an approved wine-related program and meeting the sponsor's GPA and enrollment rules.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Dairy Strong Scholarship",
+      "organization": "Washington Dairy / Dairy West",
+      "award": "One $5,000 award and two $1,500 awards in the 2026 cycle",
+      "eligibility": "Washington dairy employees, immediate family of a dairy employee or owner, or students active in a dairy club or education program; any major and accredited university, trade school, or community college can qualify.",
+      "url": "https://www.wadairy.org/dairy-strong-scholarship/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-06-01",
+      "expectedWindow": "The 2026 application ran February 20–June 1; the 2027 date has not been released and may change.",
+      "tags": [
+        "Washington",
+        "Farmworker",
+        "Trades",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "local",
+        "ag"
+      ],
+      "whyFit": "Toppenish students can qualify through their own or an immediate family member's work at a Washington dairy, or through an eligible dairy education program.",
       "lastChecked": "2026-08-13"
     },
     {
