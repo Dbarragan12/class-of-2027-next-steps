@@ -24,10 +24,12 @@ No student information is collected or stored.
 ## Airtable labels
 
 - **Confirmed for 2027**: official current-cycle information.
-- **Expected — last year's information**: a real recurring scholarship whose new details are not published yet.
+- **Expected — last year's information**: a real recurring scholarship whose new details are not published yet. Cards show an estimated opening month/year or a recurring opening date when the sponsor publishes one.
 - **Needs review**: never published to students.
 - **Closed / archive**: never published to students.
 
 ## Important limit
+
+The scholarship board is intentionally broad: a card may be Toppenish-, Yakima Valley-, Washington-, Pacific Northwest-, or nationally available when at least one Toppenish student may qualify. Students must still read the card's exact eligibility condition.
 
 The free, no-AI workflow can verify official sources and flag changes every night. Reliable automatic discovery and eligibility judgment for five brand-new scholarships every night requires a paid research/AI service or a staff review queue. Do not automatically publish unverified scholarship search results to students.
