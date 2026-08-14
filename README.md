@@ -2,6 +2,8 @@
 
 A free GitHub Pages hub for Toppenish High School advisory students.
 
+The scholarship finder is also available as a separate, shareable page at `scholarships.html`. It uses the same `data/scholarships.json` source but does not include advisory-specific pages or teacher information.
+
 ## The nightly system
 
 At about 2:15 a.m. Pacific Standard Time (3:15 a.m. during daylight saving time), GitHub Actions:
@@ -20,6 +22,8 @@ To add or update a scholarship, edit `data/scholarships.json` manually, verify t
 2. Run the **Nightly scholarship refresh** workflow once from the Actions tab.
 
 No student information is collected or stored.
+
+The standalone finder saves a student's list only in that browser. “Email my list” opens the student's own email program and does not send addresses to this site. Automatic new-scholarship email alerts require a private mailing-list service; do not add an email form or store student addresses in this public repository until that service is connected and its privacy terms are reviewed.
 
 ## Airtable labels
 
