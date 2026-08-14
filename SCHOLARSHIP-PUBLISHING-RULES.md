@@ -33,4 +33,6 @@ The nightly workflow may check links, detect source changes, and export approved
 
 WAEF uses one application for multiple tree-fruit scholarships. The student-facing WAEF card should teach applicants to enter a parent's exact employer name. Do not create a separate public card for every employer sub-fund.
 
+Local agriculture and employer-linked opportunities are included because orchards, vineyards, dairies, food processing, and related businesses employ many Toppenish-area parents and guardians. Never imply that all of these awards require the student to study agriculture: distinguish scholarships unlocked by family employment from scholarships that require an agriculture-, wine-, or industry-related program of study.
+
 Agri Beef / Washington Beef remains an ask-HR lead until the employer confirms a current award, application link, and deadline. Do not publish an amount or date from an old employee-program document.
