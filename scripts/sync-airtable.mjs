@@ -38,6 +38,7 @@ const canonicalTag = new Map([
   ["No essay","No essay"], ["Open to most students","Open to most students"]
 ]);
 const normalizeTags=value=>[...new Set(tagNames(value).map(t=>canonicalTag.get(t)).filter(Boolean))];
+const structuredTags=tags=>tags.length>0;
 const fitKeys=(tags,eligibility,why)=>{
   const hay=[...tags,eligibility,why].join(" ").toLowerCase();
   const out=[];
@@ -71,13 +72,17 @@ const scholarships=records.map(r=>{
 }).filter(x=>{
   const approved=x.visibility==="Publish"
     && x.toppenishEligibility==="Verified eligible"
-    && x.name && x.organization && x.url
+    && x.name && x.organization && x.url && /^https:\/\//i.test(x.url)
+    && x.eligibility && x.whyFit && x.lastChecked
+    && structuredTags(x.tags)
     && x.organization!=="Washington GEAR UP archive";
   const current=x.status==="Confirmed for 2027"
     && (x.deadline || /open now|rolling|year-round/i.test(x.expectedWindow||""));
   const planAhead=x.status==="Expected — last year's information"
     && x.lastYearDeadline && x.expectedWindow;
-  const publishable=approved && (current || planAhead);
+  const checkedAt=Date.parse(`${x.lastChecked}T00:00:00Z`);
+  const stale=!Number.isFinite(checkedAt) || Date.now()-checkedAt > 60*24*60*60*1000;
+  const publishable=approved && !stale && (current || planAhead);
   if(!publishable && x.visibility==="Publish") rejected.push(x.name||"(unnamed record)");
   return publishable;
 }).map(({visibility,toppenishEligibility,...x})=>x).sort((a,b)=>{
