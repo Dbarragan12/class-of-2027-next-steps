@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Scholarship Finder</title>
+<meta name="description" content="A simple scholarship finder for Yakima Valley, Washington, Pacific Northwest, and national opportunities.">
+<meta name="color-scheme" content="light">
+<style>
+:root{
+  --crimson:#822336;--crimson-dk:#5f1927;--rose:#a04a5c;--rose-lt:#f0a6b2;
+  --ink:#212325;--muted:#5c5f62;--paper:#f4f4f5;--card:#fff;--gray20:#d0d1d3;
+  --sand:#faf6f2;--sage:#2f6b52;--shadow:0 1px 0 var(--gray20),0 2px 14px rgba(33,35,37,.07)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--crimson)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--crimson);outline-offset:3px}
+button,input{font:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.top{background:var(--crimson);color:#fff;border-top:7px solid var(--ink);padding:24px 0 28px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:48px;height:48px;display:grid;place-items:center;background:#fff;color:var(--crimson);border-radius:8px;font-size:25px;font-weight:800}
+.brand h1{font-size:clamp(25px,6vw,42px);line-height:1.05;margin:0;letter-spacing:-.035em}
+.brand p{margin:4px 0 0;color:#f0dade;font-size:14px}
+.top-copy{max-width:700px;margin:22px 0 0}
+.top-copy h2{font-size:clamp(30px,7vw,54px);line-height:1.02;letter-spacing:-.045em;margin:0 0 10px}
+.top-copy p{margin:0;color:#f4dfe3;max-width:60ch}
+.top-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.top-links a{border:1px solid rgba(255,255,255,.55);border-radius:999px;color:#fff;padding:8px 12px;text-decoration:none;font-size:13px;font-weight:700}
+.top-links a:hover{background:#fff;color:var(--crimson)}
+main{padding-bottom:42px}
+.notice{margin:20px 0 0;background:#fff;border:1px solid var(--gray20);border-left:5px solid var(--rose);border-radius:10px;padding:15px 16px;box-shadow:var(--shadow)}
+.notice p{margin:0;color:var(--muted);font-size:14px}
+.notice strong{color:var(--ink)}
+.tools{position:sticky;top:0;z-index:10;background:rgba(244,244,245,.97);border-bottom:1px solid var(--gray20);padding:12px 0;margin-top:22px}
+.search-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#search{flex:1 1 260px;min-width:0;padding:11px 13px;border:1.5px solid var(--gray20);border-radius:8px;background:#fff;color:var(--ink)}
+.btn{border:1.5px solid var(--ink);border-radius:8px;background:var(--ink);color:#fff;padding:10px 13px;cursor:pointer;font-size:13px;font-weight:800}
+.btn:hover{background:var(--crimson);border-color:var(--crimson)}
+.btn.active{background:var(--crimson);border-color:var(--crimson)}
+.btn.ghost{background:#fff;color:var(--ink);border-color:var(--gray20)}
+.btn.ghost:hover{border-color:var(--crimson);color:var(--crimson)}
+.saved-count{font-size:13px;color:var(--muted);margin:10px 0 0}
+.saved-count strong{color:var(--ink)}
+.filter-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:12px 0 5px;font-weight:800}
+.chips{display:flex;gap:7px;overflow-x:auto;padding:2px 0 3px;scrollbar-width:thin}
+.chip{white-space:nowrap;border:1.5px solid var(--gray20);background:transparent;color:var(--muted);border-radius:999px;padding:7px 11px;cursor:pointer;font-size:12px;font-weight:700}
+.chip:hover{border-color:var(--crimson);color:var(--crimson)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.results-head{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:26px 0 12px}
+.results-head h2{font-size:27px;line-height:1.1;margin:0}
+.results-head span{color:var(--muted);font-size:13px;text-align:right}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--gray20);border-left:5px solid var(--gray64);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+.card.planning{border-left-color:var(--rose);background:#fffafb}.card.closed{border-left-color:var(--gray20);opacity:.75}.card.soon{border-left-color:var(--rose)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.card h3{font-size:20px;line-height:1.12;margin:0;letter-spacing:-.02em}
+.org{margin-top:4px;color:var(--muted);font-size:12px;font-weight:700}
+.status{flex:0 0 auto;text-align:right;color:var(--crimson);font-size:12px;font-weight:800;line-height:1.2;max-width:120px}
+.status small{display:block;color:var(--muted);font-size:10px;font-weight:700;margin-top:2px}
+.award{margin:0;font-weight:800;color:var(--sage)}
+.eligibility,.why{margin:0;color:var(--muted);font-size:14px}.why{padding-left:10px;border-left:3px solid var(--rose-lt)}
+.prep{font-size:13px;color:var(--muted);background:var(--sand);border-radius:7px;padding:9px 10px}.prep strong{color:var(--ink)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:3px}
+.save{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:800;cursor:pointer}.save input{width:17px;height:17px;accent-color:var(--crimson)}
+.sponsor{font-size:13px;font-weight:800;text-decoration:none}.sponsor:hover{text-decoration:underline}
+.empty{background:#fff;border:1px solid var(--gray20);border-radius:10px;padding:26px;text-align:center;color:var(--muted)}
+.lower{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.lower-card{background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:19px;box-shadow:var(--shadow)}
+.lower-card h2{font-size:22px;margin:0 0 8px}.lower-card p{margin:0 0 10px;color:var(--muted);font-size:14px}.lower-card ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:14px}.lower-card li{margin:5px 0}
+.privacy{border-top:4px solid var(--sage)}
+.updates{border-top:4px solid var(--crimson)}
+details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summary{cursor:pointer;font-weight:800;font-size:14px}details p{margin-top:9px}
+.toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120px);background:var(--ink);color:#fff;border-radius:8px;padding:11px 15px;font-size:13px;box-shadow:0 8px 25px rgba(0,0,0,.25);transition:transform .2s;z-index:30}.toast.show{transform:translate(-50%,0)}
+@media(max-width:650px){.top{padding-top:19px}.brand h1{font-size:27px}.brand p{font-size:12px}.top-copy h2{font-size:38px}.tools{position:static}.search-row .btn{flex:1 1 auto}.results-head{align-items:start;flex-direction:column;gap:3px}.results-head span{text-align:left}.lower{grid-template-columns:1fr}.card-head{gap:8px}.status{max-width:105px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">$</div>
+      <div><h1>Student Scholarship Finder</h1><p>Yakima Valley · Washington · Pacific Northwest · National</p></div>
+    </div>
+    <div class="top-copy">
+      <h2>Find money that fits.</h2>
+      <p>Search one list, save the opportunities that fit your situation, and read what you will need before you start an application.</p>
+    </div>
+    <div class="top-links"><a href="#updates">Get scholarship updates</a><a href="#families">Family guidance · Español</a></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="notice"><p><strong>Open opportunities appear first.</strong> Planning cards show an estimated opening month/year or a recurring opening date. A planning date is not a promise—always open the sponsor's page before applying.</p></div>
+  </div>
+
+  <section class="tools" aria-label="Scholarship search and filters">
+    <div class="wrap">
+      <div class="search-row">
+        <label class="sr" for="search">Search scholarships</label>
+        <input id="search" type="search" placeholder="Search welding, orchard, nursing, tribal, no essay…" autocomplete="off">
+        <button class="btn ghost" id="show-saved" type="button">My saved <span id="saved-number">0</span></button>
+        <button class="btn ghost" id="copy-saved" type="button">Copy my list</button>
+        <button class="btn" id="email-saved" type="button">Email my list</button>
+      </div>
+      <p class="saved-count"><strong id="result-count">0</strong> opportunities shown · saved scholarships stay on this device</p>
+      <p class="filter-label">Show scholarships for… — tap all that apply</p>
+      <div class="chips" id="filters" role="group" aria-label="Show scholarships for selected student groups"></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="results-title">
+    <div class="results-head"><h2 id="results-title">Scholarships</h2><span id="sort-note">Open now first · then opening soon</span></div>
+    <div class="grid" id="results"></div>
+    <div class="empty" id="empty" hidden>No scholarships match those choices. Try clearing a filter or searching a different word.</div>
+  </section>
+
+  <section class="wrap lower">
+    <article class="lower-card updates" id="updates">
+      <h2>New confirmed scholarship updates</h2>
+      <p>This finder is ready for automatic update emails, but a free static website cannot securely store email addresses or send mail by itself.</p>
+      <p><strong>For now:</strong> use <em>Email my list</em> to send saved opportunities to yourself. Automatic alerts will require connecting a private mailing-list service before anyone enters an email address.</p>
+      <details><summary>What will automatic updates do?</summary><p>When the overnight check finds a new confirmed deadline or a changed official scholarship page, the connected mailing service can send an opt-in message. Planning dates will not trigger a “confirmed” alert.</p></details>
+    </article>
+    <article class="lower-card privacy" id="families">
+      <h2>Family guidance · Español</h2>
+      <p>No se paga para solicitar una beca. Lea los requisitos con cuidado y use la página oficial del patrocinador antes de compartir información personal.</p>
+      <ul><li>Una beca puede ser local, estatal o nacional.</li><li>La ayuda puede depender del programa de estudio, trabajo familiar, ingresos, identidad o experiencia de vida.</li><li>Guarde una copia de cada solicitud y confirmación.</li></ul>
+    </article>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const MS_DAY=86400000;
+const today=(()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())})();
+const FITS=[
+  {key:"local",label:"Local / Yakima"},{key:"lowincome",label:"Financial need"},{key:"firstgen",label:"First-generation"},
+  {key:"tribal",label:"Native / tribal"},{key:"ag",label:"Agriculture / family work"},{key:"disability",label:"Disability"},
+  {key:"lgbtq",label:"LGBTQ+"},{key:"leadership",label:"Leadership / service"},{key:"everyone",label:"Open to most"}
+];
+let allItems=[];let activeFits=new Set();let query="";let saved={};let showingSaved=false;let toastTimer;
+try{saved=JSON.parse(localStorage.getItem("thsNextSteps")||"{}").saved||{}}catch(e){saved={}}
+const $=id=>document.getElementById(id);
+function parseDate(s){if(!s)return null;const p=String(s).split("-").map(Number);return p.length===3&&!p.some(Number.isNaN)?new Date(p[0],p[1]-1,p[2]):null}
+function daysUntil(s){const d=parseDate(s);return d?Math.round((d-today)/MS_DAY):null}
+function fmt(s){const d=parseDate(s);return d?d.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"}):""}
+function monthYear(s){const d=parseDate(s);return d?d.toLocaleDateString("en-US",{month:"short",year:"numeric"}):"Check date"}
+function idOf(item){return String(item.name).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
+function esc(s){return String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[c]))}
+function nextCycleDate(lastDate){const d=parseDate(lastDate);if(!d)return null;let n=new Date(today.getFullYear(),d.getMonth(),d.getDate());if(n<=today)n=new Date(today.getFullYear()+1,d.getMonth(),d.getDate());return n}
+function isoDate(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function predictedOpenDate(item){const d=nextCycleDate(item.lastYearDeadline);if(!d)return null;d.setDate(d.getDate()-60);return isoDate(d)}
+function mapItem(item){
+  const planning=!String(item.status).startsWith("Confirmed");
+  const opens=planning?(item.expectedOpen||item.predictedOpen||predictedOpenDate(item)):(item.opens||null);
+  const fit=Array.isArray(item.fit)?item.fit:[];
+  return {...item,id:idOf(item),planning,opens,fit,openLabel:planning?(item.openLabel||null):null};
+}
+function statusFor(item){
+  if(item.planning){return {kind:"planning",label:item.openLabel||monthYear(item.opens),detail:item.openLabel?"annual opening":"estimated opening",rank:2,date:item.opens||"9999-12-31"}}
+  if(item.opens&&daysUntil(item.opens)>0){return {kind:"soon",label:"Opens "+fmt(item.opens),detail:"confirmed date",rank:1,date:item.opens}}
+  if(!item.deadline){return {kind:"open",label:"Open now",detail:"rolling or no fixed deadline",rank:0,date:"9999-12-31"}}
+  const n=daysUntil(item.deadline);
+  if(n<0)return {kind:"closed",label:"Closed",detail:"check next cycle",rank:3,date:item.deadline};
+  return {kind:n<=45?"soon":"open",label:"Open now",detail:"due "+fmt(item.deadline),rank:0,date:item.deadline};
+}
+function saveState(){try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");all.saved=saved;localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}}
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2600)}
+function renderFilters(){
+  const box=$("filters");box.innerHTML="";
+  FITS.forEach(f=>{const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=f.label;b.setAttribute("aria-pressed",String(activeFits.has(f.key)));b.addEventListener("click",()=>{activeFits.has(f.key)?activeFits.delete(f.key):activeFits.add(f.key);b.setAttribute("aria-pressed",String(activeFits.has(f.key)));render()});box.appendChild(b)})
+}
+function itemMatches(item){
+  if(showingSaved&&!saved[item.id])return false;
+  if(activeFits.size&&!Array.from(activeFits).every(k=>item.fit.includes(k)))return false;
+  if(!query)return true;
+  const hay=[item.name,item.organization,item.award,item.eligibility,item.whyFit,item.expectedWindow,(item.tags||[]).join(" "),item.fit.join(" ")].join(" ").toLowerCase();return hay.includes(query)
+}
+function card(item){
+  const st=statusFor(item),checked=!!saved[item.id];
+  const due=item.planning?(item.lastYearDeadline?`Prior-cycle deadline <strong>${fmt(item.lastYearDeadline)}</strong> — planning only; the new date is not guaranteed`:esc(item.expectedWindow||"New cycle not released yet")):(item.deadline?(st.kind==="closed"?`Closed ${fmt(item.deadline)} — check the sponsor page for the next cycle`:`Due <strong>${fmt(item.deadline)}</strong>`):esc(item.expectedWindow||"No fixed deadline"));
+  const opening=item.opens&&daysUntil(item.opens)>0?`<div class="why"><strong>${item.planning?"Opening plan":"Opens"}:</strong> ${fmt(item.opens)}</div>`:"";
+  const el=document.createElement("article");el.className="card "+st.kind;el.innerHTML=`
+    <div class="card-head"><div><h3>${esc(item.name)}</h3><div class="org">${esc(item.organization||"Scholarship sponsor")}</div></div><div class="status">${esc(st.label)}<small>${esc(st.detail)}</small></div></div>
+    <p class="award">${esc(item.award||"See sponsor details")}</p>
+    <p class="eligibility">${esc(item.eligibility||"Read the sponsor's current requirements.")}</p>
+    ${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}
+    <div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div>
+    ${opening}<div class="why">${due}</div>
+    <div class="card-foot"><label class="save"><input type="checkbox" ${checked?"checked":""}> Save this</label><a class="sponsor" href="${esc(item.url)}" target="_blank" rel="noopener">Open sponsor page ↗</a></div>`;
+  el.querySelector("input").addEventListener("change",e=>{if(e.target.checked){saved[item.id]=true;toast("Saved to your list.")}else{delete saved[item.id];toast("Removed from your list.")}saveState();render()});return el
+}
+function render(){
+  const items=allItems.filter(itemMatches).sort((a,b)=>{const sa=statusFor(a),sb=statusFor(b);if(sa.rank!==sb.rank)return sa.rank-sb.rank;return String(sa.date).localeCompare(String(sb.date))||a.name.localeCompare(b.name)});
+  $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":"Open now first · then opening soon";
+}
+function savedItems(){return allItems.filter(item=>saved[item.id])}
+function savedText(){
+  const items=savedItems();const lines=["My saved scholarships",""];items.forEach((x,i)=>{lines.push(`${i+1}. ${x.name}`);lines.push(`Sponsor: ${x.organization||""}`);lines.push(`Eligibility: ${x.eligibility||""}`);lines.push(`Link: ${x.url}`);lines.push("")});return lines.join("\n")
+}
+function emailSaved(){
+  const items=savedItems();if(!items.length){toast("Save at least one scholarship first.");return}
+  window.location.href="mailto:?subject="+encodeURIComponent("My saved scholarships")+"&body="+encodeURIComponent(savedText());
+}
+$("copy-saved").addEventListener("click",async()=>{if(!savedItems().length){toast("Save at least one scholarship first.");return}try{await navigator.clipboard.writeText(savedText());toast("Copied — paste it into a message or email.")}catch(e){toast("Copy is unavailable here. Use Email my list instead.")}});
+$("search").addEventListener("input",e=>{query=e.target.value.toLowerCase().trim();render()});
+$("show-saved").addEventListener("click",()=>{showingSaved=!showingSaved;$("show-saved").classList.toggle("active",showingSaved);render()});
+$("email-saved").addEventListener("click",emailSaved);
+fetch("data/scholarships.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{allItems=(data.scholarships||[]).map(mapItem);renderFilters();render()}).catch(()=>{$("results").innerHTML="<div class=empty>The scholarship list could not load. Please refresh the page.</div>"});
+</script>
+</body>
+</html>
