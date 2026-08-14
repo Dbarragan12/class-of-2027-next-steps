@@ -9,6 +9,7 @@ This is the standing contract for the Class of 2027 scholarship pipeline.
 - `mapScholarship()` normalizes the public JSON records into controlled `fit` and `tags` arrays.
 - Filters stay disclosure-safe: use “Show scholarships for…” language.
 - The student site keeps one filter row. Do not restore a second STEM / Trades / Arts / Open-now row unless student testing shows that the extra complexity improves use.
+- The public finder lives at `scholarships.html` so it can be shared without exposing advisory-specific pages or teacher information. The advisory hub links to it; scholarship search UI belongs on the standalone page.
 
 ## Safe-to-publish contract
 
@@ -30,6 +31,8 @@ Candidates that fail any gate remain unpublished. Never bulk-import an archive o
 ## Nightly behavior
 
 The nightly workflow checks links and detects source changes in the existing manually maintained list. It must never import Airtable, replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain expected until a person verifies the new cycle. If the list is empty, the workflow must fail safely instead of committing an empty file.
+
+The public GitHub Pages site cannot securely collect email addresses or send automatic notifications by itself. Until a private mailing-list service is connected and reviewed, the finder may open a student's own email program or copy a saved list, but it must not store subscriber addresses in the repository or send unapproved messages.
 
 ## Local employer pattern
 
