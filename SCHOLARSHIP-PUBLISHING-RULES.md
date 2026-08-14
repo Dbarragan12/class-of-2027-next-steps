@@ -28,6 +28,8 @@ Geographic reach is intentionally broad: Toppenish, Yakima County/Valley, Washin
 
 Candidates that fail any gate remain unpublished. Never bulk-import an archive or aggregator.
 
+Community submissions, corrections, and program/resource leads enter the GitHub review queue through the public issue templates. They are never published automatically. Reviewers must verify the official source and remove or reject any submission containing private student information before considering publication.
+
 ## Nightly behavior
 
 The nightly workflow checks links and detects source changes in the existing manually maintained list. It must never import Airtable, replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain expected until a person verifies the new cycle. If the list is empty, the workflow must fail safely instead of committing an empty file.
