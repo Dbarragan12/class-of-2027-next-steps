@@ -600,7 +600,7 @@ footer p{margin:0 0 10px}
     <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
       <div class="calendar-head">
         <div>
-          <div class="lbl">Important dates for seniors</div>
+          <div class="lbl" id="calendar-kicker">Important dates for seniors</div>
           <h2 id="calendar-title">Loading important dates…</h2>
           <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Expected dates stay out until they are verified.</p>
         </div>
@@ -1728,6 +1728,8 @@ function renderCalendar(){
   const grid = document.getElementById("calendar-grid");
   if(!grid) return;
   const all = confirmedCalendarItems();
+  const open = document.getElementById("calendar-toggle")?.getAttribute("aria-expanded") === "true";
+  const next = all.find(item => daysUntil(item.due) >= 0);
   const byDate = new Map();
   all.forEach(item => {
     if(!byDate.has(item.due)) byDate.set(item.due, []);
@@ -1740,10 +1742,20 @@ function renderCalendar(){
   const viewMonth = calendarMonthKey(year, month);
   const monthItems = all.filter(item => item.due.startsWith(viewMonth));
   const monthTitle = first.toLocaleDateString("en-US",{month:"long",year:"numeric"});
-  document.getElementById("calendar-title").textContent = monthTitle;
-  document.getElementById("calendar-summary").textContent = monthItems.length
-    ? `${monthItems.length} confirmed date${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
-    : "No confirmed dates are listed this month. Use the arrows to check another month.";
+  const kicker = document.getElementById("calendar-kicker");
+  if(open){
+    kicker.textContent = "Important dates for seniors";
+    document.getElementById("calendar-title").textContent = monthTitle;
+    document.getElementById("calendar-summary").textContent = monthItems.length
+      ? `${monthItems.length} confirmed date${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
+      : "No confirmed dates are listed this month. Use the arrows to check another month.";
+  } else {
+    kicker.textContent = next ? "Next confirmed date" : "Important dates for seniors";
+    document.getElementById("calendar-title").textContent = next ? next.name : "No upcoming confirmed dates";
+    document.getElementById("calendar-summary").textContent = next
+      ? `Due ${fmt(next.due)} · ${next.org || "official sponsor"}`
+      : "Check the full calendar for past dates or wait for a new confirmed date to be posted.";
+  }
   document.getElementById("calendar-count").textContent = `${all.length} confirmed date${all.length === 1 ? "" : "s"} in the full calendar`;
 
   let selected = calendarSelected;
@@ -1780,6 +1792,7 @@ function initCalendar(){
     toggle.textContent = open ? "Close calendar" : "Open calendar";
     body.hidden = !open;
     calendar.classList.toggle("calendar-open", open);
+    renderCalendar();
   });
   document.getElementById("cal-prev").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()-1); calendarSelected = null; renderCalendar(); });
   document.getElementById("cal-next").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()+1); calendarSelected = null; renderCalendar(); });
