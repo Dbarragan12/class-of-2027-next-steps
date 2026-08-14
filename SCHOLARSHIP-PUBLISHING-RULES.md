@@ -6,7 +6,7 @@ This is the standing contract for the Class of 2027 scholarship pipeline.
 
 - `data/scholarships.json` remains the public data source and keeps `updatedAt` plus `publicationRule`.
 - FAFSA, WASFA, Washington College Grant, College Bound Scholarship, and Passport to Careers remain separate from scholarship records.
-- `mapScholarship()` normalizes Airtable text and tags into controlled `fit` and `tags` arrays.
+- `mapScholarship()` normalizes the public JSON records into controlled `fit` and `tags` arrays.
 - Filters stay disclosure-safe: use “Show scholarships for…” language.
 - The student site keeps one filter row. Do not restore a second STEM / Trades / Arts / Open-now row unless student testing shows that the extra complexity improves use.
 
@@ -27,7 +27,7 @@ Candidates that fail any gate remain unpublished. Never bulk-import an archive o
 
 ## Nightly behavior
 
-The nightly workflow may check links, detect source changes, and export approved Airtable records. It must never turn a prior or predicted deadline into a confirmed one or publish an unreviewed candidate automatically. Expected records remain expected until a person verifies the new cycle.
+The nightly workflow checks links and detects source changes in the existing manually maintained list. It must never import Airtable, replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain expected until a person verifies the new cycle. If the list is empty, the workflow must fail safely instead of committing an empty file.
 
 ## Local employer pattern
 
