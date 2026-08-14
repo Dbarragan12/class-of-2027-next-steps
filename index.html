@@ -172,17 +172,21 @@ h1 .thin{font-weight:400; color:#e2b6bf}
 /* Confirmed-deadline calendar in the header */
 .deadline-calendar{
   background:var(--ink); color:var(--paper); border-radius:10px 10px 0 0;
-  padding:18px 20px 16px;
+  padding:10px 16px;
 }
-.calendar-head{display:flex; justify-content:space-between; gap:18px; align-items:flex-start; margin-bottom:15px}
-.calendar-head h2{font-size:clamp(23px,4vw,32px); color:#fff; margin:3px 0 4px}
-.calendar-head p{font-size:13.5px; color:var(--gray20); margin:0; max-width:58ch}
+.calendar-head{display:flex; justify-content:space-between; gap:18px; align-items:center}
+.calendar-head h2{font-size:clamp(18px,3vw,23px); color:#fff; margin:2px 0 2px}
+.calendar-head p{font-size:12.5px; color:var(--gray20); margin:0; max-width:58ch}
+.calendar-open .calendar-head{align-items:flex-start; margin-bottom:15px}
+.calendar-toggle{white-space:nowrap}
 .calendar-actions{display:flex; gap:6px; flex:0 0 auto}
-.calendar-actions button,.calendar-footer button{
+.calendar-actions button,.calendar-footer button,.calendar-toggle{
   border:1px solid #5b5d60; background:#2d3032; color:#fff; border-radius:6px;
   padding:7px 10px; font:500 12px "DM Mono",monospace; cursor:pointer
 }
 .calendar-actions button:hover,.calendar-footer button:hover{background:var(--crimson); border-color:var(--rose-lt)}
+.calendar-toggle:hover{background:var(--crimson); border-color:var(--rose-lt)}
+.calendar-body{margin-top:12px}
 .calendar-weekdays,.calendar-grid{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px}
 .calendar-weekdays{margin-bottom:4px}
 .calendar-weekdays span{font:500 10px "DM Mono",monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--gray37); text-align:center}
@@ -533,9 +537,11 @@ footer p{margin:0 0 10px}
 @media (max-width:560px){
   body{font-size:16px}
   .ticker{border-radius:10px; padding:14px 16px}
-  .deadline-calendar{border-radius:10px; padding:15px 14px 14px}
+  .deadline-calendar{border-radius:10px; padding:9px 12px}
   .calendar-head{display:block}
-  .calendar-actions{margin-top:12px}
+  .calendar-toggle{margin-top:9px}
+  .calendar-open .calendar-head{margin-bottom:12px}
+  .calendar-actions{margin-top:0}
   .calendar-day,.calendar-blank{min-height:40px}
   .calendar-day{padding:6px;font-size:12px}
   .calendar-day.has-deadline::after{left:5px;bottom:5px;width:6px;height:6px}
@@ -598,21 +604,24 @@ footer p{margin:0 0 10px}
           <h2 id="calendar-title">Loading confirmed deadlines…</h2>
           <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Expected dates stay out until they are verified.</p>
         </div>
+        <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
+      </div>
+      <div class="calendar-body" id="calendar-body" hidden>
         <div class="calendar-actions" aria-label="Change calendar month">
           <button type="button" id="cal-prev" aria-label="Show previous month">←</button>
           <button type="button" id="cal-today">Today</button>
           <button type="button" id="cal-next" aria-label="Show next month">→</button>
         </div>
-      </div>
-      <div class="calendar-weekdays" aria-hidden="true">
-        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-      </div>
-      <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Confirmed deadlines by month"></div>
-      <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
-      <div class="calendar-footer">
-        <span id="calendar-count">Confirmed deadlines only</span>
-        <button type="button" id="download-confirmed-ics">Download calendar</button>
-        <button type="button" data-jump="deadlines">See all deadlines →</button>
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Confirmed deadlines by month"></div>
+        <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
+        <div class="calendar-footer">
+          <span id="calendar-count">Confirmed deadlines only</span>
+          <button type="button" id="download-confirmed-ics">Download calendar</button>
+          <button type="button" data-jump="deadlines">See all deadlines →</button>
+        </div>
       </div>
     </section>
   </div>
@@ -1762,6 +1771,16 @@ function renderCalendar(){
   renderCalendarDetails(selected, byDate);
 }
 function initCalendar(){
+  const calendar = document.getElementById("deadline-calendar");
+  const toggle = document.getElementById("calendar-toggle");
+  const body = document.getElementById("calendar-body");
+  toggle.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.textContent = open ? "Close calendar" : "Open calendar";
+    body.hidden = !open;
+    calendar.classList.toggle("calendar-open", open);
+  });
   document.getElementById("cal-prev").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()-1); calendarSelected = null; renderCalendar(); });
   document.getElementById("cal-next").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()+1); calendarSelected = null; renderCalendar(); });
   document.getElementById("cal-today").addEventListener("click", () => { calendarView = new Date(today.getFullYear(), today.getMonth(), 1); calendarSelected = null; renderCalendar(); });
