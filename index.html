@@ -93,6 +93,19 @@ p{margin:0 0 12px}
 .requirement-card h4{font-size:19px;margin-bottom:6px}
 .requirement-card p{color:var(--muted);font-size:15px;margin:0}
 .requirement-card .mini{margin-top:12px}
+.requirements-accordion{display:grid;gap:10px;margin-top:30px}
+.requirements-accordion details{background:#fff;border:1px solid var(--gray20);border-radius:10px;box-shadow:var(--shadow);overflow:hidden}
+.requirements-accordion summary{cursor:pointer;list-style:none;padding:17px 20px;font-family:"Bricolage Grotesque",sans-serif;font-size:20px;font-weight:800}
+.requirements-accordion summary::-webkit-details-marker{display:none}
+.requirements-accordion summary::after{content:"+";float:right;color:var(--crimson);font-family:"DM Mono",monospace;font-size:20px}
+.requirements-accordion details[open] summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
+.requirements-accordion details[open] summary::after{content:"−"}
+.requirements-body{padding:17px 20px 20px;color:var(--muted);font-size:15.5px}
+.requirements-body h4{color:var(--ink);font-size:17px;margin:16px 0 6px}
+.requirements-body h4:first-child{margin-top:0}
+.requirements-body ul{margin:8px 0 0;padding-left:21px}
+.requirements-body li{margin:6px 0}
+.requirements-body a{font-weight:700}
 .start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 0}
 .start-step{
   background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:18px;box-shadow:var(--shadow);
@@ -388,6 +401,14 @@ main{padding:0 0 10px}
 }
 .note strong{font-family:"Bricolage Grotesque",sans-serif}
 .note p:last-child{margin-bottom:0}
+.notice-details{background:#fff;border:1px solid var(--gray20);border-left:5px solid var(--gold);border-radius:10px;margin-top:20px;overflow:hidden}
+.notice-details summary{cursor:pointer;padding:14px 17px;font-weight:700;color:var(--ink);list-style:none}
+.notice-details summary::-webkit-details-marker{display:none}
+.notice-details summary::after{content:"+";float:right;color:var(--crimson);font:500 18px "DM Mono",monospace}
+.notice-details[open] summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
+.notice-details[open] summary::after{content:"−"}
+.notice-body{padding:14px 17px;font-size:15px}
+.notice-body p:last-child{margin-bottom:0}
 
 .band{background:var(--ink); color:var(--paper); margin-top:48px; padding:48px 0}
 .band h2,.band h3{color:#fff}
@@ -680,6 +701,7 @@ footer p{margin:0 0 10px}
         <button type="button" data-start-intent="unsure">I am not sure yet</button>
         <button type="button" data-start-intent="money">I need money help</button>
         <button type="button" data-start-intent="path">I need to choose a path</button>
+        <button type="button" data-start-intent="scholarships">I am looking for scholarships</button>
         <button type="button" data-start-intent="apply">I am ready to apply</button>
         <button type="button" data-start-intent="help">I need a person</button>
       </div>
@@ -751,13 +773,19 @@ footer p{margin:0 0 10px}
     <p class="eyebrow">Section 05 · Scholarships</p>
     <h2>Find scholarships that fit Toppenish students.</h2>
     <p>Start close to home, use the filters, and read each card's eligibility and “What you'll need” line before you spend time applying.</p>
-    <div class="note" style="margin-top:20px;border-left-color:var(--gold)">
-      <p><strong>Planning notice for the Class of 2027:</strong> this site uses confirmed 2026–27 information when sponsors have released it. It also includes long-running scholarships expected to return, using 2025–26 school-year information—or the most recent official cycle available—to help students prepare early.</p>
-      <p style="margin:0"><strong>Expected does not mean guaranteed.</strong> Deadlines, awards, eligibility, and even whether a program returns can change. An expected card always shows the prior deadline as planning information and links to the sponsor so students can check for this year's update before applying.</p>
-    </div>
-    <div class="note" style="margin-top:20px">
-      <p style="margin:0"><strong>Why are agriculture and employer scholarships featured?</strong> Agriculture, orchards, vineyards, dairies, food processing, and related companies employ many Toppenish-area families. A student may qualify because of a parent or guardian's job—even when the student plans to study something completely different. Read each card carefully: some awards use the family employment connection, while others require the student to enter an agriculture- or wine-related program.</p>
-    </div>
+    <details class="notice-details">
+      <summary>How to use this list</summary>
+      <div class="notice-body">
+        <p><strong>Open opportunities come first.</strong> After those, expected scholarships are ordered by their estimated opening date based on prior cycles and sponsor history.</p>
+        <p><strong>Expected does not mean guaranteed.</strong> These cards use the most recent school-year information available so students can prepare early. Dates, awards, eligibility, and whether a program returns can change. Always open the sponsor's page before applying.</p>
+      </div>
+    </details>
+    <details class="notice-details">
+      <summary>Why are agriculture and employer scholarships featured?</summary>
+      <div class="notice-body">
+        <p>Agriculture, orchards, vineyards, dairies, food processing, and related companies employ many Toppenish-area families. A student may qualify because of a parent or guardian's job—even when the student plans to study something completely different. Read each card carefully: some awards use the family employment connection, while others require the student to enter an agriculture- or wine-related program.</p>
+      </div>
+    </details>
   </div>
 
   <div class="controls">
@@ -779,11 +807,14 @@ footer p{margin:0 0 10px}
     <div id="results"></div>
     <div class="empty" id="empty" hidden><b>Nothing matches that.</b>Clear the search or turn off a filter.</div>
 
-    <div class="note">
-      <p><strong>Trust rule:</strong> every scholarship on this board has been checked to make sure a Toppenish High School student can qualify by school and location. Confirmed opportunities use current sponsor information. Long-running expected opportunities use 2025–26 or the most recent official cycle only for planning, show the prior deadline, and clearly warn that the new details are not guaranteed.</p>
-      <p id="data-updated" style="margin-bottom:0"><strong>Last refreshed:</strong> Loading scholarship data…</p>
-      <p style="margin:10px 0 0"><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
-    </div>
+    <details class="notice-details" style="margin-top:30px;border-left-color:var(--crimson)">
+      <summary>Trust, updates, and scholarship safety</summary>
+      <div class="notice-body">
+        <p><strong>Trust rule:</strong> every scholarship on this board has been checked to make sure a Toppenish High School student can qualify by school and location. Confirmed opportunities use current sponsor information. Expected opportunities use the most recent cycle for planning and clearly warn that the new details are not guaranteed.</p>
+        <p id="data-updated"><strong>Last refreshed:</strong> Loading scholarship data…</p>
+        <p><strong>Nobody should charge you to apply.</strong> Real scholarships are free. If a site asks for a fee or credit card, close the tab.</p>
+      </div>
+    </details>
 
     <div class="familias critical-es" id="familias">
       <h3>Para las familias</h3>
@@ -964,16 +995,81 @@ footer p{margin:0 0 10px}
   <div class="wrap panel-intro">
     <p class="eyebrow">Section 03 · College Requirements</p>
     <h2>What do colleges and programs look for?</h2>
-    <p>There is no single rule for every school. Use this as a checklist, then open the official page for the college or program you are considering.</p>
+    <p>Use this page from the first visit to the final enrollment step. Open each section to see what students and families should prepare—and what can be different by school, major, or program.</p>
   </div>
   <main class="wrap">
-    <div class="requirements-grid" style="margin-top:30px">
-      <article class="requirement-card"><h4>Courses and credits</h4><p>Check your transcript against graduation requirements and Washington CADRs: English, math, science, social studies, world language, and a senior-year quantitative course may all matter for four-year admission.</p><a class="mini" href="https://admit.washington.edu/apply/first-year/cadr/" target="_blank" rel="noopener">See Washington CADRs →</a></article>
-      <article class="requirement-card"><h4>GPA and grades</h4><p>Schools review your full transcript, course choices, grade trend, and preparation. There is not one GPA that guarantees admission; check the specific school and ask for a transcript review.</p><a class="mini" href="https://admission.wsu.edu/apply/first-year-students/college-academic-distribution-requirements-cadrs/" target="_blank" rel="noopener">See WSU requirements →</a></article>
-      <article class="requirement-card"><h4>SAT or ACT?</h4><p>Many Washington colleges do not require SAT or ACT for admission, but a score can matter for a particular program, scholarship, placement, or special situation. Check before you pay or send scores.</p><a class="mini" href="https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/" target="_blank" rel="noopener">Check a school's test policy →</a></article>
-      <article class="requirement-card"><h4>Two-year and technical paths</h4><p>YVC may use transcripts or placement instead of SAT/ACT. Technical programs may add an assessment, interview, prerequisite course, or waitlist.</p><a class="mini" href="https://yvcc.edu/admissions/new-college-student.php" target="_blank" rel="noopener">See YVC steps →</a></article>
-      <article class="requirement-card"><h4>Application materials</h4><p>Prepare a personal email, transcript information, activities and jobs, family information, essays, recommendations if required, and a fee or fee waiver plan.</p><a class="mini" href="https://admit.washington.edu/apply/first-year/how-to-apply/" target="_blank" rel="noopener">See an application checklist →</a></article>
-      <article class="requirement-card"><h4>Ask before you assume</h4><p>Requirements change by school, major, and student situation. If the answer is unclear, bring the exact program page to Mr. Barragan or counseling.</p><button class="mini" type="button" data-jump="help">Get help →</button></article>
+    <div class="requirements-accordion">
+      <details open>
+        <summary>1. Choose the kind of program first</summary>
+        <div class="requirements-body">
+          <p>A four-year university, YVC, Perry Tech, and an apprenticeship do not ask for the same things. Before you start an application, write down the school, program or major, start term, and application type.</p>
+          <ul><li><strong>Four-year college:</strong> review high-school preparation, grades, application writing, and major-specific admission.</li><li><strong>YVC or another two-year college:</strong> plan for admission, placement, orientation, registration, and a pathway choice.</li><li><strong>Technical school or apprenticeship:</strong> check program prerequisites, assessments, interviews, start dates, and whether paid training is part of the program.</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>2. Check your high-school classes and credits</summary>
+        <div class="requirements-body">
+          <p>For Washington four-year admission, compare your transcript with the College Academic Distribution Requirements (CADRs). The common checklist is:</p>
+          <ul><li>4 credits of English</li><li>3 credits of mathematics, including Algebra II or higher preparation</li><li>1 senior-year math-based quantitative course</li><li>3 credits of science, including lab science requirements</li><li>3 credits of social sciences or social studies</li><li>2 credits of world language</li><li>About 1 credit of fine, visual, or performing arts, depending on the school</li></ul>
+          <p>Course names matter. An applied or remedial class may not meet a college-admission requirement even if it counts toward high-school graduation. Ask Mr. Barragan or counseling to compare your transcript with the exact college page.</p>
+          <a href="https://admit.washington.edu/apply/first-year/cadr/" target="_blank" rel="noopener">UW CADR details →</a> · <a href="https://admission.wsu.edu/apply/first-year-students/college-academic-distribution-requirements-cadrs/" target="_blank" rel="noopener">WSU CADR details →</a>
+        </div>
+      </details>
+      <details>
+        <summary>3. Understand GPA, grades, and course choices</summary>
+        <div class="requirements-body">
+          <p>There is no single GPA that guarantees admission everywhere. Colleges may review your full transcript, grade trend, senior schedule, course difficulty, CADRs, and the preparation expected for your major. A strong senior schedule still matters after you apply.</p>
+          <ul><li>Keep your grades steady or improving.</li><li>Do not drop a course without checking how it affects graduation and college requirements.</li><li>Ask each school whether the major has a separate GPA or prerequisite rule.</li><li>Send the final official transcript if you enroll; an application self-report is not always the final transcript.</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>4. Know when SAT or ACT matters</summary>
+        <div class="requirements-body">
+          <p>Do not assume every school has the same testing rule. UW says SAT/ACT scores are not required for admission and are not used in its normal holistic review, but exceptions and other uses can exist. Another college, scholarship, athletic program, homeschool situation, or placement process may have different rules.</p>
+          <ul><li>Open the official test-policy page for every school before paying for a test or sending scores.</li><li>Ask whether scores affect scholarships, course placement, NCAA eligibility, or a special program.</li><li>International applicants may have separate English-proficiency requirements.</li></ul>
+          <a href="https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/" target="_blank" rel="noopener">UW test-score guidance →</a>
+        </div>
+      </details>
+      <details>
+        <summary>5. Prepare the application materials</summary>
+        <div class="requirements-body">
+          <p>Set up one personal email address you will keep after graduation. Then prepare:</p>
+          <ul><li>Personal and family information requested by the application</li><li>High-school course names, grades, and dates</li><li>Activities, jobs, family responsibilities, and service</li><li>College personal statement or short-answer writing</li><li>Recommendation information only when the school or program asks for it</li><li>Application fee or fee-waiver plan</li><li>A list of every account, confirmation number, deadline, and missing item</li></ul>
+          <a href="https://admit.washington.edu/apply/first-year/how-to-apply/" target="_blank" rel="noopener">UW first-year application checklist →</a>
+        </div>
+      </details>
+      <details>
+        <summary>6. Know the YVC steps before registration</summary>
+        <div class="requirements-body">
+          <p>YVC is not “apply once and show up.” New students should plan for this sequence:</p>
+          <ol><li>Apply for admission and receive a ctcLink student ID.</li><li>Complete English and math placement by testing or sending transcripts for evaluation.</li><li>Choose a pathway and watch for the New Student Orientation invitation.</li><li>Attend orientation, meet with advising, and register for classes.</li><li>Check your financial-aid account, tuition balance, and payment plan before the due date.</li></ol>
+          <a href="https://www.yvcc.edu/admissions/new-college-student" target="_blank" rel="noopener">YVC new-student steps →</a> · <a href="https://www.yvcc.edu/registration/new-student-orientation" target="_blank" rel="noopener">YVC orientation and dates →</a>
+        </div>
+      </details>
+      <details>
+        <summary>7. Check program-specific requirements</summary>
+        <div class="requirements-body">
+          <p>A school may admit you while a program still has another process. Nursing, dental hygiene, teaching, engineering, health programs, arts programs, and technical programs can have prerequisites, assessments, interviews, portfolios, auditions, background checks, or limited seats.</p>
+          <p>Perry Tech, for example, may require an entrance assessment for the selected program, proof of high-school completion, identification, and a financial plan. Ask for the exact program checklist—not just the general school application.</p>
+          <a href="https://www.perrytech.edu/students/academics/enroll/" target="_blank" rel="noopener">Perry Tech enrollment steps →</a> · <a href="https://my.perrytech.edu/ICS/Future_Students/Assessment_Resources/" target="_blank" rel="noopener">Perry Tech assessment information →</a>
+        </div>
+      </details>
+      <details>
+        <summary>8. Do not stop after you are admitted</summary>
+        <div class="requirements-body">
+          <p>Admission is not the last step. Before the first day, students may still need to:</p>
+          <ul><li>Accept the admission offer by the stated date</li><li>Send a final transcript or other required records</li><li>Complete FAFSA/WASFA verification and compare the real remaining cost</li><li>Pay a deposit, arrange housing or transportation, and accept or decline aid</li><li>Complete placement, orientation, advising, registration, immunization, or program paperwork</li><li>Check the student portal and school email every week</li></ul>
+          <p>Keep screenshots or confirmation emails for every completed step.</p>
+        </div>
+      </details>
+      <details>
+        <summary>9. Family and student final check</summary>
+        <div class="requirements-body">
+          <ul><li>We know the exact school, program, and start term.</li><li>We checked the required high-school classes and GPA or prerequisite rules.</li><li>We know whether SAT/ACT, placement, an assessment, or an interview is required.</li><li>We have the application accounts, personal email, transcript information, and writing materials.</li><li>We know the financial-aid form, scholarship steps, and remaining-cost plan.</li><li>We wrote down the next deadline and who to contact when something is unclear.</li></ul>
+          <p><strong>Still unsure?</strong> Students and parents can message Mr. Barragan through ParentSquare with the exact school or program page.</p>
+          <button class="mini" type="button" data-jump="help">Get help →</button>
+        </div>
+      </details>
     </div>
   </main>
 </section>
@@ -1447,6 +1543,26 @@ function statusOf(item){
   return {cls:"open", n:n, unit:"days left", order:0, days:n};
 }
 
+/* Expected scholarships use the next matching month/day from the prior cycle.
+   The opening estimate is for ordering and planning only—not a confirmed date. */
+function nextCycleDate(lastDate){
+  const prior = parseDate(lastDate);
+  if(!prior) return null;
+  let next = new Date(today.getFullYear(), prior.getMonth(), prior.getDate());
+  if(next <= today) next = new Date(today.getFullYear()+1, prior.getMonth(), prior.getDate());
+  return next;
+}
+function isoDate(date){
+  return date.getFullYear()+"-"+String(date.getMonth()+1).padStart(2,"0")+"-"+String(date.getDate()).padStart(2,"0");
+}
+function predictedOpenDate(item){
+  const deadline = nextCycleDate(item.lastYearDeadline);
+  if(!deadline) return null;
+  const open = new Date(deadline);
+  open.setDate(open.getDate() - 60);
+  return isoDate(open);
+}
+
 let activeFits   = new Set();
 let query = "";
 let mineOnly = false;
@@ -1497,6 +1613,7 @@ const START_RESPONSES = {
   unsure:{title:"Start with Choose a path.",text:"You do not need a final career answer. Pick two possibilities and let the four-question guide help you compare them.",button:"Choose a path",target:"pathways"},
   money:{title:"Start with Pay for School.",text:"FAFSA and WASFA are free applications. You can ask which one fits before you apply, and you do not have to choose a college first.",button:"Pay for School",target:"deadlines"},
   path:{title:"You are in the right place.",text:"The path finder compares college, YVC, trades, apprenticeships, military, and work without ranking one above the others.",button:"Open the path finder",target:"pathways"},
+  scholarships:{title:"Start with Scholarships.",text:"Open opportunities appear first, followed by expected scholarships ordered by estimated opening date. Save the ones that fit and check the sponsor's page before applying.",button:"Find scholarships",target:"scholarships"},
   apply:{title:"Start with your application folder.",text:"Open the Apply and Write section for essays, recommendations, transcripts, and a private story builder.",button:"Apply and Write",target:"writing"},
   help:{title:"Questions are a good starting point.",text:"Students and parents can message Mr. Barragan through ParentSquare. You do not have to explain everything perfectly to ask for help.",button:"See help options",target:"help"}
 };
@@ -1599,7 +1716,7 @@ function cardFor(item){
     dueLine = esc(item.window || "No fixed deadline");
   }
   if(item.opens && daysUntil(item.opens) > 0){
-    dueLine = `<span class="warn">Opens ${fmt(item.opens)}</span> · ${dueLine}`;
+    dueLine = `<span class="warn">${item.planning ? "Estimated opening" : "Opens"} ${fmt(item.opens)}</span> · ${dueLine}`;
   }
 
   const fitPills = (item.fit || []).filter(f => f !== "everyone").map(f => {
@@ -1677,49 +1794,29 @@ function render(){
 
   document.getElementById("empty").hidden = items.length > 0;
 
+  function scholarshipRank(item){
+    const st = statusOf(item);
+    if(st.cls === "closed") return 3;
+    if(!item.planning && !(item.opens && daysUntil(item.opens) > 0)) return 0;
+    if(!item.planning) return 1;
+    return 2;
+  }
+  function scholarshipDate(item){
+    if(scholarshipRank(item) === 0) return item.due || "9999-12-31";
+    return item.opens || item.due || "9999-12-31";
+  }
   items.sort((a,b) => {
-    if((a.priority || 999) !== (b.priority || 999)) return (a.priority || 999) - (b.priority || 999);
-    const sa = statusOf(a), sb = statusOf(b);
-    if(sa.order !== sb.order) return sa.order - sb.order;
-    const da = effDate(a), db = effDate(b);
-    if(da && db) return parseDate(da) - parseDate(db);
-    if(da) return -1;
-    if(db) return 1;
-    return 0;
+    const rank = scholarshipRank(a) - scholarshipRank(b);
+    if(rank) return rank;
+    const da = parseDate(scholarshipDate(a)), db = parseDate(scholarshipDate(b));
+    if(da && db && da - db) return da - db;
+    return String(a.name).localeCompare(String(b.name));
   });
 
-  const groups = new Map();
-  items.forEach(it => {
-    const st = statusOf(it);
-    const d  = effDate(it);
-    const key = it.kind === "action" ? "start" : (it.kind === "local" ? "local" : (it.kind === "deadline" ? "senior" : (st.cls === "closed" ? "closed" : (st.cls === "planning" ? "planning" : (d ? monthKey(d) : "rolling")))));
-    if(!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(it);
-  });
-
-  const ordered = [...groups.keys()].sort((a,b) => {
-    const rank = k => k === "start" ? -3 : (k === "local" ? -2 : (k === "senior" ? -1 : (k === "rolling" ? 1e7 : (k === "planning" ? 2e7 : (k === "closed" ? 3e7 : k)))));
-    return rank(a) - rank(b);
-  });
-
-  ordered.forEach(key => {
-    const list  = groups.get(key);
-    const label = key === "start" ? "Essential money steps"
-                : key === "local" ? "Local programs and plan-ahead opportunities"
-                : key === "senior" ? "Important dates for seniors"
-                : key === "rolling" ? "Open now — no fixed deadline"
-                : key === "planning" ? "Expected to return — prior-cycle planning information"
-                : key === "closed"  ? "Closed for this cycle"
-                : monthLabel(effDate(list[0]));
-    const head = document.createElement("div");
-    head.className = "month";
-    head.innerHTML = `<h3>${label}</h3><span class="line"></span><span class="count">${list.length}</span>`;
-    out.appendChild(head);
-    const grid = document.createElement("div");
-    grid.className = "grid";
-    list.forEach(it => grid.appendChild(cardFor(it)));
-    out.appendChild(grid);
-  });
+  const grid = document.createElement("div");
+  grid.className = "grid";
+  items.forEach(it => grid.appendChild(cardFor(it)));
+  out.appendChild(grid);
 }
 
 /* ---------- confirmed deadline calendar ---------- */
@@ -2282,7 +2379,7 @@ function mapScholarship(item){
     org: sourceLabel(item),
     amount: item.award || "See sponsor details",
     who: item.eligibility || "Review the sponsor's current eligibility rules.",
-    opens: planning ? null : (item.opens || null),
+    opens: planning ? (item.predictedOpen || predictedOpenDate(item)) : (item.opens || null),
     due: planning ? null : (item.deadline || null),
     pastDue: planning ? (item.lastYearDeadline || item.deadline || null) : null,
     window: planning
