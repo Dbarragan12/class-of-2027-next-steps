@@ -35,6 +35,26 @@ function setupTabs(){
   if (sent.getLastRow()===0) sent.appendRow(["UpdateId","SentAt","ScholarshipName"]);
 }
 
+function setupFormTrigger(){
+  const book=SpreadsheetApp.openById(property_("SUBSCRIBER_SHEET_ID"));
+  const exists=ScriptApp.getProjectTriggers().some(trigger=>trigger.getHandlerFunction()==="copySubscriberFromForm");
+  if (!exists) ScriptApp.newTrigger("copySubscriberFromForm").forSpreadsheet(book).onFormSubmit().create();
+}
+
+function copySubscriberFromForm(event){
+  const values=event.namedValues||{};
+  const email=firstValue_(values,["email address","email"]);
+  const name=firstValue_(values,["name"]);
+  const consent=firstValue_(values,["agree","consent","permission","updates"]);
+  if (!email||!consented_(consent)) return;
+
+  const book=SpreadsheetApp.openById(property_("SUBSCRIBER_SHEET_ID"));
+  const subscribers=book.getSheetByName(SHEET_NAMES.subscribers);
+  const existing=subscribers.getLastRow()>1?subscribers.getRange(2,1,subscribers.getLastRow()-1,1).getValues().flat().map(String):[];
+  if (existing.includes(String(email).trim())) return;
+  subscribers.appendRow([String(email).trim(),name||"",true,false,new Date(),""]);
+}
+
 function sendUpdates_(updates){
   const book=SpreadsheetApp.openById(property_("SUBSCRIBER_SHEET_ID"));
   const subscribers=book.getSheetByName(SHEET_NAMES.subscribers);
@@ -83,6 +103,11 @@ function htmlMessage_(update,name){
   return greeting+escape_(message_(update)).replace(/\n/g,"<br>");
 }
 
+function firstValue_(namedValues,terms){
+  const entry=Object.entries(namedValues).find(([key])=>terms.some(term=>key.toLowerCase().includes(term)));
+  return entry&&entry[1]?entry[1][0]:"";
+}
+function consented_(value){const text=String(value||"").toLowerCase();return text.includes("agree")||text.includes("yes")||text.includes("true")||text==="1"||text==="x";}
 function truthy_(value){return value===true||["true","yes","y","1","x"].includes(String(value).toLowerCase().trim());}
 function property_(name){const value=PropertiesService.getScriptProperties().getProperty(name);if(!value)throw new Error(`Missing Script Property: ${name}`);return value;}
 function escape_(value){return String(value||"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]));}
