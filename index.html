@@ -77,6 +77,24 @@ p{margin:0 0 12px}
 .current-action h3{font-size:clamp(24px,4vw,34px);margin:5px 0 7px}
 .current-action p{color:var(--gray20);max-width:60ch;margin:0}
 .current-action .btn{background:var(--rose-lt);border-color:var(--rose-lt);color:var(--ink);white-space:nowrap}
+.welcome-card{background:#fff;border:1px solid var(--gray20);border-radius:14px;padding:24px;box-shadow:var(--shadow);margin-top:24px}
+.welcome-card h3{font-size:clamp(24px,4vw,34px);margin:5px 0 14px}
+.welcome-card.small h3{font-size:22px;margin-bottom:7px}
+.welcome-card.small{margin-top:0}
+.welcome-options{display:flex;gap:9px;flex-wrap:wrap}
+.welcome-options button{appearance:none;border:1.5px solid var(--gray20);background:var(--paper);color:var(--ink);border-radius:999px;padding:11px 14px;font:600 14px "Public Sans",sans-serif;cursor:pointer}
+.welcome-options button:hover,.welcome-options button[aria-pressed="true"]{background:var(--crimson);border-color:var(--crimson);color:#fff}
+.welcome-response{margin-top:17px;background:var(--sand);border-left:5px solid var(--crimson);border-radius:0 9px 9px 0;padding:15px 17px;min-height:65px}
+.welcome-response strong,.welcome-response span{display:block}
+.welcome-response strong{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;margin-bottom:3px}
+.welcome-response span{color:var(--muted);font-size:15px}
+.welcome-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.welcome-card.small p:not(.eyebrow){color:var(--muted);font-size:15px}
+.requirements-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:17px}
+.requirement-card{background:#fff;border:1px solid var(--gray20);border-radius:10px;padding:17px;box-shadow:var(--shadow)}
+.requirement-card h4{font-size:19px;margin-bottom:6px}
+.requirement-card p{color:var(--muted);font-size:15px;margin:0}
+.requirement-card .mini{margin-top:12px}
 .start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 0}
 .start-step{
   background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:18px;box-shadow:var(--shadow);
@@ -120,6 +138,7 @@ p{margin:0 0 12px}
 .cta-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
 .cta-row a{text-decoration:none}
 @media(max-width:820px){.start-grid{grid-template-columns:repeat(2,1fr)}.aid-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.welcome-grid,.requirements-grid{grid-template-columns:1fr}}
 @media(max-width:560px){
   .start-grid,.help-grid,.hidden-curriculum,.vocab,.plan-controls{grid-template-columns:1fr}
   .current-action{grid-template-columns:1fr;padding:19px}.start-step{min-height:0}
@@ -630,11 +649,11 @@ footer p{margin:0 0 10px}
 <nav class="hub" id="hubnav" aria-label="Main sections">
   <div class="wrap">
     <div class="row" role="tablist">
-      <button class="tab" role="tab" id="tab-start" aria-controls="panel-start" aria-selected="true" data-panel="start"><span class="num">01</span> Start here</button>
-      <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="false" data-panel="deadlines"><span class="num">02</span> Pay for school</button>
-      <button class="tab" role="tab" id="tab-pathways"  aria-controls="panel-pathways"  aria-selected="false" data-panel="pathways"><span class="num">03</span> Choose a path</button>
-      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">04</span> Apply and write</button>
-      <button class="tab" role="tab" id="tab-timeline"  aria-controls="panel-timeline"  aria-selected="false" data-panel="timeline"><span class="num">05</span> Senior year</button>
+      <button class="tab" role="tab" id="tab-start" aria-controls="panel-start" aria-selected="true" data-panel="start"><span class="num">01</span> Start Here</button>
+      <button class="tab" role="tab" id="tab-pathways" aria-controls="panel-pathways" aria-selected="false" data-panel="pathways"><span class="num">02</span> Choose a Path</button>
+      <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="false" data-panel="deadlines"><span class="num">03</span> Pay for School</button>
+      <button class="tab" role="tab" id="tab-scholarships" aria-controls="panel-scholarships" aria-selected="false" data-panel="scholarships"><span class="num">04</span> Scholarships</button>
+      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">05</span> Apply and Write</button>
     </div>
   </div>
 </nav>
@@ -642,105 +661,94 @@ footer p{margin:0 0 10px}
 <!-- ============ 01 · START HERE ============ -->
 <section class="panel" id="panel-start" role="tabpanel" aria-labelledby="tab-start">
   <div class="wrap panel-intro">
-    <p class="eyebrow">Class of 2027 · Start here</p>
-    <h2>You do not need the whole plan today.</h2>
-    <p>Do the current task, choose a likely direction, and save three opportunities. If you are unsure, that is a valid starting point.</p>
+    <p class="eyebrow">Class of 2027 · Welcome</p>
+    <h2>What brings you here today?</h2>
+    <p>This is the reception area for Mr. Barragan's Advisory. Pick the answer that feels closest and the site will point you to one useful next step.</p>
   </div>
   <main class="wrap">
-    <div class="current-action">
-      <div>
-        <p class="eyebrow">Your job this month · August</p>
-        <h3>Pick two paths to explore.</h3>
-        <p>Choose the two that sound most possible—not perfect. Then complete the four-question path finder.</p>
+    <article class="welcome-card">
+      <p class="eyebrow">Quick check-in</p>
+      <h3>There is no wrong answer.</h3>
+      <div class="welcome-options" id="start-options" role="group" aria-label="Choose what you need today">
+        <button type="button" data-start-intent="unsure">I am not sure yet</button>
+        <button type="button" data-start-intent="money">I need money help</button>
+        <button type="button" data-start-intent="path">I need to choose a path</button>
+        <button type="button" data-start-intent="apply">I am ready to apply</button>
+        <button type="button" data-start-intent="help">I need a person</button>
       </div>
-      <button class="btn" type="button" data-jump="pathways">Takes about 10 minutes →</button>
-    </div>
+      <div class="welcome-response" id="start-response" aria-live="polite"><strong>Choose one above.</strong><span>Your answer will give you a short next step—not a giant checklist.</span></div>
+    </article>
 
-    <div class="start-grid" aria-label="Six senior starting steps">
-      <article class="start-step"><span class="stepnum">Step 1</span><h3>Pick your likely path</h3><p>Four-year · community college · trade/apprenticeship · military · work · not sure.</p><button class="mini" type="button" data-jump="pathways">Explore paths →</button></article>
-      <article class="start-step"><span class="stepnum">Step 2</span><h3>Prepare for financial aid</h3><p>Use FAFSA or WASFA. The safe decision tool below helps you find the official guidance.</p><button class="mini" type="button" data-scroll="aid-choice">Choose a form →</button></article>
-      <article class="start-step"><span class="stepnum">Step 3</span><h3>Create your accounts</h3><p>Make a personal email you will keep after graduation. Then create only the official accounts you need.</p><button class="mini" type="button" data-jump="deadlines">See money steps →</button></article>
-      <article class="start-step"><span class="stepnum">Step 4</span><h3>Build your senior folder</h3><p>Transcript · jobs and activities · family information · recommendation packet · story bank.</p><button class="mini" type="button" data-jump="writing">Build it →</button></article>
-      <article class="start-step"><span class="stepnum">Step 5</span><h3>Save 3 opportunities</h3><p>Do not search forever. Start with local money and add three realistic opportunities to your list.</p><button class="mini" type="button" data-jump="deadlines">Find three →</button></article>
-      <article class="start-step"><span class="stepnum">Step 6</span><h3>Do this month's task</h3><p>Open the month-by-month guide during advisory and complete the one action at the top.</p><button class="mini" type="button" data-jump="timeline">Open August →</button></article>
-    </div>
-
-    <div class="sect" id="aid-choice">
-      <p class="eyebrow">Financial aid</p>
-      <h3>Do I complete FAFSA or WASFA?</h3>
-      <p class="sub">Do not guess about citizenship or residency rules. Use the official questionnaire or ask a trained adult privately.</p>
-      <div class="aid-grid">
-        <article class="decision-card">
-          <h4>Can you complete FAFSA under its eligibility rules?</h4>
-          <div class="decision-choice">
-            <a href="https://studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens" target="_blank" rel="noopener">Yes, or I think so → FAFSA<small>FAFSA can connect eligible students to federal, Washington, and college aid.</small></a>
-            <a href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">No, I do not know, or I prefer not to → Check WASFA<small>Use WSAC's questionnaire. WASFA applies for Washington state aid, not federal aid.</small></a>
-          </div>
-          <p><strong>Not sure? That is normal. Do not guess.</strong> Ask Mr. Barragan/counseling privately or use a free community workshop.</p>
-          <div class="cta-row"><a class="btn" href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">Official WASFA guidance</a><a class="btn ghost" href="https://yvcc.edu/news/academic-year/2025-2026/financial-aid-workshops-reminder.php" target="_blank" rel="noopener">YVC workshop information</a></div>
-        </article>
-        <article class="grant-card">
-          <p class="eyebrow">Money students often miss</p>
-          <h4>Washington College Grant</h4>
-          <div class="grant-big">Check—even if you think your family earns too much.</div>
-          <p>WA Grant can help pay for college, career training, supplies, living expenses, and approved apprenticeships. You apply through FAFSA or WASFA.</p>
-          <p><strong>Current 2026–27 example:</strong> a family of four can receive some aid up to about $139,500; limits change by year and household size.</p>
-          <a href="https://wsac.wa.gov/wcg-awards" target="_blank" rel="noopener">Check the official income and award chart →</a>
-        </article>
-      </div>
+    <div class="welcome-grid">
+      <article class="welcome-card small"><p class="eyebrow">At a glance</p><h3>Next important senior date</h3><p>The small banner above shows the next confirmed opening or due date. Open it when you want the full calendar.</p><button class="mini" type="button" id="open-calendar-from-start">Open the calendar ↑</button></article>
+      <article class="welcome-card small"><p class="eyebrow">You are not alone</p><h3>Need a person?</h3><p>Bring this page to Mr. Barragan or the THS counseling office. Questions are part of the process.</p><button class="mini" type="button" data-jump="help">See ways to get help →</button></article>
     </div>
 
     <div class="sect">
       <p class="eyebrow">Private on this device</p>
-      <h3>Build my senior plan.</h3>
+      <h3>Build my three next steps.</h3>
       <p class="sub">No account is required. Your choices stay in this browser; clear them before leaving a shared Chromebook.</p>
       <article class="plan-card">
         <div class="plan-controls">
-          <label for="plan-path">What sounds most likely right now?<select id="plan-path"><option value="unsure">I am not sure</option><option value="four">Four-year college</option><option value="two">YVC / community college</option><option value="trades">Trade / apprenticeship</option><option value="military">Military</option><option value="work">Work first</option></select></label>
-          <label for="plan-aid">FAFSA or WASFA?<select id="plan-aid"><option value="unknown">I do not know yet</option><option value="fafsa">FAFSA</option><option value="wasfa">WASFA</option><option value="started">I already started</option></select></label>
+          <label for="plan-path">What sounds most likely?<select id="plan-path"><option value="unsure">I am not sure</option><option value="four">Four-year college</option><option value="two">YVC / community college</option><option value="trades">Trade / apprenticeship</option><option value="military">Military</option><option value="work">Work first</option></select></label>
+          <label for="plan-aid">Money help?<select id="plan-aid"><option value="unknown">I do not know yet</option><option value="fafsa">FAFSA</option><option value="wasfa">WASFA</option><option value="started">I already started</option></select></label>
         </div>
-        <button class="btn" id="build-plan" type="button">Build my 3 next steps</button>
-        <div class="plan-output" id="plan-output" aria-live="polite"><strong>Your plan will appear here.</strong><p>Choose what sounds closest, then build your next three actions.</p></div>
+        <button class="btn" id="build-plan" type="button">Show my next three steps</button>
+        <div class="plan-output" id="plan-output" aria-live="polite"><strong>Your plan will appear here.</strong><p>Choose what sounds closest, then show your next three actions.</p></div>
       </article>
     </div>
 
     <div class="sect" id="help-center">
       <p class="eyebrow">Your escape hatch</p>
       <h3>Need help with this?</h3>
-      <article class="help-card">
-        <h4>You are not expected to solve everything alone.</h4>
-        <div class="help-grid"><div>I do not understand what this means</div><div>I need FAFSA/WASFA help</div><div>I need a transcript</div><div>I need a recommendation</div><div>I do not know what I want after graduation</div><div>My family has questions</div><div>Something on this site is wrong</div><div>I need to talk privately</div></div>
-        <p><strong>Next step:</strong> bring this page to Mr. Barragan or the THS counseling office. For financial-aid help, YVC's community workshops offer free assistance in English and Spanish when sessions are scheduled.</p>
-      </article>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Things seniors do not know they do not know</p>
-      <h3>The hidden curriculum, made visible.</h3>
-      <div class="hidden-curriculum">
-        <div><strong>Scholarships are not the same as financial aid.</strong>FAFSA/WASFA can unlock grants and school aid beyond scholarships.</div>
-        <div><strong>Financial aid does not commit you to a school.</strong>You can apply before deciding where to go.</div>
-        <div><strong>Community college can lead to a bachelor's degree.</strong>Ask about transfer degrees and required courses.</div>
-        <div><strong>Apprenticeships can pay you while you train.</strong>Registered programs combine employment and instruction.</div>
-        <div><strong>Compare remaining cost—not the scholarship headline.</strong>Separate grants from loans and calculate what is still unpaid.</div>
-        <div><strong>Admission is not the final step.</strong>Deposits, orientation, placement, registration, and verification may come next.</div>
-        <div><strong>Never assume you cannot afford a school yet.</strong>Wait for the complete aid offer and ask someone to help read it.</div>
-        <div><strong>Graduation is not the finish line.</strong>Check email all summer and complete every transition task.</div>
-      </div>
-    </div>
-
-    <div class="sect">
-      <details class="acc"><summary>Senior survival vocabulary</summary><div class="acc-body"><div class="vocab"><div><b>FAFSA</b> — Federal financial-aid application.</div><div><b>WASFA</b> — Washington application for eligible students who do not file FAFSA.</div><div><b>Grant</b> — Money you generally do not repay.</div><div><b>Scholarship</b> — Money awarded using stated criteria.</div><div><b>Loan</b> — Money you borrow and repay.</div><div><b>SAI</b> — A number used to help determine aid; it is not your bill.</div><div><b>Priority deadline</b> — Some money may be gone after this date.</div><div><b>Rolling admission</b> — Applications are reviewed over time.</div><div><b>Certificate</b> — Shorter training for a particular field.</div><div><b>Apprenticeship</b> — Paid work plus structured training.</div></div></div></details>
+      <article class="help-card"><h4>You are not expected to solve everything alone.</h4><p>Bring this page to Mr. Barragan or the THS counseling office. For financial-aid help, ask about free community workshops in English and Spanish.</p></article>
     </div>
   </main>
 </section>
 
-<!-- ============ 01 · DEADLINES ============ -->
+<!-- ============ 03 · PAY FOR SCHOOL ============ -->
 <section class="panel" id="panel-deadlines" role="tabpanel" aria-labelledby="tab-deadlines" hidden>
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 02 · Pay for school</p>
+    <p class="eyebrow">Section 03 · Pay for School</p>
     <h2>How will we pay for school or training?</h2>
-    <p>Start with financial aid and local opportunities—the best use of your time—then consider Washington and national scholarships. This page also includes important dates for training and apprenticeships.</p>
+    <p>Start with FAFSA or WASFA, check Washington College Grant, and learn which money steps come before scholarships.</p>
+  </div>
+  <main class="wrap">
+    <div class="aid-grid">
+      <article class="decision-card" id="aid-choice">
+        <p class="eyebrow">Financial aid</p>
+        <h4>Do I complete FAFSA or WASFA?</h4>
+        <p>Do not guess about citizenship or residency rules. Use the official guidance or ask a trained adult privately.</p>
+        <div class="decision-choice">
+          <a href="https://studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens" target="_blank" rel="noopener">Yes, or I think so → FAFSA<small>FAFSA can connect eligible students to federal, Washington, and college aid.</small></a>
+          <a href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">No, I do not know, or I prefer not to → Check WASFA<small>Use WSAC's questionnaire. WASFA applies for Washington state aid, not federal aid.</small></a>
+        </div>
+        <p><strong>Not sure? That is normal. Do not guess.</strong> Ask Mr. Barragan/counseling privately or use a free community workshop.</p>
+        <div class="cta-row"><a class="btn" href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">Official WASFA guidance</a><a class="btn ghost" href="https://yvcc.edu/news/academic-year/2025-2026/financial-aid-workshops-reminder.php" target="_blank" rel="noopener">YVC workshop information</a></div>
+      </article>
+      <article class="grant-card">
+        <p class="eyebrow">Money students often miss</p>
+        <h4>Washington College Grant</h4>
+        <div class="grant-big">Check—even if you think your family earns too much.</div>
+        <p>WA Grant can help pay for college, career training, supplies, living expenses, and approved apprenticeships. You apply through FAFSA or WASFA.</p>
+        <p><strong>Current 2026–27 example:</strong> a family of four can receive some aid up to about $139,500; limits change by year and household size.</p>
+        <a href="https://wsac.wa.gov/wcg-awards" target="_blank" rel="noopener">Check the official income and award chart →</a>
+      </article>
+    </div>
+    <div class="requirements-grid">
+      <article class="requirement-card"><h4>College Bound Scholarship</h4><p>If you were enrolled in College Bound, check your status and complete FAFSA or WASFA during senior year.</p><a class="mini" href="https://wsac.wa.gov/college-bound" target="_blank" rel="noopener">Check College Bound →</a></article>
+      <article class="requirement-card"><h4>Passport to Careers</h4><p>Foster-care and unaccompanied-homeless-youth support can help with college, training, or apprenticeships.</p><a class="mini" href="https://wsac.wa.gov/passport-to-careers" target="_blank" rel="noopener">Check eligibility →</a></article>
+    </div>
+    <div class="note"><p style="margin:0"><strong>Important dates:</strong> the calendar at the top includes when FAFSA, WASFA, and other applications open, plus priority dates and deadlines. Scholarships have their own navigator in the next tab.</p></div>
+  </main>
+</section>
+
+<!-- ============ 04 · SCHOLARSHIPS ============ -->
+<section class="panel" id="panel-scholarships" role="tabpanel" aria-labelledby="tab-scholarships" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 04 · Scholarships</p>
+    <h2>Find scholarships that fit Toppenish students.</h2>
+    <p>Start close to home, use the filters, and read each card's eligibility and “What you'll need” line before you spend time applying.</p>
     <div class="note" style="margin-top:20px;border-left-color:var(--gold)">
       <p><strong>Planning notice for the Class of 2027:</strong> this site uses confirmed 2026–27 information when sponsors have released it. It also includes long-running scholarships expected to return, using 2025–26 school-year information—or the most recent official cycle available—to help students prepare early.</p>
       <p style="margin:0"><strong>Expected does not mean guaranteed.</strong> Deadlines, awards, eligibility, and even whether a program returns can change. An expected card always shows the prior deadline as planning information and links to the sponsor so students can check for this year's update before applying.</p>
@@ -753,7 +761,7 @@ footer p{margin:0 0 10px}
   <div class="controls">
     <div class="wrap">
       <div class="row">
-        <label class="sr" for="q">Search important dates</label>
+        <label class="sr" for="q">Search scholarships</label>
         <input id="q" type="search" placeholder="Search — try &ldquo;welding&rdquo;, &ldquo;no essay&rdquo;, &ldquo;orchard&rdquo;, &ldquo;tribal&rdquo;">
         <label class="toggle"><input type="checkbox" id="mineOnly"> My list only</label>
         <button class="mini" type="button" id="clearSaved">Clear saved list</button>
@@ -794,7 +802,7 @@ footer p{margin:0 0 10px}
   </main>
 </section>
 
-<!-- ============ 02 · WRITING ============ -->
+<!-- ============ 05 · APPLY AND WRITE ============ -->
 <section class="panel" id="panel-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
   <div class="wrap panel-intro">
     <p class="eyebrow">Section 04 · Apply and write</p>
@@ -904,7 +912,7 @@ footer p{margin:0 0 10px}
   </main>
 </section>
 
-<!-- ============ 03 · PATHWAYS ============ -->
+<!-- ============ 02 · CHOOSE A PATH ============ -->
 <section class="panel" id="panel-pathways" role="tabpanel" aria-labelledby="tab-pathways" hidden>
   <div class="wrap panel-intro">
     <p class="eyebrow">Section 03 · Choose a path</p>
@@ -921,6 +929,20 @@ footer p{margin:0 0 10px}
       <p class="sub">This isn't a personality quiz and it won't tell you who you are. It just narrows five doors down
         to the two worth researching first.</p>
       <div class="quiz" id="quiz"></div>
+    </div>
+
+    <div class="sect" id="college-requirements">
+      <p class="eyebrow">College requirements</p>
+      <h3>What do colleges and programs look for?</h3>
+      <p class="sub">There is no single rule for every school. Use this as a checklist, then open the official page for the college or program you are considering.</p>
+      <div class="requirements-grid">
+        <article class="requirement-card"><h4>Courses and credits</h4><p>Check your transcript against graduation requirements and Washington CADRs: English, math, science, social studies, world language, and a senior-year quantitative course may all matter for four-year admission.</p><a class="mini" href="https://admit.washington.edu/apply/first-year/cadr/" target="_blank" rel="noopener">See Washington CADRs →</a></article>
+        <article class="requirement-card"><h4>GPA and grades</h4><p>Schools review your full transcript, course choices, grade trend, and preparation. There is not one GPA that guarantees admission; check the specific school and ask for a transcript review.</p><a class="mini" href="https://admission.wsu.edu/apply/first-year-students/college-academic-distribution-requirements-cadrs/" target="_blank" rel="noopener">See WSU requirements →</a></article>
+        <article class="requirement-card"><h4>SAT or ACT?</h4><p>Many Washington colleges do not require SAT or ACT for admission, but a score can matter for a particular program, scholarship, placement, or special situation. Check before you pay or send scores.</p><a class="mini" href="https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/" target="_blank" rel="noopener">Check a school's test policy →</a></article>
+        <article class="requirement-card"><h4>Two-year and technical paths</h4><p>YVC may use transcripts or placement instead of SAT/ACT. Technical programs may add an assessment, interview, prerequisite course, or waitlist.</p><a class="mini" href="https://yvcc.edu/admissions/new-college-student.php" target="_blank" rel="noopener">See YVC steps →</a></article>
+        <article class="requirement-card"><h4>Application materials</h4><p>Prepare a personal email, transcript information, activities and jobs, family information, essays, recommendations if required, and a fee or fee waiver plan.</p><a class="mini" href="https://admit.washington.edu/apply/first-year/how-to-apply/" target="_blank" rel="noopener">See an application checklist →</a></article>
+        <article class="requirement-card"><h4>Ask before you assume</h4><p>Requirements change by school, major, and student situation. If the answer is unclear, bring the exact program page to Mr. Barragan or counseling.</p><button class="mini" type="button" data-jump="help">Get help →</button></article>
+      </div>
     </div>
 
     <div class="sect">
@@ -945,25 +967,6 @@ footer p{margin:0 0 10px}
       <p class="eyebrow">Within an hour of Toppenish</p>
       <h3>The places you can actually get to</h3>
       <div class="wcards" id="local-mount"></div>
-    </div>
-  </main>
-</section>
-
-<!-- ============ 04 · TIMELINE ============ -->
-<section class="panel" id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline" hidden>
-  <div class="wrap panel-intro">
-    <p class="eyebrow">Section 05 · Senior year</p>
-    <h2>Senior year, month by month.</h2>
-    <p>If you do nothing else on this site, do the thing next to the current month. The whole discipline is ten
-      minutes, once a month.</p>
-  </div>
-  <main class="wrap">
-    <ol class="tl" id="timeline"></ol>
-
-    <div class="sect">
-      <p class="eyebrow">Do these no matter which door you pick</p>
-      <h3>The short list</h3>
-      <ul class="check" id="steps"></ul>
     </div>
   </main>
 </section>
@@ -1397,7 +1400,7 @@ function renderSeniorPlan(){
     if(aid.value === "wasfa") steps[1] = "Use WSAC's official WASFA application and privacy guidance; ask for help if any question is unclear.";
     if(aid.value === "started") steps[1] = "Check your financial-aid account and email for corrections, verification, or missing documents.";
     Store.set("seniorPlan",{path:path.value,aid:aid.value,built:true});
-    out.innerHTML = `<strong>Your three next steps</strong><ol>${steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol><div class="cta-row"><button class="mini" type="button" data-plan-jump="timeline">Open this month's guide</button><button class="mini" type="button" data-plan-jump="deadlines">Find money</button></div>`;
+    out.innerHTML = `<strong>Your three next steps</strong><ol>${steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol><div class="cta-row"><button class="mini" type="button" data-plan-jump="deadlines">Open Pay for School</button><button class="mini" type="button" data-plan-jump="scholarships">Find scholarships</button></div>`;
     out.querySelectorAll("[data-plan-jump]").forEach(b=>b.addEventListener("click",()=>jumpTo(b.dataset.planJump)));
   }
   document.getElementById("build-plan").addEventListener("click", build);
@@ -1451,7 +1454,7 @@ function toast(msg){
 }
 
 /* ---------- tabs ---------- */
-const PANELS = ["start","deadlines","pathways","writing","timeline"];
+const PANELS = ["start","pathways","deadlines","scholarships","writing"];
 function showPanel(name, push){
   if(!PANELS.includes(name)) name = "start";
   PANELS.forEach(p => {
@@ -1473,7 +1476,7 @@ function jumpTo(target){
     return;
   }
   if(target === "familias"){
-    showPanel("deadlines", true);
+    showPanel("scholarships", true);
     requestAnimationFrame(() => document.getElementById("familias").scrollIntoView({behavior:"smooth",block:"start"}));
     return;
   }
@@ -1481,6 +1484,31 @@ function jumpTo(target){
 }
 document.querySelectorAll("[data-jump]").forEach(el => el.addEventListener("click", e => {e.preventDefault();jumpTo(el.dataset.jump);}));
 document.querySelectorAll("[data-scroll]").forEach(el => el.addEventListener("click", () => document.getElementById(el.dataset.scroll).scrollIntoView({behavior:"smooth",block:"start"})));
+
+/* ---------- Start Here reception ---------- */
+const START_RESPONSES = {
+  unsure:{title:"Start with Choose a path.",text:"You do not need a final career answer. Pick two possibilities and let the four-question guide help you compare them.",button:"Choose a path",target:"pathways"},
+  money:{title:"Start with Pay for School.",text:"FAFSA and WASFA are free applications. You can ask which one fits before you apply, and you do not have to choose a college first.",button:"Pay for School",target:"deadlines"},
+  path:{title:"You are in the right place.",text:"The path finder compares college, YVC, trades, apprenticeships, military, and work without ranking one above the others.",button:"Open the path finder",target:"pathways"},
+  apply:{title:"Start with your application folder.",text:"Open the Apply and Write section for essays, recommendations, transcripts, and a private story builder.",button:"Apply and Write",target:"writing"},
+  help:{title:"Questions are a good starting point.",text:"Bring the page to Mr. Barragan or counseling. You do not have to explain everything perfectly to ask for help.",button:"See help options",target:"help"}
+};
+function initStartReception(){
+  const options = document.querySelectorAll("[data-start-intent]");
+  const response = document.getElementById("start-response");
+  options.forEach(button => button.addEventListener("click", () => {
+    options.forEach(x => x.setAttribute("aria-pressed", String(x === button)));
+    const item = START_RESPONSES[button.dataset.startIntent];
+    response.innerHTML = `<strong>${esc(item.title)}</strong><span>${esc(item.text)}</span><button class="mini" type="button">${esc(item.button)} →</button>`;
+    response.querySelector("button").addEventListener("click", () => jumpTo(item.target));
+  }));
+  const calendarButton = document.getElementById("open-calendar-from-start");
+  calendarButton.addEventListener("click", () => {
+    const toggle = document.getElementById("calendar-toggle");
+    if(toggle.getAttribute("aria-expanded") !== "true") toggle.click();
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+}
 
 /* ---------- chips ---------- */
 function buildChips(){
@@ -1632,6 +1660,7 @@ function render(){
   out.innerHTML = "";
 
   let items = DEADLINES.filter(it => {
+    if(it.kind === "action" || it.kind === "deadline") return false;
     const id = idOf(it);
     if(mineOnly && !saved[id]) return false;
     if(activeFits.size){
@@ -2162,6 +2191,7 @@ document.getElementById("clearSaved").addEventListener("click", () => {
 
 function boot(){
   renderSite();
+  initStartReception();
   buildChips();
   initCalendar();
   renderCalendar();
@@ -2173,13 +2203,11 @@ function boot(){
   renderExamples();
   renderRecs();
   renderChecklist("final-check", FINALCHECK, "final");
-  renderChecklist("steps", STEPS, "steps");
   renderPaths();
   renderCompare();
   renderQuiz();
   renderSeniorPlan();
   renderLocal();
-  renderTimeline();
   showPanel(location.hash.replace("#","") || "start", false);
 }
 
