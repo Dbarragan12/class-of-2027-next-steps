@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Next Steps — Toppenish High School Advisory</title>
+<title>Next Steps — Mr. Barragan's Advisory and the Class of 2027</title>
 <meta name="description" content="Scholarship deadlines, application writing, and after-high-school pathways for Toppenish High School seniors.">
 <meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -529,7 +529,7 @@ footer p{margin:0 0 10px}
       <div class="badge" id="site-badge">TH</div>
       <div>
         <div class="school" id="site-school">Toppenish High School</div>
-        <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Advisory · Class of 2027</p>
+        <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Mr. Barragan's Advisory and the Class of 2027</p>
       </div>
     </div>
     <div class="utility" aria-label="Quick links">
@@ -677,6 +677,7 @@ footer p{margin:0 0 10px}
         <label class="toggle"><input type="checkbox" id="mineOnly"> My list only</label>
         <button class="mini" type="button" id="clearSaved">Clear saved list</button>
       </div>
+      <!-- Design decision: keep one disclosure-safe filter row. Do not restore a second pathway/open-now row unless student testing shows the extra complexity helps. -->
       <p class="chiprow-label">Show scholarships for… — tap all that apply</p>
       <div class="chips" id="fitchips" role="group" aria-label="Show scholarships for selected student groups"></div>
       <p style="margin:12px 0 0;color:var(--muted);font-size:13px">Your saved list and writing drafts stay only in this browser. On a shared Chromebook, clear them when you finish.</p>
@@ -915,7 +916,7 @@ footer p{margin:0 0 10px}
 /* ---------- YOUR INFO — edit these three lines ---------- */
 const SITE = {
   school:  "Toppenish High School",
-  line:    "Advisory · Class of 2027",
+  line:    "Mr. Barragan's Advisory and the Class of 2027",
   teacher: "Questions? Bring this page to Mr. Barragan or the THS counseling office.",
   logo:    "",          // Drop the Wildcat PNG next to this file, put the filename here.
   logoAlt: "Toppenish Wildcats"
@@ -941,7 +942,7 @@ const PRIORITY_ACTIONS = [
   {priority:6,name:"YVC Foundation Scholarships",org:"Yakima Valley College Foundation",amount:"One application matches students to many scholarships",who:"Current and incoming YVC students, including undocumented students; one application can match a student with multiple awards.",due:null,window:"Plan ahead · applications normally open December 1 and close at the end of February",tags:["money","two"],fit:["local","lowincome","firstgen"],effort:"mid",link:"https://www.yvcc.edu/financial-aid/types-of-aid/",note:"The 2027–28 application is not open yet. YVC says its 2026–27 application covered more than 150 separate scholarships, with an average award around $4,000.",lastChecked:"2026-08-13",planning:true,kind:"local",needs:"Prepare a transcript, goals narrative, and recommendation; confirm the new cycle's exact checklist."},
   {priority:6.1,name:"Heritage University scholarships",org:"Heritage University",amount:"Institutional scholarships for incoming students",who:"Students applying to Heritage should complete the university application and review incoming-student scholarships, including current need- and merit-based programs.",due:null,window:"Plan ahead · 2027–28 windows are not posted yet",tags:["money","four"],fit:["local","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/financial-aid/scholarships/",note:"Heritage's current page includes incoming-freshman aid and scholarship applications. The Class of 2027 dates may differ from the prior cycle.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local",needs:"Heritage application; scholarship-specific statement or application; transcript; FAFSA/WASFA or other aid documents when requested."},
   {priority:6.2,name:"Perry Tech scholarship list",org:"Perry Technical Institute",amount:"Trade-oriented and external scholarships",who:"Students planning technical training can use Perry Tech's maintained scholarship list to find awards by trade, employer, membership, and personal background.",due:null,window:"Multiple deadlines through 2027 · check the live list",tags:["money","trades"],fit:["local","firstgen","lowincome"],effort:"mid",link:"https://www.perrytech.edu/students/finance/scholarships/external/index.html?cid=1",note:"Perry Tech currently lists awards with 2026 and 2027 deadlines. Verify both the scholarship's rules and whether your planned program is eligible.",lastChecked:"2026-08-13",kind:"local",needs:"Requirements vary. Expect proof of enrollment or eligible program, an essay, transcript, and possibly financial information."},
-  {priority:7,name:"WAEF Scholarships",org:"Washington Apple Education Foundation",amount:"Multiple tree-fruit and vocational awards",who:"Washington seniors with family ties to the tree-fruit industry—or students planning a career that supports it.",due:null,window:"Plan ahead · next cycle expected in fall",tags:["money","four","two","trades"],fit:["local","ag","lowincome"],effort:"high",link:"https://scholarships.waef.org/apply",note:"The last confirmed cycle closed March 2, 2026. The new Class of 2027 date has not been posted.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
+  {priority:7,name:"Does your family work in agriculture? Start with WAEF",org:"Washington Apple Education Foundation",amount:"One application can match students with multiple tree-fruit and employer-funded awards",who:"Washington seniors with direct family ties to the tree-fruit industry—or students planning a career that supports it.",due:null,window:"Plan ahead · last cycle closed March 2, 2026",tags:["money","four","two","trades"],fit:["local","ag","lowincome"],effort:"high",link:"https://scholarships.waef.org/apply",note:"Ask your parent for the exact company name before starting. WAEF funds awards from local tree-fruit companies, and an exact employer name can help the application match you correctly. If a parent works for Washington Beef/Agri Beef or another large local employer, ask HR directly whether it offers an employee-family scholarship; do not rely on an old amount or deadline.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local",needs:"Exact employer name; family connection to tree fruit or intended industry-supporting career; transcript; activities and work history; essays and any documents listed when the next application opens."},
   {priority:8,name:"Yakama Nation Higher Education",org:"Yakama Nation Higher Education",amount:"Scholarship/grant support",who:"Yakama Nation students pursuing eligible postsecondary education or training; contact Higher Education to confirm documents and the correct term deadline.",due:null,window:"Plan ahead · verify the 2027–28 cycle",tags:["money","four","two","trades"],fit:["local","tribal"],effort:"mid",link:"https://yakamascholar.smapply.io/",note:"The public portal currently references the 2026–27 cycle. Class of 2027 dates are not confirmed yet.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
   {priority:9,name:"Heritage University CAMP",org:"Heritage University",amount:"First-year academic, financial, and personal support",who:"U.S. citizens or permanent residents in their first full-time year at Heritage who qualify through Migrant Education, the National Farmworker Jobs Program, or recent migrant/seasonal farm work by the student or immediate family.",due:null,window:"Contact CAMP while applying to Heritage",tags:["money","four"],fit:["local","ag","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/college-assistance-migrant-program/",note:"Toppenish students can qualify. Apply to Heritage, complete FAFSA and the CAMP application, and provide the requested migrant or farmworker eligibility documents.",lastChecked:"2026-08-13",kind:"local"},
   {priority:10,name:"Yakima Federal Award for Academic Excellence",org:"Yakima Federal Savings and Loan",amount:"Last cycle: $2,500",who:"Plan-ahead item for Yakima County seniors in the top 10% of their graduating class; the school may limit nominees.",due:null,window:"Plan ahead · last cycle deadline was April 24, 2026",tags:["money","four","two"],fit:["local","leadership"],effort:"mid",link:"https://www.yakimafed.com/scholarship",note:"The 2027 application is not open yet. Ask the counseling office about the school nomination process.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
@@ -2011,7 +2012,7 @@ function mapScholarship(item){
   const addFit = key => { if(!fit.includes(key)) fit.push(key); };
   if(/open to most|no essay/.test(hay)) addFit("everyone");
   if(/washington|local yakima|yakima county/.test(hay.replace(/\//g, " "))) addFit("local");
-  if(/latino|hispanic|farmworker|farm worker|agriculture|migrant/.test(hay)) addFit("ag");
+  if(/latino|hispanic|farmworker|farm worker|agriculture|migrant|viticulture|vineyard|wine|dairy|tree fruit/.test(hay)) addFit("ag");
   if(/indigenous|yakama|native american|tribal/.test(hay)) addFit("tribal");
   if(/financial need|low-income|low income|poverty|homeless/.test(hay)) addFit("lowincome");
   if(/first generation|first-generation/.test(hay)) addFit("firstgen");
@@ -2029,6 +2030,13 @@ function mapScholarship(item){
   const planning = !String(item.status).startsWith("Confirmed");
   const noEssay = /no essay|under an hour|quick/.test(hay);
   const highEffort = /recommendation|transcript|multiple essays|full four-year|full ride/.test(hay);
+  const needs = item.needs || (() => {
+    if(/washington wine industry foundation/.test((item.organization||"").toLowerCase())) return "One application; transcript; 250–300-word essay; two recommendation letters; and any program, financial-need, or parent-employer proof that applies.";
+    if(/vineyard & winery technology/.test(hay)) return "Transcript; résumé; grades; goals statement; narrative; and the current YVC program application.";
+    if(/dairy strong/.test(hay)) return "Online application; essays and short answers; transcript; reference letters; photograph; and proof of the qualifying dairy connection.";
+    if(/live your dream/.test(hay)) return "Application in your own words; proof of enrollment or acceptance; information about dependents and financial responsibility; and the current local-club requirements.";
+    return null;
+  })();
   return {
     name: item.name,
     org: sourceLabel(item),
@@ -2045,6 +2053,7 @@ function mapScholarship(item){
     effort: noEssay ? "low" : (highEffort ? "high" : "mid"),
     link: item.url,
     note: item.whyFit || (typeof item.fit === "string" ? item.fit : ""),
+    needs,
     lastChecked: item.lastChecked || null,
     planning,
     confirm: planning
