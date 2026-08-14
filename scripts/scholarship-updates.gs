@@ -45,14 +45,28 @@ function copySubscriberFromForm(event){
   const values=event.namedValues||{};
   const email=firstValue_(values,["email address","email"]);
   const name=firstValue_(values,["name"]);
-  const consent=firstValue_(values,["agree","consent","permission","updates"]);
-  if (!email||!consented_(consent)) return;
+  const action=firstValue_(values,["what would you like","action"]);
+  const consent=firstValue_(values,["agree","consent","permission"]);
+  if (!email) return;
 
   const book=SpreadsheetApp.openById(property_("SUBSCRIBER_SHEET_ID"));
   const subscribers=book.getSheetByName(SHEET_NAMES.subscribers);
-  const existing=subscribers.getLastRow()>1?subscribers.getRange(2,1,subscribers.getLastRow()-1,1).getValues().flat().map(String):[];
-  if (existing.includes(String(email).trim())) return;
-  subscribers.appendRow([String(email).trim(),name||"",true,false,new Date(),""]);
+  const normalized=String(email).trim().toLowerCase();
+  const rows=subscribers.getLastRow()>1?subscribers.getRange(2,1,subscribers.getLastRow()-1,6).getValues():[];
+  const rowIndex=rows.findIndex(row=>String(row[0]).trim().toLowerCase()===normalized);
+  const sheetRow=rowIndex<0?0:rowIndex+2;
+  if (String(action).toLowerCase().includes("unsubscribe")) {
+    if (sheetRow) subscribers.getRange(sheetRow,4).setValue(true);
+    else subscribers.appendRow([String(email).trim(),name||"",false,true,new Date(),""]);
+    return;
+  }
+  if (!consented_(consent)) return;
+  if (sheetRow) {
+    subscribers.getRange(sheetRow,2).setValue(name||rows[rowIndex][1]||"");
+    subscribers.getRange(sheetRow,3,1,2).setValues([[true,false]]);
+  } else {
+    subscribers.appendRow([String(email).trim(),name||"",true,false,new Date(),""]);
+  }
 }
 
 function sendUpdates_(updates){
@@ -60,6 +74,7 @@ function sendUpdates_(updates){
   const subscribers=book.getSheetByName(SHEET_NAMES.subscribers);
   const sent=book.getSheetByName(SHEET_NAMES.sent);
   if (!subscribers||!sent) throw new Error("Run setupTabs() before sending updates.");
+  const preferencesUrl=book.getFormUrl()||"";
 
   const sentIds=new Set(sent.getLastRow()>1?sent.getRange(2,1,sent.getLastRow()-1,1).getValues().flat().map(String):[]);
   const rows=subscribers.getLastRow()>1?subscribers.getRange(2,1,subscribers.getLastRow()-1,6).getValues():[];
@@ -67,11 +82,11 @@ function sendUpdates_(updates){
   for (const update of updates) {
     if (!update.id||sentIds.has(String(update.id))) { skipped++; continue; }
     const subject=`Scholarship update: ${update.name}`;
-    const body=message_(update);
+    const body=message_(update,preferencesUrl);
     for (let index=0;index<rows.length;index++) {
       const [email,name,optedIn,unsubscribed]=rows[index];
       if (!email||!truthy_(optedIn)||truthy_(unsubscribed)) continue;
-      MailApp.sendEmail({to:String(email),subject,body,htmlBody:htmlMessage_(update,name)});
+      MailApp.sendEmail({to:String(email),subject,body,htmlBody:htmlMessage_(update,name,preferencesUrl)});
       subscribers.getRange(index+2,6).setValue(new Date());
       recipients++;
     }
@@ -81,7 +96,7 @@ function sendUpdates_(updates){
   return {recipients,skipped};
 }
 
-function message_(update){
+function message_(update,preferencesUrl){
   return [
     update.reason||"Confirmed scholarship update",
     "",
@@ -94,13 +109,13 @@ function message_(update){
     "",
     `Open the official scholarship page: ${update.url}`,
     "",
-    "You are receiving this because you opted in to scholarship updates. Ask the project administrator to remove your address if you want to unsubscribe."
+    preferencesUrl?`Update your subscription or unsubscribe: ${preferencesUrl}`:"Update your subscription or unsubscribe using the scholarship updates form."
   ].filter(Boolean).join("\n");
 }
 
-function htmlMessage_(update,name){
+function htmlMessage_(update,name,preferencesUrl){
   const greeting=name?`Hello ${escape_(name)},<br><br>`:"Hello,<br><br>";
-  return greeting+escape_(message_(update)).replace(/\n/g,"<br>");
+  return greeting+escape_(message_(update,preferencesUrl)).replace(/\n/g,"<br>");
 }
 
 function firstValue_(namedValues,terms){
