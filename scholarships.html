@@ -55,15 +55,17 @@ main{padding-bottom:42px}
 .results-head h2{font-size:27px;line-height:1.1;margin:0}
 .results-head span{color:var(--muted);font-size:13px;text-align:right}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--gray20);border-left:5px solid var(--gray64);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+.card{background:var(--card);border:1px solid var(--gray20);border-left:5px solid var(--gray64);border-radius:12px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:transform .16s ease,box-shadow .16s ease}
+.card:hover,.card:focus-within{transform:translateY(-3px);box-shadow:0 2px 0 var(--gray20),0 9px 24px rgba(33,35,37,.12)}
 .card.planning{border-left-color:var(--rose);background:#fffafb}.card.closed{border-left-color:var(--gray20);opacity:.75}.card.soon{border-left-color:var(--rose)}
 .card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .card h3{font-size:20px;line-height:1.12;margin:0;letter-spacing:-.02em}
 .org{margin-top:4px;color:var(--muted);font-size:12px;font-weight:700}
 .status{flex:0 0 auto;text-align:right;color:var(--crimson);font-size:12px;font-weight:800;line-height:1.2;max-width:120px}
 .status small{display:block;color:var(--muted);font-size:10px;font-weight:700;margin-top:2px}
-.award{margin:0;font-weight:800;color:var(--sage)}
+.award-banner{background:var(--sage-bg);border:1px solid #bdd8c9;border-radius:8px;padding:9px 11px;color:var(--sage);display:flex;justify-content:space-between;align-items:baseline;gap:10px}.award-banner span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800}.award-banner strong{font-size:15px;text-align:right}
 .eligibility,.why{margin:0;color:var(--muted);font-size:14px}.why{padding-left:10px;border-left:3px solid var(--rose-lt)}
+.card-more{margin:0;border-top:1px solid var(--gray20);padding-top:9px}.card-more summary{font-size:13px;color:var(--crimson)}.more-body{display:grid;gap:9px;padding-top:9px}
 .prep{font-size:13px;color:var(--muted);background:var(--sand);border-radius:7px;padding:9px 10px}.prep strong{color:var(--ink)}
 .card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:3px}
 .save{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:800;cursor:pointer}.save input{width:17px;height:17px;accent-color:var(--crimson)}
@@ -102,7 +104,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 
 <main>
   <div class="wrap">
-    <div class="notice"><p><strong>Open opportunities appear first.</strong> Planning cards show an estimated opening month/year or a recurring opening date. A planning date is not a promise—always open the sponsor's page before applying.</p></div>
+    <div class="notice"><p><strong>Due dates come first.</strong> Confirmed deadlines are ordered from soonest to latest. Planning cards follow with an estimated upcoming deadline and opening month/year. A planning date is not a promise—always open the sponsor's page before applying.</p></div>
   </div>
 
   <section class="tools" aria-label="Scholarship search and filters">
@@ -122,7 +124,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
   </section>
 
   <section class="wrap" aria-labelledby="results-title">
-    <div class="results-head"><h2 id="results-title">Scholarships</h2><span id="sort-note">Open now first · then opening soon</span></div>
+    <div class="results-head"><h2 id="results-title">Scholarships</h2><span id="sort-note">Due soonest · then later deadlines</span></div>
     <div class="grid" id="results"></div>
     <div class="empty" id="empty" hidden>No scholarships match those choices. Try clearing a filter or searching a different word.</div>
   </section>
@@ -185,12 +187,18 @@ function mapItem(item){
   return {...item,id:idOf(item),planning,opens,fit,openLabel:planning?(item.openLabel||null):null};
 }
 function statusFor(item){
-  if(item.planning){return {kind:"planning",label:item.openLabel||monthYear(item.opens),detail:item.openLabel?"annual opening":"estimated opening",rank:2,date:item.opens||"9999-12-31"}}
-  if(item.opens&&daysUntil(item.opens)>0){return {kind:"soon",label:"Opens "+fmt(item.opens),detail:"confirmed date",rank:1,date:item.opens}}
-  if(!item.deadline){return {kind:"open",label:"Open now",detail:"rolling or no fixed deadline",rank:0,date:"9999-12-31"}}
-  const n=daysUntil(item.deadline);
-  if(n<0)return {kind:"closed",label:"Closed",detail:"check next cycle",rank:3,date:item.deadline};
-  return {kind:n<=45?"soon":"open",label:"Open now",detail:"due "+fmt(item.deadline),rank:0,date:item.deadline};
+  if(item.planning){
+    const nextDue=item.lastYearDeadline&&nextCycleDate(item.lastYearDeadline);
+    return {kind:"planning",label:item.openLabel||monthYear(item.opens),detail:item.openLabel?"annual opening":"estimated opening",rank:2,date:nextDue?isoDate(nextDue):(item.opens||"9999-12-31")};
+  }
+  if(item.deadline){
+    const n=daysUntil(item.deadline);
+    if(n<0)return {kind:"closed",label:"Closed",detail:"check next cycle",rank:4,date:item.deadline};
+    if(item.opens&&daysUntil(item.opens)>0)return {kind:"soon",label:"Opens "+fmt(item.opens),detail:"deadline "+fmt(item.deadline),rank:0,date:item.deadline};
+    return {kind:n<=45?"soon":"open",label:"Due "+fmt(item.deadline),detail:"open now",rank:0,date:item.deadline};
+  }
+  if(item.opens&&daysUntil(item.opens)>0)return {kind:"soon",label:"Opens "+fmt(item.opens),detail:"confirmed date",rank:1,date:item.opens};
+  return {kind:"open",label:"Open now",detail:"rolling or no fixed deadline",rank:3,date:"9999-12-31"};
 }
 function saveState(){try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");all.saved=saved;localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}}
 function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2600)}
@@ -209,11 +217,10 @@ function card(item){
   const due=item.planning?(item.lastYearDeadline?`Prior-cycle deadline <strong>${fmt(item.lastYearDeadline)}</strong> — planning only; the new date is not guaranteed`:esc(item.expectedWindow||"New cycle not released yet")):(item.deadline?(st.kind==="closed"?`Closed ${fmt(item.deadline)} — check the sponsor page for the next cycle`:`Due <strong>${fmt(item.deadline)}</strong>`):esc(item.expectedWindow||"No fixed deadline"));
   const opening=item.opens&&daysUntil(item.opens)>0?`<div class="why"><strong>${item.planning?"Opening plan":"Opens"}:</strong> ${fmt(item.opens)}</div>`:"";
   const el=document.createElement("article");el.className="card "+st.kind;el.innerHTML=`
+    <div class="award-banner"><span>Award</span><strong>${esc(item.award||"See sponsor details")}</strong></div>
     <div class="card-head"><div><h3>${esc(item.name)}</h3><div class="org">${esc(item.organization||"Scholarship sponsor")}</div></div><div class="status">${esc(st.label)}<small>${esc(st.detail)}</small></div></div>
-    <p class="award">${esc(item.award||"See sponsor details")}</p>
     <p class="eligibility">${esc(item.eligibility||"Read the sponsor's current requirements.")}</p>
-    ${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}
-    <div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div>
+    <details class="card-more"><summary>See eligibility details and what you'll need</summary><div class="more-body">${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}<div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div></div></details>
     ${opening}<div class="why">${due}</div>
     <div class="card-foot"><label class="save"><input type="checkbox" ${checked?"checked":""}> Save this</label><div class="card-actions">${item.deadline&&daysUntil(item.deadline)>=0?`<button class="calendar-link" type="button">Add to calendar</button>`:""}<a class="sponsor" href="${esc(item.url)}" target="_blank" rel="noopener">Open sponsor page ↗</a></div></div>`;
   el.querySelector("input").addEventListener("change",e=>{if(e.target.checked){saved[item.id]=true;toast("Saved to your list.")}else{delete saved[item.id];toast("Removed from your list.")}saveState();render()});
@@ -222,7 +229,7 @@ function card(item){
 }
 function render(){
   const items=allItems.filter(itemMatches).sort((a,b)=>{const sa=statusFor(a),sb=statusFor(b);if(sa.rank!==sb.rank)return sa.rank-sb.rank;return String(sa.date).localeCompare(String(sb.date))||a.name.localeCompare(b.name)});
-  $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":"Open now first · then opening soon";
+  $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":"Due soonest · then later deadlines";
 }
 function savedItems(){return allItems.filter(item=>saved[item.id])}
 function deadlineLine(item){
