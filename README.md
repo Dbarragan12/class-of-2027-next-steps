@@ -25,6 +25,8 @@ No student information is collected or stored.
 
 The standalone finder saves a student's list only in that browser. “Email my list” opens the student's own email program and does not send addresses to this site. Automatic new-scholarship email alerts require a private mailing-list service; do not add an email form or store student addresses in this public repository until that service is connected and its privacy terms are reviewed.
 
+The finder also links to public GitHub review forms for scholarship submissions, corrections, and helpful programs or resources. These are review leads only; a person must verify and approve them before publication. Contributors are instructed not to post private student information.
+
 ## Airtable labels
 
 - **Confirmed for 2027**: official current-cycle information.
