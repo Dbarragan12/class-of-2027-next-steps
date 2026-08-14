@@ -1007,7 +1007,7 @@ const DEADLINES = [];
 
 /* Senior deadlines are not only scholarships. Add verified admissions and transition dates here. */
 const SENIOR_DEADLINES = [
-  {priority:20,name:"University of Washington first-year application",org:"University of Washington Admissions",amount:"Admissions deadline",who:"Students applying for first-year summer or autumn admission. Running Start students who have not attended college after high-school graduation apply as first-year students.",due:"2026-11-15",window:"Application opens August 15",tags:["four"],fit:["everyone"],effort:"high",link:"https://admit.washington.edu/apply/first-year/",note:"UW lists November 15 as its first-year application deadline and does not offer early action or early decision.",lastChecked:"2026-08-13",kind:"deadline",needs:"Common App or ApplyWeb application, self-reported coursework, UW writing responses, family information, and fee or fee waiver."},
+  {priority:20,name:"University of Washington first-year application",org:"University of Washington Admissions",amount:"Admissions deadline",who:"Students applying for first-year summer or autumn admission. Running Start students who have not attended college after high-school graduation apply as first-year students.",opens:"2026-08-15",due:"2026-11-15",window:"Application opens August 15",tags:["four"],fit:["everyone"],effort:"high",link:"https://admit.washington.edu/apply/first-year/",note:"UW lists August 15 as the autumn application opening date and November 15 as the application deadline. UW does not offer early action or early decision.",lastChecked:"2026-08-13",kind:"deadline",needs:"Common App or ApplyWeb application, self-reported coursework, UW writing responses, family information, and fee or fee waiver."},
   {priority:21,name:"University of Washington financial-aid priority date",org:"University of Washington",amount:"FAFSA/WASFA priority date",who:"Students seeking financial aid at UW should list UW and complete the correct aid application by the university's priority date.",due:"2027-02-28",window:"For summer and autumn applicants",tags:["money","four"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://admit.washington.edu/apply/dates-deadlines/",note:"Admission and financial-aid deadlines are separate. Missing the November admission deadline cannot be fixed by filing aid later.",lastChecked:"2026-08-13",kind:"deadline",needs:"Submitted FAFSA or WASFA with UW listed; respond to any later verification request."},
   {priority:22,name:"YVC admission, placement & orientation",org:"Yakima Valley College",amount:"College transition steps",who:"Students planning YVC should apply for the correct quarter, send transcripts, complete placement steps, and schedule orientation.",due:null,window:"Dates depend on your starting quarter · verify the current calendar",tags:["two"],fit:["local","everyone"],effort:"mid",link:"https://www.yvcc.edu/registration/important-dates.php",note:"YVC publishes separate application, transcript, placement, orientation, registration, and tuition dates. Being admitted does not finish the process.",lastChecked:"2026-08-13",kind:"deadline",needs:"YVC application, transcripts, placement information, orientation, registration, and a confirmed financial-aid plan."},
   {priority:23,name:"Perry Tech application timeline",org:"Perry Technical Institute",amount:"Program application and start dates",who:"Students considering Perry Tech should select a program early because requirements and available start dates vary by program.",due:null,window:"Program-specific · start researching now",tags:["trades"],fit:["local","everyone"],effort:"mid",link:"https://www.perrytech.edu/admissions/",note:"Ask admissions for the exact application, assessment, interview, waitlist, and financial-aid timeline for your program.",lastChecked:"2026-08-13",kind:"deadline",needs:"Program choice, application, any required assessment or interview, transcripts, and a financial-aid plan."}
@@ -1015,8 +1015,8 @@ const SENIOR_DEADLINES = [
 
 /* Evergreen money steps stay pinned even when the nightly scholarship list changes. */
 const PRIORITY_ACTIONS = [
-  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"Students who can complete FAFSA under its eligibility rules should prepare a StudentAid.gov account and complete the 2027–28 form when it opens.",due:null,window:"Prepare now · expected by October 1, 2026",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"This is an application for grants, work-study, and loans—not a scholarship contest. If you are unsure which form to use, do not guess; use WSAC's guidance or ask for help.",lastChecked:"2026-08-13",kind:"action",needs:"StudentAid.gov account; student and contributor information; required financial and identity information."},
-  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or choose not to file FAFSA can use WSAC's official questionnaire to check whether WASFA is the appropriate application.",due:null,window:"Prepare now · 2027–28 form not open yet",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"WASFA applies for state aid only. Read the official privacy statement and ask for private help if any question is unclear.",lastChecked:"2026-08-13",kind:"action",needs:"WSAC account; student and contributor information; residency and financial information requested by the official application."},
+  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"Students who can complete FAFSA under its eligibility rules should prepare a StudentAid.gov account and complete the 2027–28 form when it opens.",opens:"2026-10-01",due:null,window:"Opens October 1, 2026",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"Federal Student Aid and WSAC say the FAFSA opens October 1 each year. This is an application for grants, work-study, and loans—not a scholarship contest. If you are unsure which form to use, do not guess; use WSAC's guidance or ask for help.",lastChecked:"2026-08-14",kind:"action",needs:"StudentAid.gov account; student and contributor information; required financial and identity information."},
+  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or choose not to file FAFSA can use WSAC's official questionnaire to check whether WASFA is the appropriate application.",opens:"2026-10-01",due:null,window:"Opens October 1, 2026",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"WSAC says FAFSA and WASFA open October 1 each year. WASFA applies for state aid only. Read the official privacy statement and ask for help if any question is unclear.",lastChecked:"2026-08-14",kind:"action",needs:"WSAC account; student and contributor information; residency and financial information requested by the official application."},
   {priority:3,name:"Washington College Grant",org:"Washington Student Achievement Council",amount:"Money for college, career training, or approved apprenticeships",who:"Washington residents across a wide range of family incomes. Complete FAFSA or WASFA to be considered.",due:null,window:"Available through FAFSA or WASFA",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wcg-awards",note:"Do not assume you earn too much. In the current 2026–27 example, a family of four can receive some aid up to about $139,500; 2027–28 amounts may change.",lastChecked:"2026-08-13",kind:"action",needs:"FAFSA or WASFA plus enrollment in an eligible Washington college, training program, or approved apprenticeship."},
   {priority:4,name:"College Bound Scholarship",org:"Washington Student Achievement Council",amount:"State aid commitment for eligible students",who:"Students enrolled through the College Bound program: check your status and make sure you complete FAFSA or WASFA during senior year.",due:null,window:"Check your status now",tags:["money","four","two","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://wsac.wa.gov/college-bound",note:"Eligible students must meet program requirements and use the award at a participating Washington school.",lastChecked:"2026-08-13",kind:"action"},
   {priority:5,name:"Passport to Careers",org:"Washington Student Achievement Council",amount:"College or apprenticeship aid plus support",who:"Washington students who have experienced foster care or unaccompanied homelessness: review eligibility and tell your counselor or financial-aid office.",due:null,window:"Start eligibility steps now",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/passport-to-careers",note:"Support can cover college, pre-apprenticeship, or apprenticeship costs, including some living and occupational expenses.",lastChecked:"2026-08-13",kind:"action"},
@@ -1507,15 +1507,15 @@ function icsEventFor(item){
   const wrap = s => String(s).replace(/[\\;,]/g, m => "\\"+m).replace(/\n/g,"\\n");
   return [
     "BEGIN:VEVENT",
-    "UID:" + idOf(item) + "@ths-nextsteps",
+    "UID:" + idOf(item) + "-" + (item.calendarKind || "deadline") + "@ths-nextsteps",
     "DTSTAMP:" + stamp + "T090000Z",
     "DTSTART;VALUE=DATE:" + stamp,
     "DTEND;VALUE=DATE:" + end,
-    "SUMMARY:" + wrap("DEADLINE: " + item.name),
+    "SUMMARY:" + wrap((item.calendarKind === "opens" ? "APPLICATION OPENS: " : "DEADLINE: ") + item.name),
     "DESCRIPTION:" + wrap((item.amount && item.amount !== "—" ? item.amount + "\n" : "") + item.who + "\n\n" + item.link),
     "URL:" + item.link,
-    "BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.name + " closes in one week"),"END:VALARM",
-    "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.name + " closes tomorrow"),"END:VALARM",
+    "BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.calendarKind === "opens" ? item.name + " opens in one week" : item.name + " closes in one week"),"END:VALARM",
+    "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.calendarKind === "opens" ? item.name + " opens tomorrow" : item.name + " closes tomorrow"),"END:VALARM",
     "END:VEVENT"
   ].join("\r\n");
 }
@@ -1694,10 +1694,14 @@ function render(){
 
 /* ---------- confirmed deadline calendar ---------- */
 function confirmedCalendarItems(){
-  return DEADLINES
-    .filter(it => it.due && !it.planning && parseDate(it.due))
-    .sort((a,b) => parseDate(a.due) - parseDate(b.due) || (a.priority || 999) - (b.priority || 999));
+  const events = [];
+  DEADLINES.filter(it => !it.planning).forEach(item => {
+    if(item.opens && parseDate(item.opens)) events.push({...item, due:item.opens, calendarKind:"opens"});
+    if(item.due && parseDate(item.due)) events.push({...item, calendarKind:"due"});
+  });
+  return events.sort((a,b) => parseDate(a.due) - parseDate(b.due) || (a.priority || 999) - (b.priority || 999));
 }
+function calendarEventLabel(item){ return item.calendarKind === "opens" ? "Applications open" : "Deadline"; }
 function dateKey(d){
   return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
 }
@@ -1711,15 +1715,14 @@ function renderCalendarDetails(key, byDate){
     box.textContent = "No confirmed date is listed in this month. Use the arrows to check another month.";
     return;
   }
-  const d = parseDate(key);
   if(!items.length){
     box.textContent = "No confirmed date on " + fmt(key) + ". Tap a marked day to see what is due.";
     return;
   }
-  box.innerHTML = `<h3>Due on ${esc(fmt(key))}</h3>` + items.map(item => `
+  box.innerHTML = `<h3>Important date · ${esc(fmt(key))}</h3>` + items.map(item => `
     <div class="calendar-event">
-      <time datetime="${esc(item.due)}">Confirmed</time>
-      <strong>${esc(item.name)}</strong>
+      <time datetime="${esc(item.due)}">${esc(calendarEventLabel(item))}</time>
+      <strong>${esc(calendarEventLabel(item))}: ${esc(item.name)}</strong>
       <span>${esc(item.org || "Scholarship or program deadline")}${item.amount ? " · " + esc(item.amount) : ""}</span>
       <a href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page →</a>
     </div>`).join("");
@@ -1751,9 +1754,9 @@ function renderCalendar(){
       : "No confirmed dates are listed this month. Use the arrows to check another month.";
   } else {
     kicker.textContent = next ? "Next important senior date" : "Important dates for seniors";
-    document.getElementById("calendar-title").textContent = next ? next.name : "No upcoming confirmed dates";
+    document.getElementById("calendar-title").textContent = next ? `${calendarEventLabel(next)}: ${next.name}` : "No upcoming confirmed dates";
     document.getElementById("calendar-summary").textContent = next
-      ? `Due ${fmt(next.due)} · ${next.org || "official sponsor"}`
+      ? `${next.calendarKind === "opens" ? "Opens" : "Due"} ${fmt(next.due)} · ${next.org || "official sponsor"}`
       : "Check the full calendar for past dates or wait for a new confirmed date to be posted.";
   }
   document.getElementById("calendar-count").textContent = `${all.length} confirmed date${all.length === 1 ? "" : "s"} in the full calendar`;
