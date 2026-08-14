@@ -96,6 +96,27 @@ function sendUpdates_(updates){
   return {recipients,skipped};
 }
 
+function sendTestEmail(){
+  const book=SpreadsheetApp.openById(property_("SUBSCRIBER_SHEET_ID"));
+  const subscribers=book.getSheetByName(SHEET_NAMES.subscribers);
+  const rows=subscribers.getLastRow()>1?subscribers.getRange(2,1,subscribers.getLastRow()-1,6).getValues():[];
+  const preferencesUrl=book.getFormUrl()||"";
+  const subject="Test: Toppenish scholarship updates";
+  const body=[
+    "This is a test of the Toppenish Scholarship Finder email updates.",
+    "",
+    "If you received this, confirmed scholarship alerts are working.",
+    preferencesUrl?`Update your subscription or unsubscribe: ${preferencesUrl}`:""
+  ].filter(Boolean).join("\n");
+  let recipients=0;
+  rows.forEach(([email,name,optedIn,unsubscribed])=>{
+    if (!email||!truthy_(optedIn)||truthy_(unsubscribed)) return;
+    MailApp.sendEmail({to:String(email),subject,body,htmlBody:htmlMessage_({name:"Email update test",organization:"Toppenish Scholarship Finder",award:"Test message",eligibility:"This is only a delivery test.",url:preferencesUrl},name,preferencesUrl)});
+    recipients++;
+  });
+  console.log(`Test email sent to ${recipients} subscribed address(es).`);
+}
+
 function message_(update,preferencesUrl){
   return [
     update.reason||"Confirmed scholarship update",
