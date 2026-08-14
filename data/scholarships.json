@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-14T00:21:51.000Z",
-  "publicationRule": "Only opportunities verified for Toppenish High School students. Current official opportunities need a current deadline or an open/rolling application; recurring plan-ahead items need an official source, a prior-cycle deadline, and an explicit warning that the next date may change.",
+  "updatedAt": "2026-08-14T00:40:00.000Z",
+  "publicationRule": "Only opportunities verified as geographically available to Toppenish High School students. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed.",
   "scholarships": [
     {
       "name": "Mollie Davis Scholarship",
@@ -332,6 +332,440 @@
         "lowincome"
       ],
       "whyFit": "Toppenish High School is not excluded: this is a national program for all Title I, Part C-eligible graduating seniors. Only Toppenish students who are enrolled in Migrant Education and meet the program's mobility and financial-need requirements should apply.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Sea Mar Farmworker Scholarship",
+      "organization": "Sea Mar Community Health Centers",
+      "award": "Amount varies by cycle",
+      "eligibility": "High school seniors or college students who work or have worked as farmworkers, or whose parent or guardian has; applicants must show financial need and plan full-time postsecondary enrollment.",
+      "url": "https://www.seamar.org/scholarship-farm-worker.html",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-15",
+      "expectedWindow": "The site is built from 2025–26 planning data. Sea Mar has offered this annually, usually January–April; confirm the 2026–27 application and deadline before applying.",
+      "tags": [
+        "Washington",
+        "Farmworker",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "ag",
+        "lowincome"
+      ],
+      "whyFit": "A strong recurring option for Toppenish farmworker families. The sponsor page is currently stale, so the prior date is planning information—not a guaranteed deadline.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "LEAP Rise Above Scholarship",
+      "organization": "Sea Mar Community Health Centers / LEAP",
+      "award": "$2,500 in the prior cycle",
+      "eligibility": "Students who demonstrate advocacy, accountability, perseverance, and commitment to improving their community; the prior program information said citizenship status was not a barrier.",
+      "url": "https://seamar.org/scholarship-leap1.html",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-15",
+      "expectedWindow": "The site is built from 2025–26 planning data. This recurring program previously closed April 15; confirm the new application, rules, and deadline.",
+      "tags": [
+        "Washington",
+        "Leadership / service",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome",
+        "leadership"
+      ],
+      "whyFit": "Toppenish students can use the prior cycle to prepare, but must confirm that the 2026–27 program and eligibility language remain the same.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Sí Se Puede Scholarship",
+      "organization": "CAFÉ / Miguel R. Velazquez Migrant Education Foundation",
+      "award": "$2,000 in the 2026 cycle",
+      "eligibility": "Washington students connected to agricultural labor or the tree-fruit industry who demonstrate persistence, leadership, and community commitment.",
+      "url": "https://form.jotform.com/261234822100139",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-07-31",
+      "expectedWindow": "The site is built from 2025–26 planning data. The program has usually run May–July; confirm the 2026–27 form and deadline.",
+      "tags": [
+        "Washington",
+        "Farmworker",
+        "First generation",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "local",
+        "ag",
+        "firstgen",
+        "leadership"
+      ],
+      "whyFit": "Designed around Washington's agricultural and tree-fruit communities, making it especially relevant to many Toppenish families.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Horatio Alger State Scholarship",
+      "organization": "Horatio Alger Association",
+      "award": "$10,000 in the prior cycle",
+      "eligibility": "U.S. high school seniors who show financial need, integrity, perseverance, and commitment to completing a bachelor's degree after overcoming significant adversity.",
+      "url": "https://horatioalger.org/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-01",
+      "expectedWindow": "The site is built from 2025–26 planning data. This long-running program previously closed March 1; confirm the current state-scholarship cycle.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Financial need",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "lowincome",
+        "leadership"
+      ],
+      "whyFit": "Toppenish students are geographically eligible for the state program when they meet the sponsor's financial, academic, citizenship, and degree-plan requirements.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "McDonald's HACER National Scholarship",
+      "organization": "McDonald's",
+      "award": "Award amounts vary by cycle",
+      "eligibility": "High school seniors with at least one parent of Hispanic heritage who meet the sponsor's GPA, residency, and college-enrollment requirements.",
+      "url": "https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-17",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was February 17; confirm the 2026–27 opening and rules.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "A recurring national opportunity relevant to many Toppenish students with Hispanic family heritage.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Washington State Governors' Scholarship for Foster Youth",
+      "organization": "College Success Foundation",
+      "award": "$2,000–$4,000 in the prior cycle",
+      "eligibility": "Washington high school seniors who have experienced qualifying foster care and plan to enroll in an eligible college or training program.",
+      "url": "https://www.collegesuccessfoundation.org/wagovernors",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-01-30",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was January 30; confirm the 2026–27 application and foster-care eligibility rules.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students with qualifying foster-care experience can plan ahead using the prior cycle, then confirm the current requirements privately with counseling.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "NAEHCY Scholarship Fund",
+      "organization": "National Association for the Education of Homeless Children and Youth",
+      "award": "Up to $3,000 in the prior cycle",
+      "eligibility": "Students pursuing postsecondary education who have experienced homelessness and meet the sponsor's current documentation and application requirements.",
+      "url": "https://naehcy.org/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-07-31",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was July 31; confirm whether and when the next scholarship cycle opens.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students are not excluded, but this is sensitive eligibility. Students should ask counseling privately for help confirming documentation.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "SchoolHouse Connection Youth Leadership and Scholarship Program",
+      "organization": "SchoolHouse Connection",
+      "award": "$2,000 in the prior cycle plus support",
+      "eligibility": "Students who have experienced homelessness and are entering or continuing postsecondary education; prior information included undocumented students who met the program criteria.",
+      "url": "https://www.schoolhouseconnection.org/youth-leadership/scholarship-program/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2025-06-02",
+      "expectedWindow": "The site is built from 2025–26 planning resources using the last available June 2 date. Confirm that the program, amount, and current deadline have returned.",
+      "tags": [
+        "Washington",
+        "Undocumented",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "A potentially valuable recurring program for students who have experienced housing instability; confirm eligibility privately with a trusted adult.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Truman D. Picard Scholarship",
+      "organization": "Intertribal Timber Council",
+      "award": "See the current sponsor announcement",
+      "eligibility": "Native American students pursuing higher education in natural resources or related fields who meet the sponsor's tribal-documentation and enrollment rules.",
+      "url": "https://www.itcnet.org/about_us/scholarships.html",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-20",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was March 20; confirm the next cycle, award, and documentation requirements.",
+      "tags": [
+        "Washington",
+        "Indigenous",
+        "STEM / health",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "local",
+        "tribal"
+      ],
+      "whyFit": "Especially relevant for Yakama and other Native students interested in forestry, natural resources, or related careers.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "AISES Scholarships for Indigenous Students in STEM",
+      "organization": "American Indian Science and Engineering Society",
+      "award": "Multiple awards; amounts vary",
+      "eligibility": "Eligible Indigenous students pursuing STEM who meet the current scholarship's membership, enrollment, and tribal or Indigenous documentation rules.",
+      "url": "https://www.aises.org/students/scholarships",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-30",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was April 30; individual AISES awards may use different dates, so confirm the current listing.",
+      "tags": [
+        "Washington",
+        "Indigenous",
+        "STEM / health",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "local",
+        "tribal"
+      ],
+      "whyFit": "A strong recurring group of opportunities for Yakama and other Indigenous students entering STEM fields.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Indian Health Service Scholarships",
+      "organization": "Indian Health Service",
+      "award": "Tuition and other support varies by program",
+      "eligibility": "American Indian and Alaska Native students entering eligible health-profession programs who meet the current citizenship, tribal, enrollment, and service-obligation rules.",
+      "url": "https://www.ihs.gov/scholarship/apply/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-28",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was February 28; confirm the next cycle and service obligations before applying.",
+      "tags": [
+        "Washington",
+        "Indigenous",
+        "STEM / health",
+        "Four-year"
+      ],
+      "fit": [
+        "local",
+        "tribal"
+      ],
+      "whyFit": "Potentially significant support for Yakama and other Native students pursuing eligible health careers; requirements differ by IHS program.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Microsoft Disability Scholarship",
+      "organization": "Microsoft / Scholarship America",
+      "award": "Up to $20,000 in the prior program information",
+      "eligibility": "High school seniors with a disability who plan eligible undergraduate study and meet the current academic, financial-need, and technology-related interest requirements.",
+      "url": "https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-16",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was March 16; confirm the current sponsor page, eligible majors, and application date.",
+      "tags": [
+        "Washington",
+        "Disability",
+        "STEM / health",
+        "Four-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "disability",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students with disabilities can plan ahead, but the current cycle and eligible field requirements must be confirmed.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "INCIGHT Scholarship",
+      "organization": "INCIGHT",
+      "award": "$500–$2,500 in the prior cycle",
+      "eligibility": "Students with disabilities pursuing higher education who demonstrate community involvement, perseverance, and leadership.",
+      "url": "https://www.incight.org/scholarship",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-15",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was April 15; confirm the next cycle and disability documentation rules.",
+      "tags": [
+        "Washington",
+        "Disability",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "disability",
+        "leadership"
+      ],
+      "whyFit": "A recurring regional opportunity for Toppenish students with disabilities who are involved in their community.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Pride Foundation Scholarship",
+      "organization": "Pride Foundation",
+      "award": "Multiple awards; amounts vary",
+      "eligibility": "LGBTQIA+ students and allies from Washington and other eligible Northwest states who meet the current program's education and community criteria.",
+      "url": "https://pridefoundation.org/find-funding/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-01-09",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was January 9; confirm the current application window and award criteria.",
+      "tags": [
+        "Washington",
+        "LGBTQ+",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "lgbtq",
+        "leadership"
+      ],
+      "whyFit": "A recurring Northwest scholarship program open to eligible Toppenish students; use disclosure-safe filters on shared devices.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "GSBA Scholarship Fund",
+      "organization": "GSBA Scholarship Fund",
+      "award": "$3,000–$7,500 in the prior cycle",
+      "eligibility": "Washington LGBTQIA+ students and allies who demonstrate leadership, academic ability, and involvement in school or community.",
+      "url": "https://thegsba.org/scholarship-home",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-01-10",
+      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was January 10; confirm the current award levels and application window.",
+      "tags": [
+        "Washington",
+        "LGBTQ+",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "lgbtq",
+        "leadership"
+      ],
+      "whyFit": "A Washington-focused recurring opportunity that eligible Toppenish students may overlook.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "Burger King Scholars",
+      "organization": "Burger King Foundation / Scholarship America",
+      "award": "$1,000–$60,000 in the prior cycle",
+      "eligibility": "High school seniors meeting the current GPA and residency rules who plan full-time enrollment in college or vocational school; selection can consider work, service, activities, and financial need.",
+      "url": "https://scholarshipamerica.org/scholarship/burgerking/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2025-12-15",
+      "expectedWindow": "The site is built from 2025–26 planning data. The last available deadline was December 15; confirm the current cycle before applying.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Financial need",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "lowincome",
+        "leadership"
+      ],
+      "whyFit": "Broad recurring award that includes vocational programs and values work experience—relevant to many Toppenish students.",
+      "lastChecked": "2026-08-13"
+    },
+    {
+      "name": "American Legion Oratorical Contest",
+      "organization": "American Legion, Department of Washington",
+      "award": "Washington awards totaled $5,000 in the prior cycle, plus possible national awards",
+      "eligibility": "Students in grades 9–12 who are eligible under the current contest rules and are willing to deliver a prepared and assigned speech about the U.S. Constitution; no veteran-parent connection is required.",
+      "url": "https://walegion.org/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-04",
+      "expectedWindow": "The site is built from 2025–26 planning data. Local and state rounds occur before the national contest; contact the Washington sponsor to confirm the 2026–27 entry deadline.",
+      "tags": [
+        "Washington",
+        "Arts / writing",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "Worth considering for strong Toppenish speakers and writers. The prior date is for planning and is not guaranteed.",
       "lastChecked": "2026-08-13"
     }
   ]
