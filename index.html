@@ -600,8 +600,8 @@ footer p{margin:0 0 10px}
     <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
       <div class="calendar-head">
         <div>
-          <div class="lbl">Confirmed deadline calendar</div>
-          <h2 id="calendar-title">Loading confirmed deadlines…</h2>
+          <div class="lbl">Important dates for seniors</div>
+          <h2 id="calendar-title">Loading important dates…</h2>
           <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Expected dates stay out until they are verified.</p>
         </div>
         <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
@@ -615,12 +615,12 @@ footer p{margin:0 0 10px}
         <div class="calendar-weekdays" aria-hidden="true">
           <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
         </div>
-        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Confirmed deadlines by month"></div>
+        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Important dates for seniors by month"></div>
         <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
         <div class="calendar-footer">
-          <span id="calendar-count">Confirmed deadlines only</span>
+          <span id="calendar-count">Confirmed dates only</span>
           <button type="button" id="download-confirmed-ics">Download calendar</button>
-          <button type="button" data-jump="deadlines">See all deadlines →</button>
+          <button type="button" data-jump="deadlines">See all important dates →</button>
         </div>
       </div>
     </section>
@@ -740,7 +740,7 @@ footer p{margin:0 0 10px}
   <div class="wrap panel-intro">
     <p class="eyebrow">Section 02 · Pay for school</p>
     <h2>How will we pay for school or training?</h2>
-    <p>Start with financial aid and local opportunities—the best use of your time—then consider Washington and national scholarships. This page also includes important deadlines for training and apprenticeships.</p>
+    <p>Start with financial aid and local opportunities—the best use of your time—then consider Washington and national scholarships. This page also includes important dates for training and apprenticeships.</p>
     <div class="note" style="margin-top:20px;border-left-color:var(--gold)">
       <p><strong>Planning notice for the Class of 2027:</strong> this site uses confirmed 2026–27 information when sponsors have released it. It also includes long-running scholarships expected to return, using 2025–26 school-year information—or the most recent official cycle available—to help students prepare early.</p>
       <p style="margin:0"><strong>Expected does not mean guaranteed.</strong> Deadlines, awards, eligibility, and even whether a program returns can change. An expected card always shows the prior deadline as planning information and links to the sponsor so students can check for this year's update before applying.</p>
@@ -753,7 +753,7 @@ footer p{margin:0 0 10px}
   <div class="controls">
     <div class="wrap">
       <div class="row">
-        <label class="sr" for="q">Search deadlines</label>
+        <label class="sr" for="q">Search important dates</label>
         <input id="q" type="search" placeholder="Search — try &ldquo;welding&rdquo;, &ldquo;no essay&rdquo;, &ldquo;orchard&rdquo;, &ldquo;tribal&rdquo;">
         <label class="toggle"><input type="checkbox" id="mineOnly"> My list only</label>
         <button class="mini" type="button" id="clearSaved">Clear saved list</button>
@@ -1676,7 +1676,7 @@ function render(){
     const list  = groups.get(key);
     const label = key === "start" ? "Essential money steps"
                 : key === "local" ? "Local programs and plan-ahead opportunities"
-                : key === "senior" ? "College, training & transition deadlines"
+                : key === "senior" ? "Important dates for seniors"
                 : key === "rolling" ? "Open now — no fixed deadline"
                 : key === "planning" ? "Expected to return — prior-cycle planning information"
                 : key === "closed"  ? "Closed for this cycle"
@@ -1708,12 +1708,12 @@ function renderCalendarDetails(key, byDate){
   const items = key ? (byDate.get(key) || []) : [];
   box.className = "calendar-details" + (items.length ? "" : " empty");
   if(!key){
-    box.textContent = "No confirmed deadline is listed in this month. Use the arrows to check another month.";
+    box.textContent = "No confirmed date is listed in this month. Use the arrows to check another month.";
     return;
   }
   const d = parseDate(key);
   if(!items.length){
-    box.textContent = "No confirmed deadline on " + fmt(key) + ". Tap a marked day to see what is due.";
+    box.textContent = "No confirmed date on " + fmt(key) + ". Tap a marked day to see what is due.";
     return;
   }
   box.innerHTML = `<h3>Due on ${esc(fmt(key))}</h3>` + items.map(item => `
@@ -1742,9 +1742,9 @@ function renderCalendar(){
   const monthTitle = first.toLocaleDateString("en-US",{month:"long",year:"numeric"});
   document.getElementById("calendar-title").textContent = monthTitle;
   document.getElementById("calendar-summary").textContent = monthItems.length
-    ? `${monthItems.length} confirmed deadline${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
-    : "No confirmed deadlines are listed this month. Use the arrows to check another month.";
-  document.getElementById("calendar-count").textContent = `${all.length} confirmed deadline${all.length === 1 ? "" : "s"} in the full calendar`;
+    ? `${monthItems.length} confirmed date${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
+    : "No confirmed dates are listed this month. Use the arrows to check another month.";
+  document.getElementById("calendar-count").textContent = `${all.length} confirmed date${all.length === 1 ? "" : "s"} in the full calendar`;
 
   let selected = calendarSelected;
   if(!selected || !selected.startsWith(viewMonth)) selected = monthItems[0] ? monthItems[0].due : null;
@@ -1760,7 +1760,7 @@ function renderCalendar(){
     const button = document.createElement("button");
     button.type = "button"; button.className = "calendar-day"; button.setAttribute("role","gridcell");
     button.setAttribute("aria-selected", String(key === selected));
-    button.setAttribute("aria-label", fmt(key) + (dayItems.length ? `, ${dayItems.length} confirmed deadline${dayItems.length === 1 ? "" : "s"}` : ""));
+    button.setAttribute("aria-label", fmt(key) + (dayItems.length ? `, ${dayItems.length} confirmed date${dayItems.length === 1 ? "" : "s"}` : ""));
     if(key === dateKey(today)) button.classList.add("today");
     if(dayItems.length){ button.classList.add("has-deadline"); button.title = dayItems.map(item => item.name).join("; "); }
     if(current < today) button.classList.add("past");
