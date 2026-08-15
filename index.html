@@ -606,6 +606,140 @@ footer p{margin:0 0 10px}
   .card{transition:transform .16s ease, box-shadow .16s ease}
   .card:hover{transform:translateY(-2px); box-shadow:0 1px 0 var(--gray20),0 8px 22px rgba(22,33,28,.09)}
 }
+
+/* ============================================================
+   SCHOLARSHIP FINDER VISUAL SYSTEM — advisory rebrand
+   ============================================================ */
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.55;
+}
+h1,h2,h3,h4,
+.badge,.ticker .n,.ticker .mine b,.name,.days b,
+.note strong,.wcard h4,details.acc > summary,.check li b,
+.path h4,table.cmp tbody th,.welcome-response strong,
+.requirement-card h4,.decision-card h4,.grant-card h4,
+.plan-card h4,.help-card h4,.vocab-card h4{
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+.wrap{max-width:1060px;padding-left:16px;padding-right:16px}
+.eyebrow,.stepnum,.tab .num,.ticker .lbl,.calendar-weekdays span,
+.calendar-details h3,.month h3,.month .count,.org,.days small,
+.due,.flag,.tagpill,.mini,.chip,.chiprow-label,.counter,
+.wcard .kicker,.ba .lab,.path .fast,table.cmp thead th,
+.familias .en,.tl .nowtag{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+
+header.top{border-top:7px solid var(--ink)}
+header.top::after{display:none}
+header.top .inner{padding:24px 16px 28px}
+.lockup{gap:12px;margin-bottom:18px;padding-right:155px}
+.site-name{font-size:25px;font-weight:800;line-height:1.05;letter-spacing:-.035em}
+header.top .school{font-size:13px;color:#f5e8eb;margin-top:3px}
+header.top .eyebrow{font-size:10.5px;letter-spacing:.1em;color:#eacbd1}
+.badge{width:50px;height:50px;border-radius:8px}
+.wildcats-script{width:140px;right:16px;top:23px}
+.utility{gap:8px;margin:0 0 19px}
+.utility button,.utility a{
+  border:1px solid rgba(255,255,255,.55);background:transparent;
+  border-radius:999px;padding:8px 12px;font:700 13px system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:0
+}
+.utility button:hover,.utility a:hover{background:#fff;color:var(--crimson)}
+header.top h1{font-size:clamp(36px,7vw,58px);line-height:1.02;letter-spacing:-.045em;margin:0 0 10px;max-width:760px}
+header.top h1 .thin{font-weight:800;color:#f0cbd2}
+.lede{font-size:16px;line-height:1.5;max-width:61ch;color:#f4dfe3;margin:0 0 22px}
+
+.deadline-calendar{
+  border-radius:12px;padding:11px 15px;box-shadow:0 8px 24px rgba(30,15,19,.2)
+}
+.calendar-head h2{font-size:clamp(18px,3vw,22px)}
+.calendar-toggle,.calendar-actions button,.calendar-footer button{
+  border-radius:8px;font:700 12px system-ui,-apple-system,"Segoe UI",sans-serif
+}
+
+nav.hub{
+  background:rgba(255,255,255,.97);border-bottom:1px solid var(--gray20);
+  box-shadow:0 3px 14px rgba(33,35,37,.06)
+}
+.tab{
+  color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:700;font-size:14px;padding:14px 16px 12px
+}
+.tab:hover{color:var(--crimson);background:var(--sand)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--crimson);background:#fff}
+.tab[aria-selected="true"] .num{color:var(--crimson)}
+
+.panel-intro{padding:32px 0 14px;border-bottom:0;margin-bottom:0}
+.panel-intro h2{font-size:clamp(28px,5vw,42px);line-height:1.05;margin:5px 0 9px}
+.panel-intro p{font-size:16px}
+.sect{margin-top:44px}
+.sect > h3{font-size:clamp(23px,4vw,31px)}
+
+.welcome-card,.decision-card,.grant-card,.plan-card,.help-card,.vocab-card,
+.requirement-card,.wcard,.builder,.quiz,.note,.familias,details.acc,
+.requirements-accordion details,.tablewrap{
+  border:1px solid var(--gray20);border-radius:12px;box-shadow:var(--shadow)
+}
+.welcome-card{border-top:4px solid var(--rose);padding:20px;margin-top:18px}
+.welcome-options button{
+  background:#fff;border-radius:999px;padding:10px 13px;font:700 13px system-ui,-apple-system,"Segoe UI",sans-serif
+}
+.welcome-response{border-left-width:4px;border-radius:0 8px 8px 0}
+.start-step{border:1px solid var(--gray20);border-left:5px solid var(--rose);border-radius:12px;min-height:175px}
+.current-action{border-radius:12px}
+.decision-card{border-top:4px solid var(--crimson)}
+.grant-card{border-top:4px solid var(--sage)}
+.wcard{border-top:4px solid var(--crimson)}
+
+.btn{
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px;font-weight:800;
+  letter-spacing:0;border-radius:8px;padding:10px 13px
+}
+.mini{border-radius:8px;font-size:11px;font-weight:700}
+.chip{font-size:12px;font-weight:700;letter-spacing:0}
+#q{border-radius:8px}
+.controls{background:rgba(244,244,245,.97)}
+
+.card{
+  border:1px solid var(--gray20);border-left-width:5px;border-radius:12px;
+  box-shadow:var(--shadow);padding:16px
+}
+.wcard,.requirement-card,.start-step{transition:transform .16s ease,box-shadow .16s ease}
+.amount{display:inline-flex;align-items:center;background:var(--sage-bg);border:1px solid #bdd8c9;border-radius:8px;padding:7px 10px;color:var(--sage)}
+.note{border-left:5px solid var(--crimson)}
+.band{margin-top:44px;padding:42px 0}
+.paths{border-radius:12px}
+.path{padding:21px 19px}
+footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;padding:24px 0 50px}
+.help-fab{border:2px solid #fff;box-shadow:0 8px 25px rgba(0,0,0,.23)}
+
+@media(prefers-reduced-motion:no-preference){
+  .card:hover,.wcard:hover,.requirement-card:hover,.start-step:hover{
+    transform:translateY(-2px);box-shadow:0 2px 0 var(--gray20),0 9px 24px rgba(33,35,37,.1)
+  }
+}
+
+@media(max-width:700px){
+  .lockup{padding-right:116px}.wildcats-script{width:105px;right:15px;top:24px}
+}
+@media(max-width:560px){
+  header.top .inner{padding:19px 16px 20px}
+  .lockup{padding-right:0}.site-name{font-size:22px}.wildcats-script{display:none}
+  .utility{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px;margin-bottom:16px}
+  .utility button,.utility a{white-space:nowrap;font-size:12px;padding:7px 10px}
+  header.top h1{font-size:36px}
+  .lede{font-size:15px}
+  .deadline-calendar{padding:10px 12px}
+  .tab{padding:12px 13px 10px;font-size:13px}
+  .panel-intro{padding-top:26px}
+  .welcome-card{padding:17px}
+  .welcome-options{display:grid;grid-template-columns:1fr 1fr}
+  .welcome-options button{width:100%;text-align:left;border-radius:9px}
+  .sect{margin-top:38px}
+}
 @media print{
   nav.hub,.controls,.ticker,.deadline-calendar,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
   .panel[hidden]{display:block !important}
@@ -632,6 +766,7 @@ footer p{margin:0 0 10px}
     <div class="lockup">
       <div class="badge" id="site-badge">TH</div>
       <div>
+        <div class="site-name">Next Steps</div>
         <div class="school" id="site-school">Toppenish High School</div>
         <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Mr. Barragan's Advisory and the Class of 2027</p>
       </div>
@@ -643,8 +778,8 @@ footer p{margin:0 0 10px}
       <a href="#familias" data-jump="familias">Spanish for families · Español</a>
       <button type="button" data-jump="help">Get help</button>
     </div>
-    <h1>Not sure what comes next?<br><span class="thin">Start here.</span></h1>
-    <p class="lede">Simple steps for paying for school or training, choosing a path, applying, and getting through senior year—one step at a time.</p>
+    <h1>What's next?<br><span class="thin">Start here.</span></h1>
+    <p class="lede">Deadlines, money, college requirements, writing help, and every path after graduation—in one clear place.</p>
     <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
       <div class="calendar-head">
         <div>
