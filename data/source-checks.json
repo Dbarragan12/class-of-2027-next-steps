@@ -1,243 +1,243 @@
 {
-  "updatedAt": "2026-08-16T10:37:17.730Z",
+  "updatedAt": "2026-08-17T10:47:05.640Z",
   "checks": [
     {
       "name": "Mollie Davis Scholarship",
       "url": "https://www.yakimarotary.org/page/scholarships",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "c8ee62c52b03f1880ea0575add8edfc73c1bea125c6be57fc540c1b6b61265a7"
+      "contentHash": "46eba80ea1075fa2a9db6cd9d69d11e2fb3e195fa30d9d53d9ec8d30cfc9ca45"
     },
     {
       "name": "YVC Vineyard & Winery Technology Scholarship",
       "url": "https://www.yvcc.edu/academics/agriculture/ag-scholarships.php",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "6bdbe18eb844d69b3f8d21dda300c855c091752304f24f31f063d84bb238c32f"
+      "contentHash": "d633d332cd5c1ef7d17db932d58024913a7277cda17c67a61ab0cb7ded25ebaa"
     },
     {
       "name": "Live Your Dream Award",
       "url": "https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "1c3397702fe155c2f178f4598a082d689c33f00a477e2badb41234e9a918761b"
     },
     {
       "name": "Horse Heaven Hills Wine Growers Scholarship",
       "url": "https://washingtonwinefoundation.org/scholarships/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": "error",
       "error": "fetch failed"
     },
     {
       "name": "Walter Clore Scholarship",
       "url": "https://washingtonwinefoundation.org/scholarships/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": "error",
       "error": "fetch failed"
     },
     {
       "name": "George & Susan Carter Scholarship",
       "url": "https://washingtonwinefoundation.org/scholarships/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": "error",
       "error": "fetch failed"
     },
     {
       "name": "Dairy Strong Scholarship",
       "url": "https://www.wadairy.org/dairy-strong-scholarship/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "71e2b88c9aedf3893d3f51ad93e0c3eb29ffa22bc1504e9017440a7d4e59969f"
+      "contentHash": "f77ad46abe09801fce071e2a37b23f7506a2aff79efba218105a9e2f41a7e393"
     },
     {
       "name": "Coca-Cola Scholars Program Scholarship",
       "url": "https://www.coca-colascholarsfoundation.org/apply/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "2988f7bf12e9fcc9b9230ebdf412f2e517f0edbfae3c32a2d7d65820d62ae49f"
+      "contentHash": "a6af76b5ff164b1dbd739c1f94e14df3649dc0b20a0ef613e564894f9e81b2a1"
     },
     {
       "name": "Washington State Opportunity Scholarship — Career & Technical",
       "url": "https://waopportunityscholarship.org/applicants/career-technical/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "5f735f460f867e7df805f0109af9467fad05504ed46b20e4008859cfd6a580b6"
     },
     {
       "name": "Elks Most Valuable Student Scholarship",
       "url": "https://www.elks.org/scholars/scholarships/mvs.cfm",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "e6ba23b3b68ff9a919feb840347fdb248c46b283e5a95da1d53d06fdd593ce0a"
+      "contentHash": "e8b3a670b6faa87a6686b173b01a90694cf9ea07faeb5f49b57a496f7dbcc2b0"
     },
     {
       "name": "BigFuture Scholarship: Start Your Scholarship List (Class of 2027)",
       "url": "https://bigfuture.collegeboard.org/scholarships/bigfuture-scholarships-start-your-scholarship-list-class-of-2027",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "90b904aac558005fd0659eb3606310d249666d78e67f7d80c597ec9c0988b351"
     },
     {
       "name": "QuestBridge National College Match",
       "url": "https://www.questbridge.org/apply-to-college/programs/national-college-match/apply",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "6ca2c55aefd4a4e72fe1b6e5d5add57bb4fea9b7150706db1a7a6002e334e904"
     },
     {
       "name": "Ewing C. Kelly Scholarship",
       "url": "https://kellyfoundationwashington.org/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "054af019f35f85b40e95c643caa7fa1c7fa058ba3b45be28dd49dcded2b10083"
+      "contentHash": "09b756394516cd0096483734d15082138112871967c371137f66c8682adcd5de"
     },
     {
       "name": "Albert Lee Wright Jr. Memorial Migrant Scholarship",
       "url": "https://www.nasdme.org/al-wright-scholarship",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "bf713ff9909db5512d99dea625d9643435e10d9495d1551464f021b64d6836ef"
+      "contentHash": "3d8d6701d0b1b1b12ed93131189a43f6e57600b338aa2ad46fa26063b83ce706"
     },
     {
       "name": "Sea Mar Farmworker Scholarship",
       "url": "https://www.seamar.org/scholarship-farm-worker.html",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "593544f11adda6539fba4d81da8f08c58e34dec8a80afd6fcad37163e6406ecf"
     },
     {
       "name": "LEAP Rise Above Scholarship",
       "url": "https://seamar.org/scholarship-leap1.html",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "31fc9db9cb20d18896265318b10a6b7cadd7dd0960c17328b7ba4ecd0febd93c"
     },
     {
       "name": "Sí Se Puede Scholarship",
       "url": "https://form.jotform.com/261234822100139",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "8bb4e1319a1e1816d4619188bd0afdd61ecb96c6ff16b947e79685a657b77c5f"
     },
     {
       "name": "Horatio Alger State Scholarship",
       "url": "https://horatioalger.org/scholarships/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 403,
-      "contentHash": "a7a016f0177f6f3a3e8aa144034ae6112acc97809626d2784f661d34694bd27d"
+      "contentHash": "9442b1f5897a42c2ff44c3cc19accbe302711cf94a5aad66613b39657c0679f1"
     },
     {
       "name": "McDonald's HACER National Scholarship",
       "url": "https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "6e2ae3bebea143e20f59b7cf9374c0cccf96a48f02179c1ee3e9ca90f8220e50"
+      "contentHash": "05b9212da609a34f145f6c3504885c29372cb66dfee3ec7765a99cced53bd625"
     },
     {
       "name": "Washington State Governors' Scholarship for Foster Youth",
       "url": "https://www.collegesuccessfoundation.org/wagovernors",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "6bae2aeccd5f5d4202cf4f2481b07d3c703ad8ee888c53425f5da81fe2d8a4ed"
+      "contentHash": "a88992714c5ff2cb26cc3a0d1bf6bbc0647d023aa0d3c8710e125b6d5705bc8c"
     },
     {
       "name": "NAEHCY Scholarship Fund",
       "url": "https://naehcy.org/scholarships/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 404,
-      "contentHash": "c2d810a47e55bcacd0bfae1c1093017ebbf9b91c52c8d2331add90b57a43f428"
+      "contentHash": "fdd041e9a75da1dc9020c97254ecd8b98c1b54834bd87058cd9a964211aaf7ac"
     },
     {
       "name": "SchoolHouse Connection Youth Leadership and Scholarship Program",
       "url": "https://www.schoolhouseconnection.org/youth-leadership/scholarship-program/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 202,
       "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "name": "Truman D. Picard Scholarship",
       "url": "https://www.itcnet.org/about_us/scholarships.html",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "7263e9f278e8e8aa8d913af93bca5a5436d68e1776dd11179c050b62db77ff21"
+      "contentHash": "ceb72d3128c028c73dff4c145e2ec465eb2170e2134009cae0eae6b858178fbd"
     },
     {
       "name": "AISES Scholarships for Indigenous Students in STEM",
       "url": "https://www.aises.org/students/scholarships",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "c69519054700039f2fc228ed482fe447e997a79876d3e8b974943dfb2f98a0a4"
+      "contentHash": "b488ee819d462450fcffdb7b7793a398f037c3d4827d90bd69b00f89e4df67b8"
     },
     {
       "name": "Indian Health Service Scholarships",
       "url": "https://www.ihs.gov/scholarship/apply/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "16a646902eb3d0d5e4931da25626efedce391fd86cac9215a25eb549643914dd"
+      "contentHash": "d837c3d64a03c63c2dabbe7a0f3f2e4f1c8819089356744efe7bff9c4524ef99"
     },
     {
       "name": "Microsoft Disability Scholarship",
       "url": "https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "e31a51378d4869dda4d06929c3893ea857ffe29d55108c359a4e79adfdd9d3d9"
+      "contentHash": "3cb74def912bb9002ef0c6461321a44a33841b2bec3462a83bf4c9b35edd2fef"
     },
     {
       "name": "INCIGHT Scholarship",
       "url": "https://www.incight.org/scholarship",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "3bb0b57b58d4180d98344d907873914838c73d58a22e0b90f6fbc8db639b2d30"
+      "contentHash": "5d1e632402ce656c9aea12f831b5590d3403877e8c8432cf1b7f3d6514da16c2"
     },
     {
       "name": "Pride Foundation Scholarship",
       "url": "https://pridefoundation.org/find-funding/scholarships/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "30b2b2fd4dd64722e1f48f9cb7fda87178ef72cafffbef1983ece8215aba20ac"
+      "contentHash": "061cf5c5215249197ed3021b1d3b2c1411584d76d3a619a2b94476c839812025"
     },
     {
       "name": "GSBA Scholarship Fund",
       "url": "https://thegsba.org/scholarship-home",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "1585bf8b653694eedbc04f5162f78679d7ef4e8c67b21071b25e84911cac847d"
+      "contentHash": "426ed4d354b898ee93fcc69b7e6b10f7013c37792e1dbaa0520be4677ebcb944"
     },
     {
       "name": "Burger King Scholars",
       "url": "https://scholarshipamerica.org/scholarship/burgerking/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "948ff348350c0b6cad00d00a71260a991d85f6fe2710b41c096b47769b9e201e"
+      "contentHash": "f29a3bed2944be20cfabaed24c02c6bdb6712da7c2196b8f58891cbd458ecd70"
     },
     {
       "name": "American Legion Oratorical Contest",
       "url": "https://walegion.org/scholarships/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 403,
-      "contentHash": "2fe4b26bea0ccf0428daf8b6684ef23535fda9137ba89797891b20b1efda688b"
+      "contentHash": "b7c08636266841825207f94211b0e3dc0c6671034406b511cc2d5fa9aac91800"
     },
     {
       "name": "Jack Kent Cooke College Scholarship Program",
       "url": "https://www.jkcf.org/our-scholarships/college-scholarship-program/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
-      "contentHash": "716276343d21748a7cd60102951474d05c0bce2d2d21cd7e4bd2a93e115fc5d3"
+      "contentHash": "6277dda0f8762e39cc6a37b43324de770364cfad6dfdc5c90d968960904cbc0d"
     },
     {
       "name": "American Indian College Fund Full Circle Scholarship",
       "url": "https://collegefund.org/students/scholarships/college-students/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 200,
       "contentHash": "b5b076eb8f4c66917638b008e57c357e13c2e2c555c33d1ce3181cdf435d972e"
     },
     {
       "name": "Native Forward Scholars Fund",
       "url": "https://www.nativeforward.org/scholarship-faq/",
-      "checkedAt": "2026-08-16",
+      "checkedAt": "2026-08-17",
       "status": 403,
-      "contentHash": "fd395cccbe34b0289e1de2661c5517c8b04f3444740010488231dcc3a0b6caf0"
+      "contentHash": "1ac9c596d367cf9dde68c722da0846cc1ac3f91561046b607a58bc402bfc9687"
     }
   ]
 }
