@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T00:40:00.000Z",
+  "updatedAt": "2026-08-17T20:00:00.000Z",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
   "scholarships": [
     {
@@ -850,6 +850,275 @@
       "whyFit": "A Toppenish student with qualifying tribal affiliation may be eligible nationwide. The student must verify the current program, enrollment, FAFSA, tribal-documentation, and financial-need requirements.",
       "needs": "FAFSA, Financial Needs Form, Tribal Eligibility Certificate, enrollment information, transcript, and any program-specific documents.",
       "lastChecked": "2026-08-14"
+    },
+    {
+      "name": "Smart Choices Scholarship",
+      "organization": "WIAA, Gesa Credit Union, and Dairy Farmers of Washington",
+      "award": "Two $5,000 awards and eight $1,000 awards",
+      "eligibility": "Graduating seniors at WIAA member high schools with at least a 3.0 GPA who participated in school athletics or activities and can show leadership, academics, and community service.",
+      "url": "https://www.wiaa.com/smart-choices-scholarship-welcome/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-15",
+      "expectedOpen": "2026-10-01",
+      "openLabel": "October 2026",
+      "expectedWindow": "Expected to open in fall 2026 based on the annual schedule; the 2026 deadline was March 15. Confirm the 2027 dates when released.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "Toppenish High School is a WIAA member school, so qualifying Toppenish seniors may apply. A Toppenish student previously received this scholarship.",
+      "needs": "Online application, transcript, activity and leadership history, community-service information, and the sponsor's required essay or supporting materials.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "Amazon Future Engineer Scholarship",
+      "organization": "Amazon Future Engineer",
+      "award": "Up to $40,000 plus an opportunity for a paid Amazon internship",
+      "eligibility": "U.S. high school seniors who have completed or are taking an eligible computer-science course and plan to pursue a computer-science-related degree. Current financial-need and academic requirements must also be confirmed.",
+      "url": "https://www.amazonfutureengineer.com/scholarships",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-01-15",
+      "expectedOpen": "2026-11-10",
+      "openLabel": "November 2026",
+      "expectedWindow": "Planning estimate based on the prior cycle, which opened November 10, 2025 and closed January 15, 2026. Confirm the 2027 dates and requirements when posted.",
+      "tags": [
+        "National",
+        "STEM / health",
+        "Four-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students can apply because this is a national scholarship. It is especially relevant to students taking computer science and planning a related college major.",
+      "needs": "Transcript, computer-science course information, financial information, college and major plans, and the current application materials.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "HSF Scholar Program",
+      "organization": "Hispanic Scholarship Fund",
+      "award": "$500–$5,000 awards may be available based on funding and financial need",
+      "eligibility": "Students of Hispanic heritage who meet the current citizenship or eligible-status rules, have at least a 3.0 high school GPA, and plan full-time enrollment at an accredited nonprofit four-year university.",
+      "url": "https://www.hsf.net/scholarship/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-15",
+      "expectedOpen": "2027-01-05",
+      "openLabel": "January 2027",
+      "expectedWindow": "Planning estimate based on the 2026 cycle, which ran January 5–February 15. Selection as an HSF Scholar does not guarantee a cash award; confirm the new cycle.",
+      "tags": [
+        "National",
+        "Latino",
+        "Four-year",
+        "Financial need",
+        "First generation"
+      ],
+      "fit": [
+        "local",
+        "lowincome",
+        "firstgen"
+      ],
+      "whyFit": "Eligible Toppenish students can apply nationally, and the program may be a strong match for Hispanic, first-generation, and financially needy students.",
+      "needs": "Online application, transcript, FAFSA or financial information, enrollment plans, and any finalist documents requested by HSF.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "APIA Scholarship Program",
+      "organization": "APIA Scholars",
+      "award": "$2,500–$20,000",
+      "eligibility": "Students who meet the sponsor's U.S. citizenship or eligible Pacific Island nation status rules and will attend an accredited U.S. college or university for an associate or bachelor's degree, part time or full time.",
+      "url": "https://apiascholars.org/scholarships/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-11-15",
+      "deadline": "2027-01-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "The sponsor confirms applications open November 15, 2026 and close January 15, 2027 at 5 p.m. Eastern.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students who meet the sponsor's citizenship or eligible-status rules may apply nationally for associate- or bachelor's-degree study.",
+      "needs": "Online application, academic and enrollment information, financial information, and the sponsor's essays or supporting documents.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "American Indian Endowed Scholarship",
+      "organization": "Washington Student Achievement Council",
+      "award": "Typically about $500–$3,000; awards vary",
+      "eligibility": "Washington residents with close social and cultural ties to a Washington American Indian community who demonstrate financial need, enroll full time at an eligible Washington college, and plan to benefit the state's American Indian community.",
+      "url": "https://wsac.wa.gov/american-indian-endowed-scholarship",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedOpen": "2026-12-01",
+      "openLabel": "December 2026",
+      "expectedWindow": "WSAC confirms the 2027–28 application will be available in December 2026. The exact opening day and deadline have not yet been released.",
+      "tags": [
+        "Washington",
+        "Indigenous",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "tribal",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish and Yakama-area students may be strong candidates if they meet the Washington residency, community-ties, financial-need, and college-enrollment requirements.",
+      "needs": "Application, transcript, financial information, enrollment plans, and documentation or statements showing ties and future service to a Washington American Indian community.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "Women in STEM Excel Scholarship",
+      "organization": "Women in STEM Excel",
+      "award": "$3,500",
+      "eligibility": "Washington women pursuing education in a science, technology, engineering, or mathematics field who meet the sponsor's current academic and enrollment rules.",
+      "url": "https://recf.org/scholarship/women-in-stem-excel/",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-11-17",
+      "lastYearDeadline": null,
+      "expectedWindow": "The official scholarship listing currently gives a November 17 deadline. Students should confirm the cycle year and application instructions on the sponsor page before submitting.",
+      "tags": [
+        "Washington",
+        "STEM / health",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "Toppenish students who identify as women and plan a STEM field may qualify because the opportunity is open across Washington.",
+      "needs": "Application, transcript, STEM education plans, and the current essays or supporting documents listed by the sponsor.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "ACPE Northwest Scholarship",
+      "organization": "Association for Computer Professionals in Education Northwest",
+      "award": "Up to $3,000",
+      "eligibility": "Graduating Oregon or Washington seniors involved in technology who plan to study a technology-related field at a college, university, community college, or technical school.",
+      "url": "https://acpenw.org/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-15",
+      "expectedOpen": "2026-12-03",
+      "openLabel": "December 2026",
+      "expectedWindow": "Planning estimate based on the prior cycle, which opened December 3, 2025 and closed February 15, 2026. Confirm the 2027 dates when posted.",
+      "tags": [
+        "Washington",
+        "STEM / health",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "Toppenish seniors qualify geographically as Washington students and may use the award for several kinds of technology education.",
+      "needs": "Application, transcript, technology activities or experience, education plans, and the current essay or recommendation materials.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "WSADA Bright Future Scholarship",
+      "organization": "Washington State Auto Dealers Association",
+      "award": "Nine $3,000 scholarships were offered in the prior cycle",
+      "eligibility": "Washington students enrolling or already enrolled in an automotive technology program who meet the sponsor's current education and application requirements.",
+      "url": "https://wsada.org/community/scholarships",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-05-31",
+      "expectedOpen": "2027-02-01",
+      "openLabel": "February 2027",
+      "expectedWindow": "Planning estimate for a spring 2027 application based on the prior May 31 deadline. Award count, amount, opening date, and deadline can change.",
+      "tags": [
+        "Washington",
+        "Trades",
+        "Two-year"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "Toppenish students entering an eligible automotive technology program in Washington may qualify.",
+      "needs": "Application, automotive program and enrollment information, transcript, and any current essay or recommendation requirements.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "BIAW and WHBF Student Scholarship",
+      "organization": "Building Industry Association of Washington and Washington Home Builders Foundation",
+      "award": "Awards vary",
+      "eligibility": "Washington residents who need additional funding and plan education in a construction-related field at an accredited Washington community college, vocational or technical school, or university.",
+      "url": "https://apply.biaw.com/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-06",
+      "expectedOpen": "2027-01-04",
+      "openLabel": "January 2027",
+      "expectedWindow": "Planning estimate based on the prior April 6 deadline. Confirm the 2027 opening date, deadline, award amount, and requirements when released.",
+      "tags": [
+        "Washington",
+        "Trades",
+        "Two-year",
+        "Four-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students qualify geographically as Washington residents and may use the opportunity for several construction-related education paths.",
+      "needs": "Application, construction career and education plans, financial-need information, transcript, and current supporting materials.",
+      "lastChecked": "2026-08-17"
+    },
+    {
+      "name": "Sub Pop Loser Scholarship",
+      "organization": "Sub Pop Records",
+      "award": "Three $6,000 scholarships were offered in the prior cycle",
+      "eligibility": "Graduating seniors in Washington, Oregon, or Idaho who are interested or involved in music, creative media, or the arts and plan full-time enrollment at an accredited college or university.",
+      "url": "https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-16",
+      "expectedOpen": "2027-02-13",
+      "openLabel": "February 2027",
+      "expectedWindow": "Planning estimate based on the 2026 cycle, announced February 13 with a March 16 deadline. Confirm that the scholarship returns and review the 2027 rules before applying.",
+      "tags": [
+        "Washington",
+        "Arts / writing",
+        "Four-year"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "Toppenish seniors qualify geographically as Washington students, including students whose strongest interests are music, art, design, writing, or creative media.",
+      "needs": "Application, creative interests or work, college plans, transcript, and the current essay or supporting materials.",
+      "lastChecked": "2026-08-17"
     }
   ]
 }
