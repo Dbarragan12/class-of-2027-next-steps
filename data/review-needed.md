@@ -4,11 +4,12 @@ One or more official sources changed or could not be verified during the nightly
 
 - [Mollie Davis Scholarship](https://www.yakimarotary.org/page/scholarships) — official page content changed; check result: 200
 - [YVC Vineyard & Winery Technology Scholarship](https://www.yvcc.edu/academics/agriculture/ag-scholarships.php) — official page content changed; check result: 200
-- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — official link could not be checked; check result: error
-- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — official link could not be checked; check result: error
-- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — official link could not be checked; check result: error
+- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — official page content changed; check result: 200
+- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — official page content changed; check result: 200
+- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — official page content changed; check result: 200
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — official page content changed; check result: 200
 - [Coca-Cola Scholars Program Scholarship](https://www.coca-colascholarsfoundation.org/apply/) — official page content changed; check result: 200
+- [Washington State Opportunity Scholarship — Career & Technical](https://waopportunityscholarship.org/applicants/career-technical/) — official page content changed; check result: 200
 - [Elks Most Valuable Student Scholarship](https://www.elks.org/scholars/scholarships/mvs.cfm) — official page content changed; check result: 200
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — official page content changed; check result: 200
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — official page content changed; check result: 200
