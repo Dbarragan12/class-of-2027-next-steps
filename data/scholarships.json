@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T20:00:00.000Z",
+  "updatedAt": "2026-08-19T21:30:00.000Z",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
   "scholarships": [
     {
@@ -1118,6 +1118,345 @@
       ],
       "whyFit": "Toppenish seniors qualify geographically as Washington students, including students whose strongest interests are music, art, design, writing, or creative media.",
       "needs": "Application, creative interests or work, college plans, transcript, and the current essay or supporting materials.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Washington State Fair Foundation Blue Ribbon Scholarships",
+      "organization": "Washington State Fair Foundation",
+      "award": "One application matches students to multiple awards; the foundation awards about $250,000 annually",
+      "eligibility": "Washington residents graduating from high school or adult learners with at least a 2.7 GPA who plan an accredited two- or four-year college, university, or trade school and work, volunteer, or participate in a school activity at least eight hours per month.",
+      "url": "https://www.thefair.com/foundation/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-02",
+      "expectedOpen": "2026-12-01",
+      "openLabel": "December 2026",
+      "expectedWindow": "The program opens annually on December 1. The prior cycle closed February 2, 2026; use February 2, 2027 as a planning estimate until the new deadline is posted.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "Toppenish seniors qualify geographically as Washington residents, and one application can match them to several awards, including trade-school options.",
+      "needs": "Online application, unofficial transcript, activity/work/service history, and two recommendations—one academic and one from an employer, volunteer contact, or school-activity advisor.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "WSU General Scholarship Application",
+      "organization": "Washington State University",
+      "award": "One application provides consideration for hundreds of WSU scholarships; award amounts vary",
+      "eligibility": "Incoming or continuing Washington State University students. Individual scholarships consider academics, major, hometown, financial need, leadership, service, employment, and other qualifications.",
+      "url": "https://financialaid.wsu.edu/getting-started/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-01-31",
+      "expectedOpen": "2026-08-01",
+      "openLabel": "August 2026",
+      "expectedWindow": "WSU opens the general scholarship application annually and lists January 31 as the yearly priority deadline. Confirm that the 2027–28 application is open and submit by January 31, 2027 unless WSU posts a different date.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "College-specific",
+        "Financial need",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "lowincome",
+        "leadership"
+      ],
+      "whyFit": "Any Toppenish student considering a WSU campus should complete this application because it matches applicants to hundreds of university, college, and department scholarships.",
+      "needs": "WSU application/account, academic and activity history, financial circumstances, career goals, community service, and short written responses. The prior GEAR UP guide used eight responses of up to 110 words each.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Washington State Opportunity Scholarship — Baccalaureate",
+      "organization": "Washington State Opportunity Scholarship",
+      "award": "Up to $22,500 plus career training and mentorship",
+      "eligibility": "Washington residents pursuing an eligible bachelor's degree in a high-demand STEM or health-care field who meet the current household-income, residency, enrollment, and FAFSA/WASFA requirements.",
+      "url": "https://waopportunityscholarship.org/applicants/baccalaureate/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-26",
+      "expectedOpen": "2027-01-14",
+      "openLabel": "January 2027",
+      "expectedWindow": "Planning estimate based on the prior application window of January 14–February 26, 2026. Confirm the 2027 dates, eligible majors, income limits, and FAFSA/WASFA deadline.",
+      "tags": [
+        "Washington",
+        "STEM / health",
+        "Four-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "whyFit": "Toppenish students qualify geographically as Washington residents and may be strong candidates when planning an eligible STEM or health-care bachelor's degree.",
+      "needs": "Online application, eligible major and college plan, household-income information, residency information, and FAFSA or WASFA filed by the scholarship deadline.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "YVC Foundation General Scholarship",
+      "organization": "Yakima Valley College Foundation",
+      "award": "One application matches students to more than 150 scholarships; the average award is about $4,000",
+      "eligibility": "Incoming and current Yakima Valley College students, including undocumented students. Most awards require at least a 2.0 GPA, though individual criteria vary.",
+      "url": "https://yvcc.edu/foundation/scholarships-awards-faq.php",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-28",
+      "expectedOpen": "2026-12-01",
+      "openLabel": "December 2026",
+      "expectedWindow": "Applications open yearly on December 1 and close on the last day of February. Plan for February 28, 2027 and confirm the new cycle after it opens.",
+      "tags": [
+        "Yakima Valley",
+        "Two-year",
+        "Financial need",
+        "First generation"
+      ],
+      "fit": [
+        "local",
+        "lowincome",
+        "firstgen"
+      ],
+      "whyFit": "This is one of the strongest local opportunities for Toppenish students planning YVC because one application provides access to many scholarships.",
+      "needs": "YVC scholarship application, unofficial transcript, at least two references, education plans, and the current written responses or supporting information.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Washington Apple Education Foundation Scholarships",
+      "organization": "Washington Apple Education Foundation",
+      "award": "One application matches students to many renewable awards; WAEF awards more than $1 million annually",
+      "eligibility": "Washington seniors or college students with family employment or ownership ties to the apple, cherry, or pear industry. Students without family ties may qualify through an eligible vocational/technical program or a planned career supporting the tree-fruit industry.",
+      "url": "https://scholarships.waef.org/apply",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-02",
+      "expectedOpen": "2026-10-15",
+      "openLabel": "October 2026",
+      "expectedWindow": "WAEF traditionally reopens applications in the fall. The prior cycle was due March 2, 2026; confirm the 2027 opening and deadline when released.",
+      "tags": [
+        "Washington",
+        "Yakima Valley",
+        "Agriculture",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "First generation"
+      ],
+      "fit": [
+        "local",
+        "ag",
+        "firstgen"
+      ],
+      "whyFit": "A high-value match for many Toppenish families connected to orchards, warehouses, packing, refrigeration, electrical work, IT, HVAC, machinery, or other tree-fruit businesses.",
+      "needs": "Online application, family employment or career-path information, transcript, recommendation, work and leadership history, short answers, and an essay. Current requirements may change.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Eastern Washington University Scholarship Consideration",
+      "organization": "Eastern Washington University",
+      "award": "Automatic consideration for EWU scholarships; awards vary",
+      "eligibility": "Students applying to Eastern Washington University who meet the current admission and individual scholarship requirements. Prior guidance listed a 2.8 GPA for the general scholarship process, but students should use EWU's current requirements.",
+      "url": "https://www.ewu.edu/apply/financial-aid-scholarships-office/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-02-01",
+      "expectedOpen": "2026-09-01",
+      "openLabel": "September 2026",
+      "expectedWindow": "EWU's prior scholarship priority date was February 1, and applicants who applied by that date received automatic scholarship consideration. Confirm the 2027 priority date and current GPA rules.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "College-specific"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "Toppenish students considering EWU should apply early because university scholarship consideration is connected to the EWU admission process.",
+      "needs": "EWU admission application, transcript, and any scholarship or Honors materials requested for the student's program. Confirm whether a separate scholarship application is required.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Energizing Tomorrow's Leaders Scholarship",
+      "organization": "Cypress Creek Energy",
+      "award": "$2,500",
+      "eligibility": "Graduating seniors attending school in Yakima County who plan a U.S. accredited four-year, two-year, or certificate program. All eligible majors may apply, with preference for energy or STEM interests.",
+      "url": "https://cypresscreekenergy.com/scholarships/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-10",
+      "expectedOpen": "2027-02-01",
+      "openLabel": "February 2027",
+      "expectedWindow": "The 2026 Yakima County application was due April 10. Plan for an early-2027 opening and confirm that Yakima County remains eligible before applying.",
+      "tags": [
+        "Yakima County",
+        "STEM / health",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "Every Toppenish High School senior meets the 2026 geographic rule because Toppenish is in Yakima County; STEM interest is preferred but not required.",
+      "needs": "Online application, school and activity history, personal statement, a short video about how renewable energy affects the student's future, and proof of enrollment if selected.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Alpha Delta Kappa Toppenish Scholarship",
+      "organization": "Local Alpha Delta Kappa educators",
+      "award": "$1,000 in the prior posted cycle",
+      "eligibility": "The prior local award was for female Toppenish High School seniors showing citizenship, leadership, academics, service, and plans for further education or training, with extra consideration for a future educator.",
+      "url": "https://ths.toppenish.wednet.edu/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2025-05-02",
+      "expectedOpen": "2027-04-01",
+      "openLabel": "April 2027",
+      "expectedWindow": "Prior GEAR UP information listed a May 2, 2025 deadline. The 2027 award, amount, requirements, and application are not guaranteed; check with the THS College & Career Center in spring 2027.",
+      "tags": [
+        "Toppenish-only",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service",
+        "Education"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "This is specifically designed for Toppenish High School students, making it a high-priority local opportunity if the chapter offers it again.",
+      "needs": "Ask the THS College & Career Center for the current paper or digital application. Prepare a transcript, activity/service history, education plans, and any requested recommendation or essay.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Toppenish Lions Club Scholarship",
+      "organization": "Toppenish Lions Club",
+      "award": "Up to three $1,000 awards in the prior posted cycle",
+      "eligibility": "The prior local award was for college-bound Toppenish High School seniors and considered financial need, GPA, school activities, and community service.",
+      "url": "https://ths.toppenish.wednet.edu/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2025-05-12",
+      "expectedOpen": "2027-04-01",
+      "openLabel": "April 2027",
+      "expectedWindow": "Prior GEAR UP information listed a May 12, 2025 deadline. The 2027 award and deadline are not guaranteed; check with the THS College & Career Center in spring 2027.",
+      "tags": [
+        "Toppenish-only",
+        "Four-year",
+        "Two-year",
+        "Financial need",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "lowincome",
+        "leadership"
+      ],
+      "whyFit": "This prior award was reserved for Toppenish seniors, so it may offer much better odds than a national scholarship if it returns.",
+      "needs": "Prior requirements included a letter of application plus information about financial need, academics, activities, and community service. Obtain the current application from THS.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Toppenish-Wapato Dollars for Scholars",
+      "organization": "Toppenish-Wapato Dollars for Scholars",
+      "award": "$2,500 in the prior posted cycle",
+      "eligibility": "Students connected to the Toppenish or Wapato communities who have a postsecondary plan at an accredited institution and can demonstrate community service and citizenship. Current criteria may vary.",
+      "url": "https://toppenish-wapato.dollarsforscholars.org/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2025-05-05",
+      "expectedOpen": "2027-02-01",
+      "openLabel": "February 2027",
+      "expectedWindow": "Prior GEAR UP information listed a May 5, 2025 deadline. Students can create a Dollars for Scholars profile now, then confirm the 2027 local application and deadline.",
+      "tags": [
+        "Toppenish-only",
+        "Yakima Valley",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "This hometown scholarship specifically supports students from the Toppenish and Wapato communities.",
+      "needs": "Create a Student and Parent Login profile, complete education and community-service information, and submit any current transcript, references, essays, or local matching questions.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Yakima Valley Construction Federation Scholarship",
+      "organization": "Yakima Valley Construction Federation",
+      "award": "Award amount varies",
+      "eligibility": "Central Washington high school graduates preparing for a construction-industry career and attending an eligible college, university, or technical school. Students must confirm the current geographic and enrollment requirements.",
+      "url": "https://bigfuture.collegeboard.org/scholarships/yakima-valley-construction-federation-scholarship",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-01",
+      "expectedOpen": "2027-02-01",
+      "openLabel": "February 2027",
+      "expectedWindow": "The 2026 listing opened February 1 and closed April 1. Use those dates for planning only and confirm the 2027 application with the sponsor or THS College & Career Center.",
+      "tags": [
+        "Yakima Valley",
+        "Trades",
+        "Two-year",
+        "Four-year"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "Toppenish students pursuing construction trades or construction-related college programs may qualify as Central Washington graduates.",
+      "needs": "Current sponsor application, construction career and school plans, transcript or enrollment information, and any requested supporting documents.",
+      "lastChecked": "2026-08-19"
+    },
+    {
+      "name": "Yakama Nation Higher Education Scholarship",
+      "organization": "Yakama Nation Higher Education Program",
+      "award": "Scholarships and grants; amounts vary",
+      "eligibility": "Enrolled members of the Confederated Tribes and Bands of the Yakama Nation who have graduated from high school or earned a GED and are admitted to a regionally accredited college or university. Current program rules must be confirmed.",
+      "url": "https://yakama.com/programs/higher-education-program/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2025-07-01",
+      "expectedOpen": "2027-03-01",
+      "openLabel": "March 2027",
+      "expectedWindow": "Prior GEAR UP information listed a July 1, 2025 deadline. Confirm the 2027 deadline and obtain the current tribal scholarship application directly from Yakama Nation Higher Education.",
+      "tags": [
+        "Toppenish-only",
+        "Indigenous",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "tribal",
+        "lowincome"
+      ],
+      "whyFit": "This is a highly relevant local source of support for enrolled Yakama students and is administered in Toppenish.",
+      "needs": "Current Yakama Nation application, tribal enrollment verification, high school diploma or GED information, admission to an accredited institution, transcript, financial-aid documents, and any program forms.",
       "lastChecked": "2026-08-19"
     }
   ]
