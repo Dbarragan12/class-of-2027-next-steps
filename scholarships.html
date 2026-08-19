@@ -210,7 +210,8 @@ function renderFilters(){
 }
 function itemMatches(item){
   if(showingSaved&&!saved[item.id])return false;
-  // Student-fit choices use OR logic: selecting more choices broadens results.\n  if(activeFits.size&&!Array.from(activeFits).some(k=>item.fit.includes(k)))return false;
+  // Student-fit choices use OR logic: selecting more choices broadens results.
+  if(activeFits.size&&!Array.from(activeFits).some(k=>item.fit.includes(k)))return false;
   if(!query)return true;
   const hay=[item.name,item.organization,item.award,item.eligibility,item.whyFit,item.expectedWindow,(item.tags||[]).join(" "),item.fit.join(" ")].join(" ").toLowerCase();return hay.includes(query)
 }
