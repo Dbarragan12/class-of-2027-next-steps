@@ -821,6 +821,132 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
   nav.hub .wrap::after{top:auto;bottom:0;height:41px;width:24px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.98))}
 }
 
+/* Guided writing coach */
+.essay-truth{
+  display:grid;grid-template-columns:minmax(180px,.45fr) minmax(0,1fr);gap:14px;
+  margin-top:22px;background:var(--ink);color:#fff;border-radius:12px;padding:18px 20px
+}
+.essay-truth strong{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;line-height:1.2}
+.essay-truth span{color:var(--gray20);font-size:15.5px}
+.essay-save-note{
+  margin-top:26px;background:var(--sage-bg);border:1px solid #bdd8c9;border-left:5px solid var(--sage);
+  border-radius:0 10px 10px 0;padding:13px 16px;color:var(--ink);font-size:14.5px
+}
+.essay-progress-shell{
+  margin:16px 0 22px;background:#fff;border:1px solid var(--gray20);border-radius:12px;
+  padding:16px 18px;box-shadow:var(--shadow)
+}
+.essay-progress-head{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.essay-progress-head strong{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.essay-progress-head span{color:var(--muted);font-size:13.5px;text-align:right}
+.essay-progress-track{height:7px;background:var(--gray20);border-radius:999px;overflow:hidden;margin:12px 0 9px}
+.essay-progress-track span{display:block;width:0;height:100%;background:var(--sage);transition:width .2s ease}
+.essay-progress-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.essay-progress-steps span{
+  color:var(--gray64);font:700 11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.03em;text-align:center
+}
+.essay-progress-steps span.is-ready{color:var(--sage)}
+.essay-step{
+  background:#fff;border:1px solid var(--gray20);border-radius:14px;padding:24px;
+  margin:18px 0;box-shadow:var(--shadow);scroll-margin-top:105px
+}
+.essay-step-heading{display:flex;gap:13px;align-items:center;margin-bottom:12px}
+.essay-step-number{
+  display:grid;place-items:center;width:40px;height:40px;flex:0 0 auto;border-radius:50%;
+  background:var(--crimson);color:#fff;font:800 18px "Bricolage Grotesque",sans-serif
+}
+.essay-step-heading h3{font-size:clamp(24px,4vw,32px);margin-top:3px}
+.essay-step > .sub{color:var(--muted);max-width:72ch;font-size:16px}
+.essay-type-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;
+  border:0;padding:0;margin:20px 0 14px
+}
+.essay-choice{
+  display:flex;gap:10px;align-items:flex-start;cursor:pointer;background:var(--paper);
+  border:2px solid var(--gray20);border-radius:11px;padding:15px;min-height:112px
+}
+.essay-choice:hover{border-color:var(--rose)}
+.essay-choice.is-selected{border-color:var(--crimson);background:var(--warn-bg)}
+.essay-choice input{width:18px;height:18px;accent-color:var(--crimson);flex:0 0 auto;margin:2px 0 0}
+.essay-choice strong,.essay-choice small{display:block}
+.essay-choice strong{font-family:"Bricolage Grotesque",sans-serif;font-size:17px;line-height:1.15}
+.essay-choice small{margin-top:6px;color:var(--muted);font-size:13px;line-height:1.38}
+.essay-mode-advice{
+  min-height:66px;background:var(--sand);border-left:4px solid var(--crimson);
+  border-radius:0 9px 9px 0;padding:13px 15px;margin:0 0 18px;font-size:15px
+}
+.essay-mode-advice strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:18px;margin-bottom:3px}
+.essay-mode-advice span{color:var(--muted)}
+.essay-two-col{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:14px}
+.essay-step .bfield input[type=text],.essay-step .bfield input[type=number],.essay-step .bfield textarea{
+  width:100%;font:inherit;font-size:15.5px;padding:10px 12px;border:1.5px solid var(--gray20);
+  border-radius:8px;background:var(--paper);color:var(--ink);line-height:1.45
+}
+.essay-step .bfield textarea{resize:vertical;min-height:76px}
+.essay-step .bfield input:focus,.essay-step .bfield textarea:focus{border-color:var(--crimson)}
+.essay-story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;margin-top:18px}
+.essay-outline-card{
+  margin-top:8px;background:var(--ink);color:#fff;border-radius:12px;padding:20px
+}
+.essay-outline-card h4{font-size:23px;margin:3px 0 12px}
+.essay-outline-card .eyebrow{color:var(--rose-lt)}
+.essay-outline{
+  margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.55 "Public Sans",sans-serif;
+  color:var(--gray20);background:#2d3032;border:1px solid #464a4d;border-radius:9px;padding:16px;min-height:130px
+}
+.essay-outline:empty::before{content:"Fill in the story boxes above. Your outline will build here without writing the essay for you.";color:var(--gray37);font-style:italic}
+.essay-outline-card .btn{border-color:#fff}
+.essay-outline-card .btn:first-child{background:#fff;color:var(--ink)}
+.essay-outline-card .btn:first-child:hover{background:var(--rose-lt);border-color:var(--rose-lt)}
+.essay-outline-card .btn.ghost{color:#fff;background:transparent}
+.essay-outline-card .btn.ghost:hover{background:#fff;color:var(--ink)}
+.essay-draft-box{margin-top:18px}
+.essay-draft-box textarea{
+  width:100%;font:inherit;font-size:16px;line-height:1.6;padding:13px;border:1.5px solid var(--gray20);
+  border-radius:8px;background:var(--paper);color:var(--ink);resize:vertical;min-height:320px
+}
+.essay-revision-pass{
+  margin-top:14px;background:var(--sand);border:1px solid var(--gray20);border-radius:10px;padding:14px 16px;font-size:15px
+}
+.essay-revision-pass strong{font-family:"Bricolage Grotesque",sans-serif;font-size:17px}
+.essay-revision-pass ol{margin:7px 0 0;padding-left:21px}.essay-revision-pass li{margin-bottom:4px}
+.essay-feedback-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.essay-feedback-card{background:var(--sand);border:1px solid var(--gray20);border-top:4px solid var(--sage);border-radius:10px;padding:16px}
+.essay-feedback-card.ai-boundary{border-top-color:var(--crimson)}
+.essay-feedback-card h4{font-size:19px;margin-bottom:7px}
+.essay-feedback-card p,.essay-feedback-card ol{font-size:14.5px;color:var(--muted);margin-bottom:0}
+.essay-feedback-card ol{padding-left:19px;margin-top:7px}.essay-feedback-card li{margin-bottom:5px}
+.essay-help-section{margin-top:38px}
+.essay-mini-prompt{border-top:1px solid var(--gray20);padding:13px 0}
+.essay-mini-prompt:first-child{border-top:0;padding-top:4px}
+.essay-mini-prompt h4{font-size:17px;margin-bottom:5px}.essay-mini-prompt p{font-size:14.5px;color:var(--muted);margin-bottom:6px}
+.essay-mini-prompt .decode{margin:7px 0}
+.essay-template{
+  white-space:pre-wrap;overflow-wrap:anywhere;background:var(--paper);border:1px solid var(--gray20);
+  border-radius:8px;padding:14px;font:13px/1.55 "Public Sans",sans-serif;color:var(--ink)
+}
+.essay-bottom-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 8px}
+.essay-bottom-actions span{color:var(--muted);font-size:13px}
+
+@media(max-width:760px){
+  .essay-truth{grid-template-columns:1fr}
+  .essay-type-grid{grid-template-columns:1fr}
+  .essay-choice{min-height:0}
+  .essay-story-grid,.essay-feedback-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .essay-step{padding:18px 15px;border-radius:11px}
+  .essay-step-heading{align-items:flex-start}
+  .essay-step-number{width:34px;height:34px;font-size:16px}
+  .essay-two-col{grid-template-columns:1fr}
+  .essay-progress-head{display:block}.essay-progress-head span{display:block;text-align:left;margin-top:3px}
+  .essay-progress-steps{gap:2px}.essay-progress-steps span{font-size:9px}
+  .essay-outline-card{padding:16px 13px}
+  .essay-draft-box{padding:15px}.essay-draft-box textarea{min-height:280px}
+  .essay-draft-box .counter{width:100%;margin-left:0}
+}
+
 @media print{
   nav.hub,.controls,.ticker,.deadline-calendar,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
   .panel[hidden]{display:block !important}
@@ -1057,112 +1183,226 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
   </div>
 </section>
 
-<!-- ============ 06 · APPLY AND WRITE ============ -->
+<!-- ============ 06 · WRITING ============ -->
 <section class="panel" id="panel-writing" hidden>
   <div class="wrap panel-intro">
-    <p class="eyebrow">Section 06 · Apply and Write</p>
-    <h2>Know which essay you are writing.</h2>
-    <p>A college personal statement helps an admission reader understand who you are. A scholarship essay proves why this award fits your plans and what you will do with the opportunity. You may reuse stories, but the job of each essay is different.</p>
+    <p class="eyebrow">Section 06 · Writing</p>
+    <h2>One strong story. One clear process.</h2>
+    <p>Use this writing coach for a college personal statement, a scholarship essay, or a short answer. It helps you choose a story, build an outline, draft in your own voice, and check your work before you submit.</p>
+    <div class="essay-truth">
+      <strong>What strong readers are looking for:</strong>
+      <span>A real person answering the exact question with specific evidence, thoughtful reflection, and their own voice. There is no “perfect” topic and no formula that guarantees admission or a scholarship.</span>
+    </div>
   </div>
 
   <div class="wrap">
-    <div class="wcards" style="margin-top:30px">
-      <div class="wcard"><div class="kicker">College personal statement</div><h4>Who are you?</h4><p>Usually up to 650 words. Build around a specific scene, choices, reflection, and voice. UW uses the Common App; WSU, CWU, and WWU also accept it. Heritage, YVC, and Perry Tech use their own application paths.</p></div>
-      <div class="wcard"><div class="kicker">Scholarship essay</div><h4>Why you, this money, and now?</h4><p>Often 250–600 words. Answer the exact prompt, show evidence, connect the award to a concrete education or career step, and explain how you will follow through.</p></div>
+    <div class="essay-save-note" role="note">
+      <strong>Private on this device:</strong> your notes and draft save only in this browser. They are not sent to Mr. Barragan or anyone else. This is not a backup—copy your real draft into Google Docs.
     </div>
 
-    <div class="sect" style="margin-top:34px">
-      <p class="eyebrow">Scholarship writing</p>
-      <h3>Build one strong story bank, then adapt it.</h3>
-      <p class="sub">Collect the details committees actually use: responsibility, work, family, service, action, and a specific next step.</p>
-      <div id="builder-mount"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Decode the prompt</p>
-      <h3>Answer the question behind the question.</h3>
-      <div id="prompts-mount"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Scholarship essay structure</p>
-      <h3>Move from a real moment to a real plan.</h3>
-      <div id="structure-mount"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Make it specific</p>
-      <h3>Replace claims with evidence.</h3>
-      <div id="examples-mount"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Recommendation packet</p>
-      <h3>Help an adult write a specific letter.</h3>
-      <p class="sub">Give your recommender your story bank, activities and jobs, the scholarship description, exact deadline, submission link, and what you hope the letter will show.</p>
-      <div id="recs-mount"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Before you submit</p>
-      <h3>Use the scholarship checklist.</h3>
-      <ul class="check" id="final-check"></ul>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">College personal statement · Common App</p>
-      <h3>Your story, in 650 words or fewer.</h3>
-      <p class="sub">Choose the story before the prompt. A strong essay often fits several prompts; prompt 7 can hold almost any meaningful personal statement.</p>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">The seven choices</p>
-      <h3>Choose a doorway—not a formula.</h3>
-      <p class="sub">Open each prompt for a plain-language translation and a question that helps you test whether you have a real story.</p>
-      <div id="common-prompts"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Find the story first</p>
-      <h3>Specific beats dramatic.</h3>
-      <p class="sub">A small, sharply observed moment can reveal more than a life summary. Use this private story finder to collect scenes, details, and values before drafting.</p>
-      <div id="common-builder"></div>
-    </div>
-
-    <div class="sect">
-      <p class="eyebrow">Pick a structure</p>
-      <h3>One turning point—or several connected moments?</h3>
-      <div class="wcards">
-        <div class="wcard"><div class="kicker">Narrative</div><h4>One experience changes something</h4><p>Use this when one challenge, event, relationship, or realization has a clear before, turning point, action, and after. Spend more space on what you did and understood than on the problem.</p></div>
-        <div class="wcard"><div class="kicker">Montage</div><h4>Several moments share one thread</h4><p>Use this when an object, place, habit, language, responsibility, or question connects multiple snapshots. Each scene should reveal a different side of you while returning to the same thread.</p></div>
+    <div class="essay-progress-shell" aria-label="Writing coach progress">
+      <div class="essay-progress-head">
+        <strong id="essay-progress-label" aria-live="polite">0 of 4 steps ready</strong>
+        <span>Complete this in order. Fragments are okay until Step 3.</span>
+      </div>
+      <div class="essay-progress-track" aria-hidden="true"><span id="essay-progress-bar"></span></div>
+      <div class="essay-progress-steps" aria-hidden="true">
+        <span data-essay-progress="1">1 · Choose</span>
+        <span data-essay-progress="2">2 · Plan</span>
+        <span data-essay-progress="3">3 · Draft</span>
+        <span data-essay-progress="4">4 · Review</span>
       </div>
     </div>
 
-    <div class="sect">
-      <p class="eyebrow">Draft here</p>
-      <h3>Write in your own voice.</h3>
-      <p class="sub">Sound like the thoughtful version of yourself—not a thesaurus. Use concrete nouns, exact actions, and details only you would know.</p>
-      <div class="builder">
-        <label for="common-draft" style="display:block;font-weight:700;margin-bottom:8px">Your Common App draft</label>
-        <textarea id="common-draft" rows="15" placeholder="Start inside a real moment: where are you, what are you doing, and what detail would only you notice?"></textarea>
-        <div class="brow"><button class="btn ghost" type="button" id="common-copy">Copy draft</button><span class="counter" id="common-wc"><b>0</b> / 650 words</span></div>
+    <section class="essay-step" id="essay-step-1" aria-labelledby="essay-step-1-title">
+      <div class="essay-step-heading">
+        <span class="essay-step-number">1</span>
+        <div><p class="eyebrow">Choose the job</p><h3 id="essay-step-1-title">What are you writing?</h3></div>
       </div>
+      <p class="sub">The same story can work more than once, but every application has a different job. Start by copying the exact prompt.</p>
+
+      <fieldset class="essay-type-grid">
+        <legend class="sr">Choose the kind of writing</legend>
+        <label class="essay-choice" for="essay-type-college">
+          <input type="radio" name="essay-type" id="essay-type-college" value="college">
+          <span><strong>College personal statement</strong><small>Show who you are beyond grades and activities.</small></span>
+        </label>
+        <label class="essay-choice" for="essay-type-scholarship">
+          <input type="radio" name="essay-type" id="essay-type-scholarship" value="scholarship">
+          <span><strong>Scholarship essay</strong><small>Show fit, evidence, and the next step this support makes possible.</small></span>
+        </label>
+        <label class="essay-choice" for="essay-type-short">
+          <input type="radio" name="essay-type" id="essay-type-short" value="short">
+          <span><strong>Short answer or supplement</strong><small>Answer one question directly and use one strong example.</small></span>
+        </label>
+      </fieldset>
+
+      <div class="essay-mode-advice" id="essay-mode-advice" aria-live="polite"></div>
+
+      <div class="essay-two-col">
+        <div class="bfield">
+          <label for="essay-destination">School, scholarship, or program</label>
+          <div class="hint">Example: Common App, YVC Foundation, or Heritage University</div>
+          <input type="text" id="essay-destination" data-essay-input="destination" autocomplete="off">
+        </div>
+        <div class="bfield">
+          <label for="essay-limit">Maximum words</label>
+          <div class="hint">Use the number shown in the application.</div>
+          <input type="number" id="essay-limit" data-essay-input="limit" min="25" max="2000" inputmode="numeric">
+        </div>
+      </div>
+      <div class="bfield">
+        <label for="essay-prompt">Paste the exact prompt</label>
+        <div class="hint">Include every part of the question. If there is no prompt, paste the directions.</div>
+        <textarea id="essay-prompt" data-essay-input="prompt" rows="4" placeholder="Paste the question exactly as it appears in the application."></textarea>
+      </div>
+    </section>
+
+    <section class="essay-step" id="essay-step-2" aria-labelledby="essay-step-2-title">
+      <div class="essay-step-heading">
+        <span class="essay-step-number">2</span>
+        <div><p class="eyebrow">Find the evidence</p><h3 id="essay-step-2-title">Build the story before the sentences.</h3></div>
+      </div>
+      <p class="sub">You do not need a dramatic story. A small moment can work if it shows a choice, an action, and what the experience means to you now. Answer in fragments.</p>
+
+      <div class="essay-story-grid">
+        <div class="bfield">
+          <label for="essay-scene">One real moment</label>
+          <div class="hint">Where were you? What was happening? Choose a scene, not your whole life.</div>
+          <textarea id="essay-scene" data-essay-story="scene" rows="3"></textarea>
+        </div>
+        <div class="bfield">
+          <label for="essay-detail">Details only you would know</label>
+          <div class="hint">A sound, object, phrase, tool, route, food, mistake, or routine.</div>
+          <textarea id="essay-detail" data-essay-story="detail" rows="3"></textarea>
+        </div>
+        <div class="bfield">
+          <label for="essay-action">What did you do or choose?</label>
+          <div class="hint">Use actions. Show your response instead of only describing what happened to you.</div>
+          <textarea id="essay-action" data-essay-story="action" rows="3"></textarea>
+        </div>
+        <div class="bfield">
+          <label for="essay-meaning">Why did it matter?</label>
+          <div class="hint">What changed in your thinking? What value, question, or responsibility became clearer?</div>
+          <textarea id="essay-meaning" data-essay-story="meaning" rows="3"></textarea>
+        </div>
+        <div class="bfield">
+          <label for="essay-now">What does this show about you now?</label>
+          <div class="hint">Name a current habit, relationship, contribution, or way of thinking that proves the change lasted.</div>
+          <textarea id="essay-now" data-essay-story="now" rows="3"></textarea>
+        </div>
+        <div class="bfield">
+          <label for="essay-next">What is your next step?</label>
+          <div class="hint">Especially useful for scholarships. Be concrete about the program, credential, goal, or use of support when the prompt asks.</div>
+          <textarea id="essay-next" data-essay-story="next" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="essay-outline-card">
+        <div><p class="eyebrow">Built from your answers</p><h4>Your writing plan</h4></div>
+        <pre class="essay-outline" id="essay-outline-output" aria-live="polite"></pre>
+        <div class="brow">
+          <button class="btn" type="button" id="essay-copy-outline">Copy my outline</button>
+          <button class="btn ghost" type="button" id="essay-download-plan">Download my writing plan</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="essay-step" id="essay-step-3" aria-labelledby="essay-step-3-title">
+      <div class="essay-step-heading">
+        <span class="essay-step-number">3</span>
+        <div><p class="eyebrow">Write the draft</p><h3 id="essay-step-3-title">Sound like the thoughtful version of yourself.</h3></div>
+      </div>
+      <p class="sub" id="essay-draft-guidance">Start with the outline. Use clear words, exact actions, and details only you would know.</p>
+      <div class="builder essay-draft-box">
+        <label for="essay-draft" style="display:block;font-weight:700;margin-bottom:8px">Your draft</label>
+        <textarea id="essay-draft" data-essay-input="draft" rows="18" placeholder="Start inside a real moment. Where are you, what are you doing, and what detail would only you notice?"></textarea>
+        <div class="brow">
+          <button class="btn" type="button" id="essay-copy-draft">Copy draft</button>
+          <button class="btn ghost" type="button" id="essay-open-docs">Open a new Google Doc</button>
+          <span class="counter" id="essay-word-count"><b>0</b> words</span>
+        </div>
+      </div>
+      <div class="essay-revision-pass">
+        <strong>The fastest useful revision:</strong>
+        <ol><li>Underline every sentence that shows an action, decision, or exact detail.</li><li>Circle every sentence that explains why it mattered.</li><li>If a paragraph has neither, revise it or cut it.</li></ol>
+      </div>
+    </section>
+
+    <section class="essay-step" id="essay-step-4" aria-labelledby="essay-step-4-title">
+      <div class="essay-step-heading">
+        <span class="essay-step-number">4</span>
+        <div><p class="eyebrow">Review before submitting</p><h3 id="essay-step-4-title">Make sure the reader meets you.</h3></div>
+      </div>
+      <p class="sub">Check each item only after you can point to the sentence that proves it.</p>
+      <ul class="check" id="essay-review-list"></ul>
+
+      <div class="essay-feedback-grid">
+        <div class="essay-feedback-card">
+          <h4>Ask one trusted adult</h4>
+          <p>Do not ask, “Is it good?” Ask:</p>
+          <ol><li>What three words describe me after reading?</li><li>Where did you feel closest to me?</li><li>Where did the essay become general or confusing?</li></ol>
+        </div>
+        <div class="essay-feedback-card ai-boundary">
+          <h4>Use AI without losing your voice</h4>
+          <p>AI may ask follow-up questions, identify vague sentences, or check grammar. It should not invent your experience, write the draft for you, or replace your phrasing. You are responsible for every word you submit.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="sect essay-help-section">
+      <p class="eyebrow">More help—only when you need it</p>
+      <h3>Open the guide that matches your application.</h3>
+      <p class="sub">You do not need to read all of these before drafting.</p>
+
+      <details class="acc">
+        <summary>2026–27 Common App personal essay prompts</summary>
+        <div class="acc-body">
+          <p>Common App kept the same seven personal-essay prompts for 2026–27. Find your strongest story first, then choose the prompt that fits it.</p>
+          <div id="essay-common-prompts"></div>
+          <p><a href="https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts" target="_blank" rel="noopener">Read the exact official prompts →</a></p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Scholarship prompt decoder</summary>
+        <div class="acc-body" id="essay-scholarship-help"></div>
+      </details>
+
+      <details class="acc">
+        <summary>College short answers, “Why us?” and Additional Information</summary>
+        <div class="acc-body">
+          <h4>Short answer</h4><p>Answer in the first sentence. Use one example, not a miniature life story. Every sentence should add evidence or meaning.</p>
+          <h4>“Why this college or program?”</h4><p>Name two or three specific opportunities and explain what you would do with them. Connect each one to something you have already done, learned, or want to investigate. Prestige, weather, and “a beautiful campus” are not enough.</p>
+          <h4>Additional Information</h4><p>This is not a second personal essay. Use it only when useful context—such as a schedule change, family responsibility, health issue, school limitation, or unusual transcript detail—would otherwise be misunderstood. Clear facts are enough, and it is okay to leave it blank.</p>
+          <p><a href="https://www.commonapp.org/apply/first-year-students/" target="_blank" rel="noopener">Check Common App writing requirements and college-specific questions →</a></p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Ask for a recommendation letter</summary>
+        <div class="acc-body">
+          <p>Ask an adult who knows your work and character, give at least four weeks when possible, and provide the exact deadline, submission instructions, your activities/jobs, and the qualities or experiences you hope the letter can describe.</p>
+          <pre class="essay-template" id="essay-rec-template"></pre>
+          <button class="btn ghost" type="button" id="essay-copy-rec">Copy recommendation request</button>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Official essay guidance for students and families</summary>
+        <div class="acc-body">
+          <ul>
+            <li><a href="https://www.commonapp.org/apply/fy-toolkit/" target="_blank" rel="noopener">Common App first-year toolkit, including essay help in English and Spanish</a></li>
+            <li><a href="https://admissions.yale.edu/essays" target="_blank" rel="noopener">Yale: write about something meaningful in your own voice</a></li>
+            <li><a href="https://college.harvard.edu/resources/faq/what-help-can-students-receive-writing-their-essays" target="_blank" rel="noopener">Harvard: acceptable essay help and original-work expectations</a></li>
+          </ul>
+        </div>
+      </details>
     </div>
 
-    <div class="sect">
-      <p class="eyebrow">Revision test</p>
-      <h3>Make the essay reveal a person.</h3>
-      <ul class="check" id="common-check"></ul>
-    </div>
-
-    <div class="note">
-      <p><strong>Ask for feedback this way:</strong> “What three words describe me after reading this? Where did you feel closest to me? Where did the essay become general or confusing?” Keep feedback that helps the essay sound more like you.</p>
-      <p style="margin-bottom:0"><strong>AI boundary:</strong> use AI to ask you follow-up questions, find vague sentences, or check grammar. Do not let it invent the experience or replace your phrasing. Authentic voice is one of the two biggest things that makes an essay stand out.</p>
-    </div>
-
-    <div class="note" style="border-left-color:var(--gray64)">
-      <p><strong>Guides used for this section:</strong> <a href="https://www.collegeessayguy.com/blog/common-app-essay-prompts" target="_blank" rel="noopener">College Essay Guy’s 2026–27 prompt guide</a> and <a href="https://toptieradmissions.com/successful-college-essay-2026-2027/" target="_blank" rel="noopener">Top Tier Admissions on specific topics and authentic voice</a>. College application facts were checked against official UW, WSU, CWU, and WWU admissions pages.</p>
-      <p style="margin-bottom:0">This page summarizes the guidance in student-friendly language; the linked articles include additional explanations and examples.</p>
+    <div class="essay-bottom-actions">
+      <button class="btn ghost" type="button" id="essay-clear-all">Clear my writing workspace</button>
+      <span>Use this only after your work is safely copied somewhere else.</span>
     </div>
   </div>
 </section>
@@ -2535,6 +2775,360 @@ function renderCommonApp(){
   renderChecklist("common-check", COMMON_CHECK, "common");
 }
 
+function initEssayCoach(){
+  const panel = document.getElementById("panel-writing");
+  if(!panel) return;
+
+  const MODES = {
+    college:{
+      title:"College personal statement",
+      job:"Help the reader understand how you think, choose, grow, and contribute—not just what happened to you. Reflection matters as much as the scene.",
+      limit:650,
+      placeholder:"Start inside a real moment. Where are you, what are you doing, and what detail would only you notice?",
+      draftTip:"Spend less space explaining the situation and more space showing your choices, thinking, and present-day self. You do not need to force a career goal into the ending."
+    },
+    scholarship:{
+      title:"Scholarship essay",
+      job:"Answer the exact prompt, prove your fit with a real example, and make the next step believable. Explain the use of the award only when the prompt asks.",
+      limit:500,
+      placeholder:"Answer the prompt directly, then move into one real example that proves what you say.",
+      draftTip:"Name the scholarship correctly, connect your evidence to its criteria, and show a concrete next step. Do not make the committee search for your answer."
+    },
+    short:{
+      title:"Short answer or college supplement",
+      job:"Answer one question directly. Use one precise example and one clear reflection instead of trying to fit your whole life into a small box.",
+      limit:150,
+      placeholder:"Answer the question in the first sentence. Then give one specific example and explain why it matters.",
+      draftTip:"Answer in the first sentence. Keep one idea, one example, and one point of reflection. Cut any opening that delays the answer."
+    }
+  };
+
+  const REVIEW = {
+    college:[
+      {b:"The essay answers one Common App prompt",s:"The connection is clear even if the prompt is not named in the opening."},
+      {b:"I used a specific moment and details only I could write",s:"The essay does not read like a résumé summary or a speech about life in general."},
+      {b:"The reader can see my choices and actions",s:"I am the person doing, deciding, noticing, or changing—not only the person things happened to."},
+      {b:"I reflect more than once",s:"The reader can follow how I think and why the experience matters now."},
+      {b:"The essay reveals two or three qualities without listing them",s:"A reader could describe me using evidence from the essay."},
+      {b:"The ending moves the idea forward",s:"It adds insight or a present-day connection instead of repeating the introduction."},
+      {b:"It sounds like me when I read it aloud",s:"The vocabulary and rhythm feel natural, thoughtful, and honest."},
+      {b:"This is my own work and it is within the exact word limit",s:"Names, facts, grammar, and punctuation have also been checked."}
+    ],
+    scholarship:[
+      {b:"I answer the exact prompt early",s:"Every part of the question is addressed, including any request about goals, need, service, leadership, or impact."},
+      {b:"I show why I fit this scholarship",s:"I connect the sponsor's criteria to evidence rather than only saying I deserve or need the award."},
+      {b:"I use one concrete example",s:"The reader sees what I did, who was affected, and what changed."},
+      {b:"My next step is believable",s:"When relevant, I name the program, credential, goal, or expense the scholarship would support."},
+      {b:"I am specific without oversharing",s:"I give enough honest context to understand my circumstances without feeling forced to disclose trauma."},
+      {b:"The scholarship and organization names are correct",s:"No name from a reused essay remains in the document."},
+      {b:"It sounds like me and is my own work",s:"Feedback and grammar help did not replace my experience or phrasing."},
+      {b:"I checked the word limit, directions, deadline, file name, and attachments",s:"The transcript, recommendation, and confirmation steps are ready too."}
+    ],
+    short:[
+      {b:"My first sentence answers the question",s:"The reader does not need to wait through a long introduction."},
+      {b:"I focus on one idea",s:"I did not squeeze several unrelated examples into a small space."},
+      {b:"I include one exact example",s:"A concrete action or detail supports the answer."},
+      {b:"I explain why the example matters",s:"At least one sentence reveals my thinking, motivation, or contribution."},
+      {b:"Every sentence earns its place",s:"I cut repetition, throat-clearing, and facts already obvious elsewhere."},
+      {b:"It sounds like me and is my own work",s:"The answer is accurate, proofread, and within the exact character or word limit."}
+    ]
+  };
+
+  const SCHOLARSHIP_HELP = [
+    {title:"Challenge, obstacle, or hardship",score:"Response and growth",body:"Give enough context to understand the challenge, then spend most of the space on your decisions, actions, support system, and what is different now. You do not need to compete on suffering."},
+    {title:"Leadership",score:"Initiative and effect on others",body:"A title is not required. Show the need you noticed, what you did, who was affected, the result, and what you learned about working with people."},
+    {title:"Community or service",score:"Relationship, responsibility, and contribution",body:"Name the actual place and people. Explain your role and what you contributed without describing your community only through problems or need."},
+    {title:"Educational or career goals",score:"A believable next step",body:"Name the next program, credential, field, or question you want to pursue and give evidence from your life that explains the direction. It is okay for a long-term goal to keep developing."},
+    {title:"Why should you receive this scholarship?",score:"Fit plus evidence",body:"Match two or three scholarship criteria to real examples. When asked, explain what the award would make possible. Gratitude is welcome, but it is not the whole answer."},
+    {title:"Financial need",score:"Clear context and impact",body:"State the facts you are comfortable sharing, explain how the cost affects your plan, and show the steps you are already taking. You never have to turn private pain into a performance."},
+    {title:"Why this college, program, or organization?",score:"Specific connection",body:"Name two or three real opportunities and explain what you would do with them. Connect each one to your past experience, current interest, or next question."}
+  ];
+
+  const REC_REQUEST = [
+    "Subject: Recommendation request — [your name], Class of 2027",
+    "",
+    "Dear [Mr./Ms./Mx. Name],",
+    "",
+    "I am applying for [school, program, or scholarship]. Would you be comfortable writing a strong recommendation for me? The deadline is [date], and the letter is submitted through [link or directions].",
+    "",
+    "I am asking you because [one honest sentence about what this person has seen you do or learn]. I have attached the application information, my activities/jobs list, and a few experiences that may be useful. I hope the reader can understand [one or two qualities or experiences].",
+    "",
+    "Please let me know if you need anything else. I will send one reminder about a week before the deadline. Thank you for considering it.",
+    "",
+    "[Your name]",
+    "[A personal email address you will keep after graduation]"
+  ].join("\n");
+
+  function blankState(){
+    return {type:"college",destination:"",prompt:"",limit:650,draft:"",story:{},review:{},migratedLegacy:true};
+  }
+
+  let essayState = Store.get("essayCoach", {});
+  if(!essayState || typeof essayState !== "object" || Array.isArray(essayState)) essayState = {};
+  if(!essayState.migratedLegacy){
+    const legacyStory = Store.get("commonStory", {});
+    essayState.story = essayState.story || {};
+    if(!essayState.story.scene && legacyStory.scene) essayState.story.scene = legacyStory.scene;
+    if(!essayState.story.detail && legacyStory.details) essayState.story.detail = legacyStory.details;
+    if(!essayState.story.action && legacyStory.action) essayState.story.action = legacyStory.action;
+    if(!essayState.story.meaning && legacyStory.values) essayState.story.meaning = legacyStory.values;
+    if(!essayState.story.now && legacyStory.change) essayState.story.now = legacyStory.change;
+    if(!essayState.draft) essayState.draft = Store.get("commonDraft", "") || Store.get("draft", "");
+    essayState.migratedLegacy = true;
+  }
+  if(!MODES[essayState.type]) essayState.type = "college";
+  essayState.story = essayState.story && typeof essayState.story === "object" ? essayState.story : {};
+  essayState.review = essayState.review && typeof essayState.review === "object" ? essayState.review : {};
+  if(!essayState.limit || isNaN(Number(essayState.limit))) essayState.limit = MODES[essayState.type].limit;
+  ["destination","prompt","draft"].forEach(function(k){ if(typeof essayState[k] !== "string") essayState[k] = ""; });
+
+  const modeBox = document.getElementById("essay-mode-advice");
+  const guidance = document.getElementById("essay-draft-guidance");
+  const draft = document.getElementById("essay-draft");
+  const limitInput = document.getElementById("essay-limit");
+  const outline = document.getElementById("essay-outline-output");
+  const wordCount = document.getElementById("essay-word-count");
+  const reviewList = document.getElementById("essay-review-list");
+
+  function persistEssay(){ Store.set("essayCoach", essayState); }
+  function words(text){ const value = String(text || "").trim(); return value ? value.split(/\s+/).length : 0; }
+  function clean(value, fallback){ const v = String(value || "").trim(); return v || fallback; }
+  function fileBase(){
+    const raw = String(essayState.destination || "my-writing").toLowerCase();
+    return raw.replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60) || "my-writing";
+  }
+
+  function syncInputs(){
+    panel.querySelectorAll("input[name='essay-type']").forEach(function(radio){ radio.checked = radio.value === essayState.type; });
+    panel.querySelectorAll(".essay-choice").forEach(function(label){
+      const radio = label.querySelector("input");
+      label.classList.toggle("is-selected", !!radio && radio.checked);
+    });
+    panel.querySelectorAll("[data-essay-input]").forEach(function(el){
+      const key = el.dataset.essayInput;
+      el.value = essayState[key] == null ? "" : essayState[key];
+    });
+    panel.querySelectorAll("[data-essay-story]").forEach(function(el){
+      el.value = essayState.story[el.dataset.essayStory] || "";
+    });
+  }
+
+  function renderMode(){
+    const mode = MODES[essayState.type];
+    modeBox.innerHTML = "<strong>" + esc(mode.title) + "</strong><span>" + esc(mode.job) + "</span>";
+    guidance.textContent = mode.draftTip;
+    draft.placeholder = mode.placeholder;
+    panel.querySelectorAll(".essay-choice").forEach(function(label){
+      const radio = label.querySelector("input");
+      label.classList.toggle("is-selected", !!radio && radio.checked);
+    });
+  }
+
+  function buildOutline(){
+    const s = essayState.story;
+    const hasStory = [s.scene,s.detail,s.action,s.meaning,s.now,s.next].some(function(v){ return String(v || "").trim(); });
+    if(!hasStory){ outline.textContent = ""; updateProgress(); return; }
+    const mode = MODES[essayState.type];
+    const lines = [
+      "MY WRITING PLAN",
+      "Type: " + mode.title,
+      "Application: " + clean(essayState.destination, "[Add the school, scholarship, or program]"),
+      "Word limit: " + clean(essayState.limit, mode.limit),
+      "Prompt: " + clean(essayState.prompt, "[Paste the exact prompt in Step 1]"),
+      ""
+    ];
+    if(essayState.type === "college"){
+      lines.push(
+        "1. OPEN IN ONE REAL MOMENT",
+        clean(s.scene,"[Describe the scene in two or three sentences.]"),
+        "Only-you detail: " + clean(s.detail,"[Add one exact detail.]"),
+        "",
+        "2. SHOW WHAT YOU DID OR CHOSE",
+        clean(s.action,"[List the actions or decisions the reader should see.]"),
+        "",
+        "3. REFLECT: WHY DID THIS MATTER?",
+        clean(s.meaning,"[Explain the question, value, or understanding that changed.]"),
+        "",
+        "4. SHOW WHO YOU ARE NOW",
+        clean(s.now,"[Give present-day evidence that the change lasted.]"),
+        "",
+        "5. END WITH FORWARD MOTION",
+        clean(s.next,"[Return to the central insight or show how it continues. Do not force a career conclusion.]"));
+    } else if(essayState.type === "scholarship"){
+      lines.push(
+        "1. ANSWER THE PROMPT DIRECTLY",
+        "[Write your one-sentence answer in your own words. Name the scholarship criteria you will prove.]",
+        "",
+        "2. PROVE IT WITH A REAL MOMENT",
+        clean(s.scene,"[Describe one example.]"),
+        "Only-you detail: " + clean(s.detail,"[Add one exact detail.]"),
+        "",
+        "3. SHOW YOUR ACTION AND EFFECT",
+        clean(s.action,"[What did you do, and who or what changed?]"),
+        "",
+        "4. EXPLAIN THE MEANING AND FIT",
+        clean(s.meaning,"[What did you learn or value?]") + "\n" + clean(s.now,"[How do you live this now?]"),
+        "",
+        "5. NAME THE NEXT STEP",
+        clean(s.next,"[When the prompt asks, explain the concrete step this support makes possible.]"));
+    } else {
+      lines.push(
+        "1. ANSWER IN THE FIRST SENTENCE",
+        "[Write the direct answer in your own words.]",
+        "",
+        "2. GIVE ONE EXAMPLE",
+        clean(s.scene,"[Use one focused example.]"),
+        "Exact detail: " + clean(s.detail,"[Add one detail.]"),
+        "",
+        "3. SHOW WHAT YOU DID",
+        clean(s.action,"[Name the action or decision.]"),
+        "",
+        "4. EXPLAIN WHY IT MATTERS, THEN STOP",
+        clean(s.meaning || s.now,"[Add one sentence of reflection. Cut anything that does not answer the prompt.]"));
+    }
+    outline.textContent = lines.join("\n");
+    updateProgress();
+  }
+
+  function renderReview(){
+    const list = REVIEW[essayState.type];
+    const checked = essayState.review[essayState.type] || {};
+    reviewList.innerHTML = "";
+    list.forEach(function(item,index){
+      const id = "essay-review-" + essayState.type + "-" + index;
+      const li = document.createElement("li");
+      li.innerHTML = "<input type='checkbox' id='" + id + "' " + (checked[index] ? "checked" : "") + "><label for='" + id + "'><b>" + esc(item.b) + "</b><span>" + esc(item.s) + "</span></label>";
+      li.querySelector("input").addEventListener("change", function(event){
+        essayState.review[essayState.type] = essayState.review[essayState.type] || {};
+        if(event.target.checked) essayState.review[essayState.type][index] = true;
+        else delete essayState.review[essayState.type][index];
+        persistEssay();
+        updateProgress();
+      });
+      reviewList.appendChild(li);
+    });
+  }
+
+  function updateWordCount(){
+    const count = words(essayState.draft);
+    const limit = Math.max(1, Number(essayState.limit) || MODES[essayState.type].limit);
+    wordCount.innerHTML = "<b>" + count + "</b> / " + limit + " words";
+    wordCount.className = "counter" + (count > limit ? " over" : (count >= Math.round(limit * .8) ? " good" : ""));
+    updateProgress();
+  }
+
+  function reviewIsComplete(){
+    const list = REVIEW[essayState.type];
+    const checked = essayState.review[essayState.type] || {};
+    return list.length > 0 && list.every(function(_,index){ return !!checked[index]; });
+  }
+
+  function updateProgress(){
+    const limit = Math.max(1, Number(essayState.limit) || MODES[essayState.type].limit);
+    const stepReady = [
+      !!MODES[essayState.type] && !!String(essayState.prompt || "").trim() && limit > 0,
+      ["scene","action","meaning"].every(function(k){ return !!String(essayState.story[k] || "").trim(); }),
+      words(essayState.draft) >= Math.min(100, Math.max(30, Math.round(limit * .2))),
+      reviewIsComplete()
+    ];
+    const ready = stepReady.filter(Boolean).length;
+    document.getElementById("essay-progress-label").textContent = ready + " of 4 steps ready";
+    document.getElementById("essay-progress-bar").style.width = (ready * 25) + "%";
+    panel.querySelectorAll("[data-essay-progress]").forEach(function(el,index){ el.classList.toggle("is-ready", stepReady[index]); });
+  }
+
+  function writingPackage(){
+    const pieces = [];
+    if(outline.textContent.trim()) pieces.push(outline.textContent.trim());
+    if(String(essayState.draft || "").trim()) pieces.push("MY DRAFT\n\n" + essayState.draft.trim());
+    return pieces.join("\n\n------------------------------\n\n");
+  }
+
+  panel.querySelectorAll("input[name='essay-type']").forEach(function(radio){
+    radio.addEventListener("change", function(){
+      const oldType = essayState.type;
+      essayState.type = radio.value;
+      if(!essayState.limit || Number(essayState.limit) === MODES[oldType].limit) essayState.limit = MODES[essayState.type].limit;
+      limitInput.value = essayState.limit;
+      persistEssay();
+      renderMode();
+      renderReview();
+      buildOutline();
+      updateWordCount();
+    });
+  });
+
+  panel.querySelectorAll("[data-essay-input]").forEach(function(el){
+    el.addEventListener("input", function(){
+      essayState[el.dataset.essayInput] = el.value;
+      persistEssay();
+      if(el.dataset.essayInput === "limit") updateWordCount();
+      else if(el.dataset.essayInput !== "draft") buildOutline();
+      if(el.dataset.essayInput === "draft") updateWordCount();
+      else updateProgress();
+    });
+  });
+
+  panel.querySelectorAll("[data-essay-story]").forEach(function(el){
+    el.addEventListener("input", function(){
+      essayState.story[el.dataset.essayStory] = el.value;
+      persistEssay();
+      buildOutline();
+    });
+  });
+
+  document.getElementById("essay-copy-outline").addEventListener("click", function(){
+    if(!outline.textContent.trim()) return toast("Fill in at least one story box first.");
+    copyText(outline.textContent);
+  });
+  document.getElementById("essay-download-plan").addEventListener("click", function(){
+    const text = writingPackage();
+    if(!text) return toast("Add story notes or a draft first.");
+    download(fileBase() + "-writing-plan.txt", text, "text/plain;charset=utf-8");
+    toast("Writing plan downloaded.");
+  });
+  document.getElementById("essay-copy-draft").addEventListener("click", function(){
+    if(!String(essayState.draft || "").trim()) return toast("Nothing to copy yet.");
+    copyText(essayState.draft);
+  });
+  document.getElementById("essay-open-docs").addEventListener("click", function(){
+    if(String(essayState.draft || "").trim()) copyText(essayState.draft);
+    window.open("https://docs.new", "_blank", "noopener");
+  });
+
+  const commonMount = document.getElementById("essay-common-prompts");
+  commonMount.innerHTML = COMMON_PROMPTS.map(function(item){
+    return "<details class='acc'><summary>" + item.n + ". " + esc(item.t) + "</summary><div class='acc-body'><p><strong>Plain-language summary:</strong> " + esc(item.p) + "</p><div class='decode'><strong>Strong approach:</strong> " + esc(item.d) + "</div><p style='margin-bottom:0;color:var(--crimson);font-weight:600'>Story test: " + esc(item.q) + "</p></div></details>";
+  }).join("");
+
+  const helpMount = document.getElementById("essay-scholarship-help");
+  helpMount.innerHTML = SCHOLARSHIP_HELP.map(function(item){
+    return "<details class='acc'><summary>" + esc(item.title) + "</summary><div class='acc-body'><div class='decode'><strong>What the reader needs:</strong> " + esc(item.score) + "</div><p style='margin-bottom:0'>" + esc(item.body) + "</p></div></details>";
+  }).join("");
+
+  document.getElementById("essay-rec-template").textContent = REC_REQUEST;
+  document.getElementById("essay-copy-rec").addEventListener("click", function(){ copyText(REC_REQUEST); });
+
+  document.getElementById("essay-clear-all").addEventListener("click", function(){
+    if(!confirm("Clear all notes, the draft, and checklist progress in this writing workspace? Copy anything you want to keep first.")) return;
+    essayState = blankState();
+    persistEssay();
+    syncInputs();
+    renderMode();
+    renderReview();
+    buildOutline();
+    updateWordCount();
+    toast("Writing workspace cleared.");
+  });
+
+  persistEssay();
+  syncInputs();
+  renderMode();
+  renderReview();
+  buildOutline();
+  updateWordCount();
+}
+
 /* ================================================================
    BOOT
    ================================================================ */
@@ -2557,13 +3151,7 @@ function boot(){
   initCalendar();
   renderCalendar();
   renderNext14Days();
-  renderCommonApp();
-  renderBuilder();
-  renderPrompts();
-  renderStructure();
-  renderExamples();
-  renderRecs();
-  renderChecklist("final-check", FINALCHECK, "final");
+  initEssayCoach();
   renderPaths();
   renderCompare();
   renderQuiz();
