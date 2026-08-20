@@ -274,6 +274,10 @@ h1 .thin{font-weight:400; color:#e2b6bf}
 .calendar-head{display:flex; justify-content:space-between; gap:18px; align-items:center}
 .calendar-head h2{font-size:clamp(18px,3vw,23px); color:#fff; margin:2px 0 2px}
 .calendar-head p{font-size:12.5px; color:var(--gray20); margin:0; max-width:58ch}
+.calendar-head-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.calendar-cycle{display:flex;align-items:center;gap:4px;color:var(--gray37);font:500 10px "DM Mono",monospace;white-space:nowrap}
+.calendar-cycle button{border:1px solid #5b5d60;background:#2d3032;color:#fff;border-radius:6px;padding:5px 8px;font:500 12px "DM Mono",monospace;cursor:pointer}
+.calendar-cycle button:hover{background:var(--crimson);border-color:var(--rose-lt)}
 .calendar-open .calendar-head{align-items:flex-start; margin-bottom:15px}
 .calendar-toggle{white-space:nowrap}
 .calendar-actions{display:flex; gap:6px; flex:0 0 auto}
@@ -1214,7 +1218,14 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
         <h2 id="calendar-title">Loading important dates…</h2>
         <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Planning dates stay out until the sponsor verifies them.</p>
       </div>
-      <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
+      <div class="calendar-head-actions">
+        <div class="calendar-cycle" id="calendar-cycle" aria-label="Upcoming events in the next two weeks">
+          <button type="button" id="calendar-cycle-prev" aria-label="Show previous upcoming event">←</button>
+          <span id="calendar-cycle-position">Next two weeks</span>
+          <button type="button" id="calendar-cycle-next" aria-label="Show next upcoming event">→</button>
+        </div>
+        <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
+      </div>
     </div>
     <div class="calendar-body" id="calendar-body" hidden>
       <div class="calendar-actions" aria-label="Change calendar month">
@@ -2346,6 +2357,9 @@ const MS_DAY = 86400000;
 const today = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
 let calendarView = new Date(today.getFullYear(), today.getMonth(), 1);
 let calendarSelected = null;
+let calendarCycleIndex = 0;
+let calendarCycleItems = [];
+let calendarCycleTimer = null;
 let dataUpdatedAt = null;
 
 /* ---------- tiny persistent store, safe everywhere ---------- */
@@ -2882,9 +2896,12 @@ function renderCalendar(){
   if(!grid) return;
   const all = confirmedCalendarItems();
   const open = document.getElementById("calendar-toggle")?.getAttribute("aria-expanded") === "true";
-  const soon = all.filter(item => daysUntil(item.due) >= 0 && daysUntil(item.due) <= 14)
+  const next14 = all.filter(item => daysUntil(item.due) >= 0 && daysUntil(item.due) <= 14)
     .sort((a,b) => (a.priority || 999) - (b.priority || 999) || parseDate(a.due) - parseDate(b.due));
-  const next = soon[0] || all.find(item => daysUntil(item.due) >= 0);
+  const future = all.filter(item => daysUntil(item.due) >= 0);
+  calendarCycleItems = next14.length ? next14 : future.slice(0,1);
+  if(calendarCycleIndex >= calendarCycleItems.length) calendarCycleIndex = 0;
+  const next = calendarCycleItems[calendarCycleIndex] || null;
   const byDate = new Map();
   all.forEach(item => {
     if(!byDate.has(item.due)) byDate.set(item.due, []);
@@ -2905,11 +2922,17 @@ function renderCalendar(){
       ? `${monthItems.length} confirmed date${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
       : "No confirmed dates are listed this month. Use the arrows to check another month.";
   } else {
-    kicker.textContent = next ? "Next important senior date" : "Important dates for seniors";
+    kicker.textContent = next14.length > 1 ? `Next two weeks · ${calendarCycleIndex + 1} of ${next14.length}` : (next ? "Next important senior date" : "Important dates for seniors");
     document.getElementById("calendar-title").textContent = next ? `${calendarEventLabel(next)}: ${next.name}` : "No upcoming confirmed dates";
     document.getElementById("calendar-summary").textContent = next
       ? `${next.calendarKind === "opens" ? "Opens" : "Due"} ${fmt(next.due)} · ${next.org || "official sponsor"}`
       : "Check the full calendar for past dates or wait for a new confirmed date to be posted.";
+  }
+  const cycle = document.getElementById("calendar-cycle");
+  const cyclePosition = document.getElementById("calendar-cycle-position");
+  if(cycle){
+    cycle.hidden = open || calendarCycleItems.length < 2;
+    if(cyclePosition) cyclePosition.textContent = next14.length > 1 ? `${calendarCycleIndex + 1} of ${next14.length}` : "Next date";
   }
   document.getElementById("calendar-count").textContent = `${all.length} confirmed date${all.length === 1 ? "" : "s"} in the full calendar`;
 
@@ -2949,6 +2972,21 @@ function initCalendar(){
     calendar.classList.toggle("calendar-open", open);
     renderCalendar();
   });
+  document.getElementById("calendar-cycle-prev").addEventListener("click", () => {
+    if(calendarCycleItems.length < 2) return;
+    calendarCycleIndex = (calendarCycleIndex - 1 + calendarCycleItems.length) % calendarCycleItems.length;
+    renderCalendar();
+  });
+  document.getElementById("calendar-cycle-next").addEventListener("click", () => {
+    if(calendarCycleItems.length < 2) return;
+    calendarCycleIndex = (calendarCycleIndex + 1) % calendarCycleItems.length;
+    renderCalendar();
+  });
+  calendarCycleTimer = window.setInterval(() => {
+    if(toggle.getAttribute("aria-expanded") === "true" || calendarCycleItems.length < 2) return;
+    calendarCycleIndex = (calendarCycleIndex + 1) % calendarCycleItems.length;
+    renderCalendar();
+  }, 6500);
   document.getElementById("cal-prev").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()-1); calendarSelected = null; renderCalendar(); });
   document.getElementById("cal-next").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()+1); calendarSelected = null; renderCalendar(); });
   document.getElementById("cal-today").addEventListener("click", () => { calendarView = new Date(today.getFullYear(), today.getMonth(), 1); calendarSelected = null; renderCalendar(); });
