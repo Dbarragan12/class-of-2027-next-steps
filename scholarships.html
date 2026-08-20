@@ -115,7 +115,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 
 <main>
   <div class="wrap">
-    <details class="notice" open><summary>How dates are ordered and verified</summary><p><strong>Open applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Planning cards follow by estimated opening date. A planning date is not a promise—always open the sponsor's official page before applying.</p></details>
+    <details class="notice" open><summary>How dates are ordered and verified</summary><p><strong>Open &amp; accepting applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Tentative planning cards follow by their projected opening. Every tentative opening or deadline is based on a dated previous-cycle sponsor or school source; it is not guaranteed and will be updated when the new cycle is released. Tentative cards never create calendar events.</p></details>
   </div>
 
   <section class="tools" aria-label="Scholarship search and filters">
@@ -136,7 +136,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
   </section>
 
   <section class="wrap" aria-labelledby="results-title">
-    <div class="results-head"><h2 id="results-title">Scholarships</h2><span id="sort-note">Open now: due soonest · then opening soon</span></div>
+    <div class="results-head"><h2 id="results-title">Scholarships</h2><span id="sort-note">Open &amp; accepting: due soonest · then opening soon</span></div>
     <div class="grid" id="results"></div>
     <div class="empty" id="empty" hidden>No scholarships match those choices. Try clearing a filter or searching a different word.</div>
   </section>
@@ -197,25 +197,25 @@ function predictedOpenDate(item){const d=nextCycleDate(item.lastYearDeadline);if
 function mapItem(item){
   const planning=!String(item.status).startsWith("Confirmed");
   const opens=planning?(item.expectedOpen||item.predictedOpen||predictedOpenDate(item)):(item.opens||null);
+  const projectedDue=item.tentativeDeadline||(planning&&item.lastYearDeadline?isoDate(nextCycleDate(item.lastYearDeadline)):null);
   const fit=Array.isArray(item.fit)?[...item.fit]:[];
   const hay=[item.name,item.eligibility,item.whyFit,(item.tags||[]).join(" ")].join(" ").toLowerCase();
   if(/open to most|open to all|no essay|no gpa|no test score/.test(hay)&&!fit.includes("everyone"))fit.push("everyone");
   if(!fit.length)fit.push("everyone");
-  return {...item,id:idOf(item),planning,opens,fit,openLabel:planning?(item.openLabel||null):null};
+  return {...item,id:idOf(item),planning,opens,tentativeDeadline:projectedDue,fit,openLabel:planning?(item.openLabel||null):null};
 }
 function statusFor(item){
   if(item.planning){
-    const nextDue=item.lastYearDeadline&&nextCycleDate(item.lastYearDeadline);
-    return {kind:"planning",label:item.openLabel||monthYear(item.opens),detail:item.openLabel?"annual opening":"estimated opening",rank:2,date:nextDue?isoDate(nextDue):(item.opens||"9999-12-31")};
+    return {kind:"planning",label:"Tentative · "+(item.openLabel||monthYear(item.opens)),detail:"based on past data",rank:2,date:item.opens||item.tentativeDeadline||"9999-12-31"};
   }
   if(item.deadline){
     const n=daysUntil(item.deadline);
     if(n<0)return {kind:"closed",label:"Closed",detail:"check next cycle",rank:4,date:item.deadline};
     if(item.opens&&daysUntil(item.opens)>0)return {kind:"soon",label:"Opens "+fmt(item.opens),detail:"deadline "+fmt(item.deadline),rank:1,date:item.opens};
-    return {kind:n<=45?"soon":"open",label:"Due "+fmt(item.deadline),detail:"open now",rank:0,date:item.deadline};
+    return {kind:n<=45?"soon":"open",label:"Open & accepting",detail:"due "+fmt(item.deadline),rank:0,date:item.deadline};
   }
   if(item.opens&&daysUntil(item.opens)>0)return {kind:"soon",label:"Opens "+fmt(item.opens),detail:"confirmed date",rank:1,date:item.opens};
-  return {kind:"open",label:"Open now",detail:"rolling or no fixed deadline",rank:0,date:"9999-12-31"};
+  return {kind:"open",label:"Open & accepting",detail:"rolling or no fixed deadline",rank:0,date:"9999-12-31"};
 }
 function saveState(){try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");all.saved=saved;localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}}
 function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2600)}
@@ -232,31 +232,32 @@ function itemMatches(item){
 }
 function card(item){
   const st=statusFor(item),checked=!!saved[item.id];
-  const due=item.planning?(item.lastYearDeadline?`Prior-cycle deadline <strong>${fmt(item.lastYearDeadline)}</strong> — planning only; the new date is not guaranteed`:esc(item.expectedWindow||"New cycle not released yet")):(item.deadline?(st.kind==="closed"?`Closed ${fmt(item.deadline)} — check the sponsor page for the next cycle`:`Due <strong>${fmt(item.deadline)}</strong>`):esc(item.expectedWindow||"No fixed deadline"));
-  const opening=item.opens&&daysUntil(item.opens)>0?`<div class="why"><strong>${item.planning?"Opening plan":"Opens"}:</strong> ${fmt(item.opens)}</div>`:"";
+  const due=item.planning?(item.tentativeDeadline?`Tentative deadline <strong>${fmt(item.tentativeDeadline)}</strong> — projected from previous data; not guaranteed`:esc(item.expectedWindow||"No tentative deadline is available yet.")):(item.deadline?(st.kind==="closed"?`Closed ${fmt(item.deadline)} — check the sponsor page for the next cycle`:`Confirmed deadline <strong>${fmt(item.deadline)}</strong>`):esc(item.expectedWindow||"No fixed deadline"));
+  const opening=item.planning?`<div class="why"><strong>Tentative opening:</strong> ${esc(item.openLabel||(item.opens?fmt(item.opens):"Check for a new-cycle announcement"))} — based on previous data; not guaranteed.</div>`:(item.opens&&daysUntil(item.opens)>0?`<div class="why"><strong>Opens:</strong> ${fmt(item.opens)}</div>`:"");
+  const history=`${item.sourceNote?`<p class="why"><strong>Why this is listed:</strong> ${esc(item.sourceNote)}</p>`:""}${item.historicalSource?`<p class="why"><a href="${esc(item.historicalSource)}" target="_blank" rel="noopener">View dated previous-cycle source ↗</a></p>`:""}`;
   const el=document.createElement("article");el.className="card "+st.kind;el.innerHTML=`
     <div class="award-banner"><span>Award</span><strong>${esc(item.award||"See sponsor details")}</strong></div>
     <div class="card-head"><div><h3>${esc(item.name)}</h3><div class="org">${esc(item.organization||"Scholarship sponsor")}</div></div><div class="status">${esc(st.label)}<small>${esc(st.detail)}</small></div></div>
     <p class="eligibility">${esc(item.eligibility||"Read the sponsor's current requirements.")}</p>
-    <details class="card-more"><summary>See eligibility details and what you'll need</summary><div class="more-body">${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}<div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div></div></details>
+    <details class="card-more"><summary>See eligibility details, source, and what you'll need</summary><div class="more-body">${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}<div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div>${history}</div></details>
     ${opening}<div class="why">${due}</div>
-    <div class="card-foot"><label class="save"><input type="checkbox" ${checked?"checked":""}> Save this</label><div class="card-actions">${item.deadline&&daysUntil(item.deadline)>=0?`<button class="calendar-link" type="button">Add to calendar</button>`:""}<a class="sponsor" href="${esc(item.url)}" target="_blank" rel="noopener">Open sponsor page ↗</a></div></div>`;
+    <div class="card-foot"><label class="save"><input type="checkbox" ${checked?"checked":""}> Save this</label><div class="card-actions">${item.deadline&&daysUntil(item.deadline)>=0?`<button class="calendar-link" type="button">Add to calendar</button>`:""}<a class="sponsor" href="${esc(item.url)}" target="_blank" rel="noopener">${item.planning?"Check for current information ↗":"Open sponsor page ↗"}</a></div></div>`;
   el.querySelector("input").addEventListener("change",e=>{if(e.target.checked){saved[item.id]=true;toast("Saved to your list.")}else{delete saved[item.id];toast("Removed from your list.")}saveState();render()});
   const calendarButton=el.querySelector(".calendar-link");if(calendarButton)calendarButton.addEventListener("click",()=>{download(item.id+"-deadline.ics",icsFor(item),"text/calendar;charset=utf-8");toast("Calendar event downloaded.")});
   return el
 }
 function render(){
   const items=allItems.filter(itemMatches).sort((a,b)=>{const sa=statusFor(a),sb=statusFor(b);if(sa.rank!==sb.rank)return sa.rank-sb.rank;return String(sa.date).localeCompare(String(sb.date))||a.name.localeCompare(b.name)});
-  $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":"Open now: due soonest · then opening soon";
+  $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":"Open & accepting: due soonest · then opening soon";
 }
 function savedItems(){return allItems.filter(item=>saved[item.id])}
 function deadlineLine(item){
-  if(item.deadline)return "Deadline: "+fmt(item.deadline);
-  if(item.lastYearDeadline)return "Prior-cycle deadline: "+fmt(item.lastYearDeadline)+" (planning only; not the current deadline)";
-  return "Deadline: Check the sponsor page";
+  if(item.deadline)return "Confirmed deadline: "+fmt(item.deadline);
+  if(item.tentativeDeadline)return "Tentative deadline: "+fmt(item.tentativeDeadline)+" (projected from previous data; not guaranteed)";
+  return "Tentative deadline: Not available yet";
 }
 function savedText(){
-  const items=savedItems();const lines=["My saved scholarships",""];items.forEach((x,i)=>{lines.push(`${i+1}. ${x.name}`);lines.push(`Sponsor: ${x.organization||""}`);lines.push(deadlineLine(x));if(x.opens&&daysUntil(x.opens)>0)lines.push(`Opening: ${fmt(x.opens)}${x.planning?" (planning estimate)":""}`);lines.push(`Eligibility: ${x.eligibility||""}`);lines.push(`Link: ${x.url}`);lines.push("")});return lines.join("\n")
+  const items=savedItems();const lines=["My saved scholarships",""];items.forEach((x,i)=>{lines.push(`${i+1}. ${x.name}`);lines.push(`Sponsor: ${x.organization||""}`);lines.push(deadlineLine(x));if(x.opens&&daysUntil(x.opens)>0)lines.push(`${x.planning?"Tentative opening":"Opening"}: ${x.planning?(x.openLabel||fmt(x.opens)):fmt(x.opens)}${x.planning?" (based on previous data; not guaranteed)":""}`);lines.push(`Eligibility: ${x.eligibility||""}`);lines.push(`Link: ${x.url}`);lines.push("")});return lines.join("\n")
 }
 function emailSaved(){
   const items=savedItems();if(!items.length){toast("Save at least one scholarship first.");return}
