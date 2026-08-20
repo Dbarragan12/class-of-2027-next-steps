@@ -18,7 +18,7 @@ At about 2:15 a.m. Pacific Standard Time (3:15 a.m. during daylight saving time)
 2. checks the official link for every scholarship;
 3. records when each source was checked and flags changed sources for review.
 
-The site never changes an expected deadline into a confirmed deadline on its own. That protects students from an incorrect date. A changed official page is flagged so its exact new information can be verified and then updated manually. The overnight job never imports Airtable, deletes manual records, or publishes a new scholarship automatically. It also stops if the list is empty.
+The site never changes an expected deadline into a confirmed deadline on its own. That protects students from an incorrect date. A changed official page is flagged so its exact new information can be verified and then updated manually. The overnight job never replaces or deletes manual records, or publishes a new scholarship automatically. It also stops if the list is empty.
 
 To add or update a scholarship, edit `data/scholarships.json` manually, verify the official source, and commit the change. The nightly check will preserve it and update its `lastChecked` date when the official page responds. Use `gpaMin` only when the sponsor clearly lists a minimum GPA; the finder uses it to explain academic fit, never to hide a student from an opportunity. Keep `needs` and `effort` current so students can see what to prepare and how much time to plan.
 
@@ -29,11 +29,11 @@ To add or update a scholarship, edit `data/scholarships.json` manually, verify t
 
 No student information is collected or stored.
 
-The standalone finder saves a student's list only in that browser. “Email my list” opens the student's own email program and does not send addresses to this site. Automatic new-scholarship email alerts require a private mailing-list service; do not add an email form or store student addresses in this public repository until that service is connected and its privacy terms are reviewed.
+The standalone finder saves a student's list only in that browser. It is not confidential on a shared Chromebook, so students should clear their choices before leaving. “Email my list” opens the student's own email program and does not send addresses to this site. Automatic new-scholarship email alerts require a private mailing-list service; subscriber addresses stay outside this public repository.
 
-The finder also links to public GitHub review forms for scholarship submissions, corrections, and helpful programs or resources. These are review leads only; a person must verify and approve them before publication. Contributors are instructed not to post private student information.
+Scholarship submissions, corrections, and helpful programs or resources use one private review workflow. These are review leads only; a person must verify and approve them before publication. Contributors are instructed not to post private student information.
 
-## Airtable labels
+## Scholarship labels
 
 - **Confirmed for 2027**: official current-cycle information.
 - **Expected — last year's information**: a real recurring scholarship whose new details are not published yet. Cards show an estimated opening month/year or a recurring opening date when the sponsor publishes one.

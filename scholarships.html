@@ -89,6 +89,7 @@ main{padding-bottom:42px}
 .lower-card{background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:19px;box-shadow:var(--shadow)}
 .lower-card h2{font-size:22px;margin:0 0 8px}.lower-card p{margin:0 0 10px;color:var(--muted);font-size:14px}.lower-card ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:14px}.lower-card li{margin:5px 0}
 .privacy{border-top:4px solid var(--sage)}
+.privacy-bar{background:var(--ink);color:#fff;padding:10px 0}.privacy-row{display:flex;justify-content:space-between;align-items:center;gap:14px}.privacy-row p{margin:0;color:#d0d1d3;font-size:12.5px}.privacy-row strong{color:#fff}.clear-local{border:0;background:transparent;color:var(--rose-lt);padding:4px;cursor:pointer;font-size:12px;font-weight:800;white-space:nowrap}.clear-local:hover{text-decoration:underline}
 .es-guide{grid-column:1/-1}.es-guide h2{margin-bottom:8px}.es-guide h3{font-size:17px;margin:0 0 6px}.es-guide p{margin:0}.es-guide a{color:var(--crimson);font-weight:800}.es-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:16px}.es-grid section{display:grid;gap:7px}.es-grid ul{margin:0;padding-left:19px;display:grid;gap:5px}.es-callout{background:var(--sand);border-radius:9px;padding:12px 14px;margin-top:16px}.es-callout strong{color:var(--ink)}
 .updates{border-top:4px solid var(--crimson)}
 .submission-area{margin-top:30px;background:#fff;border:1px solid var(--gray20);border-top:4px solid var(--rose);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
@@ -127,7 +128,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 .tool-more summary::after,.filter-drawer summary::after{content:"+";float:right;font-size:18px}
 .tool-more[open] summary::after,.filter-drawer[open] summary::after{content:"−"}
 .tool-more-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
-@media(max-width:650px){.top .inner{padding:0 16px}.top-links a:nth-child(n+3){display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}}
+@media(max-width:650px){.top .inner{padding:0 16px}.top-links a:nth-child(n+3){display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}.privacy-row{align-items:flex-start;flex-direction:column;gap:4px}}
 @media(max-width:650px){.es-grid{grid-template-columns:1fr;gap:15px}}
 </style>
 </head>
@@ -139,7 +140,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
       <div class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></div>
       <div><div class="site-name">Toppenish Next Steps</div><div class="school">Class of 2027 · Help after high school</div></div>
     </a>
-    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="index.html#help-center">Family help · Español</a></div>
+    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="index.html#help-center">Ayuda familiar · Español</a></div>
   </div>
 </header>
 <nav class="site-nav" aria-label="Main sections">
@@ -152,6 +153,10 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
     <a href="index.html#writing"><span class="nav-num">06</span> Writing</a>
   </div>
 </nav>
+
+<div class="privacy-bar">
+  <div class="wrap privacy-row"><p><strong>Saved on this device:</strong> your list and filter choices stay in this browser, but they are not confidential on a shared Chromebook.</p><button class="clear-local" id="clear-saved" type="button">Clear saved choices</button></div>
+</div>
 
 <main>
   <div class="wrap">
@@ -209,7 +214,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
           <h3>Empiece aquí</h3>
           <ul>
             <li>Use los filtros para encontrar oportunidades que pueden tener sentido para su estudiante. “Latino / Hispanic” ayuda a ordenar resultados; no es una obligación ni una decisión sobre la identidad de nadie.</li>
-            <li>Abra cada tarjeta y lea “Qué necesitará”, el GPA indicado y la fecha. Confirme todo en la página oficial del patrocinador.</li>
+            <li>Abra cada tarjeta y lea “Qué necesitará”, el promedio (GPA) indicado y la fecha. Confirme todo en la página oficial del patrocinador.</li>
             <li>Guarde las becas y use <strong>Agregar al calendario</strong>. Las fechas confirmadas incluyen avisos 7 días antes y 1 día antes.</li>
           </ul>
         </section>
@@ -228,7 +233,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
         </section>
         <section>
           <h3>Ayuda en Toppenish</h3>
-          <p>El estudiante puede pedir ayuda a su maestro de advisory, al equipo de UW GEAR UP o a <strong>Luis Gutierrez, College &amp; Career Specialist</strong>. Luis también puede ayudar con los fee waivers para solicitudes y exámenes.</p>
+          <p>El estudiante puede pedir ayuda a su maestro de advisory, al equipo de UW GEAR UP o a <strong>Luis Gutierrez, College &amp; Career Specialist</strong>. Luis también puede ayudar con las exenciones de pago para solicitudes y exámenes (<em>fee waivers</em>).</p>
           <p>Comparta la página exacta, el formulario o la pregunta. Pedir ayuda temprano evita pagar una cuota o perder una fecha.</p>
         </section>
       </div>
@@ -391,6 +396,8 @@ function savedCalendar(){
   const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Toppenish Scholarship Finder//EN","CALSCALE:GREGORIAN",items.map(icsEventFor).join("\r\n"),"END:VCALENDAR"].join("\r\n");
   download("saved-scholarship-deadlines.ics",ics,"text/calendar;charset=utf-8");toast("Saved deadlines downloaded.")
 }
+function clearSaved(){if(!confirm("Clear saved scholarships and filter choices from this device?"))return;saved={};activeFits.clear();showingSaved=false;try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");delete all.saved;delete all.scholarshipPriorities;localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}$("show-saved").classList.remove("active");toast("Saved choices cleared from this device.");render()}
+$("clear-saved").addEventListener("click",clearSaved);
 $("calendar-saved").addEventListener("click",savedCalendar);
 $("search").addEventListener("input",e=>{query=e.target.value.toLowerCase().trim();render()});
 $("show-saved").addEventListener("click",()=>{showingSaved=!showingSaved;$("show-saved").classList.toggle("active",showingSaved);render()});

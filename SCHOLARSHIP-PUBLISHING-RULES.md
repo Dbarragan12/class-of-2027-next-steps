@@ -34,7 +34,7 @@ Community submissions, corrections, and program/resource leads enter through the
 
 ## Nightly behavior
 
-The nightly workflow checks links and detects source changes in the existing manually maintained list. A changed source is a prompt to check whether the new cycle opened. The workflow must never import Airtable, replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain tentative until a person verifies the new cycle and enters the current opening and deadline. The finder then changes the public label automatically. If the list is empty, the workflow must fail safely instead of committing an empty file.
+The nightly workflow checks links and detects source changes in the existing manually maintained list. A changed source is a prompt to check whether the new cycle opened. The workflow must never replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain tentative until a person verifies the new cycle and enters the current opening and deadline. The finder then changes the public label automatically. If the list is empty, the workflow must fail safely instead of committing an empty file.
 
 The public site must never store subscriber addresses in the repository. Subscription choices and addresses belong only in the connected private Google Workspace form/sheet workflow. Public scholarship cards may open a student's own email program, copy a saved list, or download confirmed deadlines to a personal calendar.
 
