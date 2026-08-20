@@ -83,6 +83,51 @@ p{margin:0 0 12px}
 .current-action h3{font-size:clamp(24px,4vw,34px);margin:5px 0 7px}
 .current-action p{color:var(--gray20);max-width:60ch;margin:0}
 .current-action .btn{background:var(--rose-lt);border-color:var(--rose-lt);color:var(--ink);white-space:nowrap}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+.hero-actions a{
+  display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:9px;
+  padding:11px 15px;font-weight:800;font-size:14px;border:1.5px solid rgba(255,255,255,.72)
+}
+.hero-actions .primary{background:#fff;color:var(--crimson);border-color:#fff}
+.hero-actions .secondary{background:transparent;color:#fff}
+.hero-actions a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.coach-gateway{
+  margin-top:20px;background:var(--ink);color:#fff;border-radius:14px;padding:clamp(22px,5vw,34px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center;box-shadow:var(--shadow)
+}
+.coach-gateway .eyebrow{color:var(--rose-lt)}
+.coach-gateway h3{font-size:clamp(27px,5vw,42px);margin:6px 0 9px;max-width:18ch}
+.coach-gateway p{color:var(--gray20);max-width:60ch;margin:0}
+.coach-gateway .btn{background:var(--rose-lt);border-color:var(--rose-lt);color:var(--ink);text-decoration:none;white-space:nowrap}
+.coach-gateway .btn:hover{background:#fff;border-color:#fff;color:var(--crimson)}
+.today-feed{margin-top:18px;background:#fff;border:1px solid var(--gray20);border-radius:14px;padding:21px;box-shadow:var(--shadow)}
+.today-feed-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:13px}
+.today-feed-head h3{font-size:clamp(23px,4vw,31px);margin-top:4px}
+.today-feed-head span{font:500 11px "DM Mono",monospace;color:var(--muted);text-align:right}
+.today-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.today-card{border:1px solid var(--gray20);border-radius:10px;background:var(--paper);padding:15px;display:flex;flex-direction:column;min-height:170px}
+.today-card .today-label{font:500 10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson)}
+.today-card h4{font-size:19px;margin:7px 0 7px}
+.today-card p{color:var(--muted);font-size:13.5px;margin:0}
+.today-card a{margin-top:auto;padding-top:12px;font-size:13px;font-weight:800;text-decoration:none}
+.today-card a:hover{text-decoration:underline}
+.start-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+.start-shortcut{
+  background:#fff;border:1px solid var(--gray20);border-radius:11px;padding:16px;text-decoration:none;color:var(--ink);
+  box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:145px
+}
+.start-shortcut .eyebrow{color:var(--crimson)}
+.start-shortcut h3{font-size:19px;margin:7px 0}
+.start-shortcut p{color:var(--muted);font-size:13.5px;margin:0}
+.start-shortcut span{margin-top:auto;padding-top:12px;color:var(--crimson);font-weight:800;font-size:13px}
+.start-shortcut:hover{border-color:var(--crimson);transform:translateY(-2px)}
+.resource-drawer{margin-top:28px;border:1px solid var(--gray20);border-radius:12px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.resource-drawer>summary{cursor:pointer;list-style:none;padding:17px 20px;font-family:"Bricolage Grotesque",sans-serif;font-size:20px;font-weight:800}
+.resource-drawer>summary::-webkit-details-marker{display:none}
+.resource-drawer>summary::after{content:"+";float:right;color:var(--crimson);font-family:"DM Mono",monospace}
+.resource-drawer[open]>summary{background:var(--sand);border-bottom:1px solid var(--gray20)}
+.resource-drawer[open]>summary::after{content:"−"}
+.resource-drawer-body{padding:0 20px 22px}
 .welcome-card{background:#fff;border:1px solid var(--gray20);border-radius:14px;padding:24px;box-shadow:var(--shadow);margin-top:24px}
 .welcome-card h3{font-size:clamp(24px,4vw,34px);margin:5px 0 14px}
 .welcome-card.small h3{font-size:22px;margin-bottom:7px}
@@ -1006,6 +1051,19 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
   .essay-draft-box .counter{width:100%;margin-left:0}
 }
 
+@media(max-width:860px){
+  .today-grid{grid-template-columns:1fr 1fr}
+  .start-shortcuts{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .coach-gateway{grid-template-columns:1fr;padding:21px}
+  .coach-gateway h3{max-width:none}
+  .coach-gateway .btn{width:100%;text-align:center}
+  .today-feed-head{display:block}
+  .today-feed-head span{display:block;text-align:left;margin-top:5px}
+  .today-grid,.start-shortcuts{grid-template-columns:1fr}
+  .today-card,.start-shortcut{min-height:0}
+}
 @media print{
   nav.hub,.controls,.ticker,.deadline-calendar,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
   .panel[hidden]{display:block !important}
@@ -1039,13 +1097,17 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
     </div>
     <div class="wildcats-script" aria-hidden="true"><img src="assets/wildcats-script.png" alt=""></div>
     <div class="utility" aria-label="Quick links">
-      <button type="button" data-jump="start">Start here</button>
+      <a href="coach.html">Get personalized help</a>
       <a href="scholarships.html">Scholarship Finder</a>
       <a href="#familias" data-jump="familias">Spanish for families · Español</a>
       <button type="button" data-jump="help">Get help</button>
     </div>
-    <h1>Your senior year.<br><span class="thin">One next step at a time.</span></h1>
-    <p class="lede">Graduation, deadlines, money, applications, and every path after Toppenish—in one clear place for students and families.</p>
+    <h1>One next step<br><span class="thin">at a time.</span></h1>
+    <p class="lede">Get a private starting plan, see what matters now, or go straight to scholarships and senior resources.</p>
+    <div class="hero-actions" aria-label="Start using Next Steps">
+      <a class="primary" href="coach.html">Find my next step</a>
+      <a class="secondary" href="scholarships.html">Search scholarships</a>
+    </div>
     <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
       <div class="calendar-head">
         <div>
@@ -1098,54 +1160,56 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
 <section class="panel" id="panel-start">
   <div class="wrap panel-intro">
     <p class="eyebrow">Class of 2027 · Welcome</p>
-    <h2>Choose your next step.</h2>
-    <p>Pick one option below, or build a private three-step plan.</p>
+    <h2>Start with what you need today.</h2>
+    <p>This front desk updates itself from the verified calendar, scholarship list, and choices saved on this device.</p>
   </div>
   <div class="wrap">
-    <article class="welcome-card">
-      <p class="eyebrow">Quick check-in</p>
-      <h3>There is no wrong answer.</h3>
-      <div class="welcome-options" id="start-options" role="group" aria-label="Choose what you need today">
-        <button type="button" data-start-intent="unsure">I am not sure yet</button>
-        <button type="button" data-start-intent="money">I need money help</button>
-        <button type="button" data-start-intent="path">I need to choose a path</button>
-        <button type="button" data-start-intent="scholarships">I am looking for scholarships</button>
-        <button type="button" data-start-intent="apply">I am ready to apply</button>
-        <button type="button" data-start-intent="help">I need a person</button>
+    <article class="coach-gateway">
+      <div>
+        <p class="eyebrow">Personalized starting point</p>
+        <h3>Let the coach guide you.</h3>
+        <p>Answer a few plain-language questions and get three useful next steps. No name or account is required, and the plan stays on this device.</p>
       </div>
-      <div class="welcome-response" id="start-response" aria-live="polite"><strong>Choose one above.</strong><span>Your answer will give you a short next step—not a giant checklist.</span></div>
+      <a class="btn" href="coach.html">Open Next Steps Coach →</a>
     </article>
 
-    <div class="sect" id="quick-actions">
-      <p class="eyebrow">Quick actions</p>
-      <h3>Find it. Request it. Get unstuck.</h3>
-      <p class="sub">You do not need to understand the whole process yet. Start with what you need today.</p>
-
-      <div class="requirements-grid">
-        <article class="requirement-card">
-          <h4>FAFSA or WASFA?</h4>
-          <p>It is okay not to know which financial-aid form fits your family. Start with the private, plain-language guide.</p>
-          <button class="mini" type="button" data-jump="aid">Compare FAFSA and WASFA &rarr;</button>
+    <section class="today-feed" aria-labelledby="today-feed-title" aria-live="polite">
+      <div class="today-feed-head">
+        <div><p class="eyebrow">Updated automatically</p><h3 id="today-feed-title">What matters right now</h3></div>
+        <span id="today-updated">Loading current information…</span>
+      </div>
+      <div class="today-grid">
+        <article class="today-card">
+          <span class="today-label">Next important date</span>
+          <h4 id="today-date-title">Loading…</h4>
+          <p id="today-date-meta">Checking the verified senior calendar.</p>
+          <a id="today-date-link" href="#deadline-calendar">Open the calendar →</a>
         </article>
-        <article class="requirement-card">
-          <h4>Find scholarships</h4>
-          <p>Search opportunities, save the ones you like, and add confirmed deadlines to your personal calendar.</p>
-          <a class="mini" href="scholarships.html">Open Scholarship Finder &rarr;</a>
+        <article class="today-card">
+          <span class="today-label">Scholarship to review</span>
+          <h4 id="today-scholarship-title">Loading…</h4>
+          <p id="today-scholarship-meta">Looking for an open opportunity that fits your saved priorities.</p>
+          <a id="today-scholarship-link" href="scholarships.html">Open Scholarship Finder →</a>
         </article>
-        <article class="requirement-card">
-          <h4>Request your transcript</h4>
-          <p>Use the College &amp; Career Center form when a college, scholarship, job, or program needs an official transcript. Sign in with your Toppenish school Google account and request it early.</p>
-          <a class="mini" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener">Open transcript request form &rarr;</a>
-        </article>
-        <article class="requirement-card">
-          <h4>Need an application fee waiver?</h4>
-          <p>Do not let an application fee stop you. See Luis Gutierrez, College &amp; Career Specialist, before you pay; students can also ask UW GEAR UP or their assigned advisory teacher for help.</p>
-          <button class="mini" type="button" data-jump="help">Find a person who can help &rarr;</button>
+        <article class="today-card">
+          <span class="today-label">Your saved progress</span>
+          <h4 id="today-plan-title">Build a three-step plan</h4>
+          <p id="today-plan-meta">Your plan and saved scholarships stay private on this device.</p>
+          <a id="today-plan-link" href="coach.html">Start my plan →</a>
         </article>
       </div>
+    </section>
+
+    <div class="start-shortcuts" aria-label="Common senior resources">
+      <a class="start-shortcut" href="scholarships.html"><p class="eyebrow">Money</p><h3>Search scholarships</h3><p>See confirmed opportunities first and save deadlines to your calendar.</p><span>Open the finder →</span></a>
+      <a class="start-shortcut" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener"><p class="eyebrow">Documents</p><h3>Request a transcript</h3><p>Send the official request directly to the College &amp; Career Center.</p><span>Open the form →</span></a>
+      <a class="start-shortcut" href="#pathways" data-jump="pathways"><p class="eyebrow">After graduation</p><h3>Compare paths</h3><p>Explore college, YVC, trades, apprenticeships, military, and work.</p><span>Choose a path →</span></a>
+      <a class="start-shortcut" href="#deadlines" data-jump="deadlines"><p class="eyebrow">Money and forms</p><h3>Pay for school</h3><p>Start with FAFSA or WASFA and learn about Washington financial aid.</p><span>See money steps →</span></a>
     </div>
 
-    
+    <details class="resource-drawer">
+      <summary>Open the full Senior Resource Desk</summary>
+      <div class="resource-drawer-body">
     <div class="sect" id="senior-resource-desk">
       <p class="eyebrow">Senior Resource Desk</p>
       <h3>What do you need to do?</h3>
@@ -1315,6 +1379,9 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
         <div class="plan-output" id="plan-output" aria-live="polite"><strong>Your plan will appear here.</strong><p>Choose what sounds closest, then show your next three actions.</p></div>
       </article>
     </div>
+
+      </div>
+    </details>
 
     <div class="sect" id="help-center">
       <p class="eyebrow">Your escape hatch</p>
@@ -2134,6 +2201,7 @@ const MS_DAY = 86400000;
 const today = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
 let calendarView = new Date(today.getFullYear(), today.getMonth(), 1);
 let calendarSelected = null;
+let dataUpdatedAt = null;
 
 /* ---------- tiny persistent store, safe everywhere ---------- */
 const Store = (() => {
@@ -2314,7 +2382,7 @@ const START_RESPONSES = {
   money:{title:"Start with Pay for School.",text:"FAFSA and WASFA are free applications. You can ask which one fits before you apply, and you do not have to choose a college first.",button:"Pay for School",target:"deadlines"},
   path:{title:"You are in the right place.",text:"The path finder compares college, YVC, trades, apprenticeships, military, and work without ranking one above the others.",button:"Open the path finder",target:"pathways"},
   scholarships:{title:"Start with Scholarships.",text:"Open opportunities appear first, followed by planning opportunities ordered by their opening date. Save the ones that fit and check the sponsor's page before applying.",button:"Find scholarships",target:"scholarships"},
-  apply:{title:"Start with your application folder.",text:"Open the Apply and Write section for essays, recommendations, transcripts, and a private story builder.",button:"Apply and Write",target:"writing"},
+  apply:{title:"Start with your application folder.",text:"Open Writing for essays, short answers, recommendations, and a private story builder.",button:"Open Writing",target:"writing"},
   help:{title:"Questions are a good starting point.",text:"Ask your assigned advisory teacher, the UW GEAR UP team, or Luis Gutierrez, College & Career Specialist. Students and parents in Mr. Barragan's advisory can also message him through ParentSquare.",button:"See help options",target:"help"}
 };
 function initStartReception(){
@@ -2574,6 +2642,94 @@ function renderNext14Days(){
       <div><strong>${esc(calendarEventLabel(item))}: ${esc(item.name)}</strong><span>${esc(item.org || "Senior year")}${item.amount ? " · " + esc(item.amount) : ""}</span></div>
       ${item.link ? `<a href="${esc(item.link)}" target="_blank" rel="noopener">Official page →</a>` : ""}
     </article>`).join("");
+}
+
+function renderTodayFeed(){
+  const updated = document.getElementById("today-updated");
+  if(!updated) return;
+  if(dataUpdatedAt){
+    const checked = new Date(dataUpdatedAt + (String(dataUpdatedAt).length === 10 ? "T12:00:00" : ""));
+    updated.textContent = "Scholarship list checked " + checked.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+  } else {
+    updated.textContent = "Uses the latest verified information on this site";
+  }
+
+  const next = confirmedCalendarItems().find(item => daysUntil(item.due) >= 0);
+  const dateTitle = document.getElementById("today-date-title");
+  const dateMeta = document.getElementById("today-date-meta");
+  const dateLink = document.getElementById("today-date-link");
+  if(next){
+    const remaining = daysUntil(next.due);
+    dateTitle.textContent = next.name;
+    dateMeta.textContent = calendarEventLabel(next) + " · " + fmt(next.due) + (remaining === 0 ? " · today" : " · " + remaining + " day" + (remaining === 1 ? "" : "s") + " away");
+    if(next.link){
+      dateLink.href = next.link;
+      dateLink.target = "_blank";
+      dateLink.rel = "noopener";
+      dateLink.textContent = "Open the official page →";
+    }
+  } else {
+    dateTitle.textContent = "No upcoming confirmed date";
+    dateMeta.textContent = "Planning dates stay out until a current source confirms them.";
+    dateLink.href = "#deadline-calendar";
+    dateLink.textContent = "Open the calendar →";
+  }
+
+  const coach = Store.get("coach", {});
+  const savedPriorities = Store.get("scholarshipPriorities", []);
+  const priorities = Array.isArray(savedPriorities) && savedPriorities.length
+    ? savedPriorities
+    : (coach && coach.branch === "scholarships" && Array.isArray(coach.selected) ? coach.selected : []);
+  const prioritySet = new Set(priorities);
+  const candidates = DEADLINES.filter(item => {
+    if(item.kind || item.planning || !item.link) return false;
+    if(item.opens && daysUntil(item.opens) > 0) return false;
+    return !item.due || daysUntil(item.due) >= 0;
+  }).map(item => {
+    const matches = (item.fit || []).filter(key => prioritySet.has(key)).length;
+    const localBoost = (item.fit || []).includes("local") ? 3 : 0;
+    return {item,matches,score:matches * 10 + localBoost};
+  }).sort((a,b) => {
+    if(b.score !== a.score) return b.score - a.score;
+    const ad = a.item.due ? daysUntil(a.item.due) : 9999;
+    const bd = b.item.due ? daysUntil(b.item.due) : 9999;
+    return ad - bd || String(a.item.name).localeCompare(String(b.item.name));
+  });
+  const best = candidates[0];
+  const scholarshipTitle = document.getElementById("today-scholarship-title");
+  const scholarshipMeta = document.getElementById("today-scholarship-meta");
+  if(best){
+    scholarshipTitle.textContent = best.item.name;
+    const timing = best.item.due ? "Due " + fmt(best.item.due) : "Open now · no fixed deadline";
+    const match = best.matches ? " · matches " + best.matches + " saved priorit" + (best.matches === 1 ? "y" : "ies") : "";
+    scholarshipMeta.textContent = timing + match;
+  } else {
+    scholarshipTitle.textContent = "Check upcoming opportunities";
+    scholarshipMeta.textContent = "No currently open scholarship was found; planning opportunities are still available.";
+  }
+
+  const saved = Store.get("saved", {});
+  const savedCount = saved && typeof saved === "object" ? Object.keys(saved).length : 0;
+  const planTitle = document.getElementById("today-plan-title");
+  const planMeta = document.getElementById("today-plan-meta");
+  const planLink = document.getElementById("today-plan-link");
+  const focusLabels = {scholarships:"scholarship",path:"pathway",apply:"application",writing:"writing",unsure:"starting"};
+  if(coach && coach.finishedAt){
+    planTitle.textContent = "Continue your " + (focusLabels[coach.branch] || "senior") + " plan";
+    planMeta.textContent = "Your private plan is saved on this device" + (savedCount ? ", along with " + savedCount + " scholarship" + (savedCount === 1 ? "" : "s") + "." : ".");
+    planLink.href = "coach.html";
+    planLink.textContent = "Continue my plan →";
+  } else if(savedCount){
+    planTitle.textContent = savedCount + " scholarship" + (savedCount === 1 ? "" : "s") + " saved";
+    planMeta.textContent = "Review the deadlines and add confirmed dates to your personal calendar.";
+    planLink.href = "scholarships.html";
+    planLink.textContent = "Open my saved list →";
+  } else {
+    planTitle.textContent = "Build a three-step plan";
+    planMeta.textContent = "Answer a few questions once; the front desk will remember your focus on this device.";
+    planLink.href = "coach.html";
+    planLink.textContent = "Start my plan →";
+  }
 }
 
 function renderCalendar(){
@@ -3360,6 +3516,7 @@ function boot(){
   initCalendar();
   renderCalendar();
   renderNext14Days();
+  renderTodayFeed();
   initEssayCoach();
   renderPaths();
   renderCompare();
@@ -3459,7 +3616,10 @@ function mapScholarship(item){
 }
 
 (function(){
-  if(location.protocol === "file:") return boot();
+  if(location.protocol === "file:"){
+    DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES);
+    return boot();
+  }
   Promise.all([
     fetch("data/scholarships.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load"))),
     fetch("data/senior-dates.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Senior dates did not load")))
@@ -3469,12 +3629,14 @@ function mapScholarship(item){
       const seniorRows = seniorData && Array.isArray(seniorData.events)
         ? seniorData.events.map(item => mapSeniorDate(item, seniorData.updatedAt)) : [];
       DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES, ...seniorRows, ...rows.map(mapScholarship));
+      dataUpdatedAt = data.updatedAt || seniorData.updatedAt || null;
       const refreshed = document.getElementById("data-updated");
       if(refreshed && data.updatedAt){
         refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
       }
     })
     .catch(() => {
+      DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES);
       const refreshed = document.getElementById("data-updated");
       if(refreshed) refreshed.innerHTML = "<strong>Scholarship list unavailable.</strong> Refresh the page or try again later.";
     })

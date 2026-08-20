@@ -4,6 +4,12 @@ A free GitHub Pages hub for Toppenish High School advisory students.
 
 The scholarship finder is also available as a separate, shareable page at `scholarships.html`. It uses the same `data/scholarships.json` source but does not include advisory-specific pages or teacher information.
 
+The free Next Steps Coach is available at `coach.html`. It asks a few plain-language questions and creates a private starting plan for scholarships, pathways, applications, or writing. It requires no account and stores choices only in the student's browser.
+
+The Start Here page acts as an automatic front desk: it pulls the next verified senior date, an open scholarship matched to saved priorities, and the student's saved plan from the existing site data. No separate “today” list has to be maintained.
+
+Scholarship priorities rank opportunities instead of excluding them. Urgent confirmed deadlines stay first, stronger matches rise within similar deadline windows, and planning opportunities remain clearly separated.
+
 ## The nightly system
 
 At about 2:15 a.m. Pacific Standard Time (3:15 a.m. during daylight saving time), GitHub Actions:
