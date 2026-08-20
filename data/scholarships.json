@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T15:31:39.416Z",
+  "updatedAt": "2026-08-20",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
   "scholarships": [
     {
@@ -1123,7 +1123,7 @@
     {
       "name": "Washington State Fair Foundation Blue Ribbon Scholarships",
       "organization": "Washington State Fair Foundation",
-      "award": "One application matches students to multiple awards; the foundation awards about $250,000 annually",
+      "award": "One application matches students to multiple awards; the foundation awards about $250,000 annually. The Korum Family Arts Scholarship includes two $2,500 awards.",
       "eligibility": "Washington residents graduating from high school or adult learners with at least a 2.7 GPA who plan an accredited two- or four-year college, university, or trade school and work, volunteer, or participate in a school activity at least eight hours per month.",
       "url": "https://www.thefair.com/foundation/scholarships/",
       "status": "Expected — last year's information",
@@ -1138,14 +1138,15 @@
         "Four-year",
         "Two-year",
         "Trades",
-        "Leadership / service"
+        "Leadership / service",
+        "Arts / writing"
       ],
       "fit": [
         "local",
         "leadership"
       ],
-      "whyFit": "Toppenish seniors qualify geographically as Washington residents, and one application can match them to several awards, including trade-school options.",
-      "needs": "Online application, unofficial transcript, activity/work/service history, and two recommendations—one academic and one from an employer, volunteer contact, or school-activity advisor.",
+      "whyFit": "Toppenish seniors qualify geographically as Washington residents, and one application can match them to several awards, including trade-school options. Students creating visual art should also review the Korum Family Arts Scholarship within this program.",
+      "needs": "Online application, unofficial transcript, activity/work/service history, and two recommendations—one academic and one from an employer, volunteer contact, or school-activity advisor. The Korum arts award also requires the current art entry.",
       "lastChecked": "2026-08-20"
     },
     {
