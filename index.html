@@ -290,7 +290,7 @@ nav.hub .row::-webkit-scrollbar{display:none}
 @media (max-width:600px){
   .tab{padding:13px 13px 11px; font-size:14px}
   .tab .num{display:none}
-  nav.hub .wrap::after{content:"";position:absolute;right:0;top:0;bottom:0;width:26px;pointer-events:none;background:linear-gradient(90deg,transparent,var(--ink))}
+  nav.hub .wrap::after{content:"";position:absolute;right:0;top:0;bottom:0;width:26px;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.98))}
 }
 
 .panel[hidden]{display:none}
@@ -691,8 +691,8 @@ nav.hub{
   font-weight:700;font-size:14px;padding:14px 16px 12px
 }
 .tab:hover{color:var(--crimson);background:var(--sand)}
-.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--crimson);background:#fff}
-.tab[aria-selected="true"] .num{color:var(--crimson)}
+.tab[aria-current="page"]{color:var(--ink);border-bottom-color:var(--crimson);background:#fff}
+.tab[aria-current="page"] .num{color:var(--crimson)}
 
 .panel-intro{padding:32px 0 14px;border-bottom:0;margin-bottom:0}
 .panel-intro h2{font-size:clamp(28px,5vw,42px);line-height:1.05;margin:5px 0 9px}
@@ -750,8 +750,8 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
 @media(max-width:560px){
   header.top .inner{padding:19px 16px 20px}
   .lockup{padding-right:0}.site-name{font-size:22px}.wildcats-script{display:none}
-  .utility{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px;margin-bottom:16px}
-  .utility button,.utility a{white-space:nowrap;font-size:12px;padding:7px 10px}
+  .utility{overflow:visible;flex-wrap:wrap;padding-bottom:0;margin-bottom:16px}
+  .utility button,.utility a{white-space:normal;font-size:12px;padding:7px 10px}
   header.top h1{font-size:36px}
   .lede{font-size:15px}
   .deadline-calendar{padding:10px 12px}
