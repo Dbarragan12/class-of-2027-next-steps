@@ -30,7 +30,7 @@ for (const item of data.scholarships) {
 }
 
 const note=review.length
-  ? "# Scholarship sources needing review\n\nOne or more official sources changed or could not be verified during the nightly check. Open each official page and update the matching record in `data/scholarships.json` before changing its status to **Confirmed for 2027**. The nightly process does not change deadlines or statuses automatically.\n\n"+review.map(item=>`- [${item.name}](${item.url}) — ${item.reason}; check result: ${item.status}`).join("\n")+"\n"
+  ? "# Scholarship sources needing review\n\nOne or more monitored sources changed or could not be checked. A change may mean a new cycle has opened. Review the source, verify the current eligibility, opening, and deadline, then update the matching record in `data/scholarships.json`. When a verified record is changed to **Confirmed for 2027** and given its current deadline, the public finder automatically displays **Open & accepting**. The nightly process never guesses or confirms dates by itself.\n\n"+review.map(item=>`- [${item.name}](${item.url}) — ${item.reason}; check result: ${item.status}`).join("\n")+"\n"
   : "# Scholarship sources needing review\n\nNo changes were detected in tonight's official-source check.\n";
 
 await mkdir("data",{recursive:true});
