@@ -1164,6 +1164,8 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
 .site-nav a:hover,.site-nav .tab:hover,nav.hub .tab:hover{background:var(--sand);color:var(--crimson)}
 .site-nav a[aria-current="page"],.site-nav .tab[aria-current="page"],nav.hub .tab[aria-current="page"]{background:#fff;color:var(--ink);border-bottom-color:var(--crimson)}
 .site-nav .nav-num,nav.hub .tab .num{color:var(--crimson);font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.calendar-strip{margin:0;border-radius:0;padding:11px 0}
+.calendar-strip .wrap{padding:0 20px}
 .start-options{margin-top:16px;border:1px solid var(--gray20);border-radius:12px;background:#fff;box-shadow:var(--shadow)}
 .start-options>summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:800;color:var(--ink)}
 .start-options>summary::-webkit-details-marker{display:none}
@@ -1204,6 +1206,30 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
   </div>
 </nav>
 
+<section class="deadline-calendar calendar-strip" id="deadline-calendar" aria-labelledby="calendar-title">
+  <div class="wrap">
+    <div class="calendar-head">
+      <div>
+        <div class="lbl" id="calendar-kicker">Important dates for seniors</div>
+        <h2 id="calendar-title">Loading important dates…</h2>
+        <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Planning dates stay out until the sponsor verifies them.</p>
+      </div>
+      <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
+    </div>
+    <div class="calendar-body" id="calendar-body" hidden>
+      <div class="calendar-actions" aria-label="Change calendar month">
+        <button type="button" id="cal-prev" aria-label="Show previous month">←</button>
+        <button type="button" id="cal-today">Today</button>
+        <button type="button" id="cal-next" aria-label="Show next month">→</button>
+      </div>
+      <div class="calendar-weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+      <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Important dates for seniors by month"></div>
+      <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
+      <div class="calendar-footer"><span id="calendar-count">Confirmed dates only</span><button type="button" id="download-confirmed-ics">Download calendar</button><button type="button" data-jump="deadlines">View money steps →</button></div>
+    </div>
+  </div>
+</section>
+
 <main id="main-content">
 <!-- ============ 01 · START HERE ============ -->
 <section class="panel" id="panel-start">
@@ -1221,28 +1247,6 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
       </div>
       <a class="btn" href="coach.html">Open Next Steps Coach →</a>
     </article>
-
-    <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
-      <div class="calendar-head">
-        <div>
-          <div class="lbl" id="calendar-kicker">Important dates for seniors</div>
-          <h2 id="calendar-title">Loading important dates…</h2>
-          <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Planning dates stay out until the sponsor verifies them.</p>
-        </div>
-        <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
-      </div>
-      <div class="calendar-body" id="calendar-body" hidden>
-        <div class="calendar-actions" aria-label="Change calendar month">
-          <button type="button" id="cal-prev" aria-label="Show previous month">←</button>
-          <button type="button" id="cal-today">Today</button>
-          <button type="button" id="cal-next" aria-label="Show next month">→</button>
-        </div>
-        <div class="calendar-weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
-        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Important dates for seniors by month"></div>
-        <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
-        <div class="calendar-footer"><span id="calendar-count">Confirmed dates only</span><button type="button" id="download-confirmed-ics">Download calendar</button><button type="button" data-jump="deadlines">View money steps →</button></div>
-      </div>
-    </section>
 
     <section class="today-feed" aria-labelledby="today-feed-title" aria-live="polite">
       <div class="today-feed-head">
@@ -1271,15 +1275,12 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
       </div>
     </section>
 
-    <details class="start-options">
-      <summary>Browse common tasks</summary>
     <div class="start-shortcuts" aria-label="Common senior resources">
       <a class="start-shortcut" href="scholarships.html"><p class="eyebrow">Money</p><h3>Search scholarships</h3><p>See confirmed opportunities first and save deadlines to your calendar.</p><span>Open the finder →</span></a>
       <a class="start-shortcut" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener"><p class="eyebrow">Documents</p><h3>Request a transcript</h3><p>Send the official request directly to the College &amp; Career Center.</p><span>Open the form →</span></a>
       <a class="start-shortcut" href="#pathways" data-jump="pathways"><p class="eyebrow">After graduation</p><h3>Compare paths</h3><p>Explore college, YVC, trades, apprenticeships, military, and work.</p><span>Choose a path →</span></a>
       <a class="start-shortcut" href="#deadlines" data-jump="deadlines"><p class="eyebrow">Money and forms</p><h3>Pay for school</h3><p>Start with FAFSA or WASFA and learn about Washington financial aid.</p><span>See money steps →</span></a>
     </div>
-    </details>
 
     <details class="resource-drawer">
       <summary>Open the full Senior Resource Desk</summary>

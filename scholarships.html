@@ -152,7 +152,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 
 <main>
   <div class="wrap">
-    <details class="notice"><summary>How dates are ordered and verified</summary><p><strong>Open &amp; accepting applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Tentative planning cards follow by their projected opening. Every tentative opening or deadline is based on a dated previous-cycle sponsor or school source; it is not guaranteed and will be updated when the new cycle is released. Tentative cards never create calendar events.</p></details>
+    <details class="notice" open><summary>How dates are ordered and verified</summary><p><strong>Open &amp; accepting applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Tentative planning cards follow by their projected opening. Every tentative opening or deadline is based on a dated previous-cycle sponsor or school source; it is not guaranteed and will be updated when the new cycle is released. Tentative cards never create calendar events.</p></details>
   </div>
 
   <section class="tools" aria-label="Scholarship search and filters">
@@ -163,10 +163,12 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
         <button class="btn ghost" id="show-saved" type="button">My saved <span id="saved-number">0</span></button>
       </div>
       <div class="finder-guide"><div><strong>Want help choosing where to begin?</strong> Answer a few questions and the Coach will personalize your starting plan.</div><a class="btn ghost" href="coach.html">Personalize my plan →</a></div>
-      <details class="tool-more"><summary>Save, email, or download your list</summary><div class="tool-more-actions"><button class="btn ghost" id="copy-saved" type="button">Copy my list</button><button class="btn" id="email-saved" type="button">Email my list</button><button class="btn ghost" id="calendar-saved" type="button">Calendar for saved</button></div></details>
+      <div class="tool-more-actions"><button class="btn ghost" id="copy-saved" type="button">Copy my list</button><button class="btn" id="email-saved" type="button">Email my list</button><button class="btn ghost" id="calendar-saved" type="button">Calendar for saved</button></div>
       <p class="saved-count"><strong id="result-count">0</strong> opportunities shown · saved scholarships stay on this device</p>
       <p class="saved-count">Calendar downloads include two reminders: 7 days before a confirmed deadline and 1 day before.</p>
-      <details class="filter-drawer"><summary>Personalize results — tap all that apply</summary><p class="filter-label">What should we prioritize?</p><div class="chips" id="filters" role="group" aria-label="Prioritize scholarships for selected student groups"></div><p class="saved-count">Your choices improve the ranking. They do not hide other opportunities you may qualify for.</p></details>
+      <p class="filter-label">Personalize results — tap all that apply</p>
+      <div class="chips" id="filters" role="group" aria-label="Prioritize scholarships for selected student groups"></div>
+      <p class="saved-count">Your choices improve the ranking. They do not hide other opportunities you may qualify for.</p>
     </div>
   </section>
 
