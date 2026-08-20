@@ -29,12 +29,16 @@ for (const item of data.scholarships) {
   }
 }
 
-const note=review.length
-  ? "# Scholarship sources needing review\n\nOne or more monitored sources changed or could not be checked. A change may mean a new cycle has opened. Review the source, verify the current eligibility, opening, and deadline, then update the matching record in `data/scholarships.json`. When a verified record is changed to **Confirmed for 2027** and given its current deadline, the public finder automatically displays **Open & accepting**. The nightly process never guesses or confirms dates by itself.\n\n"+review.map(item=>`- [${item.name}](${item.url}) — ${item.reason}; check result: ${item.status}`).join("\n")+"\n"
-  : "# Scholarship sources needing review\n\nNo changes were detected in tonight's official-source check.\n";
+const unavailable=review.filter(item=>item.status==="error" || Number(item.status)<200 || Number(item.status)>=400);
+const changed=review.filter(item=>!unavailable.includes(item));
+const updatedAt=new Date().toISOString();
+const renderSection=(title,items)=>items.length
+  ? `## ${title}\n\n${items.map(item=>`- [${item.name}](${item.url}) — ${item.reason}; check result: ${item.status}`).join("\n")}\n`
+  : `## ${title}\n\nNone tonight.\n`;
+const note=`# Scholarship source review\n\nChecked: ${updatedAt}\n\nThe overnight check only flags sources for staff review. It does not add scholarships, confirm dates, or change eligibility automatically. For a changed page, open the official source and look for the new cycle. For an unavailable page, repair or replace the link before publishing.\n\n${renderSection("Official page changed — review for new-cycle information",changed)}\n${renderSection("Link unavailable or check failed — repair or replace the source",unavailable)}`;
 
 await mkdir("data",{recursive:true});
-await writeFile("data/source-checks.json",JSON.stringify({updatedAt:new Date().toISOString(),checks},null,2)+"\n");
+await writeFile("data/source-checks.json",JSON.stringify({updatedAt,checks},null,2)+"\n");
 await writeFile("data/review-needed.md",note);
 await writeFile("data/scholarships.json",JSON.stringify(data,null,2)+"\n");
 console.log(`Checked ${checks.length} official sources; ${review.length} need review.`);

@@ -20,7 +20,7 @@ At about 2:15 a.m. Pacific Standard Time (3:15 a.m. during daylight saving time)
 
 The site never changes an expected deadline into a confirmed deadline on its own. That protects students from an incorrect date. A changed official page is flagged so its exact new information can be verified and then updated manually. The overnight job never imports Airtable, deletes manual records, or publishes a new scholarship automatically. It also stops if the list is empty.
 
-To add or update a scholarship, edit `data/scholarships.json` manually, verify the official source, and commit the change. The nightly check will preserve it and update its `lastChecked` date when the official page responds.
+To add or update a scholarship, edit `data/scholarships.json` manually, verify the official source, and commit the change. The nightly check will preserve it and update its `lastChecked` date when the official page responds. Use `gpaMin` only when the sponsor clearly lists a minimum GPA; the finder uses it to explain academic fit, never to hide a student from an opportunity. Keep `needs` and `effort` current so students can see what to prepare and how much time to plan.
 
 ## One-time setup
 
@@ -44,4 +44,4 @@ The finder also links to public GitHub review forms for scholarship submissions,
 
 The scholarship board is intentionally broad: a card may be Toppenish-, Yakima Valley-, Washington-, Pacific Northwest-, or nationally available when at least one Toppenish student may qualify. Students must still read the card's exact eligibility condition.
 
-The free, no-AI workflow can verify official sources and flag changes every night. Reliable automatic discovery and eligibility judgment for five brand-new scholarships every night requires a paid research/AI service or a staff review queue. Do not automatically publish unverified scholarship search results to students.
+The free, no-AI workflow can verify official sources and flag changes every night. Reliable automatic discovery and eligibility judgment for five brand-new scholarships every night requires a paid research/AI service or a staff review queue. Do not automatically publish unverified scholarship search results to students. The nightly report in `data/review-needed.md` separates official pages that changed from links that failed, so staff can triage the right kind of follow-up first.

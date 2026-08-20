@@ -78,6 +78,7 @@
     {
       "name": "Horse Heaven Hills Wine Growers Scholarship",
       "organization": "Washington Wine Industry Foundation",
+      "gpaMin": 3,
       "award": "Two $3,000 awards in the 2026 cycle",
       "eligibility": "Students with a 3.0+ GPA studying viticulture, enology, wine business, or wine-related hospitality; preference goes to Yakima, Benton, or Klickitat County residents whose parent works in Washington's wine industry.",
       "url": "https://washingtonwinefoundation.org/scholarships/",
@@ -103,6 +104,7 @@
     {
       "name": "Walter Clore Scholarship",
       "organization": "Washington Wine Industry Foundation",
+      "gpaMin": 3,
       "award": "Awards start at $1,000",
       "eligibility": "Students with a 3.0+ GPA studying a wine- or viticulture-related field at a Washington college, university, community college, or technical school.",
       "url": "https://washingtonwinefoundation.org/scholarships/",
@@ -127,6 +129,7 @@
     {
       "name": "George & Susan Carter Scholarship",
       "organization": "Washington Wine Industry Foundation",
+      "gpaMin": 3.4,
       "award": "$1,000 per year, renewable for up to four years",
       "eligibility": "Students with a 3.4+ high school GPA pursuing viticulture, enology, or related food-science study; financial need is preferred.",
       "url": "https://washingtonwinefoundation.org/scholarships/",
@@ -179,6 +182,7 @@
     {
       "name": "Coca-Cola Scholars Program Scholarship",
       "organization": "Coca-Cola Scholars Foundation",
+      "gpaMin": 3,
       "award": "$20,000",
       "eligibility": "Current Class of 2027 seniors who plan to attend an accredited U.S. college, have a 3.0+ GPA, and meet federal-aid citizenship/residency categories. Strong leadership and service record expected.",
       "url": "https://www.coca-colascholarsfoundation.org/apply/",
@@ -795,6 +799,7 @@
     {
       "name": "American Indian College Fund Full Circle Scholarship",
       "organization": "American Indian College Fund",
+      "gpaMin": 2,
       "award": "Multiple scholarship opportunities through one application; awards vary",
       "eligibility": "Native American or Alaska Native students who can document tribal enrollment or descendancy, have at least a 2.0 GPA, and plan full-time enrollment at a nonprofit accredited college or university.",
       "url": "https://collegefund.org/students/scholarships/college-students/",
@@ -854,6 +859,7 @@
     {
       "name": "Smart Choices Scholarship",
       "organization": "WIAA, Gesa Credit Union, and Dairy Farmers of Washington",
+      "gpaMin": 3,
       "award": "Two $5,000 awards and eight $1,000 awards",
       "eligibility": "Graduating seniors at WIAA member high schools with at least a 3.0 GPA who participated in school athletics or activities and can show leadership, academics, and community service.",
       "url": "https://www.wiaa.com/smart-choices-scholarship-welcome/",
@@ -909,6 +915,7 @@
     {
       "name": "HSF Scholar Program",
       "organization": "Hispanic Scholarship Fund",
+      "gpaMin": 3,
       "award": "$500–$5,000 awards may be available based on funding and financial need",
       "eligibility": "Students of Hispanic heritage who meet the current citizenship or eligible-status rules, have at least a 3.0 high school GPA, and plan full-time enrollment at an accredited nonprofit four-year university.",
       "url": "https://www.hsf.net/scholarship/",
@@ -1123,6 +1130,7 @@
     {
       "name": "Washington State Fair Foundation Blue Ribbon Scholarships",
       "organization": "Washington State Fair Foundation",
+      "gpaMin": 2.7,
       "award": "One application matches students to multiple awards; the foundation awards about $250,000 annually. The Korum Family Arts Scholarship includes two $2,500 awards.",
       "eligibility": "Washington residents graduating from high school or adult learners with at least a 2.7 GPA who plan an accredited two- or four-year college, university, or trade school and work, volunteer, or participate in a school activity at least eight hours per month.",
       "url": "https://www.thefair.com/foundation/scholarships/",
@@ -1208,6 +1216,7 @@
     {
       "name": "YVC Foundation General Scholarship",
       "organization": "Yakima Valley College Foundation",
+      "gpaMin": 2,
       "award": "One application matches students to more than 150 scholarships; the average award is about $4,000",
       "eligibility": "Incoming and current Yakima Valley College students, including undocumented students. Most awards require at least a 2.0 GPA, though individual criteria vary.",
       "url": "https://yvcc.edu/foundation/scholarships-awards-faq.php",
@@ -1267,6 +1276,7 @@
     {
       "name": "Eastern Washington University Scholarship Consideration",
       "organization": "Eastern Washington University",
+      "gpaMin": 2.8,
       "award": "Automatic consideration for EWU scholarships; awards vary",
       "eligibility": "Students applying to Eastern Washington University who meet the current admission and individual scholarship requirements. Prior guidance listed a 2.8 GPA for the general scholarship process, but students should use EWU's current requirements.",
       "url": "https://www.ewu.edu/apply/financial-aid-scholarships-office/",
@@ -1463,6 +1473,7 @@
     {
       "name": "P.E.O. STAR Scholarship",
       "organization": "P.E.O. Sisterhood",
+      "gpaMin": 3,
       "award": "$2,500 one-time scholarship",
       "eligibility": "Chapter nomination required: women in their final year of high school, age 20 or younger at year-end, with a 3.0+ unweighted GPA, U.S. or Canadian citizenship or permanent residency, leadership and service, and plans for accredited U.S. or Canadian postsecondary study.",
       "url": "https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/",
@@ -1509,6 +1520,7 @@
     {
       "name": "Hagan Scholarship",
       "organization": "Hagan Scholarship Foundation",
+      "gpaMin": 3.5,
       "award": "Up to $7,500 per semester for up to 8 semesters, plus college-start and study-abroad benefits",
       "eligibility": "Class of 2027 seniors at a U.S. high school with a 3.50+ unweighted GPA, parents' 2025 adjusted gross income of $125,000 or less, plans for an eligible four-year college, and the ability to complete 240 paid work hours from January 1–September 1, 2027.",
       "url": "https://haganscholarships.org/application/",
@@ -1580,6 +1592,7 @@
     {
       "name": "The Gates Scholarship",
       "organization": "The Gates Scholarship",
+      "gpaMin": 3.3,
       "award": "Last-dollar support for remaining full cost of attendance",
       "eligibility": "High school seniors who are Pell-eligible U.S. citizens or permanent residents with a 3.3+ cumulative weighted GPA and plans for a full-time, four-year degree at an accredited U.S. nonprofit college or university.",
       "url": "https://www.thegatesscholarship.org/scholarship/",

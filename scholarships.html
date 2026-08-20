@@ -79,6 +79,7 @@ main{padding-bottom:42px}
 .eligibility,.why{margin:0;color:var(--muted);font-size:14px}.why{padding-left:10px;border-left:3px solid var(--rose-lt)}
 .card-more{margin:0;border-top:1px solid var(--gray20);padding-top:9px}.card-more summary{font-size:13px;color:var(--crimson)}.more-body{display:grid;gap:9px;padding-top:9px}
 .prep{font-size:13px;color:var(--muted);background:var(--sand);border-radius:7px;padding:9px 10px}.prep strong{color:var(--ink)}
+.prep-note{font-size:13px;color:var(--muted);margin:0}.prep-note strong{color:var(--ink)}
 .card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:3px}
 .save{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:800;cursor:pointer}.save input{width:17px;height:17px;accent-color:var(--crimson)}
 .card-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.sponsor,.calendar-link{font-size:13px;font-weight:800;text-decoration:none}.sponsor:hover{text-decoration:underline}
@@ -88,6 +89,7 @@ main{padding-bottom:42px}
 .lower-card{background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:19px;box-shadow:var(--shadow)}
 .lower-card h2{font-size:22px;margin:0 0 8px}.lower-card p{margin:0 0 10px;color:var(--muted);font-size:14px}.lower-card ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:14px}.lower-card li{margin:5px 0}
 .privacy{border-top:4px solid var(--sage)}
+.es-guide{grid-column:1/-1}.es-guide h2{margin-bottom:8px}.es-guide h3{font-size:17px;margin:0 0 6px}.es-guide p{margin:0}.es-guide a{color:var(--crimson);font-weight:800}.es-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:16px}.es-grid section{display:grid;gap:7px}.es-grid ul{margin:0;padding-left:19px;display:grid;gap:5px}.es-callout{background:var(--sand);border-radius:9px;padding:12px 14px;margin-top:16px}.es-callout strong{color:var(--ink)}
 .updates{border-top:4px solid var(--crimson)}
 .submission-area{margin-top:30px;background:#fff;border:1px solid var(--gray20);border-top:4px solid var(--rose);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
 .submission-area h2{font-size:24px;margin:0 0 8px}.submission-area>p{margin:0;color:var(--muted);font-size:14px;max-width:72ch}
@@ -126,6 +128,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 .tool-more[open] summary::after,.filter-drawer[open] summary::after{content:"−"}
 .tool-more-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
 @media(max-width:650px){.top .inner{padding:0 16px}.top-links a:nth-child(n+3){display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}}
+@media(max-width:650px){.es-grid{grid-template-columns:1fr;gap:15px}}
 </style>
 </head>
 <body>
@@ -198,10 +201,38 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
       <p><strong>Privacy:</strong> addresses are kept in a private work Google Sheet. You can use the same form at any time to unsubscribe. Use <em>Email my list</em> to send saved opportunities to yourself.</p>
       <details><summary>What will automatic updates do?</summary><p>When the overnight check finds a new confirmed deadline or a changed official scholarship page, the connected mailing service can send an opt-in message. Planning dates will not trigger a “confirmed” alert.</p></details>
     </article>
-    <article class="lower-card privacy" id="families" lang="es">
-      <h2>Family guidance · Español</h2>
-      <p>No se paga para solicitar una beca. Lea los requisitos con cuidado y use la página oficial del patrocinador antes de compartir información personal.</p>
-      <ul><li>Una beca puede ser local, estatal o nacional.</li><li>La ayuda puede depender del programa de estudio, trabajo familiar, ingresos, identidad o experiencia de vida.</li><li>Guarde una copia de cada solicitud y confirmación.</li></ul>
+    <article class="lower-card privacy es-guide" id="families" lang="es">
+      <h2>Ayuda para familias · Español</h2>
+      <p>Esta guía está hecha para ayudar a estudiantes y familias a dar el siguiente paso sin tener que entender todo de una vez. No se paga para solicitar una beca.</p>
+      <div class="es-grid">
+        <section>
+          <h3>Empiece aquí</h3>
+          <ul>
+            <li>Use los filtros para encontrar oportunidades que pueden tener sentido para su estudiante. “Latino / Hispanic” ayuda a ordenar resultados; no es una obligación ni una decisión sobre la identidad de nadie.</li>
+            <li>Abra cada tarjeta y lea “Qué necesitará”, el GPA indicado y la fecha. Confirme todo en la página oficial del patrocinador.</li>
+            <li>Guarde las becas y use <strong>Agregar al calendario</strong>. Las fechas confirmadas incluyen avisos 7 días antes y 1 día antes.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Qué conviene preparar</h3>
+          <ul>
+            <li>Una cuenta de correo personal que el estudiante revise con frecuencia.</li>
+            <li>Transcripción, actividades, trabajo, servicio, responsabilidades familiares y datos de las personas que pueden recomendarle.</li>
+            <li>Una carpeta para guardar solicitudes, fechas, confirmaciones y documentos. No guarde información privada en una computadora compartida.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Cómo pagar los estudios</h3>
+          <p>FAFSA y WASFA son solicitudes gratuitas para ayuda financiera. No tiene que escoger una universidad antes de pedir ayuda. Si no sabe cuál formulario corresponde, no adivine.</p>
+          <p><a href="https://studentaid.gov/" target="_blank" rel="noopener">Guía oficial de FAFSA ↗</a> · <a href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">Guía oficial de WASFA ↗</a></p>
+        </section>
+        <section>
+          <h3>Ayuda en Toppenish</h3>
+          <p>El estudiante puede pedir ayuda a su maestro de advisory, al equipo de UW GEAR UP o a <strong>Luis Gutierrez, College &amp; Career Specialist</strong>. Luis también puede ayudar con los fee waivers para solicitudes y exámenes.</p>
+          <p>Comparta la página exacta, el formulario o la pregunta. Pedir ayuda temprano evita pagar una cuota o perder una fecha.</p>
+        </section>
+      </div>
+      <div class="es-callout"><strong>Evite estafas:</strong> no pague por solicitar una beca, no entregue su número de Seguro Social por un enlace inesperado y use primero la página oficial del patrocinador. Para recibir nuevas becas confirmadas y cambios importantes, puede <a href="https://docs.google.com/forms/d/1O0eOgZ8WQS8mz7uFbBUrUlBHjXXHUZmOiDqbgC6wo1Q/viewform" target="_blank" rel="noopener">suscribirse o cancelar suscripción aquí ↗</a>.</div>
     </article>
   </section>
 </main>
@@ -235,6 +266,21 @@ function fmt(s){const d=parseDate(s);return d?d.toLocaleDateString("en-US",{mont
 function monthYear(s){const d=parseDate(s);return d?d.toLocaleDateString("en-US",{month:"short",year:"numeric"}):"Check date"}
 function idOf(item){return String(item.name).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
 function esc(s){return String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[c]))}
+function gpaMinimum(item){
+  const explicit=Number(item.gpaMin ?? item.minimumGpa ?? item.minGpa);
+  if(Number.isFinite(explicit))return explicit;
+  const hay=[item.name,item.eligibility,item.whyFit].join(" ");
+  const match=hay.match(/(\d(?:\.\d)?)\s*\+?(?:\s+(?:unweighted|weighted|cumulative|high|school)){0,5}\s*GPA/i)||hay.match(/(?:GPA|grade point average)[^0-9]{0,18}(\d(?:\.\d)?)/i);
+  return match?Number(match[1]):null;
+}
+function effortLabel(item){
+  if(item.effort==="low")return "Quick start · about 20–45 minutes";
+  if(item.effort==="high")return "More time · about 1–3 hours";
+  const hay=[item.name,item.eligibility,item.whyFit,item.needs].join(" ").toLowerCase();
+  if(/no essay|no gpa|no test score/.test(hay))return "Quick start · about 20–45 minutes";
+  if(/recommendation|reference|multiple essays|letters|transcript/.test(hay))return "More time · about 1–3 hours";
+  return "Plan for · about 45–90 minutes";
+}
 function nextCycleDate(lastDate){const d=parseDate(lastDate);if(!d)return null;let n=new Date(today.getFullYear(),d.getMonth(),d.getDate());if(n<=today)n=new Date(today.getFullYear()+1,d.getMonth(),d.getDate());return n}
 function isoDate(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
 function predictedOpenDate(item){const d=nextCycleDate(item.lastYearDeadline);if(!d)return null;d.setDate(d.getDate()-60);return isoDate(d)}
@@ -248,7 +294,7 @@ function mapItem(item){
   if(/latino|hispanic|latina|latine/.test(hay)&&!fit.includes("latino"))fit.push("latino");
   if(/farmworker|farm worker|agriculture|migrant|viticulture|vineyard|wine|dairy|tree fruit/.test(hay)&&!fit.includes("ag"))fit.push("ag");
   if(!fit.length)fit.push("everyone");
-  return {...item,id:idOf(item),planning,opens,tentativeDeadline:projectedDue,fit,openLabel:planning?(item.openLabel||null):null};
+  return {...item,id:idOf(item),planning,opens,tentativeDeadline:projectedDue,fit,gpaMin:gpaMinimum(item),effortLabel:effortLabel(item),openLabel:planning?(item.openLabel||null):null};
 }
 function statusFor(item){
   if(item.planning){
@@ -300,7 +346,7 @@ function card(item){
     ${matchLine}
     <div class="card-head"><div><h3>${esc(item.name)}</h3><div class="org">${esc(item.organization||"Scholarship sponsor")}</div></div><div class="status">${esc(st.label)}<small>${esc(st.detail)}</small></div></div>
     <p class="eligibility">${esc(item.eligibility||"Read the sponsor's current requirements.")}</p>
-    <details class="card-more"><summary>See eligibility details, source, and what you'll need</summary><div class="more-body">${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}<div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div>${history}</div></details>
+    <details class="card-more"><summary>See eligibility details, source, and what you'll need</summary><div class="more-body">${item.whyFit?`<p class="why">${esc(item.whyFit)}</p>`:""}<p class="prep-note"><strong>GPA:</strong> ${item.gpaMin?`${esc(item.gpaMin.toFixed(1))}+ listed in the current record — verify on the sponsor page.`:"No GPA minimum is listed in the current record — check the sponsor page."}</p><p class="prep-note"><strong>Suggested time:</strong> ${esc(item.effortLabel)}</p><div class="prep"><strong>What you'll need:</strong> ${esc(item.needs||"Open the sponsor page and list every document before you begin.")}</div>${history}</div></details>
     ${opening}<div class="why">${due}</div>
     <div class="card-foot"><label class="save"><input type="checkbox" ${checked?"checked":""}> Save this</label><div class="card-actions">${item.deadline&&daysUntil(item.deadline)>=0?`<button class="calendar-link" type="button">Add to calendar</button>`:""}<a class="sponsor" href="${esc(item.url)}" target="_blank" rel="noopener">${item.planning?"Check for current information ↗":"Open sponsor page ↗"}</a></div></div>`;
   el.querySelector("input").addEventListener("change",e=>{if(e.target.checked){saved[item.id]=true;toast("Saved to your list.")}else{delete saved[item.id];toast("Removed from your list.")}saveState();render()});
