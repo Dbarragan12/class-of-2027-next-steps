@@ -13,7 +13,7 @@ This is the standing contract for the Class of 2027 scholarship pipeline.
 
 ## Safe-to-publish contract
 
-Every public scholarship must have all six:
+Every confirmed public scholarship must have all six:
 
 1. A specific deadline or explicit rolling/year-round status.
 2. The deadline read on the sponsor's official page or official application document.
@@ -22,19 +22,21 @@ Every public scholarship must have all six:
 5. Controlled-vocabulary `tags` and `fit` arrays after normalization.
 6. A `lastChecked` date. Recheck records older than about 60 days before publishing again.
 
-Long-running expected scholarships may use 2025–26 school-year information, or the most recent official cycle available, to help students prepare before the new cycle is released. They must include a prior deadline, sponsor link, eligibility summary, controlled tags, and last-checked date. The card should show the expected opening month/year—or the recurring opening date when the sponsor publishes one—and warn that the deadline, award, eligibility rules, and even whether the program returns may change.
+Recurring opportunities may appear as tentative planning cards even when there is only a small chance they return. A dated sponsor source or a dated school-hosted prior-cycle post, application, flyer, or document may establish that the opportunity existed. Each planning card must name the source cycle, include a source note or historical-source link, provide a self-assessable eligibility summary, controlled tags, and a last-checked date, and state plainly that the opening, deadline, award, requirements, and return are not guaranteed.
+
+When a prior deadline is known, project that month and day into the 2026–27 cycle and label it **Tentative deadline — based on previous data; not guaranteed**. If the archive does not preserve a prior deadline, do not invent one. Tentative records never create calendar events. Once a person verifies a current-cycle opening and deadline from the new sponsor or school source, update the record to confirmed; the finder will automatically display **Open & accepting** and use the confirmed deadline.
 
 Geographic reach is intentionally broad: Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. A narrow opportunity is still publishable when at least one Toppenish student may qualify, but the card must name the qualifying condition plainly (such as a specific program, family employer, tribal affiliation, identity, or life experience). “Broad access” does not mean every student qualifies.
 
 Candidates that fail any gate remain unpublished. Never bulk-import an archive or aggregator.
 
-Community submissions, corrections, and program/resource leads enter the GitHub review queue through the public issue templates. They are never published automatically. Reviewers must verify the official source and remove or reject any submission containing private student information before considering publication.
+Community submissions, corrections, and program/resource leads enter through the public Google review form and its private review dashboard. They are never published automatically. Reviewers must verify the source and remove or reject any submission containing private student information before considering publication.
 
 ## Nightly behavior
 
-The nightly workflow checks links and detects source changes in the existing manually maintained list. It must never import Airtable, replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain expected until a person verifies the new cycle. If the list is empty, the workflow must fail safely instead of committing an empty file.
+The nightly workflow checks links and detects source changes in the existing manually maintained list. A changed source is a prompt to check whether the new cycle opened. The workflow must never import Airtable, replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain tentative until a person verifies the new cycle and enters the current opening and deadline. The finder then changes the public label automatically. If the list is empty, the workflow must fail safely instead of committing an empty file.
 
-The public GitHub Pages site cannot securely collect email addresses or send automatic notifications by itself. Until a private mailing-list service is connected and reviewed, the finder may open a student's own email program or copy a saved list, but it must not store subscriber addresses in the repository or send unapproved messages.
+The public site must never store subscriber addresses in the repository. Subscription choices and addresses belong only in the connected private Google Workspace form/sheet workflow. Public scholarship cards may open a student's own email program, copy a saved list, or download confirmed deadlines to a personal calendar.
 
 ## Local employer pattern
 
