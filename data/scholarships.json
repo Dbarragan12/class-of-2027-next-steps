@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T14:39:42.338Z",
+  "updatedAt": "2026-08-20T15:31:39.416Z",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
   "scholarships": [
     {
@@ -1762,6 +1762,59 @@
       "fit": [],
       "whyFit": "A reach opportunity for a Toppenish student who loves science and can explain a complex idea clearly and creatively on video.",
       "needs": "Online profile, age-verification document, a public YouTube video of two minutes or less, application materials, and peer reviews of at least five other entries.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Yakima Federal Award for Academic Excellence",
+      "organization": "Yakima Federal Savings and Loan",
+      "award": "Up to 80 awards of $2,500 in the 2026 cycle",
+      "eligibility": "Graduating high-school seniors who live in Yakima, Benton, Franklin, or Kittitas County, rank in the top 10% of their class, and plan to enroll at an accredited college, community college, university, or technical school.",
+      "url": "https://www.yakimafed.com/scholarship/",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-04-20",
+      "expectedWindow": "Expected to open around February 2027 based on the 2026 cycle; last year's deadline was April 20. The new date may change.",
+      "tags": [
+        "Yakima County",
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "Toppenish is in Yakima County, and two Toppenish seniors received this award in the 2026 cycle. It is a strong planning target for students in the top 10% of their class with leadership and service.",
+      "needs": "One-page motivation letter, two recommendations, school verification of top-10% standing, and proof of college, community-college, university, or technical-school acceptance when requested.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Northwest Farm Credit Diversity Scholarship",
+      "organization": "Northwest Farm Credit Services",
+      "award": "$2,500",
+      "eligibility": "High school seniors or current college students from underrepresented groups who are pursuing a profession or technical career that will positively influence Northwest agriculture.",
+      "url": "https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1",
+      "status": "Expected — last year's information",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2026-03-01",
+      "expectedWindow": "The sponsor describes this as an annual program with a March 1 deadline. Begin checking for the 2027 application in January; the new date may change.",
+      "tags": [
+        "Washington",
+        "Agriculture",
+        "Trades",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "local",
+        "ag"
+      ],
+      "whyFit": "A strong agriculture or technical-career planning opportunity for Toppenish students from underrepresented backgrounds whose education plans connect to Northwest agriculture.",
+      "needs": "Current sponsor application, education and career plan, activities and leadership history, and the supporting materials requested for the 2027 cycle.",
       "lastChecked": "2026-08-20"
     }
   ]
