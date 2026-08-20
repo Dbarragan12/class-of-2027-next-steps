@@ -936,6 +936,47 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
   margin-top:26px;background:var(--sage-bg);border:1px solid #bdd8c9;border-left:5px solid var(--sage);
   border-radius:0 10px 10px 0;padding:13px 16px;color:var(--ink);font-size:14.5px
 }
+.essay-personalizer{
+  margin:18px 0 22px;background:#fff;border:1px solid var(--gray20);border-radius:14px;
+  padding:22px;box-shadow:var(--shadow)
+}
+.essay-personalizer-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:16px}
+.essay-personalizer-head h3{font-size:clamp(25px,4vw,34px);margin:2px 0 5px}
+.essay-personalizer-head p{margin:0;color:var(--muted);max-width:65ch;font-size:15px}
+.essay-private-pill{
+  flex:0 0 auto;background:var(--sage-bg);color:var(--sage);border:1px solid #bdd8c9;
+  border-radius:999px;padding:7px 10px;font:800 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.05em;text-transform:uppercase
+}
+.essay-stage-grid{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;border:0;padding:0;margin:0 0 15px
+}
+.essay-stage-choice{
+  display:flex;gap:8px;align-items:flex-start;min-height:86px;padding:12px;cursor:pointer;
+  background:var(--paper);border:2px solid var(--gray20);border-radius:10px
+}
+.essay-stage-choice:hover{border-color:var(--rose)}
+.essay-stage-choice.is-selected{border-color:var(--crimson);background:var(--warn-bg)}
+.essay-stage-choice input{width:17px;height:17px;accent-color:var(--crimson);margin:2px 0 0;flex:0 0 auto}
+.essay-stage-choice strong,.essay-stage-choice small{display:block}
+.essay-stage-choice strong{font-family:"Bricolage Grotesque",sans-serif;font-size:15px;line-height:1.2}
+.essay-stage-choice small{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.3}
+.essay-personal-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:14px;align-items:end}
+.essay-personalizer select{
+  width:100%;font:inherit;font-size:15px;padding:10px 36px 10px 12px;border:1.5px solid var(--gray20);
+  border-radius:8px;background:var(--paper);color:var(--ink)
+}
+.essay-route{
+  margin-top:16px;background:var(--ink);color:#fff;border-radius:12px;padding:19px 20px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center
+}
+.essay-route .eyebrow{color:var(--rose-lt);margin-bottom:4px}
+.essay-route h4{font-size:23px;margin:0 0 5px}
+.essay-route p{color:var(--gray20);font-size:14.5px;margin:0;max-width:70ch}
+.essay-route .btn{background:#fff;color:var(--ink);border-color:#fff;white-space:nowrap}
+.essay-route .btn:hover{background:var(--rose-lt);border-color:var(--rose-lt)}
+.essay-route-questions{margin:12px 0 0;padding-left:20px;color:var(--gray20);font-size:13.5px}
+.essay-route-questions li{margin-bottom:4px}
 .essay-progress-shell{
   margin:16px 0 22px;background:#fff;border:1px solid var(--gray20);border-radius:12px;
   padding:16px 18px;box-shadow:var(--shadow)
@@ -1021,6 +1062,19 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
 .essay-feedback-card h4{font-size:19px;margin-bottom:7px}
 .essay-feedback-card p,.essay-feedback-card ol{font-size:14.5px;color:var(--muted);margin-bottom:0}
 .essay-feedback-card ol{padding-left:19px;margin-top:7px}.essay-feedback-card li{margin-bottom:5px}
+.essay-private-check{
+  margin:18px 0;background:var(--sage-bg);border:1px solid #bdd8c9;border-radius:12px;padding:18px
+}
+.essay-private-check-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.essay-private-check-head h4{font-size:22px;margin:0 0 4px}
+.essay-private-check-head p{margin:0;color:var(--muted);font-size:13.5px;max-width:64ch}
+.essay-diagnostics{margin-top:15px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.essay-diagnostic-group{background:#fff;border:1px solid #cbded3;border-radius:9px;padding:14px}
+.essay-diagnostic-group h5{font-family:"Bricolage Grotesque",sans-serif;font-size:16px;margin:0 0 7px}
+.essay-diagnostic-group ul{margin:0;padding-left:18px;color:var(--muted);font-size:13.5px}
+.essay-diagnostic-group li{margin-bottom:5px}
+.essay-diagnostic-group li:last-child{margin-bottom:0}
+.essay-diagnostics-note{grid-column:1/-1;margin:0;color:var(--muted);font-size:12.5px}
 .essay-help-section{margin-top:38px}
 .essay-mini-prompt{border-top:1px solid var(--gray20);padding:13px 0}
 .essay-mini-prompt:first-child{border-top:0;padding-top:4px}
@@ -1035,11 +1089,18 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
 
 @media(max-width:760px){
   .essay-truth{grid-template-columns:1fr}
+  .essay-stage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .essay-route{grid-template-columns:1fr}
+  .essay-route .btn{width:100%;text-align:center}
   .essay-type-grid{grid-template-columns:1fr}
   .essay-choice{min-height:0}
-  .essay-story-grid,.essay-feedback-grid{grid-template-columns:1fr}
+  .essay-story-grid,.essay-feedback-grid,.essay-diagnostics{grid-template-columns:1fr}
 }
 @media(max-width:560px){
+  .essay-personalizer{padding:18px 14px}
+  .essay-personalizer-head{display:block}.essay-private-pill{display:inline-block;margin-top:10px}
+  .essay-stage-grid,.essay-personal-controls{grid-template-columns:1fr}
+  .essay-stage-choice{min-height:0}
   .essay-step{padding:18px 15px;border-radius:11px}
   .essay-step-heading{align-items:flex-start}
   .essay-step-number{width:34px;height:34px;font-size:16px}
@@ -1049,6 +1110,8 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
   .essay-outline-card{padding:16px 13px}
   .essay-draft-box{padding:15px}.essay-draft-box textarea{min-height:280px}
   .essay-draft-box .counter{width:100%;margin-left:0}
+  .essay-private-check-head{display:block}
+  .essay-private-check-head .btn{width:100%;margin-top:12px}
 }
 
 @media(max-width:860px){
@@ -1409,7 +1472,7 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
             <p>Show your teacher the page, form, deadline, or question that has you stuck so you can work through the next action together.</p>
           </div>
         </div>
-        <p class="support-tip"><strong>In Mr. Barragan's advisory?</strong> Students and parents may also message him through ParentSquare.</p>
+        <p class="support-tip"><strong>Need help?</strong> Students and families should contact their assigned advisory teacher or the College &amp; Career Center. Ask Luis Gutierrez about fee waivers. UW GEAR UP can also help with college, career, and financial-aid questions.</p>
       </article>
     </div>
   </div>
@@ -1475,6 +1538,64 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
     <div class="essay-save-note" role="note">
       <strong>Private on this device:</strong> your notes and draft save only in this browser. They are not sent to Mr. Barragan or anyone else. This is not a backup—copy your real draft into Google Docs.
     </div>
+
+    <section class="essay-personalizer" aria-labelledby="essay-personal-title">
+      <div class="essay-personalizer-head">
+        <div>
+          <p class="eyebrow">Your starting point</p>
+          <h3 id="essay-personal-title">Start where you are.</h3>
+          <p>Pick the answer that feels closest. The coach will point you to one useful next step—you do not need to complete everything at once.</p>
+        </div>
+        <span class="essay-private-pill">Private on this device</span>
+      </div>
+
+      <fieldset class="essay-stage-grid">
+        <legend class="sr">Where are you in the writing process?</legend>
+        <label class="essay-stage-choice" for="essay-stage-topic">
+          <input type="radio" name="essay-stage" id="essay-stage-topic" value="topic">
+          <span><strong>I need a topic</strong><small>I do not know which story to tell.</small></span>
+        </label>
+        <label class="essay-stage-choice" for="essay-stage-plan">
+          <input type="radio" name="essay-stage" id="essay-stage-plan" value="plan">
+          <span><strong>I have notes</strong><small>I need help organizing them.</small></span>
+        </label>
+        <label class="essay-stage-choice" for="essay-stage-draft">
+          <input type="radio" name="essay-stage" id="essay-stage-draft" value="draft">
+          <span><strong>I have a draft</strong><small>I need useful revision help.</small></span>
+        </label>
+        <label class="essay-stage-choice" for="essay-stage-final">
+          <input type="radio" name="essay-stage" id="essay-stage-final" value="final">
+          <span><strong>I am almost done</strong><small>I need a final check.</small></span>
+        </label>
+      </fieldset>
+
+      <div class="essay-personal-controls">
+        <div class="bfield">
+          <label for="essay-challenge">What feels hardest right now?</label>
+          <select id="essay-challenge">
+            <option value="">Choose one if helpful</option>
+            <option value="prompt">Understanding the prompt</option>
+            <option value="topic">Choosing a story</option>
+            <option value="structure">Organizing the essay</option>
+            <option value="specific">Adding specific details</option>
+            <option value="reflection">Explaining why it matters</option>
+            <option value="shorten">Getting under the word limit</option>
+            <option value="proofread">Final grammar and submission check</option>
+          </select>
+        </div>
+        <p>Your choices and writing stay in this browser. On a shared Chromebook, copy your work somewhere safe and clear the workspace when finished.</p>
+      </div>
+
+      <div class="essay-route" id="essay-personal-route" aria-live="polite">
+        <div>
+          <p class="eyebrow">Your next best step</p>
+          <h4 id="essay-route-title">Find one small, real moment.</h4>
+          <p id="essay-route-copy">The best topic is usually a moment that reveals how you think, choose, help, build, question, or change.</p>
+          <ol class="essay-route-questions" id="essay-route-questions"></ol>
+        </div>
+        <button class="btn" id="essay-route-action" type="button">Go to Step 2</button>
+      </div>
+    </section>
 
     <div class="essay-progress-shell" aria-label="Writing coach progress">
       <div class="essay-progress-head">
@@ -1595,7 +1716,7 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
         <textarea id="essay-draft" data-essay-input="draft" rows="18" placeholder="Start inside a real moment. Where are you, what are you doing, and what detail would only you notice?"></textarea>
         <div class="brow">
           <button class="btn" type="button" id="essay-copy-draft">Copy draft</button>
-          <button class="btn ghost" type="button" id="essay-open-docs">Open a new Google Doc</button>
+          <button class="btn ghost" type="button" id="essay-open-docs">Copy Draft &amp; Open Google Docs</button>
           <span class="counter" id="essay-word-count"><b>0</b> words</span>
         </div>
       </div>
@@ -1611,6 +1732,18 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
         <div><p class="eyebrow">Review before submitting</p><h3 id="essay-step-4-title">Make sure the reader meets you.</h3></div>
       </div>
       <p class="sub">Check each item only after you can point to the sentence that proves it.</p>
+
+      <div class="essay-private-check">
+        <div class="essay-private-check-head">
+          <div>
+            <h4>Get a private draft check</h4>
+            <p>This looks for useful writing patterns on this device—word limit, prompt connection, specific detail, reflection, and sentences that may need attention. It does not send your work anywhere.</p>
+          </div>
+          <button class="btn" type="button" id="essay-check-draft">Check my draft</button>
+        </div>
+        <div class="essay-diagnostics" id="essay-draft-feedback" hidden aria-live="polite"></div>
+      </div>
+
       <ul class="check" id="essay-review-list"></ul>
 
       <div class="essay-feedback-grid">
@@ -1814,7 +1947,7 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
         <summary>10. Family and student final check</summary>
         <div class="requirements-body">
           <ul><li>We know the exact school, program, and start term.</li><li>We checked the required high-school classes and GPA or prerequisite rules.</li><li>We know whether SAT/ACT, placement, an assessment, or an interview is required.</li><li>We have the application accounts, personal email, transcript information, and writing materials.</li><li>We know the financial-aid form, scholarship steps, and remaining-cost plan.</li><li>We wrote down the next deadline and who to contact when something is unclear.</li></ul>
-          <p><strong>Still unsure?</strong> Start with your assigned advisory teacher, UW GEAR UP, or Luis Gutierrez in the College &amp; Career Center and share the exact school, program, or form. Students in Mr. Barragan's advisory may also message him through ParentSquare.</p>
+          <p><strong>Still unsure?</strong> Start with your assigned advisory teacher, UW GEAR UP, or Luis Gutierrez in the College &amp; Career Center and share the exact school, program, or form. You do not need to figure it out alone.</p>
           <button class="mini" type="button" data-jump="help">Get help →</button>
         </div>
       </details>
@@ -1853,7 +1986,7 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
 const SITE = {
   school:  "Toppenish High School",
   line:    "Class of 2027 · Postsecondary Planning Hub",
-  teacher: "Questions? Ask your assigned advisory teacher, UW GEAR UP, or Luis Gutierrez, College & Career Specialist. Students and parents in Mr. Barragan's advisory can message him through ParentSquare.",
+  teacher: "Questions? Ask your assigned advisory teacher, UW GEAR UP, or Luis Gutierrez, College & Career Specialist. Students and families can share the exact page, form, or question and get help choosing the next step.",
   logo:    "assets/gradcat.png",
   logoAlt: "Toppenish Wildcats"
 };
@@ -2383,7 +2516,7 @@ const START_RESPONSES = {
   path:{title:"You are in the right place.",text:"The path finder compares college, YVC, trades, apprenticeships, military, and work without ranking one above the others.",button:"Open the path finder",target:"pathways"},
   scholarships:{title:"Start with Scholarships.",text:"Open opportunities appear first, followed by planning opportunities ordered by their opening date. Save the ones that fit and check the sponsor's page before applying.",button:"Find scholarships",target:"scholarships"},
   apply:{title:"Start with your application folder.",text:"Open Writing for essays, short answers, recommendations, and a private story builder.",button:"Open Writing",target:"writing"},
-  help:{title:"Questions are a good starting point.",text:"Ask your assigned advisory teacher, the UW GEAR UP team, or Luis Gutierrez, College & Career Specialist. Students and parents in Mr. Barragan's advisory can also message him through ParentSquare.",button:"See help options",target:"help"}
+  help:{title:"Questions are a good starting point.",text:"Ask your assigned advisory teacher, the UW GEAR UP team, or Luis Gutierrez, College & Career Specialist. Share the exact page, form, or question so they can help you choose the next step.",button:"See help options",target:"help"}
 };
 function initStartReception(){
   const options = document.querySelectorAll("[data-start-intent]");
@@ -3225,7 +3358,7 @@ function initEssayCoach(){
   ].join("\n");
 
   function blankState(){
-    return {type:"college",destination:"",prompt:"",limit:650,draft:"",story:{},review:{},migratedLegacy:true};
+    return {type:"college",stage:"topic",challenge:"",destination:"",prompt:"",limit:650,draft:"",story:{},review:{},feedbackOpen:false,migratedLegacy:true};
   }
 
   let essayState = Store.get("essayCoach", {});
@@ -3246,6 +3379,13 @@ function initEssayCoach(){
   essayState.review = essayState.review && typeof essayState.review === "object" ? essayState.review : {};
   if(!essayState.limit || isNaN(Number(essayState.limit))) essayState.limit = MODES[essayState.type].limit;
   ["destination","prompt","draft"].forEach(function(k){ if(typeof essayState[k] !== "string") essayState[k] = ""; });
+  if(!["topic","plan","draft","final"].includes(essayState.stage)){
+    const savedDraftWords = String(essayState.draft || "").trim().split(/\s+/).filter(Boolean).length;
+    const hasSavedNotes = Object.keys(essayState.story).some(function(key){ return !!String(essayState.story[key] || "").trim(); });
+    essayState.stage = savedDraftWords >= 25 ? "draft" : (hasSavedNotes ? "plan" : "topic");
+  }
+  if(!["","prompt","topic","structure","specific","reflection","shorten","proofread"].includes(essayState.challenge)) essayState.challenge = "";
+  essayState.feedbackOpen = essayState.feedbackOpen === true;
 
   const modeBox = document.getElementById("essay-mode-advice");
   const guidance = document.getElementById("essay-draft-guidance");
@@ -3254,6 +3394,14 @@ function initEssayCoach(){
   const outline = document.getElementById("essay-outline-output");
   const wordCount = document.getElementById("essay-word-count");
   const reviewList = document.getElementById("essay-review-list");
+  const challengeSelect = document.getElementById("essay-challenge");
+  const routeTitle = document.getElementById("essay-route-title");
+  const routeCopy = document.getElementById("essay-route-copy");
+  const routeQuestions = document.getElementById("essay-route-questions");
+  const routeAction = document.getElementById("essay-route-action");
+  const draftFeedback = document.getElementById("essay-draft-feedback");
+  let routeTarget = "essay-step-2";
+  let routeFocus = "#essay-scene";
 
   function persistEssay(){ Store.set("essayCoach", essayState); }
   function words(text){ const value = String(text || "").trim(); return value ? value.split(/\s+/).length : 0; }
@@ -3276,6 +3424,106 @@ function initEssayCoach(){
     panel.querySelectorAll("[data-essay-story]").forEach(function(el){
       el.value = essayState.story[el.dataset.essayStory] || "";
     });
+    panel.querySelectorAll("input[name='essay-stage']").forEach(function(radio){ radio.checked = radio.value === essayState.stage; });
+    panel.querySelectorAll(".essay-stage-choice").forEach(function(label){
+      const radio = label.querySelector("input");
+      label.classList.toggle("is-selected", !!radio && radio.checked);
+    });
+    challengeSelect.value = essayState.challenge;
+  }
+
+  function nextMissingStoryField(){
+    return ["scene","detail","action","meaning","now","next"].find(function(key){ return !String(essayState.story[key] || "").trim(); }) || "scene";
+  }
+
+  function renderPersonalRoute(){
+    const s = essayState.story;
+    let title = "Find one small, real moment.";
+    let copy = "The best topic is usually a moment that reveals how you think, choose, help, build, question, or change.";
+    let questions = [];
+    routeTarget = "essay-step-2";
+    routeFocus = "#essay-scene";
+
+    if(!String(essayState.prompt || "").trim()){
+      title = "Capture the exact question first.";
+      copy = "Paste the prompt and word limit exactly as the application shows them. That keeps every later suggestion focused on the real assignment.";
+      questions = ["What is the application actually asking the reader to learn about you?", "Does the prompt have more than one part?", "What is the exact maximum word count?"];
+      routeTarget = "essay-step-1";
+      routeFocus = "#essay-prompt";
+    } else if(essayState.challenge === "prompt"){
+      title = "Translate the prompt into plain language.";
+      copy = "Underline the action words, list every part you must answer, and write a one-sentence response before choosing evidence.";
+      questions = ["What must you describe?", "What must you explain or reflect on?", "What should the reader understand about you afterward?"];
+      routeTarget = "essay-step-1";
+      routeFocus = "#essay-prompt";
+    } else if(["topic","specific","reflection","structure"].includes(essayState.challenge)){
+      const routes = {
+        topic:["Choose a story before writing sentences.","Look for one small moment with a choice, action, tension, or realization—not the most dramatic event in your life.",["When did you act in a way that surprised you?","What responsibility do people trust you with?","What ordinary moment says something important about you?"]],
+        specific:["Replace claims with evidence.","Use names, actions, objects, sounds, routines, and short moments so the reader can see what only you could write.",["What object, phrase, route, tool, food, or mistake do you remember?","What did your hands actually do?","Which sentence could describe almost any student?"]],
+        reflection:["Explain the meaning, not a moral.","Show the reader how the moment affected your thinking, choices, relationships, or present-day behavior.",["What did you believe before this moment?","What became more complicated or clearer?","Where can the reader see this change in you now?"]],
+        structure:["Build the story in four moves.","Use one moment, your action, what it meant, and evidence of who you are now. The plan in Step 2 will arrange your answers.",["What is the one scene?","What did you do or decide?","What should the final paragraph understand that the first paragraph did not?"]]
+      };
+      const chosen = routes[essayState.challenge];
+      title = chosen[0]; copy = chosen[1]; questions = chosen[2];
+      routeTarget = "essay-step-2";
+      routeFocus = "#essay-" + nextMissingStoryField();
+    } else if(essayState.challenge === "shorten"){
+      title = "Cut repetition before cutting your best details.";
+      copy = "Keep sentences that add evidence or meaning. Remove repeated setup, broad life lessons, and facts already clear elsewhere in the application.";
+      questions = ["Which paragraph adds the least new information?", "Where do two sentences make the same point?", "Can a long introduction begin closer to the action?"];
+      routeTarget = "essay-step-3";
+      routeFocus = "#essay-draft";
+    } else if(essayState.challenge === "proofread"){
+      title = "Do a final accuracy and submission check.";
+      copy = "Read aloud once, check names and dates, confirm the word limit, then verify every required attachment and submission step.";
+      questions = ["Does the first paragraph answer the correct prompt?", "Did any old school or scholarship name remain?", "Did you save proof that the application was submitted?"];
+      routeTarget = "essay-step-4";
+      routeFocus = "#essay-check-draft";
+    } else if(essayState.stage === "topic"){
+      title = "Find one small, real moment.";
+      copy = "You do not need a dramatic story. Start with a moment that shows a choice, action, responsibility, curiosity, or change.";
+      questions = ["When did you notice something other people missed?", "What responsibility has changed you?", "What would a friend or family member say is very you?"];
+    } else if(essayState.stage === "plan"){
+      const missing = nextMissingStoryField();
+      const readyToDraft = ["scene","action","meaning"].every(function(key){ return !!String(s[key] || "").trim(); });
+      if(readyToDraft){
+        title = "Turn your notes into a first draft.";
+        copy = "Your plan has the essential pieces. Draft for meaning first; you can shorten and polish later.";
+        questions = ["Can you begin inside the scene instead of explaining it?", "Where will the reader see your decision or action?", "What present-day evidence belongs near the ending?"];
+        routeTarget = "essay-step-3";
+        routeFocus = "#essay-draft";
+      } else {
+        title = "Complete the missing part of your story plan.";
+        copy = "Fragments are enough. Add the next missing piece, then let the page build your outline.";
+        questions = ["What happened in one specific moment?", "What did you do or choose?", "Why does that moment matter now?"];
+        routeFocus = "#essay-" + missing;
+      }
+    } else if(essayState.stage === "draft"){
+      if(words(essayState.draft) < 25){
+        title = "Bring your draft into the workspace.";
+        copy = "Paste what you have into Step 3. It can be rough—the private draft check works best once there are at least a few sentences.";
+        questions = ["Does your first paragraph begin with the answer or a useful moment?", "Where is your strongest specific detail?", "What do you most want help revising?"];
+        routeTarget = "essay-step-3";
+        routeFocus = "#essay-draft";
+      } else {
+        title = "Check the draft for the next revision.";
+        copy = "Use the private pattern check to find one or two high-value changes. Revise those before worrying about every comma.";
+        questions = ["Where does the draft become general?", "Where can the reader see your thinking?", "Which paragraph adds the least evidence or meaning?"];
+        routeTarget = "essay-step-4";
+        routeFocus = "#essay-check-draft";
+      }
+    } else {
+      title = "Finish with accuracy, voice, and proof.";
+      copy = "Use the private check, read the essay aloud, ask one trusted adult the three questions below, and confirm every submission requirement.";
+      questions = ["Does every sentence sound like you?", "Are the organization name, deadline, and word count correct?", "Did you save a final copy and submission confirmation?"];
+      routeTarget = "essay-step-4";
+      routeFocus = "#essay-check-draft";
+    }
+
+    routeTitle.textContent = title;
+    routeCopy.textContent = copy;
+    routeQuestions.innerHTML = questions.slice(0,3).map(function(question){ return "<li>" + esc(question) + "</li>"; }).join("");
+    routeAction.textContent = routeTarget === "essay-step-1" ? "Go to Step 1" : routeTarget === "essay-step-2" ? "Go to Step 2" : routeTarget === "essay-step-3" ? "Go to Step 3" : "Go to Step 4";
   }
 
   function renderMode(){
@@ -3287,6 +3535,88 @@ function initEssayCoach(){
       const radio = label.querySelector("input");
       label.classList.toggle("is-selected", !!radio && radio.checked);
     });
+  }
+
+  function diagnosticGroup(title, items){
+    return "<section class='essay-diagnostic-group'><h5>" + esc(title) + "</h5><ul>" + items.map(function(item){ return "<li>" + esc(item) + "</li>"; }).join("") + "</ul></section>";
+  }
+
+  function renderDraftFeedback(){
+    if(!essayState.feedbackOpen){
+      draftFeedback.hidden = true;
+      draftFeedback.innerHTML = "";
+      return;
+    }
+
+    draftFeedback.hidden = false;
+    const text = String(essayState.draft || "").trim();
+    const count = words(text);
+    if(count < 25){
+      draftFeedback.innerHTML = diagnosticGroup("Start here", ["Paste at least a few sentences into Step 3, then check the draft again.", "A rough draft is enough. This tool looks for revision opportunities; it does not expect polished writing."]) +
+        "<p class='essay-diagnostics-note'>This is a private pattern check, not a grade or a prediction of admission or scholarship results.</p>";
+      return;
+    }
+
+    const limit = Math.max(1, Number(essayState.limit) || MODES[essayState.type].limit);
+    const sentences = (text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || []).map(function(sentence){ return sentence.trim(); }).filter(Boolean);
+    const paragraphs = text.split(/\n\s*\n/).map(function(paragraph){ return paragraph.trim(); }).filter(Boolean);
+    const longSentences = sentences.filter(function(sentence){ return words(sentence) > 35; });
+    const lower = text.toLowerCase();
+    const reflectionPattern = /\b(i learned|i realized|i understand|i began|i now|this taught|because|changed my|made me|i noticed|i came to|i used to|i no longer|what mattered|means to me)\b/i;
+    const sensoryPattern = /\b(smelled|scent|heard|sound|quiet|loud|tasted|taste|felt|rough|smooth|cold|warm|bright|dark|color|red|blue|green|kitchen|hallway|classroom|field|orchard|gloves|boots|hands)\b/i;
+    const detailTerms = String(essayState.story.detail || "").toLowerCase().match(/[a-z0-9']+/g) || [];
+    const detailMatch = detailTerms.filter(function(term){ return term.length > 3; }).some(function(term){ return lower.includes(term); });
+    const hasSpecificDetail = /[“”"]/.test(text) || /\b\d{1,4}\b/.test(text) || sensoryPattern.test(text) || detailMatch;
+    const meaningTerms = String(essayState.story.meaning || "").toLowerCase().match(/[a-z0-9']+/g) || [];
+    const meaningMatch = meaningTerms.filter(function(term){ return term.length > 4; }).some(function(term){ return lower.includes(term); });
+    const hasReflection = reflectionPattern.test(text) || meaningMatch;
+
+    const stopWords = new Set(["about","after","again","also","and","because","been","before","being","between","could","describe","discuss","essay","from","have","into","more","most","other","should","that","their","there","these","they","this","through","what","when","where","which","while","with","would","your","you"]);
+    function terms(value){
+      return (String(value || "").toLowerCase().match(/[a-z0-9']+/g) || []).filter(function(term){ return term.length > 4 && !stopWords.has(term); });
+    }
+    const promptTerms = Array.from(new Set(terms(essayState.prompt))).slice(0,24);
+    const draftTermSet = new Set(terms(text));
+    const promptOverlap = promptTerms.filter(function(term){ return draftTermSet.has(term); });
+    const promptNeedsDirectAnswer = essayState.type !== "college" && promptTerms.length >= 3;
+    const promptLooksConnected = !promptNeedsDirectAnswer || promptOverlap.length > 0;
+
+    const genericPhrases = ["ever since i was young","i learned a lot","hard work","make a difference","help people","my passion","never give up","everything happens for a reason","in conclusion","i am a hard worker"];
+    const genericHits = genericPhrases.filter(function(phrase){ return lower.includes(phrase); });
+
+    const working = [];
+    const revise = [];
+    const questions = [];
+    working.push(count + " words across " + Math.max(1, paragraphs.length) + " paragraph" + (paragraphs.length === 1 ? "" : "s") + ".");
+    if(count <= limit) working.push("The draft is within the " + limit + "-word limit.");
+    if(hasSpecificDetail) working.push("The draft includes at least one concrete detail or image.");
+    if(hasReflection) working.push("The draft includes language that explains meaning or change.");
+    if(promptLooksConnected && promptNeedsDirectAnswer) working.push("The draft uses language connected to the exact prompt.");
+
+    if(count > limit) revise.push("The draft is " + (count - limit) + " words over the limit. Cut repetition before removing your strongest evidence.");
+    if(!hasSpecificDetail) revise.push("Add one concrete detail—a phrase, object, action, place, routine, number, or image only you could supply.");
+    if(!hasReflection) revise.push("Add reflection that explains what changed in your thinking, choices, relationships, or present-day behavior.");
+    if(!promptLooksConnected) revise.push("Recheck every part of the prompt. This pattern check found little shared language; paraphrasing may be fine, but the answer should still be easy to identify.");
+    if(longSentences.length) revise.push(longSentences.length + " sentence" + (longSentences.length === 1 ? " is" : "s are") + " longer than 35 words. Read aloud and split any sentence that is hard to follow.");
+    if(paragraphs.length === 1 && count > 180) revise.push("The draft is one long block. Add paragraph breaks where the scene, action, or reflection changes.");
+    if(genericHits.length) revise.push("Replace broad phrasing such as “" + genericHits.slice(0,2).join("” or “") + "” with evidence that proves the idea.");
+    if(!revise.length) revise.push("No major pattern warning appeared. Read aloud, verify facts and names, and ask a trusted adult where the writing becomes general or confusing.");
+
+    if(!hasSpecificDetail) questions.push("What detail could only come from your experience?");
+    if(!hasReflection) questions.push("What changed in your thinking, and where can the reader see that change now?");
+    if(!promptLooksConnected) questions.push("Which exact part of the prompt does each paragraph answer?");
+    if(count > limit) questions.push("Which paragraph adds the least new evidence or meaning?");
+    if(genericHits.length) questions.push("What real moment proves the broad claim you made?");
+    if(essayState.type === "scholarship" && !String(essayState.story.next || "").trim()) questions.push("What concrete next step would this scholarship make possible, if the prompt asks?");
+    if(essayState.type === "short") questions.push("Does the first sentence answer the question directly?");
+    if(questions.length < 3) questions.push("What three qualities would a reader name after finishing this draft?");
+    if(questions.length < 3) questions.push("Where does the reader feel closest to you, and where does the draft become general?");
+    if(questions.length < 3) questions.push("Which sentence sounds least like something you would naturally say?");
+
+    draftFeedback.innerHTML = diagnosticGroup("Already working", working) +
+      diagnosticGroup("Revise next", revise.slice(0,5)) +
+      diagnosticGroup("Questions for you", questions.slice(0,3)) +
+      "<p class='essay-diagnostics-note'>This is a private pattern check, not a grade or a prediction. It cannot judge whether a story is true, meaningful, or a strong fit for a particular reader.</p>";
   }
 
   function buildOutline(){
@@ -3380,6 +3710,7 @@ function initEssayCoach(){
     wordCount.innerHTML = "<b>" + count + "</b> / " + limit + " words";
     wordCount.className = "counter" + (count > limit ? " over" : (count >= Math.round(limit * .8) ? " good" : ""));
     updateProgress();
+    if(essayState.feedbackOpen) renderDraftFeedback();
   }
 
   function reviewIsComplete(){
@@ -3400,6 +3731,7 @@ function initEssayCoach(){
     document.getElementById("essay-progress-label").textContent = ready + " of 4 steps ready";
     document.getElementById("essay-progress-bar").style.width = (ready * 25) + "%";
     panel.querySelectorAll("[data-essay-progress]").forEach(function(el,index){ el.classList.toggle("is-ready", stepReady[index]); });
+    renderPersonalRoute();
   }
 
   function writingPackage(){
@@ -3423,6 +3755,35 @@ function initEssayCoach(){
     });
   });
 
+  panel.querySelectorAll("input[name='essay-stage']").forEach(function(radio){
+    radio.addEventListener("change", function(){
+      essayState.stage = radio.value;
+      panel.querySelectorAll(".essay-stage-choice").forEach(function(label){
+        const choice = label.querySelector("input");
+        label.classList.toggle("is-selected", !!choice && choice.checked);
+      });
+      persistEssay();
+      renderPersonalRoute();
+    });
+  });
+
+  challengeSelect.addEventListener("change", function(){
+    essayState.challenge = challengeSelect.value;
+    persistEssay();
+    renderPersonalRoute();
+  });
+
+  routeAction.addEventListener("click", function(){
+    const target = document.getElementById(routeTarget);
+    if(!target) return;
+    const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({behavior:reduceMotion ? "auto" : "smooth",block:"start"});
+    window.setTimeout(function(){
+      const focusTarget = panel.querySelector(routeFocus);
+      if(focusTarget) focusTarget.focus({preventScroll:true});
+    }, reduceMotion ? 0 : 450);
+  });
+
   panel.querySelectorAll("[data-essay-input]").forEach(function(el){
     el.addEventListener("input", function(){
       essayState[el.dataset.essayInput] = el.value;
@@ -3431,6 +3792,7 @@ function initEssayCoach(){
       else if(el.dataset.essayInput !== "draft") buildOutline();
       if(el.dataset.essayInput === "draft") updateWordCount();
       else updateProgress();
+      if(essayState.feedbackOpen && el.dataset.essayInput === "prompt") renderDraftFeedback();
     });
   });
 
@@ -3439,6 +3801,7 @@ function initEssayCoach(){
       essayState.story[el.dataset.essayStory] = el.value;
       persistEssay();
       buildOutline();
+      if(essayState.feedbackOpen) renderDraftFeedback();
     });
   });
 
@@ -3459,6 +3822,13 @@ function initEssayCoach(){
   document.getElementById("essay-open-docs").addEventListener("click", function(){
     if(String(essayState.draft || "").trim()) copyText(essayState.draft);
     window.open("https://docs.new", "_blank", "noopener");
+  });
+  document.getElementById("essay-check-draft").addEventListener("click", function(){
+    essayState.feedbackOpen = true;
+    persistEssay();
+    renderDraftFeedback();
+    const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    draftFeedback.scrollIntoView({behavior:reduceMotion ? "auto" : "smooth",block:"nearest"});
   });
 
   const commonMount = document.getElementById("essay-common-prompts");
@@ -3483,6 +3853,7 @@ function initEssayCoach(){
     renderReview();
     buildOutline();
     updateWordCount();
+    renderDraftFeedback();
     toast("Writing workspace cleared.");
   });
 
@@ -3492,6 +3863,7 @@ function initEssayCoach(){
   renderReview();
   buildOutline();
   updateWordCount();
+  renderDraftFeedback();
 }
 
 /* ================================================================
