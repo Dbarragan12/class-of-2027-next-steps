@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T21:30:00.000Z",
+  "updatedAt": "2026-08-20T14:30:08.315Z",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
   "scholarships": [
     {
@@ -1457,6 +1457,123 @@
       ],
       "whyFit": "This is a highly relevant local source of support for enrolled Yakama students and is administered in Toppenish.",
       "needs": "Current Yakama Nation application, tribal enrollment verification, high school diploma or GED information, admission to an accredited institution, transcript, financial-aid documents, and any program forms.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "P.E.O. STAR Scholarship",
+      "organization": "P.E.O. Sisterhood",
+      "award": "$2,500 one-time scholarship",
+      "eligibility": "Chapter nomination required: women in their final year of high school, age 20 or younger at year-end, with a 3.0+ unweighted GPA, U.S. or Canadian citizenship or permanent residency, leadership and service, and plans for accredited U.S. or Canadian postsecondary study.",
+      "url": "https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-08-15",
+      "deadline": "2026-10-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "Local P.E.O. chapters may submit one recommendation between August 15 and October 15, 2026. Students cannot apply directly; a nominated student then has 30 days to submit her materials.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Two-year",
+        "Leadership / service"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "whyFit": "A Toppenish senior may qualify, but she must first be interviewed and formally nominated by a local P.E.O. chapter. Ask Mr. Barragan or counseling for help connecting with a chapter before October 15.",
+      "needs": "A local P.E.O. chapter nomination, a 700-word original essay, two recommendations, activity and service information, and an unofficial transcript through junior year.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Stephen J. Brady Stop Hunger Scholarship",
+      "organization": "Sodexo Stop Hunger Foundation",
+      "award": "$10,000 scholarship plus a $5,000 grant for a hunger-relief charity",
+      "eligibility": "Students ages 5–25 who have made a meaningful, creative, and sustained impact fighting hunger or food insecurity in their community.",
+      "url": "https://www.us.stop-hunger.org/grants/youth-scholarships",
+      "status": "Confirmed for 2027",
+      "opens": "2026-08-20",
+      "deadline": "2026-10-20",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now — the annual application period runs August 20–October 20.",
+      "tags": [
+        "National",
+        "Leadership / service"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "whyFit": "Toppenish students who organize food drives, pantry work, meal programs, food recovery, advocacy, or other hunger-relief efforts may qualify.",
+      "needs": "An online application describing the student's hunger-relief work, leadership, creativity, community impact, and the charity connected to the project. Review the current official rules before submitting.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Hagan Scholarship",
+      "organization": "Hagan Scholarship Foundation",
+      "award": "Up to $7,500 per semester for up to 8 semesters, plus college-start and study-abroad benefits",
+      "eligibility": "Class of 2027 seniors at a U.S. high school with a 3.50+ unweighted GPA, parents' 2025 adjusted gross income of $125,000 or less, plans for an eligible four-year college, and the ability to complete 240 paid work hours from January 1–September 1, 2027.",
+      "url": "https://haganscholarships.org/application/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-09-01",
+      "deadline": "2026-12-01",
+      "lastYearDeadline": null,
+      "expectedWindow": "The fall application opens September 1 and closes December 1, 2026. A second application window is scheduled for January 15–March 15, 2027.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Financial need"
+      ],
+      "fit": [
+        "lowincome"
+      ],
+      "whyFit": "A strong national option for a Toppenish senior who meets the GPA and income rules, plans an eligible four-year college, and can complete the required paid work hours. Community college, junior college, and online institutions are not eligible.",
+      "needs": "Online application, current high school transcript, an unsealed recommendation letter, household-income information, four-year college plans, and a plan for the required paid work hours. Finalists may need FAFSA or citizenship documents.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Elks Legacy Awards",
+      "organization": "Elks National Foundation",
+      "award": "$6,000 ($1,500 per year for four years)",
+      "eligibility": "High school seniors who are the child, stepchild, grandchild, step-grandchild, or legal ward of an eligible living Elks member in good standing. Great-grandchildren are not eligible.",
+      "url": "https://www.elks.org/scholars/scholarships/Legacy.cfm",
+      "status": "Confirmed for 2027",
+      "opens": "2026-09-01",
+      "deadline": "2027-02-01",
+      "lastYearDeadline": null,
+      "expectedWindow": "The 2027 application opens September 1, 2026 and closes February 1, 2027 at 11:59 a.m. Pacific.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Leadership / service"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "whyFit": "This is separate from the Elks Most Valuable Student scholarship already posted. A Toppenish senior may qualify through a parent or grandparent's Elks membership; the sponsor's membership rules still apply.",
+      "needs": "Online application, the Elk sponsor's name, lodge number and membership number, a transcript, and the current essays. ACT and SAT scores are not required for the 2027 contest.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "NHS Scholarship",
+      "organization": "National Honor Society",
+      "award": "$3,200–$25,000; 600 awards",
+      "eligibility": "Class of 2027 seniors who are active NHS members in good standing, have a verified NHS student account, and plan to attend an accredited U.S. college, university, military institute, or trade school.",
+      "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-09-03",
+      "deadline": "2026-11-20",
+      "lastYearDeadline": null,
+      "expectedWindow": "The application opens September 3 and closes November 20, 2026 at 5:00 p.m. Eastern.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "whyFit": "Toppenish NHS seniors can apply after their adviser verifies their NHS account. There is no limit to the number of applicants from a chapter.",
+      "needs": "A verified NHS student account, detailed scholarship, service, leadership and character activities, NHS adviser certification, and one recommendation from a non-adviser, non-family adult.",
       "lastChecked": "2026-08-20"
     }
   ]
