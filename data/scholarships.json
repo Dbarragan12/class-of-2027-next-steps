@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T14:30:08.315Z",
+  "updatedAt": "2026-08-20T14:39:42.338Z",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
   "scholarships": [
     {
@@ -1574,6 +1574,194 @@
       ],
       "whyFit": "Toppenish NHS seniors can apply after their adviser verifies their NHS account. There is no limit to the number of applicants from a chapter.",
       "needs": "A verified NHS student account, detailed scholarship, service, leadership and character activities, NHS adviser certification, and one recommendation from a non-adviser, non-family adult.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "The Gates Scholarship",
+      "organization": "The Gates Scholarship",
+      "award": "Last-dollar support for remaining full cost of attendance",
+      "eligibility": "High school seniors who are Pell-eligible U.S. citizens or permanent residents with a 3.3+ cumulative weighted GPA and plans for a full-time, four-year degree at an accredited U.S. nonprofit college or university.",
+      "url": "https://www.thegatesscholarship.org/scholarship/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-07-15",
+      "deadline": "2026-09-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; deadline September 15, 2026.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Financial need",
+        "Leadership / service"
+      ],
+      "fit": [
+        "lowincome",
+        "leadership"
+      ],
+      "whyFit": "A high-value match for Toppenish seniors with substantial financial need, strong academics, and leadership. The scholarship covers remaining costs after other aid and the Student Aid Index.",
+      "needs": "Online profile/application, academic and activity history, financial-aid planning, and the current supporting documents requested in each selection phase.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "NCWIT Aspirations in Computing High School Award",
+      "organization": "Aspirations in Computing / NCWIT",
+      "award": "National and regional awards; prize amounts vary",
+      "eligibility": "Students in grades 9–12 who are active or interested in computing/technology, are age 13+, join the free AiC Community, and attend school in the U.S. or an eligible U.S. territory or base.",
+      "url": "https://www.aspirations.org/award-programs/aic-high-school-award",
+      "status": "Confirmed for 2027",
+      "opens": "2026-09-01",
+      "deadline": "2026-10-27",
+      "lastYearDeadline": null,
+      "expectedWindow": "Application opens September 1 and closes October 27, 2026 at 10:00 p.m. Eastern. An optional educator endorsement is due November 5.",
+      "tags": [
+        "National",
+        "STEM / health",
+        "Leadership / service"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "whyFit": "A strong fit for Toppenish students building skills in coding, robotics, technology, engineering, digital media, or other computing-related work. The free community membership is required before applying.",
+      "needs": "AiC Community membership, parent/guardian approval if under 18, activities and experiences in computing, short application responses, and ideally an educator endorsement.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Women in Aviation International Scholarships",
+      "organization": "Women in Aviation International",
+      "award": "Multiple aviation and aerospace scholarships; amounts vary",
+      "eligibility": "Current WAI members pursuing aviation or aerospace education/training. Applicants must be WAI members by August 30, 2026 and meet the requirements of each individual scholarship.",
+      "url": "https://www.wai.org/scholarships",
+      "status": "Confirmed for 2027",
+      "opens": "2026-06-01",
+      "deadline": "2026-09-01",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; the WAI2027 cycle closes September 1, 2026 at 11:59 p.m. Eastern.",
+      "tags": [
+        "National",
+        "STEM / health",
+        "Trades"
+      ],
+      "fit": [],
+      "whyFit": "Open to students of any gender. A strong option for Toppenish students interested in aviation, flight training, aircraft maintenance, aerospace, dispatch, or related careers who can join WAI before the membership deadline.",
+      "needs": "Current WAI membership, the application, and the documents required for each specific aviation/aerospace scholarship.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Great Clips Scholarship Program",
+      "organization": "Great Clips, Inc.",
+      "award": "Up to $5,000 per scholarship; more than $100,000 awarded annually",
+      "eligibility": "High school and post-high-school students in the U.S. or Canada who are enrolled in a cosmetology or barbering program.",
+      "url": "https://jobs.greatclips.com/helping-future-stylists-and-barbers-100000-ways",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-09-01",
+      "lastYearDeadline": null,
+      "expectedWindow": "Applications are open year-round; the fall award deadline is September 1, 2026.",
+      "tags": [
+        "National",
+        "Trades",
+        "Two-year"
+      ],
+      "fit": [],
+      "whyFit": "A direct trade-school option for a Toppenish student preparing for cosmetology or barbering.",
+      "needs": "Short online application and the current materials requested by Great Clips; confirm whether the current cycle requires an essay.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Leaders Save Lives Scholarship Program",
+      "organization": "American Red Cross",
+      "award": "$1,000–$2,500 scholarship drawings for student blood-drive hosts",
+      "eligibility": "High school or college students who organize an American Red Cross blood drive during a program period and collect at least 25 pints of blood.",
+      "url": "https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-09-07",
+      "lastYearDeadline": null,
+      "expectedWindow": "The summer program runs Memorial Day–Labor Day. A student must host the drive and collect 25+ pints to enter the scholarship drawing; winter opportunities also run December 15–January 15.",
+      "tags": [
+        "National",
+        "Leadership / service"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "whyFit": "A practical leadership and service option for Toppenish students who can organize a Red Cross blood drive with school or community support.",
+      "needs": "Contact the American Red Cross to schedule a qualifying blood drive, create a recruitment team, collect at least 25 pints, and follow the current program terms.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Hereford Youth Foundation of America Fall Scholarships",
+      "organization": "Hereford Youth Foundation of America / National Junior Hereford Association",
+      "award": "More than $150,000 across multiple fall scholarships",
+      "eligibility": "Current National Junior Hereford Association members pursuing postsecondary education; individual awards have different requirements and some include trade or technical training.",
+      "url": "https://hereford.org/youth/njha/scholarship-opportunities/",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-09-01",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; the fall scholarship application deadline is September 1, 2026.",
+      "tags": [
+        "National",
+        "Agriculture",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "ag",
+        "leadership"
+      ],
+      "whyFit": "A high-value fit for a Toppenish student involved in Hereford cattle, FFA, or the beef industry who is an NJHA member.",
+      "needs": "NJHA membership, the current HYFA application, education plans, activity and leadership history, and each award's requested supporting materials.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "NAAA Support Scholarship Media Contest",
+      "organization": "National Agricultural Aviation Association",
+      "award": "$2,000 first-place and $1,000 second-place educational scholarships",
+      "eligibility": "High school seniors or students pursuing education beyond high school who are sponsored by a current NAAA member; the sponsor's membership must have been obtained by June 15, 2026.",
+      "url": "https://www.agaviation.org/career/scholarships/support-scholarship-media-contest/",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-09-08",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; deadline September 8, 2026. Students need an eligible NAAA member sponsor before applying.",
+      "tags": [
+        "National",
+        "Agriculture",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Arts / writing"
+      ],
+      "fit": [
+        "ag"
+      ],
+      "whyFit": "A niche but real opportunity for a Toppenish senior interested in agricultural aviation, crop-dusting, flying, mechanics, or the agriculture industry who can secure an NAAA member sponsor.",
+      "needs": "An NAAA member sponsor, a 750+ word essay or 5+ minute multimedia presentation on the year's topic, a cited source, applicant photo and bio, and sponsor/contact information.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Breakthrough Junior Challenge",
+      "organization": "Breakthrough Prize Foundation",
+      "award": "$250,000 postsecondary scholarship; additional prizes for the student's teacher and school science lab",
+      "eligibility": "Students worldwide who are age 13–18 during the 2026 competition and can create a two-minute video explaining a difficult physics, mathematics, or life-sciences idea.",
+      "url": "https://breakthroughjuniorchallenge.org/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-05-11",
+      "deadline": "2026-09-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; submit the application and video by September 15, 2026 at 11:59 p.m. Pacific. Peer reviews are due September 30.",
+      "tags": [
+        "National",
+        "STEM / health",
+        "Arts / writing",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [],
+      "whyFit": "A reach opportunity for a Toppenish student who loves science and can explain a complex idea clearly and creatively on video.",
+      "needs": "Online profile, age-verification document, a public YouTube video of two minutes or less, application materials, and peer reviews of at least five other entries.",
       "lastChecked": "2026-08-20"
     }
   ]
