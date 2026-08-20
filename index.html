@@ -762,6 +762,65 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
   .welcome-options button{width:100%;text-align:left;border-radius:9px}
   .sect{margin-top:38px}
 }
+
+/* ============================================================
+   SENIOR RESOURCE DESK — current links carried forward from
+   the archived Classes of 2023 and 2024
+   ============================================================ */
+.archive-note{
+  margin-top:17px;background:var(--sage-bg);border:1px solid #bdd8c9;border-left:5px solid var(--sage);
+  border-radius:0 10px 10px 0;padding:14px 16px;display:grid;grid-template-columns:auto minmax(0,1fr);
+  gap:12px;align-items:start;color:var(--muted);font-size:14.5px
+}
+.archive-note::before{
+  content:"2026–27";background:var(--sage);color:#fff;border-radius:999px;padding:5px 9px;
+  font:500 10px "DM Mono",monospace;letter-spacing:.08em
+}
+.archive-note strong{display:block;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;font-size:17px;margin-bottom:2px}
+.resource-desk{display:grid;gap:10px;margin-top:18px}
+.resource-desk details{
+  background:#fff;border:1px solid var(--gray20);border-radius:12px;box-shadow:var(--shadow);overflow:hidden
+}
+.resource-desk summary{
+  cursor:pointer;list-style:none;padding:17px 20px;position:relative;padding-right:54px;
+  font-family:"Bricolage Grotesque",sans-serif;font-size:20px;font-weight:800
+}
+.resource-desk summary::-webkit-details-marker{display:none}
+.resource-desk summary::after{
+  content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--crimson);
+  font:500 22px "DM Mono",monospace
+}
+.resource-desk summary small{
+  display:block;margin-top:4px;color:var(--muted);font:400 13px "Public Sans",sans-serif;line-height:1.35
+}
+.resource-desk details[open] summary{background:var(--sand);border-bottom:1px solid var(--gray20)}
+.resource-desk details[open] summary::after{content:"−"}
+.resource-body{padding:16px 20px 20px}
+.resource-body>p{color:var(--muted);font-size:14.5px;margin-bottom:13px}
+.resource-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.resource-link{
+  appearance:none;width:100%;text-align:left;display:block;background:var(--paper);color:var(--ink);
+  border:1px solid var(--gray20);border-radius:9px;padding:13px 14px;text-decoration:none;
+  font:inherit;cursor:pointer;transition:border-color .15s ease,transform .15s ease,background .15s ease
+}
+.resource-link:hover{border-color:var(--crimson);background:#fff;transform:translateY(-1px)}
+.resource-link strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:17px;line-height:1.2}
+.resource-link span{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:4px}
+.resource-link em{display:block;color:var(--crimson);font-size:12px;font-weight:700;font-style:normal;margin-top:8px}
+.resource-watch{background:var(--warn-bg);border-left:5px solid var(--crimson);border-radius:0 9px 9px 0;padding:15px 17px}
+.resource-watch strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:18px;margin-bottom:5px}
+.resource-watch p{color:var(--muted);font-size:14px;margin-bottom:8px}
+.resource-watch ul{margin:0;padding-left:20px;columns:2;column-gap:30px}
+.resource-watch li{break-inside:avoid;margin:5px 0;font-size:14px}
+@media(max-width:650px){
+  .archive-note{grid-template-columns:1fr;gap:7px}
+  .archive-note::before{justify-self:start}
+  .resource-links{grid-template-columns:1fr}
+  .resource-watch ul{columns:1}
+  .resource-desk summary{padding:15px 48px 15px 16px;font-size:18px}
+  .resource-body{padding:14px 16px 17px}
+}
+
 /* Branded sticky navigation and school help team */
 nav.hub .wrap.hub-shell{
   display:grid;grid-template-columns:184px minmax(0,1fr);align-items:stretch;
@@ -1083,6 +1142,156 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
           <p>Do not let an application fee stop you. See Luis Gutierrez, College &amp; Career Specialist, before you pay; students can also ask UW GEAR UP or their assigned advisory teacher for help.</p>
           <button class="mini" type="button" data-jump="help">Find a person who can help &rarr;</button>
         </article>
+      </div>
+    </div>
+
+    
+    <div class="sect" id="senior-resource-desk">
+      <p class="eyebrow">Senior Resource Desk</p>
+      <h3>What do you need to do?</h3>
+      <p class="sub">The forms, official sites, and local opportunities that previous Toppenish senior classes needed most—organized for the Class of 2027.</p>
+
+      <div class="archive-note">
+        <div>
+          <strong>Updated for this school year</strong>
+          The archived Classes of 2023 and 2024 are our source library, not our calendar. Their expired dates were not copied. Use the current official links below; a date appears in the calendar only after it is confirmed for 2026–27.
+        </div>
+      </div>
+
+      <div class="resource-desk">
+        <details>
+          <summary>Documents and application accounts<small>Transcript, Common App, College Board, and fee-waiver help</small></summary>
+          <div class="resource-body">
+            <p>Start these early so a missing login or document does not hold up an application.</p>
+            <div class="resource-links">
+              <a class="resource-link" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener">
+                <strong>Request an official transcript</strong>
+                <span>Use the Toppenish College &amp; Career Center form. Sign in with your school Google account.</span>
+                <em>Open request form →</em>
+              </a>
+              <a class="resource-link" href="https://www.commonapp.org/apply/first-year-students" target="_blank" rel="noopener">
+                <strong>Common App first-year guide</strong>
+                <span>Create an account and see the information many four-year colleges will ask for.</span>
+                <em>Open Common App →</em>
+              </a>
+              <a class="resource-link" href="https://www.collegeboard.org/" target="_blank" rel="noopener">
+                <strong>College Board account</strong>
+                <span>Use one account for SAT information, AP scores, BigFuture, and participating college tools.</span>
+                <em>Open College Board →</em>
+              </a>
+              <button class="resource-link" type="button" data-jump="help">
+                <strong>Application fee waiver</strong>
+                <span>Before paying, ask Luis Gutierrez, UW GEAR UP, or your advisory teacher whether a waiver is available.</span>
+                <em>Find help →</em>
+              </button>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Local college and training applications<small>YVC and Perry Technical Institute</small></summary>
+          <div class="resource-body">
+            <p>These are current official starting points. Program requirements and start dates can change, so follow the instructions on the linked page.</p>
+            <div class="resource-links">
+              <a class="resource-link" href="https://www.yvcc.edu/admissions/new-college-student/" target="_blank" rel="noopener">
+                <strong>YVC new-student steps</strong>
+                <span>Follow the current checklist for applying, placement, orientation, funding, and registration.</span>
+                <em>View YVC steps →</em>
+              </a>
+              <a class="resource-link" href="https://apply.ctc.edu/user" target="_blank" rel="noopener">
+                <strong>Start a YVC application</strong>
+                <span>Use Washington's community and technical college application portal. Yakima County applicants should also check YVC's current local fee-waiver instructions.</span>
+                <em>Open application portal →</em>
+              </a>
+              <a class="resource-link" href="https://www.perrytech.edu/tour/" target="_blank" rel="noopener">
+                <strong>Tour Perry Tech</strong>
+                <span>Explore programs and see the campus before choosing a technical pathway.</span>
+                <em>Schedule or view tour details →</em>
+              </a>
+              <a class="resource-link" href="https://www.perrytech.edu/students/academics/enroll/" target="_blank" rel="noopener">
+                <strong>Perry Tech enrollment steps</strong>
+                <span>Check the current program-specific application, testing, and enrollment requirements.</span>
+                <em>View enrollment steps →</em>
+              </a>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Testing and career exploration<small>SAT, ACT, ASVAB, and Roots to Wings</small></summary>
+          <div class="resource-body">
+            <p>Not every pathway requires a test. Check the colleges or programs you are considering before paying or registering.</p>
+            <div class="resource-links">
+              <a class="resource-link" href="https://satsuite.collegeboard.org/sat/registration/dates-deadlines" target="_blank" rel="noopener">
+                <strong>SAT dates and registration</strong>
+                <span>Use College Board's current national dates and deadline information.</span>
+                <em>Check SAT dates →</em>
+              </a>
+              <a class="resource-link" href="https://www.act.org/content/act/en/products-and-services/the-act/registration.html" target="_blank" rel="noopener">
+                <strong>ACT dates and registration</strong>
+                <span>Check ACT's current dates, then ask THS whether a school-day test is available.</span>
+                <em>Check ACT information →</em>
+              </a>
+              <a class="resource-link" href="https://www.officialasvab.com/counselors-educators/asvab-career-exploration-program/" target="_blank" rel="noopener">
+                <strong>ASVAB Career Exploration Program</strong>
+                <span>A free career-planning assessment offered through schools; taking it does not enlist you.</span>
+                <em>Learn how ASVAB works →</em>
+              </a>
+              <a class="resource-link" href="https://www.pnwu.edu/about/office-of-opportunity-and-diversity/roots-to-wings/" target="_blank" rel="noopener">
+                <strong>Roots to Wings</strong>
+                <span>Explore the Yakima County health-care pathway program. Ask UW GEAR UP or your advisor when the 2026–27 student window is announced.</span>
+                <em>View the current program →</em>
+              </a>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Financial aid and scholarships<small>FAFSA, WASFA, BigFuture, and the Toppenish Scholarship Finder</small></summary>
+          <div class="resource-body">
+            <p>Financial aid and scholarships are different. Complete the right aid form, then keep applying for scholarships that fit.</p>
+            <div class="resource-links">
+              <a class="resource-link" href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank" rel="noopener">
+                <strong>FAFSA</strong>
+                <span>Federal student-aid application and official preparation information.</span>
+                <em>Open Federal Student Aid →</em>
+              </a>
+              <a class="resource-link" href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">
+                <strong>WASFA</strong>
+                <span>Washington's application for eligible students who do not file FAFSA.</span>
+                <em>Open WSAC's WASFA page →</em>
+              </a>
+              <a class="resource-link" href="https://bigfuture.collegeboard.org/pay-for-college/bigfuture-scholarships" target="_blank" rel="noopener">
+                <strong>BigFuture scholarships</strong>
+                <span>College Board's scholarship and planning program.</span>
+                <em>Open BigFuture →</em>
+              </a>
+              <a class="resource-link" href="scholarships.html">
+                <strong>Toppenish Scholarship Finder</strong>
+                <span>Search, match, save, email, and add confirmed deadlines to your calendar.</span>
+                <em>Search scholarships →</em>
+              </a>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Returning local opportunities we are watching<small>Useful leads from the 2023 and 2024 senior classes</small></summary>
+          <div class="resource-body">
+            <div class="resource-watch">
+              <strong>Plan ahead—but do not use the old deadline.</strong>
+              <p>These opportunities helped earlier Toppenish students or were shared locally. Their 2026–27 applications are not confirmed yet. When a current application or deadline arrives, it will be reviewed and then added to the Scholarship Finder or senior calendar.</p>
+              <ul>
+                <li>John &amp; Terry Brearley Toppenish Rotary Scholarship</li>
+                <li>The Isidro Scholarship for qualifying Toppenish seniors</li>
+                <li>Filipino American Community of Yakima Valley Scholarship</li>
+                <li>Toppenish School District Administration Scholarship</li>
+                <li>Eagle Feather graduation recognition for enrolled tribal graduates</li>
+                <li>YVC flagger training and other age-18+ local summer-work programs</li>
+              </ul>
+            </div>
+          </div>
+        </details>
       </div>
     </div>
 
