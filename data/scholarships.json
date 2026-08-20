@@ -1,6 +1,6 @@
 {
   "updatedAt": "2026-08-20",
-  "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Geographic reach may be Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. Confirmed opportunities use current sponsor information. Long-running expected opportunities may use 2025–26 school-year data or the most recent official cycle for planning when they include a prior deadline, a sponsor link, a last-checked date, and an explicit warning that deadlines, awards, eligibility, and program availability are not guaranteed. This list is maintained manually; nightly checks preserve records and flag source changes for review.",
+  "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Confirmed opportunities use current sponsor information and a verified current-cycle deadline or rolling status. Recurring opportunities may appear as tentative planning cards—even when return is uncertain—when a dated sponsor or school-hosted prior-cycle source shows the opportunity existed. Tentative cards must identify the source cycle, clearly state that the opening, deadline, award, eligibility, and return are not guaranteed, and must never create calendar events. When a person verifies the new cycle and enters the current opening and deadline, the finder automatically changes the card to Open & accepting. Nightly checks preserve records and flag source changes for review; they never guess or confirm a deadline.",
   "scholarships": [
     {
       "name": "Mollie Davis Scholarship",
@@ -1816,6 +1816,157 @@
       ],
       "whyFit": "A strong agriculture or technical-career planning opportunity for Toppenish students from underrepresented backgrounds whose education plans connect to Northwest agriculture.",
       "needs": "Current sponsor application, education and career plan, activities and leadership history, and the supporting materials requested for the 2027 cycle.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Filipino American Community of Yakima Valley Scholarship",
+      "organization": "Filipino American Community of Yakima Valley",
+      "award": "See the current-cycle announcement",
+      "eligibility": "A Toppenish senior of Filipino descent may qualify when a parent or guardian has been a Filipino American Community of Yakima Valley member for at least two years.",
+      "url": "https://ths.toppenish.wednet.edu/",
+      "status": "Expected — historical school source",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2024-05-24",
+      "expectedOpen": "2027-05-01",
+      "tentativeDeadline": "2027-05-24",
+      "openLabel": "May 2027",
+      "expectedWindow": "Tentatively expected in May 2027 based on a dated Class of 2024 school post. The scholarship, opening date, deadline, award, and requirements are not guaranteed and will be updated if a new cycle is released.",
+      "tags": [
+        "Local",
+        "Yakima Valley",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "A narrow but valuable local opportunity for a Toppenish student whose family meets the membership requirement.",
+      "needs": "Prepare proof of Filipino heritage and parent or guardian membership, plus the application materials named in the new-cycle announcement.",
+      "historicalSource": "https://drive.google.com/file/d/1cGcf0k-GWgFMKzTgrM66tSTzZJnqndSH/view?usp=classroom_web&authuser=0",
+      "sourceNote": "Historical planning source: a school-hosted Class of 2024 post dated May 13, 2024 listed a May 24, 2024 deadline. This is prior-cycle information, not a current application.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "The Isidro Scholarship",
+      "organization": "Local Toppenish scholarship sponsor",
+      "award": "See the current-cycle announcement",
+      "eligibility": "A Toppenish High School senior living in a single-parent household may qualify if the scholarship returns with similar requirements.",
+      "url": "https://ths.toppenish.wednet.edu/",
+      "status": "Expected — historical school source",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2024-05-15",
+      "expectedOpen": "2027-05-01",
+      "tentativeDeadline": "2027-05-15",
+      "openLabel": "May 2027",
+      "expectedWindow": "Tentatively expected in May 2027 based on a dated Class of 2024 school post. The scholarship, opening date, deadline, award, and requirements are not guaranteed and will be updated if a new cycle is released.",
+      "tags": [
+        "Toppenish-only",
+        "Local",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "This was created for a specific Toppenish student experience, so it is worth keeping visible even though only a small number of students may qualify.",
+      "needs": "Watch for the new-cycle application and prepare the personal, school, and household information it requests.",
+      "historicalSource": "https://drive.google.com/file/d/1f0oNoUxieCmZXx0hzJpKXAY8YoFwgQof/view?usp=classroom_web&authuser=0",
+      "sourceNote": "Historical planning source: a school-hosted Class of 2024 post dated May 13, 2024 listed a May 15, 2024 deadline. This is prior-cycle information, not a current application.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "WASWD Walt Canter Water and Wastewater Scholarship",
+      "organization": "Washington Association of Sewer & Water Districts",
+      "award": "See the current-cycle application",
+      "eligibility": "A Washington resident pursuing college or utility-operator training may qualify; prior cycles also included employees, elected officials, and family members connected to a WASWD member district.",
+      "url": "https://www.waswd.org/about-us",
+      "status": "Expected — historical sponsor source",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2025-04-30",
+      "expectedOpen": "2027-03-01",
+      "tentativeDeadline": "2027-04-30",
+      "openLabel": "March 2027",
+      "expectedWindow": "Tentatively expected to open in March 2027 with an April 30, 2027 planning deadline, based on previous official cycles. The new dates, award, and requirements are not guaranteed.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "Toppenish students pursuing water, wastewater, utility operations, environmental systems, or related college and technical training may benefit.",
+      "needs": "Prepare the current sponsor application, education or training plan, school information, and any connection to a WASWD member district requested in the new cycle.",
+      "historicalSource": "https://www.waswd.org/rc_files/716/2024%20Scholarship%20Application.pdf",
+      "sourceNote": "Historical planning sources: WASWD's official 2024 application and its official 2025 program update. The most recent verified prior deadline was April 30, 2025.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "John & Terry Brearley Toppenish Rotary Scholarship",
+      "organization": "Toppenish Rotary",
+      "award": "Prior cycle offered at least two $2,000 awards; current amount not confirmed",
+      "eligibility": "A Toppenish High School senior may qualify if the local Rotary scholarship returns with similar requirements.",
+      "url": "https://ths.toppenish.wednet.edu/",
+      "status": "Expected — historical school source",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": "2024-05-22",
+      "expectedOpen": "2027-04-20",
+      "tentativeDeadline": "2027-05-22",
+      "openLabel": "April–May 2027",
+      "expectedWindow": "Tentatively expected in April or May 2027 based on a dated Class of 2024 school post. The scholarship, opening date, deadline, award, and requirements are not guaranteed.",
+      "tags": [
+        "Toppenish-only",
+        "Local",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Leadership / service"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "This is a local Toppenish award with a much smaller applicant pool than most national scholarships.",
+      "needs": "Prepare a current transcript, activities and service list, short personal statement, and any recommendations requested by the new application.",
+      "historicalSource": "https://drive.google.com/file/d/1vlLyNeZygXARPsGUVcOSdU2H35-s8WTS/view?usp=classroom_web&authuser=0",
+      "sourceNote": "Historical planning source: a school-hosted Class of 2024 post dated April 30, 2024 listed at least two $2,000 awards and a May 22, 2024 deadline. This is prior-cycle information.",
+      "lastChecked": "2026-08-20"
+    },
+    {
+      "name": "Toppenish School District Administration Scholarship",
+      "organization": "Toppenish School District administration",
+      "award": "See the current-cycle announcement",
+      "eligibility": "A Toppenish High School senior may qualify if the district administration scholarship returns for the 2026–27 school year.",
+      "url": "https://ths.toppenish.wednet.edu/",
+      "status": "Expected — historical school source",
+      "opens": null,
+      "deadline": null,
+      "lastYearDeadline": null,
+      "expectedOpen": "2027-04-15",
+      "tentativeDeadline": null,
+      "openLabel": "April–May 2027",
+      "expectedWindow": "A dated Class of 2024 school post shows that this opportunity existed, but no prior deadline was preserved. Watch for a possible April or May 2027 return; no deadline is being predicted.",
+      "tags": [
+        "Toppenish-only",
+        "Local",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "local"
+      ],
+      "whyFit": "A district-based opportunity may have a very small eligible pool, so it is useful for Toppenish seniors to know it may return.",
+      "needs": "Watch for the current school announcement and prepare the transcript, activities, essay, and recommendations requested in the new cycle.",
+      "historicalSource": null,
+      "sourceNote": "Historical planning source: a school-hosted Class of 2024 post dated April 23, 2024. The archived post did not preserve an application deadline, so this card does not invent one.",
       "lastChecked": "2026-08-20"
     }
   ]
