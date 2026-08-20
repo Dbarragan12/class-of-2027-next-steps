@@ -762,6 +762,65 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
   .welcome-options button{width:100%;text-align:left;border-radius:9px}
   .sect{margin-top:38px}
 }
+/* Branded sticky navigation and school help team */
+nav.hub .wrap.hub-shell{
+  display:grid;grid-template-columns:184px minmax(0,1fr);align-items:stretch;
+  padding-left:16px;padding-right:16px
+}
+.hub-brand{
+  appearance:none;border:0;border-right:1px solid rgba(255,255,255,.22);
+  background:linear-gradient(135deg,var(--crimson-dk),var(--crimson));color:#fff;
+  display:flex;align-items:center;gap:9px;padding:8px 13px 8px 10px;margin:0;
+  text-align:left;cursor:pointer;min-width:0
+}
+.hub-brand:hover{background:var(--crimson-dk)}
+.hub-brand img{width:34px;height:34px;object-fit:contain;flex:0 0 auto}
+.hub-brand-copy{display:block;min-width:0;line-height:1.03}
+.hub-brand-copy strong{display:block;font-size:15px;letter-spacing:-.02em}
+.hub-brand-copy small{
+  display:block;margin-top:4px;color:#f0cbd2;
+  font:700 9px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.11em;text-transform:uppercase;white-space:nowrap
+}
+nav.hub .row{min-width:0}
+nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
+
+.support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:17px 0 14px}
+.support-person{
+  background:var(--sand);border:1px solid var(--gray20);border-top:4px solid var(--crimson);
+  border-radius:10px;padding:15px;min-width:0
+}
+.support-person:nth-child(2){border-top-color:var(--sage)}
+.support-person:nth-child(3){border-top-color:var(--gray64)}
+.support-label{
+  display:inline-block;margin-bottom:9px;color:var(--crimson);
+  font:800 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.08em;text-transform:uppercase
+}
+.support-person strong{display:block;font-size:17px;line-height:1.18;margin-bottom:4px}
+.support-person > span:not(.support-label){display:block;color:var(--muted);font-size:12.5px;line-height:1.35}
+.support-person p{font-size:13.5px;line-height:1.45;margin:10px 0 0}
+.support-tip{margin:0;color:var(--muted);font-size:14px}
+
+@media(max-width:880px){
+  nav.hub .wrap.hub-shell{grid-template-columns:164px minmax(0,1fr)}
+  .hub-brand{padding-left:8px;padding-right:9px}
+  .hub-brand img{width:30px;height:30px}
+  .hub-brand-copy strong{font-size:14px}
+  nav.hub .tab{padding-left:10px;padding-right:10px;font-size:13px}
+  .support-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  nav.hub .wrap.hub-shell{display:block;padding:0}
+  .hub-brand{width:100%;height:43px;border-right:0;border-bottom:1px solid rgba(255,255,255,.24);padding:6px 14px}
+  .hub-brand img{width:29px;height:29px}
+  .hub-brand-copy{display:flex;align-items:baseline;gap:8px}
+  .hub-brand-copy strong{font-size:14px}
+  .hub-brand-copy small{margin-top:0;font-size:8.5px}
+  nav.hub .row{padding:0 8px}
+  nav.hub .wrap::after{top:auto;bottom:0;height:41px;width:24px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.98))}
+}
+
 @media print{
   nav.hub,.controls,.ticker,.deadline-calendar,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
   .panel[hidden]{display:block !important}
@@ -833,7 +892,11 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
 </header>
 
 <nav class="hub" id="hubnav" aria-label="Main sections">
-  <div class="wrap">
+  <div class="wrap hub-shell">
+    <button class="hub-brand" type="button" data-jump="start" aria-label="Go to Next Steps Start Here">
+      <img src="assets/gradcat.png" alt="">
+      <span class="hub-brand-copy"><strong>Next Steps</strong><small>Class of 2027</small></span>
+    </button>
     <div class="row">
       <button class="tab" id="tab-start" aria-current="page" data-panel="start"><span class="num">01</span> Start Here</button>
       <button class="tab" id="tab-pathways" data-panel="pathways"><span class="num">02</span> Choose a Path</button>
@@ -891,7 +954,7 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
         </article>
         <article class="requirement-card">
           <h4>Need an application fee waiver?</h4>
-          <p>Do not let an application fee stop you. Ask your advisory teacher, counselor, or the college before you pay.</p>
+          <p>Do not let an application fee stop you. See Luis Gutierrez, College &amp; Career Specialist, before you pay; students can also ask UW GEAR UP or their assigned advisory teacher for help.</p>
           <button class="mini" type="button" data-jump="help">Find a person who can help &rarr;</button>
         </article>
       </div>
@@ -921,7 +984,31 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
     <div class="sect" id="help-center">
       <p class="eyebrow">Your escape hatch</p>
       <h3>Need help with this?</h3>
-      <article class="help-card"><h4>You are not expected to solve everything alone.</h4><p>Start with your advisory teacher, counselor, or the College &amp; Career Center. Students and parents in Mr. Barragan's advisory may message him through ParentSquare. Share the page or question you are working on so an adult can help with the next step.</p></article>
+      <article class="help-card">
+        <h4>You are not expected to solve everything alone.</h4>
+        <p>Choose the person who best matches the question. Any of them can help you find the right next step.</p>
+        <div class="support-grid">
+          <div class="support-person">
+            <span class="support-label">Fee waivers</span>
+            <strong>Luis Gutierrez</strong>
+            <span>College &amp; Career Specialist · Toppenish High School</span>
+            <p>See Luis before paying a college application fee. He can help students request and use available fee waivers.</p>
+          </div>
+          <div class="support-person">
+            <span class="support-label">College and career help</span>
+            <strong>UW GEAR UP</strong>
+            <span>Toppenish High School is a UW GEAR UP school.</span>
+            <p>Students may ask the UW GEAR UP team for help with college, career, financial-aid, and next-step questions.</p>
+          </div>
+          <div class="support-person">
+            <span class="support-label">Your first stop</span>
+            <strong>Your assigned advisory teacher</strong>
+            <span>A familiar adult who can help you begin.</span>
+            <p>Show your teacher the page, form, deadline, or question that has you stuck so you can work through the next action together.</p>
+          </div>
+        </div>
+        <p class="support-tip"><strong>In Mr. Barragan's advisory?</strong> Students and parents may also message him through ParentSquare.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -944,7 +1031,7 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
           <a href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">I cannot file FAFSA, I do not know, or I prefer not to → Check WASFA<small>Use WSAC's official questionnaire. WASFA applies for Washington state aid, not federal aid.</small></a>
         </div>
         <p><strong>A parent contributor without a Social Security number can still create the account needed for an eligible student's FAFSA.</strong> Use the official account instructions instead of assuming the student cannot apply.</p>
-        <p><strong>Not sure? That is normal. Do not guess.</strong> Ask your advisory teacher, counselor, or a financial-aid office privately.</p>
+        <p><strong>Not sure? That is normal. Do not guess.</strong> Ask Luis Gutierrez, UW GEAR UP, your assigned advisory teacher, or a financial-aid office privately.</p>
         <div class="cta-row"><a class="btn" href="https://studentaid.gov/articles/key-facts-accounts/" target="_blank" rel="noopener">FAFSA account facts</a><a class="btn ghost" href="https://www.yvcc.edu/financial-aid/" target="_blank" rel="noopener">YVC financial-aid help</a></div>
       </article>
       <article class="grant-card">
@@ -961,7 +1048,7 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
       <article class="requirement-card"><h4>Passport to Careers</h4><p>Foster-care and unaccompanied-homeless-youth support can help with college, training, or apprenticeships.</p><a class="mini" href="https://wsac.wa.gov/passport-to-careers" target="_blank" rel="noopener">Check eligibility →</a></article>
       <article class="requirement-card"><h4>Some colleges also require CSS Profile</h4><p>Some private colleges use CSS Profile in addition to FAFSA. Check each college's aid page. Eligible domestic undergraduate students can receive a fee waiver.</p><a class="mini" href="https://cssprofile.collegeboard.org/complete-application" target="_blank" rel="noopener">Check CSS Profile →</a></article>
       <article class="requirement-card"><h4>Compare the real remaining cost</h4><p>A larger scholarship does not always mean a lower bill. Compare grants, scholarships, work-study, loans, housing, food, fees, travel, and what your family must actually pay.</p><a class="mini" href="https://studentaid.gov/articles/evaluating-financial-aid-offers/" target="_blank" rel="noopener">Compare aid offers →</a></article>
-      <article class="requirement-card"><h4>Application fee waivers</h4><p>Common App and many colleges offer fee waivers. Ask before paying; the college's official application page controls the rule.</p><button class="mini" type="button" data-jump="help">Ask for fee-waiver help →</button></article>
+      <article class="requirement-card"><h4>Application fee waivers</h4><p>Common App and many colleges offer fee waivers. Before paying, ask Luis Gutierrez, College &amp; Career Specialist, for help requesting the correct waiver.</p><button class="mini" type="button" data-jump="help">See your THS help team →</button></article>
       <article class="requirement-card"><h4>Federal loans are borrowed money</h4><p>Grants and scholarships usually do not need repayment. Loans do. Compare federal loan terms before considering private loans.</p><a class="mini" href="https://studentaid.gov/understand-aid/types/loans" target="_blank" rel="noopener">Understand federal loans →</a></article>
       <article class="requirement-card"><h4>Verification is a follow-up, not a rejection</h4><p>A college may ask for documents after FAFSA or WASFA. Watch the college portal and email, respond quickly, and ask before sending sensitive information.</p><a class="mini" href="https://studentaid.gov/articles/fafsa-submission-summary/" target="_blank" rel="noopener">Review and correct FAFSA →</a></article>
       <article class="requirement-card"><h4>Keep aid active after admission</h4><p>Complete orientation, registration, satisfactory-progress rules, and any missing financial-aid tasks. Being admitted does not finish the money process.</p><button class="mini" type="button" data-jump="requirements">See every enrollment step →</button></article>
@@ -1179,7 +1266,7 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
         <summary>6. Prepare the application materials</summary>
         <div class="requirements-body">
           <p>Set up one personal email address you will keep after graduation. Then prepare:</p>
-          <ul><li>Personal and family information requested by the application</li><li>High-school course names, grades, and dates</li><li>Activities, jobs, family responsibilities, and service</li><li>College personal statement or short-answer writing</li><li>Recommendation information only when the school or program asks for it</li><li>Application fee or fee-waiver plan</li><li>A list of every account, confirmation number, deadline, and missing item</li><li><strong>Transcript:</strong> ask THS counseling or the College & Career Center early how to send an official transcript. A college may still require it even after you self-report grades in an application.</li><li><strong>Fee waiver:</strong> before paying an application fee, ask your advisory teacher, counseling, or the college whether you qualify for a waiver. Cost should not stop a student from applying.</li></ul>
+          <ul><li>Personal and family information requested by the application</li><li>High-school course names, grades, and dates</li><li>Activities, jobs, family responsibilities, and service</li><li>College personal statement or short-answer writing</li><li>Recommendation information only when the school or program asks for it</li><li>Application fee or fee-waiver plan</li><li>A list of every account, confirmation number, deadline, and missing item</li><li><strong>Transcript:</strong> ask THS counseling or the College & Career Center early how to send an official transcript. A college may still require it even after you self-report grades in an application.</li><li><strong>Fee waiver:</strong> before paying an application fee, see Luis Gutierrez, College &amp; Career Specialist. Students may also ask UW GEAR UP or their assigned advisory teacher for help. Cost should not stop a student from applying.</li></ul>
           <a href="https://admit.washington.edu/apply/first-year/how-to-apply/" target="_blank" rel="noopener">UW first-year application checklist →</a>
         </div>
       </details>
@@ -1211,7 +1298,7 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
         <summary>10. Family and student final check</summary>
         <div class="requirements-body">
           <ul><li>We know the exact school, program, and start term.</li><li>We checked the required high-school classes and GPA or prerequisite rules.</li><li>We know whether SAT/ACT, placement, an assessment, or an interview is required.</li><li>We have the application accounts, personal email, transcript information, and writing materials.</li><li>We know the financial-aid form, scholarship steps, and remaining-cost plan.</li><li>We wrote down the next deadline and who to contact when something is unclear.</li></ul>
-          <p><strong>Still unsure?</strong> Start with your advisory teacher or counselor and share the exact school or program page. Students in Mr. Barragan's advisory may also message him through ParentSquare.</p>
+          <p><strong>Still unsure?</strong> Start with your assigned advisory teacher, UW GEAR UP, or Luis Gutierrez in the College &amp; Career Center and share the exact school, program, or form. Students in Mr. Barragan's advisory may also message him through ParentSquare.</p>
           <button class="mini" type="button" data-jump="help">Get help →</button>
         </div>
       </details>
@@ -1250,7 +1337,7 @@ footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;paddin
 const SITE = {
   school:  "Toppenish High School",
   line:    "Class of 2027 · Postsecondary Planning Hub",
-  teacher: "Questions? Start with your advisory teacher or counselor. Students and parents in Mr. Barragan's advisory can message him through ParentSquare.",
+  teacher: "Questions? Ask your assigned advisory teacher, UW GEAR UP, or Luis Gutierrez, College & Career Specialist. Students and parents in Mr. Barragan's advisory can message him through ParentSquare.",
   logo:    "assets/gradcat.png",
   logoAlt: "Toppenish Wildcats"
 };
@@ -1779,7 +1866,7 @@ const START_RESPONSES = {
   path:{title:"You are in the right place.",text:"The path finder compares college, YVC, trades, apprenticeships, military, and work without ranking one above the others.",button:"Open the path finder",target:"pathways"},
   scholarships:{title:"Start with Scholarships.",text:"Open opportunities appear first, followed by planning opportunities ordered by their opening date. Save the ones that fit and check the sponsor's page before applying.",button:"Find scholarships",target:"scholarships"},
   apply:{title:"Start with your application folder.",text:"Open the Apply and Write section for essays, recommendations, transcripts, and a private story builder.",button:"Apply and Write",target:"writing"},
-  help:{title:"Questions are a good starting point.",text:"Students and parents can message Mr. Barragan through ParentSquare. You do not have to explain everything perfectly to ask for help.",button:"See help options",target:"help"}
+  help:{title:"Questions are a good starting point.",text:"Ask your assigned advisory teacher, the UW GEAR UP team, or Luis Gutierrez, College & Career Specialist. Students and parents in Mr. Barragan's advisory can also message him through ParentSquare.",button:"See help options",target:"help"}
 };
 function initStartReception(){
   const options = document.querySelectorAll("[data-start-intent]");
