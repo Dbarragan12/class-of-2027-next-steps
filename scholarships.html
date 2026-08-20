@@ -215,7 +215,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 const MS_DAY=86400000;
 const today=(()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())})();
 const FITS=[
-  {key:"local",label:"Local / Yakima"},{key:"lowincome",label:"Financial need"},{key:"firstgen",label:"First-generation"},
+  {key:"local",label:"Local / Yakima"},{key:"latino",label:"Latino / Hispanic"},{key:"lowincome",label:"Financial need"},{key:"firstgen",label:"First-generation"},
   {key:"tribal",label:"Native / tribal"},{key:"ag",label:"Agriculture / family work"},{key:"disability",label:"Disability"},
   {key:"lgbtq",label:"LGBTQ+"},{key:"leadership",label:"Leadership / service"},{key:"everyone",label:"Open to most"}
 ];
@@ -245,6 +245,8 @@ function mapItem(item){
   const fit=Array.isArray(item.fit)?[...item.fit]:[];
   const hay=[item.name,item.eligibility,item.whyFit,(item.tags||[]).join(" ")].join(" ").toLowerCase();
   if(/open to most|open to all|no essay|no gpa|no test score/.test(hay)&&!fit.includes("everyone"))fit.push("everyone");
+  if(/latino|hispanic|latina|latine/.test(hay)&&!fit.includes("latino"))fit.push("latino");
+  if(/farmworker|farm worker|agriculture|migrant|viticulture|vineyard|wine|dairy|tree fruit/.test(hay)&&!fit.includes("ag"))fit.push("ag");
   if(!fit.length)fit.push("everyone");
   return {...item,id:idOf(item),planning,opens,tentativeDeadline:projectedDue,fit,openLabel:planning?(item.openLabel||null):null};
 }

@@ -27,7 +27,7 @@ const tagNames=value=>(value||[]).map(tag=>typeof tag==="string" ? tag : tag.nam
 
 const canonicalTag = new Map([
   ["Local / Yakima County","Local"], ["Washington","Washington"],
-  ["Farmworker / agriculture","Farmworker"], ["Latino / farmworker","Farmworker"], ["Hispanic / Latino","Hispanic / Latino"],
+  ["Farmworker / agriculture","Farmworker"], ["Latino / farmworker","Latino"], ["Hispanic / Latino","Latino"], ["Latino","Latino"],
   ["Yakama Nation / Indigenous","Indigenous"], ["Indigenous","Indigenous"],
   ["Undocumented / DACA-friendly","Undocumented"], ["4-year","Four-year"],
   ["Community college","Two-year"], ["Trades / apprenticeship","Trades"], ["Trades","Trades"],
@@ -44,7 +44,8 @@ const fitKeys=(tags,eligibility,why)=>{
   const out=[];
   const add=k=>{ if(!out.includes(k)) out.push(k); };
   if(/local|washington/.test(hay)) add("local");
-  if(/farmworker|agriculture|migrant|latino|hispanic/.test(hay)) add("ag");
+  if(/latino|hispanic|latina|latine/.test(hay)) add("latino");
+  if(/farmworker|agriculture|migrant|viticulture|vineyard|wine|dairy|tree fruit/.test(hay)) add("ag");
   if(/indigenous|yakama|native american|tribal/.test(hay)) add("tribal");
   if(/financial need|low-income|low income/.test(hay)) add("lowincome");
   if(/first generation|first-generation/.test(hay)) add("firstgen");

@@ -142,7 +142,16 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 
 <script>
 const STORE_KEY="thsNextSteps";
-const FIT_LABELS={local:"Local / Yakima",lowincome:"Financial need",firstgen:"First-generation",tribal:"Native / tribal",ag:"Agriculture / family work",disability:"Disability",lgbtq:"LGBTQ+",leadership:"Leadership / service",everyone:"Open to most"};
+const FIT_LABELS={local:"Local / Yakima",latino:"Latino / Hispanic",lowincome:"Financial need",firstgen:"First-generation",tribal:"Native / tribal",ag:"Agriculture / family work",disability:"Disability",lgbtq:"LGBTQ+",leadership:"Leadership / service",everyone:"Open to most"};
+const ACADEMIC_OPTIONS=[
+  {key:"gpa-unknown",label:"I do not know my GPA yet"},
+  {key:"gpa-below-2-5",label:"Below 2.5"},
+  {key:"gpa-2-5-2-99",label:"2.5–2.99"},
+  {key:"gpa-3-0-3-49",label:"3.0–3.49"},
+  {key:"gpa-3-5-3-79",label:"3.5–3.79"},
+  {key:"gpa-3-8-plus",label:"3.8 or higher"}
+];
+const ACADEMIC_LABELS=Object.fromEntries(ACADEMIC_OPTIONS.map(item=>[item.key,item.label]));
 const STARTS=[
   {key:"scholarships",label:"Find scholarships"},
   {key:"path",label:"Choose a path after high school"},
@@ -308,12 +317,12 @@ const OUTCOMES={
 
 const $=id=>document.getElementById(id);
 const optionsEl=$("options"),resultsEl=$("results"),continueBtn=$("continue"),backBtn=$("back");
-let screen="start",branch=null,selected=new Set(),scholarships=[];
+let screen="start",branch=null,selected=new Set(),academicBand=null,scholarships=[];
 
 function readStore(){try{return JSON.parse(localStorage.getItem(STORE_KEY)||"{}")}catch(e){return {}}}
 function writeStore(value){try{localStorage.setItem(STORE_KEY,JSON.stringify(value))}catch(e){}}
 function savedPlan(){return readStore().coach||null}
-function savePlan(){const store=readStore();store.coach={branch,selected:Array.from(selected),finishedAt:new Date().toISOString()};writeStore(store);updateSide()}
+function savePlan(){const store=readStore();store.coach={branch,selected:Array.from(selected),academicBand:branch==="scholarships"?academicBand:null,finishedAt:new Date().toISOString()};writeStore(store);updateSide()}
 function clearPlan(){const store=readStore();delete store.coach;writeStore(store);$("resume").hidden=true;showStart();updateSide()}
 function esc(value){return String(value??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[c]))}
 function parseDate(value){if(!value)return null;const p=String(value).split("-").map(Number);return p.length===3&&!p.some(Number.isNaN)?new Date(p[0],p[1]-1,p[2]):null}
@@ -322,12 +331,13 @@ function daysUntil(value){const d=parseDate(value);if(!d)return null;const now=n
 function idOf(item){return String(item.name).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
 function setProgress(step){$("step-label").textContent=`Step ${step} of 4`;$("progress").setAttribute("aria-valuenow",String(step));$("progress-fill").style.width=`${step*25}%`}
 function setCopy(kicker,question,intro){$("kicker").textContent=kicker;$("question").textContent=question;$("intro").textContent=intro}
-function labelFor(key){if(FIT_LABELS[key])return FIT_LABELS[key];const plan=savedPlan();const flowKey=branch||(plan&&plan.branch);const flow=flowKey&&FLOWS[flowKey];const item=flow&&flow.options.find(x=>x.key===key);return item?item.label:key}
+function labelFor(key){if(FIT_LABELS[key])return FIT_LABELS[key];if(ACADEMIC_LABELS[key])return ACADEMIC_LABELS[key];const plan=savedPlan();const flowKey=branch||(plan&&plan.branch);const flow=flowKey&&FLOWS[flowKey];const item=flow&&flow.options.find(x=>x.key===key);return item?item.label:key}
 function updateSide(){
   const plan=savedPlan(),store=readStore(),saved=store.saved||{};
   $("saved-count").textContent=`${Object.keys(saved).length} saved on this device`;
   if(branch){$("plan-focus").textContent=FLOWS[branch].focus;$("plan-focus").classList.remove("empty")}else if(plan&&FLOWS[plan.branch]){$("plan-focus").textContent=FLOWS[plan.branch].focus;$("plan-focus").classList.remove("empty")}else{$("plan-focus").textContent="Choose what you need help with.";$("plan-focus").classList.add("empty")}
   const values=selected.size?Array.from(selected):(plan&&Array.isArray(plan.selected)?plan.selected:[]);
+  if(branch==="scholarships" && academicBand) values.push(academicBand);
   if(values.length){$("plan-choices").textContent=values.map(labelFor).join(", ");$("plan-choices").classList.remove("empty")}else{$("plan-choices").textContent="Nothing selected yet.";$("plan-choices").classList.add("empty")}
 }
 function renderOptions(items,multi){
@@ -340,11 +350,18 @@ function renderOptions(items,multi){
   }));
 }
 function showStart(){
-  screen="start";branch=null;selected.clear();setProgress(1);setCopy("Start with one question","What would you like help with today?","Choose the answer that feels closest. You will get one useful starting plan—not a giant checklist.");
+  screen="start";branch=null;selected.clear();academicBand=null;setProgress(1);setCopy("Start with one question","What would you like help with today?","Choose the answer that feels closest. You will get one useful starting plan—not a giant checklist.");
   resultsEl.hidden=true;optionsEl.hidden=false;renderOptions(STARTS,false);backBtn.disabled=true;continueBtn.disabled=true;continueBtn.textContent="Continue";updateSide();
 }
 function showBranch(key,restored=[]){
-  screen="branch";branch=key;selected=new Set(restored);const flow=FLOWS[key];setProgress(2);setCopy(flow.kicker,flow.question,flow.intro);resultsEl.hidden=true;optionsEl.hidden=false;renderOptions(flow.options,flow.multi);backBtn.disabled=false;continueBtn.disabled=selected.size===0;continueBtn.textContent=key==="scholarships"?"Show my matches":"Build my next steps";updateSide();
+  screen="branch";branch=key;selected=new Set(restored);const flow=FLOWS[key];setProgress(2);setCopy(flow.kicker,flow.question,flow.intro);resultsEl.hidden=true;optionsEl.hidden=false;renderOptions(flow.options,flow.multi);backBtn.disabled=false;continueBtn.disabled=selected.size===0;continueBtn.textContent=key==="scholarships"?"Continue to GPA matching":"Build my next steps";updateSide();
+}
+function renderAcademicOptions(){
+  optionsEl.innerHTML=`<p class="coach-note">This is optional. Choose a range if you know it; exact grades are not saved, and scholarships without a GPA rule will still be included.</p>`+ACADEMIC_OPTIONS.map(item=>`<button class="option" type="button" data-academic="${esc(item.key)}" aria-pressed="${String(academicBand===item.key)}">${esc(item.label)}</button>`).join("");
+  optionsEl.querySelectorAll("[data-academic]").forEach(button=>button.addEventListener("click",()=>{academicBand=button.dataset.academic;optionsEl.querySelectorAll("[data-academic]").forEach(x=>x.setAttribute("aria-pressed",String(x===button)));continueBtn.disabled=false;updateSide()}));
+}
+function showAcademicProfile(restored=academicBand){
+  screen="academic";academicBand=restored||null;setProgress(3);setCopy("Academic fit","What GPA range should we use?","This helps the coach bring likely matches forward. It does not decide eligibility, and you can always open the sponsor page to verify.");resultsEl.hidden=true;optionsEl.hidden=false;renderAcademicOptions();backBtn.disabled=false;continueBtn.disabled=!academicBand;continueBtn.textContent="Show my matches";updateSide();
 }
 function nextCycleDate(value){const d=parseDate(value);if(!d)return null;const now=new Date();let n=new Date(now.getFullYear(),d.getMonth(),d.getDate());if(n<=now)n=new Date(now.getFullYear()+1,d.getMonth(),d.getDate());return n}
 function scholarshipStatus(item){
@@ -355,14 +372,24 @@ function scholarshipStatus(item){
   if(item.deadline)return {rank:0,label:`Due ${fmt(item.deadline)}`,date:parseDate(item.deadline),planning:false};
   return {rank:0,label:"Open / rolling",date:new Date(9999,0,1),planning:false};
 }
-function scholarshipMatches(item){const fit=Array.isArray(item.fit)?item.fit:[];return Array.from(selected).filter(key=>fit.includes(key))}
+function normalizedFit(item){const fit=Array.isArray(item.fit)?[...item.fit]:[];const hay=[item.name,item.eligibility,item.whyFit,(item.tags||[]).join(" ")].join(" ").toLowerCase();const add=k=>{if(!fit.includes(k))fit.push(k)};if(/latino|hispanic|latina|latine/.test(hay))add("latino");if(/farmworker|farm worker|agriculture|migrant|viticulture|vineyard|wine|dairy|tree fruit/.test(hay))add("ag");return fit}
+function scholarshipMatches(item){const fit=normalizedFit(item);return Array.from(selected).filter(key=>fit.includes(key))}
+function gpaMinimum(item){
+  const explicit=Number(item.gpaMin ?? item.minimumGpa ?? item.minGpa);
+  if(Number.isFinite(explicit))return explicit;
+  const hay=[item.name,item.eligibility,item.whyFit].join(" ");
+  const match=hay.match(/(\d(?:\.\d)?)\s*\+?(?:\s+(?:unweighted|weighted|cumulative|high|school)){0,5}\s*GPA/i)||hay.match(/(?:GPA|grade point average)[^0-9]{0,18}(\d(?:\.\d)?)/i);
+  return match?Number(match[1]):null;
+}
+function gpaRange(key){return ({"gpa-below-2-5":[0,2.49],"gpa-2-5-2-99":[2.5,2.99],"gpa-3-0-3-49":[3,3.49],"gpa-3-5-3-79":[3.5,3.79],"gpa-3-8-plus":[3.8,4.5]})[key]||null}
+function academicFit(item){const min=gpaMinimum(item);if(!academicBand||academicBand==="gpa-unknown")return {rank:1,text:min?`Listed GPA minimum: ${min.toFixed(1)}+ — verify on the sponsor page.`:"GPA requirement not listed — read the sponsor page."};if(!min)return {rank:1,text:"GPA requirement not listed — read the sponsor page."};const range=gpaRange(academicBand);if(!range)return {rank:1,text:`Listed GPA minimum: ${min.toFixed(1)}+ — verify on the sponsor page.`};if(range[1]<min)return {rank:3,text:`May not meet the listed ${min.toFixed(1)} GPA minimum — verify before spending time.`};if(range[0]>=min)return {rank:0,text:`Your selected range appears to meet the listed ${min.toFixed(1)} GPA minimum — verify on the sponsor page.`};return {rank:1,text:`Your selected range is close to the listed ${min.toFixed(1)} GPA minimum — verify on the sponsor page.`}}
 function renderScholarships(){
   if(!scholarships.length){resultsEl.innerHTML='<div class="loading">Loading the verified scholarship list…</div>';return}
-  const ranked=scholarships.map(item=>({item,status:scholarshipStatus(item),hits:scholarshipMatches(item)})).sort((a,b)=>a.status.rank-b.status.rank||b.hits.length-a.hits.length||a.status.date-b.status.date||a.item.name.localeCompare(b.item.name)).slice(0,6);
+  const ranked=scholarships.map(item=>({item,status:scholarshipStatus(item),hits:scholarshipMatches(item),academic:academicFit(item)})).sort((a,b)=>a.status.rank-b.status.rank||a.academic.rank-b.academic.rank||b.hits.length-a.hits.length||a.status.date-b.status.date||a.item.name.localeCompare(b.item.name)).slice(0,6);
   const store=readStore(),saved=store.saved||{};
-  resultsEl.innerHTML=`<div class="scholarship-results">${ranked.map(({item,status,hits})=>{
+  resultsEl.innerHTML=`<div class="scholarship-results">${ranked.map(({item,status,hits,academic})=>{
     const id=idOf(item),reason=hits.length?`Matches ${hits.map(key=>FIT_LABELS[key]).join(", ")}.`:(item.whyFit||"A Toppenish student may qualify; read the exact requirements.");
-    return `<article class="scholarship-card"><div class="scholarship-head"><div><h3>${esc(item.name)}</h3><div class="org">${esc(item.organization||"Scholarship sponsor")}</div></div><div class="status">${esc(status.label)}</div></div><div class="award">${esc(item.award||"See sponsor details")}</div><p class="match"><strong>Why it is here:</strong> ${esc(reason)}</p><div class="scholarship-actions"><label class="save"><input type="checkbox" data-save="${esc(id)}" ${saved[id]?"checked":""}> Save this</label><a href="${esc(item.url)}" target="_blank" rel="noopener">Open sponsor page ↗</a></div></article>`
+    return `<article class="scholarship-card"><div class="scholarship-head"><div><h3>${esc(item.name)}</h3><div class="org">${esc(item.organization||"Scholarship sponsor")}</div></div><div class="status">${esc(status.label)}</div></div><div class="award">${esc(item.award||"See sponsor details")}</div><p class="match"><strong>Why it is here:</strong> ${esc(reason)}</p><p class="match"><strong>Academic fit:</strong> ${esc(academic.text)}</p><div class="scholarship-actions"><label class="save"><input type="checkbox" data-save="${esc(id)}" ${saved[id]?"checked":""}> Save this</label><a href="${esc(item.url)}" target="_blank" rel="noopener">Open sponsor page ↗</a></div></article>`
   }).join("")}</div><div class="result-actions"><a class="btn" href="scholarships.html">Open the full ranked finder</a><a class="btn ghost" href="scholarships.html#updates">Get scholarship updates</a></div>`;
   resultsEl.querySelectorAll("[data-save]").forEach(input=>input.addEventListener("change",()=>{const s=readStore(),all=s.saved||{};if(input.checked)all[input.dataset.save]=true;else delete all[input.dataset.save];s.saved=all;writeStore(s);updateSide()}));
 }
@@ -371,12 +398,12 @@ function renderStandard(){
   resultsEl.innerHTML=`<div class="result-list">${rows.map(([title,text,href,label],index)=>`<article class="result-step"><strong>${index+1}. ${esc(title)}</strong><span>${esc(text)}</span><a href="${esc(href)}"${href.startsWith("http")?' target="_blank" rel="noopener"':''}>${esc(label)} →</a></article>`).join("")}</div><div class="result-actions"><a class="btn" href="index.html">Open all senior resources</a>${branch!=="scholarships"?'<a class="btn ghost" href="scholarships.html">Search scholarships</a>':''}</div>`;
 }
 function showResults(){
-  screen="results";setProgress(4);optionsEl.hidden=true;resultsEl.hidden=false;setCopy("Your personalized starting plan",branch==="scholarships"?"Your strongest opportunities are ready.":"Here are your next three steps.",`Based on: ${Array.from(selected).map(labelFor).join(", ")}. You can change these choices at any time.`);savePlan();if(branch==="scholarships")renderScholarships();else renderStandard();backBtn.disabled=false;continueBtn.disabled=false;continueBtn.textContent="Save and finish";$("resume").hidden=true;updateSide();
+  screen="results";setProgress(4);optionsEl.hidden=true;resultsEl.hidden=false;const planText=Array.from(selected).map(labelFor);if(branch==="scholarships"&&academicBand)planText.push(labelFor(academicBand));setCopy("Your personalized starting plan",branch==="scholarships"?"Your strongest opportunities are ready.":"Here are your next three steps.",`Based on: ${planText.join(", ")}. You can change these choices at any time.`);savePlan();if(branch==="scholarships")renderScholarships();else renderStandard();backBtn.disabled=false;continueBtn.disabled=false;continueBtn.textContent="Save and finish";$("resume").hidden=true;updateSide();
 }
-function resumePlan(){const plan=savedPlan();if(!plan||!FLOWS[plan.branch])return;branch=plan.branch;selected=new Set(plan.selected||[]);showResults()}
+function resumePlan(){const plan=savedPlan();if(!plan||!FLOWS[plan.branch])return;branch=plan.branch;selected=new Set(plan.selected||[]);academicBand=plan.academicBand||null;showResults()}
 
-continueBtn.addEventListener("click",()=>{if(screen==="start")showBranch(Array.from(selected)[0]);else if(screen==="branch")showResults();else{savePlan();window.location.href="index.html"}});
-backBtn.addEventListener("click",()=>{if(screen==="results")showBranch(branch,Array.from(selected));else showStart()});
+continueBtn.addEventListener("click",()=>{if(screen==="start")showBranch(Array.from(selected)[0]);else if(screen==="branch"&&branch==="scholarships")showAcademicProfile();else if(screen==="branch")showResults();else if(screen==="academic")showResults();else{savePlan();window.location.href="index.html"}});
+backBtn.addEventListener("click",()=>{if(screen==="results"&&branch==="scholarships")showAcademicProfile(academicBand);else if(screen==="results")showBranch(branch,Array.from(selected));else if(screen==="academic")showBranch(branch,Array.from(selected));else showStart()});
 $("clear-plan").addEventListener("click",clearPlan);$("resume-plan").addEventListener("click",resumePlan);
 const previous=savedPlan();if(previous&&FLOWS[previous.branch])$("resume").hidden=false;
 fetch("data/scholarships.json",{cache:"no-store"}).then(response=>response.ok?response.json():Promise.reject()).then(data=>{scholarships=Array.isArray(data.scholarships)?data.scholarships:[];if(screen==="results"&&branch==="scholarships")renderScholarships()}).catch(()=>{if(screen==="results"&&branch==="scholarships")resultsEl.innerHTML='<div class="loading">The scholarship list could not load. Please refresh the page or open the Scholarship Finder.</div>'});
