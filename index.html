@@ -276,14 +276,14 @@ h1 .thin{font-weight:400; color:#e2b6bf}
 .calendar-head p{font-size:12.5px; color:var(--gray20); margin:0; max-width:58ch}
 .calendar-head-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
 .calendar-cycle{display:flex;align-items:center;gap:4px;color:var(--gray37);font:500 10px "DM Mono",monospace;white-space:nowrap}
-.calendar-cycle button{border:1px solid #5b5d60;background:#2d3032;color:#fff;border-radius:6px;padding:5px 8px;font:500 12px "DM Mono",monospace;cursor:pointer}
+.calendar-cycle button{border:1px solid #5b5d60;background:#2d3032;color:#fff;border-radius:6px;padding:5px 8px;min-width:44px;min-height:44px;font:500 12px "DM Mono",monospace;cursor:pointer}
 .calendar-cycle button:hover{background:var(--crimson);border-color:var(--rose-lt)}
 .calendar-open .calendar-head{align-items:flex-start; margin-bottom:15px}
 .calendar-toggle{white-space:nowrap}
 .calendar-actions{display:flex; gap:6px; flex:0 0 auto}
 .calendar-actions button,.calendar-footer button,.calendar-toggle{
   border:1px solid #5b5d60; background:#2d3032; color:#fff; border-radius:6px;
-  padding:7px 10px; font:500 12px "DM Mono",monospace; cursor:pointer
+  padding:7px 10px; min-height:44px; font:500 12px "DM Mono",monospace; cursor:pointer
 }
 .calendar-actions button:hover,.calendar-footer button:hover{background:var(--crimson); border-color:var(--rose-lt)}
 .calendar-toggle:hover{background:var(--crimson); border-color:var(--rose-lt)}
@@ -302,7 +302,8 @@ h1 .thin{font-weight:400; color:#e2b6bf}
 .calendar-day.today{border-color:#fff}
 .calendar-day.has-deadline::after{content:""; position:absolute; left:7px; bottom:7px; width:7px; height:7px; border-radius:50%; background:var(--rose-lt)}
 .calendar-day.has-deadline strong{color:var(--rose-lt)}
-.calendar-day.past{opacity:.58}
+.calendar-day.past{opacity:1;color:#c99aa3}
+.calendar-day.past strong{color:#c99aa3}
 .calendar-details{border-top:1px solid #45484a; margin-top:14px; padding-top:12px; min-height:56px}
 .calendar-details.empty{padding:12px 0 0; color:var(--gray37); text-align:left}
 .calendar-details h3{font:500 11px "DM Mono",monospace; letter-spacing:.12em; text-transform:uppercase; color:var(--gray37); margin:0 0 8px}
@@ -315,7 +316,7 @@ h1 .thin{font-weight:400; color:#e2b6bf}
 .calendar-event a:hover{text-decoration:underline}
 .calendar-footer{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:13px; padding-top:11px; border-top:1px solid #45484a}
 .calendar-footer span{font-size:12px; color:var(--gray37); margin-right:auto}
-.calendar-footer button{font-size:11px; padding:6px 9px}
+.calendar-footer button{font-size:11px; padding:6px 9px;min-height:44px}
 
 /* ============================================================
    SECTION NAV
@@ -992,7 +993,7 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
 .essay-progress-track span{display:block;width:0;height:100%;background:var(--sage);transition:width .2s ease}
 .essay-progress-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .essay-progress-steps span{
-  color:var(--gray64);font:700 11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color:#5c5f62;font:700 11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   letter-spacing:.03em;text-align:center
 }
 .essay-progress-steps span.is-ready{color:var(--sage)}
@@ -1170,6 +1171,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
 .site-nav .nav-num,nav.hub .tab .num{color:var(--crimson);font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .calendar-strip{margin:0;border-radius:0;padding:11px 0}
 .calendar-strip .wrap{padding:0 20px}
+.calendar-import-help{margin:10px 0 0;color:var(--gray20);font-size:12.5px;line-height:1.45}
 .start-options{margin-top:16px;border:1px solid var(--gray20);border-radius:12px;background:#fff;box-shadow:var(--shadow)}
 .start-options>summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:800;color:var(--ink)}
 .start-options>summary::-webkit-details-marker{display:none}
@@ -1177,11 +1179,12 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
 .start-options[open]>summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
 .start-options[open]>summary::after{content:"−"}
 .start-options .start-shortcuts{padding:0 14px 14px}
-@media(max-width:650px){header.top .inner{padding:0 16px}header.top .utility a:nth-child(n+3),header.top .utility button{display:none}.site-nav .nav-row,nav.hub .wrap.hub-shell{padding:0 8px}.site-nav a,.site-nav .tab,nav.hub .tab{padding-left:11px;padding-right:11px;font-size:12px}}
+@media(max-width:650px){header.top .inner{padding:0 16px}header.top .utility a:first-child,header.top .utility button{display:none}.site-nav .nav-row,nav.hub .wrap.hub-shell{padding:0 8px}.site-nav a,.site-nav .tab,nav.hub .tab{padding-left:11px;padding-right:11px;font-size:12px}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main-content">Skip to the main content</a>
+<h1 class="sr">Toppenish Next Steps — Class of 2027</h1>
 
 <header class="top">
   <div class="wrap inner">
@@ -1192,7 +1195,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
     <div class="utility" aria-label="Quick links">
       <a href="coach.html">Personalize my plan</a>
       <a href="scholarships.html">Scholarships</a>
-      <a href="#help-center" data-jump="help">Ayuda familiar · Español</a>
+      <a href="familias.html" lang="es" hreflang="es">Ayuda para familias · Español</a>
     </div>
   </div>
 </header>
@@ -1206,11 +1209,12 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
       <button class="tab" id="tab-deadlines" data-panel="deadlines"><span class="num">04</span> Pay for school</button>
       <a class="tab" id="tab-scholarships" href="scholarships.html"><span class="num">05</span> Scholarships</a>
       <button class="tab" id="tab-writing" data-panel="writing"><span class="num">06</span> Writing</button>
+      <a class="tab" href="familias.html" lang="es" hreflang="es"><span class="num">ES</span> Familias</a>
     </div>
   </div>
 </nav>
 
-<section class="deadline-calendar calendar-strip" id="deadline-calendar" aria-labelledby="calendar-title">
+<section class="deadline-calendar calendar-strip" id="deadline-calendar" aria-label="Important dates for seniors">
   <div class="wrap">
     <div class="calendar-head">
       <div>
@@ -1234,9 +1238,10 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
         <button type="button" id="cal-next" aria-label="Show next month">→</button>
       </div>
       <div class="calendar-weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
-      <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Important dates for seniors by month"></div>
+      <div class="calendar-grid" id="calendar-grid" aria-label="Important dates for seniors by month"></div>
       <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
-      <div class="calendar-footer"><span id="calendar-count">Confirmed dates only</span><button type="button" id="download-confirmed-ics">Add to Google / Apple Calendar</button><button type="button" data-jump="deadlines">View money steps →</button></div>
+      <div class="calendar-footer"><span id="calendar-count">Confirmed dates only</span><button type="button" id="download-confirmed-ics">Download future confirmed dates</button><button type="button" data-jump="deadlines">View money steps →</button></div>
+      <p class="calendar-import-help">This downloads a calendar file. Google Calendar: Settings → Import &amp; export → Import. On iPhone: open the downloaded file and tap Add All.</p>
     </div>
   </div>
 </section>
@@ -1264,6 +1269,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
         <div><p class="eyebrow">Updated automatically</p><h3 id="today-feed-title">What matters right now</h3></div>
         <span id="today-updated">Loading current information…</span>
       </div>
+      <p id="data-updated" class="next-empty" role="status" hidden></p>
       <div class="today-grid">
         <article class="today-card">
           <span class="today-label">Next important date</span>
@@ -1288,7 +1294,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
 
     <div class="start-shortcuts" aria-label="Common senior resources">
       <a class="start-shortcut" href="scholarships.html"><p class="eyebrow">Money</p><h3>Search scholarships</h3><p>See confirmed opportunities first and save deadlines to your calendar.</p><span>Open the finder →</span></a>
-      <a class="start-shortcut" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener"><p class="eyebrow">Documents</p><h3>Request a transcript</h3><p>Send the official request directly to the College &amp; Career Center.</p><span>Open the form →</span></a>
+      <a class="start-shortcut" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener"><p class="eyebrow">Documents</p><h3>Request a transcript</h3><p>Sign in with your @toppenish.wednet.edu Google account. If the form will not open, visit the College &amp; Career Center or ask your advisory teacher.</p><span>Open the school form →</span></a>
       <a class="start-shortcut" href="#pathways" data-jump="pathways"><p class="eyebrow">After graduation</p><h3>Compare paths</h3><p>Explore college, YVC, trades, apprenticeships, military, and work.</p><span>Choose a path →</span></a>
       <a class="start-shortcut" href="#deadlines" data-jump="deadlines"><p class="eyebrow">Money and forms</p><h3>Pay for school</h3><p>Start with FAFSA or WASFA and learn about Washington financial aid.</p><span>See money steps →</span></a>
     </div>
@@ -1316,7 +1322,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
             <div class="resource-links">
               <a class="resource-link" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener">
                 <strong>Request an official transcript</strong>
-                <span>Use the Toppenish College &amp; Career Center form. Sign in with your school Google account.</span>
+                <span>Use the Toppenish College &amp; Career Center form. Sign in with your @toppenish.wednet.edu Google account. If it will not open, visit the Center or ask your advisory teacher.</span>
                 <em>Open request form →</em>
               </a>
               <a class="resource-link" href="https://www.commonapp.org/apply/first-year-students" target="_blank" rel="noopener">
@@ -1559,7 +1565,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
 
   <div class="wrap">
     <div class="essay-save-note" role="note">
-      <strong>Private on this device:</strong> your notes and draft save only in this browser. They are not sent to Mr. Barragan or anyone else. This is not a backup—copy your real draft into Google Docs.
+      <strong>Private on this device:</strong> your notes and draft save only in this browser. They are not sent to your teacher or anyone else. This is not a backup—copy your real draft into Google Docs.
     </div>
 
     <section class="essay-personalizer" aria-labelledby="essay-personal-title">
@@ -1569,7 +1575,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
           <h3 id="essay-personal-title">Start where you are.</h3>
           <p>Pick the answer that feels closest. The coach will point you to one useful next step—you do not need to complete everything at once.</p>
         </div>
-        <span class="essay-private-pill">Private on this device</span>
+        <span class="essay-private-pill" id="essay-expiry-note">Private on this device · clears after 14 inactive days</span>
       </div>
 
       <fieldset class="essay-stage-grid">
@@ -2026,8 +2032,8 @@ const SENIOR_DEADLINES = [
 
 /* Evergreen money steps stay pinned even when the nightly scholarship list changes. */
 const PRIORITY_ACTIONS = [
-  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"Students who can complete FAFSA under its eligibility rules should prepare a StudentAid.gov account and complete the 2027–28 form when it opens.",opens:"2026-10-01",due:null,window:"Opens October 1, 2026",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"Federal Student Aid and WSAC say the FAFSA opens October 1 each year. This is an application for grants, work-study, and loans—not a scholarship contest. If you are unsure which form to use, do not guess; use WSAC's guidance or ask for help.",lastChecked:"2026-08-14",kind:"action",needs:"StudentAid.gov account; student and contributor information; required financial and identity information."},
-  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or choose not to file FAFSA can use WSAC's official questionnaire to check whether WASFA is the appropriate application.",opens:"2026-10-01",due:null,window:"Opens October 1, 2026",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"WSAC says FAFSA and WASFA open October 1 each year. WASFA applies for state aid only. Read the official privacy statement and ask for help if any question is unclear.",lastChecked:"2026-08-14",kind:"action",needs:"WSAC account; student and contributor information; residency and financial information requested by the official application."},
+  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"Students who can complete FAFSA under its eligibility rules should prepare a StudentAid.gov account and complete the 2027–28 form when it opens.",opens:"2026-10-01",due:null,window:"Expected by October 1, 2026 · confirm the live 2027–28 form",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"October 1 is a planning date until the 2027–28 form is officially released. FAFSA is an application for grants, work-study, and loans—not a scholarship contest. If you are unsure which form to use, do not guess; use WSAC's guidance or ask for help.",lastChecked:"2026-08-20",planning:true,confirm:true,kind:"action",needs:"StudentAid.gov account; student and contributor information; required financial and identity information."},
+  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or choose not to file FAFSA can use WSAC's official questionnaire to check whether WASFA is the appropriate application.",opens:"2026-10-01",due:null,window:"Expected by October 1, 2026 · confirm the live 2027–28 form",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"October 1 is a planning date until WSAC releases the 2027–28 WASFA. WASFA applies for state aid only. Read the official privacy statement and ask for help if any question is unclear.",lastChecked:"2026-08-20",planning:true,confirm:true,kind:"action",needs:"WSAC account; student and contributor information; residency and financial information requested by the official application."},
   {priority:3,name:"Washington College Grant",org:"Washington Student Achievement Council",amount:"Money for college, career training, or approved apprenticeships",who:"Washington residents across a wide range of family incomes. Complete FAFSA or WASFA to be considered.",due:null,window:"Available through FAFSA or WASFA",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wcg-awards",note:"Do not assume you earn too much. In the current 2026–27 example, a family of four can receive some aid up to about $139,500; 2027–28 amounts may change.",lastChecked:"2026-08-13",kind:"action",needs:"FAFSA or WASFA plus enrollment in an eligible Washington college, training program, or approved apprenticeship."},
   {priority:4,name:"College Bound Scholarship",org:"Washington Student Achievement Council",amount:"State aid commitment for eligible students",who:"Students enrolled through the College Bound program: check your status and make sure you complete FAFSA or WASFA during senior year.",due:null,window:"Check your status now",tags:["money","four","two","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://wsac.wa.gov/college-bound",note:"Eligible students must meet program requirements and use the award at a participating Washington school.",lastChecked:"2026-08-13",kind:"action"},
   {priority:5,name:"Passport to Careers",org:"Washington Student Achievement Council",amount:"College or apprenticeship aid plus support",who:"Washington students who have experienced foster care or unaccompanied homelessness: review eligibility and tell your counselor or financial-aid office.",due:null,window:"Start eligibility steps now",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/passport-to-careers",note:"Support can cover college, pre-apprenticeship, or apprenticeship costs, including some living and occupational expenses.",lastChecked:"2026-08-13",kind:"action"},
@@ -2336,7 +2342,7 @@ const STEPS = [
    ================================================================ */
 
 const FITS = [
-  {key:"everyone",   label:"Open to most students"},
+  {key:"everyone",   label:"No special group required"},
   {key:"local",      label:"Washington / local"},
   {key:"latino",     label:"Latino / Hispanic"},
   {key:"ag",         label:"Farmworker / agriculture"},
@@ -2384,6 +2390,11 @@ const Store = (() => {
     supported: ok
   };
 })();
+
+// Older versions saved identity and GPA-related coach choices indefinitely.
+// Remove those legacy values; the current coach keeps them only for this browser session.
+Store.set("scholarshipPriorities", []);
+Store.set("coach", null);
 
 let saved   = Store.get("saved", {});
 let doneChk = Store.get("checks", {});
@@ -2507,6 +2518,10 @@ function showPanel(name, push){
   });
   if(push && window.history && history.replaceState) history.replaceState(null,"","#"+name);
   window.scrollTo(0,0);
+  if(push){
+    const panel = document.getElementById("panel-"+name);
+    if(panel){ panel.setAttribute("tabindex","-1"); panel.focus({preventScroll:true}); }
+  }
 }
 document.querySelectorAll(".tab[data-panel]").forEach(b => {
   b.addEventListener("click", () => showPanel(b.dataset.panel, true));
@@ -2520,22 +2535,23 @@ function jumpTo(target){
   }
   if(target === "aid"){
     showPanel("deadlines", true);
-    requestAnimationFrame(() => document.getElementById("aid-choice").scrollIntoView({behavior:"smooth",block:"start"}));
+    requestAnimationFrame(() => document.getElementById("aid-choice").scrollIntoView({behavior:prefersReducedMotion()?"auto":"smooth",block:"start"}));
     return;
   }
   if(target === "help"){
     showPanel("start", true);
-    requestAnimationFrame(() => document.getElementById("help-center").scrollIntoView({behavior:"smooth",block:"start"}));
+    requestAnimationFrame(() => document.getElementById("help-center").scrollIntoView({behavior:prefersReducedMotion()?"auto":"smooth",block:"start"}));
     return;
   }
   if(target === "familias"){
-    window.location.href = "scholarships.html#families";
+    window.location.href = "familias.html";
     return;
   }
   showPanel(target, true);
 }
+function prefersReducedMotion(){ return !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches); }
 document.querySelectorAll("[data-jump]").forEach(el => el.addEventListener("click", e => {e.preventDefault();jumpTo(el.dataset.jump);}));
-document.querySelectorAll("[data-scroll]").forEach(el => el.addEventListener("click", () => document.getElementById(el.dataset.scroll).scrollIntoView({behavior:"smooth",block:"start"})));
+document.querySelectorAll("[data-scroll]").forEach(el => el.addEventListener("click", () => document.getElementById(el.dataset.scroll).scrollIntoView({behavior:prefersReducedMotion()?"auto":"smooth",block:"start"})));
 
 /* ---------- Start Here reception ---------- */
 const START_RESPONSES = {
@@ -2580,22 +2596,26 @@ function icsEventFor(item){
   const end = (() => { const x = parseDate(d); x.setDate(x.getDate()+1);
     return x.getFullYear() + String(x.getMonth()+1).padStart(2,"0") + String(x.getDate()).padStart(2,"0"); })();
   const wrap = s => String(s).replace(/[\\;,]/g, m => "\\"+m).replace(/\n/g,"\\n");
+  const kind = item.calendarKind || "event";
+  const summaryPrefix = kind === "opens" ? "APPLICATION OPENS: " : (kind === "due" ? "DEADLINE: " : "");
+  const weekAlarm = kind === "opens" ? item.name + " opens in one week" : (kind === "due" ? item.name + " closes in one week" : item.name + " is one week away");
+  const dayAlarm = kind === "opens" ? item.name + " opens tomorrow" : (kind === "due" ? item.name + " closes tomorrow" : item.name + " is tomorrow");
   return [
     "BEGIN:VEVENT",
     "UID:" + idOf(item) + "-" + (item.calendarKind || "deadline") + "@ths-nextsteps",
     "DTSTAMP:" + stamp + "T090000Z",
     "DTSTART;VALUE=DATE:" + stamp,
     "DTEND;VALUE=DATE:" + end,
-    "SUMMARY:" + wrap((item.calendarKind === "opens" ? "APPLICATION OPENS: " : "DEADLINE: ") + item.name),
+    "SUMMARY:" + wrap(summaryPrefix + item.name),
     "DESCRIPTION:" + wrap((item.amount && item.amount !== "—" ? item.amount + "\n" : "") + item.who + "\n\n" + item.link),
     "URL:" + item.link,
-    "BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.calendarKind === "opens" ? item.name + " opens in one week" : item.name + " closes in one week"),"END:VALARM",
-    "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.calendarKind === "opens" ? item.name + " opens tomorrow" : item.name + " closes tomorrow"),"END:VALARM",
+    "BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:" + wrap(weekAlarm),"END:VALARM",
+    "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:" + wrap(dayAlarm),"END:VALARM",
     "END:VEVENT"
   ].join("\r\n");
 }
 function icsForItems(items){
-  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//THS Advisory//Next Steps//EN","CALSCALE:GREGORIAN",
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Toppenish Next Steps//Class of 2027//EN","CALSCALE:GREGORIAN","X-WR-CALNAME:Toppenish Next Steps - Class of 2027",
     items.map(icsEventFor).filter(Boolean).join("\r\n"),"END:VCALENDAR"].join("\r\n");
 }
 function icsFor(item){ return item && item.due ? icsForItems([item]) : null; }
@@ -2836,11 +2856,9 @@ function renderTodayFeed(){
     dateLink.textContent = "Open the calendar →";
   }
 
-  const coach = Store.get("coach", {});
-  const savedPriorities = Store.get("scholarshipPriorities", []);
-  const priorities = Array.isArray(savedPriorities) && savedPriorities.length
-    ? savedPriorities
-    : (coach && coach.branch === "scholarships" && Array.isArray(coach.selected) ? coach.selected : []);
+  let coach = {};
+  try{ coach = JSON.parse(sessionStorage.getItem("thsNextSteps") || "{}").coach || {}; }catch(e){ coach = {}; }
+  const priorities = coach && coach.branch === "scholarships" && Array.isArray(coach.selected) ? coach.selected : [];
   const prioritySet = new Set(priorities);
   const candidates = DEADLINES.filter(item => {
     if(item.kind || item.planning || !item.link) return false;
@@ -2927,7 +2945,7 @@ function renderCalendar(){
     kicker.textContent = next14.length > 1 ? `Next two weeks · ${calendarCycleIndex + 1} of ${next14.length}` : (next ? "Next important senior date" : "Important dates for seniors");
     document.getElementById("calendar-title").textContent = next ? `${calendarEventLabel(next)}: ${next.name}` : "No upcoming confirmed dates";
     document.getElementById("calendar-summary").textContent = next
-      ? `${next.calendarKind === "opens" ? "Opens" : "Due"} ${fmt(next.due)} · ${next.org || "official sponsor"}`
+      ? `${next.calendarKind === "opens" ? "Opens" : (next.calendarKind === "due" ? "Due" : "Date")} ${fmt(next.due)} · ${next.org || "official source"}`
       : "Check the full calendar for past dates or wait for a new confirmed date to be posted.";
   }
   if(seniorDatesLoadFailed){
@@ -2954,7 +2972,7 @@ function renderCalendar(){
     const key = dateKey(current);
     const dayItems = byDate.get(key) || [];
     const button = document.createElement("button");
-    button.type = "button"; button.className = "calendar-day"; button.setAttribute("role","gridcell");
+    button.type = "button"; button.className = "calendar-day";
     button.setAttribute("aria-selected", String(key === selected));
     button.setAttribute("aria-label", fmt(key) + (dayItems.length ? `, ${dayItems.length} confirmed date${dayItems.length === 1 ? "" : "s"}` : ""));
     if(key === dateKey(today)) button.classList.add("today");
@@ -2997,7 +3015,7 @@ function initCalendar(){
   document.getElementById("cal-next").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()+1); calendarSelected = null; renderCalendar(); });
   document.getElementById("cal-today").addEventListener("click", () => { calendarView = new Date(today.getFullYear(), today.getMonth(), 1); calendarSelected = null; renderCalendar(); });
   document.getElementById("download-confirmed-ics").addEventListener("click", () => {
-    const items = confirmedCalendarItems();
+    const items = confirmedCalendarItems().filter(item => daysUntil(item.due) >= 0);
     if(!items.length) return toast("There are no confirmed fixed-date deadlines yet.");
     download("ths-confirmed-deadlines.ics", icsForItems(items), "text/calendar;charset=utf-8");
     toast("Downloaded — open the file to add these dates to Google, Apple, or Outlook Calendar.");
@@ -3250,7 +3268,7 @@ function renderLocal(){
   const m = document.getElementById("local-mount");
   m.innerHTML = LOCAL.map(l => `
     <div class="wcard">
-      <div class="kicker">${esc(l.k)} away</div>
+      <div class="kicker">${esc(l.k)}${/^\d/.test(l.k) ? " away" : ""}</div>
       <h4>${esc(l.h)}</h4>
       <p>${esc(l.p)}</p>
       <a href="${esc(l.l)}" target="_blank" rel="noopener" style="font-family:'DM Mono',monospace;font-size:13px">${esc(l.ltext)} &rarr;</a>
@@ -3417,8 +3435,17 @@ function initEssayCoach(){
     return {type:"college",stage:"topic",challenge:"",destination:"",prompt:"",limit:650,draft:"",story:{},review:{},feedbackOpen:false,migratedLegacy:true};
   }
 
+  const ESSAY_EXPIRY_MS = 14 * 24 * 60 * 60 * 1000;
   let essayState = Store.get("essayCoach", {});
   if(!essayState || typeof essayState !== "object" || Array.isArray(essayState)) essayState = {};
+  if(essayState.updatedAt && Date.now() - Date.parse(essayState.updatedAt) > ESSAY_EXPIRY_MS){
+    essayState = {};
+    Store.set("essayCoach", {});
+    Store.set("commonStory", {});
+    Store.set("commonDraft", "");
+    Store.set("draft", "");
+    Store.set("bank", {});
+  }
   if(!essayState.migratedLegacy){
     const legacyStory = Store.get("commonStory", {});
     essayState.story = essayState.story || {};
@@ -3459,7 +3486,15 @@ function initEssayCoach(){
   let routeTarget = "essay-step-2";
   let routeFocus = "#essay-scene";
 
-  function persistEssay(){ Store.set("essayCoach", essayState); }
+  function persistEssay(touch){
+    if(touch !== false || !essayState.updatedAt) essayState.updatedAt = new Date().toISOString();
+    Store.set("essayCoach", essayState);
+    const expiryNote = document.getElementById("essay-expiry-note");
+    if(expiryNote){
+      const expires = new Date(Date.parse(essayState.updatedAt) + ESSAY_EXPIRY_MS);
+      expiryNote.textContent = "Private on this device · clears after 14 inactive days (" + expires.toLocaleDateString("en-US",{month:"short",day:"numeric"}) + ")";
+    }
+  }
   function words(text){ const value = String(text || "").trim(); return value ? value.split(/\s+/).length : 0; }
   function clean(value, fallback){ const v = String(value || "").trim(); return v || fallback; }
   function fileBase(){
@@ -3913,7 +3948,7 @@ function initEssayCoach(){
     toast("Writing workspace cleared.");
   });
 
-  persistEssay();
+  persistEssay(false);
   syncInputs();
   renderMode();
   renderReview();
@@ -4069,8 +4104,10 @@ function mapScholarship(item){
       dataUpdatedAt = data.updatedAt || seniorData.updatedAt || null;
       const refreshed = document.getElementById("data-updated");
       if(refreshed && scholarshipResult.status !== "fulfilled"){
+        refreshed.hidden = false;
         refreshed.innerHTML = "<strong>Scholarship list temporarily unavailable.</strong> Senior dates and built-in resources are still available.";
       } else if(refreshed && data.updatedAt){
+        refreshed.hidden = false;
         refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
       }
     })
@@ -4079,7 +4116,10 @@ function mapScholarship(item){
       seniorDatesLoadFailed = true;
       DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES);
       const refreshed = document.getElementById("data-updated");
-      if(refreshed) refreshed.innerHTML = "<strong>Live updates temporarily unavailable.</strong> Built-in dates and resources are still available.";
+      if(refreshed){
+        refreshed.hidden = false;
+        refreshed.innerHTML = "<strong>Live updates temporarily unavailable.</strong> Built-in dates and resources are still available.";
+      }
     })
     .then(boot);
 })();

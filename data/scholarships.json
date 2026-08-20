@@ -55,6 +55,7 @@
       "organization": "Soroptimist International of the Americas",
       "award": "Local awards vary; recipients can receive up to $16,000 across award levels",
       "eligibility": "Women who provide the primary financial support for themselves and dependents, are enrolled in or accepted to an undergraduate or vocational program, and do not hold or pursue a graduate degree.",
+      "gate": "Applicant must be the primary financial support for herself and at least one dependent.",
       "url": "https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html",
       "status": "Confirmed for 2027",
       "opens": null,
@@ -267,7 +268,8 @@
         "No essay"
       ],
       "fit": [
-        "local"
+        "local",
+        "everyone"
       ],
       "whyFit": "Toppenish High School qualifies because the drawing accepts Class of 2027 students attending school in the U.S. Students must be U.S. residents and have a College Board account.",
       "lastChecked": "2026-08-20"
@@ -767,7 +769,8 @@
       ],
       "fit": [
         "local",
-        "leadership"
+        "leadership",
+        "everyone"
       ],
       "whyFit": "Worth considering for strong Toppenish speakers and writers. The prior date is for planning and is not guaranteed.",
       "lastChecked": "2026-08-13"
@@ -947,6 +950,7 @@
       "organization": "APIA Scholars",
       "award": "$2,500–$20,000",
       "eligibility": "Students who meet the sponsor's U.S. citizenship or eligible Pacific Island nation status rules and will attend an accredited U.S. college or university for an associate or bachelor's degree, part time or full time.",
+      "gate": "Applicant must identify as Asian American, Native Hawaiian, or Pacific Islander and meet the sponsor's citizenship or eligible-status rules.",
       "url": "https://apiascholars.org/scholarships/",
       "status": "Confirmed for 2027",
       "opens": "2026-11-15",
@@ -1121,7 +1125,8 @@
         "Four-year"
       ],
       "fit": [
-        "local"
+        "local",
+        "everyone"
       ],
       "whyFit": "Toppenish seniors qualify geographically as Washington students, including students whose strongest interests are music, art, design, writing, or creative media.",
       "needs": "Application, creative interests or work, college plans, transcript, and the current essay or supporting materials.",
@@ -1151,7 +1156,8 @@
       ],
       "fit": [
         "local",
-        "leadership"
+        "leadership",
+        "everyone"
       ],
       "whyFit": "Toppenish seniors qualify geographically as Washington residents, and one application can match them to several awards, including trade-school options. Students creating visual art should also review the Korum Family Arts Scholarship within this program.",
       "needs": "Online application, unofficial transcript, activity/work/service history, and two recommendations—one academic and one from an employer, volunteer contact, or school-activity advisor. The Korum arts award also requires the current art entry.",
@@ -1409,7 +1415,8 @@
       ],
       "fit": [
         "local",
-        "leadership"
+        "leadership",
+        "everyone"
       ],
       "whyFit": "This hometown scholarship specifically supports students from the Toppenish and Wapato communities.",
       "needs": "Create a Student and Parent Login profile, complete education and community-service information, and submit any current transcript, references, essays, or local matching questions.",
@@ -1476,6 +1483,7 @@
       "gpaMin": 3,
       "award": "$2,500 one-time scholarship",
       "eligibility": "Chapter nomination required: women in their final year of high school, age 20 or younger at year-end, with a 3.0+ unweighted GPA, U.S. or Canadian citizenship or permanent residency, leadership and service, and plans for accredited U.S. or Canadian postsecondary study.",
+      "gate": "A local P.E.O. chapter must nominate the student; students cannot apply independently.",
       "url": "https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/",
       "status": "Confirmed for 2027",
       "opens": "2026-08-15",
@@ -1546,6 +1554,7 @@
       "organization": "Elks National Foundation",
       "award": "$6,000 ($1,500 per year for four years)",
       "eligibility": "High school seniors who are the child, stepchild, grandchild, step-grandchild, or legal ward of an eligible living Elks member in good standing. Great-grandchildren are not eligible.",
+      "gate": "Applicant must be the child, stepchild, grandchild, step-grandchild, or legal ward of a living Elks member in good standing.",
       "url": "https://www.elks.org/scholars/scholarships/Legacy.cfm",
       "status": "Confirmed for 2027",
       "opens": "2026-09-01",
@@ -1643,6 +1652,7 @@
       "organization": "Women in Aviation International",
       "award": "Multiple aviation and aerospace scholarships; amounts vary",
       "eligibility": "Current WAI members pursuing aviation or aerospace education/training. Applicants must be WAI members by August 30, 2026 and meet the requirements of each individual scholarship.",
+      "gate": "Applicant must be a Women in Aviation International member by August 30, 2026.",
       "url": "https://www.wai.org/scholarships",
       "status": "Confirmed for 2027",
       "opens": "2026-06-01",
@@ -1664,6 +1674,7 @@
       "organization": "Great Clips, Inc.",
       "award": "Up to $5,000 per scholarship; more than $100,000 awarded annually",
       "eligibility": "High school and post-high-school students in the U.S. or Canada who are enrolled in a cosmetology or barbering program.",
+      "gate": "Applicant must already be enrolled in a cosmetology or barbering program.",
       "url": "https://jobs.greatclips.com/helping-future-stylists-and-barbers-100000-ways",
       "status": "Confirmed for 2027",
       "opens": null,
@@ -1685,6 +1696,7 @@
       "organization": "American Red Cross",
       "award": "$1,000–$2,500 scholarship drawings for student blood-drive hosts",
       "eligibility": "High school or college students who organize an American Red Cross blood drive during a program period and collect at least 25 pints of blood.",
+      "gate": "Applicant must organize an eligible Red Cross blood drive and collect at least 25 pints.",
       "url": "https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html",
       "status": "Confirmed for 2027",
       "opens": null,
@@ -1707,6 +1719,7 @@
       "organization": "Hereford Youth Foundation of America / National Junior Hereford Association",
       "award": "More than $150,000 across multiple fall scholarships",
       "eligibility": "Current National Junior Hereford Association members pursuing postsecondary education; individual awards have different requirements and some include trade or technical training.",
+      "gate": "Applicant must be a current National Junior Hereford Association member.",
       "url": "https://hereford.org/youth/njha/scholarship-opportunities/",
       "status": "Confirmed for 2027",
       "opens": null,
@@ -1734,6 +1747,7 @@
       "organization": "National Agricultural Aviation Association",
       "award": "$2,000 first-place and $1,000 second-place educational scholarships",
       "eligibility": "High school seniors or students pursuing education beyond high school who are sponsored by a current NAAA member; the sponsor's membership must have been obtained by June 15, 2026.",
+      "gate": "A current NAAA member who joined by June 15, 2026 must sponsor the applicant.",
       "url": "https://www.agaviation.org/career/scholarships/support-scholarship-media-contest/",
       "status": "Confirmed for 2027",
       "opens": null,

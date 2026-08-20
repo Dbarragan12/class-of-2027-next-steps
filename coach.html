@@ -65,7 +65,7 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 .footer{border-top:1px solid var(--line);background:#fff;padding:20px 0 34px;color:var(--muted);font-size:12.5px}.footer p{margin:0}.footer strong{color:var(--ink)}
 [hidden]{display:none!important}
 @media(max-width:780px){.page{grid-template-columns:1fr}.side{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.side h2,.person{grid-column:1/-1}.side-section{border-top:0;padding-top:0;margin-top:0}}
-@media(max-width:560px){.top-row{align-items:flex-start}.brand span{display:none}.top-links a:not(:first-child){display:none}.privacy-row{align-items:flex-start}.page{padding-top:14px}.coach-inner{padding:20px 16px}.options{grid-template-columns:1fr}.option{min-height:52px}.resume{align-items:flex-start;flex-direction:column}.resume .btn{width:100%}.side{grid-template-columns:1fr}.side h2,.person{grid-column:auto}.scholarship-head{display:block}.status{text-align:left;margin-top:8px;max-width:none}.actions .btn{min-width:104px}}
+@media(max-width:560px){.top-row{align-items:flex-start}.brand span{display:none}.top-links a:first-child{display:none}.privacy-row{align-items:flex-start}.page{padding-top:14px}.coach-inner{padding:20px 16px}.options{grid-template-columns:1fr}.option{min-height:52px}.resume{align-items:flex-start;flex-direction:column}.resume .btn{width:100%}.side{grid-template-columns:1fr}.side h2,.person{grid-column:auto}.scholarship-head{display:block}.status{text-align:left;margin-top:8px;max-width:none}.actions .btn{min-width:104px}}
 @media(prefers-reduced-motion:reduce){.progress>span{transition:none}}
 
 /* Same simple header and navigation used by every Next Steps page */
@@ -87,7 +87,7 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 .nav-num{color:var(--crimson);font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .coach-intent-note{margin:0 0 20px;padding:11px 13px;border-left:4px solid var(--sage);border-radius:0 8px 8px 0;background:var(--sage-bg);color:var(--muted);font-size:13px}
 .coach-intent-note strong{color:var(--ink)}
-@media(max-width:560px){.top .inner{padding:0 16px}.top-links a:nth-child(n+2){display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}}
+@media(max-width:560px){.top .inner{padding:0 16px}.top-links a:first-child{display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -95,7 +95,7 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 <header class="top">
   <div class="wrap inner">
     <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home"><span class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></span><span><strong class="site-name">Toppenish Next Steps</strong><span class="school">Class of 2027 · Help after high school</span></span></a>
-    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="index.html#help-center">Ayuda familiar · Español</a></div>
+    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="familias.html" lang="es" hreflang="es">Ayuda para familias · Español</a></div>
   </div>
 </header>
 <nav class="site-nav" aria-label="Main sections">
@@ -106,10 +106,11 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
     <a href="index.html#deadlines"><span class="nav-num">04</span> Pay for school</a>
     <a href="scholarships.html"><span class="nav-num">05</span> Scholarships</a>
     <a href="index.html#writing"><span class="nav-num">06</span> Writing</a>
+    <a href="familias.html" lang="es" hreflang="es"><span class="nav-num">ES</span> Familias</a>
   </div>
 </nav>
 <div class="privacy">
-  <div class="wrap privacy-row"><p><strong>Private on this device:</strong> no name or account is required. Clear your plan before leaving a shared Chromebook.</p><button class="clear" id="clear-plan" type="button">Clear my plan</button></div>
+  <div class="wrap privacy-row"><p><strong>Private for this browser session:</strong> no name or account is required. Your plan and GPA range clear when the browser closes.</p><button class="clear" id="clear-plan" type="button">Clear my plan</button></div>
 </div>
 
 <main class="wrap page" id="coach-main">
@@ -142,7 +143,7 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 
 <script>
 const STORE_KEY="thsNextSteps";
-const FIT_LABELS={local:"Local / Yakima",latino:"Latino / Hispanic",lowincome:"Financial need",firstgen:"First-generation",tribal:"Native / tribal",ag:"Agriculture / family work",disability:"Disability",lgbtq:"LGBTQ+",leadership:"Leadership / service",everyone:"Open to most"};
+const FIT_LABELS={local:"Local / Yakima",latino:"Latino / Hispanic",lowincome:"Financial need",firstgen:"First-generation",tribal:"Native / tribal",ag:"Agriculture / family work",disability:"Disability",lgbtq:"LGBTQ+",leadership:"Leadership / service",everyone:"No special group required"};
 const ACADEMIC_OPTIONS=[
   {key:"gpa-unknown",label:"I do not know my GPA yet"},
   {key:"gpa-below-2-5",label:"Below 2.5"},
@@ -321,9 +322,12 @@ let screen="start",branch=null,selected=new Set(),academicBand=null,scholarships
 
 function readStore(){try{return JSON.parse(localStorage.getItem(STORE_KEY)||"{}")}catch(e){return {}}}
 function writeStore(value){try{localStorage.setItem(STORE_KEY,JSON.stringify(value))}catch(e){}}
-function savedPlan(){return readStore().coach||null}
-function savePlan(){const store=readStore();store.coach={branch,selected:Array.from(selected),academicBand:branch==="scholarships"?academicBand:null,finishedAt:new Date().toISOString()};writeStore(store);updateSide()}
-function clearPlan(){const store=readStore();delete store.coach;writeStore(store);$("resume").hidden=true;showStart();updateSide()}
+function readSession(){try{return JSON.parse(sessionStorage.getItem(STORE_KEY)||"{}")}catch(e){return {}}}
+function writeSession(value){try{sessionStorage.setItem(STORE_KEY,JSON.stringify(value))}catch(e){}}
+function savedPlan(){return readSession().coach||null}
+function savePlan(){const session=readSession();session.coach={branch,selected:Array.from(selected),academicBand:branch==="scholarships"?academicBand:null,finishedAt:new Date().toISOString()};writeSession(session);updateSide()}
+function clearPlan(){const session=readSession();delete session.coach;writeSession(session);const store=readStore();delete store.coach;delete store.scholarshipPriorities;writeStore(store);$("resume").hidden=true;showStart();updateSide()}
+try{const legacy=readStore();delete legacy.coach;delete legacy.scholarshipPriorities;writeStore(legacy)}catch(e){}
 function esc(value){return String(value??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[c]))}
 function parseDate(value){if(!value)return null;const p=String(value).split("-").map(Number);return p.length===3&&!p.some(Number.isNaN)?new Date(p[0],p[1]-1,p[2]):null}
 function fmt(value){const d=parseDate(value);return d?d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):""}
@@ -357,7 +361,7 @@ function showBranch(key,restored=[]){
   screen="branch";branch=key;selected=new Set(restored);const flow=FLOWS[key];setProgress(2);setCopy(flow.kicker,flow.question,flow.intro);resultsEl.hidden=true;optionsEl.hidden=false;renderOptions(flow.options,flow.multi);backBtn.disabled=false;continueBtn.disabled=selected.size===0;continueBtn.textContent=key==="scholarships"?"Continue to GPA matching":"Build my next steps";updateSide();
 }
 function renderAcademicOptions(){
-  optionsEl.innerHTML=`<p class="coach-note">This is optional. Choose a range if you know it; exact grades are not saved, and scholarships without a GPA rule will still be included.</p>`+ACADEMIC_OPTIONS.map(item=>`<button class="option" type="button" data-academic="${esc(item.key)}" aria-pressed="${String(academicBand===item.key)}">${esc(item.label)}</button>`).join("");
+  optionsEl.innerHTML=`<p class="coach-note">This is optional. Choose a range if you know it. We use the range—not an exact GPA—and it clears when the browser closes. Scholarships without a GPA rule will still be included.</p>`+ACADEMIC_OPTIONS.map(item=>`<button class="option" type="button" data-academic="${esc(item.key)}" aria-pressed="${String(academicBand===item.key)}">${esc(item.label)}</button>`).join("");
   optionsEl.querySelectorAll("[data-academic]").forEach(button=>button.addEventListener("click",()=>{academicBand=button.dataset.academic;optionsEl.querySelectorAll("[data-academic]").forEach(x=>x.setAttribute("aria-pressed",String(x===button)));continueBtn.disabled=false;updateSide()}));
 }
 function showAcademicProfile(restored=academicBand){

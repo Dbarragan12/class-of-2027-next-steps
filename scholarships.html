@@ -76,6 +76,7 @@ main{padding-bottom:42px}
 .status small{display:block;color:var(--muted);font-size:10px;font-weight:700;margin-top:2px}
 .award-banner{background:var(--sage-bg);border:1px solid #bdd8c9;border-radius:8px;padding:9px 11px;color:var(--sage);display:flex;justify-content:space-between;align-items:baseline;gap:10px}.award-banner span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:800}.award-banner strong{font-size:15px;text-align:right}
 .match-rank{font-size:12px;font-weight:800;color:var(--sage);background:var(--sage-bg);border-radius:7px;padding:7px 9px}
+.eligibility-gate{margin:0;padding:9px 10px;border-left:4px solid var(--crimson);border-radius:0 7px 7px 0;background:#fff0f2;color:var(--crimson-dk);font-size:13px;font-weight:800}
 .eligibility,.why{margin:0;color:var(--muted);font-size:14px}.why{padding-left:10px;border-left:3px solid var(--rose-lt)}
 .card-more{margin:0;border-top:1px solid var(--gray20);padding-top:9px}.card-more summary{font-size:13px;color:var(--crimson)}.more-body{display:grid;gap:9px;padding-top:9px}
 .prep{font-size:13px;color:var(--muted);background:var(--sand);border-radius:7px;padding:9px 10px}.prep strong{color:var(--ink)}
@@ -128,19 +129,20 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 .tool-more summary::after,.filter-drawer summary::after{content:"+";float:right;font-size:18px}
 .tool-more[open] summary::after,.filter-drawer[open] summary::after{content:"−"}
 .tool-more-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
-@media(max-width:650px){.top .inner{padding:0 16px}.top-links a:nth-child(n+3){display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}.privacy-row{align-items:flex-start;flex-direction:column;gap:4px}}
+@media(max-width:650px){.top .inner{padding:0 16px}.top-links a:first-child{display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}.privacy-row{align-items:flex-start;flex-direction:column;gap:4px}}
 @media(max-width:650px){.es-grid{grid-template-columns:1fr;gap:15px}}
 </style>
 </head>
 <body>
 <a class="sr" href="#search">Skip to scholarship search</a>
+<h1 class="sr">Toppenish Next Steps Scholarship Finder</h1>
 <header class="top">
   <div class="wrap inner">
     <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home">
       <div class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></div>
       <div><div class="site-name">Toppenish Next Steps</div><div class="school">Class of 2027 · Help after high school</div></div>
     </a>
-    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="index.html#help-center">Ayuda familiar · Español</a></div>
+    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="familias.html" lang="es" hreflang="es">Ayuda para familias · Español</a></div>
   </div>
 </header>
 <nav class="site-nav" aria-label="Main sections">
@@ -151,11 +153,12 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
     <a href="index.html#deadlines"><span class="nav-num">04</span> Pay for school</a>
     <a href="scholarships.html" aria-current="page"><span class="nav-num">05</span> Scholarships</a>
     <a href="index.html#writing"><span class="nav-num">06</span> Writing</a>
+    <a href="familias.html" lang="es" hreflang="es"><span class="nav-num">ES</span> Familias</a>
   </div>
 </nav>
 
 <div class="privacy-bar">
-  <div class="wrap privacy-row"><p><strong>Saved on this device:</strong> your list and filter choices stay in this browser, but they are not confidential on a shared Chromebook.</p><button class="clear-local" id="clear-saved" type="button">Clear saved choices</button></div>
+  <div class="wrap privacy-row"><p><strong>Saved on this device:</strong> your saved scholarships stay in this browser. Filter choices reset when the browser closes and are not stored.</p><button class="clear-local" id="clear-saved" type="button">Clear saved scholarships</button></div>
 </div>
 
 <main>
@@ -167,7 +170,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
     <div class="wrap">
       <div class="search-row">
         <label class="sr" for="search">Search scholarships</label>
-        <input id="search" type="search" placeholder="Search welding, orchard, nursing, tribal, no essay…" autocomplete="off">
+        <input id="search" type="search" placeholder="Search farmworker, trades, tribal, first generation, leadership…" autocomplete="off">
         <button class="btn ghost" id="show-saved" type="button">My saved <span id="saved-number">0</span></button>
       </div>
       <div class="finder-guide"><div><strong>Want help choosing where to begin?</strong> Answer a few questions and the Coach will personalize your starting plan.</div><a class="btn ghost" href="coach.html">Personalize my plan →</a></div>
@@ -253,16 +256,16 @@ const today=(()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(
 const FITS=[
   {key:"local",label:"Local / Yakima"},{key:"latino",label:"Latino / Hispanic"},{key:"lowincome",label:"Financial need"},{key:"firstgen",label:"First-generation"},
   {key:"tribal",label:"Native / tribal"},{key:"ag",label:"Agriculture / family work"},{key:"disability",label:"Disability"},
-  {key:"lgbtq",label:"LGBTQ+"},{key:"leadership",label:"Leadership / service"},{key:"everyone",label:"Open to most"}
+  {key:"lgbtq",label:"LGBTQ+"},{key:"leadership",label:"Leadership / service"},{key:"everyone",label:"No special group required"}
 ];
 let allItems=[];let activeFits=new Set();let query="";let saved={};let showingSaved=false;let toastTimer;
 try{
   const state=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");
   saved=state.saved||{};
-  const priorities=Array.isArray(state.scholarshipPriorities)
-    ? state.scholarshipPriorities
-    : (state.coach&&state.coach.branch==="scholarships"&&Array.isArray(state.coach.selected)?state.coach.selected:[]);
-  activeFits=new Set(priorities.filter(key=>FITS.some(f=>f.key===key)));
+  delete state.scholarshipPriorities;
+  delete state.coach;
+  localStorage.setItem("thsNextSteps",JSON.stringify(state));
+  activeFits=new Set();
 }catch(e){saved={};activeFits=new Set()}
 const $=id=>document.getElementById(id);
 function parseDate(s){if(!s)return null;const p=String(s).split("-").map(Number);return p.length===3&&!p.some(Number.isNaN)?new Date(p[0],p[1]-1,p[2]):null}
@@ -295,10 +298,8 @@ function mapItem(item){
   const projectedDue=item.tentativeDeadline||(planning&&item.lastYearDeadline?isoDate(nextCycleDate(item.lastYearDeadline)):null);
   const fit=Array.isArray(item.fit)?[...item.fit]:[];
   const hay=[item.name,item.eligibility,item.whyFit,(item.tags||[]).join(" ")].join(" ").toLowerCase();
-  if(/open to most|open to all|no essay|no gpa|no test score/.test(hay)&&!fit.includes("everyone"))fit.push("everyone");
   if(/latino|hispanic|latina|latine/.test(hay)&&!fit.includes("latino"))fit.push("latino");
   if(/farmworker|farm worker|agriculture|migrant|viticulture|vineyard|wine|dairy|tree fruit/.test(hay)&&!fit.includes("ag"))fit.push("ag");
-  if(!fit.length)fit.push("everyone");
   return {...item,id:idOf(item),planning,opens,tentativeDeadline:projectedDue,fit,gpaMin:gpaMinimum(item),effortLabel:effortLabel(item),openLabel:planning?(item.openLabel||null):null};
 }
 function statusFor(item){
@@ -315,16 +316,15 @@ function statusFor(item){
   return {kind:"open",label:"Open & accepting",detail:"rolling or no fixed deadline",rank:0,date:"9999-12-31"};
 }
 function saveState(){try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");all.saved=saved;localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}}
-function savePriorities(){try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");all.scholarshipPriorities=Array.from(activeFits);localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}}
 function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2600)}
 function renderFilters(){
   const box=$("filters");box.innerHTML="";
-  FITS.forEach(f=>{const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=f.label;b.setAttribute("aria-pressed",String(activeFits.has(f.key)));b.addEventListener("click",()=>{activeFits.has(f.key)?activeFits.delete(f.key):activeFits.add(f.key);b.setAttribute("aria-pressed",String(activeFits.has(f.key)));savePriorities();render()});box.appendChild(b)})
+  FITS.forEach(f=>{const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=f.label;b.setAttribute("aria-pressed",String(activeFits.has(f.key)));b.addEventListener("click",()=>{activeFits.has(f.key)?activeFits.delete(f.key):activeFits.add(f.key);b.setAttribute("aria-pressed",String(activeFits.has(f.key)));render()});box.appendChild(b)})
 }
 function itemMatches(item){
   if(showingSaved&&!saved[item.id])return false;
   if(!query)return true;
-  const hay=[item.name,item.organization,item.award,item.eligibility,item.whyFit,item.expectedWindow,(item.tags||[]).join(" "),item.fit.join(" ")].join(" ").toLowerCase();return hay.includes(query)
+  const hay=[item.name,item.organization,item.award,item.eligibility,item.expectedWindow,(item.tags||[]).join(" "),item.fit.join(" ")].join(" ").toLowerCase();return hay.includes(query)
 }
 function matchScore(item){return Array.from(activeFits).reduce((score,key)=>score+(item.fit.includes(key)?1:0),0)}
 function urgencyBucket(item){
@@ -348,6 +348,7 @@ function card(item){
   const history=`${item.sourceNote?`<p class="why"><strong>Why this is listed:</strong> ${esc(item.sourceNote)}</p>`:""}${item.historicalSource?`<p class="why"><a href="${esc(item.historicalSource)}" target="_blank" rel="noopener">View dated previous-cycle source ↗</a></p>`:""}`;
   const el=document.createElement("article");el.className="card "+st.kind;el.innerHTML=`
     <div class="award-banner"><span>Award</span><strong>${esc(item.award||"See sponsor details")}</strong></div>
+    ${item.gate?`<p class="eligibility-gate"><strong>Required:</strong> ${esc(item.gate)}</p>`:""}
     ${matchLine}
     <div class="card-head"><div><h3>${esc(item.name)}</h3><div class="org">${esc(item.organization||"Scholarship sponsor")}</div></div><div class="status">${esc(st.label)}<small>${esc(st.detail)}</small></div></div>
     <p class="eligibility">${esc(item.eligibility||"Read the sponsor's current requirements.")}</p>
@@ -360,14 +361,18 @@ function card(item){
 }
 function render(){
   const items=allItems.filter(itemMatches).sort((a,b)=>{
+    if(activeFits.size){
+      const matches=matchScore(b)-matchScore(a);
+      if(matches)return matches;
+    }
+    const gatePenalty=Number(!!a.gate)-Number(!!b.gate);
+    if(gatePenalty)return gatePenalty;
     const urgency=urgencyBucket(a)-urgencyBucket(b);
     if(urgency)return urgency;
-    const matches=matchScore(b)-matchScore(a);
-    if(matches)return matches;
     const sa=statusFor(a),sb=statusFor(b);
     return String(sa.date).localeCompare(String(sb.date))||a.name.localeCompare(b.name)
   });
-  $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":activeFits.size?"Urgent deadlines first · then strongest matches":"Open & accepting: due soonest · then opening soon";
+  $("results").innerHTML="";items.forEach(item=>$("results").appendChild(card(item)));$("empty").hidden=items.length>0;$("result-count").textContent=items.length;$("saved-number").textContent=Object.keys(saved).length;$("results-title").textContent=showingSaved?"My saved scholarships":"Scholarships";$("sort-note").textContent=showingSaved?"Your saved opportunities":activeFits.size?"Strongest matches first · urgent deadlines next · nothing hidden":"Open & accepting: due soonest · then opening soon";
 }
 function savedItems(){return allItems.filter(item=>saved[item.id])}
 function deadlineLine(item){
@@ -389,14 +394,14 @@ function icsEventFor(item){
   const start=item.deadline.replace(/-/g,"");const endDate=parseDate(item.deadline);endDate.setDate(endDate.getDate()+1);const end=isoDate(endDate).replace(/-/g,"");
   return ["BEGIN:VEVENT","UID:"+item.id+"-deadline@student-scholarship-finder","DTSTAMP:"+start+"T090000Z","DTSTART;VALUE=DATE:"+start,"DTEND;VALUE=DATE:"+end,"SUMMARY:SCHOLARSHIP DEADLINE: "+icsEscape(item.name),"DESCRIPTION:"+icsEscape((item.award||"")+"\nDeadline: "+fmt(item.deadline)+"\n"+(item.eligibility||"")+"\n\n"+item.url),"URL:"+item.url,"BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:"+icsEscape(item.name+" deadline in one week"),"END:VALARM","BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:"+icsEscape(item.name+" deadline tomorrow"),"END:VALARM","END:VEVENT"].join("\r\n")
 }
-function icsFor(item){return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Toppenish Scholarship Finder//EN","CALSCALE:GREGORIAN",icsEventFor(item),"END:VCALENDAR"].join("\r\n")}
+function icsFor(item){return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Toppenish Scholarship Finder//EN","CALSCALE:GREGORIAN","X-WR-CALNAME:Toppenish Scholarship Deadlines",icsEventFor(item),"END:VCALENDAR"].join("\r\n")}
 function download(filename,text,type){const blob=new Blob([text],{type});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200)}
 function savedCalendar(){
   const items=savedItems().filter(item=>item.deadline&&daysUntil(item.deadline)>=0);if(!items.length){toast("No saved confirmed deadlines are available yet.");return}
-  const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Toppenish Scholarship Finder//EN","CALSCALE:GREGORIAN",items.map(icsEventFor).join("\r\n"),"END:VCALENDAR"].join("\r\n");
+  const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Toppenish Scholarship Finder//EN","CALSCALE:GREGORIAN","X-WR-CALNAME:Toppenish Scholarship Deadlines",items.map(icsEventFor).join("\r\n"),"END:VCALENDAR"].join("\r\n");
   download("saved-scholarship-deadlines.ics",ics,"text/calendar;charset=utf-8");toast("Saved deadlines downloaded.")
 }
-function clearSaved(){if(!confirm("Clear saved scholarships and filter choices from this device?"))return;saved={};activeFits.clear();showingSaved=false;try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");delete all.saved;delete all.scholarshipPriorities;localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}$("show-saved").classList.remove("active");toast("Saved choices cleared from this device.");render()}
+function clearSaved(){if(!confirm("Clear all saved scholarships from this device?"))return;saved={};activeFits.clear();showingSaved=false;try{const all=JSON.parse(localStorage.getItem("thsNextSteps")||"{}");delete all.saved;delete all.scholarshipPriorities;localStorage.setItem("thsNextSteps",JSON.stringify(all))}catch(e){}$("show-saved").classList.remove("active");toast("Saved scholarships cleared from this device.");render()}
 $("clear-saved").addEventListener("click",clearSaved);
 $("calendar-saved").addEventListener("click",savedCalendar);
 $("search").addEventListener("input",e=>{query=e.target.value.toLowerCase().trim();render()});
