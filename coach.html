@@ -67,16 +67,47 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 @media(max-width:780px){.page{grid-template-columns:1fr}.side{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.side h2,.person{grid-column:1/-1}.side-section{border-top:0;padding-top:0;margin-top:0}}
 @media(max-width:560px){.top-row{align-items:flex-start}.brand span{display:none}.top-links a:not(:first-child){display:none}.privacy-row{align-items:flex-start}.page{padding-top:14px}.coach-inner{padding:20px 16px}.options{grid-template-columns:1fr}.option{min-height:52px}.resume{align-items:flex-start;flex-direction:column}.resume .btn{width:100%}.side{grid-template-columns:1fr}.side h2,.person{grid-column:auto}.scholarship-head{display:block}.status{text-align:left;margin-top:8px;max-width:none}.actions .btn{min-width:104px}}
 @media(prefers-reduced-motion:reduce){.progress>span{transition:none}}
+
+/* Same simple header and navigation used by every Next Steps page */
+.top{padding:15px 0 16px}
+.top .inner{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.lockup{display:flex;align-items:center;gap:11px;min-width:0;color:#fff;text-decoration:none}
+.badge{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:8px;background:#fff;overflow:hidden}
+.badge img{width:100%;height:100%;object-fit:contain;display:block}
+.site-name{font-size:20px;line-height:1.05;letter-spacing:-.025em;font-weight:800}
+.school{margin-top:3px;color:#f0dade;font-size:12px}
+.lockup .site-name,.lockup .school{display:block}
+.top-links{margin:0;display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.top-links a{padding:7px 10px;font-size:12px;font-weight:800}
+.site-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line);box-shadow:0 3px 14px rgba(33,35,37,.06)}
+.site-nav .nav-row{max-width:1080px;margin:0 auto;padding:0 16px;display:flex;overflow-x:auto;scrollbar-width:none}
+.site-nav .nav-row::-webkit-scrollbar{display:none}
+.site-nav a{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:0 0 auto;border-bottom:3px solid transparent;color:var(--muted);padding:12px 13px 10px;text-decoration:none;font:800 13px system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap}
+.site-nav a:hover{background:var(--sand);color:var(--crimson)}
+.nav-num{color:var(--crimson);font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.coach-intent-note{margin:0 0 20px;padding:11px 13px;border-left:4px solid var(--sage);border-radius:0 8px 8px 0;background:var(--sage-bg);color:var(--muted);font-size:13px}
+.coach-intent-note strong{color:var(--ink)}
+@media(max-width:560px){.top .inner{padding:0 16px}.top-links a:nth-child(n+2){display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}}
 </style>
 </head>
 <body>
 <a class="skip" href="#coach-main">Skip to the coach</a>
 <header class="top">
-  <div class="wrap top-row">
-    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">TH</span><span><strong>Next Steps Coach</strong><span>Toppenish High School · Class of 2027</span></span></a>
-    <nav class="top-links" aria-label="Coach links"><a href="index.html">All senior resources</a><a href="scholarships.html">Scholarship Finder</a><a href="scholarships.html#families">Español para familias</a></nav>
+  <div class="wrap inner">
+    <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home"><span class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></span><span><strong class="site-name">Toppenish Next Steps</strong><span class="school">Class of 2027 · Help after high school</span></span></a>
+    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="index.html#help-center">Family help · Español</a></div>
   </div>
 </header>
+<nav class="site-nav" aria-label="Main sections">
+  <div class="nav-row">
+    <a href="index.html#start"><span class="nav-num">01</span> Start Here</a>
+    <a href="index.html#pathways"><span class="nav-num">02</span> Choose a path</a>
+    <a href="index.html#requirements"><span class="nav-num">03</span> College requirements</a>
+    <a href="index.html#deadlines"><span class="nav-num">04</span> Pay for school</a>
+    <a href="scholarships.html"><span class="nav-num">05</span> Scholarships</a>
+    <a href="index.html#writing"><span class="nav-num">06</span> Writing</a>
+  </div>
+</nav>
 <div class="privacy">
   <div class="wrap privacy-row"><p><strong>Private on this device:</strong> no name or account is required. Clear your plan before leaving a shared Chromebook.</p><button class="clear" id="clear-plan" type="button">Clear my plan</button></div>
 </div>
@@ -85,6 +116,7 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
   <section class="coach" aria-labelledby="question">
     <div class="coach-inner">
       <div class="resume" id="resume" hidden><div><strong>Your plan is still here.</strong><span>Continue where you stopped, or choose something different below.</span></div><button class="btn" id="resume-plan" type="button">Continue my plan</button></div>
+      <p class="coach-intent-note"><strong>One question at a time.</strong> Choose the closest answer. You will get a short plan that points you to the right page—not a giant checklist.</p>
       <div class="progress-copy"><span id="step-label">Step 1 of 4</span><span>No account needed</span></div>
       <div class="progress" id="progress" role="progressbar" aria-label="Coach progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span id="progress-fill"></span></div>
       <p class="eyebrow" id="kicker">Start with one question</p>

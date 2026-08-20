@@ -97,26 +97,62 @@ main{padding-bottom:42px}
 details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summary{cursor:pointer;font-weight:800;font-size:14px}details p{margin-top:9px}
 .toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120px);background:var(--ink);color:#fff;border-radius:8px;padding:11px 15px;font-size:13px;box-shadow:0 8px 25px rgba(0,0,0,.25);transition:transform .2s;z-index:30}.toast.show{transform:translate(-50%,0)}
 @media(max-width:650px){.top{padding-top:19px}.brand h1{font-size:27px}.brand p{font-size:12px}.top-copy h2{font-size:38px}.tools{position:static}.search-row .btn{flex:1 1 auto}.results-head{align-items:start;flex-direction:column;gap:3px}.results-head span{text-align:left}.lower{grid-template-columns:1fr}.card-head{gap:8px}.status{max-width:105px}}
+
+/* Same simple header and navigation used by every Next Steps page */
+.top{padding:15px 0 16px}
+.top .inner{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.lockup{display:flex;align-items:center;gap:11px;min-width:0;color:#fff;text-decoration:none}
+.badge{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:8px;background:#fff;overflow:hidden}
+.badge img{width:100%;height:100%;object-fit:contain;display:block}
+.site-name{font-size:20px;line-height:1.05;letter-spacing:-.025em;font-weight:800}
+.school{margin-top:3px;color:#f0dade;font-size:12px}
+.lockup .site-name,.lockup .school{display:block}
+.top-links{margin:0;display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.top-links a{padding:7px 10px;font-size:12px;font-weight:800}
+.site-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.98);border-bottom:1px solid var(--gray20);box-shadow:0 3px 14px rgba(33,35,37,.06)}
+.site-nav .nav-row{max-width:1060px;margin:0 auto;padding:0 16px;display:flex;overflow-x:auto;scrollbar-width:none}
+.site-nav .nav-row::-webkit-scrollbar{display:none}
+.site-nav a{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:0 0 auto;border-bottom:3px solid transparent;color:var(--muted);padding:12px 13px 10px;text-decoration:none;font:800 13px system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap}
+.site-nav a:hover{background:var(--sand);color:var(--crimson)}
+.site-nav a[aria-current="page"]{background:#fff;color:var(--ink);border-bottom-color:var(--crimson)}
+.nav-num{color:var(--crimson);font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.finder-guide{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;padding:11px 13px;border-left:4px solid var(--sage);border-radius:0 8px 8px 0;background:var(--sage-bg);color:var(--muted);font-size:13px}
+.finder-guide strong{display:block;color:var(--ink)}
+.finder-guide .btn{flex:0 0 auto;white-space:nowrap}
+.tool-more,.filter-drawer{margin-top:10px;border-top:1px solid var(--gray20);padding-top:9px}
+.tool-more summary,.filter-drawer summary{cursor:pointer;list-style:none;color:var(--crimson);font-size:13px;font-weight:800}
+.tool-more summary::-webkit-details-marker,.filter-drawer summary::-webkit-details-marker{display:none}
+.tool-more summary::after,.filter-drawer summary::after{content:"+";float:right;font-size:18px}
+.tool-more[open] summary::after,.filter-drawer[open] summary::after{content:"−"}
+.tool-more-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+@media(max-width:650px){.top .inner{padding:0 16px}.top-links a:nth-child(n+3){display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}}
 </style>
 </head>
 <body>
+<a class="sr" href="#search">Skip to scholarship search</a>
 <header class="top">
-  <div class="wrap">
-    <div class="brand">
-      <div class="mark" aria-hidden="true"><img src="assets/gradcat.png" alt=""></div>
-      <div><h1>Toppenish Next Steps: Scholarship Finder</h1><p>One shared resource hub · Local · Washington · Pacific Northwest · National</p></div>
-    </div>
-    <div class="top-copy">
-      <h2>Find money that fits.</h2>
-      <p>A free community tool for Toppenish students, families, advisors, and College &amp; Career staff. Search one trusted list, save opportunities that fit, and see what you will need before you apply.</p>
-    </div>
-    <div class="top-links"><a href="index.html">All senior resources</a><a href="coach.html">Personalize my matches</a><a href="https://docs.google.com/forms/d/1O0eOgZ8WQS8mz7uFbBUrUlBHjXXHUZmOiDqbgC6wo1Q/viewform" target="_blank" rel="noopener">Get scholarship updates</a><a href="#submit">Submit / correct</a><a href="#families">Family guidance · Español</a></div>
+  <div class="wrap inner">
+    <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home">
+      <div class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></div>
+      <div><div class="site-name">Toppenish Next Steps</div><div class="school">Class of 2027 · Help after high school</div></div>
+    </a>
+    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="index.html#help-center">Family help · Español</a></div>
   </div>
 </header>
+<nav class="site-nav" aria-label="Main sections">
+  <div class="nav-row">
+    <a href="index.html#start"><span class="nav-num">01</span> Start Here</a>
+    <a href="index.html#pathways"><span class="nav-num">02</span> Choose a path</a>
+    <a href="index.html#requirements"><span class="nav-num">03</span> College requirements</a>
+    <a href="index.html#deadlines"><span class="nav-num">04</span> Pay for school</a>
+    <a href="scholarships.html" aria-current="page"><span class="nav-num">05</span> Scholarships</a>
+    <a href="index.html#writing"><span class="nav-num">06</span> Writing</a>
+  </div>
+</nav>
 
 <main>
   <div class="wrap">
-    <details class="notice" open><summary>How dates are ordered and verified</summary><p><strong>Open &amp; accepting applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Tentative planning cards follow by their projected opening. Every tentative opening or deadline is based on a dated previous-cycle sponsor or school source; it is not guaranteed and will be updated when the new cycle is released. Tentative cards never create calendar events.</p></details>
+    <details class="notice"><summary>How dates are ordered and verified</summary><p><strong>Open &amp; accepting applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Tentative planning cards follow by their projected opening. Every tentative opening or deadline is based on a dated previous-cycle sponsor or school source; it is not guaranteed and will be updated when the new cycle is released. Tentative cards never create calendar events.</p></details>
   </div>
 
   <section class="tools" aria-label="Scholarship search and filters">
@@ -125,15 +161,12 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
         <label class="sr" for="search">Search scholarships</label>
         <input id="search" type="search" placeholder="Search welding, orchard, nursing, tribal, no essay…" autocomplete="off">
         <button class="btn ghost" id="show-saved" type="button">My saved <span id="saved-number">0</span></button>
-        <button class="btn ghost" id="copy-saved" type="button">Copy my list</button>
-        <button class="btn" id="email-saved" type="button">Email my list</button>
-        <button class="btn ghost" id="calendar-saved" type="button">Calendar for saved</button>
       </div>
+      <div class="finder-guide"><div><strong>Want help choosing where to begin?</strong> Answer a few questions and the Coach will personalize your starting plan.</div><a class="btn ghost" href="coach.html">Personalize my plan →</a></div>
+      <details class="tool-more"><summary>Save, email, or download your list</summary><div class="tool-more-actions"><button class="btn ghost" id="copy-saved" type="button">Copy my list</button><button class="btn" id="email-saved" type="button">Email my list</button><button class="btn ghost" id="calendar-saved" type="button">Calendar for saved</button></div></details>
       <p class="saved-count"><strong id="result-count">0</strong> opportunities shown · saved scholarships stay on this device</p>
       <p class="saved-count">Calendar downloads include two reminders: 7 days before a confirmed deadline and 1 day before.</p>
-      <p class="filter-label">What should we prioritize? — tap all that apply</p>
-      <div class="chips" id="filters" role="group" aria-label="Prioritize scholarships for selected student groups"></div>
-      <p class="saved-count">Your choices improve the ranking. They do not hide other opportunities you may qualify for.</p>
+      <details class="filter-drawer"><summary>Personalize results — tap all that apply</summary><p class="filter-label">What should we prioritize?</p><div class="chips" id="filters" role="group" aria-label="Prioritize scholarships for selected student groups"></div><p class="saved-count">Your choices improve the ranking. They do not hide other opportunities you may qualify for.</p></details>
     </div>
   </section>
 

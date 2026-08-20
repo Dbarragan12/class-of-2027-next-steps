@@ -1143,6 +1143,35 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
   details.acc > summary::after{display:none}
   .acc-body{display:block !important}
 }
+
+/* Shared header and navigation across the hub, finder, and coach */
+header.top{background:var(--crimson);color:#fff;border-top:7px solid var(--ink);padding:15px 0 16px}
+header.top .inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 20px}
+header.top .lockup{display:flex;align-items:center;gap:11px;margin:0;padding:0;min-width:0;text-decoration:none;color:#fff}
+header.top .badge{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:8px;background:#fff;overflow:hidden}
+header.top .badge img{width:100%;height:100%;object-fit:contain;display:block}
+header.top .site-name{font-size:20px;line-height:1.05;letter-spacing:-.025em}
+header.top .school{margin-top:3px;color:#f0dade;font-size:12px}
+header.top .utility{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap;margin:0}
+header.top .utility a,header.top .utility button{border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;border-radius:999px;padding:7px 10px;text-decoration:none;font:800 12px system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:0;cursor:pointer}
+header.top .utility a:hover,header.top .utility button:hover{background:#fff;color:var(--crimson)}
+header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-calendar{display:none}
+.site-nav,nav.hub{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.98);border-bottom:1px solid var(--gray20);box-shadow:0 3px 14px rgba(33,35,37,.06)}
+.site-nav .nav-row,nav.hub .wrap.hub-shell{max-width:var(--wrap);display:block;padding:0 20px}
+.site-nav .row,nav.hub .row{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.site-nav .row::-webkit-scrollbar,nav.hub .row::-webkit-scrollbar{display:none}
+.site-nav a,.site-nav .tab,nav.hub .tab{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:0 0 auto;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--muted);padding:12px 13px 10px;text-decoration:none;font:800 13px system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap;cursor:pointer}
+.site-nav a:hover,.site-nav .tab:hover,nav.hub .tab:hover{background:var(--sand);color:var(--crimson)}
+.site-nav a[aria-current="page"],.site-nav .tab[aria-current="page"],nav.hub .tab[aria-current="page"]{background:#fff;color:var(--ink);border-bottom-color:var(--crimson)}
+.site-nav .nav-num,nav.hub .tab .num{color:var(--crimson);font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.start-options{margin-top:16px;border:1px solid var(--gray20);border-radius:12px;background:#fff;box-shadow:var(--shadow)}
+.start-options>summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:800;color:var(--ink)}
+.start-options>summary::-webkit-details-marker{display:none}
+.start-options>summary::after{content:"+";float:right;color:var(--crimson);font:500 20px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.start-options[open]>summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
+.start-options[open]>summary::after{content:"−"}
+.start-options .start-shortcuts{padding:0 14px 14px}
+@media(max-width:650px){header.top .inner{padding:0 16px}header.top .utility a:nth-child(n+3),header.top .utility button{display:none}.site-nav .nav-row,nav.hub .wrap.hub-shell{padding:0 8px}.site-nav a,.site-nav .tab,nav.hub .tab{padding-left:11px;padding-right:11px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -1150,68 +1179,25 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
 
 <header class="top">
   <div class="wrap inner">
-    <div class="lockup">
-      <div class="badge" id="site-badge">TH</div>
-      <div>
-        <div class="site-name">Next Steps</div>
-        <div class="school" id="site-school">Toppenish High School</div>
-        <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Class of 2027 · Postsecondary Planning Hub</p>
-      </div>
-    </div>
-    <div class="wildcats-script" aria-hidden="true"><img src="assets/wildcats-script.png" alt=""></div>
+    <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home">
+      <div class="badge" id="site-badge"><img src="assets/gradcat.png" alt=""></div>
+      <div><div class="site-name">Toppenish Next Steps</div><div class="school" id="site-school">Class of 2027 · Help after high school</div></div>
+    </a>
     <div class="utility" aria-label="Quick links">
-      <a href="coach.html">Get personalized help</a>
-      <a href="scholarships.html">Scholarship Finder</a>
-      <a href="#familias" data-jump="familias">Spanish for families · Español</a>
-      <button type="button" data-jump="help">Get help</button>
+      <a href="coach.html">Personalize my plan</a>
+      <a href="scholarships.html">Scholarships</a>
+      <a href="#help-center" data-jump="help">Family help · Español</a>
     </div>
-    <h1>One next step<br><span class="thin">at a time.</span></h1>
-    <p class="lede">Get a private starting plan, see what matters now, or go straight to scholarships and senior resources.</p>
-    <div class="hero-actions" aria-label="Start using Next Steps">
-      <a class="primary" href="coach.html">Find my next step</a>
-      <a class="secondary" href="scholarships.html">Search scholarships</a>
-    </div>
-    <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
-      <div class="calendar-head">
-        <div>
-          <div class="lbl" id="calendar-kicker">Important dates for seniors</div>
-          <h2 id="calendar-title">Loading important dates…</h2>
-          <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Planning dates stay out until the sponsor verifies them.</p>
-        </div>
-        <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
-      </div>
-      <div class="calendar-body" id="calendar-body" hidden>
-        <div class="calendar-actions" aria-label="Change calendar month">
-          <button type="button" id="cal-prev" aria-label="Show previous month">←</button>
-          <button type="button" id="cal-today">Today</button>
-          <button type="button" id="cal-next" aria-label="Show next month">→</button>
-        </div>
-        <div class="calendar-weekdays" aria-hidden="true">
-          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-        </div>
-        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Important dates for seniors by month"></div>
-        <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
-        <div class="calendar-footer">
-          <span id="calendar-count">Confirmed dates only</span>
-          <button type="button" id="download-confirmed-ics">Download calendar</button>
-          <button type="button" data-jump="deadlines">View money steps →</button>
-        </div>
-      </div>
-    </section>
   </div>
 </header>
 
-<nav class="hub" id="hubnav" aria-label="Main sections">
-  <div class="wrap hub-shell">
-    <button class="hub-brand" type="button" data-jump="start" aria-label="Go to Next Steps Start Here">
-      <img src="assets/gradcat.png" alt="">
-      <span class="hub-brand-copy"><strong>Next Steps</strong><small>Class of 2027</small></span>
-    </button>
+<nav class="site-nav hub" id="hubnav" aria-label="Main sections">
+  <div class="wrap nav-row">
     <div class="row">
       <button class="tab" id="tab-start" aria-current="page" data-panel="start"><span class="num">01</span> Start Here</button>
-      <button class="tab" id="tab-pathways" data-panel="pathways"><span class="num">02</span> Choose a Path</button>
-      <button class="tab" id="tab-requirements" data-panel="requirements"><span class="num">03</span> College Requirements</button>
-      <button class="tab" id="tab-deadlines" data-panel="deadlines"><span class="num">04</span> Pay for School</button>
+      <button class="tab" id="tab-pathways" data-panel="pathways"><span class="num">02</span> Choose a path</button>
+      <button class="tab" id="tab-requirements" data-panel="requirements"><span class="num">03</span> College requirements</button>
+      <button class="tab" id="tab-deadlines" data-panel="deadlines"><span class="num">04</span> Pay for school</button>
       <a class="tab" id="tab-scholarships" href="scholarships.html"><span class="num">05</span> Scholarships</a>
       <button class="tab" id="tab-writing" data-panel="writing"><span class="num">06</span> Writing</button>
     </div>
@@ -1235,6 +1221,28 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
       </div>
       <a class="btn" href="coach.html">Open Next Steps Coach →</a>
     </article>
+
+    <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
+      <div class="calendar-head">
+        <div>
+          <div class="lbl" id="calendar-kicker">Important dates for seniors</div>
+          <h2 id="calendar-title">Loading important dates…</h2>
+          <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Planning dates stay out until the sponsor verifies them.</p>
+        </div>
+        <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
+      </div>
+      <div class="calendar-body" id="calendar-body" hidden>
+        <div class="calendar-actions" aria-label="Change calendar month">
+          <button type="button" id="cal-prev" aria-label="Show previous month">←</button>
+          <button type="button" id="cal-today">Today</button>
+          <button type="button" id="cal-next" aria-label="Show next month">→</button>
+        </div>
+        <div class="calendar-weekdays" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Important dates for seniors by month"></div>
+        <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
+        <div class="calendar-footer"><span id="calendar-count">Confirmed dates only</span><button type="button" id="download-confirmed-ics">Download calendar</button><button type="button" data-jump="deadlines">View money steps →</button></div>
+      </div>
+    </section>
 
     <section class="today-feed" aria-labelledby="today-feed-title" aria-live="polite">
       <div class="today-feed-head">
@@ -1263,12 +1271,15 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
       </div>
     </section>
 
+    <details class="start-options">
+      <summary>Browse common tasks</summary>
     <div class="start-shortcuts" aria-label="Common senior resources">
       <a class="start-shortcut" href="scholarships.html"><p class="eyebrow">Money</p><h3>Search scholarships</h3><p>See confirmed opportunities first and save deadlines to your calendar.</p><span>Open the finder →</span></a>
       <a class="start-shortcut" href="https://forms.gle/gS976MDjG7sJNswg9" target="_blank" rel="noopener"><p class="eyebrow">Documents</p><h3>Request a transcript</h3><p>Send the official request directly to the College &amp; Career Center.</p><span>Open the form →</span></a>
       <a class="start-shortcut" href="#pathways" data-jump="pathways"><p class="eyebrow">After graduation</p><h3>Compare paths</h3><p>Explore college, YVC, trades, apprenticeships, military, and work.</p><span>Choose a path →</span></a>
       <a class="start-shortcut" href="#deadlines" data-jump="deadlines"><p class="eyebrow">Money and forms</p><h3>Pay for school</h3><p>Start with FAFSA or WASFA and learn about Washington financial aid.</p><span>See money steps →</span></a>
     </div>
+    </details>
 
     <details class="resource-drawer">
       <summary>Open the full Senior Resource Desk</summary>
