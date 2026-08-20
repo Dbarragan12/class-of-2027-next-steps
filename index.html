@@ -3882,8 +3882,10 @@ function initEssayCoach(){
    BOOT
    ================================================================ */
 function renderSite(){
-  document.getElementById("site-school").textContent  = SITE.school;
-  document.getElementById("site-eyebrow").textContent = SITE.line;
+  const school = document.getElementById("site-school");
+  if(school) school.textContent = SITE.school;
+  const eyebrow = document.getElementById("site-eyebrow");
+  if(eyebrow) eyebrow.textContent = SITE.line;
   document.title = "Next Steps — " + SITE.school + " Class of 2027";
   if(SITE.logo){
     const b = document.getElementById("site-badge");
@@ -3891,7 +3893,7 @@ function renderSite(){
     b.innerHTML = `<img src="${SITE.logo}" alt="${SITE.logoAlt || ""}">`;
   }
   const t = document.getElementById("site-teacher");
-  if(SITE.teacher) t.textContent = SITE.teacher; else t.remove();
+  if(t){ if(SITE.teacher) t.textContent = SITE.teacher; else t.remove(); }
 }
 
 function boot(){
