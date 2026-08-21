@@ -47,7 +47,7 @@ main{padding-bottom:42px}
 .notice[open] summary::after{content:"−"}
 .notice p{margin:8px 0 0;color:var(--muted);font-size:14px}
 .notice strong{color:var(--ink)}
-.tools{position:sticky;top:0;z-index:10;background:rgba(244,244,245,.97);border-bottom:1px solid var(--gray20);padding:12px 0;margin-top:22px}
+.tools{position:static;background:transparent;border-bottom:1px solid var(--gray20);padding:10px 0 13px;margin-top:15px}
 .search-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 #search{flex:1 1 260px;min-width:0;padding:11px 13px;border:1.5px solid var(--gray20);border-radius:8px;background:#fff;color:var(--ink)}
 .btn{border:1.5px solid var(--ink);border-radius:8px;background:var(--ink);color:#fff;padding:10px 13px;cursor:pointer;font-size:13px;font-weight:800}
@@ -102,13 +102,15 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 .toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120px);background:var(--ink);color:#fff;border-radius:8px;padding:11px 15px;font-size:13px;box-shadow:0 8px 25px rgba(0,0,0,.25);transition:transform .2s;z-index:30}.toast.show{transform:translate(-50%,0)}
 @media(max-width:650px){.top{padding-top:19px}.brand h1{font-size:27px}.brand p{font-size:12px}.top-copy h2{font-size:38px}.tools{position:static}.search-row .btn{flex:1 1 auto}.results-head{align-items:start;flex-direction:column;gap:3px}.results-head span{text-align:left}.lower{grid-template-columns:1fr}.card-head{gap:8px}.status{max-width:105px}}
 
-/* Same simple header and navigation used by every Next Steps page */
-.top{padding:15px 0 16px}
+/* Shared branded header and navigation used by every Next Steps page */
+.top{position:relative;overflow:hidden;background:linear-gradient(135deg,#922a40 0%,var(--crimson) 50%,#5a1725 100%);border-top:7px solid var(--ink);border-bottom:4px solid var(--rose-lt);padding:15px 0 16px}
+.top::before{content:"";position:absolute;inset:auto -75px -105px auto;width:240px;height:240px;border:34px solid rgba(255,255,255,.055);border-radius:50%;pointer-events:none}
 .top .inner{display:flex;align-items:center;justify-content:space-between;gap:18px}
 .lockup{display:flex;align-items:center;gap:11px;min-width:0;color:#fff;text-decoration:none}
-.badge{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:8px;background:#fff;overflow:hidden}
+.badge{width:54px;height:54px;display:grid;place-items:center;flex:0 0 auto;border:2px solid rgba(255,255,255,.9);border-radius:11px;background:#fff;overflow:hidden;box-shadow:0 5px 16px rgba(20,5,9,.26)}
 .badge img{width:100%;height:100%;object-fit:contain;display:block}
-.site-name{font-size:20px;line-height:1.05;letter-spacing:-.025em;font-weight:800}
+.brand-eyebrow{display:block;margin-bottom:3px;color:#f3c9d1;font:800 9px/1.1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.15em;text-transform:uppercase}
+.site-name{font-size:22px;line-height:1.02;letter-spacing:-.035em;font-weight:850}
 .school{margin-top:3px;color:#f0dade;font-size:12px}
 .lockup .site-name,.lockup .school{display:block}
 .top-links{margin:0;display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
@@ -123,13 +125,24 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 .finder-guide{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;padding:11px 13px;border-left:4px solid var(--sage);border-radius:0 8px 8px 0;background:var(--sage-bg);color:var(--muted);font-size:13px}
 .finder-guide strong{display:block;color:var(--ink)}
 .finder-guide .btn{flex:0 0 auto;white-space:nowrap}
-.tool-more,.filter-drawer{margin-top:10px;border-top:1px solid var(--gray20);padding-top:9px}
-.tool-more summary,.filter-drawer summary{cursor:pointer;list-style:none;color:var(--crimson);font-size:13px;font-weight:800}
+.tool-more,.filter-drawer{margin-top:10px;border:1px solid var(--gray20);border-radius:9px;background:#fff;padding:0;box-shadow:0 1px 4px rgba(33,35,37,.04)}
+.tool-more summary,.filter-drawer summary{cursor:pointer;list-style:none;color:var(--ink);padding:10px 12px;font-size:13px;font-weight:800}
 .tool-more summary::-webkit-details-marker,.filter-drawer summary::-webkit-details-marker{display:none}
 .tool-more summary::after,.filter-drawer summary::after{content:"+";float:right;font-size:18px}
 .tool-more[open] summary::after,.filter-drawer[open] summary::after{content:"−"}
+.filter-drawer[open] summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
+.filter-drawer-body{padding:0 12px 12px}
 .tool-more-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
-@media(max-width:650px){.top .inner{padding:0 16px}.top-links a:first-child{display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}.privacy-row{align-items:flex-start;flex-direction:column;gap:4px}}
+@media(max-width:650px){
+  .top{padding:14px 0 13px;border-top-width:5px;border-bottom-width:3px}
+  .top .inner{display:grid;grid-template-columns:1fr;gap:11px;padding:0 14px}
+  .lockup{gap:12px}.badge{width:56px;height:56px}.brand-eyebrow{font-size:8.5px}.site-name{font-size:23px;white-space:nowrap}.school{font-size:11.5px}
+  .top-links{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:7px}
+  .top-links a:first-child{display:none}
+  .top-links a{display:flex;align-items:center;justify-content:center;min-height:42px;padding:8px 10px;background:rgba(28,7,12,.18);border-color:rgba(255,255,255,.62);font-size:12px;text-align:center}
+  .search-row{display:grid;grid-template-columns:minmax(0,1fr) auto}.search-row .btn{flex:none;white-space:nowrap}
+  .site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}.finder-guide{align-items:flex-start;flex-direction:column}.finder-guide .btn{width:100%}.privacy-row{align-items:flex-start;flex-direction:column;gap:4px}
+}
 @media(max-width:650px){.es-grid{grid-template-columns:1fr;gap:15px}}
 </style>
 </head>
@@ -140,9 +153,9 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
   <div class="wrap inner">
     <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home">
       <div class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></div>
-      <div><div class="site-name">Toppenish Next Steps</div><div class="school">Class of 2027 · Help after high school</div></div>
+      <div><span class="brand-eyebrow">Class of 2027</span><div class="site-name">Toppenish Next Steps</div><div class="school">Plan · Apply · Pay for what comes next</div></div>
     </a>
-    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="familias.html" lang="es" hreflang="es">Ayuda para familias · Español</a></div>
+    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Find scholarships</a><a href="familias.html" lang="es" hreflang="es">Español para familias</a></div>
   </div>
 </header>
 <nav class="site-nav" aria-label="Main sections">
@@ -163,7 +176,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 
 <main>
   <div class="wrap">
-    <details class="notice" open><summary>How dates are ordered and verified</summary><p><strong>Open &amp; accepting applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Tentative planning cards follow by their projected opening. Every tentative opening or deadline is based on a dated previous-cycle sponsor or school source; it is not guaranteed and will be updated when the new cycle is released. Tentative cards never create calendar events.</p></details>
+    <details class="notice"><summary>How dates are ordered and verified</summary><p><strong>Open &amp; accepting applications come first</strong>, ordered by the closest confirmed deadline. Confirmed applications opening soon come next. Tentative planning cards follow by their projected opening. Every tentative opening or deadline is based on a dated previous-cycle sponsor or school source; it is not guaranteed and will be updated when the new cycle is released. Tentative cards never create calendar events.</p></details>
   </div>
 
   <section class="tools" aria-label="Scholarship search and filters">
@@ -173,13 +186,18 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
         <input id="search" type="search" placeholder="Search farmworker, trades, tribal, first generation, leadership…" autocomplete="off">
         <button class="btn ghost" id="show-saved" type="button">My saved <span id="saved-number">0</span></button>
       </div>
-      <div class="finder-guide"><div><strong>Want help choosing where to begin?</strong> Answer a few questions and the Coach will personalize your starting plan.</div><a class="btn ghost" href="coach.html">Personalize my plan →</a></div>
-      <div class="tool-more-actions"><button class="btn ghost" id="copy-saved" type="button">Copy my list</button><button class="btn" id="email-saved" type="button">Email my list</button><button class="btn ghost" id="calendar-saved" type="button">Calendar for saved</button></div>
       <p class="saved-count"><strong id="result-count">0</strong> opportunities shown · saved scholarships stay on this device</p>
-      <p class="saved-count">Calendar downloads include two reminders: 7 days before a confirmed deadline and 1 day before.</p>
-      <p class="filter-label">Personalize results — tap all that apply</p>
-      <div class="chips" id="filters" role="group" aria-label="Prioritize scholarships for selected student groups"></div>
-      <p class="saved-count">Your choices improve the ranking. They do not hide other opportunities you may qualify for.</p>
+      <details class="filter-drawer">
+        <summary>Filters, saved-list tools, and reminders</summary>
+        <div class="filter-drawer-body">
+          <div class="finder-guide"><div><strong>Want help choosing where to begin?</strong> Answer a few questions and the Coach will personalize your starting plan.</div><a class="btn ghost" href="coach.html">Personalize my plan →</a></div>
+          <div class="tool-more-actions"><button class="btn ghost" id="copy-saved" type="button">Copy my list</button><button class="btn" id="email-saved" type="button">Email my list</button><button class="btn ghost" id="calendar-saved" type="button">Calendar for saved</button></div>
+          <p class="saved-count">Calendar downloads include two reminders: 7 days before a confirmed deadline and 1 day before.</p>
+          <p class="filter-label">Personalize results — tap all that apply</p>
+          <div class="chips" id="filters" role="group" aria-label="Prioritize scholarships for selected student groups"></div>
+          <p class="saved-count">Your choices improve the ranking. They do not hide other opportunities you may qualify for.</p>
+        </div>
+      </details>
     </div>
   </section>
 

@@ -104,6 +104,12 @@ p{margin:0 0 12px}
 .today-feed-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:13px}
 .today-feed-head h3{font-size:clamp(23px,4vw,31px);margin-top:4px}
 .today-feed-head span{font:500 11px "DM Mono",monospace;color:var(--muted);text-align:right}
+.refresh-details{margin:0 0 13px;border-left:4px solid var(--sage);border-radius:0 9px 9px 0;background:var(--sage-bg);color:var(--muted)}
+.refresh-details summary{cursor:pointer;list-style:none;padding:10px 12px;color:var(--ink);font-size:13px;font-weight:800}
+.refresh-details summary::-webkit-details-marker{display:none}
+.refresh-details summary::after{content:"+";float:right;color:var(--crimson);font:600 18px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.refresh-details[open] summary::after{content:"−"}
+.refresh-details p{margin:0;padding:0 12px 12px;font-size:13px;line-height:1.5}
 .today-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .today-card{border:1px solid var(--gray20);border-radius:10px;background:var(--paper);padding:15px;display:flex;flex-direction:column;min-height:170px}
 .today-card .today-label{font:500 10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson)}
@@ -1150,12 +1156,14 @@ nav.hub .tab{justify-content:center;padding-left:11px;padding-right:11px}
 }
 
 /* Shared header and navigation across the hub, finder, and coach */
-header.top{background:var(--crimson);color:#fff;border-top:7px solid var(--ink);padding:15px 0 16px}
+header.top{position:relative;overflow:hidden;background:linear-gradient(135deg,#922a40 0%,var(--crimson) 50%,#5a1725 100%);color:#fff;border-top:7px solid var(--ink);border-bottom:4px solid var(--rose-lt);padding:15px 0 16px}
+header.top::before{content:"";position:absolute;inset:auto -75px -105px auto;width:240px;height:240px;border:34px solid rgba(255,255,255,.055);border-radius:50%;pointer-events:none}
 header.top .inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 20px}
 header.top .lockup{display:flex;align-items:center;gap:11px;margin:0;padding:0;min-width:0;text-decoration:none;color:#fff}
-header.top .badge{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:8px;background:#fff;overflow:hidden}
+header.top .badge{width:54px;height:54px;display:grid;place-items:center;flex:0 0 auto;border:2px solid rgba(255,255,255,.9);border-radius:11px;background:#fff;overflow:hidden;box-shadow:0 5px 16px rgba(20,5,9,.26)}
 header.top .badge img{width:100%;height:100%;object-fit:contain;display:block}
-header.top .site-name{font-size:20px;line-height:1.05;letter-spacing:-.025em}
+header.top .brand-eyebrow{display:block;margin-bottom:3px;color:#f3c9d1;font:800 9px/1.1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.15em;text-transform:uppercase}
+header.top .site-name{font-size:22px;font-weight:850;line-height:1.02;letter-spacing:-.035em}
 header.top .school{margin-top:3px;color:#f0dade;font-size:12px}
 header.top .utility{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap;margin:0}
 header.top .utility a,header.top .utility button{border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;border-radius:999px;padding:7px 10px;text-decoration:none;font:800 12px system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:0;cursor:pointer}
@@ -1179,7 +1187,19 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
 .start-options[open]>summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
 .start-options[open]>summary::after{content:"−"}
 .start-options .start-shortcuts{padding:0 14px 14px}
-@media(max-width:650px){header.top .inner{padding:0 16px}header.top .utility a:first-child,header.top .utility button{display:none}.site-nav .nav-row,nav.hub .wrap.hub-shell{padding:0 8px}.site-nav a,.site-nav .tab,nav.hub .tab{padding-left:11px;padding-right:11px;font-size:12px}}
+@media(max-width:650px){
+  header.top{padding:14px 0 13px;border-top-width:5px;border-bottom-width:3px}
+  header.top .inner{display:grid;grid-template-columns:1fr;gap:11px;padding:0 14px}
+  header.top .lockup{gap:12px}
+  header.top .badge{width:56px;height:56px}
+  header.top .brand-eyebrow{font-size:8.5px}
+  header.top .site-name{font-size:23px;white-space:nowrap}
+  header.top .school{font-size:11.5px}
+  header.top .utility{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:7px}
+  header.top .utility a:first-child,header.top .utility button{display:none}
+  header.top .utility a{display:flex;align-items:center;justify-content:center;min-height:42px;padding:8px 10px;background:rgba(28,7,12,.18);border-color:rgba(255,255,255,.62);font-size:12px;text-align:center}
+  .site-nav .nav-row,nav.hub .wrap.hub-shell{padding:0 8px}.site-nav a,.site-nav .tab,nav.hub .tab{padding-left:11px;padding-right:11px;font-size:12px}
+}
 </style>
 </head>
 <body>
@@ -1190,12 +1210,12 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
   <div class="wrap inner">
     <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home">
       <div class="badge" id="site-badge"><img src="assets/gradcat.png" alt=""></div>
-      <div><div class="site-name">Toppenish Next Steps</div><div class="school" id="site-school">Class of 2027 · Help after high school</div></div>
+      <div><span class="brand-eyebrow">Class of 2027</span><div class="site-name">Toppenish Next Steps</div><div class="school" id="site-school">Plan · Apply · Pay for what comes next</div></div>
     </a>
     <div class="utility" aria-label="Quick links">
       <a href="coach.html">Personalize my plan</a>
-      <a href="scholarships.html">Scholarships</a>
-      <a href="familias.html" lang="es" hreflang="es">Ayuda para familias · Español</a>
+      <a href="scholarships.html">Find scholarships</a>
+      <a href="familias.html" lang="es" hreflang="es">Español para familias</a>
     </div>
   </div>
 </header>
@@ -1269,7 +1289,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
         <div><p class="eyebrow">Updated automatically</p><h3 id="today-feed-title">What matters right now</h3></div>
         <span id="today-updated">Loading current information…</span>
       </div>
-      <p id="data-updated" class="next-empty" role="status" hidden></p>
+      <details id="data-updated" class="refresh-details" hidden><summary id="refresh-summary">How the nightly scholarship check works</summary><p id="refresh-copy"></p></details>
       <div class="today-grid">
         <article class="today-card">
           <span class="today-label">Next important date</span>
@@ -2014,6 +2034,7 @@ header.top h1,header.top .lede,header.top .hero-actions,header.top .deadline-cal
 /* ---------- YOUR INFO — edit these three lines ---------- */
 const SITE = {
   school:  "Toppenish High School",
+  header:  "Plan · Apply · Pay for what comes next",
   line:    "Class of 2027 · Postsecondary Planning Hub",
   teacher: "Questions? Ask your assigned advisory teacher, UW GEAR UP, or Luis Gutierrez, College & Career Specialist. Students and families can share the exact page, form, or question and get help choosing the next step.",
   logo:    "assets/gradcat.png",
@@ -2368,6 +2389,8 @@ let calendarCycleIndex = 0;
 let calendarCycleItems = [];
 let calendarCycleTimer = null;
 let dataUpdatedAt = null;
+let sourceCheckUpdatedAt = null;
+let sourceCheckCount = 0;
 let seniorDatesLoadFailed = false;
 
 /* ---------- tiny persistent store, safe everywhere ---------- */
@@ -2828,9 +2851,12 @@ function renderNext14Days(){
 function renderTodayFeed(){
   const updated = document.getElementById("today-updated");
   if(!updated) return;
-  if(dataUpdatedAt){
-    const checked = new Date(dataUpdatedAt + (String(dataUpdatedAt).length === 10 ? "T12:00:00" : ""));
-    updated.textContent = "Scholarship list checked " + checked.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+  if(sourceCheckUpdatedAt){
+    const checked = new Date(sourceCheckUpdatedAt);
+    updated.textContent = "Nightly source scan " + checked.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+  } else if(dataUpdatedAt){
+    const published = new Date(dataUpdatedAt + (String(dataUpdatedAt).length === 10 ? "T12:00:00" : ""));
+    updated.textContent = "Scholarship details updated " + published.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
   } else {
     updated.textContent = "Uses the latest verified information on this site";
   }
@@ -3962,13 +3988,13 @@ function initEssayCoach(){
    ================================================================ */
 function renderSite(){
   const school = document.getElementById("site-school");
-  if(school) school.textContent = SITE.school;
+  if(school) school.textContent = SITE.header || SITE.school;
   const eyebrow = document.getElementById("site-eyebrow");
   if(eyebrow) eyebrow.textContent = SITE.line;
   document.title = "Next Steps — " + SITE.school + " Class of 2027";
   if(SITE.logo){
     const b = document.getElementById("site-badge");
-    b.style.background = "transparent"; b.style.width = "62px"; b.style.height = "62px";
+    b.style.background = "transparent";
     b.innerHTML = `<img src="${SITE.logo}" alt="${SITE.logoAlt || ""}">`;
   }
   const t = document.getElementById("site-teacher");
@@ -4091,24 +4117,36 @@ function mapScholarship(item){
   }
   Promise.allSettled([
     fetch("data/scholarships.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load"))),
-    fetch("data/senior-dates.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Senior dates did not load")))
+    fetch("data/senior-dates.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Senior dates did not load"))),
+    fetch("data/source-checks.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Source-check status did not load")))
   ])
-    .then(([scholarshipResult, seniorResult]) => {
+    .then(([scholarshipResult, seniorResult, sourceResult]) => {
       const data = scholarshipResult.status === "fulfilled" ? scholarshipResult.value : {scholarships:[]};
       const seniorData = seniorResult.status === "fulfilled" ? seniorResult.value : {events:[]};
+      const sourceData = sourceResult.status === "fulfilled" ? sourceResult.value : {checks:[]};
       seniorDatesLoadFailed = seniorResult.status !== "fulfilled";
       const rows = data && Array.isArray(data.scholarships) ? data.scholarships : [];
       const seniorRows = seniorData && Array.isArray(seniorData.events)
         ? seniorData.events.map(item => mapSeniorDate(item, seniorData.updatedAt)) : [];
       DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES, ...seniorRows, ...rows.map(mapScholarship));
       dataUpdatedAt = data.updatedAt || seniorData.updatedAt || null;
+      sourceCheckUpdatedAt = sourceData.updatedAt || null;
+      sourceCheckCount = Array.isArray(sourceData.checks) ? sourceData.checks.length : 0;
       const refreshed = document.getElementById("data-updated");
+      const refreshSummary = document.getElementById("refresh-summary");
+      const refreshCopy = document.getElementById("refresh-copy");
       if(refreshed && scholarshipResult.status !== "fulfilled"){
         refreshed.hidden = false;
-        refreshed.innerHTML = "<strong>Scholarship list temporarily unavailable.</strong> Senior dates and built-in resources are still available.";
-      } else if(refreshed && data.updatedAt){
+        refreshSummary.textContent = "Scholarship list temporarily unavailable";
+        refreshCopy.textContent = "Senior dates and built-in resources are still available.";
+      } else if(refreshed && (sourceCheckUpdatedAt || data.updatedAt)){
         refreshed.hidden = false;
-        refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
+        const scanDate = sourceCheckUpdatedAt ? new Date(sourceCheckUpdatedAt) : null;
+        const publishedDate = data.updatedAt ? new Date(data.updatedAt + (String(data.updatedAt).length === 10 ? "T12:00:00" : "")) : null;
+        refreshSummary.textContent = scanDate
+          ? "Nightly check completed " + scanDate.toLocaleString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit"})
+          : "How the nightly scholarship check works";
+        refreshCopy.textContent = "Early each morning, the site checks " + (sourceCheckCount || rows.length) + " official scholarship pages for working links or changed content. Changes are flagged for staff review; the site does not publish an unverified deadline or eligibility change automatically." + (publishedDate ? " Last published scholarship details: " + publishedDate.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}) + "." : "");
       }
     })
     .catch(error => {
@@ -4118,7 +4156,8 @@ function mapScholarship(item){
       const refreshed = document.getElementById("data-updated");
       if(refreshed){
         refreshed.hidden = false;
-        refreshed.innerHTML = "<strong>Live updates temporarily unavailable.</strong> Built-in dates and resources are still available.";
+        document.getElementById("refresh-summary").textContent = "Live updates temporarily unavailable";
+        document.getElementById("refresh-copy").textContent = "Built-in dates and resources are still available.";
       }
     })
     .then(boot);

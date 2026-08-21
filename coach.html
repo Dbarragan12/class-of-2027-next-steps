@@ -68,13 +68,15 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 @media(max-width:560px){.top-row{align-items:flex-start}.brand span{display:none}.top-links a:first-child{display:none}.privacy-row{align-items:flex-start}.page{padding-top:14px}.coach-inner{padding:20px 16px}.options{grid-template-columns:1fr}.option{min-height:52px}.resume{align-items:flex-start;flex-direction:column}.resume .btn{width:100%}.side{grid-template-columns:1fr}.side h2,.person{grid-column:auto}.scholarship-head{display:block}.status{text-align:left;margin-top:8px;max-width:none}.actions .btn{min-width:104px}}
 @media(prefers-reduced-motion:reduce){.progress>span{transition:none}}
 
-/* Same simple header and navigation used by every Next Steps page */
-.top{padding:15px 0 16px}
+/* Shared branded header and navigation used by every Next Steps page */
+.top{position:relative;overflow:hidden;background:linear-gradient(135deg,#922a40 0%,var(--crimson) 50%,#5a1725 100%);border-top:7px solid var(--ink);border-bottom:4px solid var(--rose);padding:15px 0 16px}
+.top::before{content:"";position:absolute;inset:auto -75px -105px auto;width:240px;height:240px;border:34px solid rgba(255,255,255,.055);border-radius:50%;pointer-events:none}
 .top .inner{display:flex;align-items:center;justify-content:space-between;gap:18px}
 .lockup{display:flex;align-items:center;gap:11px;min-width:0;color:#fff;text-decoration:none}
-.badge{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:8px;background:#fff;overflow:hidden}
+.badge{width:54px;height:54px;display:grid;place-items:center;flex:0 0 auto;border:2px solid rgba(255,255,255,.9);border-radius:11px;background:#fff;overflow:hidden;box-shadow:0 5px 16px rgba(20,5,9,.26)}
 .badge img{width:100%;height:100%;object-fit:contain;display:block}
-.site-name{font-size:20px;line-height:1.05;letter-spacing:-.025em;font-weight:800}
+.brand-eyebrow{display:block;margin-bottom:3px;color:#f3c9d1;font:800 9px/1.1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.15em;text-transform:uppercase}
+.site-name{font-size:22px;line-height:1.02;letter-spacing:-.035em;font-weight:850}
 .school{margin-top:3px;color:#f0dade;font-size:12px}
 .lockup .site-name,.lockup .school{display:block}
 .top-links{margin:0;display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
@@ -87,15 +89,23 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.025em}h1{font-size:clamp(29px,6vw,47p
 .nav-num{color:var(--crimson);font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .coach-intent-note{margin:0 0 20px;padding:11px 13px;border-left:4px solid var(--sage);border-radius:0 8px 8px 0;background:var(--sage-bg);color:var(--muted);font-size:13px}
 .coach-intent-note strong{color:var(--ink)}
-@media(max-width:560px){.top .inner{padding:0 16px}.top-links a:first-child{display:none}.site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}}
+@media(max-width:560px){
+  .top{padding:14px 0 13px;border-top-width:5px;border-bottom-width:3px}
+  .top .inner{display:grid;grid-template-columns:1fr;gap:11px;padding:0 14px}
+  .lockup{gap:12px}.badge{width:56px;height:56px}.brand-eyebrow{font-size:8.5px}.site-name{font-size:23px;white-space:nowrap}.school{font-size:11.5px}
+  .top-links{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:7px}
+  .top-links a:first-child{display:none}
+  .top-links a{display:flex;align-items:center;justify-content:center;min-height:42px;padding:8px 10px;background:rgba(28,7,12,.18);border-color:rgba(255,255,255,.62);font-size:12px;text-align:center}
+  .site-nav .nav-row{padding:0 8px}.site-nav a{padding-left:11px;padding-right:11px;font-size:12px}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#coach-main">Skip to the coach</a>
 <header class="top">
   <div class="wrap inner">
-    <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home"><span class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></span><span><strong class="site-name">Toppenish Next Steps</strong><span class="school">Class of 2027 · Help after high school</span></span></a>
-    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Scholarships</a><a href="familias.html" lang="es" hreflang="es">Ayuda para familias · Español</a></div>
+    <a class="lockup" href="index.html" aria-label="Toppenish Next Steps home"><span class="badge" aria-hidden="true"><img src="assets/gradcat.png" alt=""></span><span><span class="brand-eyebrow">Class of 2027</span><strong class="site-name">Toppenish Next Steps</strong><span class="school">Plan · Apply · Pay for what comes next</span></span></a>
+    <div class="top-links"><a href="coach.html">Personalize my plan</a><a href="scholarships.html">Find scholarships</a><a href="familias.html" lang="es" hreflang="es">Español para familias</a></div>
   </div>
 </header>
 <nav class="site-nav" aria-label="Main sections">
