@@ -8,7 +8,7 @@ const file="data/scholarships.json";
 const current=JSON.parse(await readFile(file,"utf8"));
 let previous={scholarships:[]};
 try {
-  const {stdout}=await execFileAsync("git",["show","HEAD^:"+file]);
+  const {stdout}=await execFileAsync("git",["show","HEAD:"+file]);
   previous=JSON.parse(stdout);
 } catch {
   // The first run has no prior data to compare.

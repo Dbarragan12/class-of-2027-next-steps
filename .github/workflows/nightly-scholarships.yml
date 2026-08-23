@@ -15,19 +15,21 @@ jobs:
           node-version: 22
       - name: Protect the existing manual scholarship list
         run: node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('data/scholarships.json','utf8')); if(!Array.isArray(d.scholarships)||d.scholarships.length===0) throw new Error('Refusing to run with an empty scholarship list. Add or restore scholarships manually first.'); console.log('Preserving '+d.scholarships.length+' scholarship records.');"
-      - name: Check every official scholarship source
+      - name: Test the guarded updater
+        run: node --test scripts/test/*.test.mjs
+      - name: Update existing scholarships from official sources
         run: node scripts/check-sources.mjs
+      - name: Prove that no scholarship was added, removed, or renamed
+        run: node scripts/validate-existing-roster.mjs
       - name: Send optional confirmed-update notice
         env:
           SCHOLARSHIP_UPDATES_WEBHOOK: ${{ secrets.SCHOLARSHIP_UPDATES_WEBHOOK }}
           SCHOLARSHIP_UPDATES_TOKEN: ${{ secrets.SCHOLARSHIP_UPDATES_TOKEN }}
         run: node scripts/notify-confirmed-updates.mjs
-      - name: Confirm the list still exists after checking
-        run: node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('data/scholarships.json','utf8')); if(!Array.isArray(d.scholarships)||d.scholarships.length===0) throw new Error('The source check produced an empty scholarship list; nothing will be committed.'); console.log('Keeping '+d.scholarships.length+' scholarship records.');"
-      - name: Commit refreshed student list and review note
+      - name: Commit verified updates to existing scholarships
         run: |
           git config user.name "Toppenish Scholarship Bot"
           git config user.email "actions@github.com"
-          git add data
-          git diff --staged --quiet || git commit -m "Refresh scholarship information"
+          git add -- data/scholarships.json data/source-checks.json data/automatic-updates.json data/review-needed.md
+          git diff --staged --quiet || git commit -m "Update existing scholarship information"
           git push

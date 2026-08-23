@@ -4146,7 +4146,7 @@ function mapScholarship(item){
         refreshSummary.textContent = scanDate
           ? "Nightly check completed " + scanDate.toLocaleString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit"})
           : "How the nightly scholarship check works";
-        refreshCopy.textContent = "Early each morning, the site checks " + (sourceCheckCount || rows.length) + " official scholarship pages for working links or changed content. Changes are flagged for staff review; the site does not publish an unverified deadline or eligibility change automatically." + (publishedDate ? " Last published scholarship details: " + publishedDate.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}) + "." : "");
+        refreshCopy.textContent = "Early each morning, the site checks " + (sourceCheckCount || rows.length) + " official pages for scholarships already in the finder. One clear future opening, future deadline, rolling status, or corrected sponsor link can update the matching card automatically. Unclear information stays unchanged for staff review, and the system cannot add or remove scholarships." + (publishedDate ? " Last published scholarship details: " + publishedDate.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}) + "." : "");
       }
     })
     .catch(error => {

@@ -34,7 +34,9 @@ Community submissions, corrections, and program/resource leads enter through the
 
 ## Nightly behavior
 
-The nightly workflow checks links and detects source changes in the existing manually maintained list. A changed source is a prompt to check whether the new cycle opened. The workflow must never replace the list, delete manual records, turn a prior or predicted deadline into a confirmed one, or publish an unreviewed candidate automatically. Expected records remain tentative until a person verifies the new cycle and enters the current opening and deadline. The finder then changes the public label automatically. If the list is empty, the workflow must fail safely instead of committing an empty file.
+The nightly workflow checks only the existing manually maintained list. It may update an existing record when the official sponsor source contains one unambiguous future opening, future deadline, explicit rolling status, or same-sponsor redirect. It must record the old value, new value, source, and evidence in `data/automatic-updates.json`. Conflicting dates, expired prior-cycle dates, PDFs the safe reader cannot interpret, and unclear eligibility or award changes remain unchanged and go to staff review.
+
+The roster is locked: the workflow must never add, remove, rename, or duplicate a scholarship. It must also never publish a community submission or other new candidate automatically. Tests and a post-update comparison against the current Git commit enforce the roster lock before any data is committed. If the list is empty, its identities change, or the number of proposed record updates exceeds the safety limit, the workflow must fail without publishing.
 
 The public site must never store subscriber addresses in the repository. Subscription choices and addresses belong only in the connected private Google Workspace form/sheet workflow. Public scholarship cards may open a student's own email program, copy a saved list, or download confirmed deadlines to a personal calendar.
 
