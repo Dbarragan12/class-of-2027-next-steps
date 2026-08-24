@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next Steps — Mr. Barragan's Advisory and the Class of 2027</title>
+<meta name="description" content="Scholarship deadlines, application writing, and after-high-school pathways for Toppenish High School seniors.">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="assets/gradcat.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PALETTE — Toppenish School District, orchard rows at dusk
+   ============================================================ */
+:root{
+  --crimson:   #822336;
+  --gray64:    #787a7c;
+  --gray37:    #acaeb0;
+  --gray20:    #d0d1d3;
+
+  --crimson-dk:#5f1927;
+  --rose:      #a04a5c;
+  --rose-lt:   #f0a6b2;
+  --ink:       #212325;
+  --ink-2:     #34373a;
+  --paper:     #f4f4f5;
+  --card:      #ffffff;
+  --muted:     #5c5f62;
+  --sand:      #faf6f2;
+  --sage:      #2f6b52;      /* "this works" — strong examples */
+  --sage-bg:   #eef5f1;
+  --warn-bg:   #fbf1f3;
+
+  --shadow: 0 1px 0 var(--gray20), 0 2px 14px rgba(33,35,37,.06);
+  --wrap: 1120px;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:17px; line-height:1.55;
+}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque","Public Sans",sans-serif; font-weight:800; line-height:1.05; margin:0}
+a{color:var(--crimson)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:3px solid var(--crimson); outline-offset:2px; border-radius:2px}
+p{margin:0 0 12px}
+
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+.eyebrow{
+  font-family:"DM Mono",ui-monospace,monospace; font-size:12px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0;
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:10px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* ============================================================
+   START HERE — low-friction senior action center
+   ============================================================ */
+.utility{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.utility button,.utility a{
+  border:1px solid rgba(255,255,255,.42);background:rgba(255,255,255,.08);color:#fff;
+  border-radius:999px;padding:7px 11px;text-decoration:none;font:500 11px "DM Mono",monospace;
+  letter-spacing:.06em;cursor:pointer
+}
+.utility button:hover,.utility a:hover{background:#fff;color:var(--crimson)}
+.current-action{
+  margin:26px 0 18px;background:var(--ink);color:#fff;border-radius:14px;padding:24px;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center
+}
+.current-action .eyebrow{color:var(--rose-lt)}
+.current-action h3{font-size:clamp(24px,4vw,34px);margin:5px 0 7px}
+.current-action p{color:var(--gray20);max-width:60ch;margin:0}
+.current-action .btn{background:var(--rose-lt);border-color:var(--rose-lt);color:var(--ink);white-space:nowrap}
+.welcome-card{background:#fff;border:1px solid var(--gray20);border-radius:14px;padding:24px;box-shadow:var(--shadow);margin-top:24px}
+.welcome-card h3{font-size:clamp(24px,4vw,34px);margin:5px 0 14px}
+.welcome-card.small h3{font-size:22px;margin-bottom:7px}
+.welcome-card.small{margin-top:0}
+.welcome-options{display:flex;gap:9px;flex-wrap:wrap}
+.welcome-options button{appearance:none;border:1.5px solid var(--gray20);background:var(--paper);color:var(--ink);border-radius:999px;padding:11px 14px;font:600 14px "Public Sans",sans-serif;cursor:pointer}
+.welcome-options button:hover,.welcome-options button[aria-pressed="true"]{background:var(--crimson);border-color:var(--crimson);color:#fff}
+.welcome-response{margin-top:17px;background:var(--sand);border-left:5px solid var(--crimson);border-radius:0 9px 9px 0;padding:15px 17px;min-height:65px}
+.welcome-response strong,.welcome-response span{display:block}
+.welcome-response strong{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;margin-bottom:3px}
+.welcome-response span{color:var(--muted);font-size:15px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+.hero-actions a{
+  display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:9px;
+  padding:11px 15px;font-weight:800;font-size:14px;border:1.5px solid rgba(255,255,255,.72)
+}
+.hero-actions .primary{background:#fff;color:var(--crimson);border-color:#fff}
+.hero-actions .secondary{background:transparent;color:#fff}
+.hero-actions a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.coach-gateway{
+  margin-top:20px;background:var(--ink);color:#fff;border-radius:14px;padding:clamp(22px,5vw,36px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center;box-shadow:var(--shadow)
+}
+.coach-gateway .eyebrow{color:var(--rose-lt)}
+.coach-gateway h3{font-size:clamp(28px,5vw,44px);margin:6px 0 9px;max-width:17ch}
+.coach-gateway p{color:var(--gray20);max-width:58ch;margin:0}
+.coach-gateway .btn{background:var(--rose-lt);border-color:var(--rose-lt);color:var(--ink);text-decoration:none;white-space:nowrap}
+.coach-gateway .btn:hover{background:#fff;border-color:#fff;color:var(--crimson)}
+.start-shortcuts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.start-shortcut{
+  background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:18px;text-decoration:none;color:var(--ink);
+  box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:145px
+}
+.start-shortcut .eyebrow{color:var(--crimson)}
+.start-shortcut h3{font-size:20px;margin:7px 0 7px}
+.start-shortcut p{color:var(--muted);font-size:14px;margin:0}
+.start-shortcut span{margin-top:auto;padding-top:13px;color:var(--crimson);font-weight:800;font-size:13px}
+.start-shortcut:hover{border-color:var(--crimson);transform:translateY(-2px)}
+.requirements-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:17px}
+.requirement-card{background:#fff;border:1px solid var(--gray20);border-radius:10px;padding:17px;box-shadow:var(--shadow)}
+.requirement-card h4{font-size:19px;margin-bottom:6px}
+.requirement-card p{color:var(--muted);font-size:15px;margin:0}
+.requirement-card .mini{margin-top:12px}
+.requirements-accordion{display:grid;gap:10px;margin-top:30px}
+.requirements-accordion details{background:#fff;border:1px solid var(--gray20);border-radius:10px;box-shadow:var(--shadow);overflow:hidden}
+.requirements-accordion summary{cursor:pointer;list-style:none;padding:17px 20px;font-family:"Bricolage Grotesque",sans-serif;font-size:20px;font-weight:800}
+.requirements-accordion summary::-webkit-details-marker{display:none}
+.requirements-accordion summary::after{content:"+";float:right;color:var(--crimson);font-family:"DM Mono",monospace;font-size:20px}
+.requirements-accordion details[open] summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
+.requirements-accordion details[open] summary::after{content:"−"}
+.requirements-body{padding:17px 20px 20px;color:var(--muted);font-size:15.5px}
+.requirements-body h4{color:var(--ink);font-size:17px;margin:16px 0 6px}
+.requirements-body h4:first-child{margin-top:0}
+.requirements-body ul{margin:8px 0 0;padding-left:21px}
+.requirements-body li{margin:6px 0}
+.requirements-body a{font-weight:700}
+.start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 0}
+.start-step{
+  background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:18px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;min-height:190px
+}
+.start-step .stepnum{font:500 11px "DM Mono",monospace;color:var(--crimson);letter-spacing:.12em;text-transform:uppercase}
+.start-step h3{font-size:20px;margin:7px 0 7px}
+.start-step p{font-size:14.5px;color:var(--muted);margin-bottom:14px}
+.start-step button{margin-top:auto;align-self:flex-start}
+.aid-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin-top:18px}
+.decision-card,.grant-card,.plan-card,.help-card,.vocab-card{
+  background:#fff;border:1px solid var(--gray20);border-radius:12px;padding:22px;box-shadow:var(--shadow)
+}
+.decision-card{border-top:5px solid var(--crimson)}
+.decision-card h4,.grant-card h4,.plan-card h4,.help-card h4,.vocab-card h4{font-size:21px;margin-bottom:8px}
+.decision-choice{display:grid;gap:9px;margin:15px 0}
+.decision-choice a{display:block;border:1px solid var(--gray20);border-radius:9px;padding:12px 14px;text-decoration:none;color:var(--ink);font-weight:700}
+.decision-choice a:hover{border-color:var(--crimson);background:var(--sand)}
+.decision-choice small{display:block;color:var(--muted);font-weight:400;margin-top:3px}
+.grant-card{background:var(--sage-bg);border-color:#bdd8c9;border-top:5px solid var(--sage)}
+.grant-big{font:800 clamp(28px,5vw,46px) "Bricolage Grotesque",sans-serif;color:var(--sage);line-height:1;margin:12px 0 8px}
+.plan-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}
+.plan-controls label{font-weight:700;font-size:14px}
+.plan-controls select{width:100%;margin-top:5px;padding:10px;border:1.5px solid var(--gray20);border-radius:7px;background:var(--paper);font:inherit}
+.plan-output{background:var(--sand);border-left:4px solid var(--crimson);padding:15px;border-radius:0 9px 9px 0;margin-top:12px}
+.plan-output ol{margin:8px 0 0;padding-left:21px}.plan-output li{margin-bottom:6px}
+.help-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:15px 0}
+.help-grid div{background:var(--sand);border-radius:8px;padding:11px 12px;font-size:14px;font-weight:700}
+.help-fab{
+  position:fixed;right:18px;bottom:18px;z-index:70;border:0;border-radius:999px;background:var(--crimson);color:#fff;
+  padding:13px 17px;box-shadow:0 8px 25px rgba(0,0,0,.24);font:700 14px "Public Sans",sans-serif;cursor:pointer
+}
+.help-fab:hover{background:var(--crimson-dk)}
+.hidden-curriculum{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
+.hidden-curriculum div{background:#fff;border:1px solid var(--gray20);border-radius:9px;padding:13px 14px;font-size:14.5px}
+.hidden-curriculum strong{display:block;font-family:"Bricolage Grotesque",sans-serif;margin-bottom:3px}
+.vocab{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}
+.vocab div{border-top:1px solid var(--gray20);padding-top:9px;font-size:14px;color:var(--muted)}
+.vocab b{color:var(--ink)}
+.critical-es{border-left:5px solid #d1a93b}
+.cta-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.cta-row a{text-decoration:none}
+@media(max-width:820px){.start-grid{grid-template-columns:repeat(2,1fr)}.aid-grid{grid-template-columns:1fr}}
+@media(max-width:700px){
+  .requirements-grid{grid-template-columns:1fr}
+  .wildcats-script{width:110px;right:18px;top:22px}
+  .lockup{max-width:calc(100% - 125px)}
+}
+@media(max-width:560px){
+  .start-grid,.start-shortcuts,.help-grid,.hidden-curriculum,.vocab,.plan-controls{grid-template-columns:1fr}
+  .current-action{grid-template-columns:1fr;padding:19px}.start-step{min-height:0}
+  .coach-gateway{grid-template-columns:1fr;padding:21px}.coach-gateway h3{max-width:none}
+  .coach-gateway .btn{width:100%;text-align:center}.start-shortcut{min-height:0}
+  .help-fab{right:12px;bottom:12px;padding:11px 14px}
+  .wildcats-script{display:none}
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header.top{
+  background:var(--crimson); color:#fff;
+  position:relative; overflow:hidden; border-top:7px solid var(--ink);
+}
+header.top .inner{padding:28px 20px 0}
+header.top::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 46px);
+}
+header.top .wrap{position:relative; z-index:1}
+header.top .eyebrow{color:#e6c3cb}
+.lockup{display:flex; align-items:center; gap:13px; margin-bottom:14px}
+.wildcats-script{position:absolute;right:20px;top:24px;width:150px;opacity:.96}
+.wildcats-script img{display:block;width:100%;height:auto}
+.badge{
+  flex:0 0 auto; width:48px; height:48px; background:#fff; color:var(--crimson);
+  display:grid; place-items:center; border-radius:5px; overflow:hidden;
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:19px; letter-spacing:-.03em;
+}
+.badge img{width:100%; height:100%; object-fit:contain; display:block}
+header.top .school{font-weight:600; font-size:15px; color:#fff; line-height:1.25}
+h1{
+  font-size:clamp(40px,9vw,78px); letter-spacing:-.035em; margin:.14em 0 .1em;
+  font-variation-settings:"opsz" 96;
+}
+h1 .thin{font-weight:400; color:#e2b6bf}
+.lede{max-width:46ch; color:#f0dade; margin:0 0 22px}
+
+.ticker{
+  background:var(--ink); color:var(--paper); border-radius:10px 10px 0 0;
+  padding:15px 20px; display:flex; gap:16px; align-items:center; flex-wrap:wrap;
+}
+.ticker .n{
+  font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:38px;
+  line-height:1; color:var(--rose-lt); letter-spacing:-.03em;
+}
+.ticker .lbl{font-family:"DM Mono",monospace; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--gray37)}
+.ticker .what{font-weight:600; font-size:16.5px; line-height:1.3}
+.ticker a{color:#fff}
+.ticker .mine{margin-left:auto; text-align:right}
+.ticker .mine b{font-family:"Bricolage Grotesque",sans-serif; font-size:26px; display:block; line-height:1; color:#fff}
+
+/* Confirmed-deadline calendar in the header */
+.deadline-calendar{
+  background:var(--ink); color:var(--paper); border-radius:10px 10px 0 0;
+  padding:10px 16px;
+}
+.calendar-head{display:flex; justify-content:space-between; gap:18px; align-items:center}
+.calendar-head h2{font-size:clamp(18px,3vw,23px); color:#fff; margin:2px 0 2px}
+.calendar-head p{font-size:12.5px; color:var(--gray20); margin:0; max-width:58ch}
+.calendar-open .calendar-head{align-items:flex-start; margin-bottom:15px}
+.calendar-toggle{white-space:nowrap}
+.calendar-actions{display:flex; gap:6px; flex:0 0 auto}
+.calendar-actions button,.calendar-footer button,.calendar-toggle{
+  border:1px solid #5b5d60; background:#2d3032; color:#fff; border-radius:6px;
+  padding:7px 10px; font:500 12px "DM Mono",monospace; cursor:pointer
+}
+.calendar-actions button:hover,.calendar-footer button:hover{background:var(--crimson); border-color:var(--rose-lt)}
+.calendar-toggle:hover{background:var(--crimson); border-color:var(--rose-lt)}
+.calendar-body{margin-top:12px}
+.calendar-weekdays,.calendar-grid{display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px}
+.calendar-weekdays{margin-bottom:4px}
+.calendar-weekdays span{font:500 10px "DM Mono",monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--gray37); text-align:center}
+.calendar-day,.calendar-blank{min-height:48px; border-radius:6px}
+.calendar-blank{background:transparent}
+.calendar-day{
+  position:relative; border:1px solid #3e4143; background:#272a2c; color:#fff; cursor:pointer;
+  display:flex; align-items:flex-start; justify-content:flex-end; padding:7px; font:600 13px "Public Sans",sans-serif
+}
+.calendar-day:hover{border-color:var(--rose-lt); background:#343638}
+.calendar-day[aria-selected="true"]{outline:2px solid var(--rose-lt); outline-offset:-2px; background:#3a252b}
+.calendar-day.today{border-color:#fff}
+.calendar-day.has-deadline::after{content:""; position:absolute; left:7px; bottom:7px; width:7px; height:7px; border-radius:50%; background:var(--rose-lt)}
+.calendar-day.has-deadline strong{color:var(--rose-lt)}
+.calendar-day.past{opacity:.58}
+.calendar-details{border-top:1px solid #45484a; margin-top:14px; padding-top:12px; min-height:56px}
+.calendar-details.empty{padding:12px 0 0; color:var(--gray37); text-align:left}
+.calendar-details h3{font:500 11px "DM Mono",monospace; letter-spacing:.12em; text-transform:uppercase; color:var(--gray37); margin:0 0 8px}
+.calendar-event{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:3px 14px; padding:7px 0; border-top:1px solid #35383a}
+.calendar-event:first-of-type{border-top:0}
+.calendar-event strong{font-family:"Bricolage Grotesque",sans-serif; font-size:16px; color:#fff}
+.calendar-event span{font-size:12.5px; color:var(--gray20)}
+.calendar-event time{grid-row:span 2; grid-column:2; font:500 11px "DM Mono",monospace; color:var(--rose-lt); text-align:right}
+.calendar-event a{grid-column:1; color:var(--rose-lt); font-size:12.5px; font-weight:600; text-decoration:none}
+.calendar-event a:hover{text-decoration:underline}
+.calendar-footer{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:13px; padding-top:11px; border-top:1px solid #45484a}
+.calendar-footer span{font-size:12px; color:var(--gray37); margin-right:auto}
+.calendar-footer button{font-size:11px; padding:6px 9px}
+
+/* ============================================================
+   SECTION NAV
+   ============================================================ */
+nav.hub{
+  position:sticky; top:0; z-index:40; background:var(--ink); border-bottom:1px solid #000;
+}
+nav.hub .row{display:flex; gap:0; overflow-x:auto; scrollbar-width:none}
+nav.hub .row::-webkit-scrollbar{display:none}
+.tab{
+  appearance:none; border:0; background:transparent; cursor:pointer; white-space:nowrap;
+  color:var(--gray37); font-family:"Public Sans",sans-serif; font-weight:600; font-size:15px;
+  padding:15px 18px 13px; border-bottom:3px solid transparent; display:flex; align-items:center; gap:9px;
+}
+.tab .num{font-family:"DM Mono",monospace; font-size:11px; color:var(--gray64); letter-spacing:.08em}
+.tab:hover{color:#fff}
+.tab[aria-selected="true"]{color:#fff; border-bottom-color:var(--rose-lt)}
+.tab[aria-selected="true"] .num{color:var(--rose-lt)}
+@media (max-width:600px){ .tab{padding:13px 13px 11px; font-size:14px} .tab .num{display:none} }
+
+.panel[hidden]{display:none}
+.panel-intro{padding:34px 0 4px; border-bottom:1px solid var(--gray20); margin-bottom:6px}
+.panel-intro h2{font-size:clamp(26px,5vw,40px); letter-spacing:-.03em; margin:6px 0 8px}
+.panel-intro p{max-width:62ch; color:var(--muted); font-size:16.5px}
+
+/* ============================================================
+   CONTROLS (deadline board)
+   ============================================================ */
+.controls{
+  position:sticky; top:51px; z-index:30; background:var(--paper);
+  border-bottom:1px solid var(--gray20); padding:11px 0 9px; margin-bottom:4px;
+}
+@media (max-width:600px){ .controls{top:46px} }
+.controls .row{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+#q{
+  flex:1 1 240px; min-width:0; font:inherit; font-size:16px; padding:10px 13px;
+  border:1.5px solid var(--gray20); border-radius:7px; background:var(--card); color:var(--ink);
+}
+#q::placeholder{color:#9a9d9f}
+.chips{display:flex; gap:7px; overflow-x:auto; padding:8px 0 4px; -webkit-overflow-scrolling:touch; scrollbar-width:thin}
+.chip{
+  font-family:"DM Mono",monospace; font-size:12.5px; letter-spacing:.04em;
+  white-space:nowrap; padding:7px 12px; border-radius:999px; cursor:pointer;
+  border:1.5px solid var(--gray20); background:transparent; color:var(--muted);
+}
+.chip:hover{border-color:var(--crimson); color:var(--crimson)}
+.chip[aria-pressed="true"]{background:var(--crimson); border-color:var(--crimson); color:#fff}
+.chip.fit[aria-pressed="true"]{background:var(--ink); border-color:var(--ink)}
+.chiprow-label{
+  font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gray64); padding-top:9px; margin:0;
+}
+.toggle{font-family:"DM Mono",monospace; font-size:12.5px; color:var(--muted); display:flex; align-items:center; gap:7px; cursor:pointer; white-space:nowrap}
+.toggle input{accent-color:var(--crimson); width:16px; height:16px}
+.btn{
+  font-family:"DM Mono",monospace; font-size:12.5px; letter-spacing:.04em; cursor:pointer;
+  padding:9px 14px; border-radius:7px; border:1.5px solid var(--ink); background:var(--ink); color:#fff;
+}
+.btn:hover{background:var(--crimson); border-color:var(--crimson)}
+.btn.ghost{background:transparent; color:var(--ink)}
+.btn.ghost:hover{background:var(--ink); color:#fff}
+
+/* ============================================================
+   MONTH GROUPS + CARDS
+   ============================================================ */
+main{padding:0 0 10px}
+.month{display:flex; align-items:center; gap:14px; margin:34px 0 14px}
+.month h3{font-size:14px; font-family:"DM Mono",monospace; font-weight:500; letter-spacing:.18em; text-transform:uppercase}
+.month .line{flex:1; height:1px; background:var(--gray20)}
+.month .count{font-family:"DM Mono",monospace; font-size:12px; color:var(--muted)}
+
+.grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+
+.card{
+  background:var(--card); border-radius:12px; padding:17px 17px 15px;
+  box-shadow:var(--shadow); border-left:5px solid var(--gray20);
+  display:flex; flex-direction:column; gap:9px; position:relative;
+}
+.card.urgent{border-left-color:var(--crimson)}
+.card.soon  {border-left-color:var(--rose)}
+.card.open  {border-left-color:var(--gray64)}
+.card.rolling{border-left-color:var(--gray37)}
+.card.closed{border-left-color:var(--gray20); background:#fafafa}
+.card.closed .name,.card.closed .days{opacity:.55}
+.card.planning{border-left-color:var(--rose); background:#fffafb}
+.card.planning .days b{font-size:17px; color:var(--rose); padding-top:8px; line-height:1.05}
+.card.planning .days small{color:var(--rose)}
+.card.done{background:var(--sage-bg); border-left-color:var(--sage)}
+.card.done .name{text-decoration:line-through; text-decoration-thickness:2px; opacity:.7}
+
+.card .head{display:flex; justify-content:space-between; gap:14px; align-items:flex-start}
+.name{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:19.5px; letter-spacing:-.015em; line-height:1.12}
+.org{font-family:"DM Mono",monospace; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:5px}
+
+.days{text-align:right; flex:0 0 auto; line-height:1}
+.days b{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:33px; letter-spacing:-.04em; display:block}
+.days small{font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.urgent .days b{color:var(--crimson)}
+.soon   .days b{color:var(--rose)}
+.open   .days b{color:var(--gray64)}
+.rolling .days b{font-size:18px; color:var(--gray64); padding-top:8px}
+.closed .days b{font-size:18px; color:var(--gray37); padding-top:8px}
+
+.amount{font-weight:700; color:var(--crimson); font-size:16.5px}
+.who{color:var(--muted); font-size:15.5px}
+.who.note{font-size:14.5px}
+.due{font-family:"DM Mono",monospace; font-size:12.5px; border-top:1px solid var(--gray20); padding-top:10px; margin-top:auto}
+.due .warn{color:var(--crimson)}
+.card .go{
+  display:inline-block; margin-top:5px; font-weight:600; text-decoration:none;
+  border-bottom:2px solid var(--crimson); padding-bottom:1px; font-family:"Public Sans",sans-serif; font-size:15px;
+}
+.card .go:hover{border-bottom-color:var(--ink)}
+.flag{
+  font-family:"DM Mono",monospace; font-size:11px; color:var(--rose);
+  border:1px solid #e3c8ce; background:var(--warn-bg); border-radius:5px; padding:4px 8px; align-self:flex-start;
+}
+
+/* effort + fit metadata */
+.meta{display:flex; flex-wrap:wrap; gap:6px}
+.tagpill{
+  font-family:"DM Mono",monospace; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+  border:1px solid var(--gray20); border-radius:999px; padding:3px 9px; color:var(--muted); background:#fff;
+}
+.tagpill.fit{border-color:var(--ink); color:var(--ink); background:#f1f1f2; font-weight:500}
+.tagpill.eff-low{border-color:#bcd9c9; background:var(--sage-bg); color:var(--sage)}
+.tagpill.eff-mid{border-color:var(--gray37); color:var(--gray64)}
+.tagpill.eff-high{border-color:#e3c8ce; background:var(--warn-bg); color:var(--rose)}
+
+.cardtools{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:2px}
+.mini{
+  font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.04em; cursor:pointer;
+  padding:5px 9px; border-radius:6px; border:1px solid var(--gray20); background:#fff; color:var(--muted);
+}
+.mini:hover{border-color:var(--ink); color:var(--ink)}
+.track{display:flex; align-items:center; gap:6px; font-family:"DM Mono",monospace; font-size:11px; color:var(--muted); cursor:pointer}
+.track input{accent-color:var(--sage); width:15px; height:15px}
+
+.empty{padding:50px 0; text-align:center; color:var(--muted)}
+.empty b{display:block; font-family:"Bricolage Grotesque",sans-serif; font-size:22px; color:var(--ink); margin-bottom:6px}
+
+/* ============================================================
+   SHARED BLOCKS
+   ============================================================ */
+.note{
+  background:#fff; border:1px solid var(--gray20); border-left:5px solid var(--crimson); border-radius:10px;
+  padding:16px 18px; margin:30px 0 0; font-size:15.5px;
+}
+.note strong{font-family:"Bricolage Grotesque",sans-serif}
+.note p:last-child{margin-bottom:0}
+.notice-details{background:#fff;border:1px solid var(--gray20);border-left:5px solid var(--gold);border-radius:10px;margin-top:20px;overflow:hidden}
+.notice-details summary{cursor:pointer;padding:14px 17px;font-weight:700;color:var(--ink);list-style:none}
+.notice-details summary::-webkit-details-marker{display:none}
+.notice-details summary::after{content:"+";float:right;color:var(--crimson);font:500 18px "DM Mono",monospace}
+.notice-details[open] summary{border-bottom:1px solid var(--gray20);background:var(--sand)}
+.notice-details[open] summary::after{content:"−"}
+.notice-body{padding:14px 17px;font-size:15px}
+.notice-body p:last-child{margin-bottom:0}
+
+.band{background:var(--ink); color:var(--paper); margin-top:48px; padding:48px 0}
+.band h2,.band h3{color:#fff}
+.band .eyebrow{color:var(--gray37)}
+.band p{color:var(--gray20)}
+.band a{color:var(--rose-lt)}
+
+.sect{margin:52px 0 0}
+.sect > .eyebrow{margin-bottom:6px}
+.sect > h3{font-size:clamp(23px,4vw,32px); letter-spacing:-.028em; margin-bottom:10px}
+.sect > p.sub{max-width:64ch; color:var(--muted); font-size:16.5px}
+
+/* ============================================================
+   WRITING SECTION
+   ============================================================ */
+.wcards{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); margin-top:20px}
+.wcard{background:var(--card); border-radius:12px; padding:20px; box-shadow:var(--shadow); border-top:4px solid var(--crimson)}
+.wcard h4{font-size:18px; margin-bottom:8px; letter-spacing:-.01em}
+.wcard p{color:var(--muted); font-size:15.5px; margin:0 0 8px}
+.wcard ul{margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:15px}
+.wcard li{margin-bottom:6px}
+.wcard .kicker{font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--crimson); margin-bottom:7px}
+
+details.acc{
+  background:var(--card); border:1px solid var(--gray20); border-radius:10px;
+  margin-bottom:10px; overflow:hidden;
+}
+details.acc[open]{border-color:var(--gray37); box-shadow:var(--shadow)}
+details.acc > summary{
+  cursor:pointer; padding:15px 18px; font-weight:700; font-size:16.5px; list-style:none;
+  display:flex; justify-content:space-between; gap:14px; align-items:center;
+  font-family:"Bricolage Grotesque",sans-serif; letter-spacing:-.01em;
+}
+details.acc > summary::-webkit-details-marker{display:none}
+details.acc > summary::after{content:"+"; font-family:"DM Mono",monospace; font-weight:400; font-size:20px; color:var(--crimson); flex:0 0 auto}
+details.acc[open] > summary::after{content:"−"}
+details.acc > summary:hover{background:var(--sand)}
+.acc-body{padding:0 18px 18px; font-size:16px}
+.acc-body p{color:var(--ink)}
+.acc-body ul,.acc-body ol{padding-left:20px; margin:10px 0}
+.acc-body li{margin-bottom:8px}
+.acc-body .decode{
+  font-family:"DM Mono",monospace; font-size:13px; background:var(--sand);
+  border-left:3px solid var(--crimson); padding:11px 14px; border-radius:0 7px 7px 0; margin:10px 0; color:var(--ink-2);
+}
+
+/* before / after */
+.ba{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); margin:14px 0}
+.ba > div{border-radius:10px; padding:15px 16px; font-size:15.5px; line-height:1.5}
+.ba .weak{background:var(--warn-bg); border:1px solid #e8d3d8}
+.ba .strong{background:var(--sage-bg); border:1px solid #cfe3d8}
+.ba .lab{
+  font-family:"DM Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+  display:block; margin-bottom:8px; font-weight:500;
+}
+.ba .weak .lab{color:var(--rose)}
+.ba .strong .lab{color:var(--sage)}
+.ba .why{margin-top:10px; font-size:14px; color:var(--muted); border-top:1px dashed var(--gray37); padding-top:9px}
+
+/* builder */
+.builder{background:var(--card); border:1px solid var(--gray20); border-radius:12px; padding:22px; box-shadow:var(--shadow); margin-top:18px}
+.bfield{margin-bottom:16px}
+.bfield label{display:block; font-weight:700; font-size:15.5px; margin-bottom:3px}
+.bfield .hint{font-size:14px; color:var(--muted); margin-bottom:7px}
+.bfield textarea,.bfield input[type=text]{
+  width:100%; font:inherit; font-size:15.5px; padding:10px 12px; border:1.5px solid var(--gray20);
+  border-radius:7px; background:var(--paper); color:var(--ink); resize:vertical; line-height:1.45;
+}
+.bfield textarea{min-height:66px}
+.bout{
+  background:var(--ink); color:var(--paper); border-radius:10px; padding:18px 20px; margin-top:6px;
+  font-family:"Public Sans",sans-serif; font-size:15.5px; white-space:pre-wrap; line-height:1.55; min-height:60px;
+}
+.bout:empty::before{content:"Fill in a few boxes above and your sheet builds itself here."; color:var(--gray37); font-style:italic}
+.brow{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:12px}
+.counter{font-family:"DM Mono",monospace; font-size:12px; color:var(--muted); margin-left:auto}
+.counter b{color:var(--ink)}
+.counter.over b{color:var(--crimson)}
+.counter.good b{color:var(--sage)}
+
+/* checklist */
+.check{list-style:none; padding:0; margin:16px 0 0}
+.check li{
+  display:flex; gap:11px; align-items:flex-start; background:var(--card); border:1px solid var(--gray20);
+  border-radius:9px; padding:12px 14px; margin-bottom:8px; font-size:15.5px;
+}
+.check input{accent-color:var(--sage); width:18px; height:18px; margin-top:2px; flex:0 0 auto}
+.check li label{cursor:pointer}
+.check li b{display:block; font-family:"Bricolage Grotesque",sans-serif; font-size:16px}
+.check li span{display:block; color:var(--muted); font-size:14.5px; margin-top:2px}
+
+/* ============================================================
+   PATHWAYS
+   ============================================================ */
+.paths{display:grid; gap:2px; margin-top:26px; background:#3a3c3e; border-radius:12px; overflow:hidden;
+       grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.path{background:var(--ink); padding:22px 20px}
+.path h4{font-size:19px; margin-bottom:8px; color:#fff}
+.path h4::after{content:""; display:block; width:26px; height:3px; background:var(--rose-lt); margin-top:8px}
+.path .fast{font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--gray37); margin:0 0 9px}
+.path p{color:var(--gray20); font-size:15.5px; margin:0 0 10px}
+.path ul{margin:0; padding-left:17px; color:var(--gray20); font-size:14.5px}
+.path li{margin-bottom:5px}
+
+.tablewrap{overflow-x:auto; margin-top:20px; border:1px solid var(--gray20); border-radius:11px; background:var(--card)}
+table.cmp{border-collapse:collapse; width:100%; min-width:660px; font-size:15px}
+table.cmp th,table.cmp td{text-align:left; padding:13px 15px; border-bottom:1px solid var(--gray20); vertical-align:top}
+table.cmp thead th{
+  background:var(--ink); color:#fff; font-family:"DM Mono",monospace; font-weight:500;
+  font-size:11px; letter-spacing:.11em; text-transform:uppercase; position:sticky; top:0;
+}
+table.cmp tbody th{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:16px; width:22%}
+table.cmp tbody tr:nth-child(even){background:var(--sand)}
+table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:0}
+table.cmp .fig{font-family:"DM Mono",monospace; font-size:14px; color:var(--crimson); font-weight:500}
+
+/* decision helper */
+.quiz{background:var(--card); border:1px solid var(--gray20); border-radius:12px; padding:22px; box-shadow:var(--shadow); margin-top:18px}
+.qblock{margin-bottom:18px}
+.qblock p.q{font-weight:700; margin:0 0 9px; font-size:16px}
+.opts{display:flex; gap:8px; flex-wrap:wrap}
+.opt{
+  font-size:14.5px; cursor:pointer; padding:8px 13px; border-radius:8px;
+  border:1.5px solid var(--gray20); background:var(--paper); color:var(--ink); font-family:inherit;
+}
+.opt:hover{border-color:var(--crimson)}
+.opt[aria-pressed="true"]{background:var(--crimson); border-color:var(--crimson); color:#fff}
+.qresult{background:var(--sand); border-left:4px solid var(--crimson); border-radius:0 9px 9px 0; padding:15px 17px; margin-top:6px; font-size:15.5px}
+.qresult h4{font-size:17px; margin-bottom:6px}
+.qresult ol{margin:8px 0 0; padding-left:20px}
+.qresult li{margin-bottom:6px}
+
+/* timeline */
+.tl{margin:22px 0 0; padding:0; list-style:none}
+.tl li{
+  position:relative; padding:0 0 20px 62px; border-left:2px solid var(--gray20); margin-left:18px;
+}
+.tl li::before{
+  content:attr(data-m); position:absolute; left:-26px; top:-2px;
+  width:52px; height:28px; border-radius:6px; background:var(--crimson); color:#fff;
+  font-family:"DM Mono",monospace; font-size:10.5px; letter-spacing:.06em; display:grid; place-items:center; text-transform:uppercase;
+}
+.tl li.now::before{background:var(--ink)}
+.tl li.now{border-left-color:var(--crimson)}
+.tl li:last-child{border-left-color:transparent}
+.tl h4{font-size:17.5px; margin-bottom:3px}
+.tl p{margin:0; color:var(--muted); font-size:15.5px}
+.tl .nowtag{
+  font-family:"DM Mono",monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--ink); color:#fff; border-radius:4px; padding:2px 7px; margin-left:8px; vertical-align:2px;
+}
+
+/* familias */
+.familias{background:var(--sand); border:1px solid #e6dcd2; border-radius:12px; padding:22px 24px; margin-top:26px}
+.familias h3{font-size:22px; margin-bottom:4px}
+.familias .en{font-family:"DM Mono",monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:12px}
+.familias ul{padding-left:19px; margin:10px 0 0}
+.familias li{margin-bottom:8px; font-size:15.5px}
+
+footer{margin-top:52px; border-top:1px solid var(--gray20); padding:26px 0 60px; color:var(--muted); font-size:14.5px}
+footer code{font-family:"DM Mono",monospace; font-size:13px; background:#fff; border:1px solid var(--gray20); padding:1px 5px; border-radius:4px}
+footer p{margin:0 0 10px}
+
+.toast{
+  position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(20px);
+  background:var(--ink); color:#fff; padding:12px 20px; border-radius:9px; font-size:15px;
+  box-shadow:0 8px 30px rgba(0,0,0,.25); opacity:0; pointer-events:none; transition:.22s ease; z-index:90;
+}
+.toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .ticker{border-radius:10px; padding:14px 16px}
+  .deadline-calendar{border-radius:10px; padding:9px 12px}
+  .calendar-head{display:block}
+  .calendar-toggle{margin-top:9px}
+  .calendar-open .calendar-head{margin-bottom:12px}
+  .calendar-actions{margin-top:0}
+  .calendar-day,.calendar-blank{min-height:40px}
+  .calendar-day{padding:6px;font-size:12px}
+  .calendar-day.has-deadline::after{left:5px;bottom:5px;width:6px;height:6px}
+  .calendar-event{display:block}
+  .calendar-event time{display:block;text-align:left;margin-bottom:2px}
+  .calendar-footer span{width:100%;margin-right:0}
+  .ticker .mine{margin-left:0; text-align:left; width:100%; border-top:1px solid #3a3c3e; padding-top:10px}
+  .grid{grid-template-columns:1fr}
+  .days b{font-size:27px}
+  #q{flex:1 1 100%}
+  .builder,.quiz{padding:17px}
+  .tl li{padding-left:22px; margin-left:14px}
+  .tl li::before{position:static; display:inline-grid; margin-bottom:7px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .card{transition:transform .16s ease, box-shadow .16s ease}
+  .card:hover{transform:translateY(-2px); box-shadow:0 1px 0 var(--gray20),0 8px 22px rgba(22,33,28,.09)}
+}
+
+/* ============================================================
+   SCHOLARSHIP FINDER VISUAL SYSTEM — advisory rebrand
+   ============================================================ */
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.55;
+}
+h1,h2,h3,h4,
+.badge,.ticker .n,.ticker .mine b,.name,.days b,
+.note strong,.wcard h4,details.acc > summary,.check li b,
+.path h4,table.cmp tbody th,.welcome-response strong,
+.requirement-card h4,.decision-card h4,.grant-card h4,
+.plan-card h4,.help-card h4,.vocab-card h4{
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+.wrap{max-width:1060px;padding-left:16px;padding-right:16px}
+.eyebrow,.stepnum,.tab .num,.ticker .lbl,.calendar-weekdays span,
+.calendar-details h3,.month h3,.month .count,.org,.days small,
+.due,.flag,.tagpill,.mini,.chip,.chiprow-label,.counter,
+.wcard .kicker,.ba .lab,.path .fast,table.cmp thead th,
+.familias .en,.tl .nowtag{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+
+header.top{border-top:7px solid var(--ink)}
+header.top::after{display:none}
+header.top .inner{padding:24px 16px 28px}
+.lockup{gap:12px;margin-bottom:18px;padding-right:155px}
+.site-name{font-size:25px;font-weight:800;line-height:1.05;letter-spacing:-.035em}
+header.top .school{font-size:13px;color:#f5e8eb;margin-top:3px}
+header.top .eyebrow{font-size:10.5px;letter-spacing:.1em;color:#eacbd1}
+.badge{width:50px;height:50px;border-radius:8px}
+.wildcats-script{width:140px;right:16px;top:23px}
+.utility{gap:8px;margin:0 0 19px}
+.utility button,.utility a{
+  border:1px solid rgba(255,255,255,.55);background:transparent;
+  border-radius:999px;padding:8px 12px;font:700 13px system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:0
+}
+.utility button:hover,.utility a:hover{background:#fff;color:var(--crimson)}
+header.top h1{font-size:clamp(36px,7vw,58px);line-height:1.02;letter-spacing:-.045em;margin:0 0 10px;max-width:760px}
+header.top h1 .thin{font-weight:800;color:#f0cbd2}
+.lede{font-size:16px;line-height:1.5;max-width:61ch;color:#f4dfe3;margin:0 0 22px}
+
+.deadline-calendar{
+  border-radius:12px;padding:11px 15px;box-shadow:0 8px 24px rgba(30,15,19,.2)
+}
+.calendar-head h2{font-size:clamp(18px,3vw,22px)}
+.calendar-toggle,.calendar-actions button,.calendar-footer button{
+  border-radius:8px;font:700 12px system-ui,-apple-system,"Segoe UI",sans-serif
+}
+
+nav.hub{
+  background:rgba(255,255,255,.97);border-bottom:1px solid var(--gray20);
+  box-shadow:0 3px 14px rgba(33,35,37,.06)
+}
+.tab{
+  color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:700;font-size:14px;padding:14px 16px 12px
+}
+.tab:hover{color:var(--crimson);background:var(--sand)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--crimson);background:#fff}
+.tab[aria-selected="true"] .num{color:var(--crimson)}
+
+.panel-intro{padding:32px 0 14px;border-bottom:0;margin-bottom:0}
+.panel-intro h2{font-size:clamp(28px,5vw,42px);line-height:1.05;margin:5px 0 9px}
+.panel-intro p{font-size:16px}
+.sect{margin-top:44px}
+.sect > h3{font-size:clamp(23px,4vw,31px)}
+
+.welcome-card,.decision-card,.grant-card,.plan-card,.help-card,.vocab-card,
+.requirement-card,.wcard,.builder,.quiz,.note,.familias,details.acc,
+.requirements-accordion details,.tablewrap{
+  border:1px solid var(--gray20);border-radius:12px;box-shadow:var(--shadow)
+}
+.welcome-card{border-top:4px solid var(--rose);padding:20px;margin-top:18px}
+.welcome-options button{
+  background:#fff;border-radius:999px;padding:10px 13px;font:700 13px system-ui,-apple-system,"Segoe UI",sans-serif
+}
+.welcome-response{border-left-width:4px;border-radius:0 8px 8px 0}
+.start-step{border:1px solid var(--gray20);border-left:5px solid var(--rose);border-radius:12px;min-height:175px}
+.current-action{border-radius:12px}
+.decision-card{border-top:4px solid var(--crimson)}
+.grant-card{border-top:4px solid var(--sage)}
+.wcard{border-top:4px solid var(--crimson)}
+
+.btn{
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px;font-weight:800;
+  letter-spacing:0;border-radius:8px;padding:10px 13px
+}
+.mini{border-radius:8px;font-size:11px;font-weight:700}
+.chip{font-size:12px;font-weight:700;letter-spacing:0}
+#q{border-radius:8px}
+.controls{background:rgba(244,244,245,.97)}
+
+.card{
+  border:1px solid var(--gray20);border-left-width:5px;border-radius:12px;
+  box-shadow:var(--shadow);padding:16px
+}
+.wcard,.requirement-card,.start-step{transition:transform .16s ease,box-shadow .16s ease}
+.amount{display:inline-flex;align-items:center;background:var(--sage-bg);border:1px solid #bdd8c9;border-radius:8px;padding:7px 10px;color:var(--sage)}
+.note{border-left:5px solid var(--crimson)}
+.band{margin-top:44px;padding:42px 0}
+.paths{border-radius:12px}
+.path{padding:21px 19px}
+footer{background:#fff;border-top:1px solid var(--gray20);margin-top:48px;padding:24px 0 50px}
+.help-fab{border:2px solid #fff;box-shadow:0 8px 25px rgba(0,0,0,.23)}
+
+@media(prefers-reduced-motion:no-preference){
+  .card:hover,.wcard:hover,.requirement-card:hover,.start-step:hover{
+    transform:translateY(-2px);box-shadow:0 2px 0 var(--gray20),0 9px 24px rgba(33,35,37,.1)
+  }
+}
+
+@media(max-width:700px){
+  .lockup{padding-right:116px}.wildcats-script{width:105px;right:15px;top:24px}
+}
+@media(max-width:560px){
+  header.top .inner{padding:19px 16px 20px}
+  .lockup{padding-right:0}.site-name{font-size:22px}.wildcats-script{display:none}
+  .utility{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px;margin-bottom:16px}
+  .utility button,.utility a{white-space:nowrap;font-size:12px;padding:7px 10px}
+  header.top h1{font-size:36px}
+  .lede{font-size:15px}
+  .deadline-calendar{padding:10px 12px}
+  .tab{padding:12px 13px 10px;font-size:13px}
+  .panel-intro{padding-top:26px}
+  .welcome-card{padding:17px}
+  .welcome-options{display:grid;grid-template-columns:1fr 1fr}
+  .welcome-options button{width:100%;text-align:left;border-radius:9px}
+  .sect{margin-top:38px}
+}
+@media print{
+  nav.hub,.controls,.ticker,.deadline-calendar,.cardtools,.btn,.mini,header.top::after,.quiz,.builder{display:none !important}
+  .panel[hidden]{display:block !important}
+  body{background:#fff; font-size:10.5pt}
+  header.top{background:#fff; color:#000; border-top:3px solid #000}
+  header.top .eyebrow,.lede{color:#444}
+  h1{font-size:26pt}
+  .band{background:#fff; color:#000; padding:16px 0; border-top:2px solid #000}
+  .band h2,.band h3,.band h4{color:#000}
+  .band p,.path p,.path ul{color:#333}
+  .path{background:#fff; border:1px solid #ccc}
+  .paths{background:#fff; gap:8px}
+  .card,details.acc{break-inside:avoid; box-shadow:none; border:1px solid #ccc}
+  details.acc > summary::after{display:none}
+  .acc-body{display:block !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#hubnav">Skip to the main sections</a>
+
+<header class="top">
+  <div class="wrap inner">
+    <div class="lockup">
+      <div class="badge" id="site-badge">TH</div>
+      <div>
+        <div class="site-name">Next Steps</div>
+        <div class="school" id="site-school">Toppenish High School</div>
+        <p class="eyebrow" id="site-eyebrow" style="margin:2px 0 0">Mr. Barragan's Advisory and the Class of 2027</p>
+      </div>
+    </div>
+    <div class="wildcats-script" aria-hidden="true"><img src="assets/wildcats-script.png" alt=""></div>
+    <div class="utility" aria-label="Quick links">
+      <a href="index.html">Simple home</a>
+      <a href="index.html#coach">Open the Coach</a>
+      <a href="scholarships.html">Scholarship Finder</a>
+      <a href="#familias" data-jump="familias">Spanish for families · Español</a>
+      <button type="button" data-jump="help">Get help</button>
+    </div>
+    <h1>One next step<br><span class="thin">at a time.</span></h1>
+    <p class="lede">Use the full guide for pathways, deadlines, applications, financial aid, writing support, and family resources.</p>
+    <div class="hero-actions" aria-label="Start using Next Steps">
+      <a class="primary" href="index.html#coach">Find my next step</a>
+      <a class="secondary" href="scholarships.html">Search scholarships</a>
+    </div>
+    <section class="deadline-calendar" id="deadline-calendar" aria-labelledby="calendar-title">
+      <div class="calendar-head">
+        <div>
+          <div class="lbl" id="calendar-kicker">Important dates for seniors</div>
+          <h2 id="calendar-title">Loading important dates…</h2>
+          <p id="calendar-summary">This calendar updates when the scholarship list is refreshed. Planning dates stay out until the sponsor verifies them.</p>
+        </div>
+        <button class="calendar-toggle" type="button" id="calendar-toggle" aria-expanded="false" aria-controls="calendar-body">Open calendar</button>
+      </div>
+      <div class="calendar-body" id="calendar-body" hidden>
+        <div class="calendar-actions" aria-label="Change calendar month">
+          <button type="button" id="cal-prev" aria-label="Show previous month">←</button>
+          <button type="button" id="cal-today">Today</button>
+          <button type="button" id="cal-next" aria-label="Show next month">→</button>
+        </div>
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Important dates for seniors by month"></div>
+        <div class="calendar-details" id="calendar-details" aria-live="polite"></div>
+        <div class="calendar-footer">
+          <span id="calendar-count">Confirmed dates only</span>
+          <button type="button" id="download-confirmed-ics">Download calendar</button>
+          <button type="button" data-jump="deadlines">See all important dates →</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</header>
+
+<nav class="hub" id="hubnav" aria-label="Main sections">
+  <div class="wrap">
+    <div class="row" role="tablist">
+      <button class="tab" role="tab" id="tab-start" aria-controls="panel-start" aria-selected="true" data-panel="start"><span class="num">01</span> Start</button>
+      <button class="tab" role="tab" id="tab-pathways" aria-controls="panel-pathways" aria-selected="false" data-panel="pathways"><span class="num">02</span> Paths</button>
+      <button class="tab" role="tab" id="tab-requirements" aria-controls="panel-requirements" aria-selected="false" data-panel="requirements"><span class="num">03</span> Requirements</button>
+      <button class="tab" role="tab" id="tab-deadlines" aria-controls="panel-deadlines" aria-selected="false" data-panel="deadlines"><span class="num">04</span> Pay for School</button>
+      <a class="tab" id="tab-scholarships" href="scholarships.html"><span class="num">05</span> Scholarships</a>
+      <button class="tab" role="tab" id="tab-writing" aria-controls="panel-writing" aria-selected="false" data-panel="writing"><span class="num">06</span> Writing</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ 01 · START HERE ============ -->
+<section class="panel" id="panel-start" role="tabpanel" aria-labelledby="tab-start">
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Class of 2027 · Welcome</p>
+    <h2>Start with what you need today.</h2>
+    <p>Use the coach for a private plan, or open one of the three most-used resources.</p>
+  </div>
+  <main class="wrap">
+    <article class="coach-gateway">
+      <div>
+        <p class="eyebrow">Personalized starting point</p>
+        <h3>Not sure? Let the coach guide you.</h3>
+        <p>Answer a few plain-language questions. You will get three useful next steps using the same verified information already on this site. No account or name is required.</p>
+      </div>
+      <a class="btn" href="index.html#coach">Use the Coach on the homepage →</a>
+    </article>
+
+    <div class="start-shortcuts" aria-label="Common Next Steps resources">
+      <a class="start-shortcut" href="scholarships.html"><p class="eyebrow">Money</p><h3>Search scholarships</h3><p>See confirmed opportunities first and save deadlines to your calendar.</p><span>Open the finder →</span></a>
+      <a class="start-shortcut" href="#pathways" data-jump="pathways"><p class="eyebrow">After graduation</p><h3>Compare paths</h3><p>Explore college, YVC, trades, apprenticeships, military, and work.</p><span>Choose a path →</span></a>
+      <a class="start-shortcut" href="#deadlines" data-jump="deadlines"><p class="eyebrow">Money and forms</p><h3>Pay for school</h3><p>Start with FAFSA or WASFA and learn about Washington financial aid.</p><span>See money steps →</span></a>
+    </div>
+
+    <div class="sect" id="help-center">
+      <p class="eyebrow">Your escape hatch</p>
+      <h3>Need help with this?</h3>
+      <article class="help-card"><h4>You are not expected to solve everything alone.</h4><p>Students and parents: if you need help, please message Mr. Barragan through ParentSquare. Tell me which page or question you are working on, and I will help you figure out the next step.</p></article>
+    </div>
+  </main>
+</section>
+
+<!-- ============ 04 · PAY FOR SCHOOL ============ -->
+<section class="panel" id="panel-deadlines" role="tabpanel" aria-labelledby="tab-deadlines" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 04 · Pay for School</p>
+    <h2>How will we pay for school or training?</h2>
+    <p>Start with FAFSA or WASFA, check Washington College Grant, and learn which money steps come before scholarships.</p>
+  </div>
+  <main class="wrap">
+    <div class="aid-grid">
+      <article class="decision-card" id="aid-choice">
+        <p class="eyebrow">Financial aid</p>
+        <h4>Do I complete FAFSA or WASFA?</h4>
+        <p>Do not guess about citizenship or residency rules. Use the official guidance or ask a trained adult privately.</p>
+        <div class="decision-choice">
+          <a href="https://studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens" target="_blank" rel="noopener">Yes, or I think so → FAFSA<small>FAFSA can connect eligible students to federal, Washington, and college aid.</small></a>
+          <a href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">No, I do not know, or I prefer not to → Check WASFA<small>Use WSAC's questionnaire. WASFA applies for Washington state aid, not federal aid.</small></a>
+        </div>
+        <p><strong>Not sure? That is normal. Do not guess.</strong> Ask Mr. Barragan/counseling privately or use a free community workshop.</p>
+        <div class="cta-row"><a class="btn" href="https://wsac.wa.gov/wasfa" target="_blank" rel="noopener">Official WASFA guidance</a><a class="btn ghost" href="https://yvcc.edu/news/academic-year/2025-2026/financial-aid-workshops-reminder.php" target="_blank" rel="noopener">YVC workshop information</a></div>
+      </article>
+      <article class="grant-card">
+        <p class="eyebrow">Money students often miss</p>
+        <h4>Washington College Grant</h4>
+        <div class="grant-big">Check—even if you think your family earns too much.</div>
+        <p>WA Grant can help pay for college, career training, supplies, living expenses, and approved apprenticeships. You apply through FAFSA or WASFA.</p>
+        <p><strong>Current 2026–27 example:</strong> a family of four can receive some aid up to about $139,500; limits change by year and household size.</p>
+        <a href="https://wsac.wa.gov/wcg-awards" target="_blank" rel="noopener">Check the official income and award chart →</a>
+      </article>
+    </div>
+    <div class="requirements-grid">
+      <article class="requirement-card"><h4>College Bound Scholarship</h4><p>If you were enrolled in College Bound, check your status and complete FAFSA or WASFA during senior year.</p><a class="mini" href="https://wsac.wa.gov/college-bound" target="_blank" rel="noopener">Check College Bound →</a></article>
+      <article class="requirement-card"><h4>Passport to Careers</h4><p>Foster-care and unaccompanied-homeless-youth support can help with college, training, or apprenticeships.</p><a class="mini" href="https://wsac.wa.gov/passport-to-careers" target="_blank" rel="noopener">Check eligibility →</a></article>
+    </div>
+    <div class="note"><p style="margin:0"><strong>Important dates:</strong> the calendar at the top includes when FAFSA, WASFA, and other applications open, plus priority dates and deadlines. Scholarships have their own navigator in the next tab.</p></div>
+  </main>
+</section>
+
+<!-- ============ 06 · WRITING ============ -->
+<section class="panel" id="panel-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 06 · Writing</p>
+    <h2>Know which essay you are writing.</h2>
+    <p>A college personal statement helps an admission reader understand who you are. A scholarship essay proves why this award fits your plans and what you will do with the opportunity. You may reuse stories, but the job of each essay is different.</p>
+  </div>
+
+  <main class="wrap">
+    <div class="wcards" style="margin-top:30px">
+      <div class="wcard"><div class="kicker">College personal statement</div><h4>Who are you?</h4><p>Usually up to 650 words. Build around a specific scene, choices, reflection, and voice. UW uses the Common App; WSU, CWU, and WWU also accept it. Heritage, YVC, and Perry Tech use their own application paths.</p></div>
+      <div class="wcard"><div class="kicker">Scholarship essay</div><h4>Why you, this money, and now?</h4><p>Often 250–600 words. Answer the exact prompt, show evidence, connect the award to a concrete education or career step, and explain how you will follow through.</p></div>
+    </div>
+
+    <div class="sect" style="margin-top:34px">
+      <p class="eyebrow">Scholarship writing</p>
+      <h3>Build one strong story bank, then adapt it.</h3>
+      <p class="sub">Collect the details committees actually use: responsibility, work, family, service, action, and a specific next step.</p>
+      <div id="builder-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Decode the prompt</p>
+      <h3>Answer the question behind the question.</h3>
+      <div id="prompts-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Scholarship essay structure</p>
+      <h3>Move from a real moment to a real plan.</h3>
+      <div id="structure-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Make it specific</p>
+      <h3>Replace claims with evidence.</h3>
+      <div id="examples-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Recommendation packet</p>
+      <h3>Help an adult write a specific letter.</h3>
+      <p class="sub">Give your recommender your story bank, activities and jobs, the scholarship description, exact deadline, submission link, and what you hope the letter will show.</p>
+      <div id="recs-mount"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Before you submit</p>
+      <h3>Use the scholarship checklist.</h3>
+      <ul class="check" id="final-check"></ul>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">College personal statement · Common App</p>
+      <h3>Your story, in 650 words or fewer.</h3>
+      <p class="sub">Choose the story before the prompt. A strong essay often fits several prompts; prompt 7 can hold almost any meaningful personal statement.</p>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">The seven choices</p>
+      <h3>Choose a doorway—not a formula.</h3>
+      <p class="sub">Open each prompt for a plain-language translation and a question that helps you test whether you have a real story.</p>
+      <div id="common-prompts"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Find the story first</p>
+      <h3>Specific beats dramatic.</h3>
+      <p class="sub">A small, sharply observed moment can reveal more than a life summary. Use this private story finder to collect scenes, details, and values before drafting.</p>
+      <div id="common-builder"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Pick a structure</p>
+      <h3>One turning point—or several connected moments?</h3>
+      <div class="wcards">
+        <div class="wcard"><div class="kicker">Narrative</div><h4>One experience changes something</h4><p>Use this when one challenge, event, relationship, or realization has a clear before, turning point, action, and after. Spend more space on what you did and understood than on the problem.</p></div>
+        <div class="wcard"><div class="kicker">Montage</div><h4>Several moments share one thread</h4><p>Use this when an object, place, habit, language, responsibility, or question connects multiple snapshots. Each scene should reveal a different side of you while returning to the same thread.</p></div>
+      </div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Draft here</p>
+      <h3>Write in your own voice.</h3>
+      <p class="sub">Sound like the thoughtful version of yourself—not a thesaurus. Use concrete nouns, exact actions, and details only you would know.</p>
+      <div class="builder">
+        <label for="common-draft" style="display:block;font-weight:700;margin-bottom:8px">Your Common App draft</label>
+        <textarea id="common-draft" rows="15" placeholder="Start inside a real moment: where are you, what are you doing, and what detail would only you notice?"></textarea>
+        <div class="brow"><button class="btn ghost" type="button" id="common-copy">Copy draft</button><span class="counter" id="common-wc"><b>0</b> / 650 words</span></div>
+      </div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">Revision test</p>
+      <h3>Make the essay reveal a person.</h3>
+      <ul class="check" id="common-check"></ul>
+    </div>
+
+    <div class="note">
+      <p><strong>Ask for feedback this way:</strong> “What three words describe me after reading this? Where did you feel closest to me? Where did the essay become general or confusing?” Keep feedback that helps the essay sound more like you.</p>
+      <p style="margin-bottom:0"><strong>AI boundary:</strong> use AI to ask you follow-up questions, find vague sentences, or check grammar. Do not let it invent the experience or replace your phrasing. Authentic voice is one of the two biggest things that makes an essay stand out.</p>
+    </div>
+
+    <div class="note" style="border-left-color:var(--gray64)">
+      <p><strong>Guides used for this section:</strong> <a href="https://www.collegeessayguy.com/blog/common-app-essay-prompts" target="_blank" rel="noopener">College Essay Guy’s 2026–27 prompt guide</a> and <a href="https://toptieradmissions.com/successful-college-essay-2026-2027/" target="_blank" rel="noopener">Top Tier Admissions on specific topics and authentic voice</a>. College application facts were checked against official UW, WSU, CWU, and WWU admissions pages.</p>
+      <p style="margin-bottom:0">This page summarizes the guidance in student-friendly language; the linked articles include additional explanations and examples.</p>
+    </div>
+  </main>
+</section>
+
+<!-- ============ 02 · CHOOSE A PATH ============ -->
+<section class="panel" id="panel-pathways" role="tabpanel" aria-labelledby="tab-pathways" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 02 · Choose a Path</p>
+    <h2>Five doors. None is ranked above another.</h2>
+    <p>You don't have to know your career. You do need to know which door you're walking through this year, because
+      the deadlines in Pay for school depend on it. None of these five is the smart one — the smart one is the one that
+      fits your life.</p>
+  </div>
+
+  <main class="wrap">
+    <div class="sect" style="margin-top:30px">
+      <p class="eyebrow">Not sure yet?</p>
+      <h3>Answer four questions.</h3>
+      <p class="sub">This isn't a personality quiz and it won't tell you who you are. It just narrows five doors down
+        to the two worth researching first.</p>
+      <div class="quiz" id="quiz"></div>
+    </div>
+
+    <div class="sect">
+      <p class="eyebrow">The real numbers</p>
+      <h3>What each door costs and what it pays</h3>
+      <p class="sub">Rough Washington-state figures for planning, not promises. Wages, costs, and aid change. Check Washington College Grant eligibility instead of assuming you do—or do not—qualify.</p>
+      <div class="tablewrap" id="cmp-mount"></div>
+    </div>
+  </main>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">The five doors</p>
+      <h2 style="font-size:clamp(26px,5vw,38px); letter-spacing:-.03em; margin-bottom:8px">Pick a direction. The money follows.</h2>
+      <p style="max-width:56ch">Each card lists what to do <em>this year</em>, not eventually.</p>
+      <div class="paths" id="paths"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="sect">
+      <p class="eyebrow">Within an hour of Toppenish</p>
+      <h3>The places you can actually get to</h3>
+      <div class="wcards" id="local-mount"></div>
+    </div>
+  </main>
+</section>
+
+<!-- ============ 03 · COLLEGE REQUIREMENTS ============ -->
+<section class="panel" id="panel-requirements" role="tabpanel" aria-labelledby="tab-requirements" hidden>
+  <div class="wrap panel-intro">
+    <p class="eyebrow">Section 03 · College Requirements</p>
+    <h2>What do colleges and programs look for?</h2>
+    <p>Use this page from the first visit to the final enrollment step. Open each section to see what students and families should prepare—and what can be different by school, major, or program.</p>
+  </div>
+  <main class="wrap">
+    <div class="requirements-accordion">
+      <details open>
+        <summary>1. Choose the kind of program first</summary>
+        <div class="requirements-body">
+          <p>A four-year university, YVC, Perry Tech, and an apprenticeship do not ask for the same things. Before you start an application, write down the school, program or major, start term, and application type.</p>
+          <ul><li><strong>Four-year college:</strong> review high-school preparation, grades, application writing, and major-specific admission.</li><li><strong>YVC or another two-year college:</strong> plan for admission, placement, orientation, registration, and a pathway choice.</li><li><strong>Technical school or apprenticeship:</strong> check program prerequisites, assessments, interviews, start dates, and whether paid training is part of the program.</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>2. Check your high-school classes and credits</summary>
+        <div class="requirements-body">
+          <p>For Washington four-year admission, compare your transcript with the College Academic Distribution Requirements (CADRs). The common checklist is:</p>
+          <ul><li>4 credits of English</li><li>3 credits of mathematics, including Algebra II or higher preparation</li><li>1 senior-year math-based quantitative course</li><li>3 credits of science, including lab science requirements</li><li>3 credits of social sciences or social studies</li><li>2 credits of world language</li><li>About 1 credit of fine, visual, or performing arts, depending on the school</li></ul>
+          <p>Course names matter. An applied or remedial class may not meet a college-admission requirement even if it counts toward high-school graduation. Ask Mr. Barragan or counseling to compare your transcript with the exact college page.</p>
+          <a href="https://admit.washington.edu/apply/first-year/cadr/" target="_blank" rel="noopener">UW CADR details →</a> · <a href="https://admission.wsu.edu/apply/first-year-students/college-academic-distribution-requirements-cadrs/" target="_blank" rel="noopener">WSU CADR details →</a>
+        </div>
+      </details>
+      <details>
+        <summary>3. Understand GPA, grades, and course choices</summary>
+        <div class="requirements-body">
+          <p>There is no single GPA that guarantees admission everywhere. Colleges may review your full transcript, grade trend, senior schedule, course difficulty, CADRs, and the preparation expected for your major. A strong senior schedule still matters after you apply.</p>
+          <ul><li>Keep your grades steady or improving.</li><li>Do not drop a course without checking how it affects graduation and college requirements.</li><li>Ask each school whether the major has a separate GPA or prerequisite rule.</li><li>Send the final official transcript if you enroll; an application self-report is not always the final transcript.</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>4. Know when SAT or ACT matters</summary>
+        <div class="requirements-body">
+          <p>Do not assume every school has the same testing rule. UW says SAT/ACT scores are not required for admission and are not used in its normal holistic review, but exceptions and other uses can exist. Another college, scholarship, athletic program, homeschool situation, or placement process may have different rules.</p>
+          <ul><li>Open the official test-policy page for every school before paying for a test or sending scores.</li><li>Ask whether scores affect scholarships, course placement, NCAA eligibility, or a special program.</li><li>International applicants may have separate English-proficiency requirements.</li></ul>
+          <a href="https://admit.washington.edu/apply/first-year/how-to-apply/test-scores/" target="_blank" rel="noopener">UW test-score guidance →</a>
+        </div>
+      </details>
+      <details>
+        <summary>5. Prepare the application materials</summary>
+        <div class="requirements-body">
+          <p>Set up one personal email address you will keep after graduation. Then prepare:</p>
+          <ul><li>Personal and family information requested by the application</li><li>High-school course names, grades, and dates</li><li>Activities, jobs, family responsibilities, and service</li><li>College personal statement or short-answer writing</li><li>Recommendation information only when the school or program asks for it</li><li>Application fee or fee-waiver plan</li><li>A list of every account, confirmation number, deadline, and missing item</li></ul>
+          <a href="https://admit.washington.edu/apply/first-year/how-to-apply/" target="_blank" rel="noopener">UW first-year application checklist →</a>
+        </div>
+      </details>
+      <details>
+        <summary>6. Know the YVC steps before registration</summary>
+        <div class="requirements-body">
+          <p>YVC is not “apply once and show up.” New students should plan for this sequence:</p>
+          <ol><li>Apply for admission and receive a ctcLink student ID.</li><li>Complete English and math placement by testing or sending transcripts for evaluation.</li><li>Choose a pathway and watch for the New Student Orientation invitation.</li><li>Attend orientation, meet with advising, and register for classes.</li><li>Check your financial-aid account, tuition balance, and payment plan before the due date.</li></ol>
+          <a href="https://www.yvcc.edu/admissions/new-college-student" target="_blank" rel="noopener">YVC new-student steps →</a> · <a href="https://www.yvcc.edu/registration/new-student-orientation" target="_blank" rel="noopener">YVC orientation and dates →</a>
+        </div>
+      </details>
+      <details>
+        <summary>7. Check program-specific requirements</summary>
+        <div class="requirements-body">
+          <p>A school may admit you while a program still has another process. Nursing, dental hygiene, teaching, engineering, health programs, arts programs, and technical programs can have prerequisites, assessments, interviews, portfolios, auditions, background checks, or limited seats.</p>
+          <p>Perry Tech, for example, may require an entrance assessment for the selected program, proof of high-school completion, identification, and a financial plan. Ask for the exact program checklist—not just the general school application.</p>
+          <a href="https://www.perrytech.edu/students/academics/enroll/" target="_blank" rel="noopener">Perry Tech enrollment steps →</a> · <a href="https://my.perrytech.edu/ICS/Future_Students/Assessment_Resources/" target="_blank" rel="noopener">Perry Tech assessment information →</a>
+        </div>
+      </details>
+      <details>
+        <summary>8. Do not stop after you are admitted</summary>
+        <div class="requirements-body">
+          <p>Admission is not the last step. Before the first day, students may still need to:</p>
+          <ul><li>Accept the admission offer by the stated date</li><li>Send a final transcript or other required records</li><li>Complete FAFSA/WASFA verification and compare the real remaining cost</li><li>Pay a deposit, arrange housing or transportation, and accept or decline aid</li><li>Complete placement, orientation, advising, registration, immunization, or program paperwork</li><li>Check the student portal and school email every week</li></ul>
+          <p>Keep screenshots or confirmation emails for every completed step.</p>
+        </div>
+      </details>
+      <details>
+        <summary>9. Family and student final check</summary>
+        <div class="requirements-body">
+          <ul><li>We know the exact school, program, and start term.</li><li>We checked the required high-school classes and GPA or prerequisite rules.</li><li>We know whether SAT/ACT, placement, an assessment, or an interview is required.</li><li>We have the application accounts, personal email, transcript information, and writing materials.</li><li>We know the financial-aid form, scholarship steps, and remaining-cost plan.</li><li>We wrote down the next deadline and who to contact when something is unclear.</li></ul>
+          <p><strong>Still unsure?</strong> Students and parents can message Mr. Barragan through ParentSquare with the exact school or program page.</p>
+          <button class="mini" type="button" data-jump="help">Get help →</button>
+        </div>
+      </details>
+    </div>
+  </main>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p id="site-teacher" style="font-weight:600;color:var(--ink)"></p>
+    <p><strong>How this page stays current:</strong> every public scholarship must be verified as open to a Toppenish High School student. School- or region-limited awards are blocked unless Toppenish is explicitly included. Confirmed opportunities appear first; recurring opportunities show their prior deadline and a clear warning until a new date is published.</p>
+    <p>Made for advisory at Toppenish High School. Not an official Toppenish School District publication—verify every date on the sponsor's official page before relying on it.</p>
+  </div>
+</footer>
+
+<button class="help-fab" type="button" data-jump="help" aria-label="Open help options">🆘 Get help</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ================================================================
+   EDIT BELOW THIS LINE
+   ----------------------------------------------------------------
+   due:     "YYYY-MM-DD"  or  null if there's no fixed date
+   opens:   "YYYY-MM-DD"  (optional) — shows an "opens soon" countdown
+   window:  short text used when due is null   (e.g. "Rolling")
+   tags:    any of: money, four, two, trades, military, work
+   fit:     any of: everyone, local, ag, tribal, undoc, migrant,
+                    firstgen, lowincome, stem, noessay
+   effort:  "low" | "mid" | "high"
+   confirm: true  → shows the "confirm this date" flag
+   ================================================================ */
+
+/* ---------- YOUR INFO — edit these three lines ---------- */
+const SITE = {
+  school:  "Toppenish High School",
+  line:    "Mr. Barragan's Advisory and the Class of 2027",
+  teacher: "Questions? Students and parents can message Mr. Barragan through ParentSquare.",
+  logo:    "assets/gradcat.png",
+  logoAlt: "Toppenish Wildcats"
+};
+
+const DEADLINES = [];
+
+/* Senior deadlines are not only scholarships. Add verified admissions and transition dates here. */
+const SENIOR_DEADLINES = [
+  {priority:20,name:"University of Washington first-year application",org:"University of Washington Admissions",amount:"Admissions deadline",who:"Students applying for first-year summer or autumn admission. Running Start students who have not attended college after high-school graduation apply as first-year students.",opens:"2026-08-15",due:"2026-11-15",window:"Application opens August 15",tags:["four"],fit:["everyone"],effort:"high",link:"https://admit.washington.edu/apply/first-year/",note:"UW lists August 15 as the autumn application opening date and November 15 as the application deadline. UW does not offer early action or early decision.",lastChecked:"2026-08-13",kind:"deadline",needs:"Common App or ApplyWeb application, self-reported coursework, UW writing responses, family information, and fee or fee waiver."},
+  {priority:21,name:"University of Washington financial-aid priority date",org:"University of Washington",amount:"FAFSA/WASFA priority date",who:"Students seeking financial aid at UW should list UW and complete the correct aid application by the university's priority date.",due:"2027-02-28",window:"For summer and autumn applicants",tags:["money","four"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://admit.washington.edu/apply/dates-deadlines/",note:"Admission and financial-aid deadlines are separate. Missing the November admission deadline cannot be fixed by filing aid later.",lastChecked:"2026-08-13",kind:"deadline",needs:"Submitted FAFSA or WASFA with UW listed; respond to any later verification request."},
+  {priority:22,name:"YVC admission, placement & orientation",org:"Yakima Valley College",amount:"College transition steps",who:"Students planning YVC should apply for the correct quarter, send transcripts, complete placement steps, and schedule orientation.",due:null,window:"Dates depend on your starting quarter · verify the current calendar",tags:["two"],fit:["local","everyone"],effort:"mid",link:"https://www.yvcc.edu/registration/important-dates.php",note:"YVC publishes separate application, transcript, placement, orientation, registration, and tuition dates. Being admitted does not finish the process.",lastChecked:"2026-08-13",kind:"deadline",needs:"YVC application, transcripts, placement information, orientation, registration, and a confirmed financial-aid plan."},
+  {priority:23,name:"Perry Tech application timeline",org:"Perry Technical Institute",amount:"Program application and start dates",who:"Students considering Perry Tech should select a program early because requirements and available start dates vary by program.",due:null,window:"Program-specific · start researching now",tags:["trades"],fit:["local","everyone"],effort:"mid",link:"https://www.perrytech.edu/admissions/",note:"Ask admissions for the exact application, assessment, interview, waitlist, and financial-aid timeline for your program.",lastChecked:"2026-08-13",kind:"deadline",needs:"Program choice, application, any required assessment or interview, transcripts, and a financial-aid plan."}
+];
+
+/* Evergreen money steps stay pinned even when the nightly scholarship list changes. */
+const PRIORITY_ACTIONS = [
+  {priority:1,name:"FAFSA",org:"Federal Student Aid",amount:"Federal, state, and college aid",who:"Students who can complete FAFSA under its eligibility rules should prepare a StudentAid.gov account and complete the 2027–28 form when it opens.",opens:"2026-10-01",due:null,window:"Opens October 1, 2026",tags:["money","four","two","trades"],fit:["everyone","local","lowincome"],effort:"mid",link:"https://studentaid.gov/h/apply-for-aid/fafsa",note:"Federal Student Aid and WSAC say the FAFSA opens October 1 each year. This is an application for grants, work-study, and loans—not a scholarship contest. If you are unsure which form to use, do not guess; use WSAC's guidance or ask for help.",lastChecked:"2026-08-14",kind:"action",needs:"StudentAid.gov account; student and contributor information; required financial and identity information."},
+  {priority:2,name:"WASFA",org:"Washington Student Achievement Council",amount:"Washington state financial aid",who:"Washington students who cannot or choose not to file FAFSA can use WSAC's official questionnaire to check whether WASFA is the appropriate application.",opens:"2026-10-01",due:null,window:"Opens October 1, 2026",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wasfa",note:"WSAC says FAFSA and WASFA open October 1 each year. WASFA applies for state aid only. Read the official privacy statement and ask for help if any question is unclear.",lastChecked:"2026-08-14",kind:"action",needs:"WSAC account; student and contributor information; residency and financial information requested by the official application."},
+  {priority:3,name:"Washington College Grant",org:"Washington Student Achievement Council",amount:"Money for college, career training, or approved apprenticeships",who:"Washington residents across a wide range of family incomes. Complete FAFSA or WASFA to be considered.",due:null,window:"Available through FAFSA or WASFA",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/wcg-awards",note:"Do not assume you earn too much. In the current 2026–27 example, a family of four can receive some aid up to about $139,500; 2027–28 amounts may change.",lastChecked:"2026-08-13",kind:"action",needs:"FAFSA or WASFA plus enrollment in an eligible Washington college, training program, or approved apprenticeship."},
+  {priority:4,name:"College Bound Scholarship",org:"Washington Student Achievement Council",amount:"State aid commitment for eligible students",who:"Students enrolled through the College Bound program: check your status and make sure you complete FAFSA or WASFA during senior year.",due:null,window:"Check your status now",tags:["money","four","two","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://wsac.wa.gov/college-bound",note:"Eligible students must meet program requirements and use the award at a participating Washington school.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:5,name:"Passport to Careers",org:"Washington Student Achievement Council",amount:"College or apprenticeship aid plus support",who:"Washington students who have experienced foster care or unaccompanied homelessness: review eligibility and tell your counselor or financial-aid office.",due:null,window:"Start eligibility steps now",tags:["money","four","two","trades"],fit:["local","lowincome"],effort:"mid",link:"https://wsac.wa.gov/passport-to-careers",note:"Support can cover college, pre-apprenticeship, or apprenticeship costs, including some living and occupational expenses.",lastChecked:"2026-08-13",kind:"action"},
+  {priority:6,name:"YVC Foundation Scholarships",org:"Yakima Valley College Foundation",amount:"One application matches students to many scholarships",who:"Current and incoming YVC students, including undocumented students; one application can match a student with multiple awards.",due:null,window:"Plan ahead · applications normally open December 1 and close at the end of February",tags:["money","two"],fit:["local","lowincome","firstgen"],effort:"mid",link:"https://www.yvcc.edu/financial-aid/types-of-aid/",note:"The 2027–28 application is not open yet. YVC says its 2026–27 application covered more than 150 separate scholarships, with an average award around $4,000.",lastChecked:"2026-08-13",planning:true,kind:"local",needs:"Prepare a transcript, goals narrative, and recommendation; confirm the new cycle's exact checklist."},
+  {priority:6.1,name:"Heritage University scholarships",org:"Heritage University",amount:"Institutional scholarships for incoming students",who:"Students applying to Heritage should complete the university application and review incoming-student scholarships, including current need- and merit-based programs.",due:null,window:"Plan ahead · 2027–28 windows are not posted yet",tags:["money","four"],fit:["local","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/financial-aid/scholarships/",note:"Heritage's current page includes incoming-freshman aid and scholarship applications. The Class of 2027 dates may differ from the prior cycle.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local",needs:"Heritage application; scholarship-specific statement or application; transcript; FAFSA/WASFA or other aid documents when requested."},
+  {priority:6.2,name:"Perry Tech scholarship list",org:"Perry Technical Institute",amount:"Trade-oriented and external scholarships",who:"Students planning technical training can use Perry Tech's maintained scholarship list to find awards by trade, employer, membership, and personal background.",due:null,window:"Multiple deadlines through 2027 · check the live list",tags:["money","trades"],fit:["local","firstgen","lowincome"],effort:"mid",link:"https://www.perrytech.edu/students/finance/scholarships/external/index.html?cid=1",note:"Perry Tech currently lists awards with 2026 and 2027 deadlines. Verify both the scholarship's rules and whether your planned program is eligible.",lastChecked:"2026-08-13",kind:"local",needs:"Requirements vary. Expect proof of enrollment or eligible program, an essay, transcript, and possibly financial information."},
+  {priority:7,name:"Does your family work in agriculture? Start with WAEF",org:"Washington Apple Education Foundation",amount:"One application can match students with multiple tree-fruit and employer-funded awards",who:"Washington seniors with direct family ties to the tree-fruit industry—or students planning a career that supports it.",due:null,window:"Plan ahead · last cycle closed March 2, 2026",tags:["money","four","two","trades"],fit:["local","ag","lowincome"],effort:"high",link:"https://scholarships.waef.org/apply",note:"Ask your parent for the exact company name before starting. WAEF funds awards from local tree-fruit companies, and an exact employer name can help the application match you correctly. If a parent works for Washington Beef/Agri Beef or another large local employer, ask HR directly whether it offers an employee-family scholarship; do not rely on an old amount or deadline.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local",needs:"Exact employer name; family connection to tree fruit or intended industry-supporting career; transcript; activities and work history; essays and any documents listed when the next application opens."},
+  {priority:8,name:"Yakama Nation Higher Education",org:"Yakama Nation Higher Education",amount:"Scholarship/grant support",who:"Yakama Nation students pursuing eligible postsecondary education or training; contact Higher Education to confirm documents and the correct term deadline.",due:null,window:"Plan ahead · verify the 2027–28 cycle",tags:["money","four","two","trades"],fit:["local","tribal"],effort:"mid",link:"https://yakamascholar.smapply.io/",note:"The public portal currently references the 2026–27 cycle. Class of 2027 dates are not confirmed yet.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
+  {priority:9,name:"Heritage University CAMP",org:"Heritage University",amount:"First-year academic, financial, and personal support",who:"U.S. citizens or permanent residents in their first full-time year at Heritage who qualify through Migrant Education, the National Farmworker Jobs Program, or recent migrant/seasonal farm work by the student or immediate family.",due:null,window:"Contact CAMP while applying to Heritage",tags:["money","four"],fit:["local","ag","firstgen","lowincome"],effort:"mid",link:"https://heritage.edu/student-resources/college-assistance-migrant-program/",note:"Toppenish students can qualify. Apply to Heritage, complete FAFSA and the CAMP application, and provide the requested migrant or farmworker eligibility documents.",lastChecked:"2026-08-13",kind:"local"},
+  {priority:10,name:"Yakima Federal Award for Academic Excellence",org:"Yakima Federal Savings and Loan",amount:"Last cycle: $2,500",who:"Plan-ahead item for Yakima County seniors in the top 10% of their graduating class; the school may limit nominees.",due:null,window:"Plan ahead · last cycle deadline was April 24, 2026",tags:["money","four","two"],fit:["local","leadership"],effort:"mid",link:"https://www.yakimafed.com/scholarship",note:"The 2027 application is not open yet. Ask the counseling office about the school nomination process.",lastChecked:"2026-08-13",planning:true,confirm:true,kind:"local"},
+  {priority:11,name:"WorkSource Yakima & youth training",org:"WorkSource / People For People",amount:"Free job, training, and work-experience help",who:"Yakima Valley youth and young adults. Services may include career guidance, paid work experience, certification programs, résumé help, and tuition assistance.",due:null,window:"Open year-round",tags:["work","trades"],fit:["local","lowincome","firstgen"],effort:"low",link:"https://www.mypfp.org/services/employment-training/",note:"People For People lists a Toppenish contact at 509-865-3250. Eligibility varies by program.",lastChecked:"2026-08-13",kind:"local"},
+  {priority:12,name:"Registered apprenticeships in Washington",org:"Washington Labor & Industries",amount:"Paid training and a nationally recognized credential",who:"Students interested in earning while learning: search by county and occupation, review requirements, and contact programs directly.",due:null,window:"Programs recruit on different schedules",tags:["work","trades"],fit:["local"],effort:"mid",link:"https://www.lni.wa.gov/licensing-permits/apprenticeship/apprenticeship-registration-and-tracking-system",note:"Use the state registry to confirm a program is registered before applying.",lastChecked:"2026-08-13",kind:"local"}
+];
+
+/* ================================================================
+   SECTION 02 — THE WRITING CONTENT
+   ================================================================ */
+
+/* The story-bank builder. Each field becomes a block in the output. */
+const BANK = [
+  { id:"hard",
+    label:"A time something got hard and you didn't quit",
+    hint:"School, home, work, a sport, a sibling, an injury, a move. Don't explain why it was hard — say what you actually did on the hardest day.",
+    lead:"WHEN IT GOT HARD" },
+  { id:"carry",
+    label:"What you carry that nobody assigned you",
+    hint:"Watching younger siblings. Translating at the doctor's office or the bank. Weekend shifts. Driving someone to work. Cooking dinner. This counts, and most students leave it off.",
+    lead:"WHAT I CARRY" },
+  { id:"good",
+    label:"Something you're good at that nobody grades",
+    hint:"Fixing engines, editing videos, calming a room down, keeping a team together, budgeting your family's groceries, sewing, welding, teaching a little cousin to read.",
+    lead:"WHAT I'M GOOD AT" },
+  { id:"place",
+    label:"A place or a person you're responsible to",
+    hint:"Be specific enough that a stranger could find it — a street, a field, a shop, a church, a classroom, a name and what they mean.",
+    lead:"WHO AND WHERE I'M FROM" },
+  { id:"number",
+    label:"One real number about your life",
+    hint:"Hours a week you work. Years you've played. People you cook for. Miles to your job. Age you started. Numbers make a reader stop skimming.",
+    lead:"THE NUMBER" },
+  { id:"next",
+    label:"What you want to be doing in five years",
+    hint:"You're allowed to be unsure. \"I want to be licensed and working within an hour of home\" is a stronger answer than a career title you don't mean.",
+    lead:"WHERE THIS GOES" },
+  { id:"proud",
+    label:"Activities, jobs, and things you've been part of",
+    hint:"List everything, including the stuff that ended. Grade level, and roughly how many hours a week. Your recommenders need this more than you do.",
+    lead:"ACTIVITIES, WORK, SERVICE" }
+];
+
+/* The essay skeleton */
+const STRUCTURE = [
+  { move:"Open inside a moment",  words:"100–150 words",
+    what:"Start in the middle of something happening, on a specific day, in a specific place. No throat-clearing, no dictionary definitions, no \"ever since I was young.\"",
+    test:"Could a reader draw the scene? If not, you're summarizing, not writing." },
+  { move:"Name what was at stake", words:"80–120 words",
+    what:"Now you're allowed to explain. What could have gone wrong? What did it cost you or the people around you? Keep it factual — the facts do the emotional work by themselves.",
+    test:"Have you told the reader what you stood to lose?" },
+  { move:"Show what you did",      words:"150–200 words",
+    what:"The heart of it. Verbs, not adjectives. Decisions you made, things you tried, what failed first. This is the paragraph the committee is actually scoring.",
+    test:"Count your verbs. If the paragraph is mostly feelings, rewrite it as actions." },
+  { move:"Say what changed",       words:"100–150 words",
+    what:"Not the lesson a movie would give you. The specific, smaller, truer thing you understand now that you didn't before — even if it's unfinished.",
+    test:"Would this sentence be true for any other applicant? Then it's too general." },
+  { move:"Point it forward",       words:"80–100 words",
+    what:"Connect it to what you're going to do next and what the money makes possible. One or two sentences. Do not restate the whole essay.",
+    test:"Does the last line land, or does it trail off into \"and that's why I want to succeed\"?" }
+];
+
+/* Prompt decoder */
+const PROMPTS = [
+  { q:"\"Describe a challenge or obstacle you have overcome.\"",
+    real:"They are scoring whether you did something, or whether time simply passed.",
+    body:"Everyone writes about the hard thing. Almost nobody writes about the decision they made inside the hard thing. The word they're weighing is <em>overcome</em> — that's an action verb. Spend one paragraph on the obstacle and three on what you did.",
+    dont:"Don't compete on suffering. A reader who has read 400 of these is not moved by how bad it was; they're moved by what you did on a Tuesday when nobody was watching." },
+  { q:"\"Tell us about your leadership experience.\"",
+    real:"They are not asking for a title. They're asking who was better off because you showed up.",
+    body:"You do not need to have been captain, president, or valedictorian. Leadership on a scholarship application means: you saw something that needed doing and you did it, and somebody else benefited. Translating for your parents at an appointment is leadership. Getting a work crew organized is leadership. Keeping your little brother in school is leadership.",
+    dont:"Don't list positions. Pick one and tell what changed because of you." },
+  { q:"\"Why do you deserve this scholarship?\"",
+    real:"They are asking what happens to their money.",
+    body:"Need alone never wins this question, because every applicant has need. Answer it as a return: here is what I will do with a degree or a certificate, here is where I'll do it, and here is the evidence from my life that I finish what I start. Committees fund people they believe will actually graduate.",
+    dont:"Don't say you'd be honored, grateful, or blessed and stop there. Say what you'll build." },
+  { q:"\"Describe your community and your role in it.\"",
+    real:"They are scoring specificity of place. This is the easiest question on the list to win.",
+    body:"Name Toppenish. Name the Yakima Valley. Name the orchard, the packing shed, the church, the field, the road. A reader in Atlanta or Seattle has never been here and will remember the essay that put them somewhere real. Then say what you do in it, in the present tense.",
+    dont:"Don't write \"my community has shaped me into the person I am today.\" That sentence has never won anything." },
+  { q:"\"What are your career goals?\"",
+    real:"They are scoring plausibility, not ambition.",
+    body:"The winning answer is concrete and near-term: the program you're entering, the credential at the end of it, and the first job it qualifies you for. If you know the exact place you want to work, name it. Certainty about the next two years beats a grand vision for the next twenty.",
+    dont:"Don't promise to change the world. Promise the next step, and make the reader believe you'll take it." },
+  { q:"\"Tell us about yourself.\" (or any wide-open prompt)",
+    real:"An open prompt is a trap. It invites a résumé in paragraph form.",
+    body:"Pick one hour of your life and write it. One shift, one drive, one argument, one morning. A reader learns more about you from a single well-told hour than from a summary of eighteen years — and the specific one is the one they'll remember at the end of a long day of reading.",
+    dont:"Don't try to cover everything. Coverage is the enemy of memorable." }
+];
+
+/* Before / after */
+const EXAMPLES = [
+  { title:"Naming the hardship",
+    weak:"My family has been through a lot of struggles, but we always found a way to get through it together. These experiences have made me a stronger and more resilient person.",
+    strong:"In February the transmission went out on my mom's Corolla, and for six weeks I got up at 4:40 to ride to the packing shed with my uncle so she could keep her hours. I did my chemistry homework in his truck with the dome light on.",
+    why:"The first version summarizes a feeling. The second one gives a reader a time, a car, a job, a light in a truck — and it proves resilience without ever using the word." },
+  { title:"Claiming a trait vs. showing it",
+    weak:"I am a very hardworking and dedicated student who always gives 110% in everything I do.",
+    strong:"I have not missed a Saturday shift in two years. I have also never turned in a late lab, though I did once turn one in written on the back of a receipt.",
+    why:"Nobody believes an adjective about yourself. Everybody believes a record. The receipt detail is what makes it real — and slightly funny, which readers remember." },
+  { title:"Writing about where you're from",
+    weak:"I come from a small town where not many people go to college. My community has taught me the value of hard work.",
+    strong:"Toppenish has about nine thousand people, a hospital, and more orchards than stoplights. Almost everyone I know works in fruit at some point — my dad still does, and I did the summer I turned fifteen, which is how I learned I did not want to do it at fifty.",
+    why:"\"Small town\" is invisible. Nine thousand people and more orchards than stoplights is a place a stranger can see. The last clause turns description into motive." },
+  { title:"Explaining what you want to do",
+    weak:"I want to go into the medical field because I have always had a passion for helping people and making a difference in my community.",
+    strong:"I want to be a radiology tech at Astria Toppenish, which is a two-year program at YVC and a job that starts around thirty dollars an hour. I've translated for my grandmother at that hospital since I was eleven and I have watched what happens when nobody in the room speaks Spanish.",
+    why:"The second one names a job, a school, a wage, and the exact experience that produced the goal. It's checkable, which makes a committee trust everything else you wrote." },
+  { title:"The opening line",
+    weak:"Throughout my life, I have faced many obstacles that have shaped me into the person I am today.",
+    strong:"The first time I filled out a government form for my mother I was nine years old and I did not know what \"annual gross income\" meant.",
+    why:"The first sentence is the one that decides whether the rest gets read carefully. Delete every opening line that could sit on top of anyone else's essay." }
+];
+
+/* Recommendation letters */
+const RECS = [
+  { h:"Ask the right person, not the highest grade",
+    p:"The best letter comes from an adult who watched you struggle with something and finish it — not necessarily the class where you got the easy A. A teacher who saw you rewrite a paper four times has more to say than one who saw you ace every quiz. Two letters is standard: one teacher, one adult who isn't family — a boss, a coach, a pastor, a program coordinator." },
+  { h:"Ask in September. Out loud. In person.",
+    p:"Four weeks of notice is the minimum and September is when their calendar is still empty. Ask face-to-face, then send the email the same day so they have it in writing. If someone hesitates or says they're not sure they can write a strong one, thank them and ask someone else — a lukewarm letter is worse than a missing one." },
+  { h:"Hand them a packet, not a request",
+    p:"This is the whole trick, and almost nobody does it. Give your recommender: your story bank from the builder above, your activities and jobs list, the exact scholarship name and what it's for, the deadline and the submission link, and one paragraph on what you'd like them to speak to. You are not being pushy — you are saving them two hours, and specific letters win." },
+  { h:"Then follow up twice",
+    p:"A short reminder one week out, and a thank-you after — handwritten if you can manage it. These same adults will write for you again for jobs, internships, and transfers for the next ten years. Tell them what you won. They genuinely want to know." }
+];
+
+const RECMAIL = `Subject: Recommendation letter request — [your name], Class of 2027
+
+Dear [Mr./Ms. Name],
+
+Thank you for saying yes today. I'm applying for the [scholarship name], which is for
+[one line: who it's for and what it funds]. The deadline is [date] and letters are
+submitted at [link], or emailed to [address].
+
+I've attached my story bank and my activities list. If it's useful, the things I'd most
+like a reader to understand about me are [one or two specific things — e.g. that I kept
+my grades up through the season I was working nights].
+
+I'll send you one short reminder the week before. Thank you again — I know how many of
+these you write.
+
+[Your name]
+[Your phone] · [the email address you'll still have after graduation]`;
+
+const FINALCHECK = [
+  { b:"The scholarship's name is spelled right, everywhere",
+    s:"Reusing an essay is smart. Leaving the last scholarship's name in paragraph three is the most common instant disqualification there is. Search the document for the old name before you send." },
+  { b:"You're under the word limit, not near it",
+    s:"Over the limit gets cut off mid-sentence or thrown out. Aim for about 90% of the maximum." },
+  { b:"You read the whole thing out loud",
+    s:"Not silently. Out loud, to the wall if nobody's around. Every sentence you stumble on is a sentence a reader will stumble on." },
+  { b:"An adult who knows you read it and said it sounds like you",
+    s:"If they say \"this is nice\" instead of \"this sounds like you,\" it isn't done yet." },
+  { b:"You checked the deadline's time zone",
+    s:"Coca-Cola closes 5 p.m. Eastern — that's 2 p.m. here. QuestBridge closes 11:59 p.m. Pacific. Assume the earlier one and submit a day early." },
+  { b:"Your file is named with your name",
+    s:"\"Ramirez_Essay_Gates.pdf\" — not \"essay final FINAL (2).docx.\" Send a PDF unless they ask for something else." },
+  { b:"You ordered your transcript, and it's the right one",
+    s:"The office needs lead time and it's never as fast as you think. Some scholarships want it sealed and mailed; check." },
+  { b:"You saved the confirmation email",
+    s:"Make one folder in your permanent email account called SCHOLARSHIPS and put every confirmation in it. When something goes missing in March, that folder is your proof." }
+];
+
+/* ================================================================
+   SECTION 03 — PATHWAYS
+   ================================================================ */
+
+const PATHWAYS = [
+  { key:"four", title:"Four-year university", fast:"4 years · apply Oct–Jan",
+    blurb:"A bachelor's degree on a campus. Highest lifetime earnings on average, highest cost, and the longest wait before you're earning.",
+    bullets:["Apply October through January of senior year","Complete FAFSA or WASFA when the correct form opens","UW, WSU, CWU, EWU, WWU, Heritage","Compare local, state, institutional, and national aid"] },
+  { key:"two", title:"Community college", fast:"2 years · apply anytime",
+    blurb:"Two years at YVC. Finish a career degree and go to work, or transfer into a bachelor's and pay half of what four years at a university costs.",
+    bullets:["Open enrollment — no admissions gamble","Check WA Grant instead of assuming your cost","A transfer degree can lead to a bachelor's","YVC Foundation welcomes incoming students, including undocumented students"] },
+  { key:"trades", title:"Trades & apprenticeships", fast:"1–5 years · you get paid",
+    blurb:"You earn a wage from the first week and finish with no tuition debt and a license somebody has to have.",
+    bullets:["Perry Tech, YVC, and union apprenticeships","Programs open on their own schedules — check monthly","WSOS Career & Technical Scholarship, 3 cycles a year","Journeyman wages beat a lot of bachelor's degrees"] },
+  { key:"military", title:"Military", fast:"4–6 year commitment",
+    blurb:"Enlisted service, ROTC, or a service academy. Training, a paycheck, health care, and the GI Bill for school afterward.",
+    bullets:["Take the ASVAB early — the score maps to civilian jobs too","GI Bill pays for school after you serve","Get every promise written into your contract","Never sign the same day you visit"] },
+  { key:"work", title:"Work & short certificates", fast:"Weeks to months",
+    blurb:"Straight into a job with a credential that raises your ceiling. The door most likely to be underestimated, and the easiest one to walk back through later.",
+    bullets:["WorkSource Yakima can pay for the certificate","CDL, forklift, health care aide, food safety, IT certs","Job Corps if you need housing too","Nothing here closes the other four doors"] }
+];
+
+const COMPARE = {
+  head:["Door","Time to first paycheck","What you'll pay","Typical WA starting pay","Best fit if…"],
+  rows:[
+    ["Four-year university","4+ years",
+     "<span class='fig'>$0–$14k/yr</span> after the WA College Grant and Pell, plus housing",
+     "<span class='fig'>$50k–$70k</span> depending heavily on the major",
+     "You want a career that legally requires a bachelor's — teaching, nursing (BSN), engineering, counseling — or you're chasing a full-ride award."],
+    ["Community college (YVC)","2 years, or work part-time now",
+     "<span class='fig'>Often $0</span> with the WA College Grant",
+     "<span class='fig'>$45k–$75k</span> for nursing, dental hygiene, IT, welding",
+     "You're not certain yet, money is tight, you want to stay home, or your GPA isn't where you want it — YVC resets that."],
+    ["Trades & apprenticeship","Week one",
+     "<span class='fig'>$0 tuition</span> — some tool and dues costs, often covered",
+     "<span class='fig'>$22–$35/hr</span> starting, more at journeyman",
+     "You'd rather be paid to learn than pay to learn, you like working with your hands, and you can pass a drug test and show up early."],
+    ["Military","Basic training",
+     "<span class='fig'>$0</span> — they pay you",
+     "<span class='fig'>Housing, food, health care</span> + GI Bill after",
+     "You want structure and time to decide, or you need a way out of your current situation that comes with a plan attached."],
+    ["Work + certificate","Weeks",
+     "<span class='fig'>$0–$3k</span>, often covered by WorkSource",
+     "<span class='fig'>$18–$28/hr</span> depending on the credential",
+     "You need income now — for your family or yourself. Start here and come back for more school when you're ready. People do this constantly."]
+  ]
+};
+
+const QUIZ = [
+  { q:"How soon do you need to be earning real money?",
+    opts:[ {t:"Right away — my family needs it", s:{work:3,trades:3,military:2,two:1,four:0}},
+           {t:"Within a year or two",            s:{trades:3,two:3,work:2,military:2,four:1}},
+           {t:"I can wait four years",           s:{four:3,two:2,military:1,trades:1,work:0}} ]},
+  { q:"How do you actually like to learn?",
+    opts:[ {t:"Hands on a thing, showing me once", s:{trades:3,work:2,two:2,military:2,four:0}},
+           {t:"Reading, writing, discussing",       s:{four:3,two:2,military:1,trades:0,work:0}},
+           {t:"Honestly, both",                     s:{two:3,trades:2,four:2,military:1,work:1}} ]},
+  { q:"How far from home do you want to be?",
+    opts:[ {t:"Staying in the valley",       s:{two:3,trades:3,work:3,four:1,military:0}},
+           {t:"Somewhere in Washington",     s:{four:3,two:2,trades:2,military:1,work:1}},
+           {t:"As far as I can get",         s:{military:3,four:3,trades:1,two:0,work:0}} ]},
+  { q:"What's your GPA doing right now?",
+    opts:[ {t:"Under 2.5",       s:{work:3,trades:3,two:3,military:2,four:0}},
+           {t:"2.5 to 3.2",      s:{two:3,trades:2,four:2,military:2,work:1}},
+           {t:"3.3 and up",      s:{four:3,two:2,military:2,trades:1,work:0}} ]}
+];
+
+const QUIZ_ADVICE = {
+  four:{ t:"Four-year university", next:["File the FAFSA or WASFA as soon as the correct 2027–28 form opens.","Apply to two or three schools by mid-November, including one you're confident about.","Use Pay for school to compare local, Washington, and national opportunities."] },
+  two:{ t:"Community college (YVC)", next:["Apply to YVC and compare transfer degrees with career programs.","Complete FAFSA or WASFA when the correct form opens and ask what WA Grant may cover.","Set a reminder for December 1: the YVC Foundation application normally opens and one form can match you with many awards."] },
+  trades:{ t:"Trades & apprenticeships", next:["Look at Perry Tech now — programs fill early and spring applicants often wait a year.","Check the L&I apprenticeship list the first Monday of every month; some windows are two weeks long.","Apply for the WSOS Career & Technical Scholarship — it runs three cycles a year and almost nobody in the trades applies."] },
+  military:{ t:"Military", next:["Take the ASVAB this year even if you're undecided — the score maps to civilian careers too.","Talk to more than one branch's recruiter, and bring a parent or trusted adult.","If you're also considering college, review ROTC and financial-aid deadlines in Pay for school."] },
+  work:{ t:"Work & short certificates", next:["Go to WorkSource Yakima. Youth programs there can pay for a certificate that raises your starting wage.","Look at Job Corps if you need housing and training together.","Keep the door open: YVC is open enrollment forever, and the WA College Grant doesn't expire when you graduate."] }
+};
+
+const LOCAL = [
+  { k:"10 minutes", h:"Heritage University", p:"Toppenish. A four-year degree without leaving town or paying for housing. Built around first-generation, Native, and Latino students, runs a CAMP program, and is a TheDream.US partner college.",
+    l:"https://heritage.edu/admissions/", ltext:"heritage.edu" },
+  { k:"25 minutes", h:"Yakima Valley College", p:"Yakima and Grandview campuses. Transfer degrees, nursing, dental hygiene, welding, IT, ag, criminal justice. Open enrollment, often free with the WA College Grant, and 150+ foundation scholarships open every December 1.",
+    l:"https://yvcc.edu/admissions/", ltext:"yvcc.edu" },
+  { k:"25 minutes", h:"Perry Technical Institute", p:"Yakima. Two-year hands-on programs in electrical, HVAC, machining, instrumentation, industrial maintenance, IT, and medical office. Strong placement, real waitlists — apply in the fall.",
+    l:"https://www.perrytech.edu/admissions/", ltext:"perrytech.edu" },
+  { k:"45 minutes", h:"Central Washington University", p:"Ellensburg. The closest four-year public. Takes a lot of Yakima Valley students and a lot of YVC transfers, and it's a fraction of the cost of living in Seattle.",
+    l:"https://www.cwu.edu/admissions/", ltext:"cwu.edu" },
+  { k:"90 minutes", h:"WSU Tri-Cities", p:"Richland. A full WSU degree close enough to come home on weekends, with strong engineering, ag, and nursing programs and a much smaller campus than Pullman.",
+    l:"https://tricities.wsu.edu/admissions/", ltext:"tricities.wsu.edu" },
+  { k:"In town", h:"WorkSource & apprenticeships", p:"WorkSource Yakima for job placement and certificate funding; L&I's apprenticeship list for paid training in construction, electrical, manufacturing, and ag equipment. Both free, both year-round.",
+    l:"https://lni.wa.gov/licensing-permits/apprenticeship/become-an-apprentice", ltext:"lni.wa.gov" }
+];
+
+/* ================================================================
+   SECTION 04 — TIMELINE
+   ================================================================ */
+const TIMELINE = [
+  { m:"Aug", h:"Set up the two things everything else runs through",
+    p:"Make an email address you'll still have in five years — not your school account, that gets shut off after graduation. Then fill in the story bank in Section 02. Coca-Cola Scholars is already open and closes September 30." },
+  { m:"Sep", h:"Ask for letters. Send the first big application.",
+    p:"Ask two adults in person, this month, with a packet. The Gates Scholarship closes September 15 and Coca-Cola closes September 30 at 2 p.m. our time. Build your theWashBoard.org profile while you're at it." },
+  { m:"Oct", h:"The most important month of the year",
+    p:"Complete the correct 2027–28 FAFSA or WASFA as soon as it is available. QuestBridge closes October 1 and other major applications follow. Start college applications now, not in November." },
+  { m:"Nov", h:"Applications close",
+    p:"UW is November 15 with no early action. Elks MVS and Jack Kent Cooke close this month. HSF and TheDream.US open. If you're doing ROTC, the boards are filling." },
+  { m:"Dec", h:"Two opens and one close",
+    p:"Dell Scholars closes December 1 — the same day the YVC Foundation application opens and QuestBridge announces matches. Over winter break, apply to YVC or Perry Tech if you haven't." },
+  { m:"Jan", h:"The local season starts",
+    p:"WSOS opens January 8. WSU's scholarship priority date is January 31. Go ask the counseling office for the local scholarship list again — new ones show up now that weren't there in September." },
+  { m:"Feb", h:"The biggest month for money you can actually win",
+    p:"WSOS closes February 26 and the YVC Foundation closes February 28. HSF and TheDream.US close. Local club applications are open. Apply to four small ones this month." },
+  { m:"Mar", h:"Ag and local deadlines",
+    p:"The Washington Apple Education Foundation closes around March 1 — if anyone in your household works in fruit, do not miss this one. LULAC and most service club deadlines land now too." },
+  { m:"Apr", h:"Award letters arrive. Read them carefully.",
+    p:"Yakima Federal closes late April. Financial aid offers come in — compare the actual out-of-pocket cost, not the sticker price, and count grants separately from loans. Bring the letters to a counselor if they don't make sense." },
+  { m:"May", h:"Commit, and say thank you",
+    p:"May 1 is national decision day for most four-year colleges. American Indian College Fund priority is May 31. Write to every adult who wrote you a letter and tell them what happened — they want to know." },
+  { m:"Jun", h:"Close the loop",
+    p:"College Bound is June 30. Send your final transcript. Sign up for summer bridge or orientation if your school offers one — students who go are far more likely to still be enrolled at Christmas." }
+];
+
+const STEPS = [
+  { b:"Make an email address you'll still have in five years",
+    s:"Not your school account — that gets shut off after graduation, and colleges and scholarship committees will email that address for years. Use your real name in it." },
+  { b:"Ask two adults for letters in September",
+    s:"A teacher who's seen you work, and one adult who isn't family. Give them a month and a packet, not a week and a text." },
+  { b:"Complete FAFSA or WASFA when the correct form opens",
+    s:"Financial-aid applications can unlock federal, state, and school aid. Follow the current official instructions; contributor and tax-information requirements can change." },
+  { b:"Write one personal statement and reuse it",
+    s:"About 600 words on something real that happened and what you did about it. Nearly every application here wants a version of it. Section 02 walks you through it." },
+  { b:"Apply for the small local ones too",
+    s:"A $1,000 Rotary award with 12 applicants is worth more of your time than a $40,000 national award with 40,000. Do both. Don't skip the local ones." },
+  { b:"Check this page the first Monday of every month",
+    s:"Deadlines move and new things open. Ten minutes a month is the entire discipline." }
+];
+
+/* ================================================================
+   EDIT ABOVE THIS LINE — the machinery starts here
+   ================================================================ */
+
+const FITS = [
+  {key:"everyone",   label:"Open to most students"},
+  {key:"local",      label:"Washington / local"},
+  {key:"ag",         label:"Farmworker / agriculture"},
+  {key:"tribal",     label:"Indigenous"},
+  {key:"lowincome",  label:"Financial need"},
+  {key:"firstgen",   label:"First generation"},
+  {key:"disability", label:"Disability"},
+  {key:"lgbtq",      label:"LGBTQ+"},
+  {key:"leadership", label:"Leadership / service"}
+];
+
+const EFFORT = {
+  low:  {cls:"eff-low",  label:"quick · under an hour"},
+  mid:  {cls:"eff-mid",  label:"medium · a few hours"},
+  high: {cls:"eff-high", label:"big · essays + letters"}
+};
+
+const MS_DAY = 86400000;
+const today = (() => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+let calendarView = new Date(today.getFullYear(), today.getMonth(), 1);
+let calendarSelected = null;
+
+/* ---------- tiny persistent store, safe everywhere ---------- */
+const Store = (() => {
+  let mem = {};
+  let ok = false;
+  try { window.localStorage.setItem("__t","1"); window.localStorage.removeItem("__t"); ok = true; } catch(e){ ok = false; }
+  const KEY = "thsNextSteps";
+  function all(){
+    if(!ok) return mem;
+    try { return JSON.parse(window.localStorage.getItem(KEY) || "{}"); } catch(e){ return {}; }
+  }
+  function save(o){
+    if(!ok){ mem = o; return; }
+    try { window.localStorage.setItem(KEY, JSON.stringify(o)); } catch(e){ mem = o; }
+  }
+  return {
+    get(k, dflt){ const v = all()[k]; return v === undefined ? dflt : v; },
+    set(k, v){ const o = all(); o[k] = v; save(o); },
+    supported: ok
+  };
+})();
+
+let saved   = Store.get("saved", {});
+let doneChk = Store.get("checks", {});
+let bank    = Store.get("bank", {});
+
+function persistSaved(){ Store.set("saved", saved); }
+
+/* ---------- dates ---------- */
+function parseDate(s){ if(!s) return null; const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); }
+function daysUntil(s){ const d = parseDate(s); return d ? Math.round((d - today) / MS_DAY) : null; }
+function fmt(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"long", day:"numeric", year:"numeric"}) : ""; }
+function monthKey(s){ const d = parseDate(s); return d ? d.getFullYear()*100 + d.getMonth() : 999999; }
+function monthLabel(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"long", year:"numeric"}) : "No fixed deadline"; }
+function monthYearLabel(s){ const d = parseDate(s); return d ? d.toLocaleDateString("en-US",{month:"short", year:"numeric"}) : "Check date"; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function idOf(item){ return item.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
+
+function effDate(item){
+  if(item.due) return item.due;
+  if(item.opens && daysUntil(item.opens) > 0) return item.opens;
+  return null;
+}
+
+function statusOf(item){
+  if(item.kind === "action") return {cls:"rolling", n:"Start here", unit:"", order:-2};
+  if(item.planning){
+    const label = item.openLabel || monthYearLabel(item.opens);
+    return {cls:"planning", n:label, unit:item.openLabel ? "annual opening" : "estimated opening", order:2};
+  }
+  if(item.opens && daysUntil(item.opens) > 0){
+    const o = daysUntil(item.opens);
+    return {cls:"soon", n:o, unit:o===1?"day to open":"days to open", order:0, days:o};
+  }
+  if(!item.due){
+    return {cls:"rolling", n:"Open", unit:"", order:1};
+  }
+  const n = daysUntil(item.due);
+  if(n < 0)   return {cls:"closed", n:"Closed", unit:"", order:3, days:n};
+  if(n <= 14) return {cls:"urgent", n:n, unit:n===1?"day left":"days left", order:0, days:n};
+  if(n <= 45) return {cls:"soon",   n:n, unit:"days left", order:0, days:n};
+  return {cls:"open", n:n, unit:"days left", order:0, days:n};
+}
+
+/* Expected scholarships use the next matching month/day from the prior cycle.
+   The opening estimate is for ordering and planning only—not a confirmed date. */
+function nextCycleDate(lastDate){
+  const prior = parseDate(lastDate);
+  if(!prior) return null;
+  let next = new Date(today.getFullYear(), prior.getMonth(), prior.getDate());
+  if(next <= today) next = new Date(today.getFullYear()+1, prior.getMonth(), prior.getDate());
+  return next;
+}
+function isoDate(date){
+  return date.getFullYear()+"-"+String(date.getMonth()+1).padStart(2,"0")+"-"+String(date.getDate()).padStart(2,"0");
+}
+function predictedOpenDate(item){
+  const deadline = nextCycleDate(item.lastYearDeadline);
+  if(!deadline) return null;
+  const open = new Date(deadline);
+  open.setDate(open.getDate() - 60);
+  return isoDate(open);
+}
+
+let activeFits   = new Set();
+let query = "";
+let mineOnly = false;
+
+/* ---------- toast ---------- */
+let toastTimer;
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2400);
+}
+
+/* ---------- tabs ---------- */
+const PANELS = ["start","pathways","requirements","deadlines","writing"];
+function showPanel(name, push){
+  if(name === "scholarships"){
+    window.location.href = "scholarships.html";
+    return;
+  }
+  if(!PANELS.includes(name)) name = "start";
+  PANELS.forEach(p => {
+    document.getElementById("panel-"+p).hidden = (p !== name);
+    document.getElementById("tab-"+p).setAttribute("aria-selected", String(p === name));
+  });
+  if(push && window.history && history.replaceState) history.replaceState(null,"","#"+name);
+  window.scrollTo(0,0);
+}
+document.querySelectorAll(".tab[data-panel]").forEach(b => {
+  b.addEventListener("click", () => showPanel(b.dataset.panel, true));
+});
+window.addEventListener("hashchange", () => showPanel(location.hash.replace("#",""), false));
+
+function jumpTo(target){
+  if(target === "scholarships"){
+    window.location.href = "scholarships.html";
+    return;
+  }
+  if(target === "help"){
+    showPanel("start", true);
+    requestAnimationFrame(() => document.getElementById("help-center").scrollIntoView({behavior:"smooth",block:"start"}));
+    return;
+  }
+  if(target === "familias"){
+    window.location.href = "scholarships.html#families";
+    return;
+  }
+  showPanel(target, true);
+}
+document.querySelectorAll("[data-jump]").forEach(el => el.addEventListener("click", e => {e.preventDefault();jumpTo(el.dataset.jump);}));
+document.querySelectorAll("[data-scroll]").forEach(el => el.addEventListener("click", () => document.getElementById(el.dataset.scroll).scrollIntoView({behavior:"smooth",block:"start"})));
+
+/* ---------- chips ---------- */
+function buildChips(){
+  const fitBox = document.getElementById("fitchips");
+  FITS.forEach(f => {
+    const b = document.createElement("button");
+    b.className = "chip fit"; b.type = "button"; b.textContent = f.label;
+    b.setAttribute("aria-pressed","false");
+    b.addEventListener("click", () => {
+      if(activeFits.has(f.key)){ activeFits.delete(f.key); b.setAttribute("aria-pressed","false"); }
+      else { activeFits.add(f.key); b.setAttribute("aria-pressed","true"); }
+      render();
+    });
+    fitBox.appendChild(b);
+  });
+}
+
+/* ---------- calendar export ---------- */
+function icsEventFor(item){
+  const d = item.due; if(!d) return "";
+  const stamp = d.replace(/-/g,"");
+  const end = (() => { const x = parseDate(d); x.setDate(x.getDate()+1);
+    return x.getFullYear() + String(x.getMonth()+1).padStart(2,"0") + String(x.getDate()).padStart(2,"0"); })();
+  const wrap = s => String(s).replace(/[\\;,]/g, m => "\\"+m).replace(/\n/g,"\\n");
+  return [
+    "BEGIN:VEVENT",
+    "UID:" + idOf(item) + "-" + (item.calendarKind || "deadline") + "@ths-nextsteps",
+    "DTSTAMP:" + stamp + "T090000Z",
+    "DTSTART;VALUE=DATE:" + stamp,
+    "DTEND;VALUE=DATE:" + end,
+    "SUMMARY:" + wrap((item.calendarKind === "opens" ? "APPLICATION OPENS: " : "DEADLINE: ") + item.name),
+    "DESCRIPTION:" + wrap((item.amount && item.amount !== "—" ? item.amount + "\n" : "") + item.who + "\n\n" + item.link),
+    "URL:" + item.link,
+    "BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.calendarKind === "opens" ? item.name + " opens in one week" : item.name + " closes in one week"),"END:VALARM",
+    "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:" + wrap(item.calendarKind === "opens" ? item.name + " opens tomorrow" : item.name + " closes tomorrow"),"END:VALARM",
+    "END:VEVENT"
+  ].join("\r\n");
+}
+function icsForItems(items){
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//THS Advisory//Next Steps//EN","CALSCALE:GREGORIAN",
+    items.map(icsEventFor).filter(Boolean).join("\r\n"),"END:VCALENDAR"].join("\r\n");
+}
+function icsFor(item){ return item && item.due ? icsForItems([item]) : null; }
+function download(filename, text, mime){
+  const blob = new Blob([text], {type: mime || "text/plain;charset=utf-8"});
+  const url  = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = filename; document.body.appendChild(a); a.click();
+  document.body.removeChild(a); setTimeout(() => URL.revokeObjectURL(url), 1500);
+}
+function copyText(text){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(() => toast("Copied."), () => fallbackCopy(text));
+  } else fallbackCopy(text);
+}
+function fallbackCopy(text){
+  const ta = document.createElement("textarea");
+  ta.value = text; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.left = "-9999px";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); toast("Copied."); } catch(e){ toast("Select the text and copy it manually."); }
+  document.body.removeChild(ta);
+}
+
+/* ---------- card ---------- */
+function cardFor(item){
+  const st  = statusOf(item);
+  const id  = idOf(item);
+  const el  = document.createElement("article");
+  const isSaved = !!saved[id];
+  el.className = "card " + st.cls + (isSaved ? " done" : "");
+
+  const bigNumber = typeof st.n === "number"
+    ? `<b>${st.n}</b><small>${st.unit}</small>`
+    : `<b>${st.n}</b>`;
+
+  let dueLine;
+  if(item.planning){
+    dueLine = item.pastDue
+      ? `Prior-cycle deadline <strong>${fmt(item.pastDue)}</strong> — planning only; the new date is not guaranteed`
+      : esc(item.window || "New cycle not released yet — check the official page");
+  } else if(item.due){
+    dueLine = st.cls === "closed"
+      ? `Closed ${fmt(item.due)} — check the site for the next cycle`
+      : `Due <strong>${fmt(item.due)}</strong>`;
+    if(item.window && st.cls !== "closed") dueLine += ` · ${esc(item.window)}`;
+  } else {
+    dueLine = esc(item.window || "No fixed deadline");
+  }
+  if(item.opens && daysUntil(item.opens) > 0){
+    dueLine = `<span class="warn">${item.planning ? "Estimated opening" : "Opens"} ${fmt(item.opens)}</span> · ${dueLine}`;
+  }
+
+  const fitPills = (item.fit || []).filter(f => f !== "everyone").map(f => {
+    const meta = FITS.find(x => x.key === f);
+    return meta ? `<span class="tagpill fit">${esc(meta.label)}</span>` : "";
+  }).join("");
+  const eff = EFFORT[item.effort];
+  const effPill = eff ? `<span class="tagpill ${eff.cls}">${eff.label}</span>` : "";
+  const opportunity = item.kind === "action" ? "Essential step"
+    : item.kind === "local" ? "Best bet · close to home"
+    : item.effort === "low" ? "Easy win to try"
+    : ((item.fit||[]).includes("local") ? "Worth a shot" : "Reach · competitive");
+  const prep = item.needs || (item.effort === "high"
+    ? "Plan for essays, a transcript, and possible recommendations—confirm the current checklist first."
+    : item.effort === "mid"
+      ? "Open the official page and list every document before you begin."
+      : "Usually a shorter application; confirm the sponsor's current rules.");
+
+  el.innerHTML = `
+    <div class="head">
+      <div>
+        <h3 class="name">${esc(item.name)}</h3>
+        <div class="org">${esc(item.org)}</div>
+      </div>
+      <div class="days">${bigNumber}</div>
+    </div>
+    ${item.amount && item.amount !== "—" ? `<div class="amount">${esc(item.amount)}</div>` : ""}
+    <div class="meta"><span class="tagpill fit">${esc(opportunity)}</span></div>
+    <div class="who">${esc(item.who)}</div>
+    ${item.note ? `<div class="who note">${esc(item.note)}</div>` : ""}
+    <div class="who note"><strong>What you'll need:</strong> ${esc(prep)}</div>
+    <div class="meta">${effPill}${fitPills}</div>
+    ${item.confirm ? `<div class="flag">planning only · based on 2025–26 or the most recent official cycle · not guaranteed</div>` : ""}
+    <div class="due">${dueLine}<br>
+      <a class="go" href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page &rarr;</a>
+      ${item.lastChecked ? `<br><small>Official source checked ${esc(fmt(item.lastChecked))}</small>` : ""}
+    </div>
+    <div class="cardtools">
+      <label class="track"><input type="checkbox" ${isSaved ? "checked" : ""} data-save="${id}"> On my list</label>
+      ${item.due && st.cls !== "closed" ? `<button class="mini" type="button" data-ics="${id}">Add to calendar</button>` : ""}
+    </div>`;
+
+  el.querySelector("[data-save]").addEventListener("change", e => {
+    if(e.target.checked){ saved[id] = true; toast("Added to your list."); }
+    else { delete saved[id]; }
+    persistSaved(); render(); renderCalendar();
+  });
+  const icsBtn = el.querySelector("[data-ics]");
+  if(icsBtn) icsBtn.addEventListener("click", () => {
+    download(id + ".ics", icsFor(item), "text/calendar;charset=utf-8");
+    toast("Downloaded — open it to add the reminder.");
+  });
+  return el;
+}
+
+/* ---------- render board ---------- */
+function render(){
+  const out = document.getElementById("results");
+  out.innerHTML = "";
+
+  let items = DEADLINES.filter(it => {
+    if(it.kind === "action" || it.kind === "deadline") return false;
+    const id = idOf(it);
+    if(mineOnly && !saved[id]) return false;
+    if(activeFits.size){
+      const f = it.fit || [];
+      if(![...activeFits].every(k => f.includes(k))) return false;
+    }
+    if(query){
+      const hay = [it.name, it.org, it.who, it.note, it.amount, it.window, (it.fit||[]).join(" ")].join(" ").toLowerCase();
+      if(!hay.includes(query)) return false;
+    }
+    return true;
+  });
+
+  document.getElementById("empty").hidden = items.length > 0;
+
+  function scholarshipRank(item){
+    const st = statusOf(item);
+    if(st.cls === "closed") return 3;
+    if(!item.planning && !(item.opens && daysUntil(item.opens) > 0)) return 0;
+    if(!item.planning) return 1;
+    return 2;
+  }
+  function scholarshipDate(item){
+    if(scholarshipRank(item) === 0) return item.due || "9999-12-31";
+    return item.opens || item.due || "9999-12-31";
+  }
+  items.sort((a,b) => {
+    const rank = scholarshipRank(a) - scholarshipRank(b);
+    if(rank) return rank;
+    const da = parseDate(scholarshipDate(a)), db = parseDate(scholarshipDate(b));
+    if(da && db && da - db) return da - db;
+    return String(a.name).localeCompare(String(b.name));
+  });
+
+  const grid = document.createElement("div");
+  grid.className = "grid";
+  items.forEach(it => grid.appendChild(cardFor(it)));
+  out.appendChild(grid);
+}
+
+/* ---------- confirmed deadline calendar ---------- */
+function confirmedCalendarItems(){
+  const events = [];
+  DEADLINES.filter(it => !it.planning).forEach(item => {
+    if(item.opens && parseDate(item.opens)) events.push({...item, due:item.opens, calendarKind:"opens"});
+    if(item.due && parseDate(item.due)) events.push({...item, calendarKind:item.calendarKind || "due"});
+  });
+  return events.sort((a,b) => parseDate(a.due) - parseDate(b.due) || (a.priority || 999) - (b.priority || 999));
+}
+function calendarEventLabel(item){
+  return item.calendarKind === "opens" ? "Applications open"
+    : item.calendarKind === "due" ? "Deadline" : "Important date";
+}
+function dateKey(d){
+  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+}
+function calendarMonthKey(year, month){ return year + "-" + String(month+1).padStart(2,"0"); }
+function renderCalendarDetails(key, byDate){
+  const box = document.getElementById("calendar-details");
+  if(!box) return;
+  const items = key ? (byDate.get(key) || []) : [];
+  box.className = "calendar-details" + (items.length ? "" : " empty");
+  if(!key){
+    box.textContent = "No confirmed date is listed in this month. Use the arrows to check another month.";
+    return;
+  }
+  if(!items.length){
+    box.textContent = "No confirmed date on " + fmt(key) + ". Tap a marked day to see what is due.";
+    return;
+  }
+  box.innerHTML = `<h3>Important date · ${esc(fmt(key))}</h3>` + items.map(item => `
+    <div class="calendar-event">
+      <time datetime="${esc(item.due)}">${esc(calendarEventLabel(item))}</time>
+      <strong>${esc(calendarEventLabel(item))}: ${esc(item.name)}</strong>
+      <span>${esc(item.org || "Scholarship or program deadline")}${item.amount ? " · " + esc(item.amount) : ""}</span>
+      <a href="${esc(item.link)}" target="_blank" rel="noopener">Open the official page →</a>
+    </div>`).join("");
+}
+function renderCalendar(){
+  const grid = document.getElementById("calendar-grid");
+  if(!grid) return;
+  const all = confirmedCalendarItems();
+  const open = document.getElementById("calendar-toggle")?.getAttribute("aria-expanded") === "true";
+  const next = all.find(item => daysUntil(item.due) >= 0);
+  const byDate = new Map();
+  all.forEach(item => {
+    if(!byDate.has(item.due)) byDate.set(item.due, []);
+    byDate.get(item.due).push(item);
+  });
+  const year = calendarView.getFullYear();
+  const month = calendarView.getMonth();
+  const first = new Date(year, month, 1);
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const viewMonth = calendarMonthKey(year, month);
+  const monthItems = all.filter(item => item.due.startsWith(viewMonth));
+  const monthTitle = first.toLocaleDateString("en-US",{month:"long",year:"numeric"});
+  const kicker = document.getElementById("calendar-kicker");
+  if(open){
+    kicker.textContent = "Important dates for seniors";
+    document.getElementById("calendar-title").textContent = monthTitle;
+    document.getElementById("calendar-summary").textContent = monthItems.length
+      ? `${monthItems.length} confirmed date${monthItems.length === 1 ? "" : "s"} this month. Tap a marked day for details.`
+      : "No confirmed dates are listed this month. Use the arrows to check another month.";
+  } else {
+    kicker.textContent = next ? "Next important senior date" : "Important dates for seniors";
+    document.getElementById("calendar-title").textContent = next ? `${calendarEventLabel(next)}: ${next.name}` : "No upcoming confirmed dates";
+    document.getElementById("calendar-summary").textContent = next
+      ? `${next.calendarKind === "opens" ? "Opens" : "Due"} ${fmt(next.due)} · ${next.org || "official sponsor"}`
+      : "Check the full calendar for past dates or wait for a new confirmed date to be posted.";
+  }
+  document.getElementById("calendar-count").textContent = `${all.length} confirmed date${all.length === 1 ? "" : "s"} in the full calendar`;
+
+  let selected = calendarSelected;
+  if(!selected || !selected.startsWith(viewMonth)) selected = monthItems[0] ? monthItems[0].due : null;
+  calendarSelected = selected;
+  grid.innerHTML = "";
+  for(let i=0; i<first.getDay(); i++){
+    const blank = document.createElement("span"); blank.className = "calendar-blank"; blank.setAttribute("aria-hidden","true"); grid.appendChild(blank);
+  }
+  for(let day=1; day<=daysInMonth; day++){
+    const current = new Date(year, month, day);
+    const key = dateKey(current);
+    const dayItems = byDate.get(key) || [];
+    const button = document.createElement("button");
+    button.type = "button"; button.className = "calendar-day"; button.setAttribute("role","gridcell");
+    button.setAttribute("aria-selected", String(key === selected));
+    button.setAttribute("aria-label", fmt(key) + (dayItems.length ? `, ${dayItems.length} confirmed date${dayItems.length === 1 ? "" : "s"}` : ""));
+    if(key === dateKey(today)) button.classList.add("today");
+    if(dayItems.length){ button.classList.add("has-deadline"); button.title = dayItems.map(item => item.name).join("; "); }
+    if(current < today) button.classList.add("past");
+    button.innerHTML = `<strong>${day}</strong>`;
+    button.addEventListener("click", () => { calendarSelected = key; renderCalendar(); });
+    grid.appendChild(button);
+  }
+  renderCalendarDetails(selected, byDate);
+}
+function initCalendar(){
+  const calendar = document.getElementById("deadline-calendar");
+  const toggle = document.getElementById("calendar-toggle");
+  const body = document.getElementById("calendar-body");
+  toggle.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.textContent = open ? "Close calendar" : "Open calendar";
+    body.hidden = !open;
+    calendar.classList.toggle("calendar-open", open);
+    renderCalendar();
+  });
+  document.getElementById("cal-prev").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()-1); calendarSelected = null; renderCalendar(); });
+  document.getElementById("cal-next").addEventListener("click", () => { calendarView.setMonth(calendarView.getMonth()+1); calendarSelected = null; renderCalendar(); });
+  document.getElementById("cal-today").addEventListener("click", () => { calendarView = new Date(today.getFullYear(), today.getMonth(), 1); calendarSelected = null; renderCalendar(); });
+  document.getElementById("download-confirmed-ics").addEventListener("click", () => {
+    const items = confirmedCalendarItems();
+    if(!items.length) return toast("There are no confirmed fixed-date deadlines yet.");
+    download("ths-confirmed-deadlines.ics", icsForItems(items), "text/calendar;charset=utf-8");
+    toast("Downloaded — open it to add the confirmed deadlines.");
+  });
+}
+
+/* ================================================================
+   SECTION 02 RENDERERS
+   ================================================================ */
+function renderBuilder(){
+  const mount = document.getElementById("builder-mount");
+  const box = document.createElement("div");
+  box.className = "builder";
+  box.innerHTML = `
+    <p class="eyebrow" style="margin-bottom:12px">Story bank builder</p>
+    <p style="color:var(--muted);font-size:15.5px">Answer in fragments. Nobody reads this but you — and later, the
+      adult writing your recommendation letter. Everything you type stays on this device and is never sent anywhere.</p>
+    ${BANK.map(f => `
+      <div class="bfield">
+        <label for="b-${f.id}">${esc(f.label)}</label>
+        <div class="hint">${esc(f.hint)}</div>
+        <textarea id="b-${f.id}" data-bank="${f.id}" rows="2"></textarea>
+      </div>`).join("")}
+    <p class="eyebrow" style="margin:18px 0 8px">Your sheet</p>
+    <div class="bout" id="bank-out"></div>
+    <div class="brow">
+      <button class="btn" type="button" id="bank-copy">Copy my sheet</button>
+      <button class="btn ghost" type="button" id="bank-dl">Download as a file</button>
+      <button class="btn ghost" type="button" id="bank-clear">Clear</button>
+    </div>`;
+  mount.appendChild(box);
+
+  const out = box.querySelector("#bank-out");
+  function build(){
+    const lines = [];
+    BANK.forEach(f => {
+      const v = (bank[f.id] || "").trim();
+      if(v) lines.push(f.lead + "\n" + v);
+    });
+    out.textContent = lines.length ? "MY STORY BANK\n\n" + lines.join("\n\n") : "";
+  }
+  box.querySelectorAll("[data-bank]").forEach(ta => {
+    ta.value = bank[ta.dataset.bank] || "";
+    ta.addEventListener("input", () => {
+      bank[ta.dataset.bank] = ta.value;
+      Store.set("bank", bank);
+      build();
+    });
+  });
+  box.querySelector("#bank-copy").addEventListener("click", () => {
+    if(!out.textContent) return toast("Fill in at least one box first.");
+    copyText(out.textContent);
+  });
+  box.querySelector("#bank-dl").addEventListener("click", () => {
+    if(!out.textContent) return toast("Fill in at least one box first.");
+    download("my-story-bank.txt", out.textContent);
+    toast("Downloaded.");
+  });
+  box.querySelector("#bank-clear").addEventListener("click", () => {
+    if(!confirm("Erase everything you've typed in the story bank?")) return;
+    bank = {}; Store.set("bank", bank);
+    box.querySelectorAll("[data-bank]").forEach(t => t.value = "");
+    build();
+  });
+  build();
+}
+
+function renderStructure(){
+  const m = document.getElementById("structure-mount");
+  const wrap = document.createElement("div");
+  wrap.innerHTML = STRUCTURE.map((s,i) => `
+    <details class="acc"${i===0?" open":""}>
+      <summary><span>${i+1}. ${esc(s.move)}</span><span class="tagpill" style="margin-left:auto">${esc(s.words)}</span></summary>
+      <div class="acc-body">
+        <p>${s.what}</p>
+        <div class="decode"><strong>Self-test:</strong> ${s.test}</div>
+      </div>
+    </details>`).join("");
+
+  const draft = document.createElement("div");
+  draft.className = "builder";
+  draft.innerHTML = `
+    <p class="eyebrow" style="margin-bottom:10px">Draft space</p>
+    <p style="color:var(--muted);font-size:15.5px">Write it here to see the word count move, then paste it into a
+      real document. This box saves to your device but it is not a backup — keep the real draft in Google Docs.</p>
+    <div class="bfield" style="margin-bottom:8px">
+      <label class="sr" for="draft">Your draft</label>
+      <textarea id="draft" rows="10" placeholder="Open inside a moment. A specific day, a specific place, something happening."></textarea>
+    </div>
+    <div class="brow">
+      <button class="btn ghost" type="button" id="draft-copy">Copy draft</button>
+      <span class="counter" id="wc"><b>0</b> words · aim for 500–600</span>
+    </div>`;
+  wrap.appendChild(draft);
+  m.appendChild(wrap);
+
+  const ta = draft.querySelector("#draft");
+  const wc = draft.querySelector("#wc");
+  ta.value = Store.get("draft","");
+  function count(){
+    const n = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
+    wc.innerHTML = `<b>${n}</b> words · aim for 500–600`;
+    wc.className = "counter" + (n > 650 ? " over" : (n >= 450 ? " good" : ""));
+  }
+  ta.addEventListener("input", () => { Store.set("draft", ta.value); count(); });
+  draft.querySelector("#draft-copy").addEventListener("click", () => {
+    if(!ta.value.trim()) return toast("Nothing to copy yet.");
+    copyText(ta.value);
+  });
+  count();
+}
+
+function renderPrompts(){
+  const m = document.getElementById("prompts-mount");
+  m.innerHTML = PROMPTS.map(p => `
+    <details class="acc">
+      <summary>${esc(p.q)}</summary>
+      <div class="acc-body">
+        <div class="decode"><strong>What they're actually scoring:</strong> ${p.real}</div>
+        <p>${p.body}</p>
+        <p style="color:var(--crimson);font-weight:600;margin-bottom:0">${p.dont}</p>
+      </div>
+    </details>`).join("");
+}
+
+function renderExamples(){
+  const m = document.getElementById("examples-mount");
+  m.innerHTML = EXAMPLES.map((e,i) => `
+    <details class="acc"${i===0?" open":""}>
+      <summary>${esc(e.title)}</summary>
+      <div class="acc-body">
+        <div class="ba">
+          <div class="weak"><span class="lab">Weak</span>${esc(e.weak)}</div>
+          <div class="strong"><span class="lab">Strong</span>${esc(e.strong)}</div>
+        </div>
+        <p style="margin-bottom:0;color:var(--muted);font-size:15px"><strong style="color:var(--ink)">Why:</strong> ${esc(e.why)}</p>
+      </div>
+    </details>`).join("");
+}
+
+function renderRecs(){
+  const m = document.getElementById("recs-mount");
+  const cards = document.createElement("div");
+  cards.className = "wcards";
+  cards.innerHTML = RECS.map((r,i) => `
+    <div class="wcard">
+      <div class="kicker">Step ${i+1}</div>
+      <h4>${esc(r.h)}</h4>
+      <p>${esc(r.p)}</p>
+    </div>`).join("");
+  m.appendChild(cards);
+
+  const mail = document.createElement("div");
+  mail.className = "builder";
+  mail.style.marginTop = "16px";
+  mail.innerHTML = `
+    <p class="eyebrow" style="margin-bottom:10px">The email to send the same day you ask</p>
+    <div class="bout" id="recmail"></div>
+    <div class="brow"><button class="btn" type="button" id="rec-copy">Copy this email</button></div>`;
+  m.appendChild(mail);
+  mail.querySelector("#recmail").textContent = RECMAIL;
+  mail.querySelector("#rec-copy").addEventListener("click", () => copyText(RECMAIL));
+}
+
+function renderChecklist(mountId, list, storeKey){
+  const ul = document.getElementById(mountId);
+  list.forEach((c,i) => {
+    const key = storeKey + "-" + i;
+    const li = document.createElement("li");
+    const on = !!doneChk[key];
+    li.innerHTML = `<input type="checkbox" id="${key}" ${on ? "checked" : ""}>
+      <label for="${key}"><b>${esc(c.b)}</b><span>${esc(c.s)}</span></label>`;
+    li.querySelector("input").addEventListener("change", e => {
+      if(e.target.checked) doneChk[key] = true; else delete doneChk[key];
+      Store.set("checks", doneChk);
+    });
+    ul.appendChild(li);
+  });
+}
+
+/* ================================================================
+   SECTION 03 RENDERERS
+   ================================================================ */
+function renderPaths(){
+  const box = document.getElementById("paths");
+  PATHWAYS.forEach(p => {
+    const d = document.createElement("div");
+    d.className = "path";
+    d.innerHTML = `<h4>${esc(p.title)}</h4><p class="fast">${esc(p.fast)}</p><p>${esc(p.blurb)}</p>
+                   <ul>${p.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>`;
+    box.appendChild(d);
+  });
+}
+
+function renderCompare(){
+  const m = document.getElementById("cmp-mount");
+  m.innerHTML = `<table class="cmp">
+    <thead><tr>${COMPARE.head.map(h => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead>
+    <tbody>${COMPARE.rows.map(r => `<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody>
+  </table>`;
+}
+
+function renderQuiz(){
+  const box = document.getElementById("quiz");
+  const answers = new Array(QUIZ.length).fill(null);
+  box.innerHTML = QUIZ.map((q,qi) => `
+    <div class="qblock">
+      <p class="q">${qi+1}. ${esc(q.q)}</p>
+      <div class="opts" role="group" aria-label="${esc(q.q)}">
+        ${q.opts.map((o,oi) => `<button class="opt" type="button" data-q="${qi}" data-o="${oi}" aria-pressed="false">${esc(o.t)}</button>`).join("")}
+      </div>
+    </div>`).join("") + `<div id="qres"></div>`;
+
+  const res = box.querySelector("#qres");
+  box.querySelectorAll(".opt").forEach(b => {
+    b.addEventListener("click", () => {
+      const qi = +b.dataset.q;
+      box.querySelectorAll(`.opt[data-q="${qi}"]`).forEach(x => x.setAttribute("aria-pressed","false"));
+      b.setAttribute("aria-pressed","true");
+      answers[qi] = +b.dataset.o;
+      score();
+    });
+  });
+
+  function score(){
+    if(answers.some(a => a === null)){
+      res.innerHTML = `<p style="color:var(--muted);font-size:15px;margin:0">Answer all four and two doors will come up here.</p>`;
+      return;
+    }
+    const tot = {four:0,two:0,trades:0,military:0,work:0};
+    answers.forEach((a,qi) => {
+      const s = QUIZ[qi].opts[a].s;
+      Object.keys(s).forEach(k => tot[k] += s[k]);
+    });
+    const top = Object.keys(tot).sort((a,b) => tot[b] - tot[a]).slice(0,2);
+    res.innerHTML = top.map((k,i) => {
+      const a = QUIZ_ADVICE[k];
+      return `<div class="qresult">
+        <p class="eyebrow" style="margin-bottom:4px">${i === 0 ? "Start researching this one" : "And look hard at this one too"}</p>
+        <h4>${esc(a.t)}</h4>
+        <ol>${a.next.map(n => `<li>${esc(n)}</li>`).join("")}</ol>
+      </div>`;
+    }).join("") + `<p style="font-size:14.5px;color:var(--muted);margin:12px 0 0">This is a starting point, not a verdict.
+      Plenty of people here start at YVC and finish at a university, or work two years and come back. None of these doors locks behind you.</p>`;
+  }
+  score();
+}
+
+function renderLocal(){
+  const m = document.getElementById("local-mount");
+  m.innerHTML = LOCAL.map(l => `
+    <div class="wcard">
+      <div class="kicker">${esc(l.k)} away</div>
+      <h4>${esc(l.h)}</h4>
+      <p>${esc(l.p)}</p>
+      <a href="${esc(l.l)}" target="_blank" rel="noopener" style="font-family:'DM Mono',monospace;font-size:13px">${esc(l.ltext)} &rarr;</a>
+    </div>`).join("");
+}
+
+/* ================================================================
+   SECTION 04 RENDERER
+   ================================================================ */
+function renderTimeline(){
+  const ol = document.getElementById("timeline");
+  const nowM = today.toLocaleDateString("en-US",{month:"short"});
+  TIMELINE.forEach(t => {
+    const li = document.createElement("li");
+    li.setAttribute("data-m", t.m);
+    if(t.m === nowM) li.className = "now";
+    li.innerHTML = `<h4>${esc(t.h)}${t.m === nowM ? '<span class="nowtag">this month</span>' : ""}</h4><p>${esc(t.p)}</p>`;
+    ol.appendChild(li);
+  });
+}
+
+
+const COMMON_PROMPTS = [
+  {n:1,t:"Background, identity, interest, or talent",p:"Share a part of your identity or experience without which your application would feel incomplete.",d:"Best when the essay shows how this part of you shapes your choices, relationships, curiosity, or contribution—not merely what the label is.",q:"What scene would prove this matters to you?"},
+  {n:2,t:"Challenge, setback, or failure",p:"Describe an obstacle, its effect on you, and what you learned.",d:"Keep the difficulty in proportion. The center of the essay is your response, changing thinking, and present-day behavior—not a long account of what went wrong.",q:"What did you do next that shows growth?"},
+  {n:3,t:"Questioning a belief or idea",p:"Reflect on a time you challenged an idea and what happened.",d:"Show your mind working. The reader should see what made you reconsider, how you tested your thinking, and whether you became more certain, more nuanced, or more open.",q:"What did you believe before and after?"},
+  {n:4,t:"Unexpected gratitude",p:"Explain something someone did for you and how your gratitude affected or motivated you.",d:"The other person may begin the story, but you remain the subject. Show what their act changed in your attention, choices, relationships, or service to others.",q:"How did gratitude turn into action?"},
+  {n:5,t:"Accomplishment, event, or realization",p:"Discuss something that sparked personal growth or a new understanding.",d:"The accomplishment does not need to be an award. A quiet realization can work if you show the before, the moment of change, and evidence that you now act differently.",q:"What can you do or understand now that you could not before?"},
+  {n:6,t:"A captivating topic, idea, or concept",p:"Describe something that makes you lose track of time and how you learn more about it.",d:"Use your curiosity to reveal your character. Include how you pursue questions, make connections, build or test ideas, and share that curiosity with others.",q:"What do you actually do when nobody assigns the learning?"},
+  {n:7,t:"A topic of your choice",p:"Submit an essay on any topic—including one written for another prompt.",d:"Use this when your strongest story does not fit neatly elsewhere. It still needs a focused thread, specific detail, reflection, and a clear picture of who you are.",q:"After reading, what should a college understand about you?"}
+];
+
+const COMMON_STORY_FIELDS = [
+  {id:"scene",label:"A moment you can replay like a short movie",hint:"Where were you? What were your hands doing? What sound, smell, object, or sentence do you remember?",lead:"SCENE"},
+  {id:"tension",label:"What made that moment matter",hint:"A choice, question, responsibility, mistake, contradiction, relationship, or change—not necessarily trauma.",lead:"TENSION"},
+  {id:"action",label:"What you actually did",hint:"List decisions and actions. Replace “I learned perseverance” with the behavior that proves it.",lead:"ACTION"},
+  {id:"values",label:"What this reveals that you value",hint:"Choose distinct values such as curiosity, responsibility, humor, fairness, care, independence, belonging, or craftsmanship.",lead:"VALUES"},
+  {id:"change",label:"What is different now",hint:"Show a present-day habit, relationship, question, contribution, or way of thinking that grew from the experience.",lead:"CHANGE"},
+  {id:"details",label:"Three details only you could write",hint:"Names of tools, foods, routes, phrases, routines, textures, family jobs, small mistakes, or observations.",lead:"ONLY-ME DETAILS"}
+];
+
+const COMMON_CHECK = [
+  {b:"A reader can name three qualities about me",s:"The qualities are shown through scenes and choices, not announced as adjectives."},
+  {b:"The topic is specific enough",s:"This could not be copied onto another student's essay by changing only the name and hometown."},
+  {b:"There is reflection throughout",s:"The essay includes several moments that answer “so what?” and lets the reader see your thinking change."},
+  {b:"I spend more space on response and growth than setup",s:"The challenge or background is context; your actions, insight, and present self are the center."},
+  {b:"The opening earns attention without trying too hard",s:"It begins with movement, tension, an image, or a precise observation—not a dictionary definition or universal claim."},
+  {b:"The ending adds meaning",s:"It moves the idea forward and leaves a clear final impression rather than repeating the introduction."},
+  {b:"It sounds like me when read aloud",s:"Remove inflated vocabulary, generic inspiration language, and sentences you would never say."},
+  {b:"It stays at 650 words or fewer",s:"Every paragraph earns its space, and facts already obvious elsewhere in the application are not repeated."},
+  {b:"Someone checked accuracy and mechanics",s:"Names, dates, grammar, punctuation, and spelling are correct."},
+  {b:"I chose the prompt after finding the story",s:"The finished essay answers one prompt clearly; prompt 7 is acceptable if it fits best."}
+];
+
+function renderCommonApp(){
+  const prompts = document.getElementById("common-prompts");
+  prompts.innerHTML = COMMON_PROMPTS.map((x,i) => `<details class="acc"${i===0?" open":""}><summary><span>${x.n}. ${esc(x.t)}</span></summary><div class="acc-body"><p><strong>The prompt:</strong> ${esc(x.p)}</p><div class="decode"><strong>What makes it work:</strong> ${esc(x.d)}</div><p style="margin-bottom:0;color:var(--crimson);font-weight:600">Story test: ${esc(x.q)}</p></div></details>`).join("");
+
+  const mount = document.getElementById("common-builder");
+  const story = Store.get("commonStory", {});
+  mount.innerHTML = `<div class="builder"><p style="color:var(--muted);font-size:15.5px">Answer in fragments. These notes stay on this device.</p>${COMMON_STORY_FIELDS.map(f=>`<div class="bfield"><label for="ca-${f.id}">${esc(f.label)}</label><div class="hint">${esc(f.hint)}</div><textarea id="ca-${f.id}" data-ca="${f.id}" rows="2"></textarea></div>`).join("")}<p class="eyebrow" style="margin:18px 0 8px">Your story map</p><div class="bout" id="ca-out"></div><div class="brow"><button class="btn" type="button" id="ca-copy-map">Copy story map</button><button class="btn ghost" type="button" id="ca-clear-map">Clear</button></div></div>`;
+  const out = mount.querySelector("#ca-out");
+  function buildMap(){const lines=COMMON_STORY_FIELDS.map(f=>story[f.id]&&story[f.id].trim()?f.lead+"\n"+story[f.id].trim():"").filter(Boolean);out.textContent=lines.length?"MY COMMON APP STORY MAP\n\n"+lines.join("\n\n"):"";}
+  mount.querySelectorAll("[data-ca]").forEach(ta=>{ta.value=story[ta.dataset.ca]||"";ta.addEventListener("input",()=>{story[ta.dataset.ca]=ta.value;Store.set("commonStory",story);buildMap();});});
+  mount.querySelector("#ca-copy-map").addEventListener("click",()=>out.textContent?copyText(out.textContent):toast("Fill in at least one box first."));
+  mount.querySelector("#ca-clear-map").addEventListener("click",()=>{if(!confirm("Erase your Common App story map?"))return;COMMON_STORY_FIELDS.forEach(f=>delete story[f.id]);Store.set("commonStory",story);mount.querySelectorAll("[data-ca]").forEach(t=>t.value="");buildMap();});
+  buildMap();
+
+  const draft = document.getElementById("common-draft");
+  const wc = document.getElementById("common-wc");
+  draft.value = Store.get("commonDraft", "");
+  function count(){const n=draft.value.trim()?draft.value.trim().split(/\s+/).length:0;wc.innerHTML=`<b>${n}</b> / 650 words`;wc.className="counter"+(n>650?" over":(n>=500?" good":""));}
+  draft.addEventListener("input",()=>{Store.set("commonDraft",draft.value);count();});
+  document.getElementById("common-copy").addEventListener("click",()=>draft.value.trim()?copyText(draft.value):toast("Nothing to copy yet."));
+  count();
+  renderChecklist("common-check", COMMON_CHECK, "common");
+}
+
+/* ================================================================
+   BOOT
+   ================================================================ */
+function renderSite(){
+  document.getElementById("site-school").textContent  = SITE.school;
+  document.getElementById("site-eyebrow").textContent = SITE.line;
+  document.title = "Next Steps — " + SITE.school;
+  if(SITE.logo){
+    const b = document.getElementById("site-badge");
+    b.style.background = "transparent"; b.style.width = "62px"; b.style.height = "62px";
+    b.innerHTML = `<img src="${SITE.logo}" alt="${SITE.logoAlt || ""}">`;
+  }
+  const t = document.getElementById("site-teacher");
+  if(SITE.teacher) t.textContent = SITE.teacher; else t.remove();
+}
+
+function boot(){
+  renderSite();
+  initCalendar();
+  renderCalendar();
+  renderCommonApp();
+  renderBuilder();
+  renderPrompts();
+  renderStructure();
+  renderExamples();
+  renderRecs();
+  renderChecklist("final-check", FINALCHECK, "final");
+  renderPaths();
+  renderCompare();
+  renderQuiz();
+  renderLocal();
+  showPanel(location.hash.replace("#","") || "start", false);
+}
+
+function sourceLabel(item){
+  if(item.organization !== "Washington GEAR UP archive") return item.organization || "Scholarship sponsor";
+  try {
+    const host = new URL(item.url).hostname.replace(/^www\./, "").replace(/\.(org|com|net|gov|edu)$/, "");
+    return host.split(/[.-]/).filter(Boolean).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(" ");
+  } catch(e){ return "Scholarship sponsor"; }
+}
+
+function mapSeniorDate(item, updatedAt){
+  const planning = item.dateType === "pattern";
+  const calendarKind = /\bopens?\b/i.test(item.name) ? "opens"
+    : /deadline|deposit|transcript|records|certification/i.test(item.name) ? "due" : "event";
+  return {
+    name: item.name,
+    org: item.category || "Senior year",
+    amount: item.dateType === "priority" ? "Priority date" : "Important senior date",
+    who: item.description || "Important date for the Class of 2027.",
+    due: item.date || null,
+    window: planning ? "Planning reminder · re-confirm before relying on it" : "Confirmed date",
+    tags: ["senior", String(item.category || "").toLowerCase().replace(/[^a-z]+/g,"-")].filter(Boolean),
+    fit: ["everyone"],
+    effort: "low",
+    link: item.url || "",
+    note: item.missedOften ? "Often missed: put this on your personal checklist." : "",
+    lastChecked: updatedAt || null,
+    planning,
+    confirm: planning,
+    calendarKind,
+    kind: "deadline",
+    priority: item.missedOften ? 14 : 30
+  };
+}
+
+function mapScholarship(item){
+  const labels = (item.tags || []).map(String);
+  const hay = (labels.join(" ") + " " + item.name + " " + item.eligibility).toLowerCase();
+  const fit = Array.isArray(item.fit) ? [...item.fit] : [];
+  const addFit = key => { if(!fit.includes(key)) fit.push(key); };
+  if(/open to most|no essay/.test(hay)) addFit("everyone");
+  if(/washington|local yakima|yakima county/.test(hay.replace(/\//g, " "))) addFit("local");
+  if(/latino|hispanic|farmworker|farm worker|agriculture|migrant|viticulture|vineyard|wine|dairy|tree fruit/.test(hay)) addFit("ag");
+  if(/indigenous|yakama|native american|tribal/.test(hay)) addFit("tribal");
+  if(/financial need|low-income|low income|poverty|homeless/.test(hay)) addFit("lowincome");
+  if(/first generation|first-generation/.test(hay)) addFit("firstgen");
+  if(/disability|disabled|blind|deaf/.test(hay)) addFit("disability");
+  if(/lgbtq|queer|gay|lesbian/.test(hay)) addFit("lgbtq");
+  if(/leadership|service|advocacy/.test(hay)) addFit("leadership");
+  if(!fit.length) addFit("everyone");
+
+  const tags = ["money"];
+  if(/stem|health|science|engineering|technology|computer|medical/.test(hay)) tags.push("stem");
+  if(/trade|vocational|technical|apprentice|welding|automotive|construction/.test(hay)) tags.push("trades");
+  if(/arts|writing|essay|poetry|poem|music|dance|theater|photo/.test(hay)) tags.push("arts");
+  if(String(item.status).startsWith("Confirmed")) tags.push("open");
+
+  const planning = !String(item.status).startsWith("Confirmed");
+  const noEssay = /no essay|under an hour|quick/.test(hay);
+  const highEffort = /recommendation|transcript|multiple essays|full four-year|full ride/.test(hay);
+  const needs = item.needs || (() => {
+    if(/washington wine industry foundation/.test((item.organization||"").toLowerCase())) return "One application; transcript; 250–300-word essay; two recommendation letters; and any program, financial-need, or parent-employer proof that applies.";
+    if(/vineyard & winery technology/.test(hay)) return "Transcript; résumé; grades; goals statement; narrative; and the current YVC program application.";
+    if(/dairy strong/.test(hay)) return "Online application; essays and short answers; transcript; reference letters; photograph; and proof of the qualifying dairy connection.";
+    if(/live your dream/.test(hay)) return "Application in your own words; proof of enrollment or acceptance; information about dependents and financial responsibility; and the current local-club requirements.";
+    return null;
+  })();
+  return {
+    name: item.name,
+    org: sourceLabel(item),
+    amount: item.award || "See sponsor details",
+    who: item.eligibility || "Review the sponsor's current eligibility rules.",
+    opens: planning ? (item.expectedOpen || item.predictedOpen || predictedOpenDate(item)) : (item.opens || null),
+    openLabel: planning ? (item.openLabel || null) : null,
+    due: planning ? null : (item.deadline || null),
+    pastDue: planning ? (item.lastYearDeadline || item.deadline || null) : null,
+    window: planning
+      ? (item.expectedWindow || "New cycle not released yet — check the official page")
+      : (item.expectedWindow || "Open now"),
+    tags,
+    fit,
+    effort: noEssay ? "low" : (highEffort ? "high" : "mid"),
+    link: item.url,
+    note: item.whyFit || (typeof item.fit === "string" ? item.fit : ""),
+    needs,
+    lastChecked: item.lastChecked || null,
+    planning,
+    confirm: planning
+  };
+}
+
+(function(){
+  if(location.protocol === "file:") return boot();
+  Promise.all([
+    fetch("data/scholarships.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load"))),
+    fetch("data/senior-dates.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Senior dates did not load")))
+  ])
+    .then(([data, seniorData]) => {
+      const rows = data && Array.isArray(data.scholarships) ? data.scholarships : [];
+      const seniorRows = seniorData && Array.isArray(seniorData.events)
+        ? seniorData.events.map(item => mapSeniorDate(item, seniorData.updatedAt)) : [];
+      DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES, ...seniorRows, ...rows.map(mapScholarship));
+      const refreshed = document.getElementById("data-updated");
+      if(refreshed && data.updatedAt){
+        refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
+      }
+    })
+    .catch(() => {
+      const refreshed = document.getElementById("data-updated");
+      if(refreshed) refreshed.innerHTML = "<strong>Scholarship list unavailable.</strong> Refresh the page or try again later.";
+    })
+    .then(boot);
+})();
+</script>
+</body>
+</html>

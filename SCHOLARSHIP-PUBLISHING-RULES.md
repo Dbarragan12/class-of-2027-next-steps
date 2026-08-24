@@ -4,7 +4,8 @@ This is the standing contract for the Class of 2027 scholarship pipeline.
 
 ## Keep these working parts
 
-- `data/scholarships.json` remains the public data source and keeps `updatedAt` plus `publicationRule`.
+- Airtable is the staff-maintained source. `data/scholarships.json` remains the student-safe public data layer and keeps `updatedAt` plus `publicationRule`.
+- The Coach reads the public JSON URL, never the private Airtable base. Only records that pass every publishing gate can reach the website or Coach.
 - FAFSA, WASFA, Washington College Grant, College Bound Scholarship, and Passport to Careers remain separate from scholarship records.
 - `mapScholarship()` normalizes the public JSON records into controlled `fit` and `tags` arrays.
 - Filters stay disclosure-safe: use “Show scholarships for…” language.
@@ -13,7 +14,7 @@ This is the standing contract for the Class of 2027 scholarship pipeline.
 
 ## Safe-to-publish contract
 
-Every confirmed public scholarship must have all six:
+Every public scholarship must have all six:
 
 1. A specific deadline or explicit rolling/year-round status.
 2. The deadline read on the sponsor's official page or official application document.
@@ -22,23 +23,21 @@ Every confirmed public scholarship must have all six:
 5. Controlled-vocabulary `tags` and `fit` arrays after normalization.
 6. A `lastChecked` date. Recheck records older than about 60 days before publishing again.
 
-Recurring opportunities may appear as tentative planning cards even when there is only a small chance they return. A dated sponsor source or a dated school-hosted prior-cycle post, application, flyer, or document may establish that the opportunity existed. Each planning card must name the source cycle, include a source note or historical-source link, provide a self-assessable eligibility summary, controlled tags, and a last-checked date, and state plainly that the opening, deadline, award, requirements, and return are not guaranteed.
+The optional Airtable **Application requirements** field contains only materials and steps verified on the official sponsor page. If it is blank, the website and Coach must say the checklist is not yet documented and send the student to the official source; they must not invent common requirements.
 
-When a prior deadline is known, project that month and day into the 2026–27 cycle and label it **Tentative deadline — based on previous data; not guaranteed**. If the archive does not preserve a prior deadline, do not invent one. Tentative records never create calendar events. Once a person verifies a current-cycle opening and deadline from the new sponsor or school source, update the record to confirmed; the finder will automatically display **Open & accepting** and use the confirmed deadline.
+Long-running expected scholarships may use 2025–26 school-year information, or the most recent official cycle available, to help students prepare before the new cycle is released. They must include a prior deadline, sponsor link, eligibility summary, controlled tags, and last-checked date. The card should show the expected opening month/year—or the recurring opening date when the sponsor publishes one—and warn that the deadline, award, eligibility rules, and even whether the program returns may change.
 
 Geographic reach is intentionally broad: Toppenish, Yakima County/Valley, Washington, the Pacific Northwest, or national. A narrow opportunity is still publishable when at least one Toppenish student may qualify, but the card must name the qualifying condition plainly (such as a specific program, family employer, tribal affiliation, identity, or life experience). “Broad access” does not mean every student qualifies.
 
 Candidates that fail any gate remain unpublished. Never bulk-import an archive or aggregator.
 
-Community submissions, corrections, and program/resource leads enter through the public Google review form and its private review dashboard. They are never published automatically. Reviewers must verify the source and remove or reject any submission containing private student information before considering publication.
+Community submissions, corrections, and program/resource leads enter the GitHub review queue through the public issue templates. They are never published automatically. Reviewers must verify the official source and remove or reject any submission containing private student information before considering publication.
 
 ## Nightly behavior
 
-The nightly workflow checks only the existing manually maintained list. It may update an existing record when the official sponsor source contains one unambiguous future opening, future deadline, explicit rolling status, or same-sponsor redirect. It must record the old value, new value, source, and evidence in `data/automatic-updates.json`. Conflicting dates, expired prior-cycle dates, PDFs the safe reader cannot interpret, and unclear eligibility or award changes remain unchanged and go to staff review.
+When the repository's `AIRTABLE_TOKEN` secret is configured, the nightly workflow imports only records marked **Publish** and **Verified eligible** that also pass the public-data contract. Without the secret, it preserves the existing public list. It then checks links and detects source changes. It must never publish a review/hold record, delete the list on a failed sync, or turn a prior or predicted deadline into a confirmed one. Expected records remain expected until a person verifies the new cycle. If the list is empty, the workflow must fail safely instead of committing an empty file.
 
-The roster is locked: the workflow must never add, remove, rename, or duplicate a scholarship. It must also never publish a community submission or other new candidate automatically. Tests and a post-update comparison against the current Git commit enforce the roster lock before any data is committed. If the list is empty, its identities change, or the number of proposed record updates exceeds the safety limit, the workflow must fail without publishing.
-
-The public site must never store subscriber addresses in the repository. Subscription choices and addresses belong only in the connected private Google Workspace form/sheet workflow. Public scholarship cards may open a student's own email program, copy a saved list, or download confirmed deadlines to a personal calendar.
+The public GitHub Pages site cannot securely collect email addresses or send automatic notifications by itself. Until a private mailing-list service is connected and reviewed, the finder may open a student's own email program or copy a saved list, but it must not store subscriber addresses in the repository or send unapproved messages.
 
 ## Local employer pattern
 

@@ -2,26 +2,26 @@
 
 A free GitHub Pages hub for Toppenish High School advisory students.
 
-The scholarship finder is also available as a separate, shareable page at `scholarships.html`. It uses the same `data/scholarships.json` source but does not include advisory-specific pages or teacher information.
+The scholarship finder is also available as a separate, shareable page at `scholarships.html`. It uses the student-safe `data/scholarships.json` source but does not include advisory-specific pages or teacher information. The Pickaxe Coach reads that same public source so its recommendations follow the website's publishing rules.
 
-The free Next Steps Coach is available at `coach.html`. It asks a few plain-language questions and creates a private starting plan for scholarships, pathways, applications, or writing. It requires no account and stores choices only in the student's browser.
+The simplified homepage is `index.html`. The full original advisory hub remains available at `resources.html`.
 
-The Start Here page acts as an automatic front desk: it pulls the next verified senior date, an open scholarship matched to saved priorities, and the student's saved plan from the existing site data. No separate “today” list has to be maintained.
+The Pickaxe Next Steps Coach is embedded directly on `index.html`, so students can use it without opening another page or browser tab. The legacy `coach.html` address redirects to the embedded Coach. The free, no-AI planner remains available at `planner.html`; it requires no account and stores choices only in the student's browser. On shared devices, students should use **Clear my plan** before leaving.
 
-Scholarship priorities rank opportunities instead of excluding them. Urgent confirmed deadlines stay first, stronger matches rise within similar deadline windows, and planning opportunities remain clearly separated.
+Scholarship priorities rank opportunities instead of excluding them. Confirmed and open opportunities appear first, stronger matches rise within that group, and planning opportunities follow. Search words can still narrow the list.
 
 ## The nightly system
 
 At about 2:15 a.m. Pacific Standard Time (3:15 a.m. during daylight saving time), GitHub Actions:
 
-1. locks the manually maintained roster in `data/scholarships.json` so records cannot be added, removed, or renamed;
-2. checks the official link for every existing scholarship;
-3. publishes an unambiguous future opening, future deadline, rolling status, or same-sponsor redirect to the matching existing card;
-4. records every automatic field change and sends unclear information to the staff review note.
+1. imports only Airtable records approved for publication and verified as available to Toppenish students, when the `AIRTABLE_TOKEN` repository secret is configured;
+2. keeps the existing public list if Airtable is unavailable or not configured;
+3. checks the official link for every public scholarship;
+4. records when each source was checked and flags changed sources for review.
 
-The updater never searches for or publishes a new scholarship. It also cannot replace the list, delete a record, or rename one. A prior-cycle or ambiguous date remains planning information until the official source shows one clear future date. If the reader finds conflicting dates, a PDF it cannot safely interpret, or a failed link, it keeps the student-facing card unchanged and adds the item to `data/review-needed.md`. The workflow stops if the roster changes shape or if too many records would change at once.
+The site never changes an expected deadline into a confirmed deadline on its own. That protects students from an incorrect date. A changed official page is flagged so its exact new information can be verified and then updated in Airtable. The overnight job imports only records that staff have marked **Publish** and **Verified eligible**; it never publishes review/hold records or replaces the public list with an empty result. It also stops if the list is empty.
 
-To add a scholarship, edit `data/scholarships.json` manually, verify the official source, and commit the change. New records never come from the nightly job. Existing cards can receive the limited verified updates described above; staff can still edit any record manually. Use `gpaMin` only when the sponsor clearly lists a minimum GPA; the finder uses it to explain academic fit, never to hide a student from an opportunity. Keep `needs` and `effort` current so students can see what to prepare and how much time to plan.
+To add or update a scholarship, edit the Airtable record, verify the official source, and set both publishing gates correctly. Add a verified student-facing checklist to **Application requirements** when the sponsor provides one. The nightly workflow generates the public JSON only from records that pass the publishing contract.
 
 ## One-time setup
 
@@ -30,11 +30,11 @@ To add a scholarship, edit `data/scholarships.json` manually, verify the officia
 
 No student information is collected or stored.
 
-The standalone finder saves a student's list only in that browser. It is not confidential on a shared Chromebook, so students should clear their choices before leaving. “Email my list” opens the student's own email program and does not send addresses to this site. Automatic new-scholarship email alerts require a private mailing-list service; subscriber addresses stay outside this public repository.
+The standalone finder saves a student's list only in that browser. “Email my list” opens the student's own email program and does not send addresses to this site. Automatic new-scholarship email alerts require a private mailing-list service; do not add an email form or store student addresses in this public repository until that service is connected and its privacy terms are reviewed.
 
-Scholarship submissions, corrections, and helpful programs or resources use one private review workflow. These are review leads only; a person must verify and approve them before publication. Contributors are instructed not to post private student information.
+The finder also links to public GitHub review forms for scholarship submissions, corrections, and helpful programs or resources. These are review leads only; a person must verify and approve them before publication. Contributors are instructed not to post private student information.
 
-## Scholarship labels
+## Airtable labels
 
 - **Confirmed for 2027**: official current-cycle information.
 - **Expected — last year's information**: a real recurring scholarship whose new details are not published yet. Cards show an estimated opening month/year or a recurring opening date when the sponsor publishes one.
@@ -45,4 +45,4 @@ Scholarship submissions, corrections, and helpful programs or resources use one 
 
 The scholarship board is intentionally broad: a card may be Toppenish-, Yakima Valley-, Washington-, Pacific Northwest-, or nationally available when at least one Toppenish student may qualify. Students must still read the card's exact eligibility condition.
 
-The free, no-AI workflow checks every existing official source nightly and can publish only high-confidence date, status, and same-sponsor link updates. It does not discover new scholarships or rewrite human-reviewed eligibility guidance. The nightly report in `data/review-needed.md` separates unclear pages from links that failed, while `data/automatic-updates.json` records exactly what changed.
+The free, no-AI workflow can verify official sources and flag changes every night. Reliable automatic discovery and eligibility judgment for five brand-new scholarships every night requires a paid research/AI service or a staff review queue. Do not automatically publish unverified scholarship search results to students.
