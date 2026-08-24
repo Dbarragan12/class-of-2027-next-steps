@@ -6,7 +6,7 @@ The scholarship finder is also available as a separate, shareable page at `schol
 
 The simplified homepage is `index.html`. The full original advisory hub remains available at `resources.html`.
 
-The Pickaxe Next Steps Coach is embedded directly on `index.html`, so students can use it without opening another page or browser tab. The legacy `coach.html` address redirects to the embedded Coach. The free, no-AI planner remains available at `planner.html`; it requires no account and stores choices only in the student's browser. On shared devices, students should use **Clear my plan** before leaving.
+The homepage is a simple routing hub rather than an AI workspace. Quick guidance opens in a small on-demand dialog, and the legacy `coach.html` address opens that dialog. `writing.html` is the full Writing Studio: students can prepare a prompt-based story-path request, count draft words locally, and prepare a rubric-based AI feedback request. The free, no-AI planner remains available at `planner.html`; it requires no account and stores choices only in the student's browser. On shared devices, students should use **Clear my plan** before leaving.
 
 Scholarship priorities rank opportunities instead of excluding them. Confirmed and open opportunities appear first, stronger matches rise within that group, and planning opportunities follow. Search words can still narrow the list.
 
