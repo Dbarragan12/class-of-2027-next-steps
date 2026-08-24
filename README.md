@@ -6,7 +6,7 @@ The scholarship finder is also available as a separate, shareable page at `schol
 
 The simplified homepage is `index.html`. The full original advisory hub remains available at `resources.html`.
 
-The homepage is a simple routing hub rather than an AI workspace. Quick guidance opens in a small on-demand dialog, and the legacy `coach.html` address opens that dialog. `writing.html` is the full Writing Studio: students can prepare a prompt-based story-path request, count draft words locally, and prepare a rubric-based AI feedback request. The free, no-AI planner remains available at `planner.html`; it requires no account and stores choices only in the student's browser. On shared devices, students should use **Clear my plan** before leaving.
+The homepage is a simple routing hub rather than an AI workspace. Quick guidance opens in a small on-demand dialog, and the legacy `coach.html` address opens that dialog. `writing.html` is the full Writing Studio: students enter a prompt and their own notes, then send a story-path or rubric-based draft-check request directly to the embedded coach with one button. Word counting happens locally, and form entries are transmitted only when a student deliberately requests AI feedback. The free, no-AI planner remains available at `planner.html`; it requires no account and stores choices only in the student's browser. On shared devices, students should use **Clear my plan** before leaving.
 
 Scholarship priorities rank opportunities instead of excluding them. Confirmed and open opportunities appear first, stronger matches rise within that group, and planning opportunities follow. Search words can still narrow the list.
 
