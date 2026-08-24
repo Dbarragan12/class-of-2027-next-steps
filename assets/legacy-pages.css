@@ -1,0 +1,223 @@
+/* Shared page treatment for the older interactive pages. The tools remain
+   intact; this layer gives their first viewport the same Next Steps rhythm. */
+.legacy-page {
+  background: var(--site-paper, #f7f4ef);
+}
+
+.legacy-page .top {
+  background: var(--site-paper, #f7f4ef);
+  color: var(--site-ink, #18181b);
+  border-top: 0;
+  padding: 50px 0 42px;
+}
+
+.legacy-page .top > .wrap,
+.legacy-page .top > .inner {
+  max-width: 1120px;
+}
+
+.legacy-page .brand .mark {
+  width: 58px;
+  height: 58px;
+  border-radius: 17px;
+  background: var(--site-crimson, #7a1830);
+  color: #fff;
+  box-shadow: 0 12px 25px rgba(122, 24, 48, .16);
+}
+
+.legacy-page .brand h1,
+.legacy-page .brand strong {
+  color: var(--site-ink, #18181b);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.legacy-page .brand h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
+.legacy-page .brand p,
+.legacy-page .brand > span > span { color: var(--site-crimson, #7a1830); }
+
+.legacy-page .top-copy {
+  max-width: 760px;
+  margin: 30px 0 0;
+}
+
+.legacy-page .top-copy h2,
+.legacy-page .planner-intro h1 {
+  color: var(--site-ink, #18181b);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+
+.legacy-page .top-copy p,
+.legacy-page .planner-intro p {
+  max-width: 650px;
+  color: var(--site-muted, #626269);
+  font-size: 1.08rem;
+}
+
+.legacy-page .top-links {
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.legacy-page .top-links a {
+  border-color: var(--site-crimson, #7a1830);
+  color: var(--site-crimson, #7a1830);
+  background: transparent;
+  padding: 10px 14px;
+}
+
+.legacy-page .top-links a:hover {
+  background: var(--site-crimson, #7a1830);
+  color: #fff;
+}
+
+.legacy-page .planner-intro {
+  max-width: 760px;
+  margin-top: 32px;
+}
+
+.legacy-page .planner-intro h1 { margin: 7px 0 12px; }
+.legacy-page .planner-intro p { margin: 0; }
+
+.legacy-page header.top::after { display: none; }
+.legacy-page header.top .inner { padding-top: 38px; }
+.legacy-page header.top .site-name,
+.legacy-page header.top h1 { color: var(--site-ink, #18181b); }
+.legacy-page header.top .school { color: var(--site-crimson, #7a1830); }
+.legacy-page header.top .eyebrow { color: var(--site-muted, #626269); }
+.legacy-page header.top h1 {
+  max-width: 760px;
+  margin: 30px 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+.legacy-page header.top h1 .thin { color: var(--site-crimson, #7a1830); font-style: italic; }
+.legacy-page header.top .lede { color: var(--site-muted, #626269); font-size: 1.08rem; }
+.legacy-page header.top .badge { background: var(--site-crimson, #7a1830); color: #fff; border-radius: 17px; }
+.legacy-page .utility button,
+.legacy-page .utility a {
+  border-color: var(--site-crimson, #7a1830);
+  background: transparent;
+  color: var(--site-crimson, #7a1830);
+}
+.legacy-page .utility button:hover,
+.legacy-page .utility a:hover { background: var(--site-crimson, #7a1830); color: #fff; }
+.legacy-page .hero-actions .primary { background: var(--site-crimson, #7a1830); border-color: var(--site-crimson, #7a1830); color: #fff; }
+.legacy-page .hero-actions .secondary { border-color: var(--site-crimson, #7a1830); color: var(--site-crimson, #7a1830); }
+
+.legacy-page .privacy {
+  background: var(--site-ink, #18181b);
+}
+
+.legacy-page .tools,
+.legacy-page .controls {
+  background: rgba(247, 244, 239, .97);
+  border-color: var(--site-line, #ded8d0);
+}
+
+.legacy-page .tools { margin-top: 0; padding: 18px 0 14px; }
+.legacy-page .tools #search,
+.legacy-page .controls #q {
+  min-height: 48px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.legacy-page .btn,
+.legacy-page .button,
+.legacy-page .submit-actions a {
+  border-radius: 999px;
+}
+
+.legacy-page .results-head,
+.legacy-page .results-head h2,
+.legacy-page .panel-intro h2,
+.legacy-page .lower-card h2,
+.legacy-page .submission-area h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.legacy-page .card,
+.legacy-page .lower-card,
+.legacy-page .submission-area,
+.legacy-page .coach,
+.legacy-page .side,
+.legacy-page .welcome-card,
+.legacy-page .builder,
+.legacy-page .quiz {
+  border-radius: 22px;
+  box-shadow: 0 16px 38px rgba(42, 26, 29, .07);
+}
+
+.legacy-page .card { padding: 22px; }
+.legacy-page .card h3 { font-size: 1.38rem; }
+.legacy-page .card-more { border-color: var(--site-line, #ded8d0); }
+
+.legacy-page .side,
+.legacy-page .coach-inner { padding: 28px; }
+.legacy-page .option { border-radius: 15px; background: #fff; }
+.legacy-page .option:hover,
+.legacy-page .option[aria-pressed="true"] { background: #fff4f5; }
+
+.legacy-page .footer,
+.legacy-page .credit {
+  background: #fff;
+  border-color: var(--site-line, #ded8d0);
+}
+
+/* The long Pathways page keeps its useful section tabs, but gives them the
+   same light, pill-like navigation language as the global navigation. */
+.legacy-page nav.hub {
+  top: 76px;
+  background: rgba(255, 255, 255, .97);
+  border-bottom: 1px solid var(--site-line, #ded8d0);
+  box-shadow: 0 8px 22px rgba(42, 26, 29, .05);
+}
+
+.legacy-page nav.hub .tab {
+  color: var(--site-muted, #626269);
+  border-bottom-color: transparent;
+}
+
+.legacy-page nav.hub .tab:hover {
+  color: var(--site-crimson, #7a1830);
+  background: #f5e9ec;
+}
+
+.legacy-page nav.hub .tab[aria-selected="true"] {
+  color: var(--site-crimson, #7a1830);
+  border-bottom-color: var(--site-crimson, #7a1830);
+}
+
+.legacy-page nav.hub .tab[aria-selected="true"] .num,
+.legacy-page nav.hub .tab:hover .num {
+  color: var(--site-crimson, #7a1830);
+}
+
+.legacy-page .panel-intro { padding-top: 44px; }
+
+@media (max-width: 860px) {
+  .legacy-page .top { padding: 42px 0 34px; }
+  .legacy-page .top-row { align-items: flex-start; }
+  .legacy-page .planner-intro { margin-top: 28px; }
+}
+
+@media (max-width: 620px) {
+  .legacy-page .top { padding: 34px 0 28px; }
+  .legacy-page .brand .mark { width: 52px; height: 52px; }
+  .legacy-page .top-copy { margin-top: 24px; }
+  .legacy-page .top-copy h2,
+  .legacy-page .planner-intro h1 { font-size: 3.3rem; }
+  .legacy-page header.top h1 { font-size: 3.3rem; margin-top: 25px; }
+  .legacy-page .top-links a { padding: 9px 12px; }
+  .legacy-page .tools { padding-top: 13px; }
+  .legacy-page nav.hub { top: 104px; }
+  .legacy-page .panel-intro { padding-top: 30px; }
+  .legacy-page .side,
+  .legacy-page .coach-inner { padding: 22px 20px; }
+  .legacy-page .card { padding: 20px; }
+}
