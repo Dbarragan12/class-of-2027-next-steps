@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Student Scholarship Finder</title>
+<title>Scholarship Finder | Class of 2027</title>
 <meta name="description" content="A simple scholarship finder for Yakima Valley, Washington, Pacific Northwest, and national opportunities.">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="assets/gradcat.png" type="image/png">
 <style>
 :root{
-  --crimson:#822336;--crimson-dk:#5f1927;--rose:#a04a5c;--rose-lt:#f0a6b2;
-  --ink:#212325;--muted:#5c5f62;--paper:#f4f4f5;--card:#fff;--gray20:#d0d1d3;
+  --crimson:#7a1830;--crimson-dk:#541020;--rose:#a04a5c;--rose-lt:#f0a6b2;
+  --ink:#212325;--muted:#5c5f62;--paper:#f7f4ef;--card:#fff;--gray20:#ded8d0;
   --sand:#faf6f2;--sage:#2f6b52;--shadow:0 1px 0 var(--gray20),0 2px 14px rgba(33,35,37,.07)
 }
 *{box-sizing:border-box}
@@ -88,8 +88,15 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 .toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120px);background:var(--ink);color:#fff;border-radius:8px;padding:11px 15px;font-size:13px;box-shadow:0 8px 25px rgba(0,0,0,.25);transition:transform .2s;z-index:30}.toast.show{transform:translate(-50%,0)}
 @media(max-width:650px){.top{padding-top:19px}.brand h1{font-size:27px}.brand p{font-size:12px}.top-copy h2{font-size:38px}.tools{position:static}.search-row .btn{flex:1 1 auto}.results-head{align-items:start;flex-direction:column;gap:3px}.results-head span{text-align:left}.lower{grid-template-columns:1fr}.card-head{gap:8px}.status{max-width:105px}}
 </style>
+<link rel="stylesheet" href="assets/site-shell.css">
 </head>
 <body>
+<header class="site-header">
+  <div class="site-shell">
+    <a class="site-brand" href="index.html"><img src="assets/gradcat.png" alt="Toppenish Wildcats graduation mascot"><span><small>Class of 2027</small>Next Steps</span></a>
+    <nav class="site-nav" aria-label="Site navigation"><a href="index.html">Home</a><a class="site-essential" href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html" aria-current="page">Scholarships</a><a href="writing.html">Writing Studio</a><a href="planner.html">Planner</a></nav>
+  </div>
+</header>
 <header class="top">
   <div class="wrap">
     <div class="brand">
@@ -100,7 +107,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
       <h2>Find money that fits.</h2>
       <p>Search one list, save the opportunities that fit your situation, and read what you will need before you start an application.</p>
     </div>
-    <div class="top-links"><a href="index.html">Home</a><a href="writing.html">Writing Studio</a><a href="coach.html">Quick guidance</a><a href="resources.html">All senior resources</a><a href="https://docs.google.com/forms/d/1O0eOgZ8WQS8mz7uFbBUrUlBHjXXHUZmOiDqbgC6wo1Q/viewform" target="_blank" rel="noopener">Get scholarship updates</a><a href="#submit">Submit / correct</a><a href="#families">Family guidance · Español</a></div>
+    <div class="top-links"><a href="https://docs.google.com/forms/d/1O0eOgZ8WQS8mz7uFbBUrUlBHjXXHUZmOiDqbgC6wo1Q/viewform" target="_blank" rel="noopener">Get scholarship updates</a><a href="#submit">Submit / correct</a><a href="#families">Family guidance · Español</a></div>
   </div>
 </header>
 
@@ -161,7 +168,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 </main>
 
 <footer class="credit">
-  <div class="wrap"><p><strong>Created and maintained by Mr. David Barragan.</strong> This community resource is shared to help Toppenish students and families find opportunities. Scholarship information is reviewed before publication.</p></div>
+  <div class="wrap"><p><strong>Created and maintained by Mr. David Barragan.</strong> This community resource is shared to help Toppenish students and families find opportunities. Scholarship information is reviewed before publication.</p><nav class="site-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="writing.html">Writing Studio</a><a href="planner.html">Planner</a></nav></div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

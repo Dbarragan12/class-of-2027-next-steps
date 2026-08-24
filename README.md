@@ -4,7 +4,7 @@ A free GitHub Pages hub for Toppenish High School advisory students.
 
 The scholarship finder is also available as a separate, shareable page at `scholarships.html`. It uses the student-safe `data/scholarships.json` source but does not include advisory-specific pages or teacher information. The Pickaxe Coach reads that same public source so its recommendations follow the website's publishing rules.
 
-The simplified homepage is `index.html`. The full original advisory hub remains available at `resources.html`.
+The simplified homepage is `index.html`. `senior.html` is the fast-action Senior Essentials page for official transcript requests, senior updates, financial aid, counseling, and student access. The full original advisory hub remains available at `resources.html`. Every primary page uses the same navigation and visual shell.
 
 The homepage is a simple routing hub rather than an AI workspace. Quick guidance opens in a small on-demand dialog, and the legacy `coach.html` address opens that dialog. `writing.html` is the full Writing Studio: students enter a prompt and their own notes, then send a story-path or rubric-based draft-check request directly to the embedded coach with one button. Word counting happens locally, and form entries are transmitted only when a student deliberately requests AI feedback. The free, no-AI planner remains available at `planner.html`; it requires no account and stores choices only in the student's browser. On shared devices, students should use **Clear my plan** before leaving.
 
@@ -28,7 +28,7 @@ To add or update a scholarship, edit the Airtable record, verify the official so
 1. In GitHub repository settings, enable **Pages**: deploy from branch `main`, folder `/(root)`.
 2. Run the **Nightly scholarship refresh** workflow once from the Actions tab.
 
-No student information is collected or stored.
+No student information is collected or stored. Transcript links open the official Toppenish School District request form or district PDFs; this public site never receives the student's record information.
 
 The standalone finder saves a student's list only in that browser. “Email my list” opens the student's own email program and does not send addresses to this site. Automatic new-scholarship email alerts require a private mailing-list service; do not add an email form or store student addresses in this public repository until that service is connected and its privacy terms are reviewed.
 
