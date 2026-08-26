@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-08-25T10:46:42.383Z
+Checked: 2026-08-26T10:49:26.180Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -17,14 +17,12 @@ None tonight.
 - [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Coca-Cola Scholars Program Scholarship](https://www.coca-colascholarsfoundation.org/apply/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [SchoolHouse Connection Youth Leadership and Scholarship Program](https://www.schoolhouseconnection.org/youth-leadership/scholarship-program/) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -77,6 +75,7 @@ None tonight.
 - [Horatio Alger State Scholarship](https://horatioalger.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link could not be checked. Check result: error.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 404.
+- [SchoolHouse Connection Youth Leadership and Scholarship Program](https://www.schoolhouseconnection.org/youth-leadership/scholarship-program/) — Official link did not return a working page. Check result: 403.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.
