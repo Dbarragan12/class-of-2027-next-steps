@@ -103,6 +103,18 @@
     const clean=value=>value.trim()||"Not provided";
     const coachRootId='deployment-5fef302a-e216-4b90-9b66-929a783e8ddb';
     const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+    function hidePickaxeHistoryControls(){
+      const root=byId(coachRootId);if(!root)return;
+      root.querySelectorAll('button').forEach(button=>{
+        const isHistoryIcon=[...button.querySelectorAll('path')].some(path=>(path.getAttribute('d')||'').startsWith('M16.3997 4'));
+        if(!isHistoryIcon)return;
+        const wrapper=button.parentElement;
+        button.hidden=true;button.setAttribute('aria-hidden','true');button.setAttribute('tabindex','-1');
+        if(wrapper&&wrapper.children.length===1){wrapper.hidden=true;wrapper.setAttribute('aria-hidden','true');}
+      });
+    }
+    const coachHistoryObserver=new MutationObserver(hidePickaxeHistoryControls);
+    hidePickaxeHistoryControls();coachHistoryObserver.observe(byId(coachRootId),{childList:true,subtree:true});
     function updateWordCount(){
       const words=countWords(byId('draft').value);const limit=Number(byId('limit').value);byId('word-count').textContent=words;
       byId('limit-status').textContent=limit?(words<=limit?`${limit-words} words available.`:`${words-limit} words over the ${limit}-word limit.`):'Add a word limit above for comparison.';
@@ -141,3 +153,4 @@
   </script>
 </body>
 </html>
+
