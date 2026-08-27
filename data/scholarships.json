@@ -2106,6 +2106,122 @@
       "whyFit": "A national no-essay opportunity with a simple entry process that can be completed alongside stronger essay-based applications. It may also connect seniors with Niche Direct Admissions partner colleges.",
       "needs": "Create or use a Niche account and submit one free entry. No essay is required. Review the official rules for citizenship or immigration eligibility, entry limits, drawing, and notification details.",
       "lastChecked": "2026-08-27"
+    },
+    {
+      "name": "Bick First Generation Scholarship",
+      "organization": "Bick Charitable Foundation",
+      "award": "$5,000 per winner (6 winners; $30,000 total)",
+      "eligibility": "High school students or students enrolled in college or trade school who are first-generation college students; applicants from the New York tri-state area and students strong in math or quantitative sciences are especially encouraged.",
+      "gate": "Applicant must be a first-generation college student.",
+      "url": "https://bold.org/scholarships/bick-first-generation-scholarship/",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-09-09",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; deadline September 9, 2026.",
+      "tags": [
+        "National",
+        "Arts / writing",
+        "Leadership / service",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "firstgen",
+        "leadership"
+      ],
+      "whyFit": "A high-value first-generation opportunity for a Toppenish senior planning college or trade school who can explain their goals and the support they need.",
+      "needs": "Submit a 300–500 word response about what being a first-generation student means to you, challenges you have overcome, your dreams, and how the scholarship would help. Review the official page for account and verification requirements.",
+      "lastChecked": "2026-08-27"
+    },
+    {
+      "name": "Headway’s Book Lovers Scholarship",
+      "organization": "Headway",
+      "award": "$1,500",
+      "eligibility": "Students age 16 or older in their final year of high school or currently in college or graduate school, with a 3.0+ high school GPA, leadership experience, and plans for full-time postsecondary study in the U.S., U.K., Canada, or Australia.",
+      "url": "https://makeheadway.com/scholarship/",
+      "status": "Confirmed for 2027",
+      "opens": "2026-04-15",
+      "deadline": "2026-09-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; deadline September 15, 2026 at 3 p.m. Central.",
+      "tags": [
+        "National",
+        "Arts / writing",
+        "Leadership / service",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "whyFit": "A strong writing and reading opportunity for a senior who can connect a nonfiction book to a future goal and show leadership.",
+      "needs": "Provide a leadership paragraph, goals/motivation paragraph, complete transcript, and one recommendation. Submit an essay up to 500 words or a YouTube video up to 2 minutes answering the official prompt.",
+      "lastChecked": "2026-08-27"
+    },
+    {
+      "name": "Ella Katherine Harris Memorial Scholarship for Bakers",
+      "organization": "Harris Family / Bold.org",
+      "award": "$2,500",
+      "eligibility": "High school seniors, undergraduates, or trade students pursuing baking or culinary study who can explain their passion and goals.",
+      "url": "https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-09-04",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; deadline September 4, 2026.",
+      "tags": [
+        "National",
+        "Arts / writing",
+        "Trades"
+      ],
+      "fit": [],
+      "whyFit": "A focused option for a Toppenish senior or trade student interested in baking, culinary arts, or opening a food business.",
+      "needs": "Submit a 400–600 word response about what inspires you to bake, your favorite thing to bake and why, and what you hope to achieve. Review the official page for application steps.",
+      "lastChecked": "2026-08-27"
+    },
+    {
+      "name": "AvaCare Medical Scholarship",
+      "organization": "AvaCare Medical",
+      "award": "$1,000",
+      "eligibility": "High school seniors or college students with a 3.0+ GPA who are U.S. citizens or eligible permanent residents and plan to study a medical field; preference may be given to students with physical disabilities.",
+      "url": "https://www.avacaremedical.com/scholarship",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-12-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; deadline December 15, 2026 at midnight Eastern.",
+      "tags": [
+        "National",
+        "STEM / health",
+        "Arts / writing"
+      ],
+      "fit": [],
+      "whyFit": "A creative application option for a Toppenish senior pursuing nursing, therapy, medicine, nutrition, lab science, dentistry, health law, or another medical field.",
+      "needs": "Submit a transcript plus one project: up to 350-word writing, up to 1.5-minute video, or an image with a short description about an inspiring act of kindness. Review the sponsor’s publication and voting terms before applying.",
+      "lastChecked": "2026-08-27"
+    },
+    {
+      "name": "nixit $1,000 Scholarship Program",
+      "organization": "nixit",
+      "award": "$1,000",
+      "eligibility": "High school seniors or undergraduate students who are at least 18, are enrolled or accepted into a full-time undergraduate program, and are legal residents of their country or hold a valid student visa.",
+      "gate": "Applicant must be at least 18 and enrolled or accepted into a full-time undergraduate program.",
+      "url": "https://nixit.com/pages/scholarship-program",
+      "status": "Confirmed for 2027",
+      "opens": null,
+      "deadline": "2026-09-30",
+      "lastYearDeadline": null,
+      "expectedWindow": "Open now; deadline September 30, 2026.",
+      "tags": [
+        "National",
+        "Arts / writing"
+      ],
+      "fit": [],
+      "whyFit": "A short writing opportunity for a senior who is 18+ and has been accepted to a full-time undergraduate program, especially one interested in sustainability or health advocacy.",
+      "needs": "Submit a 300-word essay answering one of the sponsor’s sustainability or menstrual-health prompts and complete the online form. Review the sponsor’s permission to publish submitted work.",
+      "lastChecked": "2026-08-27"
     }
   ]
 }
