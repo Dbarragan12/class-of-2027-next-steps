@@ -28,7 +28,7 @@
     .hero-grid { display:grid; grid-template-columns:1.12fr .88fr; gap:48px; align-items:center; }
     .eyebrow { display:inline-flex; align-items:center; gap:8px; color:var(--crimson); font-size:.78rem; font-weight:850; letter-spacing:.13em; text-transform:uppercase; }
     .eyebrow::before { content:""; width:28px; height:2px; background:var(--gold); }
-    h1 { max-width:760px; margin:18px 0; font-family:Georgia,"Times New Roman",serif; font-size:clamp(3.3rem,7.2vw,6.7rem); line-height:.94; letter-spacing:-.055em; }
+    h1 { max-width:760px; margin:18px 0; font-family:Georgia,"Times New Roman",serif; font-size:clamp(2.85rem,5.6vw,5.3rem); line-height:.96; letter-spacing:-.05em; }
     h1 em { color:var(--crimson); font-weight:inherit; }
     .lead { max-width:640px; margin:0; color:var(--muted); font-size:clamp(1.06rem,2vw,1.25rem); }
     .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
@@ -45,7 +45,7 @@
     .trust { margin-top:30px; padding-top:22px; border-top:1px solid rgba(255,255,255,.2); font-size:.84rem; font-weight:750; }
     section { padding:74px 0; }
     .section-heading { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:30px; }
-    .section-heading h2 { max-width:650px; margin:8px 0 0; font-family:Georgia,serif; font-size:clamp(2.2rem,4.5vw,4rem); line-height:1; letter-spacing:-.035em; }
+    .section-heading h2 { max-width:650px; margin:8px 0 0; font-family:Georgia,serif; font-size:clamp(2.1rem,4vw,3.45rem); line-height:1.02; letter-spacing:-.035em; }
     .section-heading p { max-width:450px; margin:0; color:var(--muted); }
     .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
     .card { display:flex; min-height:270px; flex-direction:column; padding:28px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.72); text-decoration:none; transition:transform .2s,border-color .2s,box-shadow .2s; }
@@ -72,7 +72,7 @@
     .footer-row { display:flex; justify-content:space-between; gap:24px; }
     :focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
     @media(max-width:820px) { .nav-links a:not(.nav-cta){display:none}.hero{padding-top:48px}.hero-grid,.cards{grid-template-columns:1fr}.card.featured{grid-column:auto}.hero-card{min-height:360px}.section-heading{display:block}.section-heading p{margin-top:16px} }
-    @media(max-width:520px) { .wrap{width:min(100% - 26px,1160px)}.brand span{font-size:.88rem}.brand img{width:46px;height:46px}h1{font-size:3.35rem}.hero-card{padding:28px;border-radius:24px}.button{width:100%}.guide-button{right:14px;bottom:14px}.dialog-head{padding:20px}.guide-note{padding:12px 20px}.footer-row{display:block} }
+    @media(max-width:520px) { .wrap{width:min(100% - 26px,1160px)}.brand span{font-size:.88rem}.brand img{width:46px;height:46px}h1{font-size:2.85rem}.hero-card{padding:28px;border-radius:24px}.button{width:100%}.guide-button{right:14px;bottom:14px}.dialog-head{padding:20px}.guide-note{padding:12px 20px}.footer-row{display:block} }
     @media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto}*,*::before,*::after{transition:none!important} }
   </style>
   <link rel="stylesheet" href="assets/site-shell.css">
@@ -82,14 +82,14 @@
   <header class="site-header">
     <div class="site-shell">
       <a class="site-brand" href="index.html" aria-current="page"><img src="assets/gradcat.png" alt="Toppenish Wildcats graduation mascot"><span><small>Class of 2027</small>Next Steps</span></a>
-      <nav class="site-nav" aria-label="Site navigation"><a href="index.html" aria-current="page">Home</a><a class="site-essential" href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a><a href="writing.html">Writing Studio</a><a href="planner.html">Planner</a></nav>
+      <nav class="site-nav" aria-label="Site navigation"><a href="index.html" aria-current="page">Home</a><a class="site-essential" href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a><a href="writing.html">Writing Studio</a></nav>
     </div>
   </header>
   <main id="main">
     <section class="hero">
       <div class="wrap hero-grid">
-        <div><span class="eyebrow">Toppenish High School</span><h1>Choose what you need <em>today.</em></h1><p class="lead">Go directly to senior information, pathways, scholarships, writing support, or planning tools. You do not need to complete everything at once.</p><div class="actions"><a class="button primary" href="senior.html">Open Senior Essentials</a><a class="button secondary" href="#destinations">Choose another starting point <span aria-hidden="true">↓</span></a></div></div>
-        <aside class="hero-card" aria-label="Next Steps overview"><img src="assets/gradcat.png" alt=""><h2>One hub. Five clear destinations.</h2><p>Start with the task in front of you, find the right tool, and leave with a practical next move.</p><div class="trust">Washington-focused • Student-centered • Built for the Class of 2027</div></aside>
+        <div><span class="eyebrow">Toppenish High School</span><h1>Choose what you need <em>today.</em></h1><p class="lead">Go directly to senior information, pathways, scholarships, or writing support. You do not need to complete everything at once.</p><div class="actions"><a class="button primary" href="senior.html">Open Senior Essentials</a><a class="button secondary" href="#destinations">Choose another starting point <span aria-hidden="true">↓</span></a></div></div>
+        <aside class="hero-card" aria-label="Next Steps overview"><img src="assets/gradcat.png" alt=""><h2>One hub. Four clear destinations.</h2><p>Start with the task in front of you, find the right tool, and leave with a practical next move.</p><div class="trust">Washington-focused • Student-centered • Built for the Class of 2027</div></aside>
       </div>
     </section>
     <section id="destinations" aria-labelledby="choose-heading">
@@ -100,7 +100,6 @@
           <a class="card" href="resources.html"><span class="number">02</span><h3>Explore pathways</h3><p>Compare college, technical programs, apprenticeships, military service, and workforce options.</p><span class="link">Explore your options →</span></a>
           <a class="card" href="scholarships.html"><span class="number">03</span><h3>Find scholarships</h3><p>Search the school’s verified list and focus on upcoming opportunities that fit your plans.</p><span class="link">Search scholarships →</span></a>
           <a class="card" href="writing.html"><span class="number">04</span><h3>Build stronger writing</h3><p>Unpack a prompt, brainstorm story directions, check your draft, and get focused AI feedback.</p><span class="link">Open Writing Studio →</span></a>
-          <a class="card" href="planner.html"><span class="number">05</span><h3>Make a simple plan</h3><p>Turn a big next-steps task into a short checklist without using AI credits.</p><span class="link">Use the planner →</span></a>
         </div>
       </div>
     </section>
@@ -111,7 +110,7 @@
     <iframe class="guide-frame" title="Class of 2027 quick guidance coach" src="https://studio.pickaxe.co/STUDIOOL1IYH51Y503JSXDGCDJ/deployment-a84e3b89-056f-4f60-b7b3-25f27ea5040e" loading="lazy" allow="clipboard-write"></iframe>
     <div class="guide-note">Use fictional/test information for the prototype. Never enter passwords, Social Security numbers, banking details, or private medical information.</div>
   </dialog>
-  <footer><div class="wrap"><div class="footer-row"><span>Class of 2027 Next Steps • Toppenish High School</span><span>Always verify official deadlines and requirements.</span></div><nav class="site-footer-links" aria-label="Footer navigation"><a href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a><a href="writing.html">Writing Studio</a><a href="planner.html">Planner</a></nav></div></footer>
+  <footer><div class="wrap"><div class="footer-row"><span>Class of 2027 Next Steps • Toppenish High School</span><span>Always verify official deadlines and requirements.</span></div><nav class="site-footer-links" aria-label="Footer navigation"><a href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a><a href="writing.html">Writing Studio</a></nav></div></footer>
   <script>
     const guideDialog=document.getElementById('guide-dialog');
     document.querySelectorAll('[data-open-guide]').forEach(button=>button.addEventListener('click',()=>guideDialog.showModal()));
@@ -121,3 +120,4 @@
   </script>
 </body>
 </html>
+

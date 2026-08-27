@@ -18,6 +18,9 @@
     @media(max-width:900px){.hero-grid,.studio-grid,.checker-grid{grid-template-columns:1fr}.coach-panel{position:static}.coach-frame{height:680px}.rubric{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:620px){.wrap{width:min(100% - 26px,1160px)}.nav-links a:not(.nav-cta){display:none}.brand img{width:46px;height:46px}.brand span{font-size:.88rem}.hero{padding-top:45px}h1{font-size:3.25rem}.panel{padding:21px}.field-row{grid-template-columns:1fr}.button{width:100%}.rubric{grid-template-columns:1fr}.footer-row{display:block}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+    /* Keep the page title prominent without overpowering the supporting copy. */
+    h1{font-size:clamp(2.75rem,5.6vw,5.15rem);line-height:.96;letter-spacing:-.05em}
+    @media(max-width:620px){h1{font-size:2.85rem}}
   </style>
   <link rel="stylesheet" href="assets/site-shell.css">
 </head>
@@ -26,7 +29,7 @@
   <header class="site-header">
     <div class="site-shell">
       <a class="site-brand" href="index.html"><img src="assets/gradcat.png" alt="Toppenish Wildcats graduation mascot"><span><small>Class of 2027</small>Next Steps</span></a>
-      <nav class="site-nav" aria-label="Site navigation"><a href="index.html">Home</a><a class="site-essential" href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a><a href="writing.html" aria-current="page">Writing Studio</a><a href="planner.html">Planner</a></nav>
+      <nav class="site-nav" aria-label="Site navigation"><a href="index.html">Home</a><a class="site-essential" href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a><a href="writing.html" aria-current="page">Writing Studio</a></nav>
     </div>
   </header>
   <main id="main">
@@ -95,7 +98,7 @@
       </div>
     </section>
   </main>
-  <footer><div class="wrap"><div class="footer-row"><span>Class of 2027 Next Steps • Toppenish High School</span><span>AI feedback is guidance, not an official score or decision.</span></div><nav class="site-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a><a href="planner.html">Planner</a></nav></div></footer>
+  <footer><div class="wrap"><div class="footer-row"><span>Class of 2027 Next Steps • Toppenish High School</span><span>AI feedback is guidance, not an official score or decision.</span></div><nav class="site-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html">Scholarships</a></nav></div></footer>
   <script src="https://studio.pickaxe.co/api/embed/bundle.js" defer></script>
   <script>
     const byId=id=>document.getElementById(id);

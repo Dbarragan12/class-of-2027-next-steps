@@ -25,10 +25,10 @@ button,input{font:inherit}
 .top{background:var(--crimson);color:#fff;border-top:7px solid var(--ink);padding:24px 0 28px}
 .brand{display:flex;align-items:center;gap:12px}
 .mark{width:48px;height:48px;display:grid;place-items:center;background:#fff;color:var(--crimson);border-radius:8px;font-size:25px;font-weight:800}
-.brand h1{font-size:clamp(25px,6vw,42px);line-height:1.05;margin:0;letter-spacing:-.035em}
+.brand h1{font-size:clamp(24px,5vw,36px);line-height:1.05;margin:0;letter-spacing:-.035em}
 .brand p{margin:4px 0 0;color:#f0dade;font-size:14px}
 .top-copy{max-width:700px;margin:22px 0 0}
-.top-copy h2{font-size:clamp(30px,7vw,54px);line-height:1.02;letter-spacing:-.045em;margin:0 0 10px}
+.top-copy h2{font-size:clamp(2.25rem,5vw,4rem);line-height:1.04;letter-spacing:-.045em;margin:0 0 10px}
 .top-copy p{margin:0;color:#f4dfe3;max-width:60ch}
 .top-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
 .top-links a{border:1px solid rgba(255,255,255,.55);border-radius:999px;color:#fff;padding:8px 12px;text-decoration:none;font-size:13px;font-weight:700}
@@ -95,7 +95,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 <header class="site-header">
   <div class="site-shell">
     <a class="site-brand" href="index.html"><img src="assets/gradcat.png" alt="Toppenish Wildcats graduation mascot"><span><small>Class of 2027</small>Next Steps</span></a>
-    <nav class="site-nav" aria-label="Site navigation"><a href="index.html">Home</a><a class="site-essential" href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html" aria-current="page">Scholarships</a><a href="writing.html">Writing Studio</a><a href="planner.html">Planner</a></nav>
+    <nav class="site-nav" aria-label="Site navigation"><a href="index.html">Home</a><a class="site-essential" href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="scholarships.html" aria-current="page">Scholarships</a><a href="writing.html">Writing Studio</a></nav>
   </div>
 </header>
 <header class="top">
@@ -169,7 +169,7 @@ details{margin-top:10px;border-top:1px solid var(--gray20);padding-top:10px}summ
 </main>
 
 <footer class="credit">
-  <div class="wrap"><p><strong>College and Career Center · GEAR UP</strong> This community resource is shared to help Toppenish students and families find opportunities. Scholarship information is reviewed before publication.</p><nav class="site-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="writing.html">Writing Studio</a><a href="planner.html">Planner</a></nav></div>
+  <div class="wrap"><p><strong>College and Career Center · GEAR UP</strong> This community resource is shared to help Toppenish students and families find opportunities. Scholarship information is reviewed before publication.</p><nav class="site-footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="senior.html">Senior Essentials</a><a href="resources.html">Pathways</a><a href="writing.html">Writing Studio</a></nav></div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -281,3 +281,4 @@ fetch("data/scholarships.json",{cache:"no-store"}).then(r=>r.json()).then(data=>
 </script>
 </body>
 </html>
+

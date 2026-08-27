@@ -31,7 +31,7 @@
   font-family: Georgia, "Times New Roman", serif;
 }
 
-.legacy-page .brand h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
+.legacy-page .brand h1 { font-size: clamp(1.8rem, 4.2vw, 2.4rem); }
 .legacy-page .brand p,
 .legacy-page .brand > span > span { color: var(--site-crimson, #7a1830); }
 
@@ -40,17 +40,15 @@
   margin: 30px 0 0;
 }
 
-.legacy-page .top-copy h2,
-.legacy-page .planner-intro h1 {
+.legacy-page .top-copy h2 {
   color: var(--site-ink, #18181b);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: .96;
+  font-size: clamp(2.65rem, 5.2vw, 4.3rem);
+  line-height: 1;
   letter-spacing: -.055em;
 }
 
-.legacy-page .top-copy p,
-.legacy-page .planner-intro p {
+.legacy-page .top-copy p {
   max-width: 650px;
   color: var(--site-muted, #626269);
   font-size: 1.08rem;
@@ -73,14 +71,6 @@
   color: #fff;
 }
 
-.legacy-page .planner-intro {
-  max-width: 760px;
-  margin-top: 32px;
-}
-
-.legacy-page .planner-intro h1 { margin: 7px 0 12px; }
-.legacy-page .planner-intro p { margin: 0; }
-
 .legacy-page header.top::after { display: none; }
 .legacy-page header.top .inner { padding-top: 38px; }
 .legacy-page header.top .site-name,
@@ -91,8 +81,8 @@
   max-width: 760px;
   margin: 30px 0 12px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: .96;
+  font-size: clamp(2.65rem, 5.2vw, 4.3rem);
+  line-height: 1;
   letter-spacing: -.055em;
 }
 .legacy-page header.top h1 .thin { color: var(--site-crimson, #7a1830); font-style: italic; }
@@ -203,16 +193,14 @@
 @media (max-width: 860px) {
   .legacy-page .top { padding: 42px 0 34px; }
   .legacy-page .top-row { align-items: flex-start; }
-  .legacy-page .planner-intro { margin-top: 28px; }
 }
 
 @media (max-width: 620px) {
   .legacy-page .top { padding: 34px 0 28px; }
   .legacy-page .brand .mark { width: 52px; height: 52px; }
   .legacy-page .top-copy { margin-top: 24px; }
-  .legacy-page .top-copy h2,
-  .legacy-page .planner-intro h1 { font-size: 3.3rem; }
-  .legacy-page header.top h1 { font-size: 3.3rem; margin-top: 25px; }
+  .legacy-page .top-copy h2 { font-size: 2.5rem; }
+  .legacy-page header.top h1 { font-size: 2.5rem; margin-top: 25px; }
   .legacy-page .top-links a { padding: 9px 12px; }
   .legacy-page .tools { padding-top: 13px; }
   .legacy-page nav.hub { top: 104px; }
@@ -221,3 +209,4 @@
   .legacy-page .coach-inner { padding: 22px 20px; }
   .legacy-page .card { padding: 20px; }
 }
+
