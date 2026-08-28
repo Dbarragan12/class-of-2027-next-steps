@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27",
+  "updatedAt": "2026-08-28",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Confirmed opportunities use current sponsor information and a verified current-cycle deadline or rolling status. Recurring opportunities may appear as tentative planning cards—even when return is uncertain—when a dated sponsor or school-hosted prior-cycle source shows the opportunity existed. Tentative cards must identify the source cycle, clearly state that the opening, deadline, award, eligibility, and return are not guaranteed, and must never create calendar events. When a person verifies the new cycle and enters the current opening and deadline, the finder automatically changes the card to Open & accepting. Nightly checks preserve records and flag source changes for review; they never guess or confirm a deadline.",
   "scholarships": [
     {
@@ -248,30 +248,6 @@
         "leadership"
       ],
       "whyFit": "Toppenish High School qualifies geographically because this is a national scholarship for U.S. high school seniors. Individual applicants must be U.S. citizens and plan a full-time four-year degree.",
-      "lastChecked": "2026-08-27"
-    },
-    {
-      "name": "BigFuture Scholarship: Start Your Scholarship List (Class of 2027)",
-      "organization": "College Board BigFuture",
-      "award": "Monthly drawings for $500 and $40,000",
-      "eligibility": "U.S. residents in the Class of 2027 attending school in the U.S., a U.S. territory or possession, or a DoDEA school; must have a College Board account and plan to seek an associate or bachelor's degree. Save three scholarships to earn drawing entries. No essay, GPA, or test score required.",
-      "url": "https://bigfuture.collegeboard.org/scholarships/bigfuture-scholarships-start-your-scholarship-list-class-of-2027",
-      "status": "Confirmed for 2027",
-      "opens": null,
-      "deadline": "2026-11-30",
-      "lastYearDeadline": null,
-      "expectedWindow": "Open now",
-      "tags": [
-        "Washington",
-        "Four-year",
-        "Two-year",
-        "No essay"
-      ],
-      "fit": [
-        "local",
-        "everyone"
-      ],
-      "whyFit": "Toppenish High School qualifies because the drawing accepts Class of 2027 students attending school in the U.S. Students must be U.S. residents and have a College Board account.",
       "lastChecked": "2026-08-27"
     },
     {
@@ -2036,75 +2012,6 @@
       ],
       "whyFit": "A selective Washington opportunity for student leaders interested in public service, government, and civic leadership. Two Washington delegates are selected.",
       "needs": "Complete the Washington online application and provide the required leadership and eligibility information. Review the official Washington page for the current application instructions and selection process.",
-      "lastChecked": "2026-08-27"
-    },
-    {
-      "name": "$50,000 ScholarshipOwl No Essay Scholarship",
-      "organization": "ScholarshipOwl",
-      "award": "$50,000 total; monthly $1,000 awards",
-      "eligibility": "Students age 16 or older who live in the 50 states, Washington, D.C., or eligible U.S. territories, excluding Rhode Island and Michigan, and are enrolled or will enroll within three months in a qualified U.S. high school, college, or university.",
-      "url": "https://scholarshipowl.com/awards/scholarshipowl-scholarship",
-      "status": "Confirmed for 2027",
-      "opens": "2026-06-29",
-      "deadline": "2026-08-29",
-      "lastYearDeadline": null,
-      "expectedWindow": "Sweepstakes period ends August 29, 2026; check the official rules for entry timing.",
-      "tags": [
-        "National",
-        "No essay",
-        "Open to most students"
-      ],
-      "fit": [
-        "everyone"
-      ],
-      "whyFit": "A quick national no-essay opportunity that may fit many seniors. Students should read the official rules carefully because it is a sweepstakes with monthly drawings.",
-      "needs": "Create or use an eligible ScholarshipOwl account and submit the free entry. No essay is required. Review the official rules for age, enrollment, location, entry frequency, and winner requirements.",
-      "lastChecked": "2026-08-27"
-    },
-    {
-      "name": "$10,000 Scholarships360 No Essay Scholarship",
-      "organization": "Scholarships360",
-      "award": "$10,000",
-      "eligibility": "High school, college, community college, graduate, technical, and vocational students who are U.S. citizens or permanent residents.",
-      "url": "https://scholarships360.org/scholarships/search/10000-no-essay-scholarship/",
-      "status": "Confirmed for 2027",
-      "opens": "2026-07-01",
-      "deadline": "2026-08-31",
-      "lastYearDeadline": null,
-      "expectedWindow": "Rolling monthly deadlines; final 2027 cycle deadline is June 30, 2027.",
-      "tags": [
-        "National",
-        "No essay",
-        "Open to most students"
-      ],
-      "fit": [
-        "everyone"
-      ],
-      "whyFit": "A national no-essay opportunity open to students pursuing college, technical, or vocational education. Students should apply early and understand that finalists may be interviewed about how they fund their education.",
-      "needs": "Apply through a Scholarships360 account. No essay is required for the initial application. Review the official page for account steps, citizenship requirements, rolling deadlines, and possible finalist interview.",
-      "lastChecked": "2026-08-27"
-    },
-    {
-      "name": "$40,000 Niche No Essay Scholarship",
-      "organization": "Niche",
-      "award": "$40,000",
-      "eligibility": "High school and college students, plus anyone planning to attend college or graduate school within the next year. Niche states that sponsored sweepstakes require U.S. citizenship or a valid visa/U.S. passport; review the official rules.",
-      "url": "https://www.niche.com/colleges/scholarships/40k-no-essay-scholarship-2026/",
-      "status": "Confirmed for 2027",
-      "opens": null,
-      "deadline": "2026-10-15",
-      "lastYearDeadline": null,
-      "expectedWindow": "Annual sponsored scholarship; winner expected to be notified by November 15, 2026.",
-      "tags": [
-        "National",
-        "No essay",
-        "Open to most students"
-      ],
-      "fit": [
-        "everyone"
-      ],
-      "whyFit": "A national no-essay opportunity with a simple entry process that can be completed alongside stronger essay-based applications. It may also connect seniors with Niche Direct Admissions partner colleges.",
-      "needs": "Create or use a Niche account and submit one free entry. No essay is required. Review the official rules for citizenship or immigration eligibility, entry limits, drawing, and notification details.",
       "lastChecked": "2026-08-27"
     },
     {
