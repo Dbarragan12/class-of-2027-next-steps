@@ -2071,26 +2071,33 @@ function mapScholarship(item){
 }
 
 (function(){
-  if(location.protocol === "file:") return boot();
-  Promise.all([
-    fetch("data/scholarships.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Scholarship data did not load"))),
-    fetch("data/senior-dates.json", {cache:"no-store"}).then(r => r.ok ? r.json() : Promise.reject(new Error("Senior dates did not load")))
-  ])
-    .then(([data, seniorData]) => {
+  /* Render the reliable, hand-maintained senior dates immediately. The remote
+     lists can load afterward without holding the whole page hostage. */
+  const seed = () => DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES);
+  seed();
+  boot();
+  if(location.protocol === "file:") return;
+
+  const loadJSON = url => fetch(url, {cache:"no-store"}).then(r => {
+    if(!r.ok) throw new Error(url + " did not load");
+    return r.json();
+  });
+  Promise.allSettled([loadJSON("data/scholarships.json"), loadJSON("data/senior-dates.json")])
+    .then(([scholarshipResult, seniorResult]) => {
+      const data = scholarshipResult.status === "fulfilled" ? scholarshipResult.value : null;
+      const seniorData = seniorResult.status === "fulfilled" ? seniorResult.value : null;
       const rows = data && Array.isArray(data.scholarships) ? data.scholarships : [];
       const seniorRows = seniorData && Array.isArray(seniorData.events)
         ? seniorData.events.map(item => mapSeniorDate(item, seniorData.updatedAt)) : [];
       DEADLINES.splice(0, DEADLINES.length, ...PRIORITY_ACTIONS, ...SENIOR_DEADLINES, ...seniorRows, ...rows.map(mapScholarship));
       const refreshed = document.getElementById("data-updated");
-      if(refreshed && data.updatedAt){
+      if(refreshed && data && data.updatedAt){
         refreshed.innerHTML = "<strong>Last refreshed:</strong> " + new Date(data.updatedAt).toLocaleString();
+      } else if(refreshed && scholarshipResult.status === "rejected") {
+        refreshed.innerHTML = "<strong>Scholarship list unavailable.</strong> The senior calendar is still available. Refresh the page or try again later.";
       }
-    })
-    .catch(() => {
-      const refreshed = document.getElementById("data-updated");
-      if(refreshed) refreshed.innerHTML = "<strong>Scholarship list unavailable.</strong> Refresh the page or try again later.";
-    })
-    .then(boot);
+      renderCalendar();
+    });
 })();
 </script>
 </body>
