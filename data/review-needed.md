@@ -1,12 +1,12 @@
 # Scholarship source review
 
-Checked: 2026-08-29T15:02:06.997Z
+Checked: 2026-08-30T14:51:07.574Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
 ## Updated automatically from an official source
 
-- [SchoolHouse Connection Youth Leadership and Scholarship Program](https://schoolhouseconnection.org/program/scholarship) — Updated opens, deadline, status, expectedWindow, url. Check result: updated.
+None tonight.
 
 ## Needs a person to review the official source
 
@@ -22,6 +22,7 @@ The nightly system checks only scholarships already in the public list. It may u
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
+- [SchoolHouse Connection Youth Leadership and Scholarship Program](https://schoolhouseconnection.org/program/scholarship) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.

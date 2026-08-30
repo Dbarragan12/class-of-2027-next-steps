@@ -1,68 +1,7 @@
 {
-  "updatedAt": "2026-08-29T15:02:06.997Z",
+  "updatedAt": "2026-08-30T14:51:07.574Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [
-    {
-      "name": "SchoolHouse Connection Youth Leadership and Scholarship Program",
-      "organization": "SchoolHouse Connection",
-      "source": "https://schoolhouseconnection.org/program/scholarship",
-      "checkedAt": "2026-08-29",
-      "fields": [
-        {
-          "field": "opens",
-          "before": null,
-          "after": "2027-01-04"
-        },
-        {
-          "field": "deadline",
-          "before": null,
-          "after": "2027-06-04"
-        },
-        {
-          "field": "status",
-          "before": "Expected — last year's information",
-          "after": "Confirmed for 2027"
-        },
-        {
-          "field": "expectedWindow",
-          "before": "The site is built from 2025–26 planning resources using the last available June 2 date. Confirm that the program, amount, and current deadline have returned.",
-          "after": "Applications open January 4, 2027 and close June 4, 2027."
-        },
-        {
-          "field": "url",
-          "before": "https://www.schoolhouseconnection.org/youth-leadership/scholarship-program/",
-          "after": "https://schoolhouseconnection.org/program/scholarship"
-        }
-      ],
-      "evidence": [
-        {
-          "field": "opens",
-          "value": "2027-01-04",
-          "why": "pcoming Dates & Deadlines January 4, 2027: Application Opens June 4, 2027: Application Closes First Week of August, 2027: Applicants Notified These dates apply to students who will begin college (four-year, community college, or trade"
-        },
-        {
-          "field": "deadline",
-          "value": "2027-06-04",
-          "why": "4, 2027: Application Opens June 4, 2027: Application Closes First Week of August, 2027: Applicants Notified These dates apply to students who will begin college (four-year, community college, or trade school) for the first time in the 2"
-        },
-        {
-          "field": "status",
-          "value": "Confirmed for 2027",
-          "why": "The official source contains an unambiguous current-cycle deadline or rolling status."
-        },
-        {
-          "field": "expectedWindow",
-          "value": "Applications open January 4, 2027 and close June 4, 2027.",
-          "why": "Summary generated only from the confirmed dates found on the official source."
-        },
-        {
-          "field": "url",
-          "value": "https://schoolhouseconnection.org/program/scholarship",
-          "why": "The existing official link redirected to this page on the same sponsor domain."
-        }
-      ]
-    }
-  ],
-  "reviewCount": 70
+  "changes": [],
+  "reviewCount": 71
 }
