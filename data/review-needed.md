@@ -1,12 +1,12 @@
 # Scholarship source review
 
-Checked: 2026-09-01T14:50:02.391Z
+Checked: 2026-09-02T14:26:10.619Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
 ## Updated automatically from an official source
 
-None tonight.
+- [Washington State Opportunity Scholarship — Baccalaureate](https://waopportunityscholarship.org/applicants/baccalaureate/) — Updated opens, expectedWindow. Check result: updated.
 
 ## Needs a person to review the official source
 
@@ -22,11 +22,13 @@ None tonight.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
+- [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Microsoft Disability Scholarship](https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [INCIGHT Scholarship](https://www.incight.org/scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Pride Foundation Scholarship](https://pridefoundation.org/find-funding/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [GSBA Scholarship Fund](https://thegsba.org/scholarship-fund-2/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Burger King Scholars](https://scholarshipamerica.org/scholarship/burgerking/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Jack Kent Cooke College Scholarship Program](https://www.jkcf.org/our-scholarships/college-scholarship-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -43,7 +45,6 @@ None tonight.
 - [Sub Pop Loser Scholarship](https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington State Fair Foundation Blue Ribbon Scholarships](https://www.thefair.com/foundation/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [WSU General Scholarship Application](https://financialaid.wsu.edu/getting-started/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Washington State Opportunity Scholarship — Baccalaureate](https://waopportunityscholarship.org/applicants/baccalaureate/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [YVC Foundation General Scholarship](https://yvcc.edu/foundation/scholarships-awards-faq.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington Apple Education Foundation Scholarships](https://scholarships.waef.org/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Eastern Washington University Scholarship Consideration](https://www.ewu.edu/apply/financial-aid-scholarships-office/) — The checker could not isolate this scholarship on the official page. Check result: 202.
@@ -55,7 +56,6 @@ None tonight.
 - [Yakama Nation Higher Education Scholarship](https://yakama.com/programs/higher-education-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Stephen J. Brady Stop Hunger Scholarship](https://www.us.stop-hunger.org/grants/youth-scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Hagan Scholarship](https://haganscholarships.org/application/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Elks Legacy Awards](https://www.elks.org/scholars/scholarships/Legacy.cfm) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [The Gates Scholarship](https://www.thegatesscholarship.org/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [NCWIT Aspirations in Computing High School Award](https://www.aspirations.org/award-programs/aic-high-school-award) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Women in Aviation International Scholarships](https://www.wai.org/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -78,7 +78,6 @@ None tonight.
 - [Horatio Alger State Scholarship](https://horatioalger.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link could not be checked. Check result: error.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 404.
-- [Pride Foundation Scholarship](https://pridefoundation.org/find-funding/scholarships/) — Official link did not return a working page. Check result: 522.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.

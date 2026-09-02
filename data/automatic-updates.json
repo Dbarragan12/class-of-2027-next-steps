@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-09-01T14:50:02.391Z",
+  "updatedAt": "2026-09-02T14:26:10.619Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [],
-  "reviewCount": 72
+  "changes": [
+    {
+      "name": "Washington State Opportunity Scholarship — Baccalaureate",
+      "organization": "Washington State Opportunity Scholarship",
+      "source": "https://waopportunityscholarship.org/applicants/baccalaureate/",
+      "checkedAt": "2026-09-02",
+      "fields": [
+        {
+          "field": "opens",
+          "before": null,
+          "after": "2027-01-13"
+        },
+        {
+          "field": "expectedWindow",
+          "before": "Planning estimate based on the prior application window of January 14–February 26, 2026. Confirm the 2027 dates, eligible majors, income limits, and FAFSA/WASFA deadline.",
+          "after": "Applications open January 13, 2027; the official source does not show one unambiguous deadline yet."
+        }
+      ],
+      "evidence": [
+        {
+          "field": "opens",
+          "value": "2027-01-13",
+          "why": ". Application deadlines Milestone Date Application opens January 13, 2027 Application deadline February 25, 2027 at 9 p.m. PST FAFSA/WASFA filing deadline* February 25, 2027 Selection notification April 21, 2027 Acceptance deadl"
+        },
+        {
+          "field": "expectedWindow",
+          "value": "Applications open January 13, 2027; the official source does not show one unambiguous deadline yet.",
+          "why": "Summary generated only from the confirmed dates found on the official source."
+        }
+      ]
+    }
+  ],
+  "reviewCount": 71
 }
