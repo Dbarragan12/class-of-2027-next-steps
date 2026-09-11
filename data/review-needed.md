@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-09-10T14:23:25.474Z
+Checked: 2026-09-11T14:23:03.272Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -12,10 +12,11 @@ None tonight.
 
 - [YVC Vineyard & Winery Technology Scholarship](https://www.yvcc.edu/academics/agriculture/ag-scholarships.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Live Your Dream Award](https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 200.
-- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
+- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
+- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Coca-Cola Scholars Program Scholarship](https://www.coca-colascholarsfoundation.org/apply/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
