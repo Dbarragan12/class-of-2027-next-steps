@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-09-11T14:23:03.272Z
+Checked: 2026-09-12T13:34:43.232Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -16,7 +16,6 @@ None tonight.
 - [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Coca-Cola Scholars Program Scholarship](https://www.coca-colascholarsfoundation.org/apply/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -39,7 +38,7 @@ None tonight.
 - [APIA Scholarship Program](https://apiascholars.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [American Indian Endowed Scholarship](https://wsac.wa.gov/american-indian-endowed-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Women in STEM Excel Scholarship](https://recf.org/scholarship/women-in-stem-excel/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [ACPE Northwest Scholarship](https://acpenw.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
+- [ACPE Northwest Scholarship](https://acpenw.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [WSADA Bright Future Scholarship](https://wsada.org/community/scholarships) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [BIAW and WHBF Student Scholarship](https://apply.biaw.com/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Sub Pop Loser Scholarship](https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
