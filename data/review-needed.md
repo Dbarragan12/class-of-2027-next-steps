@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-09-16T14:55:34.510Z
+Checked: 2026-09-17T14:57:20.996Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -22,6 +22,7 @@ None tonight.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Washington State Governors' Scholarship for Foster Youth](https://www.collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -35,6 +36,7 @@ None tonight.
 - [Smart Choices Scholarship](https://www.wiaa.com/smart-choices-scholarship-welcome/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Amazon Future Engineer Scholarship](https://www.amazonfutureengineer.com/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [HSF Scholar Program](https://www.hsf.net/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [APIA Scholarship Program](https://apiascholars.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [American Indian Endowed Scholarship](https://wsac.wa.gov/american-indian-endowed-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Women in STEM Excel Scholarship](https://recf.org/scholarship/women-in-stem-excel/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [ACPE Northwest Scholarship](https://acpenw.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -77,11 +79,9 @@ None tonight.
 
 - [Horatio Alger State Scholarship](https://horatioalger.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link could not be checked. Check result: error.
-- [Washington State Governors' Scholarship for Foster Youth](https://www.collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/) — Official link could not be checked. Check result: error.
-- [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link could not be checked. Check result: error.
+- [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 404.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
-- [APIA Scholarship Program](https://apiascholars.org/scholarships/) — Official link could not be checked. Check result: error.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
