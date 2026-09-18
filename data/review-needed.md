@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-09-17T14:57:20.996Z
+Checked: 2026-09-18T14:27:52.405Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -22,7 +22,6 @@ None tonight.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Washington State Governors' Scholarship for Foster Youth](https://www.collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -71,9 +70,7 @@ None tonight.
 - [John & Terry Brearley Toppenish Rotary Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Toppenish School District Administration Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [United States Senate Youth Program](https://www.awsleaders.org/senate-youth) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Headway’s Book Lovers Scholarship](https://makeheadway.com/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Ella Katherine Harris Memorial Scholarship for Bakers](https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 
 ## Link unavailable or check failed
 
@@ -85,4 +82,6 @@ None tonight.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
+- [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — Official link did not return a working page. Check result: 429.
+- [Ella Katherine Harris Memorial Scholarship for Bakers](https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/) — Official link did not return a working page. Check result: 429.
 - [AvaCare Medical Scholarship](https://www.avacaremedical.com/scholarship) — Official link did not return a working page. Check result: 403.
