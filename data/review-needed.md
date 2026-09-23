@@ -1,12 +1,12 @@
 # Scholarship source review
 
-Checked: 2026-09-22T14:49:03.466Z
+Checked: 2026-09-23T14:58:56.890Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
 ## Updated automatically from an official source
 
-None tonight.
+- [INCIGHT Scholarship](https://www.incight.org/offerings/scholarship) — Updated url. Check result: updated.
 
 ## Needs a person to review the official source
 
@@ -22,11 +22,11 @@ None tonight.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [SchoolHouse Connection Youth Leadership and Scholarship Program](https://schoolhouseconnection.org/program/scholarship) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Microsoft Disability Scholarship](https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [INCIGHT Scholarship](https://www.incight.org/scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Pride Foundation Scholarship](https://pridefoundation.org/find-funding/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [GSBA Scholarship Fund](https://thegsba.org/scholarship-fund-2/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Burger King Scholars](https://scholarshipamerica.org/scholarship/burgerking/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.

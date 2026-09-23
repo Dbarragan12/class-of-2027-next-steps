@@ -1,7 +1,28 @@
 {
-  "updatedAt": "2026-09-22T14:49:03.466Z",
+  "updatedAt": "2026-09-23T14:58:56.890Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [],
+  "changes": [
+    {
+      "name": "INCIGHT Scholarship",
+      "organization": "INCIGHT",
+      "source": "https://www.incight.org/offerings/scholarship",
+      "checkedAt": "2026-09-23",
+      "fields": [
+        {
+          "field": "url",
+          "before": "https://www.incight.org/scholarship",
+          "after": "https://www.incight.org/offerings/scholarship"
+        }
+      ],
+      "evidence": [
+        {
+          "field": "url",
+          "value": "https://www.incight.org/offerings/scholarship",
+          "why": "The existing official link redirected to this page on the same sponsor domain."
+        }
+      ]
+    }
+  ],
   "reviewCount": 72
 }
