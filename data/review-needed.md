@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-09-24T15:00:51.434Z
+Checked: 2026-09-25T15:13:06.672Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -16,7 +16,6 @@ None tonight.
 - [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Coca-Cola Scholars Program Scholarship](https://www.coca-colascholarsfoundation.org/apply/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -33,6 +32,7 @@ None tonight.
 - [Burger King Scholars](https://scholarshipamerica.org/scholarship/burgerking/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Jack Kent Cooke College Scholarship Program](https://www.jkcf.org/our-scholarships/college-scholarship-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [American Indian College Fund Full Circle Scholarship](https://collegefund.org/students/scholarships/college-students/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Smart Choices Scholarship](https://www.wiaa.com/smart-choices-scholarship-welcome/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Amazon Future Engineer Scholarship](https://www.amazonfutureengineer.com/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [HSF Scholar Program](https://www.hsf.net/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [APIA Scholarship Program](https://apiascholars.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -79,7 +79,6 @@ None tonight.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
-- [Smart Choices Scholarship](https://www.wiaa.com/smart-choices-scholarship-welcome/) — Official link could not be checked. Check result: error.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
