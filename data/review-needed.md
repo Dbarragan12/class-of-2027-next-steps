@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-09-25T15:13:06.672Z
+Checked: 2026-09-26T14:26:24.334Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -12,9 +12,9 @@ None tonight.
 
 - [YVC Vineyard & Winery Technology Scholarship](https://www.yvcc.edu/academics/agriculture/ag-scholarships.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Live Your Dream Award](https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 200.
-- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
+- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
+- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -39,13 +39,13 @@ None tonight.
 - [American Indian Endowed Scholarship](https://wsac.wa.gov/american-indian-endowed-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Women in STEM Excel Scholarship](https://recf.org/scholarship/women-in-stem-excel/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [ACPE Northwest Scholarship](https://acpenw.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [WSADA Bright Future Scholarship](https://wsada.org/community/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [WSADA Bright Future Scholarship](https://wsada.org/community/scholarships) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [BIAW and WHBF Student Scholarship](https://apply.biaw.com/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Sub Pop Loser Scholarship](https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington State Fair Foundation Blue Ribbon Scholarships](https://www.thefair.com/foundation/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [WSU General Scholarship Application](https://financialaid.wsu.edu/getting-started/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [YVC Foundation General Scholarship](https://yvcc.edu/foundation/scholarships-awards-faq.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Washington Apple Education Foundation Scholarships](https://scholarships.waef.org/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Washington Apple Education Foundation Scholarships](https://scholarships.waef.org/apply) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Eastern Washington University Scholarship Consideration](https://www.ewu.edu/apply/financial-aid-scholarships-office/) — The checker could not isolate this scholarship on the official page. Check result: 202.
 - [Energizing Tomorrow's Leaders Scholarship](https://cypresscreekenergy.com/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Alpha Delta Kappa Toppenish Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
