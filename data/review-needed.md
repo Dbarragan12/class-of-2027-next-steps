@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-09-27T15:08:34.643Z
+Checked: 2026-09-28T18:08:21.616Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -12,9 +12,9 @@ None tonight.
 
 - [YVC Vineyard & Winery Technology Scholarship](https://www.yvcc.edu/academics/agriculture/ag-scholarships.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Live Your Dream Award](https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
-- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
-- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
+- [Horse Heaven Hills Wine Growers Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Walter Clore Scholarship](https://washingtonwinefoundation.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 200.
+- [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -38,8 +38,8 @@ None tonight.
 - [APIA Scholarship Program](https://apiascholars.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [American Indian Endowed Scholarship](https://wsac.wa.gov/american-indian-endowed-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Women in STEM Excel Scholarship](https://recf.org/scholarship/women-in-stem-excel/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [ACPE Northwest Scholarship](https://acpenw.org/scholarships/) — The checker could not isolate this scholarship on the official page. Check result: 202.
-- [WSADA Bright Future Scholarship](https://wsada.org/community/scholarships) — The checker could not isolate this scholarship on the official page. Check result: 202.
+- [ACPE Northwest Scholarship](https://acpenw.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [WSADA Bright Future Scholarship](https://wsada.org/community/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [BIAW and WHBF Student Scholarship](https://apply.biaw.com/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Sub Pop Loser Scholarship](https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington State Fair Foundation Blue Ribbon Scholarships](https://www.thefair.com/foundation/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -63,6 +63,7 @@ None tonight.
 - [Hereford Youth Foundation of America Fall Scholarships](https://hereford.org/youth/njha/scholarship-opportunities/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [NAAA Support Scholarship Media Contest](https://www.agaviation.org/career/scholarships/support-scholarship-media-contest/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Breakthrough Junior Challenge](https://breakthroughjuniorchallenge.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Yakima Federal Award for Academic Excellence](https://www.yakimafed.com/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Filipino American Community of Yakima Valley Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [The Isidro Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [WASWD Walt Canter Water and Wastewater Scholarship](https://www.waswd.org/about-us) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -80,7 +81,6 @@ None tonight.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
-- [Yakima Federal Award for Academic Excellence](https://www.yakimafed.com/scholarship/) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
 - [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — Official link did not return a working page. Check result: 429.
 - [Ella Katherine Harris Memorial Scholarship for Bakers](https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/) — Official link did not return a working page. Check result: 429.
