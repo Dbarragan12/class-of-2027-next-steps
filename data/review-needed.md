@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-10-02T16:14:47.534Z
+Checked: 2026-10-03T14:42:18.865Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -56,7 +56,7 @@ None tonight.
 - [Yakima Valley Construction Federation Scholarship](https://bigfuture.collegeboard.org/scholarships/yakima-valley-construction-federation-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Yakama Nation Higher Education Scholarship](https://yakama.com/programs/higher-education-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Stephen J. Brady Stop Hunger Scholarship](https://www.us.stop-hunger.org/grants/youth-scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Hagan Scholarship](https://haganscholarships.org/application/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Hagan Scholarship](https://haganscholarships.org/application/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [NHS Scholarship](https://www.nationalhonorsociety.org/the-nhs-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [The Gates Scholarship](https://www.thegatesscholarship.org/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [NCWIT Aspirations in Computing High School Award](https://www.aspirations.org/award-programs/aic-high-school-award) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
