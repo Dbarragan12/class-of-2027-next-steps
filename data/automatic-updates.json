@@ -1,48 +1,7 @@
 {
-  "updatedAt": "2026-10-11T16:18:01.542Z",
+  "updatedAt": "2026-10-12T19:46:45.809Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [
-    {
-      "name": "Pride Foundation Scholarship",
-      "organization": "Pride Foundation",
-      "source": "https://pridefoundation.org/find-funding/scholarships/",
-      "checkedAt": "2026-10-11",
-      "fields": [
-        {
-          "field": "deadline",
-          "before": null,
-          "after": "2027-01-08"
-        },
-        {
-          "field": "status",
-          "before": "Expected — last year's information",
-          "after": "Confirmed for 2027"
-        },
-        {
-          "field": "expectedWindow",
-          "before": "The site is built from 2025–26 planning data. The prior deadline was January 9; confirm the current application window and award criteria.",
-          "after": "Confirmed deadline: January 8, 2027."
-        }
-      ],
-      "evidence": [
-        {
-          "field": "deadline",
-          "value": "2027-01-08",
-          "why": "028 school year is open October 11, 2026 and closes January 8, 2027. Please check out our Scholarship Guidelines for more information. Do I have to be a US citizen to apply? No, Pride Foundation does not check citizenship status"
-        },
-        {
-          "field": "status",
-          "value": "Confirmed for 2027",
-          "why": "The official source contains an unambiguous current-cycle deadline or rolling status."
-        },
-        {
-          "field": "expectedWindow",
-          "value": "Confirmed deadline: January 8, 2027.",
-          "why": "Summary generated only from the confirmed dates found on the official source."
-        }
-      ]
-    }
-  ],
+  "changes": [],
   "reviewCount": 74
 }
