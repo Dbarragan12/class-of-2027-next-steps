@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-10-12T19:46:45.809Z
+Checked: 2026-10-13T17:33:49.458Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
