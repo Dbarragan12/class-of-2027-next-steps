@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-10-16T14:47:51.311Z
+Checked: 2026-10-17T13:41:37.406Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -30,6 +30,7 @@ None tonight.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Microsoft Disability Scholarship](https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [INCIGHT Scholarship](https://www.incight.org/offerings/scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [GSBA Scholarship Fund](https://thegsba.org/scholarship-fund-2/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Burger King Scholars](https://scholarshipamerica.org/scholarship/burgerking/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Jack Kent Cooke College Scholarship Program](https://www.jkcf.org/our-scholarships/college-scholarship-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [American Indian College Fund Full Circle Scholarship](https://collegefund.org/students/scholarships/college-students/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -45,6 +46,7 @@ None tonight.
 - [Sub Pop Loser Scholarship](https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington State Fair Foundation Blue Ribbon Scholarships](https://www.thefair.com/foundation/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [WSU General Scholarship Application](https://financialaid.wsu.edu/getting-started/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Washington State Opportunity Scholarship — Baccalaureate](https://waopportunityscholarship.org/applicants/baccalaureate/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [YVC Foundation General Scholarship](https://yvcc.edu/foundation/scholarships-awards-faq.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington Apple Education Foundation Scholarships](https://scholarships.waef.org/apply) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Eastern Washington University Scholarship Consideration](https://www.ewu.edu/apply/financial-aid-scholarships-office/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -78,7 +80,6 @@ None tonight.
 
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link did not return a working page. Check result: 403.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
-- [GSBA Scholarship Fund](https://thegsba.org/scholarship-fund-2/) — Official link could not be checked. Check result: error.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.
