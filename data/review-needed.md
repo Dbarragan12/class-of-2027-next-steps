@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-10-17T13:41:37.406Z
+Checked: 2026-10-18T13:58:05.954Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -46,7 +46,6 @@ None tonight.
 - [Sub Pop Loser Scholarship](https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington State Fair Foundation Blue Ribbon Scholarships](https://www.thefair.com/foundation/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [WSU General Scholarship Application](https://financialaid.wsu.edu/getting-started/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Washington State Opportunity Scholarship — Baccalaureate](https://waopportunityscholarship.org/applicants/baccalaureate/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [YVC Foundation General Scholarship](https://yvcc.edu/foundation/scholarships-awards-faq.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington Apple Education Foundation Scholarships](https://scholarships.waef.org/apply) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Eastern Washington University Scholarship Consideration](https://www.ewu.edu/apply/financial-aid-scholarships-office/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
