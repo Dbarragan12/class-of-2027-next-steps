@@ -1,7 +1,48 @@
 {
-  "updatedAt": "2026-10-20T15:00:29.045Z",
+  "updatedAt": "2026-10-21T15:11:12.501Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [],
-  "reviewCount": 74
+  "changes": [
+    {
+      "name": "Truman D. Picard Scholarship",
+      "organization": "Intertribal Timber Council",
+      "source": "https://www.itcnet.org/about_us/scholarships.html",
+      "checkedAt": "2026-10-21",
+      "fields": [
+        {
+          "field": "deadline",
+          "before": null,
+          "after": "2027-01-08"
+        },
+        {
+          "field": "status",
+          "before": "Expected — last year's information",
+          "after": "Confirmed for 2027"
+        },
+        {
+          "field": "expectedWindow",
+          "before": "The site is built from 2025–26 planning data. The prior deadline was March 20; confirm the next cycle, award, and documentation requirements.",
+          "after": "Confirmed deadline: January 8, 2027."
+        }
+      ],
+      "evidence": [
+        {
+          "field": "deadline",
+          "value": "2027-01-08",
+          "why": "Submission Incentive: Complete applications received by Friday, January 8, 2027, 5:00 p.m. PT will earn one (1) additional point toward the final application score (maximum score: 25 points). Complete the form online and upload all req"
+        },
+        {
+          "field": "status",
+          "value": "Confirmed for 2027",
+          "why": "The official source contains an unambiguous current-cycle deadline or rolling status."
+        },
+        {
+          "field": "expectedWindow",
+          "value": "Confirmed deadline: January 8, 2027.",
+          "why": "Summary generated only from the confirmed dates found on the official source."
+        }
+      ]
+    }
+  ],
+  "reviewCount": 73
 }

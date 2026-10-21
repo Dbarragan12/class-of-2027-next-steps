@@ -1,12 +1,12 @@
 # Scholarship source review
 
-Checked: 2026-10-20T15:00:29.045Z
+Checked: 2026-10-21T15:11:12.501Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
 ## Updated automatically from an official source
 
-None tonight.
+- [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — Updated deadline, status, expectedWindow. Check result: updated.
 
 ## Needs a person to review the official source
 
@@ -25,7 +25,6 @@ None tonight.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Horatio Alger State Scholarship](https://horatioalger.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Microsoft Disability Scholarship](https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
