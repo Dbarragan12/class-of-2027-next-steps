@@ -1,12 +1,12 @@
 # Scholarship source review
 
-Checked: 2026-10-21T15:11:12.501Z
+Checked: 2026-10-22T15:12:32.962Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
 ## Updated automatically from an official source
 
-- [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — Updated deadline, status, expectedWindow. Check result: updated.
+None tonight.
 
 ## Needs a person to review the official source
 
@@ -54,6 +54,7 @@ The nightly system checks only scholarships already in the public list. It may u
 - [Toppenish-Wapato Dollars for Scholars](https://toppenish-wapato.dollarsforscholars.org/index.php?section=chapterWebsite&action=main&fwID=207) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Yakima Valley Construction Federation Scholarship](https://bigfuture.collegeboard.org/scholarships/yakima-valley-construction-federation-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Yakama Nation Higher Education Scholarship](https://yakama.com/programs/higher-education-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Stephen J. Brady Stop Hunger Scholarship](https://www.us.stop-hunger.org/grants/youth-scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [NHS Scholarship](https://www.nationalhonorsociety.org/the-nhs-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [The Gates Scholarship](https://www.thegatesscholarship.org/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -80,7 +81,6 @@ The nightly system checks only scholarships already in the public list. It may u
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
-- [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
 - [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — Official link did not return a working page. Check result: 429.
