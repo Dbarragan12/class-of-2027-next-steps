@@ -1,58 +1,7 @@
 {
-  "updatedAt": "2026-10-23T15:00:26.660Z",
+  "updatedAt": "2026-10-24T13:59:17.957Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [
-    {
-      "name": "Washington State Governors' Scholarship for Foster Youth",
-      "organization": "College Success Foundation",
-      "source": "https://collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/",
-      "checkedAt": "2026-10-23",
-      "fields": [
-        {
-          "field": "url",
-          "before": "https://www.collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/",
-          "after": "https://collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/"
-        }
-      ],
-      "evidence": [
-        {
-          "field": "url",
-          "value": "https://collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/",
-          "why": "The existing official link redirected to this page on the same sponsor domain."
-        }
-      ]
-    },
-    {
-      "name": "Headway’s Book Lovers Scholarship",
-      "organization": "Headway",
-      "source": "https://makeheadway.com/scholarship/",
-      "checkedAt": "2026-10-23",
-      "fields": [
-        {
-          "field": "deadline",
-          "before": "2026-09-15",
-          "after": "2027-09-15"
-        },
-        {
-          "field": "expectedWindow",
-          "before": "Open now; deadline September 15, 2026 at 3 p.m. Central.",
-          "after": "Confirmed deadline: September 15, 2027."
-        }
-      ],
-      "evidence": [
-        {
-          "field": "deadline",
-          "value": "2027-09-15",
-          "why": "5, 2027 Application format: Essay OR video Application deadline: September 15, 2027 Past contests winners Niki Lin Victory date: 2024-11 Winning this competition has been a transformative experience , reaffirming my commitment to becoming"
-        },
-        {
-          "field": "expectedWindow",
-          "value": "Confirmed deadline: September 15, 2027.",
-          "why": "Summary generated only from the confirmed dates found on the official source."
-        }
-      ]
-    }
-  ],
-  "reviewCount": 72
+  "changes": [],
+  "reviewCount": 73
 }
