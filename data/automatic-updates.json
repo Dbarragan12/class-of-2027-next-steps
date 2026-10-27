@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-10-26T16:46:04.797Z",
+  "updatedAt": "2026-10-27T15:50:59.047Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [
-    {
-      "name": "Washington State Opportunity Scholarship — Career & Technical",
-      "organization": "Washington State Opportunity Scholarship",
-      "source": "https://waopportunityscholarship.org/applicants/career-technical/",
-      "checkedAt": "2026-10-26",
-      "fields": [
-        {
-          "field": "opens",
-          "before": "2026-09-29",
-          "after": "2027-03-17"
-        },
-        {
-          "field": "expectedWindow",
-          "before": "Winter–spring 2026–27 cycle opens September 29",
-          "after": "Applications open March 17, 2027; the official source does not show one unambiguous deadline yet."
-        }
-      ],
-      "evidence": [
-        {
-          "field": "opens",
-          "value": "2027-03-17",
-          "why": "FAQs The Career & Technical Scholarship application opens March 17, 2027 for funding beginning fall 2027. Career & Technical Scholarship (CTS) 101 CTS is one of three pathways to high-demand, living-wage careers in Washington state o"
-        },
-        {
-          "field": "expectedWindow",
-          "value": "Applications open March 17, 2027; the official source does not show one unambiguous deadline yet.",
-          "why": "Summary generated only from the confirmed dates found on the official source."
-        }
-      ]
-    }
-  ],
-  "reviewCount": 72
+  "changes": [],
+  "reviewCount": 71
 }

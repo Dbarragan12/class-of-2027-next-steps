@@ -1,12 +1,12 @@
 # Scholarship source review
 
-Checked: 2026-10-26T16:46:04.797Z
+Checked: 2026-10-27T15:50:59.047Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
 ## Updated automatically from an official source
 
-- [Washington State Opportunity Scholarship — Career & Technical](https://waopportunityscholarship.org/applicants/career-technical/) — Updated opens, expectedWindow. Check result: updated.
+None tonight.
 
 ## Needs a person to review the official source
 
@@ -71,7 +71,6 @@ The nightly system checks only scholarships already in the public list. It may u
 - [Toppenish School District Administration Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Women in Financial Markets High School Scholarship](https://womeninfinancialmarkets.org/advance/programs/high-school-scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [United States Senate Youth Program](https://www.awsleaders.org/senate-youth) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Headway’s Book Lovers Scholarship](https://makeheadway.com/scholarship/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [nixit $1,000 Scholarship Program](https://nixit.com/pages/scholarship-program) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 
 ## Link unavailable or check failed
