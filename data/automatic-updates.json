@@ -1,7 +1,38 @@
 {
-  "updatedAt": "2026-10-27T15:50:59.047Z",
+  "updatedAt": "2026-10-28T16:35:17.037Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [],
+  "changes": [
+    {
+      "name": "NCWIT Aspirations in Computing High School Award",
+      "organization": "Aspirations in Computing / NCWIT",
+      "source": "https://www.aspirations.org/award-programs/aic-high-school-award",
+      "checkedAt": "2026-10-28",
+      "fields": [
+        {
+          "field": "deadline",
+          "before": "2026-10-27",
+          "after": "2026-10-28"
+        },
+        {
+          "field": "expectedWindow",
+          "before": "Application opens September 1 and closes October 27, 2026 at 10:00 p.m. Eastern. An optional educator endorsement is due November 5.",
+          "after": "Confirmed deadline: October 28, 2026."
+        }
+      ],
+      "evidence": [
+        {
+          "field": "deadline",
+          "value": "2026-10-28",
+          "why": "dline has been EXTENDED by 24 hours. The new application deadline is Wednesday, October 28, 2026, at 10:00 p.m. ET. ​ Encourage a student to apply | Spread the word about Aspirations in Computing. ​ Need Application Help? Watch our Application"
+        },
+        {
+          "field": "expectedWindow",
+          "value": "Confirmed deadline: October 28, 2026.",
+          "why": "Summary generated only from the confirmed dates found on the official source."
+        }
+      ]
+    }
+  ],
   "reviewCount": 71
 }
