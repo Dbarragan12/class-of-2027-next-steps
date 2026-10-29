@@ -1,38 +1,38 @@
 {
-  "updatedAt": "2026-10-28T16:35:17.037Z",
+  "updatedAt": "2026-10-29T16:53:25.312Z",
   "mode": "existing-records-only",
   "recordCount": 82,
   "changes": [
     {
-      "name": "NCWIT Aspirations in Computing High School Award",
-      "organization": "Aspirations in Computing / NCWIT",
-      "source": "https://www.aspirations.org/award-programs/aic-high-school-award",
-      "checkedAt": "2026-10-28",
+      "name": "Washington State Fair Foundation Blue Ribbon Scholarships",
+      "organization": "Washington State Fair Foundation",
+      "source": "https://www.thefair.com/foundation/scholarships/",
+      "checkedAt": "2026-10-29",
       "fields": [
         {
           "field": "deadline",
-          "before": "2026-10-27",
-          "after": "2026-10-28"
+          "before": null,
+          "after": "2027-02-01"
         },
         {
           "field": "expectedWindow",
-          "before": "Application opens September 1 and closes October 27, 2026 at 10:00 p.m. Eastern. An optional educator endorsement is due November 5.",
-          "after": "Confirmed deadline: October 28, 2026."
+          "before": "The program opens annually on December 1. The prior cycle closed February 2, 2026; use February 2, 2027 as a planning estimate until the new deadline is posted.",
+          "after": "Confirmed deadline: February 1, 2027."
         }
       ],
       "evidence": [
         {
           "field": "deadline",
-          "value": "2026-10-28",
-          "why": "dline has been EXTENDED by 24 hours. The new application deadline is Wednesday, October 28, 2026, at 10:00 p.m. ET. ​ Encourage a student to apply | Spread the word about Aspirations in Computing. ​ Need Application Help? Watch our Application"
+          "value": "2027-02-01",
+          "why": "in person or by mail to be eligible. Online application closes on February 1, 2027 , and art is due to be delivered to the Washington State Fair Foundation by March 10, 2026 . Entries should showcase the uniqueness of Washington State – i.e."
         },
         {
           "field": "expectedWindow",
-          "value": "Confirmed deadline: October 28, 2026.",
+          "value": "Confirmed deadline: February 1, 2027.",
           "why": "Summary generated only from the confirmed dates found on the official source."
         }
       ]
     }
   ],
-  "reviewCount": 71
+  "reviewCount": 72
 }
