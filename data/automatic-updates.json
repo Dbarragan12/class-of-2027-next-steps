@@ -1,38 +1,7 @@
 {
-  "updatedAt": "2026-10-29T16:53:25.312Z",
+  "updatedAt": "2026-10-30T16:40:40.548Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [
-    {
-      "name": "Washington State Fair Foundation Blue Ribbon Scholarships",
-      "organization": "Washington State Fair Foundation",
-      "source": "https://www.thefair.com/foundation/scholarships/",
-      "checkedAt": "2026-10-29",
-      "fields": [
-        {
-          "field": "deadline",
-          "before": null,
-          "after": "2027-02-01"
-        },
-        {
-          "field": "expectedWindow",
-          "before": "The program opens annually on December 1. The prior cycle closed February 2, 2026; use February 2, 2027 as a planning estimate until the new deadline is posted.",
-          "after": "Confirmed deadline: February 1, 2027."
-        }
-      ],
-      "evidence": [
-        {
-          "field": "deadline",
-          "value": "2027-02-01",
-          "why": "in person or by mail to be eligible. Online application closes on February 1, 2027 , and art is due to be delivered to the Washington State Fair Foundation by March 10, 2026 . Entries should showcase the uniqueness of Washington State – i.e."
-        },
-        {
-          "field": "expectedWindow",
-          "value": "Confirmed deadline: February 1, 2027.",
-          "why": "Summary generated only from the confirmed dates found on the official source."
-        }
-      ]
-    }
-  ],
+  "changes": [],
   "reviewCount": 72
 }
