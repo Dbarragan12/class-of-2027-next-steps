@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-10-30T16:40:40.548Z
+Checked: 2026-10-31T15:42:17.790Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -17,7 +17,6 @@ None tonight.
 - [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Coca-Cola Scholars Program Scholarship](https://www.coca-colascholarsfoundation.org/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Washington State Opportunity Scholarship — Career & Technical](https://waopportunityscholarship.org/applicants/career-technical/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -43,8 +42,8 @@ None tonight.
 - [WSADA Bright Future Scholarship](https://wsada.org/community/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [BIAW and WHBF Student Scholarship](https://apply.biaw.com/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Sub Pop Loser Scholarship](https://www.subpop.com/news/2026/02/13/sub_pop_loser_scholarship_feb_2026) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Washington State Fair Foundation Blue Ribbon Scholarships](https://www.thefair.com/foundation/scholarships/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [WSU General Scholarship Application](https://financialaid.wsu.edu/getting-started/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Washington State Opportunity Scholarship — Baccalaureate](https://waopportunityscholarship.org/applicants/baccalaureate/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [YVC Foundation General Scholarship](https://yvcc.edu/foundation/scholarships-awards-faq.php) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Washington Apple Education Foundation Scholarships](https://scholarships.waef.org/apply) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Eastern Washington University Scholarship Consideration](https://www.ewu.edu/apply/financial-aid-scholarships-office/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -53,6 +52,7 @@ None tonight.
 - [Toppenish Lions Club Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Toppenish-Wapato Dollars for Scholars](https://toppenish-wapato.dollarsforscholars.org/index.php?section=chapterWebsite&action=main&fwID=207) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Yakima Valley Construction Federation Scholarship](https://bigfuture.collegeboard.org/scholarships/yakima-valley-construction-federation-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Yakama Nation Higher Education Scholarship](https://yakama.com/programs/higher-education-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Stephen J. Brady Stop Hunger Scholarship](https://www.us.stop-hunger.org/grants/youth-scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [NHS Scholarship](https://www.nationalhonorsociety.org/the-nhs-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -71,7 +71,6 @@ None tonight.
 - [Toppenish School District Administration Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Women in Financial Markets High School Scholarship](https://womeninfinancialmarkets.org/advance/programs/high-school-scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [United States Senate Youth Program](https://www.awsleaders.org/senate-youth) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [nixit $1,000 Scholarship Program](https://nixit.com/pages/scholarship-program) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 
 ## Link unavailable or check failed
 
@@ -79,9 +78,9 @@ None tonight.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
-- [Yakama Nation Higher Education Scholarship](https://yakama.com/programs/higher-education-program/) — Official link could not be checked. Check result: error.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
 - [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — Official link did not return a working page. Check result: 429.
 - [Ella Katherine Harris Memorial Scholarship for Bakers](https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/) — Official link did not return a working page. Check result: 429.
 - [AvaCare Medical Scholarship](https://www.avacaremedical.com/scholarship) — Official link did not return a working page. Check result: 403.
+- [nixit $1,000 Scholarship Program](https://nixit.com/pages/scholarship-program) — Official link did not return a working page. Check result: 404.
