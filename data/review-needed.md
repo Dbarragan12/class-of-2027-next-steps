@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-02T20:19:04.069Z
+Checked: 2026-11-03T17:47:44.886Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -17,7 +17,6 @@ None tonight.
 - [George & Susan Carter Scholarship](https://washingtonwinefoundation.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Dairy Strong Scholarship](https://www.wadairy.org/dairy-strong-scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Coca-Cola Scholars Program Scholarship](https://www.coca-colascholarsfoundation.org/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Washington State Opportunity Scholarship — Career & Technical](https://waopportunityscholarship.org/applicants/career-technical/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
