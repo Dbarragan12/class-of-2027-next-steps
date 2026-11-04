@@ -1,12 +1,12 @@
 # Scholarship source review
 
-Checked: 2026-11-03T17:47:44.886Z
+Checked: 2026-11-04T17:57:51.792Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
 ## Updated automatically from an official source
 
-None tonight.
+- [Amazon Future Engineer Scholarship](https://www.amazonfutureengineer.com/scholarships) — Updated opens, deadline, status, expectedWindow. Check result: updated.
 
 ## Needs a person to review the official source
 
@@ -24,6 +24,7 @@ None tonight.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Horatio Alger State Scholarship](https://horatioalger.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [Washington State Governors' Scholarship for Foster Youth](https://collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Microsoft Disability Scholarship](https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
@@ -33,7 +34,6 @@ None tonight.
 - [Jack Kent Cooke College Scholarship Program](https://www.jkcf.org/our-scholarships/college-scholarship-program/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [American Indian College Fund Full Circle Scholarship](https://collegefund.org/students/scholarships/college-students/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Smart Choices Scholarship](https://www.wiaa.com/smart-choices-scholarship-welcome/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Amazon Future Engineer Scholarship](https://www.amazonfutureengineer.com/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [HSF Scholar Program](https://www.hsf.net/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [APIA Scholarship Program](https://apiascholars.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [American Indian Endowed Scholarship](https://wsac.wa.gov/american-indian-endowed-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
