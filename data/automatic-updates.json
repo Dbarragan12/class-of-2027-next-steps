@@ -1,58 +1,7 @@
 {
-  "updatedAt": "2026-11-04T17:57:51.792Z",
+  "updatedAt": "2026-11-05T17:58:17.355Z",
   "mode": "existing-records-only",
   "recordCount": 82,
-  "changes": [
-    {
-      "name": "Amazon Future Engineer Scholarship",
-      "organization": "Amazon Future Engineer",
-      "source": "https://www.amazonfutureengineer.com/scholarships",
-      "checkedAt": "2026-11-04",
-      "fields": [
-        {
-          "field": "opens",
-          "before": null,
-          "after": "2026-11-03"
-        },
-        {
-          "field": "deadline",
-          "before": null,
-          "after": "2027-01-05"
-        },
-        {
-          "field": "status",
-          "before": "Expected — last year's information",
-          "after": "Confirmed for 2027"
-        },
-        {
-          "field": "expectedWindow",
-          "before": "Planning estimate based on the prior cycle, which opened November 10, 2025 and closed January 15, 2026. Confirm the 2027 dates and requirements when posted.",
-          "after": "Applications open November 3, 2026 and close January 5, 2027."
-        }
-      ],
-      "evidence": [
-        {
-          "field": "opens",
-          "value": "2026-11-03",
-          "why": "Systems or Related field Important Dates Application Opens November 3, 2026 Application Deadline January 5, 2027 Teacher Recommendation Deadline January 8, 2027 Finalists Notified - Assessment instructions sent Mid - January 2"
-        },
-        {
-          "field": "deadline",
-          "value": "2027-01-05",
-          "why": "ates Application Opens November 3, 2026 Application Deadline January 5, 2027 Teacher Recommendation Deadline January 8, 2027 Finalists Notified - Assessment instructions sent Mid - January 2027 Assessment Deadline (New this year)"
-        },
-        {
-          "field": "status",
-          "value": "Confirmed for 2027",
-          "why": "The official source contains an unambiguous current-cycle deadline or rolling status."
-        },
-        {
-          "field": "expectedWindow",
-          "value": "Applications open November 3, 2026 and close January 5, 2027.",
-          "why": "Summary generated only from the confirmed dates found on the official source."
-        }
-      ]
-    }
-  ],
-  "reviewCount": 70
+  "changes": [],
+  "reviewCount": 69
 }
