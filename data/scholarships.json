@@ -335,11 +335,11 @@
       "award": "Amount varies by cycle",
       "eligibility": "High school seniors or college students who work or have worked as farmworkers, or whose parent or guardian has; applicants must show financial need and plan full-time postsecondary enrollment.",
       "url": "https://www.seamar.org/scholarship-farm-worker.html",
-      "status": "Confirmed for 2027",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2026-04-15",
-      "expectedWindow": "The site is built from 2025–26 planning data. Sea Mar has offered this annually, usually January–April; confirm the 2026–27 application and deadline before applying.",
+      "expectedWindow": "The sponsor's linked page still displays an old application cycle. No verified 2027–28 deadline as of November 9, 2026; wait for the new announcement.",
       "tags": [
         "Washington",
         "Farmworker",
@@ -353,19 +353,21 @@
         "lowincome"
       ],
       "whyFit": "A strong recurring option for Toppenish farmworker families. The sponsor page is currently stale, so the prior date is planning information—not a guaranteed deadline.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "LEAP Rise Above Scholarship",
       "organization": "Sea Mar Community Health Centers / LEAP",
-      "award": "$2,500 in the prior cycle",
-      "eligibility": "Students who demonstrate advocacy, accountability, perseverance, and commitment to improving their community; the prior program information said citizenship status was not a barrier.",
+      "award": "$2,500 in the 2026–27 college-year cycle",
+      "eligibility": "Prior 2026–27 rules: Latino/a high school/GED or college graduates with financial need, community involvement and plans for at least 10 credits per quarter. Immigration status does not affect eligibility; verify the next cycle's rules.",
       "url": "https://seamar.org/scholarship-leap1.html",
-      "status": "Confirmed for 2027",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2026-04-15",
-      "expectedWindow": "The site is built from 2025–26 planning data. This recurring program previously closed April 15; confirm the new application, rules, and deadline.",
+      "expectedWindow": "The official page still lists January 1–April 15, 2026 for the 2026–27 college year. The 2027–28 application for current seniors is not yet verified.",
       "tags": [
         "Washington",
         "Leadership / service",
@@ -376,8 +378,10 @@
         "lowincome",
         "leadership"
       ],
-      "whyFit": "Toppenish students can use the prior cycle to prepare, but must confirm that the 2026–27 program and eligibility language remain the same.",
-      "lastChecked": "2026-11-08"
+      "whyFit": "Relevant to eligible Latino/a Toppenish graduates; the 2027–28 college-year cycle is not yet published.",
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Sí Se Puede Scholarship",
@@ -411,13 +415,13 @@
       "name": "Horatio Alger State Scholarship",
       "organization": "Horatio Alger Association",
       "award": "$10,000 in the prior cycle",
-      "eligibility": "U.S. high school seniors who show financial need, integrity, perseverance, and commitment to completing a bachelor's degree after overcoming significant adversity.",
-      "url": "https://horatioalger.org/scholarships/",
-      "status": "Expected — last year's information",
+      "eligibility": "The current general National Scholarship is for high school juniors. Senior applicants must use an eligible specialized college-specific program; a general Washington senior State Scholarship is not verified.",
+      "url": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+      "status": "Closed / archive",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2026-03-01",
-      "expectedWindow": "The site is built from 2025–26 planning data. This long-running program previously closed March 1; confirm the current state-scholarship cycle.",
+      "expectedWindow": "Removed from the Class of 2027 active list: the broad senior eligibility was misleading. Check the sponsor's separate senior programs for specific eligible colleges.",
       "tags": [
         "Washington",
         "Four-year",
@@ -430,7 +434,9 @@
         "leadership"
       ],
       "whyFit": "Toppenish students are geographically eligible for the state program when they meet the sponsor's financial, academic, citizenship, and degree-plan requirements.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "McDonald's HACER National Scholarship",
@@ -1142,16 +1148,16 @@
       "name": "Washington State Fair Foundation Blue Ribbon Scholarships",
       "organization": "Washington State Fair Foundation",
       "gpaMin": 2.7,
-      "award": "One application matches students to multiple awards; the foundation awards about $250,000 annually. The Korum Family Arts Scholarship includes two $2,500 awards.",
+      "award": "Multiple awards, including $5,000 Fair Chance scholarships; $260,000 awarded annually",
       "eligibility": "Washington residents graduating from high school or adult learners with at least a 2.7 GPA who plan an accredited two- or four-year college, university, or trade school and work, volunteer, or participate in a school activity at least eight hours per month.",
       "url": "https://www.thefair.com/foundation/scholarships/",
       "status": "Confirmed for 2027",
-      "opens": null,
+      "opens": "2026-12-01",
       "deadline": "2027-02-01",
       "lastYearDeadline": "2026-02-02",
       "expectedOpen": "2026-12-01",
       "openLabel": "December 2026",
-      "expectedWindow": "Confirmed deadline: February 1, 2027.",
+      "expectedWindow": "Applications open December 1, 2026 and close February 1, 2027. One application matches eligible awards, including trade-school scholarships.",
       "tags": [
         "Washington",
         "Four-year",
@@ -1167,7 +1173,9 @@
       ],
       "whyFit": "Toppenish seniors qualify geographically as Washington residents, and one application can match them to several awards, including trade-school options. Students creating visual art should also review the Korum Family Arts Scholarship within this program.",
       "needs": "Online application, unofficial transcript, activity/work/service history, and two recommendations—one academic and one from an employer, volunteer contact, or school-activity advisor. The Korum arts award also requires the current art entry.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "WSU General Scholarship Application",
@@ -1175,7 +1183,7 @@
       "award": "One application provides consideration for hundreds of WSU scholarships; award amounts vary",
       "eligibility": "Incoming or continuing Washington State University students. Individual scholarships consider academics, major, hometown, financial need, leadership, service, employment, and other qualifications.",
       "url": "https://financialaid.wsu.edu/getting-started/",
-      "status": "Confirmed for 2027",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2026-01-31",
@@ -1196,7 +1204,9 @@
       ],
       "whyFit": "Any Toppenish student considering a WSU campus should complete this application because it matches applicants to hundreds of university, college, and department scholarships.",
       "needs": "WSU application/account, academic and activity history, financial circumstances, career goals, community service, and short written responses. The prior GEAR UP guide used eight responses of up to 110 words each.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Washington State Opportunity Scholarship — Baccalaureate",
@@ -1353,7 +1363,7 @@
       "award": "$1,000 in the prior posted cycle",
       "eligibility": "The prior local award was for female Toppenish High School seniors showing citizenship, leadership, academics, service, and plans for further education or training, with extra consideration for a future educator.",
       "url": "https://ths.toppenish.wednet.edu/",
-      "status": "Confirmed for 2027",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2025-05-02",
@@ -1374,7 +1384,9 @@
       ],
       "whyFit": "This is specifically designed for Toppenish High School students, making it a high-priority local opportunity if the chapter offers it again.",
       "needs": "Ask the THS College & Career Center for the current paper or digital application. Prepare a transcript, activity/service history, education plans, and any requested recommendation or essay.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Toppenish Lions Club Scholarship",
@@ -1382,7 +1394,7 @@
       "award": "Up to three $1,000 awards in the prior posted cycle",
       "eligibility": "The prior local award was for college-bound Toppenish High School seniors and considered financial need, GPA, school activities, and community service.",
       "url": "https://ths.toppenish.wednet.edu/",
-      "status": "Confirmed for 2027",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2025-05-12",
@@ -1403,21 +1415,23 @@
       ],
       "whyFit": "This prior award was reserved for Toppenish seniors, so it may offer much better odds than a national scholarship if it returns.",
       "needs": "Prior requirements included a letter of application plus information about financial need, academics, activities, and community service. Obtain the current application from THS.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Toppenish-Wapato Dollars for Scholars",
       "organization": "Toppenish-Wapato Dollars for Scholars",
       "award": "$2,500 in the prior posted cycle",
-      "eligibility": "Students connected to the Toppenish or Wapato communities who have a postsecondary plan at an accredited institution and can demonstrate community service and citizenship. Current criteria may vary.",
-      "url": "https://toppenish-wapato.dollarsforscholars.org/index.php?section=chapterWebsite&action=main&fwID=207",
-      "status": "Confirmed for 2027",
+      "eligibility": "Graduating seniors in the Toppenish or Wapato school districts, including alternative schools; complete the chapter's local application and current matching requirements.",
+      "url": "https://toppenish-wapato.dollarsforscholars.org/index.php?action=student_parent&fwID=207&section=chapterWebsite",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2025-05-05",
       "expectedOpen": "2027-02-01",
       "openLabel": "February 2027",
-      "expectedWindow": "Prior GEAR UP information listed a May 5, 2025 deadline. Students can create a Dollars for Scholars profile now, then confirm the 2027 local application and deadline.",
+      "expectedWindow": "The chapter publishes an annual February 1–May 1 window in the student's graduation year. Plan for February 1–May 1, 2027 and confirm the local award in your ChapterNet account; these are recurring dates, not a separately announced 2027 cycle.",
       "tags": [
         "Toppenish-only",
         "Yakima Valley",
@@ -1433,7 +1447,9 @@
       ],
       "whyFit": "This hometown scholarship specifically supports students from the Toppenish and Wapato communities.",
       "needs": "Create a Student and Parent Login profile, complete education and community-service information, and submit any current transcript, references, essays, or local matching questions.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Yakima Valley Construction Federation Scholarship",
@@ -1441,7 +1457,7 @@
       "award": "Award amount varies",
       "eligibility": "Central Washington high school graduates preparing for a construction-industry career and attending an eligible college, university, or technical school. Students must confirm the current geographic and enrollment requirements.",
       "url": "https://bigfuture.collegeboard.org/scholarships/yakima-valley-construction-federation-scholarship",
-      "status": "Confirmed for 2027",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2026-04-01",
@@ -1459,7 +1475,9 @@
       ],
       "whyFit": "Toppenish students pursuing construction trades or construction-related college programs may qualify as Central Washington graduates.",
       "needs": "Current sponsor application, construction career and school plans, transcript or enrollment information, and any requested supporting documents.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Yakama Nation Higher Education Scholarship",
@@ -1467,7 +1485,7 @@
       "award": "Scholarships and grants; amounts vary",
       "eligibility": "Enrolled members of the Confederated Tribes and Bands of the Yakama Nation who have graduated from high school or earned a GED and are admitted to a regionally accredited college or university. Current program rules must be confirmed.",
       "url": "https://yakama.com/programs/higher-education-program/",
-      "status": "Confirmed for 2027",
+      "status": "Expected — last year's information",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2025-07-01",
@@ -1488,7 +1506,9 @@
       ],
       "whyFit": "This is a highly relevant local source of support for enrolled Yakama students and is administered in Toppenish.",
       "needs": "Current Yakama Nation application, tribal enrollment verification, high school diploma or GED information, admission to an accredited institution, transcript, financial-aid documents, and any program forms.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "P.E.O. STAR Scholarship",
@@ -2170,7 +2190,247 @@
       "whyFit": "A short writing opportunity for a senior who is 18+ and has been accepted to a full-time undergraduate program, especially one interested in sustainability or health advocacy.",
       "needs": "Submit a 300-word essay answering one of the sponsor’s sustainability or menstrual-health prompts and complete the online form. Review the sponsor’s permission to publish submitted work.",
       "lastChecked": "2026-10-30"
+    },
+    {
+      "name": "Leadership 1000 Scholarship",
+      "organization": "College Success Foundation",
+      "award": "Up to $5,000 per year, renewable for up to four years",
+      "eligibility": "Washington high school seniors graduating by June 2027 with a 2.5+ GPA, at least one year of Washington residency before college, and income within the sponsor's limits; pursue a bachelor's degree full time at an eligible Washington college.",
+      "url": "https://collegesuccessfoundation.org/scholarship/leadership-1000-scholarship/",
+      "opens": "2026-12-01",
+      "deadline": "2027-01-30",
+      "expectedWindow": "Apply by January 30, 2027; transcript and recommendation due February 5. A two-year-to-four-year transfer path is eligible. File FAFSA or WASFA.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "local",
+        "lowincome"
+      ],
+      "needs": "Online application and recommendation request by January 30; fall-term transcript and recommendation by February 5. Complete FAFSA or WASFA.",
+      "whyFit": "Washington seniors can apply; the sponsor explicitly includes Running Start and two-year transfer pathways.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "GE-Reagan Foundation Scholarship",
+      "organization": "Ronald Reagan Presidential Foundation & Institute",
+      "award": "$10,000 per year, renewable up to $40,000 total",
+      "eligibility": "U.S. citizen high school seniors graduating in winter 2026 or spring 2027, with a 3.0+ GPA, leadership and service, and plans for full-time study at an accredited U.S. four-year college in 2027–28.",
+      "url": "https://www.reaganfoundation.org/education/ge-reagan-foundation-scholarship",
+      "opens": "2026-10-12",
+      "deadline": "2027-01-07",
+      "expectedWindow": "Deadline: January 7, 2027 at noon Pacific (3 p.m. Eastern).",
+      "tags": [
+        "National",
+        "Four-year",
+        "Leadership / service"
+      ],
+      "fit": [
+        "leadership"
+      ],
+      "needs": "Activities, service and work history; leadership/service essay and goals statement. Semifinalists provide a transcript, recommendation, financial documents and values statement.",
+      "whyFit": "National opportunity for Toppenish seniors with strong leadership and service.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "WSSRA Future Educator Scholarships",
+      "organization": "Washington State School Retirees' Association",
+      "award": "$2,500 Foundation awards; $900/year renewable Handy awards; $2,000 Forrester awards",
+      "eligibility": "Washington high school seniors planning education careers in teaching, counseling, speech or occupational therapy, social work, or psychology. Gene Forrester awards require agricultural education at WSU.",
+      "url": "https://wssra.org/index.php/foundation/scholarships",
+      "opens": "2026-11-17",
+      "deadline": "2027-03-01",
+      "expectedWindow": "2027–28 listing opens November 17, 2026; sponsor confirms March 1, 2027 deadline. This is the high school scholarship, not the separate student-teaching award.",
+      "tags": [
+        "Washington",
+        "Four-year",
+        "Education"
+      ],
+      "fit": [
+        "local"
+      ],
+      "needs": "Complete the sponsor's online high school scholarship application; review its current document and recommendation requirements.",
+      "whyFit": "A statewide opportunity for future educators, including agricultural education students.",
+      "verificationSource": "https://washboard.wsac.wa.gov/Seeker/Scholarships/SearchResults.aspx?val=washington+state",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Point Foundation Flagship Scholarship",
+      "organization": "Point Foundation",
+      "award": "Up to $15,000; maximum four years of support",
+      "eligibility": "LGBTQ+ or ally high school seniors with a 3.3+ GPA planning full-time bachelor's study at an accredited nonprofit U.S. college in fall 2027; fully online programs are ineligible.",
+      "url": "https://pointfoundation.org/scholarships/flagship",
+      "opens": "2026-09-09",
+      "deadline": "2026-11-19",
+      "expectedWindow": "2027–28 Flagship application closes November 19, 2026 at 5 p.m. Pacific. Do not confuse this with the separate Access Scholarship.",
+      "tags": [
+        "National",
+        "LGBTQ+",
+        "Four-year"
+      ],
+      "fit": [
+        "lgbtq"
+      ],
+      "needs": "Create a new portal account and profile, submit the Flagship application, and save the confirmation. Semifinalists submit additional materials in January 2027.",
+      "whyFit": "Eligible Toppenish LGBTQ+ and ally seniors can apply nationally.",
+      "verificationSource": "https://webportalapp.com/sp/login/point_foundation_scholarship_applicationay28",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Taco Bell Foundation Live Más Scholarship",
+      "organization": "Taco Bell Foundation",
+      "award": "Award amounts vary; see current program terms",
+      "eligibility": "Legal residents of the 50 states or D.C., ages 16–26 at the deadline, planning or enrolled in an accredited two-year, four-year, vocational or trade program. Employees and nonemployees may apply.",
+      "url": "https://tacobellfoundation.org/live-mas-scholarship/eligibilityfaq/",
+      "opens": "2026-10-13",
+      "deadline": "2027-01-05",
+      "expectedWindow": "Deadline: January 5, 2027 at 5 p.m. Pacific. Funds support fall 2027 onward; financial need is considered for new applicants.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "Financial need"
+      ],
+      "fit": [
+        "everyone",
+        "lowincome"
+      ],
+      "needs": "Online application with a video or short essay about your passion and impact. No GPA, test scores, transcript or recommendation required; follow the current submission rules.",
+      "whyFit": "Includes trade and community-college pathways without a GPA cutoff.",
+      "verificationSource": "https://apply.mykaleidoscope.com/program/livemas2027",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "FFA Scholarships",
+      "organization": "National FFA Organization",
+      "award": "Amounts vary; one application for multiple scholarships",
+      "eligibility": "High school senior FFA members or FFA alumni in college pursuing a trade program, vocational certificate, two-year or four-year degree; individual award requirements vary.",
+      "url": "https://www.ffa.org/participate/grants-and-scholarships/scholarships/",
+      "opens": "2026-11-01",
+      "deadline": "2027-01-14",
+      "expectedWindow": "2027 applications opened November 1, 2026; deadline January 14, 2027. Decisions scheduled April 22.",
+      "tags": [
+        "National",
+        "Agriculture",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "ag"
+      ],
+      "needs": "Complete the National FFA scholarship application through the linked portal and review award-specific requirements.",
+      "whyFit": "Relevant to Toppenish FFA seniors pursuing college or career training.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Jackie Robinson Foundation Scholarship Award",
+      "organization": "Jackie Robinson Foundation",
+      "award": "Four-year scholarship and support; see current award details",
+      "eligibility": "Graduating high school seniors who are U.S. citizens, demonstrate financial need, academic achievement and service, and plan an approved U.S. four-year college; no more than 25% of college graduation credits may already be earned.",
+      "url": "https://jackierobinson.org/apply/",
+      "opens": "2026-09-01",
+      "deadline": "2027-01-14",
+      "expectedWindow": "Application, recommendation and CSS Profile due January 14, 2027 at 2 p.m. Pacific (5 p.m. Eastern). Running Start students must check the college-credit limit.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Financial need",
+        "Leadership / service"
+      ],
+      "fit": [
+        "lowincome",
+        "leadership"
+      ],
+      "needs": "Online application and essays, high school transcript, one adult recommendation, SAT or ACT scores from one test date, activities, household information and CSS Profile (JRF code 4248).",
+      "whyFit": "A national academic/service opportunity; athletics are not required. Check the college-credit limit before applying.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Ron Brown Scholar Program",
+      "organization": "Ron Brown Scholar Program",
+      "award": "$40,000 over four years ($10,000/year)",
+      "eligibility": "Black/African American high school seniors who are U.S. citizens or permanent residents, demonstrate financial need, academic achievement and service, and plan an accredited U.S. four-year college.",
+      "url": "https://ronbrown.org/ron-brown-scholarship/",
+      "opens": null,
+      "deadline": "2026-12-01",
+      "expectedWindow": "2027 competition: student application due December 1, 2026; recommendations and transcripts due December 15.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Financial need",
+        "Leadership / service"
+      ],
+      "fit": [
+        "lowincome",
+        "leadership"
+      ],
+      "needs": "Submit the online application early enough for counselors or teachers to provide recommendations and transcripts by December 15; follow current portal requirements.",
+      "whyFit": "A national opportunity for qualifying Black/African American Toppenish seniors.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "American Fire Sprinkler Association Scholarship Program",
+      "organization": "American Fire Sprinkler Association",
+      "award": "Five $1,000 awards",
+      "eligibility": "U.S. citizen or legal-resident high school seniors planning an accredited U.S. college, university or trade school; AFSA staff and national-board families are excluded. No GPA or income requirement.",
+      "url": "https://www.afsascholarship.org/high-school-scholarships/",
+      "opens": "2026-09-01",
+      "deadline": "2026-12-31",
+      "expectedWindow": "Entries accepted September 1–December 31, 2026. Sponsor labels the cutoff 12:59 p.m. CDT; apply before the final day because the December time-zone wording is ambiguous.",
+      "tags": [
+        "National",
+        "Four-year",
+        "Two-year",
+        "Trades",
+        "No essay"
+      ],
+      "fit": [
+        "everyone"
+      ],
+      "needs": "Complete the online entry form and eight-question quiz. One entry only; multiple entries are disqualified.",
+      "whyFit": "A short national scholarship contest that includes trade-school students.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     }
   ]
 }
-
