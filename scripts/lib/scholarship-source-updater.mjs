@@ -145,6 +145,7 @@ export function analyzeScholarshipSource({item,html,finalUrl=item.url,sharedSour
   const text=htmlToText(html);
   const context=findContext(item,text,title,finalUrl,sharedSource);
   const updates={},evidence=[],review=[];
+  if(item.autoUpdatePolicy === "review-only") return {updates,evidence,review:["Human-reviewed record: source changes require review before replacing verified details."],contentHash:createHash("sha256").update(text.slice(0,24000)).digest("hex")};
   if(!context){
     return {updates,evidence,review:["The checker could not isolate this scholarship on the official page."],contentHash:createHash("sha256").update(text.slice(0,24000)).digest("hex")};
   }
@@ -196,3 +197,4 @@ export function validateRoster(before,after){
   if(new Set(names).size!==names.length) throw new Error("Duplicate scholarship names detected. Automatic publishing is blocked.");
   return true;
 }
+
