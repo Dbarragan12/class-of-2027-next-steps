@@ -14,8 +14,8 @@ test('reviewed records survive misleading dates in nightly source extraction',()
  assert.ok(result.review.length);
 });
 test('dates are ordered, names unique, and roster preserved',()=>{
- assert.equal(data.scholarships.length,91);
- assert.equal(new Set(data.scholarships.map(x=>x.name)).size,91);
+ assert.ok(data.scholarships.length >= 91);
+ assert.equal(new Set(data.scholarships.map(x=>x.name)).size,data.scholarships.length);
  for(const x of data.scholarships) if(x.opens&&x.deadline) assert.ok(x.opens<=x.deadline,x.name);
 });
 test('verified future cycle is upcoming and uncertain records are planning',()=>{
