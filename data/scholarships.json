@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-09",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Confirmed opportunities use current sponsor information and a verified current-cycle deadline or rolling status. Recurring opportunities may appear as tentative planning cards—even when return is uncertain—when a dated sponsor or school-hosted prior-cycle source shows the opportunity existed. Tentative cards must identify the source cycle, clearly state that the opening, deadline, award, eligibility, and return are not guaranteed, and must never create calendar events. When a person verifies the new cycle and enters the current opening and deadline, the finder automatically changes the card to Open & accepting. Nightly checks preserve records and flag source changes for review; they never guess or confirm a deadline.",
   "scholarships": [
     {
@@ -24,7 +24,9 @@
         "lowincome"
       ],
       "whyFit": "Toppenish residents qualify because Toppenish is in Yakima County. This is the countywide Mollie Davis program—not Yakima Rotary's school-limited Academic or Vocational scholarships.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "YVC Vineyard & Winery Technology Scholarship",
@@ -58,7 +60,7 @@
       "gate": "Applicant must be the primary financial support for herself and at least one dependent.",
       "url": "https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html",
       "status": "Confirmed for 2027",
-      "opens": null,
+      "opens": "2026-08-01",
       "deadline": "2026-11-15",
       "lastYearDeadline": null,
       "expectedWindow": "Open now — applications are accepted August 1–November 15.",
@@ -74,7 +76,9 @@
         "lowincome"
       ],
       "whyFit": "Toppenish students are not excluded, but this is only for a student who supports dependents. It should be shared privately with students who may fit.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Horse Heaven Hills Wine Growers Scholarship",
@@ -191,7 +195,7 @@
       "opens": null,
       "deadline": "2026-09-30",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; closes 5 p.m. Eastern / 2 p.m. Pacific",
+      "expectedWindow": "The listed application deadline (2026-09-30) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "Washington",
         "Four-year"
@@ -211,9 +215,9 @@
       "url": "https://waopportunityscholarship.org/applicants/career-technical/",
       "status": "Confirmed for 2027",
       "opens": "2027-03-17",
-      "deadline": "2026-10-15",
+      "deadline": "2027-04-15",
       "lastYearDeadline": null,
-      "expectedWindow": "Applications open March 17, 2027; the official source does not show one unambiguous deadline yet.",
+      "expectedWindow": "Fall 2027 funding: apply March 17–April 15, 2027. Applications close at 9 p.m.; FAFSA or WASFA is also due April 15.",
       "tags": [
         "Washington",
         "Trades",
@@ -223,7 +227,10 @@
         "local"
       ],
       "whyFit": "Toppenish students qualify geographically as Washington residents; Yakima County also meets the Rural Jobs Initiative county rule. Each student still needs an eligible program and must meet income, financial-aid, and education-plan requirements.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "secondaryWindow": null,
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Elks Most Valuable Student Scholarship",
@@ -235,7 +242,7 @@
       "opens": null,
       "deadline": "2026-11-12",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now",
+      "expectedWindow": "Applications close November 12, 2026 at 11:59 p.m. Pacific.",
       "tags": [
         "Washington",
         "Four-year",
@@ -248,7 +255,9 @@
         "leadership"
       ],
       "whyFit": "Toppenish High School qualifies geographically because this is a national scholarship for U.S. high school seniors. Individual applicants must be U.S. citizens and plan a full-time four-year degree.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "QuestBridge National College Match",
@@ -276,11 +285,11 @@
       "award": "$3,250 in the 2026 cycle",
       "eligibility": "Washington high school seniors accepted to, or with an application pending at, an accredited college, community college, or technical college. U.S. citizenship or a green card is required; selection considers citizenship, achievement, activities, and financial need.",
       "url": "https://kellyfoundationwashington.org/",
-      "status": "Expected — last year's information",
+      "status": "Closed / archive",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2026-03-07",
-      "expectedWindow": "2027 application is not released yet. The official 2026 application was postmarked by March 7; the next date may change.",
+      "expectedWindow": "Program discontinued: the Kelly Foundation announced its dissolution in 2026 and is no longer accepting scholarship applications.",
       "tags": [
         "Washington",
         "Two-year",
@@ -292,7 +301,11 @@
         "lowincome"
       ],
       "whyFit": "Toppenish High School qualifies because the official application accepts high school seniors throughout Washington. Individual students must also meet the citizenship/green-card and postsecondary-application requirements.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "expectedOpen": null,
+      "needs": "No application is available. The foundation has ended the program.",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Albert Lee Wright Jr. Memorial Migrant Scholarship",
@@ -527,9 +540,9 @@
       "url": "https://www.itcnet.org/about_us/scholarships.html",
       "status": "Confirmed for 2027",
       "opens": null,
-      "deadline": "2027-01-08",
-      "lastYearDeadline": "2026-03-20",
-      "expectedWindow": "Confirmed deadline: January 8, 2027.",
+      "deadline": "2027-01-22",
+      "lastYearDeadline": null,
+      "expectedWindow": "Deadline: January 22, 2027 at 5 p.m. Pacific. Complete applications received by January 8 at 5 p.m. Pacific earn one additional scoring point; January 8 is an early-submission incentive, not the final deadline.",
       "tags": [
         "Washington",
         "Indigenous",
@@ -542,7 +555,9 @@
         "tribal"
       ],
       "whyFit": "Especially relevant for Yakama and other Native students interested in forestry, natural resources, or related careers.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "AISES Scholarships for Indigenous Students in STEM",
@@ -650,13 +665,13 @@
       "name": "Pride Foundation Scholarship",
       "organization": "Pride Foundation",
       "award": "Multiple awards; amounts vary",
-      "eligibility": "LGBTQIA+ students and allies from Washington and other eligible Northwest states who meet the current program's education and community criteria.",
-      "url": "https://pridefoundation.org/find-funding/scholarships/",
+      "eligibility": "LGBTQ+ or questioning students from Washington, Alaska, Idaho, Montana, or Oregon who meet the scholarship guidelines and pursue postsecondary education.",
+      "url": "https://pridefoundation.org/find-funding/scholarships/application/",
       "status": "Confirmed for 2027",
-      "opens": null,
+      "opens": "2026-10-11",
       "deadline": "2027-01-08",
-      "lastYearDeadline": "2026-01-09",
-      "expectedWindow": "Confirmed deadline: January 8, 2027.",
+      "lastYearDeadline": null,
+      "expectedWindow": "Applications close January 8, 2027 at 5 p.m. Pacific.",
       "tags": [
         "Washington",
         "LGBTQ+",
@@ -671,19 +686,21 @@
         "leadership"
       ],
       "whyFit": "A recurring Northwest scholarship program open to eligible Toppenish students; use disclosure-safe filters on shared devices.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "GSBA Scholarship Fund",
       "organization": "GSBA Scholarship Fund",
-      "award": "$3,000–$7,500 in the prior cycle",
-      "eligibility": "Washington LGBTQIA+ students and allies who demonstrate leadership, academic ability, and involvement in school or community.",
+      "award": "Award amounts vary; see the current application",
+      "eligibility": "Washington residents pursuing an eligible certificate or degree at an accredited U.S. school; preference goes to LGBTQ+ students, LGBTQ+ family members, and allies active in supporting the community.",
       "url": "https://thegsba.org/scholarship-fund-2/",
-      "status": "Expected — last year's information",
+      "status": "Confirmed for 2027",
       "opens": null,
-      "deadline": null,
-      "lastYearDeadline": "2026-01-10",
-      "expectedWindow": "The site is built from 2025–26 planning data. The prior deadline was January 10; confirm the current award levels and application window.",
+      "deadline": "2026-12-31",
+      "lastYearDeadline": null,
+      "expectedWindow": "The 2027–28 application is open; apply by December 31, 2026.",
       "tags": [
         "Washington",
         "LGBTQ+",
@@ -698,19 +715,21 @@
         "leadership"
       ],
       "whyFit": "A Washington-focused recurring opportunity that eligible Toppenish students may overlook.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Burger King Scholars",
       "organization": "Burger King Foundation / Scholarship America",
-      "award": "$1,000–$60,000 in the prior cycle",
+      "award": "$1,000–$60,000",
       "eligibility": "High school seniors meeting the current GPA and residency rules who plan full-time enrollment in college or vocational school; selection can consider work, service, activities, and financial need.",
       "url": "https://scholarshipamerica.org/scholarship/burgerking/",
-      "status": "Expected — last year's information",
-      "opens": null,
-      "deadline": null,
-      "lastYearDeadline": "2025-12-15",
-      "expectedWindow": "The site is built from 2025–26 planning data. The last available deadline was December 15; confirm the current cycle before applying.",
+      "status": "Confirmed for 2027",
+      "opens": "2026-10-15",
+      "deadline": "2026-12-15",
+      "lastYearDeadline": null,
+      "expectedWindow": "Apply by December 15, 2026 at 11:59 p.m. Central (9:59 p.m. Pacific). Only the first 30,000 community applications will be reviewed; employee applications are reviewed across all tracks.",
       "tags": [
         "Washington",
         "Four-year",
@@ -725,7 +744,9 @@
         "leadership"
       ],
       "whyFit": "Broad recurring award that includes vocational programs and values work experience—relevant to many Toppenish students.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "American Legion Oratorical Contest",
@@ -761,7 +782,7 @@
       "opens": "2026-08-19",
       "deadline": "2026-11-11",
       "lastYearDeadline": null,
-      "expectedWindow": "2026 application period: August 19–November 11",
+      "expectedWindow": "Applications close November 11, 2026.",
       "tags": [
         "National",
         "Four-year",
@@ -773,7 +794,9 @@
       ],
       "whyFit": "Toppenish students qualify geographically because this is a national scholarship. A student still needs the sponsor's high-achievement, financial-need, and college-enrollment qualifications.",
       "needs": "Application, transcript and course information, financial-aid information, and the sponsor's required writing or supporting materials.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "American Indian College Fund Full Circle Scholarship",
@@ -868,15 +891,15 @@
       "name": "Amazon Future Engineer Scholarship",
       "organization": "Amazon Future Engineer",
       "award": "Up to $40,000 plus an opportunity for a paid Amazon internship",
-      "eligibility": "U.S. high school seniors who have completed or are taking an eligible computer-science course and plan to pursue a computer-science-related degree. Current financial-need and academic requirements must also be confirmed.",
+      "eligibility": "U.S. high school seniors with work authorization, financial need, and a 2.3+ GPA planning an eligible software or automation engineering bachelor's degree; qualifying computer science, engineering, or robotics coursework or Amazon's alternative assessment is required.",
       "url": "https://www.amazonfutureengineer.com/scholarships",
       "status": "Confirmed for 2027",
       "opens": "2026-11-03",
       "deadline": "2027-01-05",
-      "lastYearDeadline": "2026-01-15",
-      "expectedOpen": "2026-11-10",
+      "lastYearDeadline": null,
+      "expectedOpen": null,
       "openLabel": "November 2026",
-      "expectedWindow": "Applications open November 3, 2026 and close January 5, 2027.",
+      "expectedWindow": "Apply by January 5, 2027; teacher recommendations are due January 8. Finalists complete a separate assessment in late January.",
       "tags": [
         "National",
         "STEM / health",
@@ -888,8 +911,11 @@
         "lowincome"
       ],
       "whyFit": "Toppenish students can apply because this is a national scholarship. It is especially relevant to students taking computer science and planning a related college major.",
-      "needs": "Transcript, computer-science course information, financial information, college and major plans, and the current application materials.",
-      "lastChecked": "2026-11-08"
+      "needs": "High school transcript, parent/guardian's latest 1040 tax forms, qualifying course information or the alternative assessment, and teacher recommendation.",
+      "lastChecked": "2026-11-09",
+      "gpaMin": 2.3,
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "HSF Scholar Program",
@@ -925,14 +951,14 @@
       "name": "APIA Scholarship Program",
       "organization": "APIA Scholars",
       "award": "$2,500–$20,000",
-      "eligibility": "Students who meet the sponsor's U.S. citizenship or eligible Pacific Island nation status rules and will attend an accredited U.S. college or university for an associate or bachelor's degree, part time or full time.",
-      "gate": "Applicant must identify as Asian American, Native Hawaiian, or Pacific Islander and meet the sponsor's citizenship or eligible-status rules.",
+      "eligibility": "Students with high financial need who are citizens, nationals, or legal permanent residents of the U.S., Marshall Islands, Federated States of Micronesia, or Palau and will pursue an undergraduate degree at an accredited U.S. institution; applicants cannot already hold a bachelor's degree.",
+      "gate": "Applicants must meet the sponsor's citizenship/legal-status, high financial-need, and undergraduate-enrollment requirements; students from all backgrounds are welcome.",
       "url": "https://apiascholars.org/scholarships/",
       "status": "Confirmed for 2027",
       "opens": "2026-11-15",
       "deadline": "2027-01-15",
       "lastYearDeadline": null,
-      "expectedWindow": "The sponsor confirms applications open November 15, 2026 and close January 15, 2027 at 5 p.m. Eastern.",
+      "expectedWindow": "Opens November 15, 2026; closes January 15, 2027 at 5 p.m. Eastern (2 p.m. Pacific).",
       "tags": [
         "National",
         "Four-year",
@@ -945,7 +971,9 @@
       ],
       "whyFit": "Toppenish students who meet the sponsor's citizenship or eligible-status rules may apply nationally for associate- or bachelor's-degree study.",
       "needs": "Online application, academic and enrollment information, financial information, and the sponsor's essays or supporting documents.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "American Indian Endowed Scholarship",
@@ -981,12 +1009,12 @@
       "organization": "Women in STEM Excel",
       "award": "$3,500",
       "eligibility": "Washington women pursuing education in a science, technology, engineering, or mathematics field who meet the sponsor's current academic and enrollment rules.",
-      "url": "https://recf.org/scholarship/women-in-stem-excel/",
+      "url": "https://www.andersonsobelcosmetic.com/wise-scholarship/",
       "status": "Confirmed for 2027",
-      "opens": null,
-      "deadline": "2026-11-17",
+      "opens": "2026-10-13",
+      "deadline": "2026-12-18",
       "lastYearDeadline": null,
-      "expectedWindow": "The official scholarship listing currently gives a November 17 deadline. Students should confirm the cycle year and application instructions on the sponsor page before submitting.",
+      "expectedWindow": "The sponsor's 2026 timeline accepts applications October 13–December 18. This replaces the undated November 17 listing.",
       "tags": [
         "Washington",
         "STEM / health",
@@ -997,8 +1025,10 @@
         "local"
       ],
       "whyFit": "Toppenish students who identify as women and plan a STEM field may qualify because the opportunity is open across Washington.",
-      "needs": "Application, transcript, STEM education plans, and the current essays or supporting documents listed by the sponsor.",
-      "lastChecked": "2026-11-08"
+      "needs": "Complete the application, original essay answers, and one recommendation letter with valid contact information.",
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "ACPE Northwest Scholarship",
@@ -1176,11 +1206,11 @@
       "url": "https://waopportunityscholarship.org/applicants/baccalaureate/",
       "status": "Confirmed for 2027",
       "opens": "2027-01-13",
-      "deadline": null,
+      "deadline": "2027-02-25",
       "lastYearDeadline": "2026-02-26",
       "expectedOpen": "2027-01-14",
       "openLabel": "January 2027",
-      "expectedWindow": "Applications open January 13, 2027; the official source does not show one unambiguous deadline yet.",
+      "expectedWindow": "Opens January 13, 2027; application and FAFSA/WASFA due February 25, 2027 at 9 p.m. Pacific.",
       "tags": [
         "Washington",
         "STEM / health",
@@ -1193,7 +1223,9 @@
       ],
       "whyFit": "Toppenish students qualify geographically as Washington residents and may be strong candidates when planning an eligible STEM or health-care bachelor's degree.",
       "needs": "Online application, eligible major and college plan, household-income information, residency information, and FAFSA or WASFA filed by the scholarship deadline.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "YVC Foundation General Scholarship",
@@ -1201,14 +1233,14 @@
       "gpaMin": 2,
       "award": "One application matches students to more than 150 scholarships; the average award is about $4,000",
       "eligibility": "Incoming and current Yakima Valley College students, including undocumented students. Most awards require at least a 2.0 GPA, though individual criteria vary.",
-      "url": "https://yvcc.edu/foundation/scholarships-awards-faq.php",
-      "status": "Confirmed for 2027",
+      "url": "https://www.yvcc.edu/foundation/scholarships",
+      "status": "Expected — annual schedule; current cycle not yet verified",
       "opens": null,
       "deadline": null,
       "lastYearDeadline": "2026-02-28",
       "expectedOpen": "2026-12-01",
       "openLabel": "December 2026",
-      "expectedWindow": "Applications open yearly on December 1 and close on the last day of February. Plan for February 28, 2027 and confirm the new cycle after it opens.",
+      "expectedWindow": "YVC publishes a recurring December 1–last day of February window. Watch for the 2027–28 application; February 28, 2027 remains a planning date until the cycle is confirmed.",
       "tags": [
         "Yakima Valley",
         "Two-year",
@@ -1221,22 +1253,24 @@
         "firstgen"
       ],
       "whyFit": "This is one of the strongest local opportunities for Toppenish students planning YVC because one application provides access to many scholarships.",
-      "needs": "YVC scholarship application, unofficial transcript, at least two references, education plans, and the current written responses or supporting information.",
-      "lastChecked": "2026-11-08"
+      "needs": "Unofficial transcript, one recommendation letter, and a narrative about personal and educational goals. Running Start applicants provide both high school and college transcripts; upload documents as PDFs.",
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Washington Apple Education Foundation Scholarships",
       "organization": "Washington Apple Education Foundation",
       "award": "One application matches students to many renewable awards; WAEF awards more than $1 million annually",
       "eligibility": "Washington seniors or college students with family employment or ownership ties to the apple, cherry, or pear industry. Students without family ties may qualify through an eligible vocational/technical program or a planned career supporting the tree-fruit industry.",
-      "url": "https://scholarships.waef.org/apply",
+      "url": "https://waef.org/scholarships",
       "status": "Confirmed for 2027",
       "opens": null,
-      "deadline": null,
-      "lastYearDeadline": "2026-03-02",
-      "expectedOpen": "2026-10-15",
+      "deadline": "2027-03-01",
+      "lastYearDeadline": null,
+      "expectedOpen": null,
       "openLabel": "October 2026",
-      "expectedWindow": "WAEF traditionally reopens applications in the fall. The prior cycle was due March 2, 2026; confirm the 2027 opening and deadline when released.",
+      "expectedWindow": "The sponsor confirms a March 1, 2027 deadline. One AwardSpring application matches students to eligible awards.",
       "tags": [
         "Washington",
         "Yakima Valley",
@@ -1252,8 +1286,11 @@
         "firstgen"
       ],
       "whyFit": "A high-value match for many Toppenish families connected to orchards, warehouses, packing, refrigeration, electrical work, IT, HVAC, machinery, or other tree-fruit businesses.",
-      "needs": "Online application, family employment or career-path information, transcript, recommendation, work and leadership history, short answers, and an essay. Current requirements may change.",
-      "lastChecked": "2026-11-08"
+      "needs": "Transcript, personal statement, one recommendation letter, and basic financial information. Enter your parent's exact tree-fruit employer name so WAEF can match you to eligible awards.",
+      "lastChecked": "2026-11-09",
+      "verificationSource": "https://waef.org/school-resources",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Eastern Washington University Scholarship Consideration",
@@ -1489,7 +1526,7 @@
       "opens": "2026-08-20",
       "deadline": "2026-10-20",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now — the annual application period runs August 20–October 20.",
+      "expectedWindow": "The listed application deadline (2026-10-20) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "Leadership / service"
@@ -1512,7 +1549,7 @@
       "opens": "2026-09-01",
       "deadline": "2026-12-01",
       "lastYearDeadline": null,
-      "expectedWindow": "The fall application opens September 1 and closes December 1, 2026. A second application window is scheduled for January 15–March 15, 2027.",
+      "expectedWindow": "The fall application for Class of 2027 students closes December 1, 2026. Applicants may apply only once.",
       "tags": [
         "National",
         "Four-year",
@@ -1523,7 +1560,9 @@
       ],
       "whyFit": "A strong national option for a Toppenish senior who meets the GPA and income rules, plans an eligible four-year college, and can complete the required paid work hours. Community college, junior college, and online institutions are not eligible.",
       "needs": "Online application, current high school transcript, an unsealed recommendation letter, household-income information, four-year college plans, and a plan for the required paid work hours. Finalists may need FAFSA or citizenship documents.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "Elks Legacy Awards",
@@ -1559,7 +1598,7 @@
       "opens": "2026-09-03",
       "deadline": "2026-11-20",
       "lastYearDeadline": null,
-      "expectedWindow": "The application opens September 3 and closes November 20, 2026 at 5:00 p.m. Eastern.",
+      "expectedWindow": "Apply by November 20, 2026 at 5 p.m. Eastern (2 p.m. Pacific).",
       "tags": [
         "National",
         "Four-year",
@@ -1572,7 +1611,9 @@
       ],
       "whyFit": "Toppenish NHS seniors can apply after their adviser verifies their NHS account. There is no limit to the number of applicants from a chapter.",
       "needs": "A verified NHS student account, detailed scholarship, service, leadership and character activities, NHS adviser certification, and one recommendation from a non-adviser, non-family adult.",
-      "lastChecked": "2026-11-08"
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     },
     {
       "name": "The Gates Scholarship",
@@ -1585,7 +1626,7 @@
       "opens": "2026-07-15",
       "deadline": "2026-09-15",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; deadline September 15, 2026.",
+      "expectedWindow": "The listed application deadline (2026-09-15) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "Four-year",
@@ -1634,7 +1675,7 @@
       "opens": "2026-06-01",
       "deadline": "2026-09-01",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; the WAI2027 cycle closes September 1, 2026 at 11:59 p.m. Eastern.",
+      "expectedWindow": "The listed application deadline (2026-09-01) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "STEM / health",
@@ -1701,7 +1742,7 @@
       "opens": null,
       "deadline": "2026-09-01",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; the fall scholarship application deadline is September 1, 2026.",
+      "expectedWindow": "The listed application deadline (2026-09-01) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "Agriculture",
@@ -1729,7 +1770,7 @@
       "opens": null,
       "deadline": "2026-09-08",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; deadline September 8, 2026. Students need an eligible NAAA member sponsor before applying.",
+      "expectedWindow": "The listed application deadline (2026-09-08) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "Agriculture",
@@ -1755,7 +1796,7 @@
       "opens": "2026-05-11",
       "deadline": "2026-09-15",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; submit the application and video by September 15, 2026 at 11:59 p.m. Pacific. Peer reviews are due September 30.",
+      "expectedWindow": "The listed application deadline (2026-09-15) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "STEM / health",
@@ -2025,7 +2066,7 @@
       "opens": null,
       "deadline": "2026-09-09",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; deadline September 9, 2026.",
+      "expectedWindow": "The listed application deadline (2026-09-09) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "Arts / writing",
@@ -2077,7 +2118,7 @@
       "opens": null,
       "deadline": "2026-09-04",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; deadline September 4, 2026.",
+      "expectedWindow": "The listed application deadline (2026-09-04) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "Arts / writing",
@@ -2120,7 +2161,7 @@
       "opens": null,
       "deadline": "2026-09-30",
       "lastYearDeadline": null,
-      "expectedWindow": "Open now; deadline September 30, 2026.",
+      "expectedWindow": "The listed application deadline (2026-09-30) has passed. Check the sponsor for any future cycle.",
       "tags": [
         "National",
         "Arts / writing"
@@ -2132,3 +2173,4 @@
     }
   ]
 }
+
