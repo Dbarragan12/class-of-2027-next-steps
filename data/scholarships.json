@@ -2431,6 +2431,101 @@
       "lastChecked": "2026-11-09",
       "detailsVerifiedAt": "2026-11-09",
       "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Howard Kelleher Memorial Scholarship",
+      "organization": "Merit Resource Services",
+      "award": "Five $1,000 awards in the 2026 cycle",
+      "eligibility": "Prior-cycle eligibility: graduating seniors in Yakima, Benton, Franklin or Kittitas County planning college or trade school. Obtain the current application to confirm any additional criteria; 2027 requirements are not yet published.",
+      "url": "https://www.meritresources.org/about-us/h-kelleher-scholarship/",
+      "expectedWindow": "The sponsor currently lists the completed 2026 cycle. No verified 2027 opening or deadline; ask the school counselor for the new application when released.",
+      "needs": "Prior application: completed personal, family, high-school and college/trade-school information; a student-written composition submitted without the author's name on it; student and parent signatures. Obtain the sponsor's current instructions for the essay prompt, length, deadline and submission process before applying; 2027 requirements are not yet verified.",
+      "whyFit": "Three of the five listed 2026 winners attended Toppenish High School. Prior success shows local relevance, not guaranteed selection.",
+      "tags": [
+        "Local / Yakima",
+        "Trades",
+        "Community college"
+      ],
+      "fit": [
+        "local"
+      ],
+      "lastYearDeadline": null,
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "opens": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Yakima County Cattlemen's Scholarship",
+      "organization": "Yakima County Cattlemen's Association",
+      "award": "$1,000 in the 2026 cycle",
+      "eligibility": "Prior-cycle rules: graduating high school senior and Washington resident pursuing education in agriculture or supporting agriculture at an accredited college, trade school or certificate program. A Washington Cattlemen's Association student membership number is required; student membership was free.",
+      "url": "https://wpcdn.web.wsu.edu/extension/uploads/sites/40/2026/04/Yakima-County-Cattlemens-Association-2026-Scholarship.pdf",
+      "expectedWindow": "The available application was due April 15, 2026. The 2027 cycle is not yet verified; do not submit the old form without sponsor confirmation.",
+      "needs": "Prior checklist: high school transcript, resume, FFA/4-H and activity statement, one non-family recommendation emailed to the sponsor, student membership number, and a 1–3-page double-spaced essay explaining how your education supports agriculture.",
+      "whyFit": "The prior rubric awarded points for Yakima County residency, agricultural work, leadership and FFA/4-H; cattle experience earned extra points. The essay was worth up to 10 points.",
+      "tags": [
+        "Local / Yakima",
+        "Agriculture",
+        "Trades"
+      ],
+      "fit": [
+        "local",
+        "ag"
+      ],
+      "lastYearDeadline": "2026-04-15",
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "opens": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Gesa Entering Freshman Scholarships",
+      "organization": "Gesa Credit Union",
+      "award": "Published guide: $2,000 awards and selected $5,000 President's Awards; confirm next-cycle amounts",
+      "eligibility": "Published guide: Gesa member in good standing and primary account signer; full-time high school senior or other entering college freshman; 3.0+ high school GPA or completed homeschool equivalent; full-time enrollment at an accredited U.S. college, university or technical/trade school.",
+      "url": "https://www.gesa.com/category/scholarships/",
+      "expectedWindow": "Gesa confirms the next application period begins in December 2026. The guide gives a recurring February 28 deadline; the exact 2027 cycle dates and terms still need confirmation.",
+      "needs": "Published guide: online application, personal statement, resume, unofficial transcript and two recommendations. Review the new cycle's statement prompt and rules when applications open; membership and primary-signer requirements apply.",
+      "whyFit": "A regional option for qualifying Toppenish seniors who are Gesa members, including trade-school students. You do not have to be a student teller to apply for the general entering-freshman track.",
+      "tags": [
+        "Washington",
+        "Trades",
+        "Community college"
+      ],
+      "fit": [],
+      "lastYearDeadline": null,
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "opens": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Gesa High School Credit Union Scholarships",
+      "organization": "Gesa Credit Union",
+      "award": "Published program: completing interns receive at least $2,000; selected intern $8,000; teller awards vary",
+      "eligibility": "High school seniors who participated in Gesa's High School Credit Union program as student tellers or interns. Interns must complete their internship year for the published minimum award. A regular Gesa account alone does not qualify for this separate track; confirm current program-specific rules with the coordinator.",
+      "url": "https://www.gesa.com/category/scholarships/",
+      "expectedWindow": "The next Gesa scholarship period begins in December 2026. The separate teller/intern track's 2027 dates and detailed requirements must be confirmed before applying.",
+      "needs": "Ask the Gesa High School Credit Union coordinator for the correct teller/intern application, participation verification and current supporting-document checklist. Do not assume the general freshman guide covers every rule for this track.",
+      "whyFit": "A narrow opportunity for eligible student tellers and interns, even if only a few Toppenish students qualify. Students outside this program should review Gesa Entering Freshman Scholarships.",
+      "tags": [
+        "Washington"
+      ],
+      "fit": [],
+      "lastYearDeadline": null,
+      "status": "Expected — last year's information",
+      "deadline": null,
+      "opens": null,
+      "lastChecked": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-09",
+      "autoUpdatePolicy": "review-only"
     }
   ]
 }
