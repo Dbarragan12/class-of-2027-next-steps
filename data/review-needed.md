@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-12T18:13:04.054Z
+Checked: 2026-11-13T17:41:05.080Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -23,7 +23,6 @@ None tonight.
 - [QuestBridge National College Match](https://www.questbridge.org/apply-to-college/programs/national-college-match/apply) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Ewing C. Kelly Scholarship](https://kellyfoundationwashington.org/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Albert Lee Wright Jr. Memorial Migrant Scholarship](https://www.nasdme.org/al-wright-scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [LEAP Rise Above Scholarship](https://seamar.org/scholarship-leap1.html) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Sí Se Puede Scholarship](https://form.jotform.com/261234822100139) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Horatio Alger State Scholarship](https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
@@ -91,6 +90,7 @@ None tonight.
 
 ## Link unavailable or check failed
 
+- [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — Official link did not return a working page. Check result: 404.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link did not return a working page. Check result: 403.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
