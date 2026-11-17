@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-16T20:22:48.152Z
+Checked: 2026-11-17T19:08:34.210Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -85,7 +85,6 @@ None tonight.
 - [FFA Scholarships](https://www.ffa.org/participate/grants-and-scholarships/scholarships/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Jackie Robinson Foundation Scholarship Award](https://jackierobinson.org/apply/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Ron Brown Scholar Program](https://ronbrown.org/ron-brown-scholarship/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
-- [Howard Kelleher Memorial Scholarship](https://www.meritresources.org/about-us/h-kelleher-scholarship/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Yakima County Cattlemen's Scholarship](https://wpcdn.web.wsu.edu/extension/uploads/sites/40/2026/04/Yakima-County-Cattlemens-Association-2026-Scholarship.pdf) — The source is a PDF or another format that the safe automatic reader cannot interpret. Check result: 200.
 
 ## Link unavailable or check failed
@@ -102,5 +101,6 @@ None tonight.
 - [AvaCare Medical Scholarship](https://www.avacaremedical.com/scholarship) — Official link did not return a working page. Check result: 403.
 - [nixit $1,000 Scholarship Program](https://nixit.com/pages/scholarship-program) — Official link did not return a working page. Check result: 404.
 - [American Fire Sprinkler Association Scholarship Program](https://www.afsascholarship.org/high-school-scholarships/) — Official link did not return a working page. Check result: 403.
+- [Howard Kelleher Memorial Scholarship](https://www.meritresources.org/about-us/h-kelleher-scholarship/) — Official link could not be checked. Check result: error.
 - [Gesa Entering Freshman Scholarships](https://www.gesa.com/category/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Gesa High School Credit Union Scholarships](https://www.gesa.com/category/scholarships/) — Official link did not return a working page. Check result: 403.
