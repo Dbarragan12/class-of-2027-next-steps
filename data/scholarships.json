@@ -1,7 +1,37 @@
 {
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-17",
   "publicationRule": "Only opportunities where at least one Toppenish High School student may qualify. Confirmed opportunities use current sponsor information and a verified current-cycle deadline or rolling status. Recurring opportunities may appear as tentative planning cards—even when return is uncertain—when a dated sponsor or school-hosted prior-cycle source shows the opportunity existed. Tentative cards must identify the source cycle, clearly state that the opening, deadline, award, eligibility, and return are not guaranteed, and must never create calendar events. When a person verifies the new cycle and enters the current opening and deadline, the finder automatically changes the card to Open & accepting. Nightly checks preserve records and flag source changes for review; they never guess or confirm a deadline.",
   "scholarships": [
+    {
+      "name": "AWC Center for Quality Communities Scholarship — City of Toppenish",
+      "organization": "AWC Center for Quality Communities / City of Toppenish",
+      "award": "$4,000; up to four statewide awards",
+      "eligibility": "Washington residents graduating in spring/summer 2027 who show community or school leadership and plan at least half-time study at an accredited college or trade school in 2027–28.",
+      "url": "https://www.toppenish.gov/city-council/page/awc-center-quality-communities-scholarships-now-accepting-applications",
+      "deadline": "2026-12-31",
+      "tags": [
+        "Local",
+        "Leadership / service",
+        "Four-year",
+        "Two-year",
+        "Trades"
+      ],
+      "fit": [
+        "local",
+        "leadership"
+      ],
+      "whyFit": "Apply through the City of Toppenish, which selects one nominee for the statewide competition. A city nomination does not guarantee an award.",
+      "expectedWindow": "Toppenish local deadline: December 31, 2026 at 4:30 p.m. Pacific. Send the packet to the City, not directly to AWC/CQC.",
+      "needs": "Complete the 2027 application, including a leadership essay of no more than 700 words; sign the accuracy and consent sections; include a nonrelative recommendation. Minors need a parent/guardian signature. Submit to Elvia.Cisneros@cityoftoppenish.us with subject Scholarship Application, or mail to City of Toppenish, Attention: Elvia Cisneros, 21 West 1st Avenue, Toppenish, WA 98948.",
+      "verificationSource": "https://www.toppenish.gov/media/8486",
+      "applicationUrl": "https://www.toppenish.gov/media/8481",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-17",
+      "detailsVerifiedAt": "2026-11-17",
+      "autoUpdatePolicy": "review-only",
+      "opens": null
+    },
     {
       "name": "Mollie Davis Scholarship",
       "organization": "Yakima Rotary Trust",
@@ -1033,7 +1063,7 @@
       "whyFit": "Toppenish students who identify as women and plan a STEM field may qualify because the opportunity is open across Washington.",
       "needs": "Complete the application, original essay answers, and one recommendation letter with valid contact information.",
       "lastChecked": "2026-11-17",
-      "detailsVerifiedAt": "2026-11-09",
+      "detailsVerifiedAt": "2026-11-17",
       "autoUpdatePolicy": "review-only"
     },
     {
@@ -2526,6 +2556,154 @@
       "lastChecked": "2026-11-09",
       "detailsVerifiedAt": "2026-11-09",
       "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Equitable Excellence Scholarship",
+      "organization": "Equitable Foundation / Scholarship America",
+      "award": "$5,000 per year, renewable for up to four years ($20,000 total)",
+      "eligibility": "Public high school seniors with at least a 2.5 GPA, financial need, and community leadership who plan full-time study at a U.S. two- or four-year college in fall 2027.",
+      "url": "https://scholarshipamerica.org/scholarship/equitableexcellence/",
+      "deadline": "2026-12-22",
+      "tags": [
+        "National",
+        "Financial need",
+        "Leadership / service",
+        "Four-year",
+        "Two-year"
+      ],
+      "fit": [
+        "lowincome",
+        "leadership"
+      ],
+      "whyFit": "Toppenish public high school seniors may qualify. Certain Equitable and Scholarship America employees and their immediate family members are excluded.",
+      "expectedWindow": "Submit by December 22, 2026 at 3 p.m. Central / 1 p.m. Pacific.",
+      "needs": "Complete the electronic application and personal statement; upload a complete transcript and the first two pages of the most recently filed IRS Form 1040 used for financial information. Redact Social Security numbers and bank information as instructed. Review publicity and recipient workshop requirements.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-17",
+      "detailsVerifiedAt": "2026-11-17",
+      "autoUpdatePolicy": "review-only",
+      "opens": null
+    },
+    {
+      "name": "Science Ambassador Scholarship",
+      "organization": "Cards Against Humanity",
+      "award": "$20,000; five one-time scholarships",
+      "eligibility": "Women and nonbinary high school seniors or undergraduates planning a STEM major at a college in the United States or a U.S. territory; U.S. citizenship is not required.",
+      "url": "https://www.scienceambassadorscholarship.org/",
+      "deadline": "2026-12-14",
+      "tags": [
+        "National",
+        "STEM / health",
+        "Four-year",
+        "Two-year",
+        "Undocumented"
+      ],
+      "fit": [],
+      "whyFit": "Toppenish seniors planning undergraduate STEM study may qualify. This is an educational video competition, not a personal-statement essay.",
+      "expectedWindow": "Submit by December 14, 2026 at 11:59 p.m. Central / 9:59 p.m. Pacific. The sponsor date supersedes newsletter summaries.",
+      "needs": "Create a scientifically accurate mini-lecture about a STEM topic, no longer than three minutes. Upload it as a public YouTube video, not a Short, and complete the application. Cite research sources; finalists will be asked for additional materials.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-17",
+      "detailsVerifiedAt": "2026-11-17",
+      "autoUpdatePolicy": "review-only",
+      "opens": null
+    },
+    {
+      "name": "Alltricity Scholarship Foundation Scholarships",
+      "organization": "Alltricity Scholarship Foundation",
+      "award": "$1,500–$3,000+; named awards are $3,000+",
+      "eligibility": "High school seniors and other eligible students who are permanent U.S. residents and plan an electric-utility career through a related certificate or undergraduate degree; more than 75% tuition reimbursement makes an applicant ineligible.",
+      "url": "https://www.alltricitynetwork.org/page/fdtnscholarships",
+      "opens": "2026-10-15",
+      "deadline": "2027-01-31",
+      "tags": [
+        "National",
+        "STEM / health",
+        "Trades",
+        "Four-year"
+      ],
+      "fit": [],
+      "whyFit": "Options include linework, plant operations, engineering, business, and information systems when tied to an electric-utility career.",
+      "expectedWindow": "The 2027–28 application cycle runs October 15, 2026 through January 31, 2027.",
+      "needs": "Complete the correct online application: Current High School Seniors for incoming four-year degree students, or Craft/Certificate for relevant technical programs. The craft application is not for two-year transfer students. Describe career goals, school/community service, and academic performance; review the sponsor instructions before choosing a form.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-17",
+      "detailsVerifiedAt": "2026-11-17",
+      "autoUpdatePolicy": "review-only"
+    },
+    {
+      "name": "Kemper Human Rights Education Foundation Essay Contest",
+      "organization": "Kemper Human Rights Education Foundation",
+      "award": "$5,000, $2,500, and $1,250 prizes",
+      "eligibility": "High school students who are U.S. citizens or residents may enter the U.S. contest; a separate contest serves students who are citizens and residents of other countries.",
+      "url": "https://khref.org/2026-winning-essays/",
+      "deadline": "2026-12-10",
+      "tags": [
+        "National",
+        "Arts / writing"
+      ],
+      "fit": [],
+      "whyFit": "Toppenish high school students can enter the U.S. competition. This is an essay prize, not a college-enrollment scholarship.",
+      "expectedWindow": "The 2026 essay contest deadline is December 10, 2026; awards are announced by the end of January 2027.",
+      "needs": "Answer the current human-rights intervention question in English, within 2,500 words excluding footnotes and bibliography. Include research citations, the required cover page, teacher certification and student declarations. The sponsor prohibits generative AI at every writing stage, including brainstorming and source summaries. Submit a Word document to kemperhumanrights@gmail.com or follow the official postal instructions.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-17",
+      "detailsVerifiedAt": "2026-11-17",
+      "autoUpdatePolicy": "review-only",
+      "opens": null
+    },
+    {
+      "name": "FMA Solo Program",
+      "organization": "Flying Musicians Association",
+      "award": "Flight-training assistance, materials, resources, and mentoring toward a first solo flight",
+      "eligibility": "High school music students interested in learning to fly who are nominated by a music director/teacher and meet the program’s citizenship, medical eligibility, and parental-approval requirements.",
+      "url": "https://flyingmusicians.org/",
+      "deadline": "2027-01-31",
+      "tags": [
+        "National",
+        "Arts / writing",
+        "STEM / health"
+      ],
+      "fit": [],
+      "whyFit": "An option for Toppenish music students interested in aviation. The award supports flight training rather than a fixed cash scholarship for college tuition.",
+      "expectedWindow": "Nominations for the 2027 program are open and due January 31, 2027.",
+      "needs": "Ask your music director/teacher to nominate you. Review the sponsor’s nomination materials, citizenship proof and medical eligibility requirements; applicants under 18 need parental approval.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-17",
+      "detailsVerifiedAt": "2026-11-17",
+      "autoUpdatePolicy": "review-only",
+      "opens": null
+    },
+    {
+      "name": "TechForce Foundation Scholarships",
+      "organization": "TechForce Foundation",
+      "award": "Varies by scholarship and donor",
+      "eligibility": "U.S. citizens, permanent residents, or approved DACA students with a diploma/GED who are enrolled future or current students in good standing in a qualifying accredited technician program and demonstrate financial need.",
+      "url": "https://techforce.org/students/",
+      "deadline": null,
+      "tags": [
+        "National",
+        "Trades",
+        "Two-year",
+        "Financial need"
+      ],
+      "fit": [
+        "lowincome"
+      ],
+      "whyFit": "A post-graduation option for Toppenish students entering technician training. Current seniors should prepare first: the sponsor requires a diploma/GED and program enrollment.",
+      "expectedWindow": "Year-round scholarship cycles; each award has its own deadline and requirements in the free TechForce account. The newsletter’s December 15 date is not a universal program deadline.",
+      "needs": "Create a free profile, choose your technical school, and open Scholarships for the general application and eligible awards. Provide an approved current-year FAFSA; DACA applicants use alternative need evidence through their school. Check each award’s rules.",
+      "status": "Confirmed for 2027",
+      "lastYearDeadline": null,
+      "lastChecked": "2026-11-17",
+      "detailsVerifiedAt": "2026-11-17",
+      "autoUpdatePolicy": "review-only",
+      "opens": null
     }
   ]
 }
