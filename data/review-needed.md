@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-17T19:08:34.210Z
+Checked: 2026-11-18T18:49:08.293Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -67,7 +67,6 @@ None tonight.
 - [Women in Aviation International Scholarships](https://www.wai.org/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Great Clips Scholarship Program](https://jobs.greatclips.com/helping-future-stylists-and-barbers-100000-ways) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Hereford Youth Foundation of America Fall Scholarships](https://hereford.org/youth/njha/scholarship-opportunities/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [NAAA Support Scholarship Media Contest](https://www.agaviation.org/career/scholarships/support-scholarship-media-contest/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Breakthrough Junior Challenge](https://breakthroughjuniorchallenge.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Yakima Federal Award for Academic Excellence](https://www.yakimafed.com/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Filipino American Community of Yakima Valley Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
@@ -85,22 +84,30 @@ None tonight.
 - [FFA Scholarships](https://www.ffa.org/participate/grants-and-scholarships/scholarships/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Jackie Robinson Foundation Scholarship Award](https://jackierobinson.org/apply/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Ron Brown Scholar Program](https://ronbrown.org/ron-brown-scholarship/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
+- [Howard Kelleher Memorial Scholarship](https://www.meritresources.org/about-us/h-kelleher-scholarship/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Yakima County Cattlemen's Scholarship](https://wpcdn.web.wsu.edu/extension/uploads/sites/40/2026/04/Yakima-County-Cattlemens-Association-2026-Scholarship.pdf) — The source is a PDF or another format that the safe automatic reader cannot interpret. Check result: 200.
+- [Equitable Excellence Scholarship](https://scholarshipamerica.org/scholarship/equitableexcellence/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
+- [Science Ambassador Scholarship](https://www.scienceambassadorscholarship.org/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
+- [Kemper Human Rights Education Foundation Essay Contest](https://khref.org/2026-winning-essays/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
+- [FMA Solo Program](https://flyingmusicians.org/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
+- [TechForce Foundation Scholarships](https://techforce.org/students/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 
 ## Link unavailable or check failed
 
+- [AWC Center for Quality Communities Scholarship — City of Toppenish](https://www.toppenish.gov/city-council/page/awc-center-quality-communities-scholarships-now-accepting-applications) — Official link did not return a working page. Check result: 403.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — Official link did not return a working page. Check result: 404.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link did not return a working page. Check result: 403.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
+- [NAAA Support Scholarship Media Contest](https://www.agaviation.org/career/scholarships/support-scholarship-media-contest/) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
 - [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — Official link did not return a working page. Check result: 429.
 - [Ella Katherine Harris Memorial Scholarship for Bakers](https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/) — Official link did not return a working page. Check result: 429.
 - [AvaCare Medical Scholarship](https://www.avacaremedical.com/scholarship) — Official link did not return a working page. Check result: 403.
 - [nixit $1,000 Scholarship Program](https://nixit.com/pages/scholarship-program) — Official link did not return a working page. Check result: 404.
 - [American Fire Sprinkler Association Scholarship Program](https://www.afsascholarship.org/high-school-scholarships/) — Official link did not return a working page. Check result: 403.
-- [Howard Kelleher Memorial Scholarship](https://www.meritresources.org/about-us/h-kelleher-scholarship/) — Official link could not be checked. Check result: error.
 - [Gesa Entering Freshman Scholarships](https://www.gesa.com/category/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Gesa High School Credit Union Scholarships](https://www.gesa.com/category/scholarships/) — Official link did not return a working page. Check result: 403.
+- [Alltricity Scholarship Foundation Scholarships](https://www.alltricitynetwork.org/page/fdtnscholarships) — Official link did not return a working page. Check result: 403.
