@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-18T18:49:08.293Z
+Checked: 2026-11-19T18:57:40.683Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -28,7 +28,6 @@ None tonight.
 - [Horatio Alger State Scholarship](https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Microsoft Disability Scholarship](https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [INCIGHT Scholarship](https://www.incight.org/offerings/scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Pride Foundation Scholarship](https://pridefoundation.org/find-funding/scholarships/application/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
@@ -67,6 +66,7 @@ None tonight.
 - [Women in Aviation International Scholarships](https://www.wai.org/scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Great Clips Scholarship Program](https://jobs.greatclips.com/helping-future-stylists-and-barbers-100000-ways) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Hereford Youth Foundation of America Fall Scholarships](https://hereford.org/youth/njha/scholarship-opportunities/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [NAAA Support Scholarship Media Contest](https://www.agaviation.org/career/scholarships/support-scholarship-media-contest/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Breakthrough Junior Challenge](https://breakthroughjuniorchallenge.org/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Yakima Federal Award for Academic Excellence](https://www.yakimafed.com/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Filipino American Community of Yakima Valley Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
@@ -98,10 +98,10 @@ None tonight.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — Official link did not return a working page. Check result: 404.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link did not return a working page. Check result: 403.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
+- [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — Official link could not be checked. Check result: error.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
-- [NAAA Support Scholarship Media Contest](https://www.agaviation.org/career/scholarships/support-scholarship-media-contest/) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
 - [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — Official link did not return a working page. Check result: 429.
 - [Ella Katherine Harris Memorial Scholarship for Bakers](https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/) — Official link did not return a working page. Check result: 429.
