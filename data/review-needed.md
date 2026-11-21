@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-20T18:34:08.593Z
+Checked: 2026-11-21T17:25:29.534Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -56,7 +56,6 @@ None tonight.
 - [Toppenish Lions Club Scholarship](https://ths.toppenish.wednet.edu/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Toppenish-Wapato Dollars for Scholars](https://toppenish-wapato.dollarsforscholars.org/index.php?action=student_parent&fwID=207&section=chapterWebsite) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Yakima Valley Construction Federation Scholarship](https://bigfuture.collegeboard.org/scholarships/yakima-valley-construction-federation-scholarship) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
-- [Yakama Nation Higher Education Scholarship](https://yakama.com/programs/higher-education-program/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Stephen J. Brady Stop Hunger Scholarship](https://www.us.stop-hunger.org/grants/youth-scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Hagan Scholarship](https://haganscholarships.org/application/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
@@ -101,6 +100,7 @@ None tonight.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — Official link could not be checked. Check result: error.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
+- [Yakama Nation Higher Education Scholarship](https://yakama.com/programs/higher-education-program/) — Official link could not be checked. Check result: error.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
 - [Northwest Farm Credit Diversity Scholarship](https://www.northwestfcs.com/docs/default-source/community/scholarship-programs/scholarshipsps.pdf?sfvrsn=afbb85e3_1) — Official link did not return a working page. Check result: 404.
 - [Bick First Generation Scholarship](https://bold.org/scholarships/bick-first-generation-scholarship/) — Official link did not return a working page. Check result: 429.
