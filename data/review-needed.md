@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-22T17:47:11.339Z
+Checked: 2026-11-23T22:00:17.777Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -60,6 +60,7 @@ None tonight.
 - [P.E.O. STAR Scholarship](https://www.peointernational.org/educational-support/star-scholarship/eligibility-and-application-process/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Stephen J. Brady Stop Hunger Scholarship](https://www.us.stop-hunger.org/grants/youth-scholarships) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Hagan Scholarship](https://haganscholarships.org/application/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
+- [Elks Legacy Awards](https://www.elks.org/scholars/scholarships/Legacy.cfm) — The official page changed, but no unambiguous current-cycle information was safe to publish automatically. Check result: 200.
 - [NHS Scholarship](https://www.nationalhonorsociety.org/the-nhs-scholarship/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [The Gates Scholarship](https://www.thegatesscholarship.org/scholarship/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [NCWIT Aspirations in Computing High School Award](https://www.aspirations.org/award-programs/aic-high-school-award) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
