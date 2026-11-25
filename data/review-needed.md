@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-24T20:37:11.685Z
+Checked: 2026-11-25T19:53:37.996Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -29,6 +29,7 @@ None tonight.
 - [Truman D. Picard Scholarship](https://www.itcnet.org/about_us/scholarships.html) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [AISES Scholarships for Indigenous Students in STEM](https://aises.org/scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Microsoft Disability Scholarship](https://www.microsoft.com/en-us/diversity/programs/microsoftdisabilityscholarship.aspx) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
+- [INCIGHT Scholarship](https://www.incight.org/offerings/scholarship) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [Pride Foundation Scholarship](https://pridefoundation.org/find-funding/scholarships/application/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [GSBA Scholarship Fund](https://thegsba.org/scholarship-fund-2/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Burger King Scholars](https://scholarshipamerica.org/scholarship/burgerking/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
@@ -98,7 +99,6 @@ None tonight.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link did not return a working page. Check result: 403.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — Official link could not be checked. Check result: error.
-- [INCIGHT Scholarship](https://www.incight.org/offerings/scholarship) — Official link could not be checked. Check result: error.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Native Forward Scholars Fund](https://www.nativeforward.org/scholarship-faq/) — Official link did not return a working page. Check result: 403.
 - [Leaders Save Lives Scholarship Program](https://www.redcrossblood.org/hosting-a-blood-drive/learn-about-hosting/why-host-a-blood-drive/leaders-save-lives.html) — Official link did not return a working page. Check result: 403.
