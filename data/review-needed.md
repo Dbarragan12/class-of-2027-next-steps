@@ -1,6 +1,6 @@
 # Scholarship source review
 
-Checked: 2026-11-27T19:26:28.741Z
+Checked: 2026-11-28T18:13:12.821Z
 
 The nightly system checks only scholarships already in the public list. It may update an existing card when the sponsor page shows one unambiguous future opening, future deadline, rolling status, or same-sponsor redirect. It cannot add, remove, or rename a scholarship. Ambiguous information remains unchanged for staff review.
 
@@ -76,7 +76,6 @@ None tonight.
 - [Toppenish School District Administration Scholarship](https://ths.toppenish.wednet.edu/) — The checker could not isolate this scholarship on the official page. Check result: 200.
 - [Women in Financial Markets High School Scholarship](https://womeninfinancialmarkets.org/advance/programs/high-school-scholarships/) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
 - [United States Senate Youth Program](https://www.awsleaders.org/senate-youth) — No single future opening, future deadline, or rolling status could be confirmed automatically. Check result: 200.
-- [Leadership 1000 Scholarship](https://collegesuccessfoundation.org/scholarship/leadership-1000-scholarship/) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [GE-Reagan Foundation Scholarship](https://www.reaganfoundation.org/education/ge-reagan-foundation-scholarship) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [WSSRA Future Educator Scholarships](https://wssra.org/index.php/foundation/scholarships) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
 - [Point Foundation Flagship Scholarship](https://pointfoundation.org/scholarships/flagship) — Human-reviewed record: source changes require review before replacing verified details. Check result: 200.
@@ -97,6 +96,7 @@ None tonight.
 - [AWC Center for Quality Communities Scholarship — City of Toppenish](https://www.toppenish.gov/city-council/page/awc-center-quality-communities-scholarships-now-accepting-applications) — Official link did not return a working page. Check result: 403.
 - [Sea Mar Farmworker Scholarship](https://www.seamar.org/scholarship-farm-worker.html) — Official link did not return a working page. Check result: 404.
 - [McDonald's HACER National Scholarship](https://www.mcdonalds.com/us/en-us/community/hacer/eligibility-and-requirements.html) — Official link did not return a working page. Check result: 403.
+- [Washington State Governors' Scholarship for Foster Youth](https://collegesuccessfoundation.org/scholarship/governors-scholarship-for-foster-youth/) — Official link could not be checked. Check result: error.
 - [NAEHCY Scholarship Fund](https://naehcy.org/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Indian Health Service Scholarships](https://www.ihs.gov/scholarship/apply/) — Official link could not be checked. Check result: error.
 - [American Legion Oratorical Contest](https://walegion.org/scholarships/) — Official link did not return a working page. Check result: 403.
@@ -107,6 +107,7 @@ None tonight.
 - [Ella Katherine Harris Memorial Scholarship for Bakers](https://bold.org/scholarships/ella-katherine-harris-memorial-scholarship-for-bakers/) — Official link did not return a working page. Check result: 429.
 - [AvaCare Medical Scholarship](https://www.avacaremedical.com/scholarship) — Official link did not return a working page. Check result: 403.
 - [nixit $1,000 Scholarship Program](https://nixit.com/pages/scholarship-program) — Official link did not return a working page. Check result: 404.
+- [Leadership 1000 Scholarship](https://collegesuccessfoundation.org/scholarship/leadership-1000-scholarship/) — Official link could not be checked. Check result: error.
 - [American Fire Sprinkler Association Scholarship Program](https://www.afsascholarship.org/high-school-scholarships/) — Official link did not return a working page. Check result: 403.
 - [Gesa Entering Freshman Scholarships](https://www.gesa.com/category/scholarships/) — Official link did not return a working page. Check result: 403.
 - [Gesa High School Credit Union Scholarships](https://www.gesa.com/category/scholarships/) — Official link did not return a working page. Check result: 403.
